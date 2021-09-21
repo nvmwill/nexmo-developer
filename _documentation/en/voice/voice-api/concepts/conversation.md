@@ -8,7 +8,7 @@ navigation_weight: 3
 
 A Conversation is a shared core component that Vonage APIs rely on. Conversations happen over multiple [Media](/conversation/concepts/media) (text, voice, video) and can have associated [Users](/conversation/concepts/user) through [Member](/conversation/concepts/member) objects.
 
-The Conversation object is key to understanding the Conversation API. In order for Users to communicate, they must connect to a Conversation, at which point an associated Member object is created in that Conversation.
+In order for Users to communicate, they must connect to a Conversation, at which point an associated Member object is created in that Conversation.
 
 A Conversation is capable of supporting text messaging and audio calls. For text messaging a Conversation can be thought of as like a chat room. Users can be invited to join a Conversation and they can leave a Conversation. A single User can also join multiple Conversations through multiple Member objects.
 

@@ -13,7 +13,6 @@ Ensure the following variables are set to your required values using any conveni
 
 ```snippet_variables
 - CONVERSATION_ID
-- USER_ID
 - MEMBER_ID
 ```
 
