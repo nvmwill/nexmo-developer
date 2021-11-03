@@ -65,6 +65,11 @@ en:
     setup: Setup
     configuration: Configuration
     tools: Tools
+    neru: NeRu
+    providers: Providers
+    messages-provider: Messages
+    voice-provider: Voice
+    voice-provider-conversation: Conversation
 
     administration: Administration
     tasks: Tasks
