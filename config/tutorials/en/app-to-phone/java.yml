@@ -2,6 +2,7 @@ title: Making an in-app voice call
 description: You make a voice call from an Android app to a phone.
 products:
   - client-sdk
+  - voice/voice-api
 
 introduction:
   title: Introduction to this task

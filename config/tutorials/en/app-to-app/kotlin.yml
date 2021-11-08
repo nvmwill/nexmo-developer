@@ -2,6 +2,7 @@ title: Making an app to app voice call
 description: Make a voice call from an Android app to the same Android app installed on other device using the Android Client SDK.
 products:
   - client-sdk
+  - voice/voice-api
 
 introduction:
   title: Introduction to this task

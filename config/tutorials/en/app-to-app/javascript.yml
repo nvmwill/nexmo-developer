@@ -2,6 +2,7 @@ title: Making an app to app voice call
 description: You make a phone call from a web app to another web app.
 products:
   - client-sdk
+  - voice/voice-api
 
 introduction:
   title: Introduction to this task

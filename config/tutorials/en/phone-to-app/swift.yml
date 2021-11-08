@@ -2,6 +2,7 @@ title: Receiving a phone call in-app
 description: You receive a call from a phone to your app
 products:
   - client-sdk
+  - voice/voice-api
 
 introduction:
   title: Introduction to this task
