@@ -15,6 +15,7 @@ Customers using the Vonage SMS API to send traffic from a **+1 Country Code 10 D
 * [General Workflow](#general-workflow)
 * [Register a Brand](#register-a-brand)
 * [Register a Campaign](#register-a-campaign)
+* [Link Numbers to a Campaign](#link-numbers-to-a-campaign)
 * [Troubleshooting](#troubleshooting)
 
 ## Migration to 10 DLC
@@ -38,11 +39,13 @@ If you have decided moving to 10 DLC is right for your campaigns, you must:
 
     2. [Register a campaign] (#register-a-campaign)
 
-    3. Link a number (coming soon)
+    3. [Link a number] (#link-numbers-to-a-campaign)
 
 ## Register a brand
 
-A Brand is a company that has a need to send SMS messages to customers or users. Each brand can have multiple Campaigns associated with them. A Vonage Account may have multiple brands associated with it, but a Brand may only be registered with Vonage once. For example, Vonage Account ABCD may register brands on behalf of their own customers, Company X and Company Y. Vonage Account EFGH may not register Company X in that case.
+A Brand is a company that has a need to send SMS messages to customers or users. Each brand can have multiple Campaigns associated with them. 
+
+A Vonage Account may have multiple brands associated with it; for example, Vonage Account ABCD may register brands on behalf of their own customers, Company X and Company Y.
 
 Public information about a brand/company is used to determine what Campaigns they are allowed to run.
 
@@ -99,6 +102,32 @@ A Campaign is a notification that a brand will be sending a specific type of mes
 source: '_examples/messaging/10dlc/register-a-campaign'
 ```
 
+
+## Link Numbers to a Campaign
+
+This is the final step where you will map your numbers to an approved campaign.
+
+### Via the Dashboard
+
+1. Navigate to [Vonage API dashboard > SMS > Brands and campaigns](https://dashboard.nexmo.com/sms/brands).
+2. Click on one of your campaigns.
+3. On the Numbers tab, you will see a list with all the US phone numbers assigned to your account.
+4. Click the **Link** button beside the number you wish to link to your campaign.
+5. A confirmation dialog box opens.
+6. Click **Link**.
+
+### Via the API
+
+```code_snippets
+source: '_examples/messaging/10dlc/link-a-number'
+```
+
+### Rejected Numbers
+
+If the number goes to status **rejected** after requesting to link it to a campaign, like in the image above, you should retry to link it again in two hours by clicking **Unlink** and then **Link** back to the same campaign.
+
+
+
 ## Troubleshooting
 
 All error messages that are returned will be returned in the RFC 7807 JSON Format:
@@ -122,3 +151,4 @@ Each API Endpoint may have various error messages that can be returned, as well 
 * 422 will indicate a data validation error, and should contain additional information for correcting the invalid data
 
 Additional information can be found in the OpenAPI specification for individual endpoint errors.
+
