@@ -11,6 +11,12 @@ Before you can place a call, you need to initialize Client SDK. Add this line at
 NexmoClient client = new NexmoClient.Builder().build(this);
 ```
 
+IDE will display a warning about the unresolved reference:
+
+![](/screenshots/tutorials/client-sdk/android-shared/missing-import-java.png)
+
+Put caret on the red text and press `Alt + Enter` to import the reference.
+
 # Set connection listener
 
 Now below client initialization code add connection listener to monitor connection state:
@@ -21,7 +27,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> runOn
 
 
 
-Now client needs to authenticate to the Vonage servers. The following additions are required to `onCreate` method inside `MainActivity`. Replace the `ALICE_TOKEN` with the JWT token, you obtained previously from Nexmo CLI:
+Now client needs to authenticate to the Vonage servers. The following additions are required to `onCreate` method inside `MainActivity`. Replace the `ALICE_TOKEN` with the JWT token, you obtained previously from Vonage CLI:
 
 ```java
 client.login("ALICE_TOKEN");

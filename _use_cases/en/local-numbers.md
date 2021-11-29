@@ -20,7 +20,7 @@ Additionally, with the power of local numbers, we will show you how you can take
 In order to work through this tutorial you'll need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up)
-* The [Nexmo CLI](https://github.com/nexmo/nexmo-cli) installed and set up
+* The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and set up
 * A publicly accessible web server so that Vonage can make webhook requests to your app. You can learn more about webhooks in our [webhooks guide](/concepts/guides/webhooks) and it includes information on [using ngrok to expose your local webserver](/tools/ngrok)
 * Some knowledge of Ruby and the [Sinatra](http://www.sinatrarb.com/) web framework
 
@@ -118,11 +118,14 @@ def respond_with(location, status)
     # Listen to a user's input play back that city's status
     {
       'action': 'input',
+      'type': ['dtmf'],
       'eventUrl': ["#{ENV['DOMAIN']}/city"],
-      # we give the user a bit more time before we hang up on them
-      'timeOut': 10,
-      # we only expect one digit
-      'maxDigits': 1
+      'dtmf': {
+        # we give the user a bit more time before we hang up on them
+        'timeOut': 10,
+        # we only expect one digit
+        'maxDigits': 1
+      }
     }
   ].to_json
 end
@@ -138,12 +141,15 @@ We can offer any of the cities' information to any caller, but if they didn't ca
 
 ```
 {
-    'action': 'input',
-    'eventUrl': ["#{ENV['DOMAIN']}/city"],
+  'action': 'input',
+  'type': ['dtmf'],
+  'eventUrl': ["#{ENV['DOMAIN']}/city"],
+  'dtmf': {
     # we give the user a bit more time before we hang up on them
     'timeOut': 10,
     # we only expect one digit
     'maxDigits': 1
+  }
 }
 ```
 

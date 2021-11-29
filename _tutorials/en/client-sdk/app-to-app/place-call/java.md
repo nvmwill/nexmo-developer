@@ -16,7 +16,7 @@ To start the call after pressing `start call` button add the `startCall` method 
 ```java
 @SuppressLint("MissingPermission")
   private void startCall() {
-      client.call(otherUser, NexmoCallHandler.SERVER, new NexmoRequestListener<NexmoCall>() {
+      client.serverCall(otherUser, null, new NexmoRequestListener<NexmoCall>() {
           @Override
           public void onError(@NonNull NexmoApiError nexmoApiError) {
 
@@ -34,7 +34,7 @@ To start the call after pressing `start call` button add the `startCall` method 
             
             onGoingCall.addCallEventListener(new NexmoCallEventListener() {
                 @Override
-                public void onMemberStatusUpdated(NexmoCallMemberStatus callStatus, NexmoCallMember nexmoCallMember) {
+                public void onMemberStatusUpdated(NexmoCallMemberStatus callStatus, NexmoMember nexmoMember) {
                     if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
                         onGoingCall = null;
 
@@ -47,17 +47,17 @@ To start the call after pressing `start call` button add the `startCall` method 
                 }
 
                 @Override
-                public void onMuteChanged(NexmoMediaActionState nexmoMediaActionState, NexmoCallMember nexmoCallMember) {
+                public void onMuteChanged(NexmoMediaActionState nexmoMediaActionState, NexmoMember nexmoMember) {
 
                 }
 
                 @Override
-                public void onEarmuffChanged(NexmoMediaActionState nexmoMediaActionState, NexmoCallMember nexmoCallMember) {
+                public void onEarmuffChanged(NexmoMediaActionState nexmoMediaActionState, NexmoMember nexmoMember) {
 
                 }
 
                 @Override
-                public void onDTMF(String s, NexmoCallMember nexmoCallMember) {
+                public void onDTMF(String s, NexmoMember nexmoMember) {
 
                 }
             });

@@ -5,7 +5,7 @@ description: In this step you learn how to receive an in-app call
 
 # Receiving a call
 
-Now that the calling interface is built, you can now add the code needed receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.swift` file.
+Now that the calling interface is built, you can now add the code needed to receive a call. The `NXMClientDelegate` has a function that is called when there is an incoming call. Add an implementation for it in the `NXMClientDelegate` extension in the `ViewController.swift` file.
 
 ```swift
 extension ViewController: NXMClientDelegate {
@@ -47,10 +47,7 @@ class CallViewController: UIViewController {
     }
     
     private func displayIncomingCallAlert(call: NXMCall) {
-        var from = "Unknown"
-        if let otherParty = call.otherCallMembers.firstObject as? NXMCallMember {
-            from = otherParty.user.name
-        }
+        let from = call.myMember?.channel?.from.data ?? "Unknown"
 
         let alert = UIAlertController(title: "Incoming call from", message: from, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Answer", style: .default, handler: { _ in
@@ -89,7 +86,7 @@ Similar to `NXMClient`, `NXMCall` also has a delegate to handle changes to the c
 
 ```swift
 extension CallViewController: NXMCallDelegate {
-    func call(_ call: NXMCall, didUpdate callMember: NXMCallMember, with status: NXMCallMemberStatus) {
+    func call(_ call: NXMCall, didUpdate callMember: NXMMember, with status: NXMCallMemberStatus) {
         switch status {
         case .answered:
             guard callMember.user.name != self.user.name else { return }
@@ -107,7 +104,7 @@ extension CallViewController: NXMCallDelegate {
         setStatusLabelText(error.localizedDescription)
     }
 
-    func call(_ call: NXMCall, didUpdate callMember: NXMCallMember, isMuted muted: Bool) {}
+    func call(_ call: NXMCall, didUpdate callMember: NXMMember, isMuted muted: Bool) {}
 }
 ```
 

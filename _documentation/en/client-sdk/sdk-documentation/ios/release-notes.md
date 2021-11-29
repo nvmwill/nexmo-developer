@@ -6,6 +6,107 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.3.0 - 2021-11-22
+
+### Added
+
+- `NXMClientConfig`'s `apiPinning` and `websocketPinning` optional fields to enable HTTP and web-socket SSL pinning.
+- `[NXMPinningConfig fromPublicKeys:]` method to create a public-key-based pinning configuration.
+- `NXMConnectionStatusReasonSSLPinningError` describing a client connection update due to an SSL pinning error.
+
+### Changed
+
+- Minimum supported iOS version (`IPHONEOS_DEPLOYMENT_TARGET`) bumped to `10.3`.
+
+## 3.2.1 - 2021-11-08
+
+### Fixed
+
+- Stash events while conversation is downloading to avoid missed events
+
+## 3.2.0 - 2021-10-19
+
+### Added
+
+- `NXMClientConfig.autoMediaReoffer` to allow to automatically reconnect media when network interfaces changes.
+- `[NXMClientConfig description]` for a quick `NXMClientConfig`'s instance description.
+- `NXMMediaConnectionStatus` enumerate.
+- `[NXMConversationDelegate conversation:onMediaConnectionStateChange:legId:]` to receive media connection state changed notification.
+- `[NXMConversation reconnectMedia]` to trigger a media reconnection.
+- `[NXMClient reconnectCallWithConversationId:andLegId:completionHandler:]` to reconnect a call given a conversation id and a leg id.
+- `NXMCall.conversation` to get the conversation associated to a call.
+
+### Deprecated
+
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:]`.
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:iceServerUrls:]`.
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:useFirstIceCandidate:]`.
+- `[NXMClientConfig initWithApiUrl:websocketUrl:ipsUrl:iceServerUrls:useFirstIceCandidate]`.
+
+## 3.1.0 - 2021-09-06
+
+### Added
+
+- `[NXMClient inAppCallWithCallee:completionHandler:]` method to perform in-app calls.
+- `[NXMClient serverCallWithCallee:customData:completionHandler:]` method to perform server calls, optionally specifying `customData`.
+
+### Enhancements
+
+- Internal API calls optimized for conversation creation.
+
+### Deprecated
+
+- `[NXMClient call:callHandler:completionHandler:]` method.
+- `NXMCallHandler` enumerate.
+- `[NXMLogger getLogFileNames]` method.
+
+## 3.0.1 - 2021-07-12
+
+### Fixed
+
+- Sending DTMF during calls.
+- Prewarmed media termination.
+
+### Changed
+
+- `NXMMemberEvent`'s `member` substituted with `memberId`.
+
+## 3.0.0 - 2021-07-01
+
+### Added
+
+- Added `NXMMemberSummary` returned by `[NXMConversation getMembersPageWithPageSize:order:completion:]` (paginated), representing a subset of member's information.
+- Added `NXMMemberEvent`'s `invitedBy` that represents the inviter name, if exists.
+- Added `NXMEventEmbeddedInfo` to all events returned by `NXMEvent`'s `embeddedInfo` and containing the `NXMUser` linked to the event.
+- Added `[NXMConversation getMemberWithMemberUuid:completion:]` returning the member given its identifier.
+
+### Enhancements
+
+- Allow 1K members on a conversation.
+- Improved `callServer` setup time by pre-warming leg.
+- Disabled media after RTC hangup event.
+- Fixed text typing events handling.
+
+### Breaking changes
+
+- Removed `NXMCallMember`, replaced with `NXMMember`.
+- Removed `NXMCallMember`'s `status`, moved to `[NXMCall callStatusForMember:member:]`.
+- Removed `[NXMCallMember mute:]` converted into `[NXMMember enableMute]` and `[NXMMember disableMute]`.
+- Removed `NXMConversation`'s `allMembers` (replaced with `[NXMConversation getMembersPageWithPageSize:order:completion:]` (paginated)).
+- Removed `[NXMConversationUpdateDelegate conversation:didUpdateMember:withType:]`, replaced with `[NXMConversationDelegate conversation:didReceiveMemberEvent:]` with the following possible states: `NXMMemberStateInvited`, `NXMMemberStateJoined` and  `NXMMemberStateLeft`. Can be subscribed to using `NXMConversation`'s `delegate`.
+- Renamed `NXMCall`'s `otherCallMembers` to `allMembers`.
+- Renamed `NXMCall`'s `myCallMember` to `myMember`.
+- The `legs` endpoint should be included in `acl` paths on `JWT` token creation.
+
+```json
+"acl": {
+  "paths": {
+    ...,
+    "/*/legs/**": {}
+  }
+}
+```
+
 ## 2.5.0 - 2020-11-23
 
 ### Changed

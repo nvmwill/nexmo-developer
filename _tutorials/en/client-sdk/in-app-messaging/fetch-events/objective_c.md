@@ -5,7 +5,7 @@ description: In this step you will handle chat events.
 
 # Chat events
 
-Earlier you created a conversation in the Nexmo CLI and added the two users to that conversation. Conversations, modeled as `NXMConversation` objects in the Client SDK, are how the users will communicate. You can learn more about conversations in the [Conversation API documentation](/conversation/concepts/conversation). Chat events, or `NXMEvent` objects, are sent using the conversation that you created, so to get chat event you will first need to fetch the conversation. To implement this, the additions to `ChatViewController.m` shown in the following sections are required.
+Earlier you created a conversation in the Vonage CLI and added the two users to that conversation. Conversations, modeled as `NXMConversation` objects in the Client SDK, are how the users will communicate. You can learn more about conversations in the [Conversation API documentation](/conversation/concepts/conversation). Chat events, or `NXMEvent` objects, are sent using the conversation that you created, so to get chat event you will first need to fetch the conversation. To implement this, the additions to `ChatViewController.m` shown in the following sections are required.
 
 Add properties for the conversation and events as well as conformance to the `NXMConversationDelegate` in the interface:
 
@@ -31,7 +31,7 @@ Add the functions to get the conversation, events and process those events a the
 
 ```objective_c
 - (void)getConversation {
-    [self.client getConversationWithUuid:self.user.conversationId completionHandler:^(NSError * _Nullable error, NXMConversation * _Nullable conversation) {
+    [self.client getConversationWithUuid:self.user.conversationId completion:^(NSError * _Nullable error, NXMConversation * _Nullable conversation) {
         self.conversation = conversation;
         if (conversation) {
             [self getEvents];
@@ -73,11 +73,14 @@ Add the functions to get the conversation, events and process those events a the
         case NXMMemberStateLeft:
             [self addConversationLine:[NSString stringWithFormat:@"%@ left", event.member.user.name]];
             break;
+        case NXMMemberStateUnknown:
+             [NSException raise:@"UnknownMemberState" format:@"Member state is unknown"];
+             break;
     }
 }
 
 - (void)showTextEvent:(NXMTextEvent *)event {
-    NSString *message = [NSString stringWithFormat:@"%@ said %@", event.fromMember.user.name, event.text];
+    NSString *message = [NSString stringWithFormat:@"%@ said %@", event.embeddedInfo.user.name, event.text];
     [self addConversationLine:message];
 }
 
@@ -92,7 +95,7 @@ Add the functions to get the conversation, events and process those events a the
 }
 ```
 
-`getConversation` uses the conversation ID from the Nexmo CLI to fetch the conversation, if that is successful `getEvents` is called to fetch the chat events. The Client SDK supports pagination so to get the chat events you must specify a page size.
+`getConversation` uses the conversation ID from the Vonage CLI to fetch the conversation, if that is successful `getEvents` is called to fetch the chat events. The Client SDK supports pagination so to get the chat events you must specify a page size.
 
 Once the events are fetched they are processed by `processEvents`. In `processEvents` there is type casting to either a `NXMMemberEvent` or a `NXMTextEvent` which get append to the `conversationTextView` by `showMemberEvent` and `showTextEvent` respectively. You can find out more about the supported event types in the [Conversation API documentation](/conversation/concepts/event).
 

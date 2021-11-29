@@ -6,6 +6,70 @@ navigation_weight: 0
 
 # Release Notes
 
+## 3.3.0 - Nov 22, 2022
+
+### Added
+
+- `NexmoClient.Builder`'s `restEnvironmentHostPinning` and `environmentHostPinning` methods added to enable HTTP and web-socket SSL pinning.
+- `NexmoPinningConfig.fromPublicKeys(...)` method to create a public-key-based pinning configuration.
+
+```kotlin
+nexmoClient = new NexmoClient.Builder()
+    .environmentHostPinning(NexmoPinningConfig.fromPublicKeys("publicKeyHash"))
+    .build(context);
+```
+
+- New `ConnectionStatusReason` case `SSL_PINNING_ERROR` when `Disconnected` due to invalid public key found backend connection.
+
+```kotlin
+connectionStateListener = NexmoConnectionListener { status, reason ->
+    when(status){
+          NexmoConnectionListener.ConnectionStatus.DISCONNECTED-> {
+              if (reason == NexmoConnectionListener.ConnectionStatusReason.SSL_PINNING_ERROR) {
+                  // Notify UI 
+              }
+          }
+      }
+}
+```
+
+
+## 3.2.0 - Oct 19, 2021
+
+### Added
+
+- `NexmoClient.Builder.autoMediaReoffer(autoMediaReoffer)` to allow to automatically reconnect media when network interfaces changes.
+- `EMediaConnectionState` enumerate.
+- `NexmoMediaStatusListener` to receive media connection state changed notification.
+- `NexmoConversation.reconnectMedia()` to trigger a media reconnection.
+- `NexmoClient.reconnectCall(conversationId, legId, listener)` to reconnect a call given a conversation id and a leg id.
+- `NexmoClient.getUserSessions(userId, pageSize, order, listener)` to fetch a paginated list of active user sessions.
+
+## Version 3.1.1 - Oct 18, 2021
+
+### Added
+
+- Change socket `connectionListeners` from `HashSet` to `ArraySet`.
+
+## Version 3.1.0 - Sep 6, 2021
+
+### Added
+
+- `NexmoClient.inAppCall(username, listener)` method to perform in-app calls.
+- `NexmoClient.serverCall(callee, customData, listener)` method to perform server calls, optionally specifying `customData`.
+
+### Deprecated
+
+- `NexmoClient.call(callee, callType, listener)` method.
+- `NexmoCallHandler` enumerate.
+
+## Version 3.0.1 - Jun 16, 2021
+
+### Enhancements
+
+- Fixed a bug on DTMF dispatch of a callback to event_url
+- Fixed a bug of not receiving typing events from Web to Android
+
 ## Version 3.0.0 - Jun 1, 2021
 
 ### Added
@@ -28,6 +92,7 @@ navigation_weight: 0
 - Removed `callMember.mute(boolean, listener)` moved to `member.enableMute(listener)` and `member.disableMute(listener)`.
 - Removed `callMember.earmuff(boolean, listener)` moved to `member.enableEarmuff(listener)` and `member.enableEarmuff(listener)`.
 - Removed `conversation.getAllMembers()` moved to `conversation.getMembers()` (paginated).
+- Removed `NexmoConversationListener.onMemberUpdated`, replaced with `NexmoMemberEventListener` that provide `onMemberInvited`, `onMemberAdded`, `onMemberRemoved` subscribing by `conversation.addMemberEventListener()`.
 - Renamed `call.getCallMembers()` to `call.getAllMembers()`.
 - Renamed `call.getMyCallMember()` to `call.getMyMember()`.
 - The `legs` endpoint should be included in `acl` paths on `JWT` token creation.

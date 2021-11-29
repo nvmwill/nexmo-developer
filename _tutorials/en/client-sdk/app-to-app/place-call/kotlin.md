@@ -16,7 +16,7 @@ To start the call after pressing `start call` button add the `startCall` method 
 ```kotlin
 @SuppressLint("MissingPermission")
 fun startCall() {
-  client.call(otherUser, NexmoCallHandler.SERVER, object : NexmoRequestListener<NexmoCall> {
+  client.serverCall(otherUser, null, object : NexmoRequestListener<NexmoCall> {
       override fun onSuccess(call: NexmoCall?) {
           runOnUiThread { 
             hideUI()
@@ -26,7 +26,7 @@ fun startCall() {
           onGoingCall = call
 
           onGoingCall?.addCallEventListener(object : NexmoCallEventListener {
-              override fun onMemberStatusUpdated(callStatus: NexmoCallMemberStatus, callMember: NexmoCallMember) {
+              override fun onMemberStatusUpdated(callStatus: NexmoCallMemberStatus, nexmoMember: NexmoMember) {
                   if (callStatus == NexmoCallMemberStatus.COMPLETED || callStatus == NexmoCallMemberStatus.CANCELLED) {
                       onGoingCall = null
                       
@@ -38,11 +38,11 @@ fun startCall() {
                   }
               }
 
-              override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {}
+              override fun onMuteChanged(nexmoMediaActionState: NexmoMediaActionState, nexmoMember: NexmoMember) {}
 
-              override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, callMember: NexmoCallMember) {}
+              override fun onEarmuffChanged(nexmoMediaActionState: NexmoMediaActionState, nexmoMember: NexmoMember) {}
 
-              override fun onDTMF(dtmf: String, callMember: NexmoCallMember) {}
+              override fun onDTMF(dtmf: String, nexmoMember: NexmoMember) {}
           })
       }
 
