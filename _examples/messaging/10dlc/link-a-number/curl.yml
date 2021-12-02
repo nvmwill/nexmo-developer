@@ -2,8 +2,8 @@
 title: cURL
 language: curl
 code:
-    source: .repos/vonage/vonage-curl-code-snippets/messaging/sms/send-an-sms.sh
+    source: .repos/vonage/vonage-curl-code-snippets/messaging/10dlc/link-number.sh
     from_line: 4
-    to_line: 9
-file_name: send-sms.sh
-run_command: 'sh send-sms.sh'
+    to_line: 12
+file_name: link-number.sh
+run_command: 'sh link-number.sh'
