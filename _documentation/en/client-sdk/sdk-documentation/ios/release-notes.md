@@ -6,6 +6,42 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.0.0  - 2021-12-06
+
+### Added
+
+- `[NXMConversation sendMessage:completionHandler:]` method to send `NXMMessage`.
+- `[NXMClient uploadAttachmentWithType:name:data:completionHandler:]` method to upload attachments.
+- `NXMMessage` represents a message to send.
+- `NXMMessageType` for messages of type `text`, `image`, `audio`, `video`, `file`, `template`, `vcard` and `custom`.
+- `NXMEventTypeMemberMessageStatus`, a new `NXMEventType` case, represents a member message status event that can be received on an `NXMConversation`.
+
+### Enhancements
+
+- WebRTC dependency upgraded to version `84.0.0`.
+- Enforce direction for `NXMCallMemberStatus` during calls.
+
+### Changed
+
+- `NXMDirectionType` renamed to `NXMChannelType`.
+
+### Deprecated
+
+- `[NXMConversation sendText:completionHandler:]` method.
+- `[NXMConversation sendAttachmentWithType:name:data:completionHandler:]` method.
+
+## 3.3.0 - 2021-11-22
+
+### Added
+
+- `NXMClientConfig`'s `apiPinning` and `websocketPinning` optional fields to enable HTTP and web-socket SSL pinning.
+- `[NXMPinningConfig fromPublicKeys:]` method to create a public-key-based pinning configuration.
+- `NXMConnectionStatusReasonSSLPinningError` describing a client connection update due to an SSL pinning error.
+
+### Changed
+
+- Minimum supported iOS version (`IPHONEOS_DEPLOYMENT_TARGET`) bumped to `10.3`.
+
 ## 3.2.1 - 2021-11-08
 
 ### Fixed
