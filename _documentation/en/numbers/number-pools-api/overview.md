@@ -6,7 +6,7 @@ description: Number Pools are collections of numbers associated with a Vonage Ac
 
 # Number Pools API Overview
 
-Number Pools are collections of numbers associated with a Vonage Account (API Key) that can be leveraged to send outbound SMS traffic to users. The Number Pools API enables Vonage customers to directly manage account-level number pools programmatically as a self-service. This self-service allows you to process simple requests without having to open a support ticket so they can be processed for you.
+Number Pools are collections of numbers associated with a Vonage Account (API Key) that can be leveraged to send outbound SMS traffic to users. The Number Pools API enables Vonage customers to directly manage account-level number pools programmatically as a self-service. This self-service allows you to process a variety of requests without having to open a support ticket so they can be processed for you.
 
 The Number Pools API allows you to perform a number of different operations on your account level number pools.
 
