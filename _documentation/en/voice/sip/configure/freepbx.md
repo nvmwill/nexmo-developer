@@ -93,3 +93,9 @@ For PJSIP configuration use the following information:
 | From Domain | sip.nexmo.com |
 | DTMF Mode | RFC4733 |
 | Codecs | ulaw, alaw, g729 |
+
+## PSIP
+
+Below you can learn how to integrate Vonage SIP Trunking with Genesys Contact Center in 10 minutes.
+[![Learn how to integrate Vonage SIP Trunking with Genesys Contact Center in 10 minutes](https://user-images.githubusercontent.com/9335603/148577543-206547e7-68ba-402b-b2ac-656bdb5ae8f1.png)](https://www.youtube.com/watch?v=v6k1FpbP2V4)
+
