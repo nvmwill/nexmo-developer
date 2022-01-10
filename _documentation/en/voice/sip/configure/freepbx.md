@@ -97,5 +97,5 @@ For PJSIP configuration use the following information:
 ## PSIP
 
 Below you can learn how to integrate Vonage SIP Trunking with Genesys Contact Center in 10 minutes.
-[![Learn how to integrate Vonage SIP Trunking with Genesys Contact Center in 10 minutes](https://user-images.githubusercontent.com/9335603/148577543-206547e7-68ba-402b-b2ac-656bdb5ae8f1.png)](https://www.youtube.com/watch?v=v6k1FpbP2V4)
+<center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/v6k1FpbP2V4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
