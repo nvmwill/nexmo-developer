@@ -11,6 +11,9 @@ description: >-
 
 A Call Control Object (NCCO) is a JSON array of actions that is used to control the flow of a Voice API Call.
 
+Below you can find the One Dev Minute video explaining what NCCOs are and how to use them:
+<center><iframe width="448" height="252" src="https://www.youtube-nocookie.com/embed/26rm0MP2up0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
 This section describes:
 
 - [About Nexmo Call Control Objects](#about-nexmo-call-control-objects)
