@@ -21,8 +21,12 @@ sudo mv ./neru /usr/local/bin
 ### Windows
 
 ```
+mkdir .neru
+cd .neru
 curl -O https://api-eu.vonage.com/v1/neru/i/neru-59e69cd7-neru-cli-install-dist/neru-cli_windows_amd64/neru.exe
+setx PATH "%PATH%;%cd%"
 ```
+Close and reopen command prompt to reload your `PATH`.
 
 ### Linux
 
