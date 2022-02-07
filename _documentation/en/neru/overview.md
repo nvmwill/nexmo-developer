@@ -46,15 +46,15 @@ The `init` command of the NeRu CLI creates a `neru.yml` file. This `neru.yml` fi
 project:
     name: neru-test-app
 instances:
-    name: eu-dev-test-app
+    name: dev
     runtime: nodejs
-    region: euw1
+    region: aws.euw1
     application-id: fcd08ece-f3c2-4adf-bf84-5ba8a1c86e0e
-    configuration:
+    configurations:
         contact:
             number: "44700000000"
             type: "phone"
     secrets: []
 ```
 
-Under the `configuration` key you can add information that you would want to pass to your instances for example a Vonage number.
+Under the `configurations` key you can add information that you would want to pass to your instances for example a Vonage number.
