@@ -27,8 +27,8 @@ This will display your NeRu projects in a list like so:
 
 To take a deeper look at your project and deployments you can use the [NeRu dashboard](https://dashboard.serverless.vonage.com/).
 
-![Screenshot of the neru dashboard home page](/screenshots/tutorials/neru/neru-dashboard-home.png)
+![Screenshot of the neru dashboard home page](/images/neru/neru-dashboard-home.png)
 
 You can click on your deployed instance which will give you access to logs, events, your instance's configuration, and deployment history.
 
-![Screenshot of the neru dashboard instance page](/screenshots/tutorials/neru/neru-dashboard-instance.png)
+![Screenshot of the neru dashboard instance page](/images/neru/neru-dashboard-instance.png)
