@@ -53,10 +53,6 @@ navigation_weight:
   in-app-voice: 5
   in-app-video: 6
 
-  neru-cli: 1
-  neru-debugging: 1
-  providers: 400
-
   secret-management: 30
 
 navigation_overrides:
@@ -179,16 +175,42 @@ navigation_overrides:
       navigation_weight: 9999
   neru:
     label: 'Dev Preview'
-    svg: 'cloud-upload'
+    svg: 'cloud'
     overview:
       navigation_weight: 1
-    neru-cli:
+    cli:
       navigation_weight: 2
-    neru-debugging:
+    debugging:
       navigation_weight: 3
-    concepts: 
-      navigation_weight: 4
     providers:
+      navigation_weight: 4
+      overview: 
+        navigation_weight: 1
+      voice: 
+        navigation_weight: 2
+      messages: 
+        navigation_weight: 3  
+      state: 
+        navigation_weight: 4  
+      scheduler: 
+        navigation_weight: 5
+    code-snippets:
       navigation_weight: 5
-    guides:
-      navigation_weight: 6
+
+
+  # messaging:
+  #   svg: 'message'
+  #   svgColor: 'purple'
+  #   sms:
+  #     navigation_weight: 0
+  #   us-short-codes:
+  #     navigation_weight: 1
+  #     guides:
+  #       2fa:
+  #         navigation_weight: 0
+  #       campaign-subscription-management:
+  #         navigation_weight: 1
+  #       alerts:
+  #         navigation_weight: 2
+  #   conversion-api:
+  #     navigation_weight: 2

@@ -1,7 +1,7 @@
 ---
 title: Overview
 description: This topic provides an overview of the NeRu Providers.
-navigation_weight: 0
+navigation_weight: 1
 ---
 
 # NeRu Providers Overview
@@ -12,14 +12,10 @@ Providers are a way for your NeRu code to interact with the Vonage APIs or the N
 
 The NeRu SDK gives you access to the following providers:
 
-* [State](/neru/providers/state) - Store and fetch data for your project instance.
-
-* [Asset](/neru/providers/asset) - Access assets you've stored on NeRu.
-
-* [Scheduler](/neru/providers/scheduler) - Schedule functions to be run for your project.
-
-* [VonageAI](/neru/providers/vonageai) - Import models and analyze data with [VonageAI](https://www.ai.vonage.com).
-
-* [Conversation](/neru/providers/conversation) - Make and control calls with the [Conversation API](/conversation/overview).
+* [Voice](/neru/providers/voice) - Make and control calls with the [Voice](/voice/voice-api/overview) and [Conversation](/conversation/overview) APIs.
 
 * [Messages](/neru/providers/messages) - Send messages with the [Messages API](/messages/overview).
+
+* [State](/neru/providers/state) - Store and fetch data for your project instance.
+
+* [Scheduler](/neru/providers/scheduler) - Schedule functions to be run for your project.
