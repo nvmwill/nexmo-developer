@@ -12,8 +12,18 @@ meta_title: NeRu CLI
 
 ### Mac
 
+#### Intel
+
 ```
 curl -O https://api-eu.vonage.com/v1/neru/i/neru-59e69cd7-neru-cli-install-dist/neru-cli_darwin_amd64/neru
+chmod +x ./neru 
+sudo mv ./neru /usr/local/bin
+```
+
+#### M1 (ARM)
+
+```
+curl -O https://api-eu.vonage.com/v1/neru/i/neru-59e69cd7-neru-cli-install-dist/neru-cli_darwin_arm64/neru
 chmod +x ./neru 
 sudo mv ./neru /usr/local/bin
 ```
