@@ -44,27 +44,39 @@ Run `neru version` and update the CLI if prompted.
 
 Create a folder:
 
-`mkdir neru-test-app`
+```
+mkdir neru-test-app
+```
 
 Change directory into the folder:
 
-`cd neru-test-app`
+```
+cd neru-test-app
+```
 
 Create a new Vonage application:
 
-`neru app create --name "Test app"`
+```
+neru app create --name "Test app"
+```
 
 Buy and/or link a number to the new application via the API dashboard or using the Vonage CLI:
 
-`vonage apps:link APPLICATION_ID --number=YOUR_VONAGE_NUMBER`
+```
+vonage apps:link APPLICATION_ID --number=YOUR_VONAGE_NUMBER
+```
 
 Create a NeRu project:
 
-`neru init`
+```
+neru init
+```
 
 Choose the `VonagePark` template. When it completes, install the dependencies:
 
-`npm install`
+```
+npm install
+```
 
 Open the folder in VSCode and edit the `neru.yml` file to include the contact configuration:
 
@@ -78,7 +90,9 @@ Open the folder in VSCode and edit the `neru.yml` file to include the contact co
 
 Debug the project locally:
 
-`neru debug`
+````
+neru debug
+```
 
 Now you are ready to call your Vonage number.
 
@@ -94,13 +108,91 @@ Set breakpoints in your code and call your Vonage number again.
 
 Now you are ready to deploy:
 
-`neru deploy`
+```
+neru deploy
+```
 
 This will deploy your project to the NeRu platform. Once it is complete, visit the NeRu dashboard and view your project:
 
 https://dashboard.serverless.vonage.com/
 
 ## Add a Feature
+
+To build on top of the sample, we will add a feature to project, to send an SMS reminder to the user when their parking is about to run out. To do so we are going to use the Scheduler provider.
+
+In the `pay` case of the `onEvent` route before the `res.json`, create an instance of the Scheduler provider:
+
+`const scheduler = new Scheduler(session);`
+
+Then calculate the time to send the message, we will send a reminder 10 minutes before.
+
+```javascript
+const endTime = new Date(new Date().setHours(new Date().getHours() + parseInt(data.duration)));
+const reminderTime = new Date(endTime.getTime() - (1000 * 10)).toISOString()
+```
+
+but for testing we will send a reminder in 20 seconds:
+
+```javascript
+const testTime = new Date(new Date().setSeconds(new Date().getSeconds() + 20)).toISOString();
+```
+
+Now make a call to the scheduler:
+
+```javascript
+scheduler.startAt({
+    startAt: testTime,
+    callback: 'parkingReminder',
+    payload: {
+        text: "hello world",
+    }
+}).execute();
+```
+
+So, when the time is reached, the scheduler will make a call to the `/parkingReminder` route:
+
+```javascript
+router.post('/parkingReminder', async (req, res, next) => {
+    try {
+ 
+        
+    } catch (error) {
+        next(error);
+    }
+});
+```
+
+Inside the route, create a session from the request and create an instance of the Messages scheduler:
+
+```javascript
+const session = neru.getSessionFromRequest(req)
+const state = session.getState();
+const messaging = new Messages(session);
+```
+
+Below, get the data we need. Note how we are able to access the state from before because we created the session from the request:
+
+```javascript
+const from = req.body.from;
+const data = await state.get("calldata");
+
+const to = { type: "sms", number: from };
+const vonageNumber = { type: "sms", number: contact.number }; 
+```
+
+Finally, send the message:
+
+```javascript
+await messaging.sendText(
+    vonageNumber,
+    to,
+    `Your parking at ${data.parkingID} for is about to run out.`
+).execute();
+
+res.sendStatus(200);
+```
+
+Now if you call back and go through the flow, you will receive a text message 20 seconds later. 
 
 ## Feedback
 
