@@ -90,7 +90,7 @@ Open the folder in VSCode and edit the `neru.yml` file to include the contact co
 
 Debug the project locally:
 
-````
+```
 neru debug
 ```
 
@@ -122,7 +122,9 @@ To build on top of the sample, we will add a feature to project, to send an SMS 
 
 In the `pay` case of the `onEvent` route before the `res.json`, create an instance of the Scheduler provider:
 
-`const scheduler = new Scheduler(session);`
+```
+const scheduler = new Scheduler(session);
+```
 
 Then calculate the time to send the message, we will send a reminder 10 minutes before.
 
