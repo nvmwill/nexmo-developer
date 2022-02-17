@@ -58,7 +58,7 @@ Buy and/or link a number to the new application via the API dashboard or using t
 
 `vonage apps:link APPLICATION_ID --number=YOUR_VONAGE_NUMBER`
 
-Create a neru project:
+Create a NeRu project:
 
 `neru init`
 
@@ -110,7 +110,7 @@ Thanks for attending the training, we would love your feedback on the training a
 
 * How did you find using NeRu compared to writing a similar application (Voice API/Messages API) normally?
 
-* Can you think of any projects for clients you worked on recently that could have benefitted from using NeRu?
+* Can you think of any projects for clients you worked on recently that could have benefited from using NeRu?
 
 * What features would you like to see added to NeRu?
 
@@ -118,7 +118,7 @@ Thanks for attending the training, we would love your feedback on the training a
 
 * Did you find the NeRu debugging useful?
 
-* Are you able to volunteer some time to develop a sample use case with NeRu, to build on what you’ve learnt?
+* Are you able to volunteer some time to develop a sample use case with NeRu, to build on what you’ve learned?
 
 
 
