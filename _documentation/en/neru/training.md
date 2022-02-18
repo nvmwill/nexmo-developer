@@ -21,7 +21,6 @@ Session outline:
 
 * NeRu
 * Providers
-    * State
 * Deploying
     * Config file
     * Sessions
@@ -65,6 +64,14 @@ Buy and/or link a number to the new application via the API dashboard or using t
 ```
 vonage apps:link APPLICATION_ID --number=YOUR_VONAGE_NUMBER
 ```
+
+Update your Vonage application's webhooks to enable Voice:
+
+```
+neru app configure --voice=true --messages=true --rtc=false --app-id=APPLICATION_ID
+```
+
+> Due to an issue with the Application API, you will need to open your project on the API Dashboard, click edit, then click save. 
 
 Create a NeRu project:
 
@@ -213,6 +220,3 @@ Thanks for attending the training, we would love your feedback on the training a
 * Did you find the NeRu debugging useful?
 
 * Are you able to volunteer some time to develop a sample use case with NeRu, to build on what you’ve learned?
-
-
-
