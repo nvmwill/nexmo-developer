@@ -17,6 +17,8 @@ products:
     title: Reports API
   whatsapp-provisioning:
     title: WhatsApp Provisioning
+  10dlc:
+    title: 10 DLC API
 
 generic_errors:
   low-balance:
