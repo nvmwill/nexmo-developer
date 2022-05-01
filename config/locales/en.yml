@@ -7,6 +7,7 @@ en:
     message-search: Message Search
     messaging: Messaging
     meetings: Meetings API
+    bulk: Bulk API
     voice: Voice
     voice-api: Voice API
     sip: SIP
