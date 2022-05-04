@@ -10,7 +10,7 @@ navigation_weight: 1
 
 Execute outreach campaigns at a large scale using any channel or API. 
 
-This API makes it easy to schedule and send personalized messages to large contact groups, and offers the ability to receive and act on responses received from customers.
+This API allows you to schedule and send personalized messages to large contact groups, and offers the ability to receive and act on responses received from customers.
 
 ## Capabilities 
 
