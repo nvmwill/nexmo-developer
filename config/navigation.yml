@@ -153,6 +153,8 @@ navigation_overrides:
     svg: 'message-sent'
     svgColor: 'purple'
     label: 'Beta'
+    code-snippets: 
+      collapsible: true
   dispatch:
     svg: 'flow'
     svgColor: 'purple'
