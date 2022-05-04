@@ -55,13 +55,13 @@ API calls per second, usually dependent on the restrictions of the API being use
 
 Object that describes response expectations, both immediate or async. 
 
-- **success_codes**: All possible success codes that can return from this request, determines whether the call is considered successful
+- **`success_codes`**: All possible success codes that can return from this request, determines whether the call is considered successful
 
 ### Delivery
 
 Describes information about response from request, relevant only for async calls 
 
-- **invocation_id**: the id of the request, found in the response, that can be matched to subsequent async responses
+- **`invocation_id`**: the id of the request, found in the response, that can be matched to subsequent async responses
 
 ### Async 
 
@@ -102,9 +102,9 @@ The number of seconds until request timeout
 
 Object containing details about request retries 
 
-- **num_retries**: number of tries to attempt before failing the action 
-- **backoff_policy.base_interval_seconds**: how long to wait before trying again 
-- **backoff_policy.max_interval_seconds**:
+- **`num_retries`**: number of tries to attempt before failing the action 
+- **`backoff_policy.base_interval_seconds`**: how long to wait before trying again 
+- **`backoff_policy.max_interval_seconds`**:
 
 ### Command 
 
@@ -126,7 +126,7 @@ Object containing details about the API call.
 ```
 
 - **type**: type of request. currently only http methods are supported. 
-- **url**: URL of the API call, including query parameters 
+- **URL**: URL of the API call, including query parameters 
 - **method**: request method 
 - **payload**: body of the request, in the format expected by the API 
 

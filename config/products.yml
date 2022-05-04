@@ -112,14 +112,6 @@ products:
     translation_frequency: 5
     dropdown: true
   -
-    name: 'Bulk API'
-    icon: 'message-sent'
-    icon_colour: 'indigo' 
-    path: bulk
-    translate: false
-    translation_frequency: 5
-    dropdown: true
-  -
     name: 'SMS API'
     icon: 'message'
     icon_colour: 'purple' 

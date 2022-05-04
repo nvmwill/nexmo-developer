@@ -70,7 +70,7 @@ Add an exclude and include list. Both need an ID and a type:
 A list of one or more segmentations that determine which action and template to use for each item, based on specific conditions. Each segmentation is made up of: 
 
 - **Correlation ID**: The primary value with which to identify the list item 
-- **Condition**: Logical condition (in javascript) that is run on each item 
+- **Condition**: Logical condition (in JavaScript) that is run on each item 
 - **Action Call**: Contains an `action_ref` object that includes the `type` (action), and the `id` of the action to be used. Also contains an object `parameters` in which you can set the values of the parameters defined in the action creation. The action call object will look something like this: 
 
 ```
