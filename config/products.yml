@@ -4,7 +4,7 @@ products:
     icon: 'user'
     icon_colour: 'purple-dark'
     path: account
-    translate: true
+    translate: true 
     translation_frequency: 180
     dropdown: true
   - 
@@ -107,7 +107,15 @@ products:
     name: 'Meetings API'
     icon: 'video-conference'
     icon_colour: 'indigo' 
-    path: meetings
+    path: meetingdocks
+    translate: false
+    translation_frequency: 5
+    dropdown: true
+  -
+    name: 'Bulk API'
+    icon: 'message-sent'
+    icon_colour: 'indigo' 
+    path: bulk
     translate: false
     translation_frequency: 5
     dropdown: true

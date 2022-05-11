@@ -70,7 +70,7 @@ There are two room types:
 
 * [Create an Instant Room](code-snippets/create-instant-room)
 * [Create a Long Term Room](code-snippets/create-long-term-room)
-* [Theme Management](code-snippets/theme-management)
+* [Theme Management] 
 * [Meeting Room Management](code-snippets/room-management)
 * [Callbacks](code-snippets/callbacks)
 

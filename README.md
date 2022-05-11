@@ -3,7 +3,7 @@
 [![Build Status](https://api.travis-ci.org/Nexmo/nexmo-developer.svg?branch=main)](https://travis-ci.org/Nexmo/nexmo-developer/)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
-This repository is the content for <https://developer.nexmo.com>, which includes the Vonage documentation, API reference, SDKs, Tools & Community content. To get a Vonage account, sign up [for free at nexmo.com][signup].
+This repository docker rm -vf $(docker ps -a -q)s the content for <https://developer.nexmo.com>, which includes the Vonage documentation, API reference, SDKs, Tools & Community content. To get a Vonage account, sign up [for free at nexmo.com][signup].
 
 ### [Testing](#testing) &middot; [Running Locally](#running-locally) &middot; [Admin Dashboard](#admin-dashboard) &middot; [Troubleshooting](#troubleshooting) &middot; [Contributing](#contributing) &middot; [License](#license)
 
