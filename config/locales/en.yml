@@ -8,6 +8,7 @@ en:
     messaging: Messaging
     meetings: Meetings API
     voice: Voice
+    video: Video
     voice-api: Voice API
     sip: SIP
     account: Account

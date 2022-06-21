@@ -4,6 +4,7 @@ navigation_weight:
   messages: 1
   meetings: 2
   voice: 3
+  video: 4
   verify: 3
   number-insight: 4
   dispatch: 2
@@ -162,6 +163,9 @@ navigation_overrides:
     svg: 'report'
     svgColor: 'orange'
     label: 'Beta'
+  video:
+    svg: 'video'
+    svgColor: 'orange'
   vonage-business-cloud:
     svg: 'telephone'
     svgColor: 'green'
