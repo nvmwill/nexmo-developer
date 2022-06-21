@@ -208,6 +208,7 @@ products:
     translate: true
     translation_frequency: 5
     dropdown: true
+
   -
     name: 'Vonage Business Cloud'
     icon: 'telephone'

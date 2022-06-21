@@ -7,8 +7,8 @@ en:
     message-search: Message Search
     messaging: Messaging
     meetings: Meetings API
-    voice: Voice
     video: Video
+    voice: Voice
     voice-api: Voice API
     sip: SIP
     account: Account
