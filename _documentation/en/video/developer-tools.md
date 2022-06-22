@@ -1,36 +1,22 @@
 ---
-title: Developer Tools
-meta_title: Developer tools
-description: Developer tools
+title: Video Developer Tools
+meta_title: Use these tools to improve your Video API experience. You can jump into any of our tools to start
+description:  Use these tools to improve your Video API experience. You can jump into any of our tools to start
 ---
 
-# Custom Events
+# Video Developer Tools
 
-Custom events allow you to add custom metadata to conversations by recording data alongside your text or audio events. You can add events [using the REST API](/conversation/code-snippets/event/create-custom-event) or using the JavaScript SDK.
+| Tool     |Description      |  
+|----------|:-------------:|------:|
+| [Video Playground](https://tokbox.com/developer/tools/playground) |  A tool for exploring video platform capabilities without writing code|
+| [General Inspector](https://tokbox.com/developer/tools/inspector)|   A post-call diagnostic tool for your Video  sessions|
+| [Archive Inspector](https://tokbox.com/developer/tools/archive-inspector) | A diagnostic tool for video archiving|
+| [Pre-call Test](https://tokbox.com/developer/tools/archive-inspector) |A tool to test connectivity, call quality, client hardware and software setup|
+| [Insights Explorer](https://insights.opentok.com) | A tool for exploring the video insights using GraphQL.  Follow this [quick start guide](https://developer.vonage.com/blog/2020/04/07/getting-started-with-advanced-insights) to get started with advanced insights|
 
-## Creating a custom event
-
-Each custom event consists of a unique `type` and a `data`. The `type` has the following restrictions:
-
-* Must not exceed 100 characters
-* Must only contain alphanumeric, `-` and `_` characters
-
-In addition, the event `data` must not exceed 4096 bytes.
-
-```tabbed_content
-source: _tutorials_tabbed_content/client-sdk/custom-events/creating
-```
-
-## Listening to custom events
-
-In addition to adding custom events to the conversation, you can listen for custom events using the Client SDK. Register an event handler that listens for your custom event name:
-
-```tabbed_content
-source: _tutorials_tabbed_content/client-sdk/custom-events/listening
-```
-
-## Complete example
-
-```tabbed_content
-source: _tutorials_tabbed_content/client-sdk/custom-events/complete
-```
+<!-- remove later -->
+<style>
+td {
+    text-align:left !important;
+}
+</style>
