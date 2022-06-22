@@ -6,7 +6,7 @@ description: The Vonage Video platform makes it easy to embed high-quality inter
 
 # Video Platform
 
-The Vonage Video platform makes it easy to embed real-time, high-quality interactive video, messaging, screen-sharing, and more into your web and mobile apps.
+The Vonage Video platform makes it possible to embed real-time, high-quality interactive video, messaging, screen-sharing, and more into your web and mobile apps.
 
 The platform includes a client library for your web frontend and server-side SDKs to generate and manage the needed credentials.
 The Vonage video platform uses WebRTC for audio-video communications.
