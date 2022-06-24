@@ -24,7 +24,7 @@ Follow the [server side tutorial](/video/tutorials/server-side-setup) to learn h
 
 #### Session
 
-You can think of a session as a "room" where clients can interact with one another in real-time. Each "room" is identified by a unique session ID that is generated using the [server-side SDKs](/video/resources#server-sdk).
+You can think of a session as a **"room"** where clients can interact with one another in real-time. Each "room" is identified by a unique session ID that is generated using the [server-side SDKs](/video/resources#server-sdk).
 
 In order to initialize and join a session, clients need the session ID and the unique authentication [token](/video/overview#token) from the server.
 

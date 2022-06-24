@@ -5,6 +5,7 @@ description:  Use these tools to improve your Video API experience. You can jump
 ---
 
 ## Developer Tools
+___
 
 | Tool     |Description      |  
 |----------|:-------------:|------:|
@@ -15,10 +16,30 @@ description:  Use these tools to improve your Video API experience. You can jump
 | [Insights Explorer](https://insights.opentok.com) | A tool for exploring the video insights using GraphQL.  Follow this [quick start guide](https://developer.vonage.com/blog/2020/04/07/getting-started-with-advanced-insights) to get started with advanced insights|
 
 ## SDKs
+___
 
-### Client SDK
+#### Client SDKs
 
-### Server SDK
+- **Video SDK:**
+The video SDK provides methods for connecting to and managing client video streams.
+You can integrate the video SDK into your client app using
+[NPM](https://www.npmjs.com/package/@opentok/client) or through a [CDN](https://static.opentok.com/v2/js/opentok.min.js)
+
+- **Video Express SDK:**
+The video express SDK lets you quickly create a multiparty web video conferencing web application.
+You can integrate the express SDK into your client app using
+[NPM](https://www.npmjs.com/package/@vonage/video-express) or through a [CDN](https://static.opentok.com/v1/js/video-express.js).
+
+Follow this [guide](#) to get started with the video express SDK.
+#### Server SDKs
+The server SDKs handles authentication and permissions through [token](/video/overview#token) generation. Its also responsible for [session](/video/overview#session) management.
+
+- **PHP SDK:**
+The PHP SDK is available on [Github](https://github.com/opentok/Opentok-PHP-SDK).
+
+- **NodeJS SDK:**
+The NodeJS SDK can be found on [Github](https://github.com/opentok/opentok-node)
+
 <!-- remove later -->
 <style>
 td {
