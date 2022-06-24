@@ -35,10 +35,10 @@ Follow this [guide](#) to get started with the video express SDK.
 The server SDKs handles authentication and permissions through [token](/video/overview#token) generation. Its also responsible for [session](/video/overview#session) management.
 
 - **PHP SDK:**
-The PHP SDK is available on [Github](https://github.com/opentok/Opentok-PHP-SDK).
+The PHP SDK is available on [GitHub](https://github.com/opentok/Opentok-PHP-SDK).
 
 - **NodeJS SDK:**
-The NodeJS SDK can be found on [Github](https://github.com/opentok/opentok-node)
+The NodeJS SDK can be found on [GitHub](https://github.com/opentok/opentok-node)
 
 <!-- remove later -->
 <style>
