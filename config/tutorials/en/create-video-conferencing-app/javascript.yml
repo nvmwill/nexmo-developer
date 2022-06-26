@@ -38,6 +38,7 @@ tasks:
     - video/create-video-conferencing-app/javascript/sessions-publisher-setup
     - video/create-video-conferencing-app/javascript/initialize-subscriber
     - video/create-video-conferencing-app/javascript/testing
+    - video/create-video-conferencing-app/javascript/css-customization
 
 conclusion:
   title: What's next?
