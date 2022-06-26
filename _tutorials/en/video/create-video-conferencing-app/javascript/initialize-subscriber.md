@@ -21,8 +21,8 @@ We want clients to be able to subscribe to (or view) each other's streams in the
 
 When a new stream is created in the session, the Session object dispatches a `streamCreated` event. When the client detects a stream, we want it to subscribe to that stream, and we do this in the code above with the `session.subscribe()` method. This method takes four parameters:
 
-- The Stream object to which the client is subscribing ie: `event.stream`.
-- The DOM element or DOM element ID (optional) that the subscriber video replaces.In this case the `subscriber` div.
+- The Stream object to which the client is subscribing thus `event.stream`.
+- The DOM element or DOM element ID (optional) that the subscriber video replaces. In this case the `subscriber` div.
 - A set of properties (optional) that customize the appearance of the subscriber view — in this case the `insertMode`, `height`, and `width` attributes.
 - The completion handler function (optional) that is called when the `subscribe()` method completes successfully or fails.
 

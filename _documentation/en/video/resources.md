@@ -57,7 +57,6 @@ The web client SDK is currently supported by the following browsers:
 
 >**NB:** OpenTok.js version 2.16 was the last version to support the OpenTok Plugin for Internet Explorer. OpenTok.js version 2.16 was deprecated in May 2020 for the Standard environment and June 2020 for the Enterprise environment.
 
-
 <!-- remove later -->
 <style>
 td {

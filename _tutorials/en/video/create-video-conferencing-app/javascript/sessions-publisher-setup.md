@@ -45,8 +45,8 @@ You may have noticed the `initializeSession()` method being called after the cre
 
 The application initializes a publisher object with `OT.initPublisher()`. This method takes three optional parameters:
 
-- The DOM element that the publisher video replaces.In this case the publisher div.
-- The properties of the publisher.In this case the `insertMode`, `height`, and `width` attributes.
+- The DOM element that the publisher video replaces. In this case the publisher div.
+- The properties of the publisher. In this case the `insertMode`, `height`, and `width` attributes.
 - The third parameter (not present in our code) specifies the completion handler.
 
 **Initializing and connecting to the session**
@@ -57,6 +57,6 @@ The `connect()` method of the session object connects the client application to 
 
 Once the session is connected, we publish to the session with `session.publish(publisher)`.
 
-If the client fails to connect to the session, an error object is passed into the completion handler of the connect event.In this case it prints an error message to the console using `console.error()`.
+If the client fails to connect to the session, an error object is passed into the completion handler of the connect event. In this case it prints an error message to the console using `console.error()`.
 
 Next step is [initializing the subscriber](/video/tutorials/create-video-conferencing-app/video/create-video-conferencing-app/javascript/initialize-subscriber/javascript)
