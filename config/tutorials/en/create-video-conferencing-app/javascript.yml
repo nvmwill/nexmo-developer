@@ -46,7 +46,7 @@ conclusion:
   content: |
 
     # What's next?
-    Once the frontend integration is complete, the next step is to [integrate the server-side SDK to handle authentication] (/video/tutorials/server-side-setup/introduction).
+    Once the frontend integration is complete, The next step is to create a server-side setup to generate the credentials needed for the frontend. For that, you can follow the [Generating session IDs and tokens on the server side](/video/tutorials/server-side-setup) tutorial.
 
     You can also learn more about the video platform concepts via the [overview page](/video/overview).
 
