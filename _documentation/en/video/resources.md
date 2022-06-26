@@ -40,6 +40,24 @@ The PHP SDK is available on [GitHub](https://github.com/opentok/Opentok-PHP-SDK)
 - **NodeJS SDK:**
 The NodeJS SDK can be found on [GitHub](https://github.com/opentok/opentok-node)
 
+### Supported Browsers
+___
+The web client SDK is currently supported by the following browsers:
+
+- Google Chrome (latest release version)
+- Google Chrome for Android (latest release version)
+- Beta support for Google Chrome for iOS (latest release version)
+- Firefox (latest release version)
+- Firefox for Android (latest release version)
+- Beta support for Firefox for iOS (latest release version)
+- Microsoft Edge versions 79+ for Windows and macOS (Chromium-based versions of Edge)
+- Safari 11+ on macOS and iOS. For information on video interoperability and other issues, see the Safari browser support page.
+- Opera (latest release of desktop version only)
+- Electron (latest release version)
+
+>**NB:** OpenTok.js version 2.16 was the last version to support the OpenTok Plugin for Internet Explorer. OpenTok.js version 2.16 was deprecated in May 2020 for the Standard environment and June 2020 for the Enterprise environment.
+
+
 <!-- remove later -->
 <style>
 td {
