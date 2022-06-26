@@ -36,6 +36,7 @@ tasks:
     - video/create-video-conferencing-app/javascript/folder-structure
     - video/create-video-conferencing-app/javascript/auth-setup
     - video/create-video-conferencing-app/javascript/sessions-publisher-setup
+    - video/create-video-conferencing-app/javascript/initialize-subscriber
 
 conclusion:
   title: What's next?
