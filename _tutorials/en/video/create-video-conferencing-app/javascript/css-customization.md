@@ -44,8 +44,8 @@ At this point, you have a complete working client. This last step will demonstra
     }
     ```
 
-2. Once you've saved the CSS, reopen your `index.html` file in two separate browser tabs.You should now see two video streams, but one will be smaller and nested inside the larger video stream.
+2. Once you've saved the CSS, reopen your `index.html` file in two separate browser tabs. You should now see two video streams, but one will be smaller and nested inside the larger video stream.
 
-Taking a look at the CSS above, you can see that we did this by adjusting the **height**, **width**, and **position** of the `#publisher` div. This "picture-in-picture" layout is a common practice in video chat applications.Feel free to edit sizing and position of these divs as much as you like.
+Taking a look at the CSS above, you can see that we did this by adjusting the **height**, **width**, and **position** of the `#publisher` div. This "picture-in-picture" layout is a common practice in video chat applications. Feel free to edit sizing and position of these divs as much as you like.
 
 The video conferencing frontend implementation is now complete. Checkout the [what's next section](/video/tutorials/create-video-conferencing-app/conclusion/javascript) to learn the next steps to take.
