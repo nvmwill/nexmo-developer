@@ -46,3 +46,5 @@ In this tutorial, you will be creating different folders containing an HTML file
     The code above includes references to the video client SDK as well as the JS and CSS files you just created. The code also includes publisher and subscriber divs, which will contain the video streams — we'll use these classes to customize the layout later.
 
     > The code also uses the video client SDK directly from [static.opentok.com](static.opentok.com). The SDK is also available as an NPM package. For instructions on using the NPM package, see [https://www.npmjs.com/package/@opentok/client](https://www.npmjs.com/package/@opentok/client).
+
+Next step is [setting up authentication](/video/tutorials/create-video-conferencing-app/video/create-video-conferencing-app/javascript/auth-setup/javascript)

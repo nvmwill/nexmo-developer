@@ -17,7 +17,6 @@ In order to connect to a video session, the client will need access to some auth
     var sessionId = "YOUR_SESSION_ID";
     var token = "YOUR_TOKEN";
 
-    // (optional) add server code here
     initializeSession();
     ```
 2. You'll need to adjust the code above by hard coding the values for the `apiKey`, `sessionId` and `token`. 
@@ -32,3 +31,5 @@ In order to connect to a video session, the client will need access to some auth
 > You can continue to generate the session ID and token values from your account during testing and development, but before you go into production you must set up a server to generate them. See the [server-side tutorial](/video/tutorials/server-side-setup) to learn how to do this.
 
 Visit the [overview](/video/overview) page to learn more about tokens and sessions.
+
+Next step is [connecting to the session and creating a publisher](/video/tutorials/create-video-conferencing-app/video/create-video-conferencing-app/javascript/sessions-publisher-setup/javascript)
