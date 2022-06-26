@@ -15,9 +15,9 @@ The Vonage video platform uses WebRTC for audio-video communications.
 
 Integrating the video functionality into your web app involves a two part integration:
 
-- **Client-side implementation:** In order to create a video stream, you will need the [Javascript SDK](/video/resources#client-sdk) to connect the user's browser to the Vonage platform. Follow [this tutorial](/video/tutorials/create-video-conferencing-appy) to learn how to implement the client side code.
+- **Client-side implementation:** In order to create a video stream, you need the [Javascript SDK](/video/resources#client-sdk) to connect the user's browser to the Vonage platform. There is a [step by step tutorial](/video/tutorials/create-video-conferencing-appy) that walks you through the integration process.
 
-- **Server-side implementation:** To create a secure connection between the client side and the Vonage platform, the server side needs to handle the credentials generation using the [server-side SDK](/video/resources#server-sdk).These credentials include the [session ID](/video/overview#session) and [token](/video/overview#token) which is a unique ID for .
+- **Server-side implementation:** To create a secure connection between the client side and the Vonage platform, the server side handles the credentials generation using the [server-side SDK](/video/resources#server-sdk).These credentials include the [session ID](/video/overview#session) and [token](/video/overview#token).
 Follow the [server side tutorial](/video/tutorials/server-side-setup) to learn how to do this.
 
 ### Concepts And Terms
