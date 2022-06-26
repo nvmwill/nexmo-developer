@@ -1,0 +1,55 @@
+title: Building a web-based video conferencing app
+description: The video platform provides audio-video communication functionality for your web application.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to integrate the video [SDK](/video/resources#client-sdks) on your frontend.
+  content: |
+    # Introduction
+    In this tutorial, you will learn how to integrate the video [SDK](/video/resources#client-sdks) on your frontend.
+
+    All applications that use the Vonage Video API are composed of two parts:
+
+    - The client-side, which uses the [client SDKs](/video/resources#client-sdks) and runs in a user’s browser.
+    - The server-side, which uses the [server SDKs](/video/resources#server-sdks) and runs on your server to pass authentication information to the client-side.
+    
+    The Client SDKs take care of the following:
+
+    - Connecting to a session
+    - Publishing streams to a session
+    - Subscribing to streams in a session
+
+    You can learn about the above concepts and SDKs on the [overview page](/video/overview).
+
+    ### Bug fixes
+    **Important — issues fixed in Safari 15.4 and 15.5.** Safari versions 15.4 and 15.5 (which ship with iOS 15.4 and 15.5 and macOS 12.3 and 12.4) fix the following issues, which could affect apps that use OpenTok.js (in Safari):
+
+    - **Audio issues when using certain models of Bluetooth headsets.** On certain models of Bluetooth headsets, audio could drop out. This [WebKit bug]((https://bugs.webkit.org/show_bug.cgi?id=237203) is fixed in Safari 15.4.
+    - **Echo issues when switching microphones in macOS Safari.** Switching the microphone used by a publisher could result in an echo of the publisher's audio. The echo did not appear on the subscriber's side. This [WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=235544) is fixed in Safari 15.5.
+    - **Critical bug publishing H.264 video in routed sessions in iOS 15.1.** In iOS 15.1, publishing H.264 video in routed sessions would fail. This [WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=231505) was fixed in Safari 15.4.
+    - **Low audio volume is iOS Safari.** This [WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=230902) is fixed in Safari 15.4.
+
+
+    *This tutorial uses [Opentok](https://www.npmjs.com/package/@opentok/client) version 2.0*
+
+prerequisites:
+  - create-nexmo-account
+  - install-nodejs
+  - install-nexmo-cli
+  - install-android-studio
+
+tasks:
+
+
+conclusion:
+  title: What's next?
+  description: The next step is to integrate the server-side SDK to handle authentication
+  content: |
+
+    # What's next?
+    Once you have your frontend integration in place the next step is to [integrate the server-side SDK to handle authentication]().
+    The overview page is a good resource should you want to learn more about the video platform concepts.
+
+    We want to hear what ideas you have in mind! Contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
