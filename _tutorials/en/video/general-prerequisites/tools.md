@@ -1,6 +1,6 @@
 ---
 title: General requirements
-description: Install node.js as a prerequisite to installing the Vonage CLI
+description: Vonage video general requirements
 ---
 <br>
 You will need to have the following in place:
