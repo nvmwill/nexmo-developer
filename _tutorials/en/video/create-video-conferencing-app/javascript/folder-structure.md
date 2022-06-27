@@ -27,7 +27,7 @@ In this tutorial, you will be creating different folders containing an HTML file
     ```html
         <html>
         <head>
-            <title> OpenTok Getting Started </title>
+            <title>Vonage Video</title>
             <link href="css/app.css" rel="stylesheet" type="text/css">
             <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
         </head>
