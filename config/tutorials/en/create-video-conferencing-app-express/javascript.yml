@@ -10,7 +10,7 @@ introduction:
     # Introduction
     In this tutorial, you will learn how to quickly integrate video functionality into the frontend of your app using the [video express SDK](/video/resources#client-sdks).
 
-    Vonage Video Express is a JavaScript library for quickly creating a multiparty video conference web application. It works on top of the Vonage Video API for JavaScript.
+    Vonage video express is a JavaScript SDK for quickly creating a multiparty video conference web application. It serves as a wrapper around the Vonage video API.
 
 prerequisites:
   - video/general-prerequisites/tools
