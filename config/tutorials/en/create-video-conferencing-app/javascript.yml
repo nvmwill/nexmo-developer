@@ -29,8 +29,8 @@ introduction:
     *This tutorial uses [Opentok](https://www.npmjs.com/package/@opentok/client) version 2.0*.
 
 prerequisites:
-  - video/create-video-conferencing-app/prerequisites/javascript
-  - video/video-api-account
+  - video/general-prerequisites/tools
+  - video/general-prerequisites/video-api-account
 
 tasks:
     - video/create-video-conferencing-app/javascript/folder-structure
