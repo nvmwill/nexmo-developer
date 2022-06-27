@@ -26,7 +26,7 @@ In order to connect to a video session, the client will need access to some auth
     - Go to your project page and scroll down to the **Project Tools** section.
     - From the Project Tools section, you can generate a **Session ID** and **Token** manually.
     
-    Use the project's API Key along with the Session ID and Token you generated to populate **YOUR_API_KEY**, **YOUR_SESSION_ID** and **YOUR_TOKEN** in the code above (be sure to leave the quotation marks).
+    Use the project's API Key along with the Session ID and Token you generated to replace **YOUR_API_KEY**, **YOUR_SESSION_ID** and **YOUR_TOKEN** in the code above (be sure to leave the quotation marks).
 
 > You can continue to generate the session ID and token values from your account during testing and development, but before you go into production you must set up a server to generate them. See the [server-side tutorial](/video/tutorials/server-side-setup) to learn how to do this.
 
