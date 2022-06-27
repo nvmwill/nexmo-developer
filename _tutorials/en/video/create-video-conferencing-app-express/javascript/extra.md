@@ -12,7 +12,7 @@ The code snippet provided for the tutorial pulled in the video express SDK using
 ```sh
  npm i --save @vonage/video-express
 ```
-You can read more about using NPM on the [npmjs website](https://www.npmjs.com/package/@vonage/video-express)
+You can read more about using the SDK through NPM on the [npmjs website](https://www.npmjs.com/package/@vonage/video-express)
 
 **Creating a room**
 
