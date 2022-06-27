@@ -4,7 +4,7 @@ description: Getting started with a template
 ---
 
 ### Getting started with a template
-Copy and paste the code snippet below into an HTML file for example, `index.html`. This snippet contains the video express SDK, HTML, some Javascript and optional CSS stylings.
+Copy and paste the code snippet below into an HTML file for example, `index.html`. This snippet contains the video express SDK, HTML, some Javascript and optional CSS.
 
 In order to connect to a video session, you will need to set the authentication credentials. This is discussed in the [next section](/video/tutorials/create-video-conferencing-app-express/video/create-video-conferencing-app-express/javascript/auth-setup/javascript).
 
