@@ -17,21 +17,6 @@ In order to connect to a video session, you will need to set the authentication 
         body {
             margin: 0;
         }
-
-        /* Assuming the name of the PreviewPublisher's container is previewContainer */
-        #previewContainer {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            justify-content: flex-end;
-            border-color: black;
-            border-radius: 5px;
-            border-style: dashed;
-            width: 640px;
-            height: 480px;
-            padding: 20px;
-        }
-
         /* Assuming the name of the Room's container is roomContainer */
         #roomContainer {
             width: 100vw;
