@@ -29,7 +29,7 @@ tasks:
   - video/server-side/node/streams
   - video/server-side/node/archives
   - video/server-side/node/broadcasts
-  - video/server-side/node/disconnet-client
+  - video/server-side/node/disconnect-client
   - video/server-side/node/mute-audio
   - video/server-side/node/sending-signals
   - video/server-side/node/sip

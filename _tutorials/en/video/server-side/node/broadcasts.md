@@ -100,4 +100,4 @@ Setting the layout of a live streaming broadcast is optional. By default, live s
 
 <!-- opentok-todo: For more information on live streaming broadcasts, see the OpenTok live streaming broadcasts developer guide.. https://tokbox.com/developer/guides/broadcast/live-streaming/ -->
 
-In the next section you will learn how to [disconnect a client from a session](/video/tutorials/server-side-setup/video/server-side/node/disconnet-client/node).
+In the next section you will learn how to [disconnect a client from a session](/video/tutorials/server-side-setup/video/server-side/node/disconnect-client/node).

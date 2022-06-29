@@ -81,4 +81,4 @@ Setting the layout of live streaming broadcasts is optional. By default, broadca
 
 <!-- opentok-todo: For more information on live streaming broadcasts, see the OpenTok live streaming broadcasts developer guide.. https://tokbox.com/developer/guides/broadcast/live-streaming/ -->
 
-In the next section you will learn how to [disconnect a client from a session](/video/tutorials/server-side-setup/video/server-side/php/disconnet-client/php).
+In the next section you will learn how to [disconnect a client from a session](/video/tutorials/server-side-setup/video/server-side/php/disconnect-client/php).
