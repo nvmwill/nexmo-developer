@@ -64,8 +64,11 @@ $options = array(
 
 $layoutType = Layout::createCustom($options);
 $opentok->setArchiveLayout($archiveId, $layoutType);
-You can also set the Screenshare Layout by calling the setScreenshareType() method on a layout object.
+```
 
+You can also set the Screenshare Layout by calling the `setScreenshareType()` method on a layout object.
+
+```php
 $layout = Layout::getBestFit(); // Other types are not currently supported
 $layout->setScreenshareType(Layout::LAYOUT_VERTICAL);
 ```

@@ -47,9 +47,13 @@ You can stop the recording of a started archive using the `stopArchive($archiveI
 $opentok->stopArchive($archiveId);
 // Stop an Archive from an Archive instance (returned from startArchive)
 $archive->stop();
-To get an OpenTok\Archive instance (and all the information about it) from an archive ID, use the getArchive($archiveId) method of the OpenTok\OpenTok class.
+```
 
+To get an `OpenTok\Archive` instance (and all the information about it) from an archive ID, use the `getArchive($archiveId)` method of the `OpenTok\OpenTok` class.
+
+```php
 $archive = $opentok->getArchive($archiveId);
+
 To delete an Archive, you can call the deleteArchive($archiveId) method of the OpenTok\OpenTok class or the delete() method of an OpenTok\Archive instance.
 
 // Delete an Archive from an archiveId (fetched from database)
@@ -69,8 +73,11 @@ $archiveList = $opentok->listArchives();
 $archives = $archiveList->getItems();
 // Get the total number of Archives for this API Key
 $totalCount = $archiveList->totalCount();
-For composed archives, you can change the layout dynamically, using the setArchiveLayout($archiveId, $layoutType) method:
+```
 
+For composed archives, you can change the layout dynamically, using the `setArchiveLayout($archiveId, $layoutType)` method:
+
+```php
 use OpenTok\OpenTok;
 
 $layout = Layout::getPIP(); // Or use another get method of the Layout class.
