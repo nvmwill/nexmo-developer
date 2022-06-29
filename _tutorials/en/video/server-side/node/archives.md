@@ -25,6 +25,8 @@ opentok.startArchive(sessionId, { name: "Important Presentation" }, function (
 });
 ```
 
+**Disable audio/video recording**
+
 You can also disable audio or video recording by setting the `hasAudio` or `hasVideo` property of the options parameter to `false`:
 
 ```js
@@ -41,6 +43,8 @@ opentok.startArchive(sessionId, archiveOptions, function (err, archive) {
   }
 });
 ```
+
+**Store recordings to separate files**
 
 By default, all streams are recorded to a single (composed) file. You can record the different streams in the session to individual files (instead of a single composed file) by setting the `outputMode` option to `'individual'` when you call the `OpenTok.startArchive()` method:
 
@@ -59,6 +63,8 @@ opentok.startArchive(sessionId, archiveOptions, function (err, archive) {
 });
 ```
 
+**Stop recording**
+
 You can stop the recording of a started Archive using the `OpenTok.stopArchive(archiveId, callback)` method. You can also do this using the `Archive.stop(callback)` method an archive instance. The callback has a signature `function(err, archive)`. The archive returned in the callback is an instance of archive.
 
 ```js
@@ -73,6 +79,8 @@ archive.stop(function (err, archive) {
 });
 ```
 
+**Get an archive instance**
+
 To get an archive instance (and all the information about it) using an **archiveId**, use the `OpenTok.getArchive(archiveId, callback)` method.
 
 The callback has a function `signature function(err, archive)`. You can inspect the properties of the archive for more details.
@@ -84,6 +92,8 @@ opentok.getArchive(archiveId, function (err, archive) {
   console.log(archive);
 });
 ```
+
+**Delete an archive**
 
 To delete an archive, you can call the `OpenTok.deleteArchive(archiveId, callback)` method or the `delete(callback)` method of an archive instance. The callback has a signature `function(err)`.
 
@@ -99,6 +109,8 @@ archive.delete(function (err) {
   if (err) console.log(err);
 });
 ```
+
+**Get archives**
 
 You can also get a list of all the archives you've created (up to 1000) with your API Key. This is done using the `OpenTok.listArchives(options, callback)` method. The parameter options is an optional object used to specify an **offset** and **count** to help you paginate through the results. The callback has a signature `function(err, archives, totalCount)`. The archives returned from the callback is an array of an archive instance.
 
@@ -128,6 +140,8 @@ opentok.setArchiveLayout(archiveId, type, null, null, function (err) {
   if (err) return console.log("error:", error);
 });
 ```
+
+**Initialize layout**
 
 You can set the initial layout class for a client's streams by setting the layout option when you create the token for the client, using the `OpenTok.generateToken()` method. And you can change the layout classes for streams in a session by calling the `OpenTok.setStreamClassLists(sessionId, classListArray, callback)` method.
 

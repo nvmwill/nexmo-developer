@@ -40,6 +40,8 @@ The `OutputMode::COMPOSED` setting (the default) causes all streams in the archi
 
 > Note that you can also create an automatically archived session, by passing in `ArchiveMode::ALWAYS` as the `archiveMode` key of the options parameter passed into the `OpenTok->createSession()` method (see ["Creating Sessions,"](/video/tutorials/server-side-setup/video/server-side/php/streams/php)).
 
+**Stop recording**
+
 You can stop the recording of a started archive using the `stopArchive($archiveId)` method of the `OpenTok\OpenTok` object. You can also do this using the `stop()` method of the `OpenTok\Archive` instance.
 
 ```php
@@ -49,18 +51,26 @@ $opentok->stopArchive($archiveId);
 $archive->stop();
 ```
 
+**Get archive instance**
+
 To get an `OpenTok\Archive` instance (and all the information about it) from an archive ID, use the `getArchive($archiveId)` method of the `OpenTok\OpenTok` class.
 
 ```php
 $archive = $opentok->getArchive($archiveId);
+```
 
-To delete an Archive, you can call the deleteArchive($archiveId) method of the OpenTok\OpenTok class or the delete() method of an OpenTok\Archive instance.
+**Delete archive**
 
+To delete an Archive, you can call the `deleteArchive($archiveId)` method of the `OpenTok\OpenTok` class or the `delete()` method of an OpenTok\Archive instance.
+
+```php
 // Delete an Archive from an archiveId (fetched from database)
 $opentok->deleteArchive($archiveId);
 // Delete an Archive from an Archive instance (returned from startArchive, getArchive)
 $archive->delete();
 ```
+
+**Get list of all archives**
 
 You can also get a list of all the Archives you've created (up to 1000) with your API Key. This is done using the `listArchives($offset, $count, $sessionId)` method of the `OpenTok/OpenTok` class. The parameters `$offset`, `$count`, and `$sessionId` are optional and can help you paginate through the results, and subset the data by a specific session. 
 
@@ -74,6 +84,8 @@ $archives = $archiveList->getItems();
 // Get the total number of Archives for this API Key
 $totalCount = $archiveList->totalCount();
 ```
+
+**Change layout**
 
 For composed archives, you can change the layout dynamically, using the `setArchiveLayout($archiveId, $layoutType)` method:
 
