@@ -48,6 +48,8 @@ On success, a broadcast object is passed into the callback function as the secon
 
 The broadcast object has properties that define the broadcast, including a `broadcastUrls` property, which has URLs for the broadcast streams.
 
+**Stop broadcasting**
+
 Call the `OpenTok.stopBroadcast()` method to stop a live streaming broadcast by passing in the **broadcast ID** (the id property of the Broadcast object) as the first parameter. The second parameter is the callback function:
 
 ```js
@@ -60,6 +62,8 @@ opentok.stopBroadcast(broadcastId, function (error, broadcast) {
 ```
 
 You can also call the `stop()` method of the Broadcast object to stop a broadcast.
+
+**Get broadcasting object**
 
 Call the `Opentok.getBroadcast()` method, passing in a broadcast ID, to get a Broadcast object.
 
@@ -88,7 +92,11 @@ opentok.listBroadcasts({ offset: 100, count: 50 }, function (
 });
 ```
 
+**Change broadcasting layout**
+
 To change the broadcast layout, call the `OpenTok.setBroadcastLayout()` method, passing in the **broadcast ID** and the layout type.
+
+**Set initial layout**
 
 You can set the initial layout class for a client's streams by setting the layout option when you create the token for the client, using the `OpenTok.generateToken()` method. And you can change the layout classes for streams in a session by calling the `OpenTok.setStreamClassLists(sessionId, classListArray, callback)` method.
 
