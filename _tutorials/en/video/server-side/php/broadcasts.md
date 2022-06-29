@@ -28,6 +28,8 @@ $broadcast = $opentok->startBroadcast($sessionId, $options);
 $broadcastId = $broadcast->id;
 ```
 
+**Stop broadcasting**
+
 You can stop the live streaming broadcast using the `stopBroadcast($broadcastId)` method of the `OpenTok\OpenTok` object. You can also do this using the `stop()` method of the `OpenTok\Broadcast` instance.
 
 ```php
@@ -43,6 +45,8 @@ To get an `OpenTok\Broadcast` instance (and all the information about it) from a
 ```php
 $broadcast = $opentok->getBroadcast($broadcastId);
 ```
+
+**Change layout**
 
 You can set change the layout dynamically, using the `OpenTok->updateBroadcastLayout($broadcastId, $layout)` method:
 
@@ -66,14 +70,20 @@ $layoutType = Layout::createCustom($options);
 $opentok->setArchiveLayout($archiveId, $layoutType);
 ```
 
-You can also set the Screenshare Layout by calling the `setScreenshareType()` method on a layout object.
+**Set Screen share layout**
+
+You can also set the screen share Layout by calling the `setScreenshareType()` method on a layout object.
 
 ```php
 $layout = Layout::getBestFit(); // Other types are not currently supported
 $layout->setScreenshareType(Layout::LAYOUT_VERTICAL);
 ```
 
+**Set initial layout**
+
 You can set the initial layout class for a client's streams by setting the layout option when you create the token for the client, using the `OpenTok->generateToken()` method or the `Session->generateToken()` method.
+
+**Change stream layout**
 
 You can also change the layout classes for a stream by calling the `OpenTok->updateStream()` method.
 
