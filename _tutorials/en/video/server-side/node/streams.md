@@ -44,4 +44,4 @@ opentok.listStreams(sessionId, function(error, streams) {
 });
 ```
 
-In the next section you will learn how to [work with archives](/video/tutorials/server-side-setup/video/server-side/php/archives/node).
+In the next section you will learn how to [work with archives](/video/tutorials/server-side-setup/video/server-side/node/archives/node).
