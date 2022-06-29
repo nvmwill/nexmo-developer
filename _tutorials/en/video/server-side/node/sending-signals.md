@@ -17,7 +17,7 @@ opentok.signal(sessionId, null, { type: "chat", data: "Hello!" }, function (
 });
 ```
 
-You can send signals to a specific participant in the session by calling the `OpenTok.signal(sessionId, connectionId, payload, callback)` method and setting all paramters, including **connectionId**:
+You can send signals to a specific participant in the session by calling the `OpenTok.signal(sessionId, connectionId, payload, callback)` method and setting all parameters, including **connectionId**:
 
 ```js
 var sessionId =

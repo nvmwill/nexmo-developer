@@ -738,3 +738,8 @@ autoloader
 _
 maxDuration
 8kB
+archiveId
+totalCount
+connectionId
+sessionId
+totalCount
