@@ -40,5 +40,8 @@ conclusion:
   content: |
 
     # What's next?
+    Visit the [overview page](/video/overview) to learn about the video platform concepts
+
+    You can find the PHP SDK source code on [GitHub](https://github.com/opentok/Opentok-PHP-SDK)
 
     We want to hear what ideas you have in mind! Contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
