@@ -48,5 +48,5 @@ Once a client is connected to a session, it can publish an audio-video stream to
 
 Once a client establishes a connection to a session, it can listen for events dispatched by the session. Events are dispatched for a variety of reasons, such as a new stream being created or a new client connecting or disconnecting from the session. If you want a client to react to a certain event, you must set up an event listener.
 
-####
+#### Archive
 An archive is essentially a recorded session.
