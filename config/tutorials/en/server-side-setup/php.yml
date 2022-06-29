@@ -30,7 +30,6 @@ tasks:
   - video/server-side/php/archives
   - video/server-side/php/broadcasts
   - video/server-side/php/disconnet-client
-  - video/server-side/php/sending-signals
   - video/server-side/php/mute-audio
   - video/server-side/php/sending-signals
   - video/server-side/php/sip
