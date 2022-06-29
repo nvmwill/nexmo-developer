@@ -3,7 +3,7 @@ title: Overview
 meta_title: Learn how to build on the Vonage Video platform.
 description: The Vonage Video platform makes it easy to embed high-quality interactive video, voice, messaging, and screen sharing into web and mobile apps.
 ---
-
+<!-- OpenTok-TODO: add mobile reference -->
 # Video Platform
 
 The Vonage Video platform makes it possible to embed real-time, high-quality interactive video, messaging, screen-sharing, and more into your web apps.
