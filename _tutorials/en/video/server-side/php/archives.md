@@ -61,7 +61,7 @@ $archive = $opentok->getArchive($archiveId);
 
 **Delete archive**
 
-To delete an Archive, you can call the `deleteArchive($archiveId)` method of the `OpenTok\OpenTok` class or the `delete()` method of an OpenTok\Archive instance.
+To delete an Archive, you can call the `deleteArchive($archiveId)` method of the `OpenTok\OpenTok` class or the `delete()` method of an `OpenTok\Archive` instance.
 
 ```php
 // Delete an Archive from an archiveId (fetched from database)
