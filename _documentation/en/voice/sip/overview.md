@@ -10,6 +10,7 @@ Vonage allows you to [forward inbound](#inbound-configuration) and [send outboun
 
 This document explains the relevant setup options.
 
+
 ### Endpoint
 
 You can send your [INVITE](https://en.wikipedia.org/wiki/List_of_SIP_request_methods) requests to the Vonage SIP endpoint: `sip.nexmo.com`.
@@ -129,3 +130,9 @@ We have provided examples for a number of different SIP capable systems:
 * [ShoreTel Director and InGate SIParator](/voice/sip/configure/shoretel)
 * [Skype for Business with Oracle E-SBC](/voice/sip/configure/skypeforbusiness)
 * [NEC SV9100](/voice/sip/configure/nec-sv9100)
+
+## Code Snippets
+
+```code_snippet_list
+product: voice/sip
+```
