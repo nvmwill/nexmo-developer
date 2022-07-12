@@ -86,6 +86,13 @@ top-section:
       icon: "Vlt-icon-telephone"
 
   - Low / No Code Solutions:
+    - product_name: "AI Studio"
+      product_name_link: "/ai-studio/overview"
+      product_description: "AI Studio description here"
+      getting_started_link: "/ai-studio/overview"
+      tutorials_link: none
+      icon: "Vlt-icon-group-8"
+
     - product_name: "Vonage Business Cloud"
       product_name_link: "/vonage-business-cloud/Overview"
       product_description: "Programatically access data and manage features on your Vonage Business Communications (VBC) account."
