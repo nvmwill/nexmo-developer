@@ -85,10 +85,10 @@ top-section:
       tutorials_link: none
       icon: "Vlt-icon-telephone"
 
-  - Lo / No Code Solutions:
+  - Low/No Code Solutions:
     - product_name: "AI Studio"
       product_name_link: "/ai-studio/overview"
-      product_description: "AI Studio description here"
+      product_description: "Build complex conversational flows via a drag-and-drop interface."
       getting_started_link: "/ai-studio/overview"
       tutorials_link: none
       icon: "Vlt-icon-group-8"
