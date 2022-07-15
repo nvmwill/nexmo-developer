@@ -1,6 +1,6 @@
 ---
 title: Create a Long Term Room
-navigation_weight: 1
+navigation_weight: 3
 description: Setting up a Long Term Meeting Room
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Theme Management for Meeting Rooms
-navigation_weight: 2
+navigation_weight: 5
 description: Managing Rooms with the Meetings API
 ---
 

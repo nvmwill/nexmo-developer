@@ -1,6 +1,6 @@
 ---
 title: Callbacks
-navigation_weight: 3
+navigation_weight: 6
 description: Setting up an Instant Meeting Room
 ---
 
