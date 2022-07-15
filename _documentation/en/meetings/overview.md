@@ -14,10 +14,18 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Contents
 
+* [Meetings API or Video API?](#meetings-api-or-video-api): Determine which API is more suited to your project.
 * [Terminology](#terminology): Key terms and definitions for the Meetings API.
 * [Room Types](#room-types): Defines the types of rooms available.
+* [Website Embed](#website-embed): Use an iFrame to embed a Meeting into a website.
 * [Code Snippets](#code-snippets): Code and instructions for using the Meetings API.
 * [Reference](#reference): Further information about the Meetings API.
+
+## Meetings API or Video API?
+
+The Meetings API allows you to quickly integrate real-time interactive video meetings into your web app. It takes just a few lines of code to generate the meeting which you can record, embed into your web app, and update the theme to match your organisation. The Video API has similar features but is more flexible depending on your use case. 
+
+If you're looking to quickly generate a meeting, the Meetings API may be more suited to your project. If you want full control over how the meeting displays and the features available, the Video API may be better.
 
 ## Terminology
 
@@ -32,9 +40,9 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
   * **Session**: defined as all events that occur during this time, from when the first participant joins, until the last to leave.
   * **Guest URL**: meeting room URL used by guests.
   * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
-  * **Theme**: the set of colors, logos and styles to apply to given rooms in the account. 
+  * **Theme**: the set of colors, logos and styles to apply to given rooms in the account.
 * **Features**:
-  * **Whitelabel**: ability to create rooms with specific branding or color schemes. 
+  * **Whitelabel**: ability to create rooms with specific branding or color schemes.
   * **Chat**: space for sending written messages that are visible to all attendees in the room.
   * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request. You can also choose to only record the owner of the room.
   * **Room Management**: you can delete, update or retrieve information about rooms.
@@ -54,6 +62,18 @@ There are two room types:
   * Typically linked to a recurring meeting, person, or resource.
   * Will require you to specify an expiration date (in ISO format).
   * Enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
+
+## Website Embed
+
+A meeting created through the API can be embedded into your website. To do this, generate the meeting link and create an iFrame using that link:
+
+``` HTML
+<iframe src="Meeting link here" title="Embedded Meeting"></iframe>
+```
+
+You can choose from three different sizes of embed: Small (size here), Medium (size here), or Large (size here).
+
+You will also need to send an email request to the [Meetings API team](meetings-api@vonage.com) to whitelist the domain of the website the iFrame is used in.
 
 ## Code Snippets
 
