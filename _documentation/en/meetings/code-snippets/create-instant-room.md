@@ -1,6 +1,6 @@
 ---
 title: Create an Instant Room
-navigation_weight: 0
+navigation_weight: 2
 description: Setting up an Instant Meeting Room
 ---
 
@@ -36,6 +36,8 @@ Field | Required? | Description |
 ``recording_options`` | No | An object containing recording options for the meeting. For example:
 | | | If ``auto_record``=``true``, the session will be recorded.
 | | | If ``auto_record``=``false``, the session will not be recorded.
+| | | If ``record_only_owner``=``true``, only the owner of the room will be recorded.
+| | | If ``record_only_owner``=``false``, all users in the session will be recorded.
 
 ## Request
 
@@ -61,6 +63,20 @@ To create an instant room and automatically turn on recording:
    "display_name":"New Meeting Room",
    "recording_options": {
        "auto_record": true}
+               }'
+```
+
+To create an instant room, automatically record and only record the owner of the room:
+
+``` curl
+   curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
+   -H 'Authorization: Bearer XXXXX' \
+   -H 'Content-Type: application/json' \
+   -d '{
+   "display_name":"New Meeting Room",
+   "recording_options": {
+       "auto_record": true,
+       "record_only_owner: true}
                }'
 ```
 

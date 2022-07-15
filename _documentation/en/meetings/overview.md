@@ -36,7 +36,7 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 * **Features**:
   * **Whitelabel**: ability to create rooms with specific branding or color schemes. 
   * **Chat**: space for sending written messages that are visible to all attendees in the room.
-  * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request.
+  * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request. You can also choose to only record the owner of the room.
   * **Room Management**: you can delete, update or retrieve information about rooms.
   * **Callbacks**: allow you to receive information about a session.
 
