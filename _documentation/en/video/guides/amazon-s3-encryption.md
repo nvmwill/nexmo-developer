@@ -25,15 +25,19 @@ https://api.opentok.com/v2/project/<apiKey>/archive/storage
 Replace `<apiKey>` with your Vonage Video API key.
 
 
-Authenticate the REST API request using a custom HTTP header: `X-OPENTOK-AUTH`. Set this to a JSON Web token (see the [Vonage Video REST API documentation](/developer/rest/#authentication)):
+Authenticate the REST API request using a custom HTTP header: `X-OPENTOK-AUTH`. Set this to a JSON Web token.
 
-```lang-none
+<!-- (see the [Vonage Video REST API documentation](/developer/rest/#authentication)): -->
+
+<!-- OPT-TODO: Add an Authentication guide? https://tokbox.com/developer/rest/#authentication  -->
+
+```sh
 X-OPENTOK-AUTH: <JSON_web_token>
 ```
 
 Include a JSON object as the POST data:
 
-```lang-none
+```json
 {
   "type": "s3",
   "config": {
@@ -85,4 +89,4 @@ curl \
 Set the value for `api_key` to your OpenTok API key. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
 
 For more information, see [Using an Amazon S3 bucket with Vonage Video
-recording](using-s3-storage).
+recording](using-s3).
