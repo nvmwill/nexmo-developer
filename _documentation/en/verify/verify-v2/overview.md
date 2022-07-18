@@ -4,29 +4,44 @@ meta_title: Enable 2FA with the Verify API
 description: The Verify API enables you to confirm that you can contact a user at a specific number.
 navigation_weight: 1
 ---
+## Verify V2 Overview
 
 > This product is in the Early Access product stage.
 
-## What is the Verify V2 API?
+The Verify V2 product is our next generation two-factor authentication (2FA) product. It has the benefits of more channels including over-the-top (OTT) channels like WhatsApp and more traditional channels like SMS, Voice, and Email.
 
-Our [Verify V2 API](https://www.vonage.com/about-us/vonage-stories/early-access-verify-2/) is a new version of our existing Verify API with new features and capabilities, mostly notably using the WhatsApp channel for sending one-time passcodes (OTPs). Verify V2 supports SMS and Voice out of the box as well. Developers will notice a different look and feel to the API, this is intended to give more flexibility and transparency when customizing the [workflows](https://developer.vonage.com/verify/guides/workflows-and-events) related to your Verify deployment.
+We added event and summary callbacks that open the door to a multitude of integration and customization opportunities. To start, you can configure a webhook to ingest summary callbacks that details which channels successfully converted and which did not. Event callbacks allow us to offer unique end-users experiences such as the WhatsApp Codeless channel. Here an end-user can push a button within the WhatsApp message in order to authenticate, then we send an event callback to the backend to instruct you on how to proceed with the end-user experience.
 
-We plan to add cool new features to Verify V2 in the coming months. Features like callbacks will provide metadata that will allow developers to measure the performance of each Verify request.
+## Verify V2 Early Access Pricing
 
-## Verify V2 + WhatsApp
+We bill for each channel used and currently do not bill for successful conversions. Specific to WhatsApp, billing is per WhatsApp message (business initiated pricing) plus the passthrough.
 
-Verify V2 helps businesses verify their end-users for critical use cases such as account creation, account changes like password resets, and important transactions like payments. The WhatsApp channel can help increase conversion performance since it’s popular in many countries and only requires a WiFi connection. We have automated the WhatsApp Business Account process so no setup is required, allowing developers to test within minutes and scale in a matter of hours.
+**For example, in the USA when ``channel=whatsapp`` then expected bill is $0.0147 WhatsApp fee + $0.0122 passthrough fee for a total of $0.0269.**
 
-## Request Access
+## Verification Channels
 
-The Verify V2 API is currently in the Early Access product stage, which means:
+### SMS
 
-We are looking for customers to try the API and to give us feedback. 
-The Verify V2 API is fully redundant and can be used in test environments or in full production!
-If you’re an existing customer, you’ll need to [contact sales](https://www.vonage.com/communications-apis/contact-api/?icmp=mainnav_talktoexpert_novalue) or request access through the [sign-up form](https://www.vonage.com/about-us/vonage-stories/early-access-verify-2/).
+SMS is the most popular channel for two-factor authentication (2FA). That's because most people can receive text messages and onboarding is seamless. Plus, SMS 2FA works: Google found that SMS 2FA helped block "100% of automated bots, 96% of bulk phishing attacks, and 76% of targeted attacks."
 
-## Next Steps
+### WhatsApp
 
-Once approved for EA, we’ll be in touch with more detailed product onboarding information as well as developer documentation!
+WhatsApp is a great channel for two-factor authentication because of its popularity around the world and delivery of messages only requires a WiFi connection. Adding WhatsApp to supplement SMS can improve your overall conversion rates.
 
-Still have questions? [Feel free to reach out](https://www.vonage.com/communications-apis/contact-api/?icmp=mainnav_talktoexpert_novalue)!
+Unlike the WhatsApp Business API you might use for customer support, Vonage Verify + WhatsApp lets you start sending one-time passcodes with a generic WhatsApp Business Account (WABA) or your own WABA, if your company already has one registered.
+
+### WhatsApp Codeless
+
+WhatsApp Codeless allows you to authenticate an end-user without sending a one-time passcode. This improves the experience because there is no need to remember a code. The end-user simply presses “yes” or “no” in WhatsApp and an event callback is sent to your back-end on when to proceed.
+
+### Voice
+
+Voice is a great backup to SMS for two-factor authentication, especially in geographies where it’s difficult to terminate SMS or if the local regulations require lengthy SMS pre-registration processes.
+
+### Email
+
+One-time passcodes sent to email are also a good alternative to the channels mentioned above, especially in the instance of network congestion at the mobile operator level.
+
+Verify V2 Sequence Diagram will go here (if needed)
+
+> You can view the Verify V2 API Reference [here](https://developer.vonage.com/verify/api-reference).
