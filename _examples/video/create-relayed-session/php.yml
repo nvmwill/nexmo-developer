@@ -1,0 +1,9 @@
+---
+dependencies: 
+  - "opentok/opentok"
+code:
+    source: .repos/vonage/vonage-php-code-snippets/video/create-relayed-session.php
+    from_line: 2
+    to_line: 7
+file_name: create-relayed-session.php
+run_command: 'php create-relayed-session.php'

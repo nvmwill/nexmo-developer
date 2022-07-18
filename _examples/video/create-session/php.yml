@@ -1,0 +1,9 @@
+---
+dependencies: 
+  - "opentok/opentok"
+code:
+    source: .repos/vonage/vonage-php-code-snippets/video/create-session.php
+    from_line: 2
+    to_line: 7
+file_name: create-session.php
+run_command: 'php create-session.php'

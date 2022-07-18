@@ -1,0 +1,9 @@
+---
+dependencies: 
+  - "opentok/opentok"
+code:
+    source: .repos/vonage/vonage-php-code-snippets/video/create-auto-archived-session.php
+    from_line: 2
+    to_line: 8
+file_name: create-auto-archived-session.php
+run_command: 'php create-auto-archived-session.php'

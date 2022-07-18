@@ -1,0 +1,7 @@
+---
+dependencies:
+    - "opentok"
+code:
+    source: .repos/vonage/vonage-node-code-snippets/video/create-auto-archived-session.js
+    from_line: 1
+    to_line: 8
