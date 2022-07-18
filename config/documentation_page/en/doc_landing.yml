@@ -68,6 +68,14 @@ top-section:
       tutorials_link: none
       icon: "Vlt-icon-video-conference"
 
+    - product_name: "Video API"
+      product_name_link: "/overview/overview"
+      product_description: "Embed real-time, high-quality interactive video, messaging, screen-sharing, and more into your web apps."
+      getting_started_link: "video/tutorials/create-video-conferencing-app/introduction/javascript"
+      api_reference_link: ""
+      tutorials_link: none
+      icon: "Vlt-icon-video"
+    
   - Authentication & Identity:
     - product_name: "Verify API"
       product_name_link: "/verify/overview"
