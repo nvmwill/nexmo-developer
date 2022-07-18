@@ -8,9 +8,9 @@ navigation_weight: 4
 
 # Using a Windows Azure container with Vonage Video API archiving
 
-Use the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint or Windows Azure container for completed recordings to be uploaded to. (For more information on Amazon S3 see [Using S3 storage with Vonage Video API recording](using-s3-storage).)" ---
+Use the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint or Windows Azure container for completed recordings to be uploaded to. (For more information on Amazon S3 see [Using S3 storage with Vonage Video API recording](/video/guides/using-s3).)"
 
-You can create a Windows Azure account at [http://azure.microsoft.com/](http://azure.microsoft.com/).
+You can create a Windows Azure account at [http://azure.microsoft.com](http://azure.microsoft.com).
 
 You will provide the following information to the Video API account:
 
@@ -19,7 +19,7 @@ You will provide the following information to the Video API account:
 * The container name
 * The Azure domain (optional)
 
-You can create an Azure container (or find names of existing containers) at the [Windows Azure portal](https://portal.azure.com). (See [this Microsoft documentation](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/) on creating an Azure storage account.
+You can create an Azure container (or find names of existing containers) at the [Windows Azure portal](https://portal.azure.com). (See [this Microsoft documentation](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account) on creating an Azure storage account.
 
 To obtain an Account Key:
 
@@ -41,17 +41,19 @@ Now, log in to your [Vonage API Dashboard](https://identity.nexmo.com/login?icid
     * **Domain** (optional) — The Windows Azure domain in which the container resides
 5. Then click the **Connect to cloud storage** button.
 
-**Note:** You can also set an archive upload target using the [Vonage Video REST API](/developer/rest/#setting-an-amazon-s3-or-windows-azure-archiving-upload-target).
+<!-- **Note:** You can also set an archive upload target using the [Vonage Video REST API](/developer/rest/#setting-an-amazon-s3-or-windows-azure-archiving-upload-target). -->
+
+<!-- OPT-TODO: Add a link to the video API reference  -->
 
 Recordings are uploaded to the Windows Azure container you specify.
 
-All recordings are saved to a subdirectory of your Azure container that has your Vonage API key as its name, and each archive is saved to a subdirectory that has the archive ID as its name. The name of the archive file is archive.mp4 (for a composed archive) or archive.zip (for an individual stream archive). (See [Individual stream and composed recordings](recording#individual-stream-and-composed-recordings).)
+All recordings are saved to a subdirectory of your Azure container that has your Vonage API key as its name, and each archive is saved to a subdirectory that has the archive ID as its name. The name of the archive file is archive.mp4 (for a composed archive) or archive.zip (for an individual stream archive). (See [Individual stream and composed recordings](/video/guides/archiving#individual-stream-and-composed-recordings).)
 
 For example, consider a recording with the following API key and ID:
 
 * API key -- 123456
-* Archive ID -- ab0baa3d-2539-43a6-be42-b41ff1488af3
+* Archive ID -- **ab0baa3d-2539-43a6-be42-b41ff1488af3**
 
 The file for this archive is uploaded to the following directory in your Azure container:
 
-123456/ab0baa3d-2539-43a6-be42-b41ff1488af3/archive.mp4
+**123456/ab0baa3d-2539-43a6-be42-b41ff1488af3/archive.mp4**
