@@ -1,7 +1,5 @@
 ---
 title: "Hardware Setup component | Vonage Video API Developer"
-layout: "doc_layout"
-style: "/developer/css/pages/docs.css"
 description: "The Vonage Video API Hardware Setup component provides a user interface for clients using the OpenTok.js library to select the camera and microphone."
 h1: "The Vonage Video API Hardware Setup component"
 p: "<a href='https://github.com/opentok/opentok-hardware-setup.js'>Source Code</a><a href='https://github.com/opentok/opentok-hardware-setup.js/blob/master/index.html'>Sample</a>"
@@ -11,7 +9,7 @@ using the [OpenTok.js] [1] library to select the camera and microphone. The
 client can use the camera and microphone to publish a stream to an OpenTok.js
 session.
 
-A pre-built version of the hardware setup component is hosted at opentok.com.
+A pre-built version of the hardware setup component is hosted on [opentok.com](opentok.com).
 You can add it to your web page with the following script tag:
 
 ```js
@@ -141,6 +139,6 @@ component.destroy();
 ```
 
 
-[1]: /developer/sdks/js/
+[1]: /video/resources#client-sdks
 [2]: http://nodejs.org/
 [3]: http://gulpjs.com/
