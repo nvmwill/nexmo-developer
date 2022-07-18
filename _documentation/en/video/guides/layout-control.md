@@ -10,31 +10,37 @@ navigation_weight: 5
 
 You can use the Vonage Video REST API to customize the layout of videos in a Vonage Video recording.
 
-This feature applies to composed recordings, not individual recordings. For general information on Vonage Video recordings, see the [Vonage Video Recording](recording) guide.
+This feature applies to composed recordings, not individual recordings. For general information on Vonage Video recordings, see the [Vonage Video Recording](/video/guides/archiving) guide.
 
 ## Overview
 
-By default, Vongate Video recordings arrange videos from the Vonage Video session in a tiled layout. For example, the following illustrates the layout when there are 1, 2, 4, or 5 streams in a session:
+By default, Vonage Video recordings arrange videos from the Vonage Video session in a tiled layout. For example, the following illustrates the layout when there are 1, 2, 4, or 5 streams in a session:
 
-<img src="/images/video/CustomLayout.png" alt="Vonage video API default layout" style="width: 75%;">
+<img src="/images/video/bestFit1.png" alt="Vonage video API default layout 1" style="width: 20%;">
+<img src="/images/video/bestFit2.png" alt="Vonage video API default layout 2" style="width: 20%;">
+<img src="/images/video/bestFit4.png" alt="Vonage video API default layout 4" style="width: 20%;">
+<img src="/images/video/bestFit5.png" alt="Vonage video API default layout 5" style="width: 20%;">
 
-This is known as the "best fit" layout. Alternately, you can select from a number of other predefined layouts. For the other layouts, you assign a class name to each Vonage Video streams to determine how it will appear in the layout. (See [Predefined layout types].)
+This is known as the "best fit" layout. Alternately, you can select from a number of other predefined layouts. For the other layouts, you assign a class name to each Vonage Video streams to determine how it will appear in the layout. (See [Predefined layout types](video/guides/archive-broadcast-layout/#predefined-layout-types ).)
 
-You can also define your own custom layouts using CSS. See [Defining custom layouts].
+
+You can also define your own custom layouts using CSS. See [Defining custom layouts](/video/guides/archive-broadcast-layout/#custom-layouts).
 
 By default, the composed archive is 640x480 pixels (SD landscape, 4:3 aspect ratio). Individual Vonage videos are arranged in container rectangles within the recorded video. If the aspect ratio of an individual stream's video does not match that of the container (for example, if it is an HD video or screen-sharing video), it is letterboxed to fit within the container. For example, the following illustration shows a best-fit layout with two SD landscape (4:3) videos (1 and 4) and two HD landscape (16:9) videos (2 and 3):
 
-<img src="/images/video/aspect-ratios.png" alt="Vonage Video API layout aspect ratios" style="width: 75%;">
+<img src="/images/video/aspect-ratios.png" alt="Vonage Video API layout aspect ratios" style="width: 20%;">
 
-You can also set a composed recording to use a 480x640 (SD portrait, 3:4 aspect ratio), 1280x720 (HD landscape, 16:9 aspect ratio), 720x1280 (HD portrait, 9:16 aspect ratio), 1920x1080 (FHD landscape, 16:9 aspect ratio), or 1080x1920 (FHD portrait, 9:16 aspect ratio) resolution when you call the [start recording] method of the Vonage Video REST API. You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio).
+You can also set a composed recording to use a 480x640 (SD portrait, 3:4 aspect ratio), 1280x720 (HD landscape, 16:9 aspect ratio), 720x1280 (HD portrait, 9:16 aspect ratio), 1920x1080 (FHD landscape, 16:9 aspect ratio), or 1080x1920 (FHD portrait, 9:16 aspect ratio) resolution when you call the start recording method of the Vonage Video REST API. You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio).
+
+<!-- OPT-TODO: Add a link to start recording text https://tokbox.com/developer/rest/#start_archive  -->
 
 To use this feature:
 
-* Specify the layout type for the composed recording - see [Specifying the initial layout type and Dynamically changing the layout type while the session is being recorded].
+* Specify the layout type for the composed recording - see [Specifying the initial layout type](#specifying-the-initial-layout-type) and [Dynamically changing the layout type](#dynamically-changing-the-layout-type-during-a-recording) while the session is being recorded.
 
-* [Assign layout classes to Vonage Video streams].
+* [Assign layout classes to Vonage Video streams](/video/guides/archive-broadcast-layout/#assign-layout-classes-to-streams).
 
-You can also define your own [custom layouts].
+You can also define your own [custom layouts](/video/guides/archive-broadcast-layout/#custom-layouts).
 
 ## Specifying the initial layout type
 
@@ -46,7 +52,7 @@ Set the request URL for the POST request to the following:
 
 Set the `Content-Type` to `application/json` and set the `layout` `type` as a property of the JSON data sent in the POST request:
 
-```
+```json
 {
   "sessionId": "2_MX44NTQ1MTF--bm1kTGQ0RjVHeGNQZE51VG5scGNzdVl0flB-",
   "layout": {
@@ -57,9 +63,9 @@ Set the `Content-Type` to `application/json` and set the `layout` `type` as a pr
 }
 ```
 
-If you are using a custom layout - see [Defining custom layouts] - set the `type` property to `custom` and pass in the stylesheet as an additional property — `stylesheet`:
+If you are using a custom layout - see [Defining custom layouts](/video/guides/archive-broadcast-layout/#custom-layouts) - set the `type` property to `custom` and pass in the stylesheet as an additional property — `stylesheet`:
 
-```
+```json
 {
   "sessionId": "2_MX44NTQ1MTF--bm1kTGQ0RjVHeGNQZE51VG5scGNzdVl0flB-",
   "layout": {
@@ -71,9 +77,9 @@ If you are using a custom layout - see [Defining custom layouts] - set the `type
 }
 ```
 
-You can also specify a layout type to use when there is a screen-sharing stream in the session by setting the `screenshareType` property of the `layout` property - [see screen-sharing layouts]:
+You can also specify a layout type to use when there is a screen-sharing stream in the session by setting the `screenshareType` property of the `layout` property - [see screen-sharing layouts](/video/guides/archive-broadcast-layout/#screen-sharing-layouts):
 
-```
+```json
 {
   "sessionId": "2_MX44NTQ1MTF--bm1kTGQ0RjVHeGNQZE51VG5scGNzdVl0flB-",
   "layout": {
@@ -85,9 +91,13 @@ You can also specify a layout type to use when there is a screen-sharing stream 
 }
 ```
 
-Authenticate the REST call using a JWT token - see [Vonage Video REST API authentication]:
+Authenticate the REST call using a JWT token.
 
-```
+<!-- - see [Vonage Video REST API authentication](): -->
+
+<!-- OPT-TODO: Add an Authentication guide? https://tokbox.com/developer/rest/#authentication  -->
+
+```sh
 X-OPENTOK-AUTH: <token>
 ```
 
@@ -97,35 +107,32 @@ You can also you can also specify the initial layout type when starting a record
 
 Language | Description |
 -- | -- | -- |
-Node | [OpenTok.startArchive()](linksToNodeServerSDK) (set the `layout` property of the `options` parameter).
-PHP | [OpenTok->startArchive()](linksToPHPServerSDK) (call the `OpenTok->setArchiveLayout()` method after starting the recording).
+Node | [OpenTok.startArchive()](https://github.com/opentok/opentok-node#working-with-archives) (set the `layout` property of the `options` parameter).
+PHP | [OpenTok->startArchive()](https://github.com/opentok/Opentok-PHP-SDK#working-with-archives) (call the `OpenTok->setArchiveLayout()` method after starting the recording).
 
-If you do not specify an initial layout type, the composed recording uses the Best Fit layout type. If you specify any other layout type, be sure to apply appropriate layout classes for streams in the Vonage Video session see [Assigning layout classes to Vonage Video streams](link).
+If you do not specify an initial layout type, the composed recording uses the Best Fit layout type. If you specify any other layout type, be sure to apply appropriate layout classes for streams in the Vonage Video session see [Assigning layout classes to Vonage Video streams](/video/guides/archive-broadcast-layout/#assign-layout-classes-to-streams).
 
-See [Predefined layout types](link).
+See [Predefined layout types](/guides/archive-broadcast-layout/#predefined-layout-types ).
 
 ## Dynamically changing the layout type during a recording
 
 You can dynamically change the layout type by calling the `/archive/layout` REST API. Make a PUT request to the following URL:
 
-https://api.opentok.com/v2/project/{apiKey}/archive/{archiveId}/layout
+`https://api.opentok.com/v2/project/{apiKey}/archive/{archiveId}/layout`
 
 Set the `Content-Type` to `application/json` and include the layout `type` as a property of the JSON data in the PUT request:
 
-```
+```json
 {
   "type": "pip"
 }
 ```
 
-If you are using a [custom layout](link) set the `type` property to `custom` and pass in the stylesheet as an additional property — `stylesheet`:
+If you are using a [custom layout](/video/guides/archive-broadcast-layout/#custom-layouts) set the `type` property to `custom` and pass in the stylesheet as an additional property — `stylesheet`:
 
-```
+```json
 {
   "type": "custom",
   "stylesheet": "stream.instructor {position: absolute;  width: 100%;  height:50%;}"
 }
 ```
-
-
-
