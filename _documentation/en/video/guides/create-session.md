@@ -58,7 +58,9 @@ When you create a session, you can set the IP address that TokBox will use to si
 
 When possible, do not reuse session IDs between different video chat conversations. Instead, generate new session IDs for each distinct video chat on your application.
 
-This is important, especially when using OpenTok Inspector. In Inspector, session quality scores and data are indexed by session ID. A session ID that is reused for multiple conversations is more difficult to debug using Inspector, and sessions with re-used session IDs tend to report lower aggregate quality scores than the actual experienced call quality.
+<!-- OPT-TODO: check if OpenTok Inspector link is updated  -->
+
+This is important, especially when using [OpenTok Inspector](https://tokbox.com/developer/tools/inspector). In Inspector, session quality scores and data are indexed by session ID. A session ID that is reused for multiple conversations is more difficult to debug using Inspector, and sessions with re-used session IDs tend to report lower aggregate quality scores than the actual experienced call quality.
 
 ### Choosing Relayed vs. Routed session type
 
@@ -72,9 +74,9 @@ For more information, see The OpenTok Media Router and media modes.
 
 While working on a test version of your app, you can obtain a test session ID using a Project Page of of your TokBox Account.
 
-You can also use one of the OpenTok server-side libraries:
+You can also use one of the [OpenTok server-side](/video/resources#server-sdks) libraries.
 
-Node.js
+<!-- OPT-TODO: change server SDK link  -->
 
 If you need to dynamically generate multiple session IDs, use the OpenTok server-side libraries not the Project Page.
 
@@ -118,10 +120,12 @@ source: '_examples/video/create-auto-archived-session'
 
 > Note: Archived sessions must use the routed media mode.
 
-For more information, see the [Recording](/recording) guide.
+For more information, see the [Recording](/video/guides/archiving) guide.
 
 ## Using sessions in client applications
 
-Use the session ID in an [OpenTok client SDK]() to connect to an OpenTok session.
+Use the session ID in an [OpenTok client SDK](/video/resources#client-sdks) to connect to an OpenTok session.
+
+<!-- OPT-TODO: change client SDK link  -->
 
 You will also need to generate a token for each user connecting to the OpenTok session. 
