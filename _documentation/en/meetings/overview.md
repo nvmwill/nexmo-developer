@@ -23,7 +23,7 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Meetings API or Video API?
 
-Both the Meetings API and the Video API allow you to use high-quality interactive video meetings in your web applications. The Meetings API is ideal for those who want plug and play meetings with limited customisation. The Video API is ideal for those who want more customisation and flexibility, but it will take more development effort.
+Both the Meetings API and the Video API allow you to use high-quality interactive video meetings in your web applications. The Meetings API is ideal for those who want plug and play meetings with limited customisation; it takes just a few lines of code to generate a meeting and embed it into your application. The Video API is ideal for those who want more customisation and flexibility, but it will take more development effort.
 
 Take a look at the [Video API](https://tokbox.com/developer/) documentation for more information.
 

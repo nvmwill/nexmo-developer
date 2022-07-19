@@ -35,8 +35,8 @@ Field | Required? | Description |
 ``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
 ``expires_at`` | Yes | You need to supply a room expiration date in Universal Time Coordinated (UTC) format for a long term room.
 ``recording_options`` | No | An object containing various meeting recording options. For example:
-| | | If ``auto_record``=``true``, the session will be recorded.
-| | | If ``auto_record``=``false``, the session will not be recorded.
+| | | If ``auto_record``=``true``, the session will be recorded. If ``false``, the session will not be recorded.
+| | | If ``record_only_owner``=``true``, only the owner of the room will be recorded. If ``false``, all users in the session will be recorded.
 
 ## Request
 
