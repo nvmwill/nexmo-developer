@@ -23,9 +23,9 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Meetings API or Video API?
 
-The Meetings API allows you to quickly integrate real-time interactive video meetings into your web app. It takes just a few lines of code to generate the meeting which you can record, embed into your web app, and update the theme to match your organisation. The Video API has similar features but is more flexible depending on your use case. 
+Both the Meetings API and the Video API allow you to use high-quality interactive video meetings in your web applications. The Meetings API is ideal for those who want plug and play meetings with limited customisation. The Video API is ideal for those who want more customisation and flexibility, but it will take more development effort.
 
-If you're looking to quickly generate a meeting, the Meetings API may be more suited to your project. If you want full control over how the meeting displays and the features available, the Video API may be better.
+Take a look at the [Video API](https://tokbox.com/developer/) documentation for more information.
 
 ## Terminology
 
@@ -71,9 +71,24 @@ A meeting created through the API can be embedded into your website. To do this,
 <iframe src="Meeting link here" title="Embedded Meeting"></iframe>
 ```
 
-You can choose from three different sizes of embed: Small (size here), Medium (size here), or Large (size here).
+The meeting can be displayed in any size above 360PX, however the number of features available depends on the size of the iFrame:
 
-You will also need to send an email request to the [Meetings API team](meetings-api@vonage.com) to whitelist the domain of the website the iFrame is used in.
+Feature | 360-500PX | 500-600PX | 600PX+
+-- | :--: | :--: | :--:
+Microphone | ✅ | ✅ | ✅
+Video | ✅ | ✅ | ✅
+Record | ❌ ¹ | ✅ | ✅
+Share Screen | ❌ | ✅ | ✅
+Reactions | ❌ | ❌ | ✅
+Privacy | ❌ | ✅ | ✅
+Whiteboard | ❌ | ❌ | ✅
+Watch Together | ❌ | ❌ | ✅
+Round Table | ❌ | ❌ | ✅
+End Meeting | ✅ | ✅ | ✅
+
+¹ Recording is still available in 360-500PX meetings by setting the ``auto_record`` parameter in the API call.
+
+> You will also need to send an email request to the [Meetings API team](meetings-api@vonage.com) to whitelist the domain of the website the iFrame is used in.
 
 ## Code Snippets
 
