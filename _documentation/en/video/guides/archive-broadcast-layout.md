@@ -33,7 +33,9 @@ There are four predefined layout types available: best fit, picture-in-picture, 
 
 ### Best Fit
 
-This is the default initial layout type. This is a tiled layout, which scales according to the number of videos. The number of columns and rows of varies depending on the number of OpenTok streams in the broadcast.
+This is the default initial layout type. This is a tiled layout, which scales according to the number of videos.
+
+The number of columns and rows of varies depending on the number of OpenTok streams in the broadcast.
 
 For example, the following illustrates the layout when there are 1, 2, 4, or 5 streams in a session:
 
@@ -63,7 +65,9 @@ This is a picture-in-picture layout, where a small stream is visible over a full
 C = corner
 Set the layout class of the full-size stream to `"full"`. (See [Assigning layout classes to OpenTok streams](#assigning-layout-classes-to-vonage-video-streams).)
 
-The first stream without this class occupies the corner position. If more than two streams are present in the archive or broadcast, only the first two streams will be visible in the output. 
+The first stream without this class occupies the corner position.
+
+If more than two streams are present in the archive or broadcast, only the first two streams will be visible in the output. 
 
 To choose this layout, set the `type` property to `"pip"`.
 
@@ -233,8 +237,10 @@ Set the Content-Type to `"application/json"` and include the layout class list a
 }
 ```
 
-The `id` property is the stream ID. Note that you can update the layout class list for multiple streams by passing in multiple JSON objects in the items array. 
+The `id` property is the stream ID. Note that you can update the layout class list for multiple streams by passing in multiple JSON objects in the items array.
+
 The request returns a 400 response code if you specify an invalid layoutClassList value. The value must be an array of strings.
+
 You can also modify the layout class list for a stream using the OpenTok server SDKs:
 
 <!-- * Java — OPT-TODO: [`OpenTok.setStreamLayouts()`](/developer/sdks/java/reference/com/opentok/OpenTok.html#setStreamLayouts-java.lang.String-com.opentok.StreamListProperties-) -->
@@ -340,7 +346,9 @@ When there is a screen-sharing stream live in the session, the archive or broadc
 
 ## Stream prioritization rules
 
-Composed archives and live streaming broadcasts can include up to 16 video streams at a time. The layout composer uses the following rules to determine the prioritization of which video streams are included in the archive or broadcast, and to determine how the streams will be ordered and added to the virtual DOM.
+Composed archives and live streaming broadcasts can include up to 16 video streams at a time.
+
+The layout composer uses the following rules to determine the prioritization of which video streams are included in the archive or broadcast, and to determine how the streams will be ordered and added to the virtual DOM.
 
 Streams are categorized into two tiers:
 

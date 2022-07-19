@@ -21,12 +21,16 @@ By default, Vonage Video recordings arrange videos from the Vonage Video session
 <img src="/images/video/bestFit4.png" alt="Vonage video API default layout 4" style="width: 20%;">
 <img src="/images/video/bestFit5.png" alt="Vonage video API default layout 5" style="width: 20%;">
 
-This is known as the "best fit" layout. Alternately, you can select from a number of other predefined layouts. For the other layouts, you assign a class name to each Vonage Video streams to determine how it will appear in the layout. (See [Predefined layout types](video/guides/archive-broadcast-layout/#predefined-layout-types ).)
+This is known as the "best fit" layout. Alternately, you can select from a number of other predefined layouts.
+
+For the other layouts, you assign a class name to each Vonage Video streams to determine how it will appear in the layout. (See [Predefined layout types](video/guides/archive-broadcast-layout/#predefined-layout-types ).)
 
 
 You can also define your own custom layouts using CSS. See [Defining custom layouts](/video/guides/archive-broadcast-layout/#custom-layouts).
 
-By default, the composed archive is 640x480 pixels (SD landscape, 4:3 aspect ratio). Individual Vonage videos are arranged in container rectangles within the recorded video. If the aspect ratio of an individual stream's video does not match that of the container (for example, if it is an HD video or screen-sharing video), it is letterboxed to fit within the container. For example, the following illustration shows a best-fit layout with two SD landscape (4:3) videos (1 and 4) and two HD landscape (16:9) videos (2 and 3):
+By default, the composed archive is 640x480 pixels (SD landscape, 4:3 aspect ratio). Individual Vonage videos are arranged in container rectangles within the recorded video.
+
+If the aspect ratio of an individual stream's video does not match that of the container (for example, if it is an HD video or screen-sharing video), it is letterboxed to fit within the container. For example, the following illustration shows a best-fit layout with two SD landscape (4:3) videos (1 and 4) and two HD landscape (16:9) videos (2 and 3):
 
 <img src="/images/video/aspect-ratios.png" alt="Vonage Video API layout aspect ratios" style="width: 20%;">
 
@@ -110,13 +114,18 @@ Language | Description |
 Node | [OpenTok.startArchive()](https://github.com/opentok/opentok-node#working-with-archives) (set the `layout` property of the `options` parameter).
 PHP | [OpenTok->startArchive()](https://github.com/opentok/Opentok-PHP-SDK#working-with-archives) (call the `OpenTok->setArchiveLayout()` method after starting the recording).
 
-If you do not specify an initial layout type, the composed recording uses the Best Fit layout type. If you specify any other layout type, be sure to apply appropriate layout classes for streams in the Vonage Video session see [Assigning layout classes to Vonage Video streams](/video/guides/archive-broadcast-layout/#assign-layout-classes-to-streams).
+If you do not specify an initial layout type, the composed recording uses the Best Fit layout type.
 
-See [Predefined layout types](/guides/archive-broadcast-layout/#predefined-layout-types ).
+If you specify any other layout type, be sure to apply appropriate layout classes for streams in the Vonage Video session
+
+See [Assigning layout classes to Vonage Video streams](/video/guides/archive-broadcast-layout/#assign-layout-classes-to-streams) and
+[Predefined layout types](/guides/archive-broadcast-layout/#predefined-layout-types ).
 
 ## Dynamically changing the layout type during a recording
 
-You can dynamically change the layout type by calling the `/archive/layout` REST API. Make a PUT request to the following URL:
+You can dynamically change the layout type by calling the `/archive/layout` REST API. 
+
+Make a PUT request to the following URL:
 
 `https://api.opentok.com/v2/project/{apiKey}/archive/{archiveId}/layout`
 

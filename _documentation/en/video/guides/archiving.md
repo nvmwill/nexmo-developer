@@ -28,7 +28,9 @@ This topic includes the following sections:
 
 > **Important:** You can only record sessions that use the OpenTok Media Router (sessions with the [media mode](/video/guides/create-a-session#the-opentok-media-router-and-media-modes) set to routed).
 
-You can create a recording for an OpenTok session using one of the [OpenTok Server SDKs](/video/resources#server-sdks). When you create an archive, the recording starts. You can only create an archive for sessions that have at least one client connected. (A client must start publishing a stream within one minute or the archive stops.)
+You can create a recording for an OpenTok session using one of the [OpenTok Server SDKs](/video/resources#server-sdks). When you create an archive, the recording starts.
+
+You can only create an archive for sessions that have at least one client connected. (A client must start publishing a stream within one minute or the archive stops.)
 
 As clients start and stop publishing streams, the streams are recorded.
 
@@ -50,7 +52,9 @@ When an archive recording starts and stops, events are sent in the clients. For 
 
 ## Recording duration
 
-The maximum recorded length of a recording is 4 hours (14,400 seconds). This recorded length refers to the cumulative time in which streams are published (and being recorded). While streams are published (and recorded), the recording's status is set to "started". (See [Recording status changes](#recording-status-changes)).
+The maximum recorded length of a recording is 4 hours (14,400 seconds). This recorded length refers to the cumulative time in which streams are published (and being recorded).
+
+While streams are published (and recorded), the recording's status is set to "started". (See [Recording status changes](#recording-status-changes)).
 
 While an archive is recording without any streams published, the status is set to "paused".
 
@@ -60,9 +64,19 @@ The maximum total length of a recording, including "started" and "paused" states
 
 ## Recording storage
 
-Use your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify a target for completed archive files to be uploaded to. This can be your own Amazon S3 bucket, a bucket at an S3-compliant storage provider other than Amazon, or a Windows Azure container. For S3-compliant storage providers other than Amazon S3, we support Cloudian and Google Cloud Storage (accessed using the AWS S3 API). Other S3-compatible services may have feature limitations. See [using S3 storage with Vonage Video API archiving](/video/guides/using-s3) and [using an Windows Azure container with Vonage Video API archiving](/video/guides/using-azure).
+Use your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify a target for completed archive files to be uploaded to.
 
-If you do not set an S3 bucket or an Azure container, or if uploading to the specified bucket or container fails, recorded archives are available for retrieval by download from the Vonage cloud. Archives made available on the Vonage cloud are available for 72 hours from the time they are created. To prevent this fallback storage, log in to your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav), select the project, and set the option to disable the archive storage fallback.
+This can be your own Amazon S3 bucket, a bucket at an S3-compliant storage provider other than Amazon, or a Windows Azure container. 
+
+For S3-compliant storage providers other than Amazon S3, we support Cloudian and Google Cloud Storage (accessed using the AWS S3 API). Other S3-compatible services may have feature limitations.
+
+See [using S3 storage with Vonage Video API archiving](/video/guides/using-s3) and [using an Windows Azure container with Vonage Video API archiving](/video/guides/using-azure).
+
+If you do not set an S3 bucket or an Azure container, or if uploading to the specified bucket or container fails, recorded archives are available for retrieval by download from the Vonage cloud.
+
+Archives made available on the Vonage cloud are available for 72 hours from the time they are created.
+
+To prevent this fallback storage, log in to your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav), select the project, and set the option to disable the archive storage fallback.
 
 ## Audio-only and video-only recordings
 
@@ -74,14 +88,23 @@ Archive output file can be of one of the following formats:
 
 **Composed recordings**
 
-The recording is a single MP4 file composed of all streams. This is the default setting. It is also used for [automatically recorded sessions](#automatically-record-sessions). The MP4 file uses H.264 video and AAC audio (at 128 Kbps and a 48-Khz sample rate).
+The recording is a single MP4 file composed of all streams. This is the default setting. It is also used for [automatically recorded sessions](#automatically-record-sessions).
+
+The MP4 file uses H.264 video and AAC audio (at 128 Kbps and a 48-Khz sample rate).
+
 You can customize the layout of a composed recording, adjusting the visual arrangement of streams and which streams are displayed. See [Customizing the video layout for composed recordings](/video/guides/layout-control).
 
-By default, composed recordings have a 640x480-pixel (SD landscape) resolution. To set a composed recording to have a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), 1080x1920 (FHD portrait) resolution, set the `resolution` property to `480x640`, `1280x720`, `1920x1080`, `720x1280`, or `1080x1920` when calling the start recording method of the Vonage Video REST API. You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio). Note that support for FHD resolutions, "1920x1080" and "1080x1920", is currently a beta feature.
+By default, composed recordings have a 640x480-pixel (SD landscape) resolution. To set a composed recording to have a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), 1080x1920 (FHD portrait) resolution, set the `resolution` property to `480x640`, `1280x720`, `1920x1080`, `720x1280`, or `1080x1920` when calling the start recording method of the Vonage Video REST API.
+
+You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio). 
+
+> Note that support for FHD resolutions, "1920x1080" and "1080x1920", is currently a beta feature.
 
 **Individual stream recordings** 
 
-The recording is a ZIP container file with multiple individual media files for each stream, and a JSON metadata file for video synchronization. You can specify this format when you use one of the Vonage Video server SDKs to start the archive. This format is not available for [automatically recorded sessions](#automatically-record-sessions).
+The recording is a ZIP container file with multiple individual media files for each stream, and a JSON metadata file for video synchronization.
+
+You can specify this format when you use one of the Vonage Video server SDKs to start the archive. This format is not available for [automatically recorded sessions](#automatically-record-sessions).
 
 > Note: In a composed recording, if a recording is started and no data is streamed during the duration of the recording (no audio or video is published), the size of the recording file will be 0 bytes.
 
@@ -93,7 +116,7 @@ Individual stream recording mode is intended for use with a post-processing tool
 
 Individual stream recording media is delivered as a ZIP archive, containing files for each audio-video stream:
 
- Each stream container in the recording corresponds to a stream published to Vonage Video. The publisher's stream ID matches its corresponding file name, and each stream ID is declared in the recording manifest.
+Each stream container in the recording corresponds to a stream published to Vonage Video. The publisher's stream ID matches its corresponding file name, and each stream ID is declared in the recording manifest.
 
 When a stream is interrupted and resumed because of automatic reconnection or when a stream is added and removed repeatedly in a manual stream mode recording, the ZIP recording will include separate files for each of the stream's individual segments.
 
@@ -101,7 +124,9 @@ Stream containers are either of type **.webm**, or **.mkv**, depending on your p
 
 Individual stream archive containers are a capture of all the video and audio received by the archive server. This media is not processed, and therefore in most cases the container is not be suitable for direct playback.
 
-The stream container is treated like a transport stream — all media received at the recording server is written directly to file, without inspection or post-processing. This design has implications for downstream consumption of stream containers. In most cases, direct playback of of an individual stream recording container will not be possible, or will have issues because of the contents of the container:
+The stream container is treated like a transport stream — all media received at the recording server is written directly to file, without inspection or post-processing.
+
+This design has implications for downstream consumption of stream containers. In most cases, direct playback of of an individual stream recording container will not be possible, or will have issues because of the contents of the container:
 
 The declared dimensions for the stream header are seldom correct. Currently, the headers for the container will show a video track with 640x480-pixel dimensions, regardless of the dimensions of encoded video frames.
 
@@ -109,9 +134,13 @@ Video frames will change in dimensions over time. This can also include aspect r
 
 Audio and video frames may not arrive with monotonic timestamps; frame rates are not always consistent. This is especially relevant if either the video or audio track is disabled for a time, using one of `publishVideo` or `publishAudio` publisher properties.
 
-Frame presentation timestamps (PTS) are written based on NTP timestamps taken at the time of capture, offset by the timestamp of the first received frame. Even if a track is muted and later unmuted, the timestamp offset should remain consistent throughout the duration of the entire stream. When decoding in post-processing, a gap in PTS between consecutive frames will exist for the duration of the track mute: there are no "silent" frames in the container.
+Frame presentation timestamps (PTS) are written based on NTP timestamps taken at the time of capture, offset by the timestamp of the first received frame. 
 
-To produce viewable content from individual stream recording files, you need to run the media through a post processor to repair individual stream containers or multiplex/composite multiple containers into a final product. Suggestions for getting started with downstream processing are outlined in our archiving-composer GitHub repository: [https://github.com/opentok/archiving-composer](https://github.com/opentok/archiving-composer).
+Even if a track is muted and later unmuted, the timestamp offset should remain consistent throughout the duration of the entire stream. When decoding in post-processing, a gap in PTS between consecutive frames will exist for the duration of the track mute: there are no "silent" frames in the container.
+
+To produce viewable content from individual stream recording files, you need to run the media through a post processor to repair individual stream containers or multiplex/composite multiple containers into a final product.
+
+Suggestions for getting started with downstream processing are outlined in our archiving-composer GitHub repository: [https://github.com/opentok/archiving-composer](https://github.com/opentok/archiving-composer).
 
 ### Individual stream recording manifest
 
@@ -170,7 +199,9 @@ A sample post processor application is available at [https://github.com/opentok/
 
 ## Selecting streams to be included in a recording
 
-When you start a recording, if you set the ``streamMode`` to `manual`, you can choose the streams to include in the recording. You can add and remove streams during the  recording. And you can specify whether the recording will include a stream's audio or video (or both).
+When you start a recording, if you set the ``streamMode`` to `manual`, you can choose the streams to include in the recording.
+
+You can add and remove streams during the  recording. And you can specify whether the recording will include a stream's audio or video (or both).
 
 Otherwise, with the ``streamMode`` set to `auto` (the default), all streams are included (with audio and video) in the recording. See Starting a recording and Selecting streams to be included in a recording.
 
@@ -178,13 +209,19 @@ However, in a composed archive there is a limit of 16 video streams and 50 audio
 
 ## Automatically record sessions
 
-You can have a session be automatically recorded by specifying this when you create the session, using one of the Vonage Video server SDKs. The recording for an automatically recorded session starts as soon as a client connects to the session.
+You can have a session be automatically recorded by specifying this when you create the session, using one of the Vonage Video server SDKs.
+
+The recording for an automatically recorded session starts as soon as a client connects to the session.
 
 > Note: If recording is started and no data is streamed during the duration of the recording (no audio or video is published), the size of recording file will be 0 bytes.
 
-Automatically recorded sessions include both audio and video, and they record all streams to the same (composed) MP4 file. However, if the recording lasts longer than 4 hours (14,400 seconds), the session is recorded to multiple, consecutive MP4 files, of up to 4 hours each in length, until the recording is stopped.
+Automatically recorded sessions include both audio and video, and they record all streams to the same (composed) MP4 file.
 
-You can call the Vonage Video REST method for listing recordings and pass in the ``sessionID`` query parameter to list recordings for a specified session ID. You can then determine the sequence of the separate MP4 files, by looking at the ``createdAt`` property of each recording listed in the JSON data returned by the call to the REST method.
+However, if the recording lasts longer than 4 hours (14,400 seconds), the session is recorded to multiple, consecutive MP4 files, of up to 4 hours each in length, until the recording is stopped.
+
+You can call the Vonage Video REST method for listing recordings and pass in the ``sessionID`` query parameter to list recordings for a specified session ID. 
+
+You can then determine the sequence of the separate MP4 files, by looking at the ``createdAt`` property of each recording listed in the JSON data returned by the call to the REST method.
 
 You cannot stop an automatic recording using the Vonage Video REST API or server SDKs. Automatic recordings stop 60 seconds after the last client disconnects from the session or 60 minutes after the last client stops publishing a stream to the session.
 

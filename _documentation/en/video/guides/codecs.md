@@ -10,7 +10,9 @@ navigation weight:
 
 The OpenTok platform leverages the WebRTC protocol and the real-time video codecs that are supported by WebRTC. In particular the OpenTok platform supports the VP8 and the H.264 video codecs. 
 
-You can select which video codec you want to assign as your preferred codec for a particular OpenTok project. Across the broad ecosystem of devices and browsers that OpenTok supports there are varying levels of support for the VP8 and H.264 real-time video codecs. 
+You can select which video codec you want to assign as your preferred codec for a particular OpenTok project.
+
+Across the broad ecosystem of devices and browsers that OpenTok supports there are varying levels of support for the VP8 and H.264 real-time video codecs. 
 
 Some endpoints support both video codecs, and some support one video codec. Depending on the type of application you are building and the types of browsers and devices your end users will use, your choice of preferred codec will change.
 
@@ -18,21 +20,31 @@ Some endpoints support both video codecs, and some support one video codec. Depe
 
 A video codec has two parts, an encoder and a decoder. It has the ability to encode (compress) incoming digital video frames from a webcam into a stream of binary data that can be sent over a network. 
 
-It also has the ability to ingest a stream of binary data and decode (decompress) it into a flow of raw video frames that can be displayed on a screen. The mechanism for encoding and decoding the video is the codec standard and for the purpose of this page we are going to talk about two popular ones, VP8 and H.264.
+It also has the ability to ingest a stream of binary data and decode (decompress) it into a flow of raw video frames that can be displayed on a screen.
+
+The mechanism for encoding and decoding the video is the codec standard and for the purpose of this page we are going to talk about two popular ones, VP8 and H.264.
 
 ## VP8 vs H.264
 
-The VP8 real-time video codec is a software codec. It can work well at lower bitrates and is a mature video codec in the context of WebRTC. As a software codec it can be instantiated as many times as is needed by the application within the limits of memory and CPU. The VP8 codec supports the OpenTok Scalable Video feature, which means it works well in large sessions with supported browsers and devices.
+The VP8 real-time video codec is a software codec. It can work well at lower bitrates and is a mature video codec in the context of WebRTC.
+
+As a software codec it can be instantiated as many times as is needed by the application within the limits of memory and CPU. The VP8 codec supports the OpenTok Scalable Video feature, which means it works well in large sessions with supported browsers and devices.
 
 <!-- [OpenTok Scalable Video](/developer/guides/scalable-video) -->
 
 <!-- OPT-TODO: add link to scalable video guide -->
 
-The H.264 real-time video codec is available in both hardware and software forms depending on the device. It is a relatively new codec in the context of WebRTC although it has a long history for streaming movies and video clips over the internet.
+The H.264 real-time video codec is available in both hardware and software forms depending on the device.
 
-Hardware codec support means that the core CPU of the device doesn’t have to work as hard to process the video, resulting in reduced CPU load. The number of hardware instances is device-dependent with iOS having the best support.
+It is a relatively new codec in the context of WebRTC although it has a long history for streaming movies and video clips over the internet.
 
-Given that H.264 is a new codec for WebRTC and each device may have a different implementation, the quality can vary. As such, H.264 may not perform as well at lower bit-rates when compared to VP8. H.264 is not well suited to large sessions since it does not support the OpenTok Scalable Video feature.
+Hardware codec support means that the core CPU of the device doesn’t have to work as hard to process the video, resulting in reduced CPU load.
+
+The number of hardware instances is device-dependent with iOS having the best support.
+
+Given that H.264 is a new codec for WebRTC and each device may have a different implementation, the quality can vary.
+
+As such, H.264 may not perform as well at lower bit-rates when compared to VP8. H.264 is not well suited to large sessions since it does not support the OpenTok Scalable Video feature.
 
 ## Setting the preferred video codec for a project
 
@@ -73,6 +85,7 @@ The following tables list the real-time video codec capabilities of the supporte
 
 3 Non-Safari browsers running in iOS (for example, Chrome and Firefox) use a Safari webview under the hood. The Safari webview does not support WebRTC and the OpenTok SDK.
 
+<!--  OPT-TODO:
 | Native SDKs | VP8 | H.264 |
 | --- | --- | --- |
 | iOS SDK (2.12+) | Yes | Yes |
@@ -81,19 +94,21 @@ The following tables list the real-time video codec capabilities of the supporte
 | Linux SDK | Yes | No  |
 | macOS SDK (beta) | Yes | No  |
 
-\* Hardware H.264 is supported on devices that contain the Qualcomm and Exynos chipsets, in addition to a subset of HiSilicon and MediaTek chipsets. Fallback to software H.264 is supported on Android M or higher.
+\* Hardware H.264 is supported on devices that contain the Qualcomm and Exynos chipsets, in addition to a subset of HiSilicon and MediaTek chipsets. Fallback to software H.264 is supported on Android M or higher. -->
 
 ## Codec feature support across OpenTok endpoints
 
 <img src="/images/video/video-codec-overview.png" alt="Vonage video codec coverage" style="width: 70%;">
 
-* Percentage of Android devices that support the codec
+Percentage of Android devices that support the codec
 
-** Support for the OpenTok plugin for Internet Explorer is removed in OpenTok 2.17.
+** Support for the OpenTok plugin for Internet Explorer no longer exist in OpenTok 2.17.
 
 ## Detecting codec support in clients
 
-Not all Android devices support the H.264 codec, and older versions of Safari do not support VP8. OpenTok.js and the OpenTok Android SDK include methods for checking the supported codecs available to the client. 
+<!-- OPT-TODO: Not all Android devices support the H.264 codec, and older versions of Safari do not support VP8. OpenTok.js and the OpenTok Android SDK include methods for checking the supported codecs available to the client.  -->
+
+Not all Android devices support the H.264 codec, and older versions of Safari do not support VP8. OpenTok.js include methods for checking the supported codecs available to the client.
 
 ### Detecting supported codecs in the browser
 
@@ -101,7 +116,9 @@ Not all Android devices support the H.264 codec, and older versions of Safari do
 
 <!-- OPT-TODO: Link to JS SDK methods reference page -->
 
-The `OT.getSupportedCodecs()` method returns a Promise that is resolved (on success) with an object that has two properties: `videoDecoders`, an array of supported video codecs for decoding, and `videoEncoders`, an array of supported video codecs for encoding. The following example gets the list of supported codecs for encoding and decoding video streams:
+The `OT.getSupportedCodecs()` method returns a Promise that is resolved (on success) with an object that has two properties: `videoDecoders`, an array of supported video codecs for decoding, and `videoEncoders`, an array of supported video codecs for encoding.
+
+The following example gets the list of supported codecs for encoding and decoding video streams:
 
 ```js
     (async () => {
@@ -116,7 +133,7 @@ The `OT.getSupportedCodecs()` method returns a Promise that is resolved (on succ
     })();
  ```   
 
-### Detecting supported codecs using the Android SDK 
+<!-- ### Detecting supported codecs using the Android SDK  -->
 
 <!-- [MediaUtils.SupportedCodecs.getSupportedCodecs(context)](/developer/sdks/android/reference/com/opentok/android/MediaUtils.html#getSupportedCodecs-android.content.Context-) -->
 
@@ -125,7 +142,7 @@ The `OT.getSupportedCodecs()` method returns a Promise that is resolved (on succ
 <!-- [MediaUtils.SupportedCodecs](/developer/sdks/android/reference/com/opentok/android/MediaUtils.SupportedCodecs.html) -->
 
 <!-- [MediaUtils.VideoCodecType](/developer/sdks/android/reference/com/opentok/android/MediaUtils.VideoCodecType.html) -->
-
+<!-- 
 The `MediaUtils.SupportedCodecs.getSupportedCodecs(context)` returns a `MediaUtils.SupportedCodecs` object that that has two properties: `videoDecoders`, an **ArrayList** of supported video codecs (defined by the `MediaUtils.VideoCodecTyp`e class) for decoding, and `videoEncoders`, an **ArrayList** of supported video codecs (defined by the` MediaUtils.VideoCodecType` class) for encoding. 
 
 The following example gets the list of supported codecs for encoding and decoding video streams:
@@ -138,13 +155,15 @@ The following example gets the list of supported codecs for encoding and decodin
     {
         // The device does not support encoding or decoding H264.
     }
-```
+``` -->
 
 ## Issues to consider when selecting your preferred real-time video codec
 
 ### Interoperability
 
-The main interoperability conflict is around Android devices, older versions of Safari, and Linux. VP8 works on all Android devices, both on Android Chrome and the OpenTok Android SDK, but H.264 codec support on Android is not ubiquitous. Older versions of Safari do not have VP8 codec support.
+<!-- OPT-TODO: The main interoperability conflict is around Android devices, older versions of Safari, and Linux. VP8 works on all Android devices, both on Android Chrome and the OpenTok Android SDK, but H.264 codec support on Android is not ubiquitous. Older versions of Safari do not have VP8 codec support. -->
+
+The main interoperability conflict is around Android devices, older versions of Safari, and Linux. VP8 works on all Android devices, both on Android Chrome, but H.264 codec support on Android is not ubiquitous. Older versions of Safari do not have VP8 codec support.
 
 The Linux SDK does not support H.264. In OpenTok Routed sessions, the preferred video codec set in the Project settings is used for all clients in the session. In OpenTok Relayed sessions, clients send streams directly to one another, and each publishing-subscribing pair tries to find a common video codec that they can both use.
 
@@ -156,7 +175,15 @@ Both H.264 and VP8 can work well for endpoints in small sessions (for example, 1
 
 ### Video quality
 
-Since the same VP8 video codec implementation is used on almost all endpoints the quality is roughly the same. VP8 works well at lower bitrates. In addition, OpenTok Scalable Video is available with VP8. Scalable Video significantly improves the video quality in larger sessions. The quality of H.264 will vary across devices since the implementation of H.264 varies. In addition we have encountered differences in quality depending on the operating system version running on the device. The quality of H.264 at lower bitrates is generally not as good as VP8. H.264 works well on iOS devices since they have good support for H.264 hardware acceleration. This reduces the CPU load and improves battery life.
+Since the same VP8 video codec implementation is used on almost all endpoints the quality is roughly the same. VP8 works well at lower bitrates.
+
+In addition, OpenTok Scalable Video is available with VP8. Scalable Video significantly improves the video quality in larger sessions.
+
+The quality of H.264 will vary across devices since the implementation of H.264 varies.
+
+In addition we have encountered differences in quality depending on the operating system version running on the device. The quality of H.264 at lower bitrates is generally not as good as VP8.
+
+H.264 works well on iOS devices since they have good support for H.264 hardware acceleration. This reduces the CPU load and improves battery life.
 
 ## Example scenarios
 

@@ -8,10 +8,16 @@ navigation_weight: 1
 
 # Create a session
 
-When you connect to an OpenTok session on an app, you specify the session you want to connect to by using an OpenTok session ID. Each session ID identifies a unique OpenTok session. You can think of a session as a room in which participants meet and chat.
+When you connect to an OpenTok session on an app, you specify the session you want to connect to by using an OpenTok session ID.
+
+Each session ID identifies a unique OpenTok session. You can think of a session as a room in which participants meet and chat.
 
 
-The number of sessions you create and how clients connect to them depend on the requirements of your app. If your app connects users with one another for a one-time meeting, create a unique session for that meeting. However, if your app connects users over various days in the same "room," then you can create one session and reuse it. If one group of users meet with each other, while other groups meet independently, create unique sessions for each group.
+The number of sessions you create and how clients connect to them depend on the requirements of your app.
+
+If your app connects users with one another for a one-time meeting, create a unique session for that meeting.
+
+However, if your app connects users over various days in the same "room," then you can create one session and reuse it. If one group of users meet with each other, while other groups meet independently, create unique sessions for each group.
 
 OpenTok sessions do not expire. However, authentication tokens do expire. Also note that sessions cannot explicitly be destroyed.
 
@@ -46,27 +52,47 @@ The OpenTok Media Router can decrease bandwidth usage in multiparty sessions. (W
 
 ## Archive mode
 
-When you create a session, you can set the archive mode so that the session is archived automatically. This only applies to routed sessions (sessions that use the OpenTok Media Router). By default, sessions are not automatically archived.
+When you create a session, you can set the archive mode so that the session is archived automatically.
+
+This only applies to routed sessions (sessions that use the OpenTok Media Router).
+
+By default, sessions are not automatically archived.
 
 ## Location hints
 
-When you create a session, you can set the IP address that TokBox will use to situate the session in its global network. If no location hint is set when you create the session (which is recommended), the session uses a media server based on the location of the first client connecting to the session. Set location hint in only if you know the general geographic region (and a representative IP address) and you think the first client connecting may not be in that region. Specify an IP address that is representative of the geographical location for the session.
+When you create a session, you can set the IP address that TokBox will use to situate the session in its global network. 
+
+If no location hint is set when you create the session (which is recommended), the session uses a media server based on the location of the first client connecting to the session.
+
+Set location hint in only if you know the general geographic region (and a representative IP address) and you think the first client connecting may not be in that region.
+
+Specify an IP address that is representative of the geographical location for the session.
 
 ## Best practices when creating sessions
 
 ### Session ID reuse
 
-When possible, do not reuse session IDs between different video chat conversations. Instead, generate new session IDs for each distinct video chat on your application.
+When possible, do not reuse session IDs between different video chat conversations.
+
+Instead, generate new session IDs for each distinct video chat on your application.
 
 <!-- OPT-TODO: check if OpenTok Inspector link is updated  -->
 
-This is important, especially when using [OpenTok Inspector](https://tokbox.com/developer/tools/inspector). In Inspector, session quality scores and data are indexed by session ID. A session ID that is reused for multiple conversations is more difficult to debug using Inspector, and sessions with re-used session IDs tend to report lower aggregate quality scores than the actual experienced call quality.
+This is important, especially when using [OpenTok Inspector](https://tokbox.com/developer/tools/inspector).
+
+In Inspector, session quality scores and data are indexed by session ID.
+
+A session ID that is reused for multiple conversations is more difficult to debug using Inspector, and sessions with re-used session IDs tend to report lower aggregate quality scores than the actual experienced call quality.
 
 ### Choosing Relayed vs. Routed session type
 
-Use a relayed instead of a routed session, if you have only two participants (or maybe even three) and you are not using archiving. Using relayed sessions reduces the latency between participants, reduces the points of failure and you can get better quality video and audio in most cases.
+Use a relayed instead of a routed session, if you have only two participants (or maybe even three) and you are not using archiving.
 
-Routed sessions are required if you want to archive your session. They are recommended if you have more than two or three participants in the session.
+Using relayed sessions reduces the latency between participants, reduces the points of failure and you can get better quality video and audio in most cases.
+
+Routed sessions are required if you want to archive your session.
+
+They are recommended if you have more than two or three participants in the session.
 
 For more information, see The OpenTok Media Router and media modes.
 
@@ -90,7 +116,9 @@ source: '_examples/video/create-session'
 
 Use the session ID in an OpenTok client library to connect to an OpenTok session.
 
-You will also need to generate a token for each user connecting to the OpenTok session. See Connection Token Creation for information on the `generateToken()` or `generate_Token()` (depending on programming language) method.
+You will also need to generate a token for each user connecting to the OpenTok session. 
+
+<!-- OPT-TODO: See Connection Token Creation for information on the `generateToken()` or `generate_Token()` (depending on programming language) method. -->
 
 The [OpenTok Media Router](https://www.vonage.com/communications-apis/video/features/) provides the following benefits:
 
@@ -106,9 +134,13 @@ Here is sample code that creates a new session with the media mode set to relaye
 source: '_examples/video/create-relayed-session'
 -->
 
-In a relayed session, clients will attempt to send streams directly between each other. However, if clients cannot connect due to firewall restrictions, the session uses the OpenTok TURN server to relay audio-video streams.
+In a relayed session, clients will attempt to send streams directly between each other.
 
-> **Important:** Some features, such as archiving, are only available in routed (not relayed) sessions. See the previous section for instructions on creating a routed session.
+However, if clients cannot connect due to firewall restrictions, the session uses the OpenTok TURN server to relay audio-video streams.
+
+> **Important:** Some features, such as archiving, are only available in routed (not relayed) sessions.
+
+See the previous section for instructions on creating a routed session.
 
 ## Creating an automatically recorded session
 
