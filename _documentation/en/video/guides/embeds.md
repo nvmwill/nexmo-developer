@@ -44,7 +44,7 @@ Creating a Video Chat Embed
     
 5.  Specify the website domain where you plan to use the embed.
     
-    For example, if you will be adding the embed to your web page at example.com/test, enter `https://example.com`. Be sure to enter `http://` or `https://` followed by the domain name. (If you will be using localhost for testing, you can just enter `http://localhost` or `http://localhost:[port number]` for ports other than port 80.)
+    For example, if you will be adding the embed to your web page at example.com/test, enter `https://example.com`. Be sure to enter `http://` or `https://` followed by the domain name. (If you will be using localhost for testing, you can enter `http://localhost` or `http://localhost:[port number]` for ports other than port 80.)
     
     **Important:** You should use an https (not http) URL. Browsers do not allow camera access on http pages. However, they do allow you to use http for local testing, such as `http://localhost` or `http://localhost:8080`.
     
@@ -100,7 +100,7 @@ While the [room parameter](#creating-additional-rooms) is not required for creat
 
 * **Programmatic room creation** — if you have an application that needs to dynamically connect individuals in private video chat rooms (for example a doctor and patient), your server-side application could generate unique "room" IDs for each meeting. You could then construct a video chat embed iframe or script snippet using that ID as the `room` parameter — the users would then load the dynamically created embed in their browser, joining the same room as any other users with the same room ID.
 * **User generated rooms** — you could give users the ability to submit a room name via a form on your site before "creating" a chat room for others to join. You could then pass this room name to an embed as the `room` parameter. Other users could then enter the same room name to join the same video chat session.
-* **Passing room IDs through a website URL** — if you would like to pass a room name via a url (ex. `www.example.com?room=group1`), you would simply need some client-side code to parse the URL and construct an embed when the user loads the page, passing the `room` parameter into the embed `src` URL.
+* **Passing room IDs through a website URL** — if you would like to pass a room name via a URL (ex. `www.example.com?room=group1`), you would need some client-side code to parse the URL and construct an embed when the user loads the page, passing the `room` parameter into the embed `src` URL.
 
 Supported website platforms
 ---------------------------

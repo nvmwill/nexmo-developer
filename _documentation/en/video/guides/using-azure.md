@@ -33,7 +33,7 @@ Now, log in to your [Vonage API Dashboard](https://identity.nexmo.com/login?icid
 
 1. Click on a **Projects** in the left nav that will contain sessions that you are archiving.
 2. Click the **Project Archives** tab.
-3. In the Archiving section, click the **Set up your cloud storage now** button, and then click on **Micorsoft Azure**.
+3. In the Archiving section, click the **Set up your cloud storage now** button, and then click on **Microsoft Azure**.
 4. Enter the following:
     * **Account name** — The Windows Azure storage account name
     * **Account key** — The Windows Azure storage account access key

@@ -42,7 +42,9 @@ For example, the following illustrates the layout when there are 1, 2, 4, or 5 s
 <img src="/images/video/bestFit4.png" alt="Vonage video API default layout 4" style="width: 20%;">
 <img src="/images/video/bestFit5.png" alt="Vonage video API default layout 5" style="width: 20%;">
 
-Layout classes on these streams will have no effect on the layout. Each position in the list will be translated to a position in the grid.This layout supports up to 16 OpenTok streams (in a grid).
+Layout classes on these streams will have no effect on the layout. Each position in the list will be translated to a position in the grid.
+
+This layout supports up to 16 OpenTok streams (in a grid).
 
 Streams are included in the layout based on [stream prioritization rules](#stream-prioritization-rules).
 

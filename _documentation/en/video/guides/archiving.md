@@ -249,7 +249,7 @@ Property | Description |
 | `streams` | The stream ID of the stream included in the recording.
 | `hasAudio` | Whether the stream's audio is included in the recording.
 | `hasVideo` | Whether the stream's video is included in the recording.
-``url`` | The download URL of the available recording file. This is only set for a recording with the status set to `available`; for other recordeings, (including recordings with the status `uploaded`) this property is set to `null`. The download URL is obfuscated, and the file is only available from the URL for 10 minutes. To generate a new URL, use the REST API for retrieving archive information or listing archives.
+``url`` | The download URL of the available recording file. This is only set for a recording with the status set to `available`; for other recordings, (including recordings with the status `uploaded`) this property is set to `null`. The download URL is obfuscated, and the file is only available from the URL for 10 minutes. To generate a new URL, use the REST API for retrieving archive information or listing archives.
 
 You can also view the status of archives in your Vonage Account:
 

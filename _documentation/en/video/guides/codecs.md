@@ -12,7 +12,7 @@ The OpenTok platform leverages the WebRTC protocol and the real-time video codec
 
 You can select which video codec you want to assign as your preferred codec for a particular OpenTok project. Across the broad ecosystem of devices and browsers that OpenTok supports there are varying levels of support for the VP8 and H.264 real-time video codecs. 
 
-Some endpoints support both video codecs, and some just support one video codec. Depending on the type of application you are building and the types of browsers and devices your end users will use, your choice of preferred codec will change.
+Some endpoints support both video codecs, and some support one video codec. Depending on the type of application you are building and the types of browsers and devices your end users will use, your choice of preferred codec will change.
 
 ## What is a video codec?
 

@@ -25,7 +25,7 @@ The Vonage Video PHP SDK provides methods for:
 
 Composer helps manage dependencies for PHP projects. Find more info here: <http://getcomposer.org>
 
-Add this package (`opentok/opentok`) to your `composer.json` file, or just run the following at the
+Add this package (`opentok/opentok`) to your `composer.json` file, or run the following at the
 command line:
 
 ```
@@ -37,7 +37,7 @@ $ ./composer.phar require opentok/opentok ^4.0
 ### Initializing
 
 This package follows the [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloading standard. If you are
-using composer to install, you just require the generated autoloader:
+composer requires the generated autoloader:
 
 ```php
 require "<projectpath>/vendor/autoload.php";
@@ -54,7 +54,7 @@ $opentok = new OpenTok($apiKey, $apiSecret);
 
 #### Initialization Options
 
-The `OpenTok\OpenTok` object just allow for some overrides of values when special needs arise, such as
+The `OpenTok\OpenTok` object allows for some overrides of values when special needs arise, such as
 needing to point to a different datacenter or change the timeout of the underlying HTTP client. For
 these situations, you can pass an array of additional options as the third parameter.
 

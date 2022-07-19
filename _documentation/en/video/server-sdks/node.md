@@ -390,7 +390,7 @@ opentok.signal(sessionId, null, { type: "chat", data: "Hello!" }, function (
 ```
 
 Or send a signal to a specific participant in the session by calling the
-`OpenTok.signal(sessionId, connectionId, payload, callback)` method and setting all paramters,
+`OpenTok.signal(sessionId, connectionId, payload, callback)` method and setting all parameters,
 including `connectionId`:
 
 ```javascript
@@ -482,11 +482,11 @@ opentok.getStream(sessionId, streamId, function (error, streamInfo) {
 
 Pass a session ID, stream ID, and callback function to the `OpenTok.getStream()` method.
 The callback function is called when the operation completes. It takes two parameters:
-`error` (in the case of an error) or `stream`. On sucessful completion, the `stream` object
+`error` (in the case of an error) or `stream`. On successful completion, the `stream` object
 is set, containing properties of the stream.
 
 To get information on _all_ active streams in a session, call the `OpenTok.listStreams()` method,
-passing in a session ID and a callback function. Upon sucess, the callback function is invoked
+passing in a session ID and a callback function. Upon success, the callback function is invoked
 with an array of Stream objects passed into the second parameter:
 
 ```javascript

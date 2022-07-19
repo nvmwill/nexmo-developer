@@ -64,7 +64,7 @@ You will send the certificate to Vonage, which will use it to generate an encryp
 
 The size of the key must be 2048 bits or smaller. You will send the certificate in JSON data to the OpenTok REST API for setting the archive target (see the next section). Since the certificate will be included in JSON data, send the data base64 encoded or replace newline characters in the cert with "\n".
 
-The following example base64-encodes the certificate:
+The following example base64 encodes the certificate:
 
 ```sh
 openssl enc -base64 -in cert.pem -out cert.pem.encoded -A 
