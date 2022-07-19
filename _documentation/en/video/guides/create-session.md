@@ -84,9 +84,9 @@ If you need to dynamically generate multiple session IDs, use the OpenTok server
 
 The following code creates a session that uses the OpenTok Media Router:
 
-```code_snippets
+<!-- code_snippets
 source: '_examples/video/create-session'
-```
+ -->
 
 Use the session ID in an OpenTok client library to connect to an OpenTok session.
 
@@ -102,9 +102,9 @@ The [OpenTok Media Router](https://www.vonage.com/communications-apis/video/feat
 
 Here is sample code that creates a new session with the media mode set to relayed:
 
-```code_snippets
+<!-- code_snippets
 source: '_examples/video/create-relayed-session'
-```
+-->
 
 In a relayed session, clients will attempt to send streams directly between each other. However, if clients cannot connect due to firewall restrictions, the session uses the OpenTok TURN server to relay audio-video streams.
 
@@ -113,10 +113,10 @@ In a relayed session, clients will attempt to send streams directly between each
 ## Creating an automatically recorded session
 
 You can create a session that is automatically recorded. Here is sample code that creates an automatically recorded session:
-
-```code_snippets
+<!-- 
+code_snippets
 source: '_examples/video/create-auto-archived-session'
-```
+-->
 
 > Note: Archived sessions must use the routed media mode.
 
