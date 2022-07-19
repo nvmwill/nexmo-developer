@@ -42,6 +42,14 @@ Voice is a great backup to SMS for two-factor authentication, especially in geog
 
 One-time passcodes sent to email are also a good alternative to the channels mentioned above, especially in the instance of network congestion at the mobile operator level.
 
-Verify V2 Sequence Diagram will go here (if needed)
+## Verify V2 Sequence Diagrams
+
+### Verify V2 Request with Summary Callbacks
+
+![Verify V2 Request with Summary Callbacks](/images/verifyv2_request_summary_callbacks.png)
+
+### Verify V2 Request with Event & Summary Callbacks Using WhatsApp Codeless
+
+![Verify V2 Request with Event & Summary Callbacks Using WhatsApp Codeless](/images/verifyv2_whatsapp_sequence_diagram.png)
 
 > You can view the Verify V2 API Reference [here](https://developer.vonage.com/verify/api-reference).
