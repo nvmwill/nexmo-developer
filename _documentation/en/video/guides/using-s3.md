@@ -1,12 +1,12 @@
 ---
-title: Using S3 storage with Vonage Video API archiving
+title: Vonage Video API archiving using S3 storage
 meta_title: Use AWS S3 storage with Vonage Video API archiving.
 description: You can use AWS S3 storage for Vonage Video API archiving.
 product: video
 navigation_weight: 3
 ---
 
-# Using S3 storage with Vonage Video API archiving
+# Vonage Video API archiving using S3 storage
 
 Use the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint or Windows Azure container for completed recordings to be uploaded to. (For more information on Windows Azure see [Using a Windows Azure container with Vonage Video API archiving](/video/guides/using-azure).)
 

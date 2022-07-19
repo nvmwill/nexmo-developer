@@ -1,12 +1,12 @@
 ---
-title: Using a Windows Azure container with Vonage Video API archiving
+title: Vonage Video API archiving using a Windows Azure container.
 meta_title: Use a Windows Azure container with Vonage Video API archiving.
 description: You can use a Windows Azure container for Vonage Video API archiving.
 product: video
 navigation_weight: 4
 ---
 
-# Using a Windows Azure container with Vonage Video API archiving
+# Vonage Video API archiving using a Windows Azure container
 
 Use the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint or Windows Azure container for completed recordings to be uploaded to. (For more information on Amazon S3 see [Using S3 storage with Vonage Video API recording](/video/guides/using-s3).)"
 

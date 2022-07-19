@@ -1,5 +1,5 @@
 ---
-title: "Video Chat Embeds | Vonage Video API Developer"
+title: "Video Chat Embeds"
 h1: "Video Chat Embeds"
 p: "Quickly add Vonage Video API functionality to your website with a simple embeddable widget."
 ---
