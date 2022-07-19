@@ -1,5 +1,5 @@
 ---
-title: Customizing the video layout for composed recordings
+title: Customizing the video layout for composed recordings| Archiving
 meta_title: Adjust the visual arrangement of streams and which streams are displayed.
 description: You can customize the video layout for composed recordings including adjusting the visual arrangement of streams and which streams are displayed.
 product: video
@@ -8,7 +8,7 @@ navigation_weight: 5
 
 # Customizing the video layout for composed recordings
 
-You can use the Vonage Video REST API to customize the layout of videos in a Vonage Video recording.
+You can use the Vonage Video REST API to customize the layout of videos in a Vonage Video recording known as an archive.
 
 This feature applies to composed recordings, not individual recordings. For general information on Vonage Video recordings, see the [Vonage Video Recording](/video/guides/archiving) guide.
 
