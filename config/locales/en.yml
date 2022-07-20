@@ -67,6 +67,7 @@ en:
     setup: Setup
     configuration: Configuration
     server-sdks: Server SDKs
+    developer-tools: "Developer tools"
     tools: Tools
 
     administration: Administration
