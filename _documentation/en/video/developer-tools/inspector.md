@@ -46,7 +46,7 @@ Inspector is a tool to help understand what happened in specific Vonage Video [s
 * Video and Audio Quality
 * Events
 
-Inspector is primarily used for **debugging problematic sessions** that have occured in your application.
+Inspector is primarily used for **debugging problematic sessions** that have occurred in your application.
 
 You must be logged into your Vonage Video API account to access Inspector, and you can only view sessions created from API Keys associated with your account.
 
@@ -55,7 +55,7 @@ You must be logged into your Vonage Video API account to access Inspector, and y
 <img src="/images/video/session-dashboard-screenshot-2x.png" alt="Search for sessions with the session dashboard" style="width:70%;">
 
 
-Before diving into the detailed info about a session, you first need to find the session. The best way to do this is to log the session ID of each session created in your app for easy debugging.
+Before diving into the detailed info about a session, you first need to find the session. The best way to do this is to log the session ID of each session created in your app to help with debugging.
 
 However, if you do not know the ID of the session, you can use the [Session Dashboard](https://tokbox.com/developer/tools/inspector) to view recently active sessions as well as recently inspected sessions.
 
@@ -75,7 +75,7 @@ This data can be helpful for developing a quick understanding of the session top
 
 It’s also helpful for verifying that you’re looking at the correct session when debugging.
 
-In some cases, you may want to drill down to specific [meetings](#sessions-vs-meetings) within a larger session — to do this, simply click the Meeting Selector in the top right corner and select the meeting segment you’re interested in viewing.
+In some cases, you may want to drill down to specific [meetings](#sessions-vs-meetings) within a larger session — to do this, click the Meeting Selector in the top right corner and select the meeting segment you’re interested in viewing.
 
 In cases where a session includes many distinct meetings, this can help simplify the view for easier debugging.
 
@@ -86,7 +86,7 @@ The Meetings Statistics panel includes the following information:
 * The call type. This can be multiparty, one-to-one, one-to-zero, or broadcast.
 * The number of individual users, connections, published streams, and subscribers to the streams in the meeting. If there are SIP users connected to the meeting, the number of SIP users is also listed.
 * The total number of streamed minutes in the meeting.
-* The number of issue occurances in the meeting.
+* The number of issue occurrence in the meeting.
 * The number of different Vonage Video API SDKs used in the meeting. Mouse over the SDKs entry to see a list of the different SDKs and the number of users for each.
 * The number of different endpoints used in the meeting. An endpoint is either a browser version (such as Chrome 98) for clients using OpenTok.js; a Vonage Video API SDK for iOS, Android, Linux or Windows; or SIP. Mouse over the Endpoints entry to see a list of the different endpoints and the number of users for each.
 
@@ -110,9 +110,9 @@ For more about how clients connect, publish, and subscribe, see [Video API Basic
 
 ### Error Log
 
-<img src="/images/video/error-log-screenshot-2x.png" alt="View errors that occured in a session" style="width:70%;">
+<img src="/images/video/error-log-screenshot-2x.png" alt="View errors that occurred in a session" style="width:70%;">
 
-If any errors occured in the session, they will display in the Error Log section.
+If any errors occurred in the session, they will display in the Error Log section.
 
 This section also displays the failure rate for connection, publish, and subscribe attempts in the session or meeting.
 
@@ -146,11 +146,11 @@ Please see [this article](https://video-api.support.vonage.com/hc/en-us/articles
 
 <img src="/images/video/event-log-screenshot-2x.png" alt="View connect, publish, and subscribe events for the session or meeting" style="width:70%;">
 
-The Event Log lists events related to connecting, publishing, and subscribing that occured in the session or meeting you’re inspecting. This is helpful for understanding the context of connect, publish, or subscribe failures, and can also be useful for quickly seeing why users disconnect, unpublish, or unsubscribe.
+The Event Log lists events related to connecting, publishing, and subscribing that occurred in the session or meeting you’re inspecting. This is helpful for understanding the context of connect, publish, or subscribe failures, and can also be useful for quickly seeing why users disconnect, unpublish, or unsubscribe.
 
 You can filter events using the **text filter** in the top left in two ways:
 
-* To view only events that include a specific string, for example "connect", simply enter that string in the text filter field and click the "+" symbol.
+* To view only events that include a specific string, for example "connect", enter that string in the text filter field and click the "+" symbol.
 * To exclude all events that include a specific string, enter that string in the text filter field and click the "-" symbol.
 
 You can also filter by user with the Inspector sidebar filters.
@@ -191,13 +191,13 @@ You can also view the quality of each connection in the [Quality Metrics](#quali
 
 ### Users
 
-In order to more easily correlate connections with actual end-users in a session, Inspector also includes a user object.
+In order to correlate connections with actual end-users in a session, Inspector also includes a user object.
 
 The user is associated with a unique client endpoint. For example, an end-user’s browser or mobile device — tracked via cookies.
 
 While an end-user can have multiple connections (if they disconnect and reconnect multiple times), they will always be associated with only one user in Inspector.
 
-The user object in Inspector includes a few properties for more easily identifying who is who:
+The user object in Inspector includes a few properties for identifying who is who:
 
 * Location: where the user connected from (e.g. San Francisco, CA)
 * System: the browser and/or device the user connected from (e.g. Chrome, MacOS)
