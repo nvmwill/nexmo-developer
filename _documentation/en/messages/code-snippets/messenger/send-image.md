@@ -20,7 +20,9 @@ Find the description for all variables used in each code snippet below:
 - MESSAGES_API_URL
 - FB_SENDER_ID.MESSAGES
 - VONAGE_FB_SENDER_ID
+- FROM_ID
 - FB_RECIPIENT_ID
+- TO_ID
 - IMAGE_URL.MESSENGER.MESSAGES
 ```
 
