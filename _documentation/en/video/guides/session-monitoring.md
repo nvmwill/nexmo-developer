@@ -43,7 +43,7 @@ When clients receive `connectionCreated` and `connectionDestroyed` events in res
 
 For each distinct event, the server sends an HTTP POST request to the URL you supply.
 
-The Content-Type for the request is application/json. The data of the request is a JSON object of the following form:
+The Content-Type for the request is `application/json`. The data of the request is a JSON object of the following form:
 
 ```json
 {
