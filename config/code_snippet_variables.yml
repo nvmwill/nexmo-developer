@@ -6,6 +6,7 @@ VONAGE_API_KEY: Your Vonage API key (see it on [your dashboard](http://dashboard
 VONAGE_API_SECRET: Your Vonage API secret (also available on [your dashboard](http://dashboard.nexmo.com/)).
 VONAGE_APPLICATION_PRIVATE_KEY_PATH: Private key path.
 VONAGE_APPLICATION_PRIVATE_KEY: Private key.
+VONAGE_PRIVATE_KEY_PATH: Private key.
 VONAGE_APPLICATION_ID: The Vonage Application ID.
 VONAGE_NUMBER: Your Vonage Number. E.g. `447700900000`
 VONAGE_BRAND_NAME: The alphanumeric string that represents the name or number of the organization sending the message.
@@ -54,6 +55,7 @@ USER_NEW_DISPLAY_NAME: The new display name of the User.
 
 # Messages AND Dispatch
 FB_RECIPIENT_ID: The PSID of the user you want to reply to. The `FB_RECIPIENT_ID` is the PSID of the Facebook User you are messaging. This value is the `from.id` value you received in the inbound messenger event on your Inbound Message Webhook URL.
+TO_ID: Refer to `FB_RECIPIENT_ID` above. #*FB_RECIPIENT_ID
 LOGO_IMAGE_URL: An optional logo image.
 HEADER_IMAGE_URL: An optional header image.
 ABOVE_BAR_CODE_IMAGE_URL: An optional image for above the bar code.
@@ -82,6 +84,7 @@ BASE_URL.MESSAGES: For production use the base URL is `https://api.nexmo.com/`. 
 MESSAGES_API_URL: There are two versions of the API, each with their own endpoints. For production the previous Messages API endpoint was `https://api.nexmo.com/v0.1/messages`, the new one is `https://api.nexmo.com/v1/messages`. For sandbox testing the Messages API endpoint is `https://messages-sandbox.nexmo.com/v0.1/messages` or `https://messages-sandbox.nexmo.com/v1/messages`, depending on which version you have set in the [sandbox dashboard](https://dashboard.nexmo.com/messages/sandbox).
 FB_SENDER_ID.MESSAGES: Your Page ID. The `FB_SENDER_ID` is the same as the `to.id` value you received in the inbound messenger event on your Inbound Message Webhook URL. For sandbox testing this is `107083064136738`. #&FB_SENDER_ID.MESSAGES
 VONAGE_FB_SENDER_ID: Refer to `FB_SENDER_ID` above  #*FB_SENDER_ID.MESSAGES
+FROM_ID: Refer to `FB_SENDER_ID` above  #*FB_SENDER_ID.MESSAGES
 AUDIO_URL.MESSENGER.MESSAGES: The link to the audio file to send. Must be MP3 format for Messenger.
 FILE_URL.MESSENGER.MESSAGES: The link to the file to send. Can be ZIP, CSV, PDF or any other type supported by Messenger.
 IMAGE_URL.MESSENGER.MESSAGES: The link to the image file to send. Messenger supports `.jpg`, `.jpeg`, `.png` and `.gif` types.
