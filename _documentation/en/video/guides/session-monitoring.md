@@ -29,7 +29,7 @@ To register a callback:
 
 The archive callback URL is set separately from the the callback URL for session events. Set the archive callback URL in the Archive section of your [Vonage Video API account page](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav).
 
-> **Important:** If within 30 minutes there are more than 50 event delivery failures (in which we don't receive a 200 success response when sending an HTTP request to your callback URL), we will disable session monitoring event forwarding. We will send an email if this occurs. You can reenable session monitoring in your [Vonage Video API account page](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav).
+> **Important:** If within 30 minutes there are more than 50 event delivery failures (in which we don't receive a 200 success response when sending an HTTP request to your callback URL), we will disable session monitoring event forwarding. We will send an email if this occurs. You can re-enable session monitoring in your [Vonage Video API account page](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav).
 
 ## Monitoring connection activity
 
