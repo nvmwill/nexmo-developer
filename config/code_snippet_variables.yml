@@ -6,7 +6,7 @@ VONAGE_API_KEY: Your Vonage API key (see it on [your dashboard](http://dashboard
 VONAGE_API_SECRET: Your Vonage API secret (also available on [your dashboard](http://dashboard.nexmo.com/)).
 VONAGE_APPLICATION_PRIVATE_KEY_PATH: Private key path.
 VONAGE_APPLICATION_PRIVATE_KEY: Private key.
-VONAGE_PRIVATE_KEY_PATH: Private key.
+VONAGE_PRIVATE_KEY_PATH: Private key path.
 VONAGE_APPLICATION_ID: The Vonage Application ID.
 VONAGE_NUMBER: Your Vonage Number. E.g. `447700900000`
 VONAGE_BRAND_NAME: The alphanumeric string that represents the name or number of the organization sending the message.
