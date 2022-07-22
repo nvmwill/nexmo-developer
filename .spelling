@@ -840,3 +840,7 @@ unpublish
 150kbps
 25kbps
 checkboxes
+20-second
+localStorage
+sessionStorage
+MediaStream
