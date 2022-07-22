@@ -25,6 +25,7 @@ Find the description for all variables used in each code snippet below:
 - VIBER_SERVICE_MESSAGE_ID
 - VONAGE_VIBER_SERVICE_MESSAGE_ID
 - VONAGE_NUMBER.MESSAGES
+- FROM_ID.MESSAGES
 - TO_NUMBER.MESSAGES
 ```
 
