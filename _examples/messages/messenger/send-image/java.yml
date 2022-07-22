@@ -4,11 +4,11 @@ language: java
 client:
   source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/messenger/SendMessengerImage.java
   from_line: 43
-  to_line: 54
+  to_line: 49
 code:
   source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/messenger/SendMessengerImage.java
-  from_line: 56
-  to_line: 57
+  from_line: 50
+  to_line: 73
 run_command: java-ide
 file_name: SendMessengerImage.java
 unindent: true

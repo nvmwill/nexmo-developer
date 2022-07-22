@@ -4,11 +4,11 @@ language: java
 client:
   source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/whatsapp/SendWhatsappTemplate.java
   from_line: 49
-  to_line: 66
+  to_line: 55
 code:
   source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/whatsapp/SendWhatsappTemplate.java
-  from_line: 68
-  to_line: 69
+  from_line: 56
+  to_line: 85
 run_command: java-ide
 file_name: SendWhatsappTemplate.java
 unindent: true
