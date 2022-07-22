@@ -1,0 +1,14 @@
+---
+title: Java
+language: java
+client:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/whatsapp/SendWhatsappLocation.java
+  from_line: 45
+  to_line: 64
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/whatsapp/SendWhatsappLocation.java
+  from_line: 66
+  to_line: 67
+run_command: java-ide
+file_name: SendWhatsappLocation.java
+unindent: true
