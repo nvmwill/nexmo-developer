@@ -2,13 +2,13 @@
 title: Java
 language: java
 client:
-  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/messenger/SendMessengerFile.java
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/messenger/SendMessengerImage.java
   from_line: 43
   to_line: 54
 code:
-  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/messenger/SendMessengerFile.java
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/messenger/SendMessengerImage.java
   from_line: 56
   to_line: 57
 run_command: java-ide
-file_name: SendMessengerFile.java
+file_name: SendMessengerImage.java
 unindent: true
