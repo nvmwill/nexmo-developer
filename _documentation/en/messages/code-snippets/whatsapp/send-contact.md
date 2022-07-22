@@ -14,6 +14,7 @@ Find the description for all variables used in each code snippet below:
 ```snippet_variables
 - VONAGE_APPLICATION_ID
 - VONAGE_APPLICATION_PRIVATE_KEY_PATH
+- VONAGE_PRIVATE_KEY_PATH
 - BASE_URL.MESSAGES
 - MESSAGES_API_URL
 - WHATSAPP_NUMBER

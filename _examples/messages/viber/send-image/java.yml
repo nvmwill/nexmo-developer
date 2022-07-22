@@ -1,0 +1,14 @@
+---
+title: Java
+language: java
+client:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/viber/SendViberImage.java
+  from_line: 43
+  to_line: 54
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/viber/SendViberImage.java
+  from_line: 56
+  to_line: 57
+run_command: java-ide
+file_name: SendViberImage.java
+unindent: true
