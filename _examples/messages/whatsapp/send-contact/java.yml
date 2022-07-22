@@ -1,0 +1,14 @@
+---
+title: Java
+language: java
+client:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/whatsapp/SendWhatsappContact.java
+  from_line: 46
+  to_line: 118
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/whatsapp/SendWhatsappContact.java
+  from_line: 121
+  to_line: 122
+run_command: java-ide
+file_name: SendWhatsappContact.java
+unindent: true
