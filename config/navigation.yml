@@ -181,6 +181,9 @@ navigation_overrides:
   vonage-business-cloud:
     svg: 'telephone'
     svgColor: 'green'
+  ai-studio:
+    svg: 'group-8'
+    svgColor: 'green'
   tools:
     svg: 'tool'
   contribute:
