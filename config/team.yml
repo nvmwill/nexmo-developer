@@ -1,9 +1,4 @@
 current:
-  - name: 'Myrsini Koukiasa'
-    email: 'myrsini.koukiasa@vonage.com'
-    twitter: 'myrsiningos'
-    role: 'Senior Community Manager'
-    short-name: 'myrsini'
   - name: 'Paul Ardeleanu'
     email: 'paul.ardeleanu@vonage.com'
     role: 'Developer Relations Manager'
@@ -90,3 +85,8 @@ current:
     email: 'marco.ranieri@vonage.com'
     role: 'DocOps - Ruby Technical Lead'
     short-name: 'marco-ranieri'
+  - name: 'Michael Crump'
+    email: 'Michael.Crump@vonage.com'
+    role: 'Developer Advocate'
+    short-name: 'michael-crump'
+
