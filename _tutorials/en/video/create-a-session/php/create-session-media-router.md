@@ -18,7 +18,7 @@ echo $session->getSessionId();
 
 Use the session ID in an Vonage Video client library to connect to an Vonage Video session.
 
-In an HTML page that uses the Vonage Video.js library, you can embed PHP that references the API key, the session ID, and the generated token string, as in the following:
+In an HTML page that uses the [Vonage Video JS client SDK](/video/resources#client-sdks), you can embed PHP that references the API key, the session ID, and the generated token string, as in the following:
 
 ```php
 var apiKey = <?php print $API_KEY?>;

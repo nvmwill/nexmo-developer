@@ -844,3 +844,8 @@ checkboxes
 localStorage
 sessionStorage
 MediaStream
+opentok-reconnection
+ConnectionEvent
+sessionconnection
+500-level
+networkDisconnected
