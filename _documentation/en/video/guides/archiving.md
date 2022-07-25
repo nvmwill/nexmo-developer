@@ -28,7 +28,7 @@ This topic includes the following sections:
 
   - [Automatically archived sessions](#automatically-archived-sessions)
 
-  - [Simultaneous archives]()
+  - [Simultaneous archives](#simultaneous-archives)
 
   - [Archive status change](#archive-status-changes)
 
@@ -49,31 +49,31 @@ As clients start and stop publishing streams, the streams are recorded.
 
 > **Important**: You can record up to 16 video streams with composed archiving, or 50 with individual stream archiving. (Both composed and individual stream archives can include up to 50 audio streams.) See [Individual stream and composed archives](#individual-stream-and-composed-archives). After this limit is reached, if additional streams are published to the session, they are not recorded. The maximum recorded length of an archive (the cumulative length of time when streams are published in the session) is 4 hours (14,400 seconds). See [Archive duration](#archive-duration) for more details.
 
-There is no limit to the number of archives you can record; however, automatically recorded sessions will restart a new recording every 4 hours until the recording stops.
+There is no limit to the number of archives you can record; however, [automatically archived sessions](#automatically-archived-sessions) will restart a new recording every 4 hours until the recording stops.
 
 The OpenTok Server SDKs include methods for the following:
 
-* Starting a recording
-* Stopping a recording
-* Listing recordings
-* Retrieving recording information
-* Deleting a recording
+* Starting an archive recording
+* Stopping an archive recording
+* Listing archives
+* Retrieving archive information
+* Deleting an archive
 
-When you stop recording a recording, the OpenTok server creates an MP4 file or (in the case of individual stream recordings) a ZIP file. (See [Individual stream and composed archives](#individual-stream-and-composed-archives).)
+When you stop recording an archive, the OpenTok server creates an MP4 file or (in the case of individual stream archives) a ZIP file. (See [Individual stream and composed archives](#individual-stream-and-composed-archives).)
 
 When an archive recording starts and stops, events are sent in the clients. For example, the [OpenTok.js](/video/resources#client-sdks) library includes `archiveStarted` and `archiveStopped` events dispatched by the Session object.
 
 ## Archive duration
 
-The maximum recorded length of a recording is 4 hours (14,400 seconds). This recorded length refers to the cumulative time in which streams are published (and being recorded).
+The maximum recorded length of an archive is 4 hours (14,400 seconds). This recorded length refers to the cumulative time in which streams are published (and being recorded).
 
-While streams are published (and recorded), the recording's status is set to "started". (See [Recording status changes](#recording-status-changes)).
+While streams are published (and recorded), the archive's status is set to `"started"`. (See [Archive status changes](#archive-status-changes)).
 
-While an archive is recording without any streams published, the status is set to "paused".
+While an archive is recording without any streams published, the status is set to `"paused"`.
 
-The maximum total length of a recording, including "started" and "paused" states, is 12 hours (43,200 seconds). Recordings automatically time out (and stop recording) after 1 hour (3,600 seconds) of inactivity (when no clients are publishing streams).
+The maximum total length of an archive, including "started" and "paused" states, is 12 hours (43,200 seconds). Recordings automatically time out (and stop recording) after 1 hour (3,600 seconds) of inactivity (when no clients are publishing streams).
 
-> **Note:** [Automatically recorded sessions](#automatically-record-sessions) result in one or more consecutive recordings, which have a maximum length of 4 hours each.
+> **Note:** [Automatically archived sessions](#automatically-archived-sessions) result in one or more consecutive recordings, which have a maximum length of 4 hours each.
 
 ## Archive storage
 
@@ -99,65 +99,61 @@ When you create an archive using the Vonage Video REST API or one of the Vonage 
 
 Archive output file can be of one of the following formats:
 
-**Composed recordings**
+**Composed archives**
 
-The recording is a single MP4 file composed of all streams. This is the default setting. It is also used for [automatically recorded sessions](#automatically-record-sessions).
+The archive is a single MP4 file composed of all streams. This is the default setting. It is also used for [automatically archived sessions](#automatically-archived-sessions).
 
 The MP4 file uses H.264 video and AAC audio (at 128 Kbps and a 48-Khz sample rate).
 
-You can customize the layout of a composed recording, adjusting the visual arrangement of streams and which streams are displayed. See [Customizing the video layout for composed recordings](/video/guides/layout-control).
+You can customize the layout of a composed archive, adjusting the visual arrangement of streams and which streams are displayed. See [Customizing the video layout for composed archives](/video/guides/layout-control).
 
-By default, composed recordings have a 640x480-pixel (SD landscape) resolution. To set a composed recording to have a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), 1080x1920 (FHD portrait) resolution, set the `resolution` property to `480x640`, `1280x720`, `1920x1080`, `720x1280`, or `1080x1920` when calling the start recording method of the Vonage Video REST API.
+By default, composed archives have a 640x480-pixel (SD landscape) resolution. To set a composed archive to have a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), 1080x1920 (FHD portrait) resolution, set the `resolution` property to `480x640`, `1280x720`, `1920x1080`, `720x1280`, or `1080x1920` when calling the start archive method of the Vonage Video REST API.
 
 You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio). 
 
 > Note that support for FHD resolutions, "1920x1080" and "1080x1920", is currently a beta feature.
 
-**Individual stream recordings** 
+**Individual stream archives** 
 
-The recording is a ZIP container file with multiple individual media files for each stream, and a JSON metadata file for video synchronization.
+The archive is a ZIP container file with multiple individual media files for each stream, and a JSON metadata file for video synchronization.
 
-You can specify this format when you use one of the Vonage Video server SDKs to start the archive. This format is not available for [automatically recorded sessions](#automatically-record-sessions).
+You can specify this format when you use one of the Vonage Video server SDKs to start the archive. This format is not available for [automatically archived sessions](#automatically-archived-sessions).
 
-> Note: In a composed recording, if a recording is started and no data is streamed during the duration of the recording (no audio or video is published), the size of the recording file will be 0 bytes.
+> Note: In a composed archive, if archiving is started and no data is streamed during the duration of the archive (no audio or video is published), the size of archive file will be 0 bytes.
 
 ## Working with individual stream archives
 
-Individual stream recording mode is intended for use with a post-processing tool to produce customized content generated by your application. There are some considerations that developers should evaluate when choosing to use the feature.
+Individual stream archive mode is intended for use with a post-processing tool, to produce customized content generated by your application. There are some considerations that developers should evaluate when choosing to use the feature.
 
 ### Individual stream containers
 
-Individual stream recording media is delivered as a ZIP archive, containing files for each audio-video stream:
+Individual stream archive media is delivered as a ZIP archive, containing files for each audio-video stream:
 
-Each stream container in the recording corresponds to a stream published to Vonage Video. The publisher's stream ID matches its corresponding file name, and each stream ID is declared in the recording manifest.
+* Each stream container in the archive corresponds to a stream published to OpenTok. The publisher's stream ID matches its corresponding file name, and each stream ID is declared in the [archive manifest](#individual-stream-recording-manifest).
 
-When a stream is interrupted and resumed because of automatic reconnection or when a stream is added and removed repeatedly in a manual stream mode recording, the ZIP recording will include separate files for each of the stream's individual segments.
+When a stream is interrupted and resumed because of automatic reconnection or when a stream is added and removed repeatedly in a [manual stream mode archive](#selecting-streams-to-be-included-in-a-archives), the ZIP archive will include separate files for each of the stream's individual segments.
 
-Stream containers are either of type **.webm**, or **.mkv**, depending on your project's configuration. Recordings for projects that have VP8 set as the preferred video codec have webm containers, and projects that have H.264 set as the preferred video codec use the **mkv** format.
+* Stream containers are either of type `.webm`, or `.mkv`, depending on your project's configuration. Archives for projects that have VP8 set as the [preferred video codec](/video/guides/codecs#setting-the-preferred-video-codec-for-a-project) have `webm` containers, and projects that have H.264 set as the preferred video codec use the `mkv` format.
 
-Individual stream archive containers are a capture of all the video and audio received by the archive server. This media is not processed, and therefore in most cases the container is not be suitable for direct playback.
+* Individual stream archive containers are a capture of all the video and audio received by the archive server. This media is not processed, and therefore in most cases the container is not be suitable for direct playback.
 
-The stream container is treated like a transport stream — all media received at the recording server is written directly to file, without inspection or post-processing.
+The stream container is treated like a transport stream — all media received at the archive server is written directly to file, without inspection or post-processing. This design has implications for downstream consumption of stream containers. In most cases, direct playback of of an individual stream archive container will not be possible, or will have issues because of the contents of the container:
 
-This design has implications for downstream consumption of stream containers. In most cases, direct playback of of an individual stream recording container will not be possible, or will have issues because of the contents of the container:
+* The declared dimensions for the stream header are seldom correct. Currently, the headers for the container will show a video track with 640x480-pixel dimensions, regardless of the dimensions of encoded video frames.
 
-The declared dimensions for the stream header are seldom correct. Currently, the headers for the container will show a video track with 640x480-pixel dimensions, regardless of the dimensions of encoded video frames.
+* Video frames will change in dimensions over time. This can also include aspect ratio changes, particularly with screen-sharing streams.
 
-Video frames will change in dimensions over time. This can also include aspect ratio changes, particularly with screen-sharing streams.
+* Audio and video frames may not arrive with monotonic timestamps; frame rates are not always consistent. This is especially relevant if either the video or audio track is disabled for a time, using one of `publishVideo` or `publishAudio` publisher properties.
 
-Audio and video frames may not arrive with monotonic timestamps; frame rates are not always consistent. This is especially relevant if either the video or audio track is disabled for a time, using one of `publishVideo` or `publishAudio` publisher properties.
+Frame presentation timestamps (PTS) are written based on NTP timestamps taken at the time of capture, offset by the timestamp of the first received frame. Even if a track is muted and later unmuted, the timestamp offset should remain consistent throughout the duration of the entire stream. When decoding in post-processing, a gap in PTS between consecutive frames will exist for the duration of the track mute: there are no "silent" frames in the container.
 
-Frame presentation timestamps (PTS) are written based on NTP timestamps taken at the time of capture, offset by the timestamp of the first received frame. 
+To produce viewable content from individual stream archiving files, you need to run the media through a post processor to repair individual stream containers or multiplex/composite multiple containers into a final product. Suggestions for getting started with downstream processing are outlined in our archiving-composer GitHub repository: [https://github.com/opentok/archiving-composer](https://github.com/opentok/archiving-composer).
 
-Even if a track is muted and later unmuted, the timestamp offset should remain consistent throughout the duration of the entire stream. When decoding in post-processing, a gap in PTS between consecutive frames will exist for the duration of the track mute: there are no "silent" frames in the container.
 
-To produce viewable content from individual stream recording files, you need to run the media through a post processor to repair individual stream containers or multiplex/composite multiple containers into a final product.
-
-Suggestions for getting started with downstream processing are outlined in our archiving-composer GitHub repository: [https://github.com/opentok/archiving-composer](https://github.com/opentok/archiving-composer).
 
 ### Individual stream recording manifest
 
-Individual stream recordings include a JSON metadata file, which provides information on the stream recordings included in the recording. It is of the following format:
+Individual stream archives include a JSON metadata file, which provides information on the stream recordings included in the archive. It is of the following format:
 
 ```json
 {
@@ -191,10 +187,10 @@ Individual stream recordings include a JSON metadata file, which provides inform
 
 Name | Description |
 -- | -- | -- |
-``id`` | The unique identifier of this recording.
-``partnerId`` | The partner/project ID of this recording.
-``sessionId`` | The unique identifier of this recording.
-``name`` | The name of this recording. This field is empty if `name` was not specified in the call to start archive..
+``id`` | The unique identifier of this archive.
+``partnerId`` | The partner/project ID of this archive.
+``sessionId`` | The unique identifier of this archive.
+``name`` | The name of this archive. This field is empty if `name` was not specified in the call to start archive..
 ``createdAt`` | The Unix time in milliseconds for when the archive started.
 ``files`` | An array of files included in the ZIP container. Each file has the following properties:
 | ``streamId`` | The corresponding stream ID for the stream recorded to this file. When a stream is interrupted and resumed because of automatic reconnection or when a stream is added and removed repeatedly in a manual stream mode archive, the individual stream archive will include separate files for each of the stream's individual segments.
@@ -212,34 +208,34 @@ A sample post processor application is available at [https://github.com/opentok/
 
 ## Selecting streams to be included in a archives
 
-When you start a recording, if you set the ``streamMode`` to `manual`, you can choose the streams to include in the recording.
+When you start an archive, if you set the ``streamMode`` to `manual`, you can choose the streams to include in the archive.
 
-You can add and remove streams during the  recording. And you can specify whether the recording will include a stream's audio or video (or both).
+You can add and remove streams during the archive recording. And you can specify whether the archive will include a stream's audio or video (or both).
 
-Otherwise, with the ``streamMode`` set to `auto` (the default), all streams are included (with audio and video) in the recording. See Starting a recording and Selecting streams to be included in a recording.
+Otherwise, with the ``streamMode`` set to `auto` (the default), all streams are included (with audio and video) in the archive. See Starting an archive and Selecting streams to be included in an archive.
 
 However, in a composed archive there is a limit of 16 video streams and 50 audio streams included at one time (for both automatic and manual stream modes), and streams are included based on stream prioritization rules.
 
 ## Automatically archived sessions
 
-You can have a session be automatically recorded by specifying this when you create the session, using one of the Vonage Video server SDKs.
+You can have a session be automatically archive by specifying this when you create the session, using one of the Vonage Video server SDKs.
 
-The recording for an automatically recorded session starts as soon as a client connects to the session.
+The archive for an automatically archived session starts as soon as a client connects to the session.
 
-> Note: If recording is started and no data is streamed during the duration of the recording (no audio or video is published), the size of recording file will be 0 bytes.
+> Note: If archiving is started and no data is streamed during the duration of the archive (no audio or video is published), the size of archive file will be 0 bytes.
 
-Automatically recorded sessions include both audio and video, and they record all streams to the same (composed) MP4 file.
+Automatically archived sessions include both audio and video, and they record all streams to the same (composed) MP4 file.
 
 However, if the recording lasts longer than 4 hours (14,400 seconds), the session is recorded to multiple, consecutive MP4 files, of up to 4 hours each in length, until the recording is stopped.
 
-You can call the Vonage Video REST method for listing recordings and pass in the ``sessionID`` query parameter to list recordings for a specified session ID. 
+You can call the Vonage Video REST method for listing archive and pass in the ``sessionID`` query parameter to list archives for a specified session ID. 
 
-You can then determine the sequence of the separate MP4 files, by looking at the ``createdAt`` property of each recording listed in the JSON data returned by the call to the REST method.
+You can then determine the sequence of the separate MP4 files, by looking at the ``createdAt`` property of each archive listed in the JSON data returned by the call to the REST method.
 
-You cannot stop an automatic recording using the Vonage Video REST API or server SDKs. Automatic recordings stop 60 seconds after the last client disconnects from the session or 60 minutes after the last client stops publishing a stream to the session.
+You cannot stop an automatic archive using the Vonage Video REST API or server SDKs. Automatic archives stop 60 seconds after the last client disconnects from the session or 60 minutes after the last client stops publishing a stream to the session.
 
-> **Important:** If you expect to have long periods during which recording will be paused, you should consider starting and stopping recordings using the methods in the Vonage Video REST API or one of the Vonage Video Server SDKs (instead of having the session be recorded automatically).
-You should strictly avoid reusing session IDs if you will be using automatic recording. Reusing a session ID can cause automatic recordings to fail if a previous automatic recording for the session has timed out.
+> **Important:** If you expect to have long periods during which archiving will be paused, you should consider starting and stopping archives using the methods in the Vonage Video REST API or one of the Vonage Video Server SDKs (instead of having the session be archived automatically).
+You should strictly avoid reusing session IDs if you will be using automatic archiving. Reusing a session ID can cause automatic archives to fail if a previous automatic archive for the session has timed out.
 
 ## Simultaneous archives
 
@@ -247,23 +243,23 @@ To record multiple archives for the same session simultaneously, set the `multiA
 
 You can use different layouts and assign different streams to each simultaneous archive recording.
 
-In [automatically archived sessions](#automatically-archived-sessions), set the `multiArchiveTag` option to start a new simultaneous archive that is recorded simultaneously with the automatic archives. Automatic archives start and end when the session starts and stops on its own (following the rules for automatic archives), while you stop manually started separately.
+In [automatically archived sessions](#automatically-archived-sessions), set the `multiArchiveTag` option to start a new simultaneous archive that is archives simultaneously with the automatic archives. Automatic archives start and end when the session starts and stops on its own (following the rules for automatic archives), while you stop manually started separately.
 
 ## Archive status changes
 
-You can register a callback URL for notification when a recording's status changes. The status of a recording is set to one of the following:
+You can register a callback URL for notification when an archive's status changes. The status of an archive is set to one of the following:
 
 Name | Description |
 -- | -- | -- |
-``started`` | The recording started and is in the process of being recorded.
-``paused`` | When a recording is paused, nothing is recorded. The recording is paused if no clients are publishing streams to the session (in this case, there is a timeout of 60 minutes, after which the recording stops and the recording status changes to `stopped`) or all clients disconnect the session (in which case, the recording stops after 60 seconds and the status changes to `stopped`). If a client resumes publishing while the recording is in the `paused` state, then the recording resumes and the status changes back to `started`.
+``started`` | The archive started and is in the process of being recorded.
+``paused`` | When an archive is paused, nothing is recorded. The archive is paused if no clients are publishing streams to the session (in this case, there is a timeout of 60 minutes, after which the archive stops and the archive status changes to `stopped`) or all clients disconnect the session (in which case, the recording stops after 60 seconds and the status changes to `stopped`). If a client resumes publishing while the recording is in the `paused` state, then the recording resumes and the status changes back to `started`.
 ``stopped`` | Recording has stopped.
-``uploaded`` | The recording is available for download from the S3 bucket or Azure container you specified in your Vonage Account. Note that for very small recordings, the `uploaded` status event may occur before the `stopped` status event.
-``available`` | The recording is available for download from the Vonage cloud.
-``expired`` | The recording is no longer available for download from the Vonage cloud. Recordings on the Vonage cloud are only available for 72 hours from the time they are created.
+``uploaded`` | The archive is available for download from the S3 bucket or Azure container you specified in your Vonage Account. Note that for very small archives, the `uploaded` status event may occur before the `stopped` status event.
+``available`` | The archive is available for download from the Vonage cloud.
+``expired`` | The archive is no longer available for download from the Vonage cloud. Recordings on the Vonage cloud are only available for 72 hours from the time they are created.
 ``failed`` | The recording failed.
 
-Use your Vonage Account to specify a callback URL. When an recording's status changes, the server sends HTTP POST requests to the URL you specify. The `Content-Type` for the request is `application/json`. The data of the request is a JSON object of the following form:
+Use your Vonage Account to specify a callback URL. When an archive status changes, the server sends HTTP POST requests to the URL you specify. The `Content-Type` for the request is `application/json`. The data of the request is a JSON object of the following form:
 
 ```json
 {
@@ -285,41 +281,41 @@ The JSON object includes the following properties:
 
 Property | Description |
 -- | -- | -- |
-``createdAt`` | The timestamp for when the call to start the recording occurred, expressed in milliseconds since the Unix epoch (January 1, 1970, 00:00:00 UTC). Note that this value is rounded to the nearest second. Also note that this value differs from the `createdAt` value in the REST method for retrieving archive and the `createdAt` value in the manifest for an individual stream archive. In those, the `createdAt` value is set to the time the recording effectively started on the Vonage servers (not the time when the call to start the recording occurred). Note that even if a call to start a recording is issued, the recording will not effectively start on the Vonage server until at least one client publishes a stream in the session.
-``duration`` | The duration of the recording in seconds. For recordings that are in progress (with the status property set `started`), this value is set to 0.
-``id`` | The recording's unique ID.
-``name`` | The name of the recording you supplied (this is optional).
+``createdAt`` | The timestamp for when the call to start the archive occurred, expressed in milliseconds since the Unix epoch (January 1, 1970, 00:00:00 UTC). Note that this value is rounded to the nearest second. Also note that this value differs from the `createdAt` value in the REST method for retrieving archive and the `createdAt` value in the manifest for an individual stream archive. In those, the `createdAt` value is set to the time the recording effectively started on the Vonage servers (not the time when the call to start the recording occurred). Note that even if a call to start an archive is issued, the recording will not effectively start on the Vonage server until at least one client publishes a stream in the session.
+``duration`` | The duration of the archive in seconds. For archive that are in progress (with the status property set `started`), this value is set to 0.
+``id`` | The archive's unique ID.
+``name`` | The name of the archive you supplied (this is optional).
 ``partnerId`` | Your Vonage API key.
 ``resolution`` | The resolution of the archive (either `640x480`, `480x640`, `1280x720`, `720x1280`, `1920x1080`, or `1080x1920`). This property is only set for composed archives. You can set the resolution of a composed archive when calling the start archive method of the Vonage Video REST API.
-``reason`` | For recordings with the status `stopped` or `failed`, this string describes the reason the archive stopped (such as "maximum duration exceeded") or failed.
-``sessionId`` | The session ID of the Vonage Video session that was recorded.
-``size`` | The size of the recording file. For recordings that have not been generated, this value is set to 0.
-``status`` | The status of the recording:
+``reason`` | For archives with the status `stopped` or `failed`, this string describes the reason the archive stopped (such as "maximum duration exceeded") or failed.
+``sessionId`` | The session ID of the Vonage Video session that was archived.
+``size`` | The size of the archive file. For archive that have not been generated, this value is set to 0.
+``status`` | The status of the archive:
 | `available` | The archive is available for download from Vonage.
-| `expired` | The recording is no longer available for download from the Vonage cloud. Recordings on the Vonage cloud are only available for 72 hours from the time they are created.
-| `failed` | The recording failed.
-| `paused` | When a recording is paused, nothing is recorded. The recording is paused if no clients are publishing streams to the session (in this case, there is a timeout of 60 minutes, after which the recording stops and the recording status changes to `stopped`) or all clients disconnect the session (in which case, the recording stops after 60 seconds and the status changes to `stopped`). If a client resumes publishing while the recording is in the `paused` state, then the recording resumes and the status changes back to `started`.
-| `started` | The recording started and is in the process of being recorded.
+| `expired` | The archive is no longer available for download from the Vonage cloud. Recordings on the Vonage cloud are only available for 72 hours from the time they are created.
+| `failed` | The archive recording failed.
+| `paused` | When an archive is paused, nothing is recorded. The archive is paused if no clients are publishing streams to the session (in this case, there is a timeout of 60 minutes, after which the archive stops and the archive status changes to `stopped`) or all clients disconnect the session (in which case, the recording stops after 60 seconds and the status changes to `stopped`). If a client resumes publishing while the archive is in the `paused` state, then the recording resumes and the status changes back to `started`.
+| `started` | The archive started and is in the process of being recorded.
 | `stopped` | Recording has stopped.
-| `uploaded` | The recording is available for download from the S3 bucket or Azure container you specified in your Vonage Account. Note that for very small recordings, the `uploaded` status event may occur before the `stopped` status event.
-``streamMode`` | Whether all streams are included in the archive (`auto`) or you select streams to include in the archive (`manual`). See [Selecting streams to be included in a recording](#selecting-streams-to-be-included-in-a-recording).
+| `uploaded` | The archive is available for download from the S3 bucket or Azure container you specified in your Vonage Account. Note that for very small archives, the `uploaded` status event may occur before the `stopped` status event.
+``streamMode`` | Whether all streams are included in the archive (`auto`) or you select streams to include in the archive (`manual`). See [Selecting streams to be included in an archive](#selecting-streams-to-be-included-in-a-archives).
 ``streams`` | An array of objects corresponding to streams currently being archived. This is only set for an archive with the status set to `started`. Each object in the array includes the following properties:
-| `streams` | The stream ID of the stream included in the recording.
-| `hasAudio` | Whether the stream's audio is included in the recording.
-| `hasVideo` | Whether the stream's video is included in the recording.
-``url`` | The download URL of the available recording file. This is only set for a recording with the status set to `available`; for other recordings, (including recordings with the status `uploaded`) this property is set to `null`. The download URL is obfuscated, and the file is only available from the URL for 10 minutes. To generate a new URL, use the REST API for retrieving archive information or listing archives.
+| `streams` | The stream ID of the stream included in the archive.
+| `hasAudio` | Whether the stream's audio is included in the archive.
+| `hasVideo` | Whether the stream's video is included in the archive.
+``url`` | The download URL of the available archive file. This is only set for an archive with the status set to `available`; for other archives, (including archives with the status `uploaded`) this property is set to `null`. The download URL is obfuscated, and the file is only available from the URL for 10 minutes. To generate a new URL, use the REST API for retrieving archive information or listing archives.
 
 You can also view the status of archives in your Vonage Account:
 
 1. Navigate to your Vonage Account dashboard.
-2. From the list of projects in the left of the page, select the project that will contain sessions that you are recording.
-3. In the Recording section, click the Recordings List tab. Details on recordings in the project are listed.
+2. From the list of projects in the left of the page, select the project that will contain sessions that you are archiving.
+3. In the archiving section, click the Archive List tab. Details on archives in the project are listed.
 
 ## Archive security
 
 You can secure your archives in the following ways:
 
-* **Turn off archive storage fallback** — By default, Vonage stores a recording file on Vonage servers if it was unable to upload the file to your specified S3 or Azure server. To prevent this fallback storage, log in to your Vonage Account, select the project, and set the option to disable archive storage fallback.
+* **Turn off archive storage fallback** — By default, Vonage stores an archive file on Vonage servers if it was unable to upload the file to your specified S3 or Azure server. To prevent this fallback storage, log in to your Vonage Account, select the project, and set the option to disable archive storage fallback.
 * **Use Vonage encryption** — This allows you to create Vonage archives where the data is never at rest in an unencrypted state. Of the available methods of securing your Vonage recordings, this provides the highest level of security. This is available as an add-on feature. For more information, see the Vonage encryption documentation.
 * **Use Amazon S3 server-side encryption** — This uses Amazon S3-managed encryption keys for encryption. Learn about Amazon S3 server-side encryption [here](/video/guides/amazon-s3-encryption).
 
