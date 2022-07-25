@@ -15,7 +15,7 @@ Each token is assigned a _role_, which determine the capabilities of the client 
 
 * **Subscriber** — Clients that connect with a subscriber token can connect to Vonage Video sessions and subscribe to other clients' streams. They cannot publish their own streams to a session.
 * **Publisher** — Clients that connect with a publisher token can connect to Vonage Video sessions, publish audio-video streams to the session, and subscribe to other clients' streams.
-* **Moderator** — In addition to publishing and subscribing to streams, moderators connected in a client using OpenTok.js can force other clients to disconnect from a session or to stop publishing audio-video streams. (Any client can be forced to disconnect or stop publishing, but only a moderator using Vonage Video.js can perform these moderation functions.) Additionally, moderators connected in any of the Vonage Video client SDKs can force one or more streams in the session to mute published audio.
+* **Moderator** — In addition to publishing and subscribing to streams, moderators connected in a client using OpenTok.js can force other clients to disconnect from a session or to stop publishing audio-video streams. (Any client can be forced to disconnect or stop publishing, but only a moderator using Vonage Video OpenTok.js SDK can perform these moderation functions.) Additionally, moderators connected in any of the Vonage Video client SDKs can force one or more streams in the session to mute published audio.
 
 ## Expiration dates
 
@@ -33,7 +33,7 @@ The Vonage Video client libraries include properties for inspecting the connecti
 
 ## Best practices when generating tokens
 
-Tokens are cheap to generate. They are generated just with a hashing function and your secret. There is no API call to our servers used when generating a token. We recommend:
+Tokens are cheap to generate. They are generated with a hashing function and your secret. There is no API call to our servers used when generating a token. We recommend:
 
 * Generating a new token for every user at the time they try to connect. Tokens have an expiration time, which by default is 24 hours after the token is created. After the expiration time, you cannot use the token to connect to the session.
 * Not storing tokens or trying to reuse them.
