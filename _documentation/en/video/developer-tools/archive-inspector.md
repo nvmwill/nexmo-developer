@@ -1,5 +1,5 @@
 ---
-title: Recording Inspector
+title: Archive Inspector
 description: Learn how to use the Archive Inspector tool, a post-call diagnostic tool that provides diagnostic information about archives created for a session.
 product: video
 --- 
