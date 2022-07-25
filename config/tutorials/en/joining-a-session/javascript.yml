@@ -1,0 +1,40 @@
+title: Joining a Session 
+description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your web application.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to connect to a session from your web frontend.
+  content: |
+    # Introduction
+    Using a session ID and token, you can connect to the OpenTok session using the [OpenTok.js](/video/resources#client-sdks) library.
+
+    Get started by fullfiling the [prerequisites](/video/tutorials/joining-a-session/prerequisites/javascript).
+
+    For information on creating a session ID, see [Session Creation](/video/guides/create-session).
+
+prerequisites:
+  - video/general-prerequisites/video-api-account
+
+tasks:
+    - video/joining-a-session/javascript/initialize-session-object
+    - video/joining-a-session/javascript/connect-session
+    - video/joining-a-session/javascript/disconnect-session
+    - video/joining-a-session/javascript/detecting-disconnect
+    - video/joining-a-session/javascript/automatic-reconnect
+    - video/joining-a-session/javascript/detect-client-connect-disconnect
+    - video/joining-a-session/javascript/troubleshoot
+    - video/joining-a-session/javascript/put-together
+
+
+
+conclusion:
+  title: What's next?
+  description: The next step is to integrate the server-side SDK to handle authentication
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>

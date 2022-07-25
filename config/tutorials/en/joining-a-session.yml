@@ -1,0 +1,4 @@
+title: Joining a Session 
+description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your web application.
+products:
+  - video
