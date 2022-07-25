@@ -33,4 +33,4 @@ You can call the `OT.reportIssue()` method to programmatically report when your 
 
 The `OT.reportIssue()` method takes one parameter, a completion handler function, which is called when the call to `OT.reportIssue()` succeeds or fails. The completion handler function has two parameters.
 
-ßThe first parameter is an error object that is set when the call to the `reportIssue()` method fails (for example, if the client is not connected to the network) or `null` when the call to the `reportIssue()` method succeeds. The second parameter is set to the reported issue ID (a unique string) when the call succeeds.
+The first parameter is an error object that is set when the call to the `reportIssue()` method fails (for example, if the client is not connected to the network) or `null` when the call to the `reportIssue()` method succeeds. The second parameter is set to the reported issue ID (a unique string) when the call succeeds.
