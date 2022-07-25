@@ -1,0 +1,20 @@
+title:  Token Creation
+description: Learn how to create a token using the Vonage Video API Node.js SDK. Tokens allow participants to use audio, video, and messaging functionality in your application.
+products:
+  - video
+
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to connect to a session from your web frontend.
+  content: |
+    # Introduction
+    In order to authenticate a user connecting to an Vonage Video session, a client must connect using a token (see [this overview](/video/guides/create-token)).
+
+prerequisites:
+  - video/general-prerequisites/video-api-account
+
+tasks:
+    - video/create-token/node
+
+
