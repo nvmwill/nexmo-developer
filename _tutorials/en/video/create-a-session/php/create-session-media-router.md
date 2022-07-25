@@ -20,7 +20,7 @@ Use the session ID in an Vonage Video client library to connect to an Vonage Vid
 
 In an HTML page that uses the [Vonage Video JS client SDK](/video/resources#client-sdks), you can embed PHP that references the API key, the session ID, and the generated token string, as in the following:
 
-```php
+```js
 var apiKey = <?php print $API_KEY?>;
 var sessionId = '<?php print $sessionId; ?>';
 var token = '<?php print $apiObj->generateToken($sessionId); ?>';
