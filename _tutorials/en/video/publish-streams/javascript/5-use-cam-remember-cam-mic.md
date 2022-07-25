@@ -1,5 +1,5 @@
 ---
-title: Selecting and remembering camera and microphone selections
+title: Remember camera and microphone selection
 description: "Learn how to publish Vonage Video API streams in your web application. Once you have connected to a session, you can send video, audio, and messages by publishing a stream."
 product: video
 ---

@@ -25,11 +25,11 @@ publisher = OT.initPublisher(targetElement, null, function(error) {
 The `OT.initPublisher()` method takes two parameters:
 
 * `targetElement`— (Optional) Defines the DOM element that the Publisher video replaces.
-* `properties`— (Optional) A set of properties that customize the Publisher. The `properties` parameter also includes options to specify an audio and video input device used by the publisher (see [Setting the camera and microphone used by the publisher](#set_camera_mic)). The `properties` parameter also includes options for customizing the appearance of view in the HTML page (see [Customizing the UI](/developer/guides/customize-ui/js/)) and select whether to publish audio and video (see [Publishing audio or video only](/developer/guides/audio-video/js/index.html#publish_audio_video_only)).
+* `properties`— (Optional) A set of properties that customize the Publisher. The `properties` parameter also includes options to specify an audio and video input device used by the publisher. The `properties` parameter also includes options for customizing the appearance of view in the HTML page and select whether to publish audio and video.
     
 * `completionHandler`— (Optional) A completion handler that specifies whether the publisher instantiated successfully or with an error.
 
-You can pass this Publisher object into the `Session.publish()` method to publish a stream to a session. See [Publishing a stream](#publish_stream).
+You can pass this Publisher object into the `Session.publish()` method to publish a stream to a session.
 
 Before calling `Session.publish()`, you can use this Publisher object to test the microphone and camera attached to the Publisher.
 

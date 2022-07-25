@@ -1,5 +1,5 @@
 ---
-title: Detecting a client granted access to camera and microphone
+title: Detect granted access to camera and microphone
 description: "Learn how to publish Vonage Video API streams in your web application. Once you have connected to a session, you can send video, audio, and messages by publishing a stream."
 product: video
 ---

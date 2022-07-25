@@ -6,7 +6,9 @@ product: video
 
 ## Applying filters and effects to published audio and video
 
-You can apply filters and effects on audio or video obtained from a microphone or camera used as the source audio or video for a published stream — see [this topic](/developer/guides/audio-video/js/#audio-video-filters).
+You can apply filters and effects on audio or video obtained from a microphone or camera used as the source audio or video for a published stream.
+
+<!-- OPT-TODO: see [this topic](/developer/guides/audio-video/js/#audio-video-filters). -->
 
 ## Setting video content hints to improve video perfomance in certain situations
 
@@ -46,7 +48,7 @@ You can read more about these options in the [W3C Working Draft](https://www.w3.
 
 Chrome 60+, Safari 12.1+, Edge 79+, and Opera 47+ support video content hints. The setting is ignored in other browsers.
 
-If you can accept a slow frame rate, you may also consider [restricting the frame rate of subscribed streams](/developer/guides/subscribe-stream/js/#restrict_frame_rate) to improve quality.
+If you can accept a slow frame rate, you may also consider [restricting the frame rate of subscribed streams](/video/tutorials/subscribe-stream) to improve quality.
 
 <!-- OPT-TODO: ## Other audio and video options
 

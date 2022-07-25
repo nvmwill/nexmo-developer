@@ -1,5 +1,5 @@
 ---
-title: Stopping a publisher from streaming and detecting when a published stream leaves a session
+title: Stop a publisher stream and detecting when a published stream session ends
 description: "Learn how to publish Vonage Video API streams in your web application. Once you have connected to a session, you can send video, audio, and messages by publishing a stream."
 product: video
 ---
@@ -14,7 +14,9 @@ session.unpublish(publisher);
 
 Note that you can individually stop sending video or audio (while still publishing).
 
- <!-- OPT-TODO: For more information, see [Adjusting audio and video](/developer/guides/audio-video/js/). -->
+
+<!-- OPT-TODO: For more information, see [Adjusting audio and video](/developer/guides/audio-video/js/). -->
+
 
 ## Detecting when a published stream leaves a session
 
