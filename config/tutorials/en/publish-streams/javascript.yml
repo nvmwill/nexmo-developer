@@ -1,0 +1,39 @@
+title: Publishing Streams 
+description: Learn how to publish Vonage Video API streams in your web application. Once you have connected to a session, you can send video, audio, and messages by publishing a stream.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/resources#client-sdks).
+  content: |
+    # Introduction
+    Once you have [connected to a session](/video/tutorials/joining-a-session), you can publish a stream that other clients connected to the session can view.
+
+    In this tutorial, you will learn how to publish streams.
+
+tasks:
+    - video/publish-streams/javascript/1-check-publish-capabilities
+    - video/publish-streams/javascript/2-initialize-publisher-view
+    - video/publish-streams/javascript/3-detect-access-cam-mic
+    - video/publish-streams/javascript/4-set-publisher-cam-mic.md
+    - video/publish-streams/javascript/5-use-cam-remember-cam-mic
+    - video/publish-streams/javascript/6-publish-stream
+    - video/publish-streams/javascript/7-stop-publisher-stream.md
+    - video/publish-streams/javascript/8-stream-settings
+    - video/publish-streams/javascript/9-managing-publishers
+    - video/publish-streams/javascript/10-publish-vidaud-alternate-sources
+    - video/publish-streams/javascript/11-video-settings
+    - video/publish-streams/javascript/12-best-practices
+
+
+
+conclusion:
+  title: What's next?
+  description: Learn how to use the debugging tools the video platform provides.
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
