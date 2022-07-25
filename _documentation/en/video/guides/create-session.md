@@ -100,6 +100,9 @@ For more information, see The OpenTok Media Router and media modes.
 
 While working on a test version of your app, you can obtain a test session ID using a Project Page of of your TokBox Account.
 
+
+Learn how to create a session by following our [step-by-step tutorial](/video/tutorials/create-session/introduction).
+
 You can also use one of the [OpenTok server-side](/video/resources#server-sdks) libraries.
 
 <!-- OPT-TODO: change server SDK link  -->
@@ -160,4 +163,4 @@ Use the session ID in an [OpenTok client SDK](/video/resources#client-sdks) to c
 
 <!-- OPT-TODO: change client SDK link  -->
 
-You will also need to generate a token for each user connecting to the OpenTok session. 
+You will also need to generate a token for each user connecting to the OpenTok session.

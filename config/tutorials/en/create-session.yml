@@ -1,0 +1,4 @@
+title: Create Session
+description: Use the Vonage Video Server SDKs to learn how to create a session. Sessions allow participants to use audio, video, and messaging functionality in your application.
+products:
+  - video

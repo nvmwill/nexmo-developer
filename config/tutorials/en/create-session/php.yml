@@ -1,7 +1,8 @@
-title: Joining a Session 
-description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your web application.
+title: Create Session
+description: Use the Vonage Video PHP SDK to learn how to create a session. Sessions allow participants to use audio, video, and messaging functionality in your application.
 products:
   - video
+
 
 introduction:
   title: Introduction
@@ -31,7 +32,7 @@ tasks:
 
 conclusion:
   title: What's next?
-  description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your web application.
+  description: The next step is to integrate the server-side SDK to handle authentication
   content: |
 
     # What's next?
