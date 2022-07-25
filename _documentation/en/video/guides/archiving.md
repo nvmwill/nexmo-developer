@@ -1,42 +1,55 @@
 ---
-title: Record a session
+title: Archive a session
 meta_title: Use the Vonage Video API to record, save, and retrieve sessions.
 description: The Vonage Video API allows you to record, save and retrieve sessions.
 product: video
 navigation_weight: 2
 ---
 
-# Recording
+# Archiving
 
-The Vonage Video API allows you to record, save and retrieve sessions.
+The Vonage Video API allows you to archive, save and retrieve sessions.
 
 This topic includes the following sections:
 
   - [Basic workflow](#basic-workflow)
   
-  - [Recording duration](#recording-duration)
+  - [Archive duration](#archive-duration)
   
-  - [Recording storage](#recording-storage)
+  - [Archive storage](#archive-storage)
   
-  - [Audio-only and video-only recordings](#audio-only-and-video-only-recordings)
+  - [Audio-only and video-only archives](#audio-only-and-video-only-archives)
   
-  - [Individual stream and composed recordings](#individual-stream-and-composed-recordings)
+  - [Individual stream and composed archives](#individual-stream-and-composed-archives)
   
-  - [Working with individual stream recordings](#working-with-individual-stream-recordings)
+  - [Working with individual stream archives](#working-with-individual-stream-archives)
+
+  - [Selecting streams to be included in a archives](#selecting-streams-to-be-included-in-a-archives)
+
+  - [Automatically archived sessions](#automatically-archived-sessions)
+
+  - [Simultaneous archives]()
+
+  - [Archive status change](#archive-status-changes)
+
+  - [Archive security](#archive-security)
+
+  - [Sample apps](#sample-applications)
+
 
 ## Basic workflow
 
-> **Important:** You can only record sessions that use the OpenTok Media Router (sessions with the [media mode](/video/guides/create-a-session#the-opentok-media-router-and-media-modes) set to routed).
+> **Important:** You can only archive sessions that use the OpenTok Media Router (sessions with the [media mode](/video/guides/create-a-session#the-opentok-media-router-and-media-modes) set to routed).
 
-You can create a recording for an OpenTok session using one of the [OpenTok Server SDKs](/video/resources#server-sdks). When you create an archive, the recording starts.
+You can create an archive for an OpenTok session using one of the [OpenTok Server SDKs](/video/resources#server-sdks). When you create an archive, the recording starts.
 
 You can only create an archive for sessions that have at least one client connected. (A client must start publishing a stream within one minute or the archive stops.)
 
 As clients start and stop publishing streams, the streams are recorded.
 
-> Important: You can record up to 16 video streams with composed recording, or 50 with individual stream recording. (Both composed and individual stream recordings can include up to 50 audio streams.) See [Individual stream and composed recordings](#individual-stream-and-composed-recordings). After this limit is reached, if additional streams are published to the session, they are not recorded. The maximum recorded length of an archive (the cumulative length of time when streams are published in the session) is 4 hours (14,400 seconds). See [Recording duration](#recording-duration) for more details.
+> **Important**: You can record up to 16 video streams with composed archiving, or 50 with individual stream archiving. (Both composed and individual stream archives can include up to 50 audio streams.) See [Individual stream and composed archives](#individual-stream-and-composed-archives). After this limit is reached, if additional streams are published to the session, they are not recorded. The maximum recorded length of an archive (the cumulative length of time when streams are published in the session) is 4 hours (14,400 seconds). See [Archive duration](#archive-duration) for more details.
 
-There is no limit to the number of recordings you can record; however, automatically recorded sessions will restart a new recording every 4 hours until the recording stops.
+There is no limit to the number of archives you can record; however, automatically recorded sessions will restart a new recording every 4 hours until the recording stops.
 
 The OpenTok Server SDKs include methods for the following:
 
@@ -46,11 +59,11 @@ The OpenTok Server SDKs include methods for the following:
 * Retrieving recording information
 * Deleting a recording
 
-When you stop recording a recording, the OpenTok server creates an MP4 file or (in the case of individual stream recordings) a ZIP file. (See [Individual stream and composed recordings](#individual-stream-and-composed-recordings).)
+When you stop recording a recording, the OpenTok server creates an MP4 file or (in the case of individual stream recordings) a ZIP file. (See [Individual stream and composed archives](#individual-stream-and-composed-archives).)
 
 When an archive recording starts and stops, events are sent in the clients. For example, the [OpenTok.js](/video/resources#client-sdks) library includes `archiveStarted` and `archiveStopped` events dispatched by the Session object.
 
-## Recording duration
+## Archive duration
 
 The maximum recorded length of a recording is 4 hours (14,400 seconds). This recorded length refers to the cumulative time in which streams are published (and being recorded).
 
@@ -62,7 +75,7 @@ The maximum total length of a recording, including "started" and "paused" states
 
 > **Note:** [Automatically recorded sessions](#automatically-record-sessions) result in one or more consecutive recordings, which have a maximum length of 4 hours each.
 
-## Recording storage
+## Archive storage
 
 Use your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify a target for completed archive files to be uploaded to.
 
@@ -78,11 +91,11 @@ Archives made available on the Vonage cloud are available for 72 hours from the 
 
 To prevent this fallback storage, log in to your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav), select the project, and set the option to disable the archive storage fallback.
 
-## Audio-only and video-only recordings
+## Audio-only and video-only archives
 
 When you create an archive using the Vonage Video REST API or one of the Vonage Video Server SDKs, you can specify whether the archive will record audio, video, or both. (The default is to record both.)
 
-## Individual stream and composed recordings
+## Individual stream and composed archives
 
 Archive output file can be of one of the following formats:
 
@@ -108,7 +121,7 @@ You can specify this format when you use one of the Vonage Video server SDKs to 
 
 > Note: In a composed recording, if a recording is started and no data is streamed during the duration of the recording (no audio or video is published), the size of the recording file will be 0 bytes.
 
-## Working with individual stream recordings
+## Working with individual stream archives
 
 Individual stream recording mode is intended for use with a post-processing tool to produce customized content generated by your application. There are some considerations that developers should evaluate when choosing to use the feature.
 
@@ -191,13 +204,13 @@ Name | Description |
 | ``connectionData`` | The connection data for the publishing client.
 | ``videoType`` |  Either `camera`, `screen`, or `custom`. A `screen` video uses screen sharing on the publisher as the video source; a `custom` video is published by a web client using an HTML VideoTrack element as the video source. For a stream published from a mobile device, the screen type can change from a camera to a screen-sharing video type. However, the property in the recording manifest only indicates the initial video type.
 
-> **Important:** In an [individual stream recording](#working-with-individual-stream-recordings), if there is a short period where no streams are published during the recording, the `startTimeOffset` and `stopTimeOffset` values can be off by a bit. This is a known issue.
+> **Important:** In an [individual stream recording](#working-with-individual-stream-archives), if there is a short period where no streams are published during the recording, the `startTimeOffset` and `stopTimeOffset` values can be off by a bit. This is a known issue.
 
-### Post processing individual recordings
+### Post processing individual archives
 
 A sample post processor application is available at [https://github.com/opentok/archiving-composer](https://github.com/opentok/archiving-composer).
 
-## Selecting streams to be included in a recording
+## Selecting streams to be included in a archives
 
 When you start a recording, if you set the ``streamMode`` to `manual`, you can choose the streams to include in the recording.
 
@@ -207,7 +220,7 @@ Otherwise, with the ``streamMode`` set to `auto` (the default), all streams are 
 
 However, in a composed archive there is a limit of 16 video streams and 50 audio streams included at one time (for both automatic and manual stream modes), and streams are included based on stream prioritization rules.
 
-## Automatically record sessions
+## Automatically archived sessions
 
 You can have a session be automatically recorded by specifying this when you create the session, using one of the Vonage Video server SDKs.
 
@@ -228,7 +241,15 @@ You cannot stop an automatic recording using the Vonage Video REST API or server
 > **Important:** If you expect to have long periods during which recording will be paused, you should consider starting and stopping recordings using the methods in the Vonage Video REST API or one of the Vonage Video Server SDKs (instead of having the session be recorded automatically).
 You should strictly avoid reusing session IDs if you will be using automatic recording. Reusing a session ID can cause automatic recordings to fail if a previous automatic recording for the session has timed out.
 
-## Recording status changes
+## Simultaneous archives
+
+To record multiple archives for the same session simultaneously, set the `multiArchiveTag` option when starting each archive. You must set this to a unique string for each simultaneous archive of an ongoing session.
+
+You can use different layouts and assign different streams to each simultaneous archive recording.
+
+In [automatically archived sessions](#automatically-archived-sessions), set the `multiArchiveTag` option to start a new simultaneous archive that is recorded simultaneously with the automatic archives. Automatic archives start and end when the session starts and stops on its own (following the rules for automatic archives), while you stop manually started separately.
+
+## Archive status changes
 
 You can register a callback URL for notification when a recording's status changes. The status of a recording is set to one of the following:
 
@@ -294,17 +315,18 @@ You can also view the status of archives in your Vonage Account:
 2. From the list of projects in the left of the page, select the project that will contain sessions that you are recording.
 3. In the Recording section, click the Recordings List tab. Details on recordings in the project are listed.
 
-## Recording security
+## Archive security
 
 You can secure your archives in the following ways:
 
-* **Turn off recording storage fallback** — By default, Vonage stores a recording file on Vonage servers if it was unable to upload the file to your specified S3 or Azure server. To prevent this fallback storage, log in to your Vonage Account, select the project, and set the option to disable recording storage fallback.
+* **Turn off archive storage fallback** — By default, Vonage stores a recording file on Vonage servers if it was unable to upload the file to your specified S3 or Azure server. To prevent this fallback storage, log in to your Vonage Account, select the project, and set the option to disable archive storage fallback.
 * **Use Vonage encryption** — This allows you to create Vonage archives where the data is never at rest in an unencrypted state. Of the available methods of securing your Vonage recordings, this provides the highest level of security. This is available as an add-on feature. For more information, see the Vonage encryption documentation.
 * **Use Amazon S3 server-side encryption** — This uses Amazon S3-managed encryption keys for encryption. Learn about Amazon S3 server-side encryption [here](/video/guides/amazon-s3-encryption).
 
 ## Sample applications
 
-[Recording with Node.js](https://github.com/opentok/opentok-node/tree/main/sample/Archiving)
+- [Archiving with Node.js](https://github.com/opentok/opentok-node/tree/main/sample/Archiving)
+- [Archiving with PHP](https://github.com/opentok/OpenTok-PHP-SDK/tree/main/sample/Archiving)
 
 <!-- ## More Information
 
