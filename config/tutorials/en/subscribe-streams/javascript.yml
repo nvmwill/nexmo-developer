@@ -1,0 +1,32 @@
+title: Subscribe to streams
+description: Learn how to subscribe to an Vonage Video API stream in your web application. Once you have connected to a session, you can subscribe to a stream to view video, audio, and signalling data.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to subscribe to a stream in an active sessions. 
+  content: |
+    # Introduction
+    
+    In In this tutorial, you will learn how to subscribe to a stream in an active sessions. Click **Next** to get started
+
+tasks:
+    - video/subscribe-streams/javascript/1-detect-stream-created
+    - video/subscribe-streams/javascript/2-subscribe-to-a-stream
+    - video/subscribe-streams/javascript/3-unsubscribe
+    - video/subscribe-streams/javascript/4-detect-stream-leave-reconnection
+    - video/subscribe-streams/javascript/5-manage-subscriber-streams
+    - video/subscribe-streams/javascript/6-troubleshooting
+
+
+
+conclusion:
+  title: What's next?
+  description: Learn how to use the subscribe-streams tools the video platform provides.
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
