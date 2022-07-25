@@ -88,6 +88,12 @@ navigation_overrides:
       navigation_weight: 0
     guides:
       navigation_weight: 1
+      create-session:
+        navigation_weight: 0
+      archiving:
+        navigation_weight: 1
+      create-token:
+        navigation_weight: 2
     tutorials:
       navigation_weight: 2
     server-sdks:
