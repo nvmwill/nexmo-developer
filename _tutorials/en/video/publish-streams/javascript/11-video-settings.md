@@ -10,7 +10,7 @@ You can apply filters and effects on audio or video obtained from a microphone o
 
 <!-- OPT-TODO: see [this topic](/developer/guides/audio-video/js/#audio-video-filters). -->
 
-## Setting video content hints to improve video perfomance in certain situations
+## Setting video content hints to improve video performance in certain situations
 
 You can set a video content hint to improve the quality and performance of a published video. This can be useful in certain situations:
 
@@ -38,9 +38,9 @@ You can change the video content hint dynamically by calling the [setVideoConten
 You can set the video content hint to one of the following values:
 
 * `""` — No hint is provided (the default). The publishing client will make a best guess at how video content should be treated.
-* `"motion"` — The track should be treated as if it contains video where motion is important. For example, you may use this seeting for a screen-sharing video stream that contains video.
-* `"detail"` — The track should be treated as if video details are extra important. For example, you may use this seeting for a screen-sharing video stream that contains text content, painting, or line art.
-* `"text"` — The track should be treated as if text details are extra important. For example, you may use this seeting for a screen-sharing video stream that contains text content.
+* `"motion"` — The track should be treated as if it contains video where motion is important. For example, you may use this setting for a screen-sharing video stream that contains video.
+* `"detail"` — The track should be treated as if video details are extra important. For example, you may use this setting for a screen-sharing video stream that contains text content, painting, or line art.
+* `"text"` — The track should be treated as if text details are extra important. For example, you may use this setting for a screen-sharing video stream that contains text content.
 
 With the "text" and "detailed" content hints, the browser attempts to maintain high resolution, even if it must reduce the video frame rate. For the "motion" content hint, the browser reduces resolution to prevent the frame rate from stalling.
 

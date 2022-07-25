@@ -75,7 +75,7 @@ publisher = OT.initPublisher('publisher', {}, function (err) {
 
 ### Network Errors
 
-The other reasons for failures in publishing are usually due to some kind of network failure. We handle these in the callback to `Session.publish()`. If the user is not connected to the network, the callback function is passed an error object with the `name` property set to `"OT_NOT_CONNECTED"`. If the user is on a really restrictive network connection that does not allow for WebRTC connections, the Publisher fails to connect, and the Publisher element will just display a spinning wheel. This error has an `name` property set to `"OT_CREATE_PEER_CONNECTION_FAILED"`. In this case recommend that you surface a message to the user indicating that they failed to publish and that they should check their network connection. Handling these errors looks like this:
+The other reasons for failures in publishing are usually due to some kind of network failure. We handle these in the callback to `Session.publish()`. If the user is not connected to the network, the callback function is passed an error object with the `name` property set to `"OT_NOT_CONNECTED"`. If the user is on a really restrictive network connection that does not allow for WebRTC connections, the Publisher fails to connect, and the Publisher element will display a spinning wheel. This error has an `name` property set to `"OT_CREATE_PEER_CONNECTION_FAILED"`. In this case recommend that you surface a message to the user indicating that they failed to publish and that they should check their network connection. Handling these errors looks like this:
 
 ```js
 session.publish(publisher, function(err) {
