@@ -1,0 +1,6156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Session</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Session</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Session
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Session"><span class="type-signature"></span>new Session<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The Session object returned by the <code>OT.initSession()</code> method provides access to
+much of the Vonage Video functionality.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>capabilities</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Capabilities.html">Capabilities</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A <a href="Capabilities.html">Capabilities</a> object that includes information
+about the capabilities of the client. All properties of the <code>capabilities</code> object
+are undefined until you have connected to a session and the completion handler for the
+<code>Session.connect()</code> method has been called without error.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>connection</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Connection.html">Connection</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The <a href="Connection.html">Connection</a> object for this session. The
+connection property is only available once the completion handler for the
+<code>Session.connect()</code> method has been called successfully. See the
+<a href="#connect">Session.connect()</a> method and the <a href="Connection.html">Connection</a> class.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sessionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The session ID for this session. You pass this value into the
+<code>OT.initSession()</code> method when you create the Session object. (Note: a Session
+object is not connected to the Vonage Video server until you call the connect() method of the
+object and its completion handler is called without error. See the
+<a href="OT.html#initSession">OT.initSession()</a> and
+the <a href="#connect">Session.connect()</a>
+methods.) For more information on sessions and session IDs, see
+<a href="https://developer.vonage.com/video/guides/create-a-session">Session creation</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="EventDispatcher.html">EventDispatcher</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#addEventListener"><span class="type-signature"></span>addEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#connect"><span class="type-signature"></span>connect</a><span class="signature">(token, completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Connects to an Vonage Video session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#disableForceMute"><span class="type-signature"></span>disableForceMute</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Disables the active mute state of the session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#disconnect"><span class="type-signature"></span>disconnect</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Disconnects from the Vonage Video session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#forceDisconnect"><span class="type-signature"></span>forceDisconnect</a><span class="signature">(connection, completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Forces a remote connection to leave the session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#forceMuteAll"><span class="type-signature"></span>forceMuteAll</a><span class="signature">(excludedStreams)</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Forces all publishers in the session (except for those publishing excluded streams)
+to mute audio.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#forceMuteStream"><span class="type-signature"></span>forceMuteStream</a><span class="signature">(stream)</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Forces a the publisher of a specified stream to mute its audio.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#forceUnpublish"><span class="type-signature"></span>forceUnpublish</a><span class="signature">(stream, completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Forces the publisher of the specified stream to stop publishing the stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getPublisherForStream"><span class="type-signature"></span>getPublisherForStream</a><span class="signature">(stream)</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></code></span></td>
+                <td>Returns the local Publisher object for a given stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getSubscribersForStream"><span class="type-signature"></span>getSubscribersForStream</a><span class="signature">(stream)</span><span class="type-signature"> &#x2192; {Array}</span></code></span></td>
+                <td>Returns an array of local Subscriber objects for a given stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#off"><span class="type-signature"></span>off</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Removes an event handler or handlers.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#on"><span class="type-signature"></span>on</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#once"><span class="type-signature"></span>once</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#publish"><span class="type-signature"></span>publish</a><span class="signature">(publisher, completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>The <code>publish()</code> method starts publishing an audio-video stream to the session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#removeEventListener"><span class="type-signature"></span>removeEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#signal"><span class="type-signature"></span>signal</a><span class="signature">(signal, completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Sends a signal to each client or a specified client in the session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#subscribe"><span class="type-signature"></span>subscribe</a><span class="signature">(stream, targetElement, properties, completionHandler)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></code></span></td>
+                <td>Subscribes to a stream that is available to the session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#unpublish"><span class="type-signature"></span>unpublish</a><span class="signature">(publisher</span>)</code></span><span class="type-signature"></span></td>
+                <td>Ceases publishing the specified publisher&apos;s audio-video stream
+to the session.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#unsubscribe"><span class="type-signature"></span>unsubscribe</a><span class="signature">(subscriber)</span><span class="type-signature"></span></code></span></td>
+                <td>Stops subscribing to a stream in the session.</td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="addEventListener"><span class="type-signature"></span>addEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to be invoked when the object dispatches the event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#on">on()</a> or <a href="#once">once()</a> instead.
+<p>
+This method registers a method as an event listener for a specific event.
+</p><p>
+
+</p><p>
+  If a handler is not registered for an event, the event is ignored locally. If the
+  event listener function does not exist, the event is ignored locally.
+</p>
+<p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="connect"><span class="type-signature"></span>connect<span class="signature">(token, completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Connects to an Vonage Video session.
+<p>
+ Upon a successful connection, the completion handler (the second parameter of the method) is
+ invoked without an error object passed in. (If there is an error connecting, the completion
+ handler is invoked with an error object.) Make sure that you have successfully connected to the
+ session before calling other methods of the Session object.
+</p>
+ <p>
+   The Session object dispatches a <code>connectionCreated</code> event when any client
+   (including your own) connects to the session.
+ </p>
+
+ <h5>
+ Example
+ </h5>
+ <p>
+ The following code initializes a session and sets up an event listener for when the session
+ connects:
+ </p>
+ <pre>
+ var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
+ var sessionID = &quot;&quot;; // Replace with your own session ID.
+                     // See https://developer.vonage.com/video/guides/create-a-session.
+ var token = &quot;&quot;; // Replace with a generated token.
+                 // See https://developer.vonage.com/video/guides/create-token/.
+
+ var session = OT.initSession(apiKey, sessionID);
+ session.connect(token, function(error) {
+   if (error) {
+     console.log(error.message);
+   } else {
+     // You have connected to the session. You could publish a stream now.
+   }
+ });
+ </pre>
+ <p>
+
+ </p><h5>
+ Events dispatched:
+ </h5>
+
+ <p>
+   <code>exception</code> (<a href="ExceptionEvent.html">ExceptionEvent</a>) &#x2014; Dispatched
+   by the OT class locally in the event of an error.
+ </p>
+ <p>
+   <code>connectionCreated</code> (<a href="ConnectionEvent.html">ConnectionEvent</a>) &#x2014;
+     Dispatched by the Session object on all clients connected to the session.
+ </p>
+ <p>
+   <code>sessionConnected</code> (<a href="SessionConnectEvent.html">SessionConnectEvent</a>)
+     &#x2014; Dispatched locally by the Session object when the connection is established. However,
+     you can pass a completion handler function in as the second parameter of the
+     <code>connect()</code> and use this function instead of a listener for the
+     <code>sessionConnected</code> event.
+ </p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>token</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The session token. You generate a session token using our
+server-side libraries</a> or at your
+<a href="https://ui.idp.vonage.com/ui/auth/login">Vonage Video API account</a> page. For more information, see
+<a href="https://developer.vonage.com/video/guides/create-token/">Connection token creation</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function to be called when the call to the
+<code>connect()</code> method succeeds or fails. This function takes one parameter &#x2014;
+<code>error</code> (see the <a href="Error.html">Error</a> object).
+On success, the <code>completionHandler</code> function is not passed any
+arguments. On error, the function is passed an <code>error</code> object parameter
+(see the <a href="Error.html">Error</a> object). The
+<code>error</code> object has two properties: <code>code</code> (an integer) and
+<code>message</code> (a string), which identify the cause of the failure. The following
+code adds a <code>completionHandler</code> when calling the <code>connect()</code> method:
+<pre>
+session.connect(token, function (error) {
+  if (error) {
+      console.log(error.message);
+  } else {
+    console.log(&quot;Connected to session.&quot;);
+  }
+});
+</pre>
+<p>
+Note that upon connecting to the session, the Session object dispatches a
+<code>sessionConnected</code> event in addition to calling the <code>completionHandler</code>.
+The SessionConnectEvent object, which defines the <code>sessionConnected</code> event,
+includes <code>connections</code> and <code>streams</code> properties, which
+list the connections and streams in the session when you connect.
+</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="disableForceMute"><span class="type-signature"></span>disableForceMute<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Disables the active mute state of the session. After you call this method, new streams
+published to the session will no longer have audio muted.
+
+<p>
+After you call to the <code>Session.forceMuteAll()</code> method (or a moderator in another
+client makes a call to mute all streams), any streams published after the moderation call are
+published with audio muted. Call the <code>disableForceMute()</code> method to remove
+the mute state of a session (so that new published streams are not automatically muted).
+</p>
+
+<p>
+Calling this method causes the Session object in each connected clients to dispatch a
+<code>muteForced</code> event, with the <code>active</code> flag set to <code>false</code>.
+</p>
+
+<p>
+Check the <code>capabilities.canForceMute</code> property of the Session object to see if
+you can call this function successfully. This is reserved for clients that have connected
+with a token that has been assigned the moderator role (see the
+<a href="https://developer.vonage.com/video/guides/create-token/">Token Creation</a>
+documentation).
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Session.html#properties">Session.capabilities</a></li>
+        
+            <li><a href="Session.html#forceMuteAll">Session.forceMuteAll()</a></li>
+        
+            <li><a href="#event:muteForced">muteForced event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves with no value when the operation
+completes successfully. The promise is rejected if there is an error. The
+<code>name</code> property of the Error object is set to one of the following
+values, depending the type of error:
+
+<p>
+<ul>
+
+  <li><code>&apos;OT_NOT_CONNECTED&apos;</code> &#x2014; The client is not connect to the session.</li>
+
+  <li><code>&apos;OT_PERMISSION_DENIED&apos;</code> &#x2014; The user&apos;s role does not
+  include permissions required to force other users to mute.
+  You define a user&apos;s role when you create the user token (see the
+  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  You pass the token string as a parameter of the <code>connect()</code> method of the Session
+  object.
+  </li>
+
+  <li><code>&apos;OT_UNEXPECTED_SERVER_RESPONSE&apos;</code> &#x2014; In case of an internal server error.</li>
+<ul>
+</ul></ul></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="disconnect"><span class="type-signature"></span>disconnect<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Disconnects from the Vonage Video session.
+
+<p>
+Calling the <code>disconnect()</code> method ends your connection with the session. In the
+course of terminating your connection, it also ceases publishing any stream(s) you were
+publishing.
+</p>
+<p>
+Session objects on remote clients dispatch <code>streamDestroyed</code> events for any
+stream you were publishing. The Session object dispatches a <code>sessionDisconnected</code>
+event locally. The Session objects on remote clients dispatch <code>connectionDestroyed</code>
+events, letting other connections know you have left the session. The
+<a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a> and <a href="StreamEvent.html">StreamEvent</a> objects that define the
+<code>sessionDisconnect</code> and <code>connectionDestroyed</code> events each have a
+<code>reason</code> property. The <code>reason</code> property lets the developer determine
+whether the connection is being terminated voluntarily and whether any streams are being
+destroyed as a byproduct of the underlying connection&apos;s voluntary destruction.
+</p>
+<p>
+If the session is not currently connected, calling this method causes a warning to be logged.
+See <a href="OT.html#setLogLevel">OT.setLogLevel()</a>.
+</p>
+
+<p>
+<i>Note:</i> If you intend to reuse a Publisher object to publish to different sessions
+(or the same session) sequentially, add an event listener for the <code>streamDestroyed</code>
+event dispatched by the Publisher object (when it stops publishing). In the event listener,
+call the <code>preventDefault()</code> method of the event object to prevent the Publisher&apos;s
+video from being removed from the page.
+</p>
+
+<h5>
+Events dispatched:
+</h5>
+<p>
+<code>sessionDisconnected</code>
+(<a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a>)
+&#x2014; Dispatched locally when the connection is disconnected.
+</p>
+<p>
+<code>connectionDestroyed</code> (<a href="ConnectionEvent.html">ConnectionEvent</a>) &#x2014;
+Dispatched on other clients, along with the <code>streamDestroyed</code> event (as warranted).
+</p>
+
+<p>
+<code>streamDestroyed</code> (<a href="StreamEvent.html">StreamEvent</a>) &#x2014;
+Dispatched on other clients if streams are lost as a result of the session disconnecting.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="forceDisconnect"><span class="type-signature"></span>forceDisconnect<span class="signature">(connection, completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Forces a remote connection to leave the session.
+
+<p>
+  The <code>forceDisconnect()</code> method is normally used as a moderation tool
+       to remove users from an ongoing session.
+</p>
+<p>
+  When a connection is terminated using the <code>forceDisconnect()</code>,
+       <code>sessionDisconnected</code>, <code>connectionDestroyed</code> and
+       <code>streamDestroyed</code> events are dispatched in the same way as they
+       would be if the connection had terminated itself using the <code>disconnect()</code>
+       method. However, the <code>reason</code> property of a <a href="ConnectionEvent.html">ConnectionEvent</a> or
+       <a href="StreamEvent.html">StreamEvent</a> object specifies <code>&quot;forceDisconnected&quot;</code> as the reason
+       for the destruction of the connection and stream(s).
+</p>
+<p>
+  While you can use the <code>forceDisconnect()</code> method to terminate your own connection,
+       calling the <code>disconnect()</code> method is simpler.
+</p>
+<p>
+  The OT object dispatches an <code>exception</code> event if the user&apos;s role
+  does not include permissions required to force other users to disconnect.
+  You define a user&apos;s role when you create the user token (see the
+  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  See <a href="ExceptionEvent.html">ExceptionEvent</a> and <a href="OT.html#on">OT.on()</a>.
+</p>
+<p>
+  The application throws an error if the session is not connected.
+</p>
+
+<h5>Events dispatched:</h5>
+
+<p>
+  <code>connectionDestroyed</code> (<a href="ConnectionEvent.html">ConnectionEvent</a>) &#x2014;
+    On clients other than which had the connection terminated.
+</p>
+<p>
+  <code>exception</code> (<a href="ExceptionEvent.html">ExceptionEvent</a>) &#x2014;
+    The user&apos;s role does not allow forcing other user&apos;s to disconnect (<code>event.code =
+    1530</code>),
+  or the specified stream is not publishing to the session (<code>event.code = 1535</code>).
+</p>
+<p>
+  <code>sessionDisconnected</code>
+  (<a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a>) &#x2014;
+    On the client which has the connection terminated.
+</p>
+<p>
+  <code>streamDestroyed</code> (<a href="StreamEvent.html">StreamEvent</a>) &#x2014;
+    If streams are stopped as a result of the connection ending.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>connection</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Connection.html">Connection</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The connection to be disconnected from the session.
+This value can either be a <a href="Connection.html">Connection</a> object or a connection
+ID (which can be obtained from the <code>connectionId</code> property of the Connection object).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function to be called when the call to the
+<code>forceDiscononnect()</code> method succeeds or fails. This function takes one parameter
+&#x2014; <code>error</code>. On success, the <code>completionHandler</code> function is
+not passed any arguments. On error, the function is passed an <code>error</code> object
+parameter. The <code>error</code> object, defined by the <a href="Error.html">Error</a>
+class, has two properties: <code>code</code> (an integer)
+and <code>message</code> (a string), which identify the cause of the failure.
+Calling <code>forceDisconnect()</code> fails if the role assigned to your
+token is not &quot;moderator&quot;; in this case the <code>error.name</code> property is set to
+<code>&quot;OT_PERMISSION_DENIED&quot;</code>. The following code adds a <code>completionHandler</code>
+when calling the <code>forceDisconnect()</code> method:
+<pre>
+session.forceDisconnect(connection, function (error) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(&quot;Connection forced to disconnect: &quot; + connection.id);
+  }
+});
+</pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="forceMuteAll"><span class="type-signature"></span>forceMuteAll<span class="signature">(excludedStreams)</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Forces all publishers in the session (except for those publishing excluded streams)
+to mute audio.
+
+<p>
+A stream published by the moderator calling the <code>forceMuteAll()</code> method is muted
+along with other streams in the session, unless you add the moderator&apos;s stream (or streams) to
+the excluded streams array.
+</p>
+
+<p>
+If you leave out the <code>excludedStreams</code> parameter, all streams in the session
+(including those of the moderator) will stop publishing audio:
+</p>
+
+<pre><code class="js">session.forceMuteAll();
+</code></pre>
+
+<p>
+Also, any streams that are published after the call to the <code>forceMuteAll()</code> method
+are published with audio muted. You can remove the mute state of a session by calling the
+<code>disableForceMute()</code> method of the Session object.
+</p>
+
+<pre><code class="js">session.disableForceMute();
+</code></pre>
+
+<p>After you call the <code>Session.disableForceMute()</code> method, new streams published
+to the session will no longer have audio muted.</p>
+
+<p>
+Calling this method causes the Publisher objects in the clients publishing
+the streams to dispatch <code>muteForced</code> events. Also, the Session object
+in each client connected to the session dispatches the <code>muteForced</code>
+event (with the <code>active</code> property of the event object set to <code>true</code>).
+</p>
+
+<p>
+Check the <code>capabilities.canForceMute</code> property of the Session object to see if
+you can call this function successfully. This is reserved for clients that have connected
+with a token that has been assigned the moderator role (see the
+<a href="https://developer.vonage.com/video/guides/create-token/">Token Creation</a>
+documentation).
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>excludedStreams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An array of Stream objects to be excluded from
+being muted. Note that if you want to prevent the local client&apos;s published stream(s)
+from being muted, include the Stream object(s) for those stream(s) in this array.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Session.html#properties">Session.capabilities</a></li>
+        
+            <li><a href="Session.html#forceMuteStream">Session.forceMuteStream()</a></li>
+        
+            <li><a href="Session.html#disableForceMute">Session.disableForceMute()</a></li>
+        
+            <li><a href="#event:muteForced">Session muteForced event</a></li>
+        
+            <li><a href="Publisher.html#event:muteForced">Publisher muteForced event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves with no value when the operation
+completes successfully. The promise is rejected if there is an error. The
+<code>name</code> property of the Error object is set to one of the following
+values, depending the type of error:
+
+<p>
+<ul>
+
+  <li><code>&apos;OT_NOT_CONNECTED&apos;</code> &#x2014; The client is not connect to the session.</li>
+
+  <li><code>&apos;INVALID_PARAMETER&apos;</code> &#x2014; if one or more of the passed parameters are invalid.</li>
+
+  <li><code>&apos;OT_PERMISSION_DENIED&apos;</code> &#x2014; The user&apos;s role does not
+  include permissions required to force other users to mute.
+  You define a user&apos;s role when you create the user token (see the
+  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  You pass the token string as a parameter of the <code>connect()</code> method of the Session
+  object.
+  </li>
+
+  <li><code>&apos;OT_UNEXPECTED_SERVER_RESPONSE&apos;</code> &#x2014; in case of an internal server error.</li>
+<ul>
+</ul></ul></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="forceMuteStream"><span class="type-signature"></span>forceMuteStream<span class="signature">(stream)</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Forces a the publisher of a specified stream to mute its audio.
+
+<p>
+Calling this method causes the Publisher object in the client publishing the
+stream to dispatch a <code>muteForced</code> event.
+</p>
+
+<p>
+Check the <code>capabilities.canForceMute</code> property of the Session object to see if
+you can call this function successfully. This is reserved for clients that have connected
+with a token that has been assigned the moderator role (see the
+<a href="https://developer.vonage.com/video/guides/create-token/">Token Creation</a>
+documentation).
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The stream to be muted.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Session.html#properties">Session.capabilities</a></li>
+        
+            <li><a href="Session.html#forceMuteAll">Session.forceMuteAll()</a></li>
+        
+            <li><a href="Publisher.html#event:muteForced">Publisher muteForced event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves with no value when the operation
+completes successfully. The promise is rejected if there is an error. The
+<code>name</code> property of the Error object is set to one of the following
+values, depending the type of error:
+
+<p>
+<ul>
+
+  <li><code>&apos;OT_NOT_CONNECTED&apos;</code> &#x2014; The client is not connect to the session.</li>
+
+  <li><code>&apos;OT_INVALID_PARAMETER&apos;</code> &#x2014; if one or more of the passed parameters are invalid.</li>
+
+  <li><code>&apos;OT_PERMISSION_DENIED&apos;</code> &#x2014; The user&apos;s role does not
+  include permissions required to force other users to mute.
+  You define a user&apos;s role when you create the user token (see the
+  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  You pass the token string as a parameter of the <code>connect()</code> method of the Session
+  object.
+  </li>
+
+  <li><code>&apos;OT_NOT_FOUND&apos;</code> &#x2014; The stream wasn&apos;t found in this session.</li>
+
+  <li><code>&apos;OT_UNEXPECTED_SERVER_RESPONSE&apos;</code> &#x2014; In case of an internal server error.</li>
+
+<ul>
+</ul></ul></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="forceUnpublish"><span class="type-signature"></span>forceUnpublish<span class="signature">(stream, completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Forces the publisher of the specified stream to stop publishing the stream.
+
+<p>
+Calling this method causes the Session object to dispatch a <code>streamDestroyed</code>
+event on all clients that are subscribed to the stream (including the client that is
+publishing the stream). The <code>reason</code> property of the StreamEvent object is
+set to <code>&quot;forceUnpublished&quot;</code>.
+</p>
+<p>
+The OT object dispatches an <code>exception</code> event if the user&apos;s role
+does not include permissions required to force other users to unpublish.
+You define a user&apos;s role when you create the user token (see the
+<a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+You pass the token string as a parameter of the <code>connect()</code> method of the Session
+object. See <a href="ExceptionEvent.html">ExceptionEvent</a> and
+<a href="OT.html#on">OT.on()</a>.
+</p>
+
+<h5>Events dispatched:</h5>
+
+<p>
+  <code>exception</code> (<a href="ExceptionEvent.html">ExceptionEvent</a>) &#x2014;
+    The user&apos;s role does not allow forcing other users to unpublish.
+</p>
+<p>
+  <code>streamDestroyed</code> (<a href="StreamEvent.html">StreamEvent</a>) &#x2014;
+    The stream has been unpublished. The Session object dispatches this on all clients
+    subscribed to the stream, as well as on the publisher&apos;s client.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The stream to be unpublished.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function to be called when the call to the
+<code>forceUnpublish()</code> method succeeds or fails. This function takes one parameter
+&#x2014; <code>error</code>. On success, the <code>completionHandler</code> function is
+not passed any arguments. On error, the function is passed an <code>error</code> object
+parameter. The <code>error</code> object, defined by the <a href="Error.html">Error</a>
+class, has two properties: <code>code</code> (an integer)
+and <code>message</code> (a string), which identify the cause of the failure. Calling
+<code>forceUnpublish()</code> fails if the role assigned to your token is not &quot;moderator&quot;;
+in this case the <code>error.name</code> property is set to <code>&quot;OT_PERMISSION_DENIED&quot;</code>.
+The following code adds a completion handler when calling the <code>forceUnpublish()</code>
+method:
+<pre>
+session.forceUnpublish(stream, function (error) {
+  if (error) {
+      console.log(error);
+    } else {
+      console.log(&quot;Connection forced to disconnect: &quot; + connection.id);
+    }
+  });
+</pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getPublisherForStream"><span class="type-signature"></span>getPublisherForStream<span class="signature">(stream)</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the local Publisher object for a given stream.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The stream for which you want to find the Publisher.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#forceUnpublish">forceUnpublish()</a></li>
+        
+            <li><a href="Subscriber.html">Subscriber</a></li>
+        
+            <li><a href="StreamEvent.html">StreamEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A Publisher object for the specified stream. Returns
+<code>null</code> if there is no local Publisher object
+for the specified stream.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Publisher.html">Publisher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getSubscribersForStream"><span class="type-signature"></span>getSubscribersForStream<span class="signature">(stream)</span><span class="type-signature"> &#x2192; {Array}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns an array of local Subscriber objects for a given stream.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The stream for which you want to find subscribers.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#unsubscribe">unsubscribe()</a></li>
+        
+            <li><a href="Subscriber.html">Subscriber</a></li>
+        
+            <li><a href="StreamEvent.html">StreamEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An array of <a href="Subscriber.html">Subscriber</a> objects for the specified stream.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes an event handler or handlers.
+
+<p>If you pass in one event name and a handler method, the handler is removed for that
+event:</p>
+
+<pre>obj.off(&quot;eventName&quot;, eventHandler);</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is removed for
+those events:</p>
+
+<pre>obj.off(&quot;eventName1 eventName2&quot;, eventHandler);</pre>
+
+<p>If you pass in an event name (or names) and <i>no</i> handler method, all handlers are
+removed for those events:</p>
+
+<pre>obj.off(&quot;event1Name event2Name&quot;);</pre>
+
+<p>If you pass in no arguments, <i>all</i> event handlers are removed for all events
+dispatched by the object:</p>
+
+<pre>obj.off();</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is
+the context for this in each handler:
+</p>
+<pre>
+obj.off(
+   {
+      eventName1: event1Handler,
+      eventName2: event2Handler
+   });
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The string identifying the type of event. You can
+use a space to specify multiple events, as in &quot;accessAllowed accessDenied
+accessDialogClosed&quot;. If you pass in no <code>type</code> value (or other arguments),
+all event handlers are removed for the object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The event handler function to remove. The handler
+must be the same function object as was passed into <code>on()</code>. Be careful with
+helpers like <code>bind()</code> that return a new function when called. If you pass in
+no <code>handler</code>, all event handlers are removed for the specified event
+<code>type</code>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event handler
+is removed for all specified events and handlers that use the specified context. (The
+context must match the context passed into <code>on()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events.
+
+<p>
+The following code adds an event handler for one event:
+</p>
+
+<pre>
+obj.on(&quot;eventName&quot;, function (event) {
+    // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is
+registered for each of those events:</p>
+
+<pre>
+obj.on(&quot;eventName1 eventName2&quot;,
+       function (event) {
+           // This is the event handler.
+       });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to
+define the value of <code>this</code> in the handler method:</p>
+
+<pre>obj.on(&quot;eventName&quot;,
+       function (event) {
+           // This is the event handler.
+       },
+       obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object
+that is a hash map of event names and handler functions and the second parameter (optional)
+is the context for this in each handler:
+</p>
+<pre>
+obj.on(
+   {
+      eventName1: function (event) {
+              // This is the handler for eventName1.
+          },
+      eventName2:  function (event) {
+              // This is the handler for eventName2.
+          }
+   },
+   obj);
+</pre>
+
+<p>
+If you do not add a handler for an event, the event is ignored locally.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple event
+names in this string, separating them with a space. The event handler will process each of
+the events.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The EventDispatcher object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="EventDispatcher.html">EventDispatcher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="once"><span class="type-signature"></span>once<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events. Once the handler is called,
+the specified handler method is removed as a handler for this event. (When you use
+the <code>on()</code> method to add an event handler, the handler is <i>not</i>
+removed when it is called.) The <code>once()</code> method is the equivilent of
+calling the <code>on()</code>
+method and calling <code>off()</code> the first time the handler is invoked.
+
+<p>
+The following code adds a one-time event handler for one event:
+</p>
+
+<pre>
+obj.once(&quot;eventName&quot;, function (event) {
+   // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is registered
+for each of those events:</p>
+
+<pre>obj.once(&quot;eventName1 eventName2&quot;
+         function (event) {
+             // This is the event handler.
+         });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to define
+the value of
+<code>this</code> in the handler method:</p>
+
+<pre>obj.once(&quot;eventName&quot;,
+         function (event) {
+             // This is the event handler.
+         },
+         obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is the
+context for this in each handler:
+</p>
+<pre>
+obj.once(
+   {
+      eventName1: function (event) {
+                 // This is the event handler for eventName1.
+          },
+      eventName2:  function (event) {
+                 // This is the event handler for eventName1.
+          }
+   },
+   obj);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple
+event names in this string, separating them with a space. The event handler will process
+the first occurence of the events. After the first event, the handler is removed (for
+all specified events).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="publish"><span class="type-signature"></span>publish<span class="signature">(publisher, completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The <code>publish()</code> method starts publishing an audio-video stream to the session.
+The audio-video stream is captured from a local microphone and webcam. Upon successful
+publishing, the Session objects on all connected clients dispatch the
+<code>streamCreated</code> event.
+<p></p>
+
+<!--JS-ONLY-->
+<p>You pass a Publisher object as the one parameter of the method. You can initialize a
+Publisher object by calling the <a href="OT.html#initPublisher">OT.initPublisher()</a>
+method. Before calling <code>Session.publish()</code>.
+</p>
+
+<p>This method takes an alternate form: <code>publish(targetElement: String | HTMLElement,
+properties: Object, completionHandler: Function): Publisher</code> &#x2014; In this form, you do
+    <i>not</i> pass a Publisher object into the function. Instead, you pass in a <code>targetElement</code>
+    (the target HTML element or the ID of the target HTML element for the Publisher), an optional
+    <code>properties</code> object that defines options for the Publisher (see
+    <a href="OT.html#initPublisher">OT.initPublisher()</a>), and an optional completion handler function.
+The method returns a new Publisher object, which starts sending an audio-video stream to the
+session. The remainder of this documentation describes the form that takes a single Publisher
+object as a parameter.
+
+</p><p>
+  A local display of the published stream is created on the web page by replacing
+        the specified element in the DOM with a streaming video display. The video stream
+        is automatically mirrored horizontally so that users see themselves and movement
+        in their stream in a natural way. If the width and height of the display do not match
+        the 4:3 aspect ratio of the video signal, the video stream is cropped to fit the
+        display.
+</p>
+
+<p>
+  If calling this method creates a new Publisher object and the Vonage Video library does not
+  have access to the camera or microphone, the web page alerts the user to grant access
+  to the camera and microphone.
+</p>
+
+<p>
+The OT object dispatches an <code>exception</code> event if the user&apos;s role does not
+include permissions required to publish. For example, if the user&apos;s role is set to subscriber,
+then they cannot publish. You define a user&apos;s role when you create the user token
+(see <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+You pass the token string as a parameter of the <code>connect()</code> method of the Session
+object. See <a href="ExceptionEvent.html">ExceptionEvent</a> and
+<a href="OT.html#on">OT.on()</a>.
+</p>
+    <p>
+    The application throws an error if the session is not connected.
+    </p>
+
+<h5>Events dispatched:</h5>
+<p>
+<code>exception</code> (<a href="ExceptionEvent.html">ExceptionEvent</a>) &#x2014; Dispatched
+by the OT object. This can occur when user&apos;s role does not allow publishing (the
+<code>code</code> property of event object is set to 1500); it can also occur if the
+connection fails to connect (the <code>code</code> property of event object is set to 1013).
+WebRTC is a peer-to-peer protocol, and it is possible that connections will fail to connect.
+The most common cause for failure is a firewall that the protocol cannot traverse.
+</p>
+<p>
+<code>streamCreated</code> (<a href="StreamEvent.html">StreamEvent</a>) &#x2014;
+The stream has been published. The Session object dispatches this on all clients
+subscribed to the stream, as well as on the publisher&apos;s client.
+</p>
+
+<h5>Example</h5>
+
+<p>
+  The following example publishes a video once the session connects:
+</p>
+<pre>
+var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
+var sessionId = &quot;&quot;; // Replace with your own session ID.
+                    // https://developer.vonage.com/video/guides/create-session/.
+var token = &quot;&quot;; // Replace with a generated token that has been assigned the publish role.
+                // See https://developer.vonage.com/video/guides/create-token/.
+var session = OT.initSession(apiKey, sessionID);
+session.connect(token, function(error) {
+  if (error) {
+    console.log(error.message);
+  } else {
+    var publisherOptions = {width: 400, height:300, name:&quot;Bob&apos;s stream&quot;};
+    // This assumes that there is a DOM element with the ID &apos;publisher&apos;:
+    publisher = OT.initPublisher(&apos;publisher&apos;, publisherOptions);
+    session.publish(publisher);
+  }
+});
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>publisher</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Publisher.html">Publisher</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A Publisher object, which you initialize by calling the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function to be called when the call to the
+<code>publish()</code> method succeeds or fails. This function takes one parameter &#x2014;
+<code>error</code>. On success, the <code>completionHandler</code> function is not passed any
+arguments. On error, the function is passed an <code>error</code> object parameter
+(see the <a href="Error.html">Error</a> object). The
+<code>error</code> object has two properties: <code>code</code> (an integer) and
+<code>message</code> (a string), which identify the cause of the failure. Calling
+<code>publish()</code> fails if the role assigned to your token is not &quot;publisher&quot; or
+&quot;moderator&quot;; in this case the <code>error.name</code> property is set to
+<code>&quot;OT_PERMISSION_DENIED&quot;</code>. Calling <code>publish()</code> also fails if the
+client fails to connect; in this case the <code>error.name</code> property is set to
+<code>&quot;OT_NOT_CONNECTED&quot;</code>. The following code adds a completion handler when
+calling the <code>publish()</code> method:
+<pre>
+session.publish(publisher, null, function (error) {
+  if (error) {
+    console.log(error.message);
+  } else {
+    console.log(&quot;Publishing a stream.&quot;);
+  }
+});
+</pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Publisher object for this stream.
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeEventListener"><span class="type-signature"></span>removeEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event listener function to remove.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event
+handler is removed for all specified events and event listeners that use the specified
+     context. (The context must match the context passed into
+<code>addEventListener()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#off">off()</a> instead.
+<p>
+Removes an event listener for a specific event.
+</p><p>
+
+</p><p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="signal"><span class="type-signature"></span>signal<span class="signature">(signal, completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sends a signal to each client or a specified client in the session. Specify a
+<code>to</code> property of the <code>signal</code> parameter to limit the signal to
+be sent to a specific client; otherwise the signal is sent to each client connected to
+the session.
+<p>
+The following example sends a signal of type &quot;foo&quot; with a specified data payload (&quot;hello&quot;)
+to all clients connected to the session:
+<pre>
+session.signal({
+    type: &quot;foo&quot;,
+    data: &quot;hello&quot;
+  },
+  function(error) {
+    if (error) {
+      console.log(&quot;signal error: &quot; + error.message);
+    } else {
+      console.log(&quot;signal sent&quot;);
+    }
+  }
+);
+</pre>
+</p><p>
+Calling this method without specifying a recipient client (by setting the <code>to</code>
+property of the <code>signal</code> parameter) results in multiple signals sent (one to each
+client in the session). For information on charges for signaling, see the
+<a href="https://www.vonage.com/communications-apis/video/pricing/">Vonage Video pricing</a> page.
+</p><p>
+The following example sends a signal of type &quot;foo&quot; with a data payload (&quot;hello&quot;) to a
+specific client connected to the session:
+<pre>
+session.signal({
+    type: &quot;foo&quot;,
+    to: recipientConnection; // a Connection object
+    data: &quot;hello&quot;
+  },
+  function(error) {
+    if (error) {
+      console.log(&quot;signal error: &quot; + error.message);
+    } else {
+      console.log(&quot;signal sent&quot;);
+    }
+  }
+);
+</pre>
+</p><p>
+Add an event handler for the <code>signal</code> event to listen for all signals sent in
+the session. Add an event handler for the <code>signal:type</code> event to listen for
+signals of a specified type only (replace <code>type</code>, in <code>signal:type</code>,
+with the type of signal to listen for). The Session object dispatches these events. (See
+<a href="#events">events</a>.)
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>signal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object that contains the following properties defining the signal:
+<ul>
+  <li><code>data</code> &#x2014; (String) The data to send. The limit to the length of data
+    string is 8kB. Do not set the data string to <code>null</code> or
+    <code>undefined</code>.</li>
+  <li><code>retryAfterReconnect</code>&#x2014; (Boolean) Upon reconnecting to the session,
+    whether to send any signals that were initiated while disconnected. If your client loses its
+    connection to the Vonage Video session, due to a drop in network connectivity, the client
+    attempts to reconnect to the session, and the Session object dispatches a
+    <code>reconnecting</code> event. By default, signals initiated while disconnected are
+    sent when (and if) the client reconnects to the Vonage Video session. You can prevent this by
+    setting the <code>retryAfterReconnect</code> property to <code>false</code>. (The default
+    value is <code>true</code>.)
+  </li><li><code>to</code> &#x2014; (Connection) A <a href="Connection.html">Connection</a>
+     object corresponding to the client that the message is to be sent to. If you do not
+     specify this property, the signal is sent to all clients connected to the session.</li>
+  <li><code>type</code> &#x2014; (String) The type of the signal. You can use the type to
+    filter signals when setting an event handler for the <code>signal:type</code> event
+    (where you replace <code>type</code> with the type string). The maximum length of the
+    <code>type</code> string is 128 characters, and it must contain only letters (A-Z and a-z),
+    numbers (0-9), &apos;-&apos;, &apos;_&apos;, and &apos;~&apos;.</li>
+  
+</ul>
+
+<p>Each property is optional. If you set none of the properties, you will send a signal
+with no data or type to each client connected to the session.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function that is called when sending the signal
+succeeds or fails. This function takes one parameter &#x2014; <code>error</code>.
+On success, the <code>completionHandler</code> function is not passed any
+arguments. On error, the function is passed an <code>error</code> object, defined by the
+<a href="Error.html">Error</a> class. The <code>error</code> object has the following
+properties:
+
+<ul>
+  <li><code>code</code> &#x2014; (Number) An error code, which can be one of the following:
+    <table class="docs_table">
+        <tr>
+          <td>400</td> <td>One of the signal properties is invalid.</td>
+        </tr>
+        <tr>
+          <td>404</td> <td>The client specified by the <code>to</code> property is not connected
+                       to the session.</td>
+        </tr>
+        <tr>
+          <td>413</td> <td>The <code>type</code> string exceeds the maximum length (128 bytes),
+                       or the <code>data</code> string exceeds the maximum size (8 kB).</td>
+        </tr>
+        <tr>
+          <td>500</td> <td>You are not connected to the Vonage Video session.</td>
+        </tr>
+     </table>
+  </li>
+  <li><code>message</code> &#x2014; (String) A description of the error.</li>
+</ul>
+
+<p>Note that the <code>completionHandler</code> success result (<code>error == null</code>)
+indicates that the options passed into the <code>Session.signal()</code> method are valid
+and the signal was sent. It does <i>not</i> indicate that the signal was successfully
+received by any of the intended recipients.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#event:signal">signal</a> and <a href="#event:signal:type">signal:type</a> events</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="subscribe"><span class="type-signature"></span>subscribe<span class="signature">(stream, targetElement, properties, completionHandler)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Subscribes to a stream that is available to the session. You can get an array of
+available streams from the <code>streams</code> property of the <code>sessionConnected</code>
+and <code>streamCreated</code> events (see
+<a href="SessionConnectEvent.html">SessionConnectEvent</a> and
+<a href="StreamEvent.html">StreamEvent</a>).
+<p></p>
+<p>
+The subscribed stream is displayed on the local web page by replacing the specified element
+in the DOM with a streaming video display. If the width and height of the display do not
+match the 4:3 aspect ratio of the video signal, the video stream is cropped to fit
+the display. If the stream lacks a video component, a blank screen with an audio indicator
+is displayed in place of the video stream.
+</p>
+
+<p>
+The application throws an error if the session is not connected<!--JS-ONLY--> or if the
+<code>targetElement</code> does not exist in the HTML DOM<!--/JS-ONLY-->.
+</p>
+
+<h5>Example</h5>
+
+The following code subscribes to other clients&apos; streams:
+
+<pre>
+var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
+var sessionID = &quot;&quot;; // Replace with your own session ID.
+                    // See https://developer.vonage.com/video/guides/create-a-session/.
+var token = &quot;&quot;; // Replace with a generated token.
+                // See https://developer.vonage.com/video/guides/create-token/.
+
+var session = OT.initSession(apiKey, sessionID);
+session.on(&quot;streamCreated&quot;, function(event) {
+  subscriber = session.subscribe(event.stream, targetElement);
+});
+session.connect(token);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The Stream object representing the stream to which we are trying to
+subscribe.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>targetElement</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The DOM element or the <code>id</code> attribute of
+the existing DOM element used to determine the location of the Subscriber video in the HTML
+DOM. See the <code>insertMode</code> property of the <code>properties</code> parameter. If
+you do not specify a <code>targetElement</code>, the application appends a new DOM element
+to the HTML <code>body</code>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>properties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">This is an object that contains the following properties:
+   <ul>
+      <li><code>audioVolume</code> (Number) &#x2014; The desired audio volume, between 0 and
+      100, when the Subscriber is first opened (default: 50). After you subscribe to the
+      stream, you can adjust the volume by calling the
+      <a href="Subscriber.html#setAudioVolume"><code>setAudioVolume()</code> method</a> of the
+      Subscriber object. This volume setting affects local playback only; it does not affect
+      the stream&apos;s volume on other clients.</li>
+
+      <li>
+        <code>fitMode</code> (String) &#x2014; Determines how the video is displayed if the its
+          dimensions do not match those of the DOM element. You can set this property to one of
+          the following values:
+          <p>
+          <ul>
+            <li>
+              <code>&quot;cover&quot;</code> &#x2014; The video is cropped if its dimensions do not match
+              those of the DOM element. This is the default setting for videos that have a
+              camera as the source (for Stream objects with the <code>videoType</code> property
+              set to <code>&quot;camera&quot;</code>).
+            </li>
+            <li>
+              <code>&quot;contain&quot;</code> &#x2014; The video is letterboxed if its dimensions do not
+              match those of the DOM element. This is the default setting for screen-sharing
+              videos (for Stream objects with the <code>videoType</code> property set to
+              <code>&quot;screen&quot;</code>).
+            </li>
+          </ul>
+      </p></li>
+
+      <li>
+      <code>height</code> (Number or String) &#x2014; The desired initial height of the displayed
+      video in the HTML page (default: 198 pixels). You can specify the number of pixels as
+      either a number (such as 300) or a string ending in &quot;px&quot; (such as &quot;300px&quot;). Or you can
+      specify a percentage of the size of the parent element, with a string ending in &quot;%&quot;
+      (such as &quot;100%&quot;). <i>Note:</i> To resize the video, adjust the CSS of the subscriber&apos;s
+      DOM element (the <code>element</code> property of the Subscriber object) or (if the
+      height is specified as a percentage) its parent DOM element.
+      </li>
+      <li>
+      <strong>insertDefaultUI</strong> (Boolean) &#x2014; Whether to use the default Vonage Video UI
+      (<code>true</code>, the default) or not (<code>false</code>). The default UI element
+      contains user interface controls, a video loading indicator, and automatic video cropping
+      or letterboxing, in addition to the video. (If you leave <code>insertDefaultUI</code>
+      set to <code>true</code>, you can control individual UI settings using the
+      <code>fitMode</code>, <code>showControls</code>, and <code>style</code> options.)
+      <p>
+      If you set this option to <code>false</code>, OpenTok.js does not insert a default UI
+      element in the HTML DOM, and the <code>element</code> property of the Subscriber object is
+      undefined. The Subscriber object dispatches a
+      <a href="Subscriber.html#event:videoElementCreated">videoElementCreated</a> event when
+      the <code>video</code> element (or in Internet Explorer the <code>object</code> element
+      containing the video) is created. The <code>element</code> property of the event object
+      is a reference to the Subscriber&apos;s <code>video</code> (or <code>object</code>) element.
+      Add it to the HTML DOM to display the video.
+      </p><p>
+      Set this option to <code>false</code> if you want to move the Publisher&apos;s
+      <code>video</code> element (or its <code>object</code> element in Internet Explorer) in
+      the HTML DOM.
+      </p><p>
+      If you set this to <code>false</code>, do not set the <code>targetElement</code>
+      parameter. (This results in an error passed into to the <code>OT.initPublisher()</code>
+      callback function.) To add the video to the HTML DOM, add an event listener for the
+      <code>videoElementCreated</code> event, and then add the <code>element</code> property of
+      the event object into the HTML DOM.
+      </p></li>
+      <li>
+        <code>insertMode</code> (String) &#x2014; Specifies how the Subscriber object will
+        be inserted in the HTML DOM. See the <code>targetElement</code> parameter. This
+        string can have the following values:
+        <p>
+        <ul>
+          <li><code>&quot;replace&quot;</code> &#x2014; The Subscriber object replaces contents of the
+            targetElement. This is the default.</li>
+          <li><code>&quot;after&quot;</code> &#x2014; The Subscriber object is a new element inserted
+            after the targetElement in the HTML DOM. (Both the Subscriber and targetElement
+            have the same parent element.)</li>
+          <li><code>&quot;before&quot;</code> &#x2014; The Subscriber object is a new element inserted
+            before the targetElement in the HTML DOM. (Both the Subscriber and targetElement
+            have the same parent element.)</li>
+          <li><code>&quot;append&quot;</code> &#x2014; The Subscriber object is a new element added as a
+            child of the targetElement. If there are other child elements, the Subscriber is
+            appended as the last child element of the targetElement.</li>
+        </ul></p>
+  </li><li>
+  <code>preferredFrameRate</code> (Number) &#x2014; The preferred frame rate of the subscriber&apos;s
+  video. Lowering the preferred frame rate lowers video quality on the subscribing client,
+  but it also reduces network and CPU usage. You may want to use a lower frame rate for
+  subscribers to a stream that is less important than other streams.
+  <p>
+  This property only applies when subscribing to a stream that uses the scalable video feature. Scalable video is available:
+  <ul>
+  <li>
+    Only in sessions that use the Vonage Video Media Router (sessions with the
+    <a href="https://developer.vonage.com/video/guides/create-a-session">media
+    mode</a> set to routed).
+  </li>
+  <li>
+    Only for streams published by clients that support scalable video:
+    clients that use the Vonage Video iOS SDK (on certain devices), the Vonage Video
+    Android SDK (on certain devices), or OpenTok.js in Chrome and Safari.
+  </li>
+  </ul>
+  </p><p>
+  In streams that do not use scalable video, setting this property has no effect.
+  </p><p>
+  <b>Note:</b> The frame rate for scalable video streams automatically adjusts for each
+  subscriber, based on network conditions and CPU usage, even if you do not call this method.
+  Call this method if you want to set a maximum frame rate for this subscriber.
+  </p><p>
+  </p><p>
+  Not every frame rate is available to a subscriber. When you set the preferred frame rate for
+  the subscriber, OpenTok.js picks the best frame rate available that matches your setting.
+  The frame rates available are based on the value of the Subscriber object&apos;s
+  <code>stream.frameRate</code> property, which represents the maximum value available for the
+  stream. The actual frame rates available depend, dynamically, on network and CPU resources
+  available to the publisher and subscriber.
+  </p><p>
+  You can dynamically change the preferred frame rate used by calling the
+  <code>setPreferredFrameRate()</code> method of the Subscriber object.
+  </p></li>
+  <li>
+  <code>preferredResolution</code> (Object) &#x2014; The preferred resolution of the subscriber&apos;s
+  video. Set this to an object with two properties: <code>width</code> and <code>height</code>
+  (both numbers), such as <code>{width: 320, height: 240}</code>. Lowering the preferred video
+  resolution lowers video quality on the subscribing client, but it also reduces network and CPU
+  usage. You may want to use a lower resolution based on the dimensions of subscriber&apos;s video on
+  the web page. You may want to use a resolution for subscribers to a stream that is less
+  important (and smaller) than other streams.
+  <p>
+  This property only applies when subscribing to a stream that uses the scalable video feature. Scalable video is available:
+  <ul>
+  <li>
+    Only in sessions that use the Vonage Video Media Router (sessions with the
+    <a href="https://developer.vonage.com/video/guides/create-a-session">media
+    mode</a> set to routed).
+  </li>
+  <li>
+    Only for streams published by clients that support scalable video:
+    clients that use the Vonage Video iOS SDK (on certain devices), the Vonage Video
+    Android SDK (on certain devices), or OpenTok.js in Chrome and Safari.
+  </li>
+  </ul>
+  </p><p>
+  In streams that do not use scalable video, setting this property has no effect.
+  </p><p>
+  Not every resolution is available to a subscriber. When you set the preferred resolution,
+  OpenTok.js and the video encoder pick the best resolution available that matches your
+  setting. The resolutions available depend on the resolution of the published stream.
+  The Subscriber object&apos;s <code>stream.resolution</code> property  represents the highest
+  resolution available for the stream. Each of the resolutions available for a stream will use
+  the same aspect ratio. The actual resolutions available depend, dynamically, on network
+  and CPU resources available to the publisher and subscriber.
+  </p><p>
+  You can dynamically change the preferred video resolution used by calling the
+  <code>setPreferredResolution()</code> method of the Subscriber object.
+  </p></li>
+  <li>
+  <code>showControls</code> (Boolean) &#x2014; Whether to display the built-in user interface
+  controls for the Subscriber (default: <code>true</code>). These controls include the name
+  display, the audio level indicator, the speaker control button, the video disabled indicator,
+  and the video disabled warning icon. You can turn off all user interface controls by setting
+  this property to <code>false</code>. You can control the display of individual user interface
+  controls by leaving this property set to <code>true</code> (the default) and setting
+  individual properties of the <code>style</code> property.
+  </li>
+  <li>
+  <code>style</code> (Object) &#x2014; An object containing properties that define the initial
+  appearance of user interface controls of the Subscriber. The <code>style</code> object
+  includes the following properties:
+    <ul>
+      <li><code>audioBlockedDisplayMode</code> (String) &#x2014; Whether to display
+      the default audio blocked icon in Subscribers (in browsers where audio
+      autoplay is blocked). Possible values are: <code>&quot;auto&quot;</code> (the default,
+      icon is displayed when the audio is disabled) and <code>&quot;off&quot;</code> (the icon
+      is not displayed). Set this to <code>&quot;off&quot;</code> if you want to display
+      your own UI element showing that the audio is blocked. In response to an
+      HTML element dispatching a <code>click</code> event, you can call the
+      <a href="OT.html#unblockAudio">OT.unblockAudio()</a> method to start audio
+      playback in this and all other blocked subscribers.</li>
+
+      <li><code>audioLevelDisplayMode</code> (String) &#x2014; How to display the audio level
+      indicator. Possible values are: <code>&quot;auto&quot;</code> (the indicator is displayed when the
+      video is disabled), <code>&quot;off&quot;</code> (the indicator is not displayed), and
+      <code>&quot;on&quot;</code> (the indicator is always displayed).</li>
+
+      <li><code>backgroundImageURI</code> (String) &#x2014; A URI for an image to display as
+      the background image when a video is not displayed. (A video may not be displayed if
+      you call <code>subscribeToVideo(false)</code> on the Subscriber object). You can pass an
+      http or https URI to a PNG, JPEG, or non-animated GIF file location. You can also use the
+      <code>data</code> URI scheme (instead of http or https) and pass in base-64-encrypted
+      PNG data, such as that obtained from the
+      <a href="Subscriber.html#getImgData">Subscriber.getImgData()</a> method. (For example,
+      you could set the property to a value returned by calling <code>getImgData()</code> on
+      a previous Subscriber object.) If the URL or the image data is invalid, the
+      property is ignored (the attempt to set the image fails silently).</li>
+
+      <li><code>buttonDisplayMode</code> (String) &#x2014; How to display the speaker controls
+      Possible values are: <code>&quot;auto&quot;</code> (controls are displayed when the stream is first
+      displayed and when the user mouses over the display), <code>&quot;off&quot;</code> (controls are not
+      displayed), and <code>&quot;on&quot;</code> (controls are always displayed).</li>
+
+      <li><code>nameDisplayMode</code> (String) &#x2014; Whether to display the stream name.
+      Possible values are: <code>&quot;auto&quot;</code> (the name is displayed when the stream is first
+      displayed and when the user mouses over the display), <code>&quot;off&quot;</code> (the name is not
+      displayed), and <code>&quot;on&quot;</code> (the name is always displayed).</li>
+
+      <li><code>videoDisabledDisplayMode</code> (String) &#x2014; Whether to display the video
+      disabled indicator and video disabled warning icons for a Subscriber. These icons
+      indicate that the video has been disabled (or is in risk of being disabled for
+      the warning icon) due to poor stream quality. This style only applies to the Subscriber
+      object. Possible values are: <code>&quot;auto&quot;</code> (the icons are automatically when the
+      displayed video is disabled or in risk of being disabled due to poor stream quality),
+      <code>&quot;off&quot;</code> (do not display the icons), and <code>&quot;on&quot;</code> (display the
+      icons). The default setting is <code>&quot;auto&quot;</code></li>
+  </ul>
+  </li>
+
+      <li><code>subscribeToAudio</code> (Boolean) &#x2014; Whether to initially subscribe to audio
+      (if available) for the stream (default: <code>true</code>).</li>
+
+      <li><code>subscribeToVideo</code> (Boolean) &#x2014; Whether to initially subscribe to video
+      (if available) for the stream (default: <code>true</code>).</li>
+
+      <li><code>testNetwork</code> (Boolean) &#x2014; Whether, when subscribing to a stream
+      published by the local client, you want to have the stream come from the Vonage Video Media
+      Router (<code>true</code>) or if you want the DOM to simply to display the local camera&apos;s
+      video (<code>false</code>). Set this to <code>true</code> when you want to use the
+      <a href="Subscriber.html#getStats">Subscriber.getStats()</a> method to check statistics
+      for a stream you publish. This setting only applies to streams published by the local
+      client in a session that uses the Vonage Video Media Router (sessions with the
+      <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+      set to routed), not in sessions with the media mode set to relayed. The default value is
+      <code>false</code>.</li>
+
+      <li>
+      <code>width</code> (Number or String) &#x2014; The desired initial width of the displayed
+      video in the HTML page (default: 264 pixels). You can specify the number of pixels as
+      either a number (such as 400) or a string ending in &quot;px&quot; (such as &quot;400px&quot;). Or you can
+      specify a percentage of the size of the parent element, with a string ending in &quot;%&quot;
+      (such as &quot;100%&quot;). <i>Note:</i> To resize the video, adjust the CSS of the subscriber&apos;s
+      DOM element (the <code>element</code> property of the Subscriber object) or (if the
+      width is specified as a percentage) its parent DOM element.
+      </li>
+
+   </ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function to be called when the call to the
+<code>subscribe()</code> method succeeds or fails. This function takes one parameter &#x2014;
+<code>error</code>. On success, the <code>completionHandler</code> function is not passed any
+arguments. On error, the function is passed an <code>error</code> object, defined by the
+<a href="Error.html">Error</a> class, has two properties: <code>code</code> (an integer) and
+<code>message</code> (a string), which identify the cause of the failure. The following
+code adds a <code>completionHandler</code> when calling the <code>subscribe()</code> method:
+<pre>
+session.subscribe(stream, &quot;subscriber&quot;, null, function (error) {
+  if (error) {
+    console.log(error.message);
+  } else {
+    console.log(&quot;Subscribed to stream: &quot; + stream.id);
+  }
+});
+</pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Subscriber object for this stream. Stream control functions
+are exposed through the Subscriber object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="unpublish"><span class="type-signature"></span>unpublish<span class="signature">(publisher</span>)<span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Ceases publishing the specified publisher&apos;s audio-video stream
+to the session. By default, the local representation of the audio-video stream is
+removed from the web page. Upon successful termination, the Session object on every
+connected web page dispatches
+a <code>streamDestroyed</code> event.
+<p></p>
+
+<p>
+To prevent the Publisher from being removed from the DOM, add an event listener for the
+<code>streamDestroyed</code> event dispatched by the Publisher object and call the
+<code>preventDefault()</code> method of the event object.
+</p>
+
+<p>
+<i>Note:</i> If you intend to reuse a Publisher object to publish to different sessions
+(or the same session) sequentially, add an event listener for the <code>streamDestroyed</code>
+event dispatched by the Publisher object (when it stops publishing). In the event listener,
+call the <code>preventDefault()</code> method of the event object to prevent the Publisher&apos;s
+video from being removed from the page.
+</p>
+
+<h5>Events dispatched:</h5>
+
+<p>
+<code>streamDestroyed</code> (<a href="StreamEvent.html">StreamEvent</a>) &#x2014;
+The stream associated with the Publisher has been destroyed. Dispatched on by the
+Publisher on on the Publisher&apos;s browser. Dispatched by the Session object on
+all other connections subscribing to the publisher&apos;s stream.
+</p>
+
+<h5>Example</h5>
+
+The following example publishes a stream to a session and adds a Disconnect link to the
+web page. Clicking this link causes the stream to stop being published.
+
+<pre>
+&lt;script&gt;
+  var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
+  var sessionID = &quot;&quot;; // Replace with your own session ID.
+                   // See https://developer.vonage.com/video/guides/create-a-session/.
+  var token = &quot;&quot;; // Replace with a generated token.
+                  // See https://developer.vonage.com/video/guides/create-token/.
+  var publisher;
+  var session = OT.initSession(apiKey, sessionID);
+  session.connect(token, function(error) {
+    if (error) {
+      console.log(error.message);
+    } else {
+      // This assumes that there is a DOM element with the ID &apos;publisher&apos;:
+      publisher = OT.initPublisher(&apos;publisher&apos;);
+      session.publish(publisher);
+    }
+  });
+
+  function unpublish() {
+    session.unpublish(publisher);
+  }
+&lt;/script&gt;
+
+&lt;body&gt;
+
+    &lt;div id=&quot;publisherContainer/&gt;
+    &lt;br/&gt;
+
+    &lt;a href=&quot;javascript:unpublish()&quot;&gt;Stop Publishing&lt;/a&gt;
+
+&lt;/body&gt;
+
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>publisher</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Publisher.html">Publisher</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The Publisher object to stop streaming.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#publish">publish()</a></li>
+        
+            <li><a href="StreamEvent.html">streamDestroyed event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="unsubscribe"><span class="type-signature"></span>unsubscribe<span class="signature">(subscriber)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Stops subscribing to a stream in the session. the display of the audio-video stream is
+removed from the local web page.
+
+<h5>Example</h5>
+<p>
+The following code subscribes to other clients&apos; streams. For each stream, the code also
+adds an Unsubscribe link.
+</p>
+<pre>
+var apiKey = &quot;&quot;; // Replace with your API key. See See https://ui.idp.vonage.com/ui/auth/login
+var sessionID = &quot;&quot;; // Replace with your own session ID.
+                    // See https://developer.vonage.com/video/guides/create-a-session/.
+var token = &quot;&quot;; // Replace with a generated token.
+                // See https://developer.vonage.com/video/guides/create-token/.
+var streams = [];
+
+var session = OT.initSession(apiKey, sessionID);
+session.on(&quot;streamCreated&quot;, function(event) {
+    var stream = event.stream;
+    displayStream(stream);
+});
+session.connect(token);
+
+function displayStream(stream) {
+    var div = document.createElement(&apos;div&apos;);
+    div.setAttribute(&apos;id&apos;, &apos;stream&apos; + stream.streamId);
+
+    var subscriber = session.subscribe(stream, div);
+    subscribers.push(subscriber);
+
+    var aLink = document.createElement(&apos;a&apos;);
+    aLink.setAttribute(&apos;href&apos;, &apos;javascript: unsubscribe(&quot;&apos; + subscriber.id + &apos;&quot;)&apos;);
+    aLink.innerHTML = &quot;Unsubscribe&quot;;
+
+    var streamsContainer = document.getElementById(&apos;streamsContainer&apos;);
+    streamsContainer.appendChild(div);
+    streamsContainer.appendChild(aLink);
+
+    streams = event.streams;
+}
+
+function unsubscribe(subscriberId) {
+    console.log(&quot;unsubscribe called&quot;);
+    for (var i = 0; i &lt; subscribers.length; i++) {
+        var subscriber = subscribers[i];
+        if (subscriber.id == subscriberId) {
+            session.unsubscribe(subscriber);
+        }
+    }
+}
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>subscriber</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The Subscriber object to unsubcribe.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#subscribe">subscribe()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:archiveStarted">archiveStarted</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when an archive recording of the session starts.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ArchiveEvent.html">ArchiveEvent</a></li>
+        
+            <li><a href="https://developer.vonage.com/video/guides/archiving">Archiving overview</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:archiveStopped">archiveStopped</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when an archive recording of the session stops.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ArchiveEvent.html">ArchiveEvent</a></li>
+        
+            <li><a href="https://developer.vonage.com/video/guides/archiving">Archiving overview</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:connectionCreated">connectionCreated</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when a new client (including your own) has connected to the session, and for
+every client in the session when you first connect. (The Session object also dispatches
+a <code>sessionConnected</code> event when your local client connects.)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ConnectionEvent.html">ConnectionEvent</a></li>
+        
+            <li><a href="OT.html#initSession">OT.initSession()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:connectionDestroyed">connectionDestroyed</h4>
+
+    
+
+
+
+<div class="description">
+    A client, other than your own, has disconnected from the session.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ConnectionEvent.html">ConnectionEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:muteForced">muteForced</h4>
+
+    
+
+
+
+<div class="description">
+    A moderator has forced clients publishing streams to the session to mute audio (the
+<code>active</code> property of this MuteForcedEvent object is set to <code>true</code>), or
+a moderator has disabled the mute audio state in the session (the <code>active</code>
+property of this MuteForcedEvent object is set to <code>false</code>).
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li>
+        
+            <li><a href="Session.html#forceMuteAll">Session.forceMuteAll()</a></li>
+        
+            <li><a href="Session.html#disableForceMute">Session.disableForceMute()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:sessionConnected">sessionConnected</h4>
+
+    
+
+
+
+<div class="description">
+    The client has connected to an Vonage Video session. This event is dispatched asynchronously
+in response to a successful call to the <code>connect()</code> method of a Session
+object. Before calling the <code>connect()</code> method, initialize the session by
+calling the <code>OT.initSession()</code> method. For a code example and more details,
+see <a href="#connect">Session.connect()</a>.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li>
+        
+            <li><a href="#connect">Session.connect()</a></li>
+        
+            <li><a href="OT.html#initSession">OT.initSession()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:sessionDisconnected">sessionDisconnected</h4>
+
+    
+
+
+
+<div class="description">
+    The client has disconnected from the session. This event may be dispatched asynchronously
+in response to a successful call to the <code>disconnect()</code> method of the Session object.
+The event may also be disptached if a session connection is lost inadvertantly, as in the case
+of a lost network connection.
+<p>
+The default behavior is that all Subscriber objects are unsubscribed and removed from the
+HTML DOM. Each Subscriber object dispatches a <code>destroyed</code> event when the element is
+removed from the HTML DOM. If you call the <code>preventDefault()</code> method in the event
+listener for the <code>sessionDisconnect</code> event, the default behavior is prevented, and
+you can, optionally, clean up Subscriber objects using your own code.
+</p><p> The <code>reason</code> property of the event object indicates the reason for the client
+being disconnected.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#disconnect">Session.disconnect()</a></li>
+        
+            <li><a href="#forceDisconnect">Session.forceDisconnect()</a></li>
+        
+            <li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:sessionReconnected">sessionReconnected</h4>
+
+    
+
+
+
+<div class="description">
+    The local client has reconnected to the Vonage Video session after its connection was lost
+temporarily. When the connection is lost, the Session object dispatches a
+<code>sessionReconnecting</code> event, prior to the <code>sessionReconnected</code>
+event. If the client cannot reconnect to the session, the Session object dispatches a
+<code>sessionDisconnected</code> event instead of this event.
+<p>
+Any existing publishers and subscribers are automatically reconnected when client reconnects
+and the Session object dispatches this event.
+</p><p>
+Any signals sent by other clients while your client was disconnected are received upon
+reconnecting. By default, signals initiated by the local client while disconnected
+(by calling the <code>Session.signal()</code> method) are sent when the client reconnects
+to the Vonage Video session. You can prevent this by setting the <code>retryAfterReconnect</code>
+property to <code>false</code> in the <code>signal</code> object you pass into the
+<a href="#signal">Session.signal()</a> method.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        
+            <li><a href="#event:sessionReconnecting">sessionReconnecting event</a></li>
+        
+            <li><a href="#event:sessionDisconnected">sessionDisconnected event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:sessionReconnecting">sessionReconnecting</h4>
+
+    
+
+
+
+<div class="description">
+    The local client has lost its connection to an Vonage Video session and is trying to reconnect.
+This results from a loss in network connectivity. If the client can reconnect to the session,
+the Session object dispatches a <code>sessionReconnected</code> event. Otherwise, if the client
+cannot reconnect, the Session object dispatches a <code>sessionDisconnected</code> event.
+<p>
+In response to this event, you may want to provide a user interface notification, to let
+the user know that the app is trying to reconnect to the session and that audio-video streams
+are temporarily disconnected.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        
+            <li><a href="#event:sessionReconnected">sessionReconnected event</a></li>
+        
+            <li><a href="#event:sessionDisconnected">sessionDisconnected event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:signal">signal</h4>
+
+    
+
+
+
+<div class="description">
+    A signal was received from the session. The <a href="SignalEvent.html">SignalEvent</a>
+class defines this event object. It includes the following properties:
+<ul>
+  <li><code>data</code> &#x2014; (String) The data string sent with the signal (if there
+      is one).</li>
+  <li><code>from</code> &#x2014; (<a href="Connection.html">Connection</a>) The Connection
+      corresponding to the client that sent the signal.</li>
+  <li><code>type</code> &#x2014; (String) The type assigned to the signal (if there is
+      one).</li>
+</ul>
+<p>
+You can register to receive all signals sent in the session, by adding an event handler
+for the <code>signal</code> event. For example, the following code adds an event handler
+to process all signals sent in the session:
+<pre>
+session.on(&quot;signal&quot;, function(event) {
+  console.log(&quot;Signal sent from connection: &quot; + event.from.id);
+  console.log(&quot;Signal data: &quot; + event.data);
+});
+</pre>
+</p><p>You can register for signals of a specfied type by adding an event handler for the
+<code>signal:type</code> event (replacing <code>type</code> with the actual type string
+to filter on).
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Session.html#signal">Session.signal()</a></li>
+        
+            <li><a href="SignalEvent.html">SignalEvent</a></li>
+        
+            <li><a href="#event:signal:type">signal:type</a> event</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:streamCreated">streamCreated</h4>
+
+    
+
+
+
+<div class="description">
+    A new stream, published by another client, has been created on this session. For streams
+published by your own client, the Publisher object dispatches a <code>streamCreated</code>
+event. For a code example and more details, see <a href="StreamEvent.html">StreamEvent</a>.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="StreamEvent.html">StreamEvent</a></li>
+        
+            <li><a href="Session.html#publish">Session.publish()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:streamDestroyed">streamDestroyed</h4>
+
+    
+
+
+
+<div class="description">
+    A stream from another client has stopped publishing to the session.
+<p>
+The default behavior is that all Subscriber objects that are subscribed to the stream are
+unsubscribed and removed from the HTML DOM. Each Subscriber object dispatches a
+<code>destroyed</code> event when the element is removed from the HTML DOM. If you call the
+<code>preventDefault()</code> method in the event listener for the
+<code>streamDestroyed</code> event, the default behavior is prevented and you can clean up
+a Subscriber object for the stream by calling its <code>destroy()</code> method. See
+<a href="Session.html#getSubscribersForStream">Session.getSubscribersForStream()</a>.
+</p><p>
+For streams published by your own client, the Publisher object dispatches a
+<code>streamDestroyed</code> event.
+</p><p>
+For a code example and more details, see <a href="StreamEvent.html">StreamEvent</a>.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="StreamEvent.html">StreamEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:streamPropertyChanged">streamPropertyChanged</h4>
+
+    
+
+
+
+<div class="description">
+    Defines an event dispatched when property of a stream has changed. This can happen in
+in the following conditions:
+<p>
+<ul>
+  <li> A stream has started or stopped publishing audio or video (see
+    <a href="Publisher.html#publishAudio">Publisher.publishAudio()</a> and
+    <a href="Publisher.html#publishVideo">Publisher.publishVideo()</a>). Note
+    that a subscriber&apos;s video can be disabled or enabled for reasons other than
+    the publisher disabling or enabling it. A Subscriber object dispatches
+    <code>videoDisabled</code> and <code>videoEnabled</code> events in all
+    conditions that cause the subscriber&apos;s stream to be disabled or enabled.
+  </li>
+  <li> The <code>videoDimensions</code> property of the Stream object has
+    changed (see <a href="Stream.html#properties">Stream.videoDimensions</a>).
+  </li>
+  <li> The <code>videoType</code> property of the Stream object has changed.
+    This can happen in a stream published by a mobile device. (See
+    <a href="Stream.html#properties">Stream.videoType</a>.)
+  </li>
+</ul>
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li>
+        
+            <li><a href="Publisher.html#publishAudio">Publisher.publishAudio()</a></li>
+        
+            <li><a href="Publisher.html#publishVideo">Publisher.publishVideo()</a></li>
+        
+            <li><a href="Stream.html#hasAudio">Stream.hasAudio</a></li>
+        
+            <li><a href="Stream.html#hasVideo">Stream.hasVideo</a></li>
+        
+            <li><a href="Stream.html#videoDimensions">Stream.videoDimensions</a></li>
+        
+            <li><a href="Subscriber.html#event:videoDisabled">Subscriber videoDisabled event</a></li>
+        
+            <li><a href="Subscriber.html#event:videoEnabled">Subscriber videoEnabled event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:signal:type">signal:type</h4>
+
+    
+
+
+
+<div class="description">
+    A signal of the specified type was received from the session. The
+<a href="SignalEvent.html">SignalEvent</a> class defines this event object.
+It includes the following properties:
+<ul>
+  <li><code>data</code> &#x2014; (String) The data string sent with the signal.</li>
+  <li><code>from</code> &#x2014; (<a href="Connection.html">Connection</a>) The Connection
+  corresponding to the client that sent the signal.</li>
+  <li><code>type</code> &#x2014; (String) The type assigned to the signal (if there is one).
+  </li>
+</ul>
+<p>
+You can register for signals of a specfied type by adding an event handler for the
+<code>signal:type</code> event (replacing <code>type</code> with the actual type string
+to filter on). For example, the following code adds an event handler for signals of
+type &quot;foo&quot;:
+<pre>
+session.on(&quot;signal:foo&quot;, function(event) {
+  console.log(&quot;foo signal sent from connection &quot; + event.from.id);
+  console.log(&quot;Signal data: &quot; + event.data);
+});
+</pre>
+</p><p>
+You can register to receive <i>all</i> signals sent in the session, by adding an event
+handler for the <code>signal</code> event.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Session.html#signal">Session.signal()</a></li>
+        
+            <li><a href="SignalEvent.html">SignalEvent</a></li>
+        
+            <li><a href="#event:signal">signal</a> event</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

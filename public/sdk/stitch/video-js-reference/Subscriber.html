@@ -1,0 +1,5154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Subscriber</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Subscriber</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Subscriber
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Subscriber"><span class="type-signature"></span>new Subscriber<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The Subscriber object is a representation of the local video element that is playing back
+a remote stream. The Subscriber object includes methods that let you disable and enable
+local audio playback for the subscribed stream. The <code>subscribe()</code> method of the
+<a href="Session.html">Session</a> object returns a Subscriber object.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Element</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The HTML DOM element containing the Subscriber.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The DOM ID of the Subscriber.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The stream to which you are subscribing.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="EventDispatcher.html">EventDispatcher</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#addEventListener"><span class="type-signature"></span>addEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getAudioVolume"><span class="type-signature"></span>getAudioVolume</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></code></span></td>
+                <td>Returns the audio volume, between 0 and 100, of the Subscriber.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getImgData"><span class="type-signature"></span>getImgData</a><span class="signature">()</span><span class="type-signature"> &#x2192; {String}</span></code></span></td>
+                <td>Returns the base-64-encoded string of PNG data representing the Subscriber video.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getRtcStatsReport"><span class="type-signature"></span>getRtcStatsReport</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Returns a promise that, on success, resolves with an RtcStatsReport object
+for the subscribed stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getStats"><span class="type-signature"></span>getStats</a><span class="signature">(completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Returns the details on the subscriber stream quality, including the following:
+
+<ul>
+
+  <li>Total audio and video packets lost</li>
+  <li>Total audio and video packets received</li>
+  <li>Total audio and video bytes received</li>
+  <li>Current average video frame rate</li>
+
+</ul>
+
+You can publish a test stream, subscribe to it (on the publishing client), and use this method
+to check its quality.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getStyle"><span class="type-signature"></span>getStyle</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Returns an object that has the properties that define the current user interface controls of
+the Subscriber.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#isAudioBlocked"><span class="type-signature"></span>isAudioBlocked</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Indicates whether the subscriber&apos;s audio is blocked because of
+the browser&apos;s audio autoplay policy.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#off"><span class="type-signature"></span>off</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Removes an event handler or handlers.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#on"><span class="type-signature"></span>on</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#once"><span class="type-signature"></span>once</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#removeEventListener"><span class="type-signature"></span>removeEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#restrictFrameRate"><span class="type-signature"></span>restrictFrameRate</a><span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></code></span></td>
+                <td>Restricts the frame rate of the Subscriber&apos;s video stream, when you pass in
+<code>true</code>.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setAudioVolume"><span class="type-signature"></span>setAudioVolume</a><span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></code></span></td>
+                <td>Sets the audio volume, between 0 and 100, of the Subscriber.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setPreferredFrameRate"><span class="type-signature"></span>setPreferredFrameRate</a><span class="signature">(frameRate)</span><span class="type-signature"></span></code></span></td>
+                <td>Sets the preferred frame rate of the subscriber&apos;s video.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setPreferredResolution"><span class="type-signature"></span>setPreferredResolution</a><span class="signature">(resolution)</span><span class="type-signature"></span></code></span></td>
+                <td>Sets the preferred resolution of the subscriber&apos;s video.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setStyle"><span class="type-signature"></span>setStyle</a><span class="signature">(style, value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></code></span></td>
+                <td>Sets properties that define the appearance of some user interface controls of the Subscriber.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#subscribeToAudio"><span class="type-signature"></span>subscribeToAudio</a><span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></code></span></td>
+                <td>Toggles audio on and off.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#subscribeToVideo"><span class="type-signature"></span>subscribeToVideo</a><span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></code></span></td>
+                <td>Toggles video on and off.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#videoHeight"><span class="type-signature"></span>videoHeight</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></code></span></td>
+                <td>Returns the height, in pixels, of the Subscriber video.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#videoWidth"><span class="type-signature"></span>videoWidth</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></code></span></td>
+                <td>Returns the width, in pixels, of the Subscriber video.</td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="addEventListener"><span class="type-signature"></span>addEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to be invoked when the object dispatches the event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#on">on()</a> or <a href="#once">once()</a> instead.
+<p>
+This method registers a method as an event listener for a specific event.
+</p><p>
+
+</p><p>
+  If a handler is not registered for an event, the event is ignored locally. If the
+  event listener function does not exist, the event is ignored locally.
+</p>
+<p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getAudioVolume"><span class="type-signature"></span>getAudioVolume<span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the audio volume, between 0 and 100, of the Subscriber.
+
+<p>Generally you use this method in conjunction with the <code>setAudioVolume()</code>
+method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setAudioVolume">setAudioVolume()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The audio volume, between 0 and 100, of the Subscriber.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getImgData"><span class="type-signature"></span>getImgData<span class="signature">()</span><span class="type-signature"> &#x2192; {String}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the base-64-encoded string of PNG data representing the Subscriber video.
+
+ <p>You can use the string as the value for a data URL scheme passed to the src parameter of
+ an image file, as in the following:</p>
+
+ <pre>
+ var imgData = subscriber.getImgData();
+
+ var img = document.createElement(&quot;img&quot;);
+ img.setAttribute(&quot;src&quot;, &quot;data:image/png;base64,&quot; + imgData);
+ var imgWin = window.open(&quot;about:blank&quot;, &quot;Screenshot&quot;);
+ imgWin.document.write(&quot;&lt;body&gt;&lt;/body&gt;&quot;);
+ imgWin.document.body.appendChild(img);
+ </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The base-64 encoded string. Returns an empty string if there is no video.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getRtcStatsReport"><span class="type-signature"></span>getRtcStatsReport<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns a promise that, on success, resolves with an RtcStatsReport object
+for the subscribed stream. (See
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport" target="_blank">
+RTCStatsReport</a>.)
+<p>
+The Promise will be rejected in the following conditions:
+<ul>
+  <li>
+    The browser does not support this method (for example, in Chrome version 57 and lower,
+    which does not support the <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats" target="_blank">
+    RTCPeerConnection.getStats()</a> standard).
+  </li>
+  <li>
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" target="_blank">
+    PeerConnection</a> for the Subscriber is not connected.
+  </li>
+ </ul>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Publisher.html#getRtcStatsReport">Publisher.getRtcStatsReport()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes successfully.
+If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getStats"><span class="type-signature"></span>getStats<span class="signature">(completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the details on the subscriber stream quality, including the following:
+
+<ul>
+
+  <li>Total audio and video packets lost</li>
+  <li>Total audio and video packets received</li>
+  <li>Total audio and video bytes received</li>
+  <li>Current average video frame rate</li>
+
+</ul>
+
+You can publish a test stream, subscribe to it (on the publishing client), and use this method
+to check its quality. Based on the stream&apos;s quality, you can determine what video resolution is
+supported and whether conditions support video or audio. You can then publish an appropriate
+stream, based on the results. When using this method to test a stream published by your
+own client, set the <code>testNetwork</code> property to <code>true</code> in the options you
+pass into the <a href="Session.html#subscribe">Session.subscribe()</a> method.
+<p>
+You may also use these statistics to have a Subscriber subscribe to audio-only if the audio
+packet loss reaches a certain threshold. If you choose to do this, you should set the
+<code>audioFallbackEnabled</code> setting to <code>false</code> when you initialize Publisher
+objects for the session. This prevents the Vonage Video Media Router from using its own audio-only
+toggling implementation. (See the documentation for the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method.)
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A function that takes the following
+parameters:
+
+<ul>
+
+  <li><code>error</code> (<a href="Error.html">Error</a>) &#x2014; The error property is
+  set if the client is not connected. Upon completion of a successful call to the method,
+  this property is undefined.</li>
+
+  <li><code>stats</code> (Object) &#x2014; An object with the following properties:
+    <p>
+    <ul>
+      <li><code>audio.bytesReceived</code> (Number) &#x2014; The total number of audio bytes
+        received by the subscriber</li>
+      <li><code>audio.packetsLost</code> (Number) &#x2014; Total audio packets that did not reach
+        the subscriber</li>
+      <li><code>audio.packetsReceived</code> (Number) &#x2014; The total number of audio packets
+        received by the subscriber</li>
+      <li><code>timestamp</code> (Number) &#x2014; The timestamp, in milliseconds since the Unix
+        epoch, for when these stats were gathered</li>
+      <li><code>video.bytesReceived</code> (Number) &#x2014; The total video bytes received by
+        the subscriber</li>
+      <li><code>video.packetsLost</code> (Number) &#x2014; The total number of video packets that
+        did not reach the subscriber</li>
+      <li><code>video.packetsReceived</code> (Number) &#x2014; The total number of video packets
+        received by the subscriber</li>
+      <li><code>video.frameRate</code> (Number) &#x2014; The current average video frame rate</li>
+    </ul>
+  </p></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Publisher.html#getStats">Publisher.getStats()</a></li>
+        
+            <li><a href="#getRtcStatsReport">Publisher.getRtcStatsReport()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getStyle"><span class="type-signature"></span>getStyle<span class="signature">()</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns an object that has the properties that define the current user interface controls of
+the Subscriber. You can modify the properties of this object and pass the object to the
+<code>setStyle()</code> method of the Subscriber object. (See the documentation for
+<a href="#setStyle">setStyle()</a> to see the styles that define this object.)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setStyle">setStyle()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that defines the styles of the Subscriber.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="isAudioBlocked"><span class="type-signature"></span>isAudioBlocked<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Indicates whether the subscriber&apos;s audio is blocked because of
+the browser&apos;s audio autoplay policy.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#unblockAudio">OT.unblockAudio()</a></li>
+        
+            <li>The <a href="#event:audioBlocked">audioBlocked</a>
+and <a href="#event:audioUnblocked">audioUnblocked</a>
+Subscriber events</li>
+        
+            <li>The <code>style.audioBlockedDisplayMode</code> property of the
+<code>options</code> parameter of the
+<a href="Session.html#subscribe">Session.subscribe()</a> method</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes an event handler or handlers.
+
+<p>If you pass in one event name and a handler method, the handler is removed for that
+event:</p>
+
+<pre>obj.off(&quot;eventName&quot;, eventHandler);</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is removed for
+those events:</p>
+
+<pre>obj.off(&quot;eventName1 eventName2&quot;, eventHandler);</pre>
+
+<p>If you pass in an event name (or names) and <i>no</i> handler method, all handlers are
+removed for those events:</p>
+
+<pre>obj.off(&quot;event1Name event2Name&quot;);</pre>
+
+<p>If you pass in no arguments, <i>all</i> event handlers are removed for all events
+dispatched by the object:</p>
+
+<pre>obj.off();</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is
+the context for this in each handler:
+</p>
+<pre>
+obj.off(
+   {
+      eventName1: event1Handler,
+      eventName2: event2Handler
+   });
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The string identifying the type of event. You can
+use a space to specify multiple events, as in &quot;accessAllowed accessDenied
+accessDialogClosed&quot;. If you pass in no <code>type</code> value (or other arguments),
+all event handlers are removed for the object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The event handler function to remove. The handler
+must be the same function object as was passed into <code>on()</code>. Be careful with
+helpers like <code>bind()</code> that return a new function when called. If you pass in
+no <code>handler</code>, all event handlers are removed for the specified event
+<code>type</code>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event handler
+is removed for all specified events and handlers that use the specified context. (The
+context must match the context passed into <code>on()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events.
+
+<p>
+The following code adds an event handler for one event:
+</p>
+
+<pre>
+obj.on(&quot;eventName&quot;, function (event) {
+    // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is
+registered for each of those events:</p>
+
+<pre>
+obj.on(&quot;eventName1 eventName2&quot;,
+       function (event) {
+           // This is the event handler.
+       });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to
+define the value of <code>this</code> in the handler method:</p>
+
+<pre>obj.on(&quot;eventName&quot;,
+       function (event) {
+           // This is the event handler.
+       },
+       obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object
+that is a hash map of event names and handler functions and the second parameter (optional)
+is the context for this in each handler:
+</p>
+<pre>
+obj.on(
+   {
+      eventName1: function (event) {
+              // This is the handler for eventName1.
+          },
+      eventName2:  function (event) {
+              // This is the handler for eventName2.
+          }
+   },
+   obj);
+</pre>
+
+<p>
+If you do not add a handler for an event, the event is ignored locally.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple event
+names in this string, separating them with a space. The event handler will process each of
+the events.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The EventDispatcher object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="EventDispatcher.html">EventDispatcher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="once"><span class="type-signature"></span>once<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events. Once the handler is called,
+the specified handler method is removed as a handler for this event. (When you use
+the <code>on()</code> method to add an event handler, the handler is <i>not</i>
+removed when it is called.) The <code>once()</code> method is the equivilent of
+calling the <code>on()</code>
+method and calling <code>off()</code> the first time the handler is invoked.
+
+<p>
+The following code adds a one-time event handler for one event:
+</p>
+
+<pre>
+obj.once(&quot;eventName&quot;, function (event) {
+   // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is registered
+for each of those events:</p>
+
+<pre>obj.once(&quot;eventName1 eventName2&quot;
+         function (event) {
+             // This is the event handler.
+         });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to define
+the value of
+<code>this</code> in the handler method:</p>
+
+<pre>obj.once(&quot;eventName&quot;,
+         function (event) {
+             // This is the event handler.
+         },
+         obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is the
+context for this in each handler:
+</p>
+<pre>
+obj.once(
+   {
+      eventName1: function (event) {
+                 // This is the event handler for eventName1.
+          },
+      eventName2:  function (event) {
+                 // This is the event handler for eventName1.
+          }
+   },
+   obj);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple
+event names in this string, separating them with a space. The event handler will process
+the first occurence of the events. After the first event, the handler is removed (for
+all specified events).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeEventListener"><span class="type-signature"></span>removeEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event listener function to remove.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event
+handler is removed for all specified events and event listeners that use the specified
+     context. (The context must match the context passed into
+<code>addEventListener()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#off">off()</a> instead.
+<p>
+Removes an event listener for a specific event.
+</p><p>
+
+</p><p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="restrictFrameRate"><span class="type-signature"></span>restrictFrameRate<span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Restricts the frame rate of the Subscriber&apos;s video stream, when you pass in
+<code>true</code>. When you pass in <code>false</code>, the frame rate of the video stream
+is not restricted.
+<p>
+When the frame rate is restricted, the Subscriber video frame will update once or less per
+second.
+</p><p>
+This feature is only available in sessions that use the Vonage Video Media Router (sessions with
+the <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+set to routed), not in sessions with the media mode set to relayed. In relayed sessions,
+calling this method has no effect.
+</p><p>
+Restricting the subscriber frame rate has the following benefits:
+<ul>
+   <li>It reduces CPU usage.</li>
+   <li>It reduces the network bandwidth consumed.</li>
+   <li>It lets you subscribe to more streams simultaneously.</li>
+</ul>
+</p><p>
+Reducing a subscriber&apos;s frame rate has no effect on the frame rate of the video in
+other clients.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether to restrict the Subscriber&apos;s video frame rate
+(<code>true</code>) or not (<code>false</code>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Subscriber object. This lets you chain method calls, as in the
+following:
+
+<pre>mySubscriber.restrictFrameRate(false).subscribeToAudio(true);</pre>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setAudioVolume"><span class="type-signature"></span>setAudioVolume<span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the audio volume, between 0 and 100, of the Subscriber.
+
+<p>You can set the initial volume when you call the <code>Session.subscribe()</code>
+method. Pass a <code>audioVolume</code> property of the <code>properties</code> parameter
+of the method.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The audio volume, between 0 and 100.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getAudioVolume">getAudioVolume()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Subscriber object. This lets you chain method calls, as in the
+following:
+
+<pre>mySubscriber.setAudioVolume(50).setStyle(newStyle);</pre>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setPreferredFrameRate"><span class="type-signature"></span>setPreferredFrameRate<span class="signature">(frameRate)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the preferred frame rate of the subscriber&apos;s video.
+<p>
+Lowering the preferred frame rate
+lowers video quality on the subscribing client, but it also reduces network and CPU usage.
+You may want to use a lower frame rate for a subscriber to a stream that is less important
+than other streams.
+</p><p>
+</p><p>
+This method only applies when subscribing to a stream that uses the
+scalable video feature. Scalable video is available:
+<ul>
+  <li>
+    Only in sessions that use the Vonage Video Media Router (sessions with the
+    <a href="https://developer.vonage.com/video/guides/create-a-session">media
+    mode</a> set to routed).
+  </li>
+  <li>
+    Only for streams published by clients that support scalable video:
+    clients that use the Vonage Video iOS SDK (on certain devices), the Vonage Video
+    Android SDK (on certain devices), or OpenTok.js in Chrome and Safari.
+  </li>
+</ul>
+</p><p>
+In streams that do not use scalable video, calling this method has no effect.
+</p><p>
+<b>Note:</b> The frame rate for scalable video streams automatically adjusts for each
+subscriber, based on network conditions and CPU usage, even if you do not call this method.
+Call this method if you want to set a maximum frame rate for this subscriber.
+</p><p>
+Not every frame rate is available to a subscriber. When you set the preferred frame rate for
+the subscriber, OpenTok.js picks the best frame rate available that matches your setting.
+The frame rates available are based on the value of the Subscriber object&apos;s
+<code>stream.frameRate</code> property, which represents the maximum value available for the
+stream. The actual frame rates available depend, dynamically, on network and CPU resources
+available to the publisher and subscriber.
+</p><p>
+You can set the initial preferred frame rate used by setting the <code>preferredFrameRate</code>
+property of the <code>options</code> object you pass into the <code>Session.subscribe()</code>
+method.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>frameRate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set this to the desired frame rate (in frames per second). Set this to
+<code>null</code> to remove the preferred frame rate, and the client will use the highest
+frame rate available.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setPreferredResolution">Subscriber.setPreferredResolution()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setPreferredResolution"><span class="type-signature"></span>setPreferredResolution<span class="signature">(resolution)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the preferred resolution of the subscriber&apos;s video.
+<p>
+Lowering the preferred resolution
+lowers video quality on the subscribing client, but it also reduces network and CPU usage.
+You may want to use a lower resolution based on the dimensions of subscriber&apos;s video on
+the web page. You may want to use a resolution rate for a subscriber to a stream that is less
+important (and smaller) than other streams.
+</p><p>
+</p><p>
+This method only applies when subscribing to a stream that uses the
+scalable video feature. Scalable video is available:
+<ul>
+  <li>
+    Only in sessions that use the Vonage Video Media Router (sessions with the
+    <a href="https://developer.vonage.com/video/guides/create-a-session">media
+    mode</a> set to routed).
+  </li>
+  <li>
+    Only for streams published by clients that support scalable video:
+    clients that use the Vonage Video iOS SDK (on certain devices), the Vonage Video
+    Android SDK (on certain devices), or OpenTok.js in Chrome and Safari.
+  </li>
+</ul>
+</p><p>
+In streams that do not use scalable video, calling this method has no effect.
+</p><p>
+<b>Note:</b> The resolution for scalable video streams automatically adjusts for each
+subscriber, based on network conditions and CPU usage, even if you do not call this method.
+Call this method if you want to set a maximum resolution for this subscriber.
+</p><p>
+In streams that do not use scalable video, calling this method has no effect.
+</p><p>
+Not every frame rate is available to a subscriber. When you set the preferred resolution for
+the subscriber, OpenTok.js picks the best resolution available that matches your setting.
+The resolutions available are based on the value of the Subscriber object&apos;s
+<code>stream.resolution</code> property, which represents the maximum resolution available for
+the stream. The actual resolutions available depend, dynamically, on network and CPU resources
+available to the publisher and subscriber.
+</p><p>
+You can set the initial preferred resolution used by setting the
+<code>preferredResolution</code> property of the <code>options</code> object you pass into the
+<code>Session.subscribe()</code> method.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>resolution</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set this to an object with two properties: <code>width</code> and
+<code>height</code> (both numbers), such as <code>{width: 320, height: 240}</code>. Set this to
+<code>null</code> to remove the preferred resolution, and the client will use the highest
+resolution available.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setPreferredFrameRate">Subscriber.setPreferredFrameRate()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setStyle"><span class="type-signature"></span>setStyle<span class="signature">(style, value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets properties that define the appearance of some user interface controls of the Subscriber.
+
+<p>You can either pass one parameter or two parameters to this method.</p>
+
+<p>If you pass one parameter, <code>style</code>, it is an object that has the following
+properties:
+
+    <ul>
+      <li><code>audioBlockedDisplayMode</code> (String) &#x2014; Whether to display
+      the default audio blocked icon in Subscribers (in browsers where audio
+      autoplay is blocked). Possible values are: <code>&quot;auto&quot;</code> (the default,
+      icon is displayed when the audio is disabled) and <code>&quot;off&quot;</code> (the icon
+      is not displayed). Set this to <code>&quot;off&quot;</code> if you want to display
+      your own UI element showing that the audio is blocked. In response to an
+      HTML element dispatching a <code>click</code> event, you can call the
+      <a href="OT.html#unblockAudio">OT.unblockAudio()</a> method to start audio
+      playback in this and all other blocked subscribers.</li>
+
+      <li><code>audioLevelDisplayMode</code> (String) &#x2014; How to display the audio level
+      indicator. Possible values are: <code>&quot;auto&quot;</code> (the indicator is displayed when the
+      video is disabled), <code>&quot;off&quot;</code> (the indicator is not displayed), and
+      <code>&quot;on&quot;</code> (the indicator is always displayed).</li>
+
+      <li><code>backgroundImageURI</code> (String) &#x2014; A URI for an image to display as
+      the background image when a video is not displayed. (A video may not be displayed if
+      you call <code>subscribeToVideo(false)</code> on the Publisher object). You can pass an
+      http or https URI to a PNG, JPEG, or non-animated GIF file location. You can also use the
+      <code>data</code> URI scheme (instead of http or https) and pass in base-64-encrypted
+      PNG data, such as that obtained from the <a href="Subscriber.html#getImgData">
+      Subscriber.getImgData()</a> method (for example, you could call
+      <code>mySubscriber.setStyle(&quot;backgroundImageURI&quot;, mySubscriber.getImgData())</code>).
+      If the URL or the image data is invalid, the property is ignored (the attempt to set
+      the image fails silently).</li>
+
+      <li><code>buttonDisplayMode</code> (String) &#x2014; How to display the speaker
+      controls. Possible values are: <code>&quot;auto&quot;</code> (controls are displayed when the
+      stream is first displayed and when the user mouses over the display), <code>&quot;off&quot;</code>
+      (controls are not displayed), and <code>&quot;on&quot;</code> (controls are always displayed).</li>
+
+      <li><code>nameDisplayMode</code> (String) &#x2014; Whether to display the stream name.
+      Possible values are: <code>&quot;auto&quot;</code> (the name is displayed when the stream is first
+      displayed and when the user mouses over the display), <code>&quot;off&quot;</code> (the name is not
+      displayed), and <code>&quot;on&quot;</code> (the name is always displayed).</li>
+
+      <li><code>videoDisabledDisplayMode</code> (String) &#x2014; Whether to display the video
+      disabled indicator and video disabled warning icons for a Subscriber. These icons
+      indicate that the video has been disabled (or is in risk of being disabled for
+      the warning icon) due to poor stream quality. Possible values are: <code>&quot;auto&quot;</code>
+      (the icons are automatically when the displayed video is disabled or in risk of being
+      disabled due to poor stream quality), <code>&quot;off&quot;</code> (do not display the icons), and
+      <code>&quot;on&quot;</code> (display the icons).</li>
+  </ul>
+</p>
+
+<p>For example, the following code passes one parameter to the method:</p>
+
+<pre>mySubscriber.setStyle({nameDisplayMode: &quot;off&quot;});</pre>
+
+<p>If you pass two parameters, <code>style</code> and <code>value</code>, they are key-value
+pair that define one property of the display style. For example, the following code passes
+two parameter values to the method:</p>
+
+<pre>mySubscriber.setStyle(&quot;nameDisplayMode&quot;, &quot;off&quot;);</pre>
+
+<p>You can set the initial settings when you call the <code>Session.subscribe()</code> method.
+Pass a <code>style</code> property as part of the <code>properties</code> parameter of the
+method.</p>
+
+<p>The OT object dispatches an <code>exception</code> event if you pass in an invalid style
+to the method. The <code>code</code> property of the ExceptionEvent object is set to 1011.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>style</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing properties that define the style, or a
+String defining this single style property to set.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to set for the <code>style</code> passed in. Pass a value
+for this parameter only if the value of the <code>style</code> parameter is a String.<p></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getStyle">getStyle()</a></li>
+        
+            <li><a href="#setStyle">setStyle()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Subscriber object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="subscribeToAudio"><span class="type-signature"></span>subscribeToAudio<span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Toggles audio on and off. Starts subscribing to audio (if it is available and currently
+not being subscribed to) when the <code>value</code> is <code>true</code>; stops
+subscribing to audio (if it is currently being subscribed to) when the <code>value</code>
+is <code>false</code>.
+<p>
+<i>Note:</i> This method only affects the local playback of audio. It has no impact on the
+audio for other connections subscribing to the same stream. If the Publisher is not
+publishing audio, enabling the Subscriber audio will have no practical effect.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether to start subscribing to audio (<code>true</code>) or not
+(<code>false</code>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#subscribeToVideo">subscribeToVideo()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+        
+            <li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Subscriber object. This lets you chain method calls, as in the
+following:
+
+<pre>mySubscriber.subscribeToAudio(true).subscribeToVideo(false);</pre>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="subscribeToVideo"><span class="type-signature"></span>subscribeToVideo<span class="signature">(value)</span><span class="type-signature"> &#x2192; {<a href="Subscriber.html">Subscriber</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Toggles video on and off. Starts subscribing to video (if it is available and
+currently not being subscribed to) when the <code>value</code> is <code>true</code>;
+stops subscribing to video (if it is currently being subscribed to) when the
+<code>value</code> is <code>false</code>.
+<p>
+<i>Note:</i> This method only affects the local playback of video. It has no impact on
+the video for other connections subscribing to the same stream. If the Publisher is not
+publishing video, enabling the Subscriber video will have no practical effect.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether to start subscribing to video (<code>true</code>) or not
+(<code>false</code>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#subscribeToAudio">subscribeToAudio()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+        
+            <li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Subscriber object. This lets you chain method calls, as in the
+following:
+
+<pre>mySubscriber.subscribeToVideo(true).subscribeToAudio(false);</pre>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Subscriber.html">Subscriber</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="videoHeight"><span class="type-signature"></span>videoHeight<span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the height, in pixels, of the Subscriber video.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the width, in pixels, of the Subscriber video.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="videoWidth"><span class="type-signature"></span>videoWidth<span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the width, in pixels, of the Subscriber video.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the width, in pixels, of the Subscriber video.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:audioBlocked">audioBlocked</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the subscriber&apos;s audio is blocked because of the
+browser&apos;s autoplay policy.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#unblockAudio">OT.unblockAudio()</a></li>
+        
+            <li><a href="Subscriber.html#isAudioBlocked">Subscriber.isAudioBlocked()</a></li>
+        
+            <li>The <a href="#event:audioUnblocked">audioUnblocked</a> event</li>
+        
+            <li>The <code>style.audioBlockedDisplayMode</code> property of the
+<code>options</code> parameter of the
+<a href="Session.html#subscribe">Session.subscribe()</a> method)</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:audioLevelUpdated">audioLevelUpdated</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched periodically to indicate the subscriber&apos;s audio level. The event is dispatched
+up to 60 times per second, depending on the browser. The <code>audioLevel</code> property
+of the event is audio level, from 0 to 1.0. See <a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a> for more
+information.
+<p>
+The following example adjusts the value of a meter element that shows volume of the
+subscriber. Note that the audio level is adjusted logarithmically and a moving average
+is applied:
+<pre>
+var movingAvg = null;
+subscriber.on(&apos;audioLevelUpdated&apos;, function(event) {
+  if (movingAvg === null || movingAvg &lt;= event.audioLevel) {
+    movingAvg = event.audioLevel;
+  } else {
+    movingAvg = 0.7 * movingAvg + 0.3 * event.audioLevel;
+  }
+
+  // 1.5 scaling to map the -30 - 0 dBm range to [0,1]
+  var logLevel = (Math.log(movingAvg) / Math.LN10) / 1.5 + 1;
+  logLevel = Math.min(Math.max(logLevel, 0), 1);
+  document.getElementById(&apos;subscriberMeter&apos;).value = logLevel;
+});
+</pre>
+</p><p>This example shows the algorithm used by the default audio level indicator displayed
+in an audio-only Subscriber.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:audioUnblocked">audioUnblocked</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the subscriber&apos;s audio is unblocked after
+being paused because of the browser&apos;s autoplay policy.
+<p>
+Subscriber audio is unblocked when any of the following occurs:
+<ul>
+ <li>
+   The user clicks the default Subscriber audio playback icon
+ </li>
+ <li>
+    The <a href="OT.html#unblockAudio">OT.unblockAudio()</a>
+    method is called in response to an HTML element dispatching
+    a <code>click</code> event (if you have disabled the default
+    audio playback icon)
+ </li>
+ <li>
+    The local client gains access to the camera or microphone
+    (for instance, in response to a successful call to
+    <code>OT.initPublisher()</code>).
+ </li>
+</ul>
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#unblockAudio">OT.unblockAudio()</a></li>
+        
+            <li>The <a href="l#event:audioBlocked">audioBlocked</a> event</li>
+        
+            <li>The <code>style.audioBlockedDisplayMode</code> property of the
+<code>options</code> parameter of the
+<a href="Session.html#subscribe">Session#subscribe()</a> method)</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:connected">connected</h4>
+
+    
+
+
+
+<div class="description">
+    Sent when the subscriber&apos;s stream has resumed, after the Subscriber dispatches a
+<code>disconnected</code> event.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Subscriber.html#event:disconnected">disconnected event</a></li>
+        
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:destroyed">destroyed</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Subscriber element is removed from the HTML DOM. When this event is
+dispatched, you may choose to adjust or remove HTML DOM elements related to the subscriber.
+<p>
+To prevent the Subscriber from being removed from the DOM when the stream is destroyed,
+listen for the <a href="Session.html#event:streamDestroyed">streamDestroyed event</a>
+dispatched by the Session object. The <code>streamDestroyed</code> event dispatched by the
+Session object is cancelable, and calling the <code>preventDefault()</code> method of the
+event object prevents Subscribers of the stream from being removed from the HTML DOM.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:disconnected">disconnected</h4>
+
+    
+
+
+
+<div class="description">
+    Sent when the subscriber&apos;s stream has been interrupted.
+<p>
+In response to this event, you may want to provide a user interface notification, to let the
+user know that the audio-video stream is temporarily disconnected and that the app is trying
+to reconnect to it.
+</p><p>
+If the client reconnects to the stream, the Subscriber object dispatches a
+<code>connected</code> event. Otherwise, if the client cannot reconnect to the stream,
+the Subscriber object dispatches a <code>destroyed</code> event.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Subscriber.html#event:connected">connected event</a></li>
+        
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoDimensionsChanged">videoDimensionsChanged</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the video dimensions of the video change. This can occur when the
+<code>stream.videoType</code> property is set to <code>&quot;screen&quot;</code> (for a screen-sharing
+video stream), when the user resizes the window being captured. It can also occur if the video
+is being published by a mobile device and the user rotates the device (causing the camera
+orientation to change). This event object has a <code>newValue</code> property and an
+<code>oldValue</code> property, representing the new and old dimensions of the video.
+Each of these has a <code>height</code> property and a <code>width</code> property,
+representing the height and width, in pixels.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoDisabled">videoDisabled</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the video for the subscriber is disabled.
+<p>
+The <code>reason</code> property defines the reason the video was disabled. This can be set to
+one of the following values:
+</p><p>
+
+<ul>
+
+  <li><code>&quot;codecNotSupported&quot;</code> &#x2014; The client&apos;s browser does not support the
+  video codec used by the stream. For example, in Safari if you connect to a
+  <a href="https://developer.vonage.com/video/guides/create-a-session">routed session</a>
+  in a non-Safari Vonage Video project, and you try to subscribe to a stream that includes video, the Subscriber
+  will dispatch a <code>videoDisabled</code> event with the <code>reason</code> property
+  set to <code>&quot;codecNotSupported&quot;</code>. (In routed sessions in a non-Safari project,
+  streams use the VP8 video codec, which is not supported in Safari.) The subscriber
+  element will also display a &quot;Video format not supported&quot; message. (See
+  <a href="OT.html#getSupportedCodecs">OT.getSupportedCodecs()</a>.)</li>
+
+  <li><code>&quot;publishVideo&quot;</code> &#x2014; The publisher stopped publishing video by calling
+  <code>publishVideo(false)</code>.</li>
+
+  <li><code>&quot;quality&quot;</code> &#x2014; The Vonage Video Media Router stopped sending video
+  to the subscriber based on stream quality changes. This feature of the Vonage Video Media
+  Router has a subscriber drop the video stream when connectivity degrades. (The subscriber
+  continues to receive the audio stream, if there is one.)
+  <p>
+  Before sending this event, when the Subscriber&apos;s stream quality deteriorates to a level
+  that is low enough that the video stream is at risk of being disabled, the Subscriber
+  dispatches a <code>videoDisableWarning</code> event.
+  </p><p>
+  If connectivity improves to support video again, the Subscriber object dispatches
+  a <code>videoEnabled</code> event, and the Subscriber resumes receiving video.
+  </p><p>
+  By default, the Subscriber displays a video disabled indicator when a
+  <code>videoDisabled</code> event with this reason is dispatched and removes the indicator
+  when the <code>videoEnabled</code> event with this reason is dispatched. You can control
+  the display of this icon by calling the <code>setStyle()</code> method of the Subscriber,
+  setting the <code>videoDisabledDisplayMode</code> property(or you can set the style when
+  calling the <code>Session.subscribe()</code> method, setting the <code>style</code> property
+  of the <code>properties</code> parameter).
+  </p><p>
+  This feature is only available in sessions that use the Vonage Video Media Router (sessions with
+  the <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+  set to routed), not in sessions with the media mode set to relayed.
+  </p><p>
+  You can disable this audio-only fallback feature, by setting the
+  <code>audioFallbackEnabled</code> property to <code>false</code> in the options you pass
+  into the <code>OT.initPublisher()</code> method on the publishing client. (See
+  <a href="OT.html#initPublisher">OT.initPublisher()</a>.)
+  </p></li>
+
+  <li><code>&quot;subscribeToVideo&quot;</code> &#x2014; The subscriber started or stopped subscribing to
+  video, by calling <code>subscribeToVideo(false)</code>.
+  </li>
+
+</ul>
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li>
+        
+            <li><a href="Subscriber.html#event:videoDisableWarning">videoDisableWarning</a> event</li>
+        
+            <li><a href="Subscriber.html#event:videoEnabled">videoEnabled</a> event</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoDisableWarning">videoDisableWarning</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Vonage Video Media Router determines that the stream quality has degraded
+and the video will be disabled if the quality degrades more. If the quality degrades further,
+the Subscriber disables the video and dispatches a <code>videoDisabled</code> event.
+<p>
+By default, the Subscriber displays a video disabled warning indicator when this event
+is dispatched (and the video is disabled). You can control the display of this icon by
+calling the <code>setStyle()</code> method and setting the
+<code>videoDisabledDisplayMode</code> property (or you can set the style when calling
+the <code>Session.subscribe()</code> method and setting the <code>style</code> property
+of the <code>properties</code> parameter).
+</p><p>
+This feature is only available in sessions that use the Vonage Video Media Router (sessions with
+the <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+set to routed), not in sessions with the media mode set to relayed.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        
+            <li><a href="Subscriber.html#event:videoDisabled">videoDisabled</a> event</li>
+        
+            <li><a href="Subscriber.html#event:videoDisableWarningLifted">videoDisableWarningLifted</a> event</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoDisableWarningLifted">videoDisableWarningLifted</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Vonage Video Media Router determines that the stream quality has improved
+to the point at which the video being disabled is not an immediate risk. This event is
+dispatched after the Subscriber object dispatches a <code>videoDisableWarning</code> event.
+<p>
+This feature is only available in sessions that use the Vonage Video Media Router (sessions with
+the <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+set to routed), not in sessions with the media mode set to relayed.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        
+            <li><a href="Subscriber.html#event:videoDisableWarning">videoDisableWarning</a> event</li>
+        
+            <li><a href="Subscriber.html#event:videoDisabled">videoDisabled</a> event</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoElementCreated">videoElementCreated</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Subscriber&apos;s video element is created. Add a listener for this event when
+you set the <code>insertDefaultUI</code> option to <code>false</code> in the call to the
+<a href="Session.html#subscribe">Session.subscribe()</a> method. The <code>element</code>
+property of the event object is a reference to the Subscriber&apos;s <code>video</code> element
+(or in Internet Explorer the <code>object</code> element containing the video). Add it to
+the HTML DOM to display the video. When you set the <code>insertDefaultUI</code> option to
+<code>false</code>, the <code>video</code> (or <code>object</code>) element is not automatically
+inserted into the DOM.
+<p>
+Add a listener for this event only if you have set the <code>insertDefaultUI</code> option to
+<code>false</code>. If you have not set <code>insertDefaultUI</code> option to
+<code>false</code>, do not move the <code>video</code> (or <code>object</code>) element in
+in the HTML DOM. Doing so causes the Subscriber object to be destroyed.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoEnabled">videoEnabled</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Vonage Video Media Router resumes sending video to the subscriber
+after video was previously disabled.
+<p>
+The <code>reason</code> property defines the reason the video was enabled. This can be set to
+one of the following values:
+</p><p>
+
+<ul>
+
+  <li><code>&quot;codecChanged&quot;</code> &#x2014; The subscriber video was enabled after
+  a codec change from an incompatible codec.</li>
+
+  <li><code>&quot;publishVideo&quot;</code> &#x2014; The publisher started publishing video by calling
+  <code>publishVideo(true)</code>.</li>
+
+  <li><code>&quot;quality&quot;</code> &#x2014; The Vonage Video Media Router resumed sending video
+  to the subscriber based on stream quality changes. This feature of the Vonage Video Media
+  Router has a subscriber drop the video stream when connectivity degrades and then resume
+  the video stream if the stream quality improves.
+  <p>
+  This feature is only available in sessions that use the Vonage Video Media Router (sessions with
+  the <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+  set to routed), not in sessions with the media mode set to relayed.
+  </p></li>
+
+  <li><code>&quot;subscribeToVideo&quot;</code> &#x2014; The subscriber started or stopped subscribing to
+  video, by calling <code>subscribeToVideo(false)</code>.
+  </li>
+
+</ul>
+
+</p><p>
+To prevent video from resuming, in the <code>videoEnabled</code> event listener,
+call <code>subscribeToVideo(false)</code> on the Subscriber object.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li>
+        
+            <li><a href="Subscriber.html#event:videoDisabled">videoDisabled</a> event</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

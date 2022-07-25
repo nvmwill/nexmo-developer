@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: VideoEnabledChangedEvent</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: VideoEnabledChangedEvent</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        VideoEnabledChangedEvent
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="VideoEnabledChangedEvent"><span class="type-signature"></span>new VideoEnabledChangedEvent<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Defines the event object for the <code>videoDisabled</code> and <code>videoEnabled</code>
+events dispatched by the Subscriber.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cancelable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether the event has a default behavior that is cancelable
+(<code>true</code>) or not (<code>false</code>). You can cancel the default behavior by
+calling the <code>preventDefault()</code> method of the event object in the callback
+function. (See <a href="#preventDefault">preventDefault()</a>.)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>reason</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The reason the video was disabled or enabled. This can be set to one
+of the following values:
+
+<ul>
+
+  <li><code>&quot;publishVideo&quot;</code> &#x2014; The publisher started or stopped publishing video,
+  by calling <code>publishVideo(true)</code> or <code>publishVideo(false)</code>.</li>
+
+  <li><code>&quot;quality&quot;</code> &#x2014; The Vonage Video Media Router starts or stops sending video
+  to the subscriber based on stream quality changes. This feature of the Vonage Video Media
+  Router has a subscriber drop the video stream when connectivity degrades. (The subscriber
+  continues to receive the audio stream, if there is one.)
+  <p>
+  If connectivity improves to support video again, the Subscriber object dispatches
+  a <code>videoEnabled</code> event, and the Subscriber resumes receiving video.
+  </p><p>
+  By default, the Subscriber displays a video disabled indicator when a
+  <code>videoDisabled</code> event with this reason is dispatched and removes the indicator
+  when the <code>videoEnabled</code> event with this reason is dispatched. You can control
+  the display of this icon by calling the <code>setStyle()</code> method of the Subscriber,
+  setting the <code>videoDisabledDisplayMode</code> property(or you can set the style when
+  calling the <code>Session.subscribe()</code> method, setting the <code>style</code> property
+  of the <code>properties</code> parameter).
+  </p><p>
+  This feature is only available in sessions that use the Vonage Video Media Router (sessions with
+  the <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+  set to routed), not in sessions with the media mode set to relayed.
+  </p></li>
+
+  <li><code>&quot;subscribeToVideo&quot;</code> &#x2014; The subscriber started or stopped subscribing to
+  video, by calling <code>subscribeToVideo(true)</code> or
+  <code>subscribeToVideo(false)</code>.</li>
+
+  <li><code>&quot;codecNotSupported&quot;</code> &#x2014; The subscriber stopped subscribing to video due
+  to an incompatible codec.</li>
+
+  <li><code>&quot;codecChanged&quot;</code> &#x2014; The subscriber video was enabled after a codec change
+  from an incompatible codec.</li>
+
+</ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>target</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object that dispatched the event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The type of event: <code>&quot;videoDisabled&quot;</code> or
+<code>&quot;videoEnabled&quot;</code>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Subscriber.html#event:videoDisabled">Subscriber videoDisabled event</a><p></p></li>
+        
+            <li><a href="Subscriber.html#event:videoEnabled">Subscriber videoEnabled event</a><p></p></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Event.html">Event</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#isDefaultPrevented"><span class="type-signature"></span>isDefaultPrevented</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Boolean}</span></code></span></td>
+                <td>Whether the default event behavior has been prevented via a call to
+<code>preventDefault()</code> (<code>true</code>) or not (<code>false</code>).</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#preventDefault"><span class="type-signature"></span>preventDefault</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Prevents the default behavior associated with the event from taking place.</td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="isDefaultPrevented"><span class="type-signature"></span>isDefaultPrevented<span class="signature">()</span><span class="type-signature"> &#x2192; {Boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Whether the default event behavior has been prevented via a call to
+<code>preventDefault()</code> (<code>true</code>) or not (<code>false</code>).
+See <a href="#preventDefault">preventDefault()</a>.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="preventDefault"><span class="type-signature"></span>preventDefault<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Prevents the default behavior associated with the event from taking place.
+
+<p>To see whether an event has a default behavior, check the <code>cancelable</code> property
+of the event object. </p>
+
+<p>Call the <code>preventDefault()</code> method in the callback function for the event.</p>
+
+<p>The following events have default behaviors:</p>
+
+<ul>
+
+  <li><code>sessionDisconnect</code> &#x2014; See
+  <a href="SessionDisconnectEvent.html#preventDefault">
+  SessionDisconnectEvent.preventDefault()</a>.</li>
+
+  <li><code>streamDestroyed</code> &#x2014; See <a href="StreamEvent.html#preventDefault">
+  StreamEvent.preventDefault()</a>.</li>
+
+  <li><code>accessDialogOpened</code> &#x2014; See the
+  <a href="Publisher.html#event:accessDialogOpened">accessDialogOpened event</a>.</li>
+
+  <li><code>accessDenied</code> &#x2014; See the <a href="Publisher.html#event:accessDenied">
+  accessDenied event</a>.</li>
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

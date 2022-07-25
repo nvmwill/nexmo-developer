@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Error</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Error</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Error
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Error"><span class="type-signature"></span>new Error<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The Error class is used to define the error object passed into completion handlers.
+Each of the following methods, which execute asynchronously, includes a
+<code>completionHandler</code> parameter:
+
+<ul>
+  <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+  <li><a href="OT.html#reportIssue">OT.reportIssue()</a></li>
+  <li><a href="OT.html#setProxyUrl">OT.setProxyUrl()</a></li>
+  <li><a href="Publisher.html#setVideoSource">Publisher.setVideoSource()</a></li>
+  <li><a href="Session.html#connect">Session.connect()</a></li>
+  <li><a href="Session.html#forceDisconnect">Session.forceDisconnect()</a></li>
+  <li><a href="Session.html#forceUnpublish">Session.forceUnpublish()</a></li>
+  <li><a href="Session.html#publish">Session.publish()</a></li>
+  <li><a href="Session.html#subscribe">Session.subscribe()</a></li>
+  <li><a href="Subscriber.html#getStats">Subscriber.getStats()</a></li>
+</ul>
+
+<p>
+The Error class also defines the Error thrown when the promise returned by one of
+the following methods is rejected:
+
+<ul>
+  <li><a href="OT.html#unblockAudio">OT.unblockAudio()</a></li>
+  <li><a href="Publisher.html#applyVideoFilter">Publisher.applyVideoFilter()</a></li>
+  <li><a href="Publisher.html#clearVideoFilter">Publisher.clearVideoFilter()</a></li>
+  <li><a href="Publisher.html#getRtcStatsReport">Publisher.getRtcStatsReport()</a></li>
+  <li><a href="Session.html#forceMuteAll">Session.forceMuteAll()</a></li>
+  <li><a href="Session.html#forceMuteStream">Session.forceMuteStream()</a></li>
+  <li><a href="Subscriber.html#getRtcStatsReport">Subscriber.getRtcStatsReport()</a></li>
+</ul>
+
+</p><p>
+The <code>completionHandler</code> parameter is a function that is called when the call to
+the asynchronous method succeeds or fails. If the asynchronous call fails, the completion
+handler function is passed an error object (defined by the Error class). The <code>code</code>
+and <code>message</code> properties of the error object provide details about the error.
+
+</p><p>
+<b>Deprecation notice:</b>
+<code>OT.Error</code> will not be defined in an upcoming version of Vonage Video. When this happens,
+errors emitted by the SDK will simply be instances of standard <code>Error</code> objects.
+If your code currently checks <code>if (error instanceof OT.Error)</code> please replace it
+<code>if (/^OT_/.test(error.name))</code>. (The <code>name</code> property for all Vonage Video
+errors with begins with <code>&apos;OT_&apos;</code>.) Note however that this code is for the
+purposes of smoothly upgrading, and it may be more appropriate for your code to simply compare
+against the specific error you want to handle, such as
+<code>if (error.name === &apos;OT_USER_MEDIA_ACCESS_DENIED&apos;)</code>.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>code</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Deprecated &#x2014; the error code. Use the <code>name</code> property,
+not the <code>code</code> property, to identify the error programatically.
+
+<p>
+  The <code>code</code> property of the Error object can be set to one of the values
+  listed below. This property can also be set to other values, and you may want to report
+  this value when discussing an issue with Vonage API support.
+</p>
+
+<p>Errors when calling <code>Session.connect()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1004</td>
+  <td>Authentication error. Check the error message for details. This error can result if you
+    pass in an expired token when trying to connect to a session. It can also occur if you pass
+    in an invalid token or API key. Make sure that you are generating the token using the
+    current version of one of the
+    <a href="developer.vonage.com/video/server-sdks/node">Vonage Video server SDKs</a>.</td>
+</tr>
+<tr>
+  <td>1005</td>
+  <td>Invalid Session ID. Make sure you generate the session ID using the current version of
+    one of the <a href="developer.vonage.com/video/server-sdks/node">Vonage Video server
+    SDKs</a>.</td>
+</tr>
+<tr>
+  <td>1006</td>
+  <td>Connect Failed. Unable to connect to the session. You may want to have the client check
+    the network connection.</td>
+</tr>
+<tr>
+ <td>1026</td>
+ <td>Terms of service violation: export compliance. See the
+   <a href="https://www.vonage.com/legal/communications-apis/terms-of-use/">Terms of Service</a>.</td>
+</tr>
+<tr>
+ <td>1027</td>
+ <td>Connection limit exceeded. The client tried to connect to a session that has exceeded
+ limit for simultaneous connections.</td>
+</tr>
+<tr>
+  <td>2001</td>
+  <td>Connect Failed. Unexpected response from the Vonage Video server. Try connecting again
+    later.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>Session.forceDisconnect()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b>
+      <code>code</code>
+    </b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1010</td>
+  <td>The client is not connected to the Vonage Video session. Check that client connects
+    successfully and has not disconnected before calling forceDisconnect().</td>
+</tr>
+<tr>
+  <td>1520</td>
+  <td>Unable to force disconnect. The client&apos;s token does not have the role set to moderator.
+    Once the client has connected to the session, the <code>capabilities</code> property of
+    the Session object lists the client&apos;s capabilities.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>Session.forceUnpublish()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1010</td>
+  <td>The client is not connected to the Vonage Video session. Check that client connects
+    successfully and has not disconnected before calling forceUnpublish().</td>
+</tr>
+<tr>
+  <td>1530</td>
+  <td>Unable to force unpublish. The client&apos;s token does not have the role set to moderator.
+    Once the client has connected to the session, the <code>capabilities</code> property of
+    the Session object lists the client&apos;s capabilities.</td>
+</tr>
+<tr>
+  <td>1535</td>
+  <td>Force Unpublish on an invalid stream. Make sure that the stream has not left the
+    session before you call the <code>forceUnpublish()</code> method.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>Session.publish()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1010</td>
+  <td>The client is not connected to the Vonage Video session. Check that the client connects
+    successfully before trying to publish. And check that the client has not disconnected
+    before trying to publish.</td>
+</tr>
+<tr>
+  <td>1500</td>
+  <td>Unable to Publish. This can be caused by the following:
+
+  <ul>
+    <li>The client&apos;s token does not have the role set to publish or
+    moderator. Once the client has connected to the session, the <code>capabilities</code>
+    property of the Session object lists the client&apos;s capabilities.</li>
+
+    <li>The end-user has denied access to the camera or microphone.</li>
+
+    <li>The page is loaded on HTTP in Chrome, which requires HTTPS to access the camera and
+    microphone.</li>
+  </ul>
+</td>
+</tr>
+<tr>
+  <td>1553</td>
+  <td>WebRTC ICE workflow error. This is an error that occurs when trying to establish
+  communication between clients in the session. Try publishing again or reconnecting to
+  the session.</td>
+</tr>
+<tr>
+  <td>1601</td>
+  <td>Internal error -- WebRTC publisher error. Try republishing or reconnecting to the
+    session.</td>
+</tr>
+<tr>
+  <td>2001</td>
+  <td>Publish Failed. Unexpected response from the Vonage Video server. Try publishing again
+    later.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>Session.signal()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+    <td>400</td>
+    <td>One of the signal properties &#x2014; data, type, or to &#x2014;
+                is invalid. Or the data cannot be parsed as JSON.</td>
+</tr>
+<tr>
+  <td>404</td> <td>The to connection does not exist.</td>
+</tr>
+<tr>
+  <td>413</td> <td>The type string exceeds the maximum length (128 bytes),
+    or the data string exceeds the maximum size (8 kB).</td>
+</tr>
+<tr>
+  <td>500</td>
+  <td>The client is not connected to the Vonage Video session. Check that the client connects
+    successfully before trying to signal. And check that the client has not disconnected before
+    trying to signal.</td>
+</tr>
+<tr>
+  <td>2001</td>
+  <td>Signal Failed. Unexpected response from the Vonage Video server. Try sending the signal again
+    later.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>Session.subscribe()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b>
+      <code>code</code>
+    </b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1013</td>
+  <td>WebRTC PeerConnection error. Try resubscribing to the stream or
+    reconnecting to the session.</td>
+</tr>
+<tr>
+  <td>1554</td>
+  <td>WebRTC ICE workflow error. This is an error that occurs when trying to establish
+  communication between clients in the session. Try resubscribing to the stream or
+  reconnecting to the session.</td>
+</tr>
+<tr>
+  <td>1600</td>
+  <td>Internal error -- WebRTC subscriber error. Try resubscribing to the stream or
+    reconnecting to the session.</td>
+</tr>
+<tr>
+ <td>1605</td>
+ <td>Stream limit exceeded. The client tried to subscribe to a stream in a session
+ that has exceeded the limit for simultaneous streams.</td>
+</tr>
+<tr>
+  <td>2001</td>
+  <td>Subscribe Failed. Unexpected response from the Vonage Video server. Try subscribing again
+    later.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>OT.initPublisher()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1004</td>
+  <td>Authentication error. Check the error message for details. This error can result if you
+    pass in an expired token when trying to connect to a session. It can also occur if you
+    pass in an invalid token or API key. Make sure that you are generating the token using
+    the current version of one of the
+    <a href="developer.vonage.com/video/server-sdks/node">Vonage Video server SDKs</a>.</td>
+</tr>
+<tr>
+  <td>1550</td>
+  <td>Screen sharing is not supported (and you set the <code>videoSource</code> property
+    of the <code>options</code> parameter of <code>OT.initPublisher()</code> to
+    <code>&quot;application&quot;</code>, <code>&quot;screen&quot;</code>, or <code>&quot;window&quot;</code>).
+    Before calling <code>OT.initPublisher()</code>, you can call
+    <a href="OT.html#checkScreenSharingCapability">OT.checkScreenSharingCapability()</a>
+    to check if screen sharing is supported.</td>
+</tr>
+<tr>
+  <td>1551</td>
+  <td>A screen-sharing extension needs to be registered but it is not. This error can occur
+    when you set the <code>videoSource</code> property of the <code>options</code> parameter
+    of <code>OT.initPublisher()</code> to <code>&quot;application&quot;</code>, <code>&quot;screen&quot;</code>,
+    or <code>&quot;window&quot;</code>. Before calling <code>OT.initPublisher()</code>, you can call
+    <a href="OT.html#checkScreenSharingCapability">OT.checkScreenSharingCapability()</a>
+    to check if screen sharing requires an extension to be registered.</td>
+</tr>
+<tr>
+  <td>1552</td>
+  <td>A screen-sharing extension is required, but it is not installed. This error can occur
+    when you set the <code>videoSource</code> property of the <code>options</code> parameter
+    of <code>OT.initPublisher()</code> to <code>&quot;screen&quot;</code>. Before calling
+    <code>OT.initPublisher()</code>, you can call
+    <a href="OT.html#checkScreenSharingCapability">OT.checkScreenSharingCapability()</a>
+    to check if screen sharing requires an extension to be installed.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>OT.reportIssue()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>2011</td>
+  <td>Error calling OT.reportIssue(). Check the client&apos;s network connection.</td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>OT.setProxyUrl()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>
+    2021
+  </td>
+  <td>
+    Attempt to set the proxy URL after initiating a Session or Publisher object.
+ </td>
+</tr>
+<tr>
+  <td>
+    2022
+  </td>
+  <td>
+    Attempt to set the proxy URL after it has already been set (by a previous
+    call to <code>OT.setProxyUrl()</code>).
+ </td>
+</tr>
+</tbody></table>
+
+<p>Errors when calling <code>Publisher.setVideoSource()</code>:</p>
+
+<table class="docs_table"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>
+    1040
+  </td>
+  <td>
+   Trying to change the video source for a publisher does not use a camera input.
+ </td>
+</tr>
+<tr>
+  <td>
+    1041
+  </td>
+  <td>
+   The <code>videoSourceId</code> parameter is not a string
+   or the device ID for a valid video input device.
+ </td>
+</tr>
+</tbody></table>
+
+<p>General errors that can occur when calling any method:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>code</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>1011</td>
+  <td>Invalid Parameter. Check that you have passed valid parameter values into the method
+    call.</td>
+</tr>
+<tr>
+  <td>2000</td>
+  <td>Internal Error. Try reconnecting to the Vonage Video session and trying the action again.</td>
+</tr>
+</tbody></table></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The message string provides details about the error.
+
+<p>
+Use the <code>name</code> property (not the <code>message</code> property) to identify the error
+programatically.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A string identifying the error. Use this property (not the
+<code>code</code> property) to identify the error.
+
+<p>Note that for all errors, this string starts with <code>&apos;OT_&apos;</code>.
+
+</p><p>
+  The <code>name</code> property of the Error object can be set to one of the values
+  listed below. For unexpected errors, this property can be undefined or set to other
+  values. You may want to report this value when discussing an issue with Vonage API support.
+</p>
+
+<p>Errors that can occur when calling <code>OT.initPublisher()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_HARDWARE_UNAVAILABLE&apos;</code></td>
+  <td>The hardware to fulfill the user media request appears to exist but could not be acquired.
+  It might be in use by another application.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_ABORTED&apos;</code></td>
+  <td>The fetching of the stream for the video element has been aborted.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_DECODE&apos;</code></td>
+  <td>A decoding error occurred while trying to play the stream in the video element.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_NETWORK&apos;</code></td>
+  <td>A network error caused the stream to stop being fetched.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_SRC_NOT_SUPPORTED&apos;</code></td>
+  <td>The stream has been detected to be not suitable for playback.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_SUPPORTED&apos;</code></td>
+  <td>Something in the user media request is not supported.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NO_DEVICES_FOUND&apos;</code></td>
+  <td>No devices were found to provide the media stream.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NO_VALID_CONSTRAINTS&apos;</code></td>
+  <td>Video and audio were both disabled. You need to enable at least one.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SCREEN_SHARING_NOT_SUPPORTED&apos;</code></td>
+  <td>Screen sharing is not supported in the browser.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SCREEN_SHARING_EXTENSION_NOT_REGISTERED&apos;</code></td>
+  <td>Screen-sharing support in this browser requires an extension, but one has not been
+  registered.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SCREEN_SHARING_EXTENSION_NOT_INSTALLED&apos;</code></td>
+  <td>Screen-sharing support in this browser requires an extension, but the extension is not
+  installed.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>OT.reportIssue()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_REPORT_ISSUE_FAILED&apos;</code></td>
+  <td>Error calling OT.reportIssue(). Check the client\&apos;s network connection.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling the <code>OT.setProxyUrl()</code> method:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td>
+    <code>&apos;SET_PROXY_URL_TIMING_ERROR&apos;</code>
+  </td>
+  <td>
+    Attempt to set the proxy URL after initiating a Session or Publisher object.
+ </td>
+</tr>
+<tr>
+  <td>
+    <code>&apos;PROXY_URL_ALREADY_SET_ERROR&apos;</code>
+  </td>
+  <td>
+    Attempt to set the proxy URL after it has already been set (by a previous
+    call to <code>OT.setProxyUrl()</code>).
+ </td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Publisher.setVideoSource()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_VIDEO_SOURCE&apos;</code></td>
+  <td>The <code>videoSourceId</code> parameter is not a string
+  or the device ID for a valid video input device.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SET_VIDEO_SOURCE_FAILURE&apos;</code></td>
+  <td>Trying to change the video source for a publisher does not use
+  a camera input.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.connect()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_AUTHENTICATION_ERROR&apos;</code></td>
+  <td>The API key does not match the token or session.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_BADLY_FORMED_RESPONSE&apos;</code></td>
+  <td>The JSON response from the Vonage Video server was badly formed.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_CONNECT_FAILED&apos;</code></td>
+  <td>Failed to connect to session.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_CONNECTION_LIMIT_EXCEEDED&apos;</code></td>
+  <td>The client tried to connect to a session that has exceeded the limit for
+  simultaneous connections.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_EMPTY_RESPONSE_BODY&apos;</code></td>
+  <td>Received an unexpected empty response from the Vonage Video server.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_SESSION_ID&apos;</code></td>
+  <td>The session ID was invalid.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_TERMS_OF_SERVICE_FAILURE&apos;</code></td>
+  <td>Couldn&apos;t connect due to a terms of service violation.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_HTTP_STATUS&apos;</code></td>
+  <td>Received an unexpected HTTP status.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_XDOMAIN_OR_PARSING_ERROR&apos;</code></td>
+  <td>There was a cross domain error or the server responded with invalid JSON.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.forceDisconnect()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_PERMISSION_DENIED&apos;</code></td>
+  <td>This token does not allow this action. The role must be at least moderator.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.forceMuteAll()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_PERMISSION_DENIED&apos;</code></td>
+  <td>This token does not allow this action. The role must be at least moderator.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_UNEXPECTED_SERVER_RESPONSE&apos;</code></td>
+  <td>An internal server error.
+</td></tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.forceMuteStream()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_FOUND&apos;</code></td>
+  <td>The stream ID wasn&apos;t found in this session.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_PERMISSION_DENIED&apos;</code></td>
+  <td>The token does not allow this action. The role must be at least moderator.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_UNEXPECTED_SERVER_RESPONSE&apos;</code></td>
+  <td>An internal server error.
+</td></tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.forceUnpublish()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_PERMISSION_DENIED&apos;</code></td>
+  <td>This token does not allow this action. The role must be at least moderator.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.publish()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_CHROME_MICROPHONE_ACQUISITION_ERROR&apos;</code></td>
+  <td>Chrome fails to get access to the microphone, due to a Chrome error. To work
+  around this issue, the end-user must restart Chrome and reload your site. This is a
+  <a href="https://bugs.chromium.org/p/webrtc/issues/detail?id=4799">known issue</a>
+  to be fixed in Chrome.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_CONSTRAINTS_NOT_SATISFIED&apos;</code></td>
+  <td>The constraints for getting user media could not be satisfied.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_CREATE_PEER_CONNECTION_FAILED&apos;</code></td>
+  <td>Failed to create a connection between this client and the subscriber or the
+  Vonage Video Media Router.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_HARDWARE_UNAVAILABLE&apos;</code></td>
+  <td>The hardware to fulfill the user media request appears to exist but could not be acquired.
+  It might be in use by another application.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_ICE_WORKFLOW_FAILED&apos;</code></td>
+  <td>Something went wrong while establishing WebRTC connectivity.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_ABORTED&apos;</code></td>
+  <td>The fetching of the stream for the video element has been aborted.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_DECODE&apos;</code></td>
+  <td>A decoding error occurred while trying to play the stream in the video element.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_NETWORK&apos;</code></td>
+  <td>A network error caused the stream to stop being fetched.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_SRC_NOT_SUPPORTED&apos;</code></td>
+  <td>The stream has been detected to be not suitable for playback.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NO_DEVICES_FOUND&apos;</code></td>
+  <td>No devices were found to provide the media stream.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NO_VALID_CONSTRAINTS&apos;</code></td>
+  <td>Video and audio were both disabled. You need to enable at least one.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_SUPPORTED&apos;</code></td>
+  <td>Something in the user media request is not supported.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_PERMISSION_DENIED&apos;</code></td>
+  <td>This token does not allow publishing. The role must be at least publisher to enable
+  this funcitonality.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SCREEN_SHARING_NOT_SUPPORTED&apos;</code></td>
+  <td>Screen sharing is not supported in the browser.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SCREEN_SHARING_EXTENSION_NOT_REGISTERED&apos;</code></td>
+  <td>Screen-sharing support in this browser requires an extension, but one has not been
+  registered.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SCREEN_SHARING_EXTENSION_NOT_INSTALLED&apos;</code></td>
+  <td>Screen-sharing support in this browser requires an extension, but the extension is not
+  installed.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SET_REMOTE_DESCRIPTION_FAILED&apos;</code></td>
+  <td>The WebRTC connection failed during setDescription.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_STREAM_CREATE_FAILED&apos;</code></td>
+  <td>Failed to create the stream in the server model.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_TIMEOUT&apos;</code></td>
+  <td>Could not publish in a reasonable amount of time.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_USER_MEDIA_ACCESS_DENIED&apos;</code></td>
+  <td>The end-user denied permission to access hardware devices, or the end-user
+  denied access to the screen (for a screen-sharing stream).</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_UNEXPECTED_SERVER_RESPONSE&apos;</code></td>
+  <td>This indicates an unexpected error from the Vonage Video server.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.signal()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_FOUND&apos;</code></td>
+  <td>A resource was not found.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_RATE_LIMIT_EXCEEDED&apos;</code></td>
+  <td>The signal could not be sent due to the rate limit.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Session.subscribe()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_CREATE_PEER_CONNECTION_FAILED&apos;</code></td>
+  <td>Failed to create a connection between this client and the stream&apos;s publisher or the
+  Vonage Video Media Router.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_DISCONNECTED&apos;</code></td>
+  <td>Action failed because the client is not connected to the session.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_INVALID_PARAMETER&apos;</code></td>
+  <td>One or more parameters was not valid or not provided.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_ICE_WORKFLOW_FAILED&apos;</code></td>
+  <td>Something went wrong while establishing WebRTC connectivity.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_ABORTED&apos;</code></td>
+  <td>The fetching of the stream for the video element has been aborted.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_DECODE&apos;</code></td>
+  <td>A decoding error occurred while trying to play the stream in the video element.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_NETWORK&apos;</code></td>
+  <td>A network error caused the stream to stop being fetched.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_SRC_NOT_SUPPORTED&apos;</code></td>
+  <td>The stream has been detected to be not suitable for playback.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_SET_REMOTE_DESCRIPTION_FAILED&apos;</code></td>
+  <td>The WebRTC connection failed during setDescription.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_STREAM_DESTROYED&apos;</code></td>
+  <td>The stream was destroyed before it could be subscribed to.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_STREAM_LIMIT_EXCEEDED&apos;</code></td>
+  <td>The client tried to subscribe to a stream in a session that has exceeded the limit
+  for simultaneous streams.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_STREAM_NOT_FOUND&apos;</code></td>
+  <td>Couldn&apos;t subscribe to the stream because it was not found.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when calling <code>Subscriber.getStats()</code>:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_NOT_CONNECTED&apos;</code></td>
+  <td>Couldn&apos;t perform action because you are not connected to the network.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when the Promise returned by the <code>OT.unblockAudio()</code>
+method is rejected:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_ABORTED&apos;</code></td>
+  <td>The fetching of an audio stream has been aborted.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_NETWORK&apos;</code></td>
+  <td>A network error caused a stream to stop being fetched.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_DECODE&apos;</code></td>
+  <td>A decoding error occurred while trying to play a stream.</td>
+</tr>
+<tr>
+  <td><code>&apos;OT_MEDIA_ERR_SRC_NOT_SUPPORTED&apos;</code></td>
+  <td>A stream has been detected to be not suitable for playback.</td>
+</tr>
+</tbody></table>
+
+<p>Errors that can occur when the Promise returned by the
+<code>Publisher.getRtcStatsReport()</code> or
+<code>Subscriber.getRtcStatsReport()</code> method is rejected:</p>
+
+<table class="docs_table" style="width:100%"><tbody>
+<tr>
+  <td><b><code>name</code></b></td>
+  <td><b>Description</b></td>
+</tr>
+<tr>
+  <td><code>&apos;OT_PEER_CONNECTION_NOT_CONNECTED&apos;</code></td>
+  <td>
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" target="_blank">
+    PeerConnection</a> for the Publisher or Subscriber is not connected.
+  </td>
+</tr>
+<tr>
+  <td><code>&apos;OT_GET_RTC_STATS_REPORT_NOT_SUPPORTED&apos;</code></td>
+  <td>
+    The browser does not support this method (for example, in Chrome version 57 and lower, which
+    does not support the <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats" target="_blank">
+    RTCPeerConnection.getStats()</a> standard).
+  </td>
+</tr>
+</tbody></table></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Event.html">Event</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#isDefaultPrevented"><span class="type-signature"></span>isDefaultPrevented</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Boolean}</span></code></span></td>
+                <td>Whether the default event behavior has been prevented via a call to
+<code>preventDefault()</code> (<code>true</code>) or not (<code>false</code>).</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#preventDefault"><span class="type-signature"></span>preventDefault</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Prevents the default behavior associated with the event from taking place.</td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="isDefaultPrevented"><span class="type-signature"></span>isDefaultPrevented<span class="signature">()</span><span class="type-signature"> &#x2192; {Boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Whether the default event behavior has been prevented via a call to
+<code>preventDefault()</code> (<code>true</code>) or not (<code>false</code>).
+See <a href="#preventDefault">preventDefault()</a>.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="preventDefault"><span class="type-signature"></span>preventDefault<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Prevents the default behavior associated with the event from taking place.
+
+<p>To see whether an event has a default behavior, check the <code>cancelable</code> property
+of the event object. </p>
+
+<p>Call the <code>preventDefault()</code> method in the callback function for the event.</p>
+
+<p>The following events have default behaviors:</p>
+
+<ul>
+
+  <li><code>sessionDisconnect</code> &#x2014; See
+  <a href="SessionDisconnectEvent.html#preventDefault">
+  SessionDisconnectEvent.preventDefault()</a>.</li>
+
+  <li><code>streamDestroyed</code> &#x2014; See <a href="StreamEvent.html#preventDefault">
+  StreamEvent.preventDefault()</a>.</li>
+
+  <li><code>accessDialogOpened</code> &#x2014; See the
+  <a href="Publisher.html#event:accessDialogOpened">accessDialogOpened event</a>.</li>
+
+  <li><code>accessDenied</code> &#x2014; See the <a href="Publisher.html#event:accessDenied">
+  accessDenied event</a>.</li>
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

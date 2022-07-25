@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Connection</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Connection</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Connection
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Connection"><span class="type-signature"></span>new Connection<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The Connection object represents a connection to an Vonage Video session. Each client that connects
+to a session has a unique connection, with a unique connection ID (represented by the
+<code>id</code> property of the Connection object for the client).
+<p>
+The Session object has a <code>connection</code> property that is a Connection object.
+It represents the local client&apos;s connection. (A client only has a connection once the
+client has successfully called the <code>connect()</code> method of the <a href="Session.html">Session</a>
+object.)
+</p><p>
+The Session object dispatches a <code>connectionCreated</code> event when each client (including
+your own) connects to a session (and for clients that are present in the session when you
+connect). The <code>connectionCreated</code> event object has a <code>connection</code>
+property, which is a Connection object corresponding to the client the event pertains to.
+</p><p>
+The Stream object has a <code>connection</code> property that is a Connection object.
+It represents the connection of the client that is publishing the stream.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>connectionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of this connection.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>creationTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The timestamp for the creation of the connection. This
+value is calculated in milliseconds.
+You can convert this value to a Date object by calling <code>new Date(creationTime)</code>,
+where <code>creationTime</code>
+is the <code>creationTime</code> property of the Connection object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A string containing metadata describing the
+connection. When you generate a user token, you can define connection data (see the
+<a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

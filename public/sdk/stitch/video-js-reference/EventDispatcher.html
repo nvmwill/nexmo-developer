@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: EventDispatcher</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: EventDispatcher</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        EventDispatcher
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="EventDispatcher"><span class="type-signature"></span>new EventDispatcher<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This base class defines the <code>on</code>, <code>once</code>, and <code>off</code>
+methods of objects that can dispatch events.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#addEventListener"><span class="type-signature"></span>addEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#off"><span class="type-signature"></span>off</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Removes an event handler or handlers.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#on"><span class="type-signature"></span>on</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#once"><span class="type-signature"></span>once</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#removeEventListener"><span class="type-signature"></span>removeEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="addEventListener"><span class="type-signature"></span>addEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to be invoked when the object dispatches the event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#on">on()</a> or <a href="#once">once()</a> instead.
+<p>
+This method registers a method as an event listener for a specific event.
+</p><p>
+
+</p><p>
+  If a handler is not registered for an event, the event is ignored locally. If the
+  event listener function does not exist, the event is ignored locally.
+</p>
+<p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes an event handler or handlers.
+
+<p>If you pass in one event name and a handler method, the handler is removed for that
+event:</p>
+
+<pre>obj.off(&quot;eventName&quot;, eventHandler);</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is removed for
+those events:</p>
+
+<pre>obj.off(&quot;eventName1 eventName2&quot;, eventHandler);</pre>
+
+<p>If you pass in an event name (or names) and <i>no</i> handler method, all handlers are
+removed for those events:</p>
+
+<pre>obj.off(&quot;event1Name event2Name&quot;);</pre>
+
+<p>If you pass in no arguments, <i>all</i> event handlers are removed for all events
+dispatched by the object:</p>
+
+<pre>obj.off();</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is
+the context for this in each handler:
+</p>
+<pre>
+obj.off(
+   {
+      eventName1: event1Handler,
+      eventName2: event2Handler
+   });
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The string identifying the type of event. You can
+use a space to specify multiple events, as in &quot;accessAllowed accessDenied
+accessDialogClosed&quot;. If you pass in no <code>type</code> value (or other arguments),
+all event handlers are removed for the object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The event handler function to remove. The handler
+must be the same function object as was passed into <code>on()</code>. Be careful with
+helpers like <code>bind()</code> that return a new function when called. If you pass in
+no <code>handler</code>, all event handlers are removed for the specified event
+<code>type</code>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event handler
+is removed for all specified events and handlers that use the specified context. (The
+context must match the context passed into <code>on()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events.
+
+<p>
+The following code adds an event handler for one event:
+</p>
+
+<pre>
+obj.on(&quot;eventName&quot;, function (event) {
+    // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is
+registered for each of those events:</p>
+
+<pre>
+obj.on(&quot;eventName1 eventName2&quot;,
+       function (event) {
+           // This is the event handler.
+       });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to
+define the value of <code>this</code> in the handler method:</p>
+
+<pre>obj.on(&quot;eventName&quot;,
+       function (event) {
+           // This is the event handler.
+       },
+       obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object
+that is a hash map of event names and handler functions and the second parameter (optional)
+is the context for this in each handler:
+</p>
+<pre>
+obj.on(
+   {
+      eventName1: function (event) {
+              // This is the handler for eventName1.
+          },
+      eventName2:  function (event) {
+              // This is the handler for eventName2.
+          }
+   },
+   obj);
+</pre>
+
+<p>
+If you do not add a handler for an event, the event is ignored locally.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple event
+names in this string, separating them with a space. The event handler will process each of
+the events.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The EventDispatcher object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="EventDispatcher.html">EventDispatcher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="once"><span class="type-signature"></span>once<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events. Once the handler is called,
+the specified handler method is removed as a handler for this event. (When you use
+the <code>on()</code> method to add an event handler, the handler is <i>not</i>
+removed when it is called.) The <code>once()</code> method is the equivilent of
+calling the <code>on()</code>
+method and calling <code>off()</code> the first time the handler is invoked.
+
+<p>
+The following code adds a one-time event handler for one event:
+</p>
+
+<pre>
+obj.once(&quot;eventName&quot;, function (event) {
+   // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is registered
+for each of those events:</p>
+
+<pre>obj.once(&quot;eventName1 eventName2&quot;
+         function (event) {
+             // This is the event handler.
+         });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to define
+the value of
+<code>this</code> in the handler method:</p>
+
+<pre>obj.once(&quot;eventName&quot;,
+         function (event) {
+             // This is the event handler.
+         },
+         obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is the
+context for this in each handler:
+</p>
+<pre>
+obj.once(
+   {
+      eventName1: function (event) {
+                 // This is the event handler for eventName1.
+          },
+      eventName2:  function (event) {
+                 // This is the event handler for eventName1.
+          }
+   },
+   obj);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple
+event names in this string, separating them with a space. The event handler will process
+the first occurence of the events. After the first event, the handler is removed (for
+all specified events).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeEventListener"><span class="type-signature"></span>removeEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event listener function to remove.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event
+handler is removed for all specified events and event listeners that use the specified
+     context. (The context must match the context passed into
+<code>addEventListener()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#off">off()</a> instead.
+<p>
+Removes an event listener for a specific event.
+</p><p>
+
+</p><p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

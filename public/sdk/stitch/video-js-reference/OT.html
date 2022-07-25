@@ -1,0 +1,4687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: OT</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: OT</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        OT
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="OT"><span class="type-signature"></span>new OT<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The first step in using the Vonage Video API is to call the <code>OT.initSession()</code>
+method. Other methods of the OT object check for system requirements and set up error logging.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#addEventListener"><span class="type-signature">(static) </span>addEventListener</a><span class="signature">(type, listener)</span><span class="type-signature"></span></code></span></td>
+                <td>This method is deprecated.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#checkScreenSharingCapability"><span class="type-signature">(static) </span>checkScreenSharingCapability</a><span class="signature">(callback)</span><span class="type-signature"></span></code></span></td>
+                <td>Checks for support for publishing screen-sharing streams on the client browser.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#checkSystemRequirements"><span class="type-signature">(static) </span>checkSystemRequirements</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></code></span></td>
+                <td>Checks if the system supports Vonage Video for WebRTC.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getActiveAudioOutputDevice"><span class="type-signature">(static) </span>getActiveAudioOutputDevice</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Returns a Promise that resolves the current audio output device.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getAudioOutputDevices"><span class="type-signature">(static) </span>getAudioOutputDevices</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Enumerates the audio output devices (such as speakers) available to the browser.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getDevices"><span class="type-signature">(static) </span>getDevices</a><span class="signature">(callback)</span><span class="type-signature"></span></code></span></td>
+                <td>Enumerates the audio input devices (such as microphones) and video input devices
+(cameras) available to the browser.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getSupportedCodecs"><span class="type-signature">(static) </span>getSupportedCodecs</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Gets the list of supported codecs for encoding and decoding video streams.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getUserMedia"><span class="type-signature">(static) </span>getUserMedia</a><span class="signature">(options)</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Gets a MediaStream object that uses a microphone and camera as the audio and video source.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#hasMediaProcessorSupport"><span class="type-signature">(static) </span>hasMediaProcessorSupport</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Boolean}</span></code></span></td>
+                <td>Whether the client supports media processors, like video filters.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#initPublisher"><span class="type-signature">(static) </span>initPublisher</a><span class="signature">(targetElement, properties, completionHandler)</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></code></span></td>
+                <td><p class="mSummary">
+  Initializes and returns a Publisher object.</p></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#initSession"><span class="type-signature">(static) </span>initSession</a><span class="signature">(apiKey, sessionId, options)</span><span class="type-signature"> &#x2192; {<a href="Session.html">Session</a>}</span></code></span></td>
+                <td><p class="mSummary">
+Initializes and returns the local session object for a specified session ID.</p></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#log"><span class="type-signature">(static) </span>log</a><span class="signature">(message)</span><span class="type-signature"></span></code></span></td>
+                <td>Sends a string to the debugger console.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#off"><span class="type-signature">(static) </span>off</a><span class="signature">(type, handler, context)</span><span class="type-signature"></span></code></span></td>
+                <td>Removes an event handler.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#on"><span class="type-signature">(static) </span>on</a><span class="signature">(type, handler, context)</span><span class="type-signature"></span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#once"><span class="type-signature">(static) </span>once</a><span class="signature">(type, handler, context)</span><span class="type-signature"></span></code></span></td>
+                <td>Adds an event handler function for an event.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#registerScreenSharingExtension"><span class="type-signature">(static) </span>registerScreenSharingExtension</a><span class="signature">(kind, id, version)</span><span class="type-signature"></span></code></span></td>
+                <td>Register an extension for screen-sharing support in an older version of Chrome or Opera.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#removeEventListener"><span class="type-signature">(static) </span>removeEventListener</a><span class="signature">(type, listener)</span><span class="type-signature"></span></code></span></td>
+                <td>This method is deprecated.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#reportIssue"><span class="type-signature">(static) </span>reportIssue</a><span class="signature">(completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Report that your app experienced an issue.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setAudioOutputDevice"><span class="type-signature">(static) </span>setAudioOutputDevice</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Sets the new audio output device.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setLogLevel"><span class="type-signature">(static) </span>setLogLevel</a><span class="signature">(logLevel)</span><span class="type-signature"></span></code></span></td>
+                <td>Sets the API log level.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setProxyUrl"><span class="type-signature">(static) </span>setProxyUrl</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Sets the URL of the IP proxy server.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#unblockAudio"><span class="type-signature">(static) </span>unblockAudio</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Causes subscribers&apos; audio to play back in browsers where audio is blocked.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#upgradeSystemRequirements"><span class="type-signature">(static) </span>upgradeSystemRequirements</a><span class="signature">()</span><span class="type-signature"></span></code></span></td>
+                <td>Displays information about system requirements for Vonage Video for WebRTC.</td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="addEventListener"><span class="type-signature">(static) </span>addEventListener<span class="signature">(type, listener)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This method is deprecated. Use <a href="#on">on()</a> or <a href="#once">once()</a> instead.
+
+<p>
+Registers a method as an event listener for a specific event.
+</p>
+
+<p>
+The OT object dispatches one type of event &#x2014; an <code>exception</code> event. The
+following code adds an event listener for the <code>exception</code> event:
+</p>
+
+<pre>
+OT.addEventListener(&quot;exception&quot;, exceptionHandler);
+
+function exceptionHandler(event) {
+   alert(&quot;exception event. \n  code == &quot; + event.code + &quot;\n  message == &quot; + event.message);
+}
+</pre>
+
+<p>
+  If a handler is not registered for an event, the event is ignored locally. If the event
+  listener function does not exist, the event is ignored locally.
+</p>
+<p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to be invoked when the OT object dispatches the event.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="checkScreenSharingCapability"><span class="type-signature">(static) </span>checkScreenSharingCapability<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Checks for support for publishing screen-sharing streams on the client browser. The object
+passed to the callback function defines whether screen sharing is supported, as well as
+which screen-sharing sources (application, screen, or window) are supported. It also indicates
+whether an extension is required, installed, and registered (if needed).
+<p>
+<pre>
+OT.checkScreenSharingCapability(function(response) {
+  if (!response.supported || response.extensionRegistered === false) {
+    // This browser does not support screen sharing
+  } else if (response.extensionInstalled === false) {
+    // Prompt to install the extension
+  } else {
+    // Screen sharing is available.
+  }
+});
+</pre>
+</p><p>
+Chrome 72+, Firefox 52+, Safari 13+, Edge 79+, and Opera 59+ have screen-sharing
+support built-in, with no extension required. (Note that support for the Vonage Video
+plugin for Internet Explorer is removed in Vonage Video 2.17.) Screen sharing is
+<i>not</i> supported in mobile browsers. In Electron, screen sharing is supported if
+the <code>webPreferences.contextIsolation</code> option of the Electron BrowserWindow is
+set to <code>false</code> or if the app uses a preload script to access the desktop capturer.
+(The default value of <code>webPreferences.contextIsolation</code> option is <code>true</code>
+in Electron 12 and <code>false</code> in previous versions). To publish a screen-sharing video
+in older versions of Chrome or Opera, the client adds an extension that enables publishing a
+screen-sharing video stream on your domain. The Vonage Video
+screensharing-extensions sample (not available in Alpha release) includes code for creating an extension for screen-sharing support in
+older versions of Chrome and Opera.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The callback invoked with the support options object passed as
+the parameter. This object has the following properties that indicate support for publishing
+screen-sharing streams in the client:
+<p>
+<ul>
+  <li>
+    <code>extensionInstalled</code> (Boolean) &#x2014;  In older versions of Chrome and Opera,
+    this is set to <code>true</code> if the extension is installed and registered.
+    In Chrome 72+, Firefox 52+, Safari 13+, Opera 59+, Edge 79+, and Internet Explorer,
+    this property is undefined.
+  </li>
+  <li>
+    <code>supported</code> (Boolean) &#x2014; Set to <code>true</code> if screen sharing
+    is supported in the browser. Check the <code>extensionRequired</code> property
+    to see if the browser requires an extension for screen sharing.
+  </li>
+  <li>
+    <code>supportedSources</code> (Object) &#x2014; Deprecated. In older
+    browser versions, you could select a type of screen-sharing source
+    (such as <code>&quot;application&quot;</code>, <code>&quot;browser&quot;</code>, <code>&quot;screen&quot;</code>,
+    or <code>&quot;window&quot;</code> by setting the <code>videoSource</code> property
+    of the options passed into the <code>OT.initPublisher()</code> method.
+    However, in current browsers that support screen sharing, passing in
+    any of these values results in the same behavior &#x2014; the browser
+    displays a dialog box in which the end user selects the screen-sharing
+    source (which can be the entire screen or a specific window). In Electron,
+    screen sharing captures the entire screen, without prompting the user for permission.
+  </li>
+</ul>
+</p><p> The options parameter also includes the following properties, which apply to screen-sharing
+support in older versions of Chrome and Opera (in all other browsers these properties are
+undefined):
+<ul>
+  <li>
+    <code>extensionRequired</code> (String) &#x2014; Set to <code>&quot;chrome&quot;</code>
+    in older versions of Chrome and Opera, which require a screen-sharing extension
+    to be installed. This property is undefined in other browsers.
+  </li>
+  <li>
+    <code>extensionRegistered</code> (Boolean) &#x2014; In older versions of Chrome and Opera,
+    this property is set to <code>true</code> if a screen-sharing extension is registered;
+    otherwise it is set to <code>false</code>. In other browsers (which do not require
+    an extension), this property is undefined. Use the
+    <code>OT.registerScreenSharingExtension()</code> method to register a screen-sharing
+    extension in older versions of Chrome or Opera.
+  </li>
+</ul></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+        
+            <li><a href="OT.html#registerScreenSharingExtension">OT.registerScreenSharingExtension()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="checkSystemRequirements"><span class="type-signature">(static) </span>checkSystemRequirements<span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Checks if the system supports Vonage Video for WebRTC. Note that this method is called
+automatically when you call <code>OT.initPublisher()</code> or <code>OT.initSession()</code>,
+and if the system doesn&apos;t support Vonage Video, the OpenTok.js library displays a message to
+the user. Call the <code>OT.checkSystemRequirements()</code> method before calling
+<code>OT.initPublisher()</code> or <code>OT.initSession()</code> if you do not want the
+library to display that message.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#upgradeSystemRequirements">OT.upgradeSystemRequirements()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Whether the system supports Vonage Video for WebRTC (1) or not (0).
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getActiveAudioOutputDevice"><span class="type-signature">(static) </span>getActiveAudioOutputDevice<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns a Promise that resolves the current audio output device.
+<p>
+  The method returns a Promise which resolves an object that has two properties:
+  <code>deviceId</code> and <code>label</code>, each of which are strings.
+</p>
+<p>
+  The <code>deviceId</code> property is a unique ID for the device. You can pass
+  the <code>deviceId</code> as the parameter of the <a href="#setAudioOutputDevice">
+  OT.setAudioOutputDevice()</a> method. The <code>deviceId</code>
+  property is set to undefined if the user has not previously granted access to
+  a camera and microphone.
+</p><p>
+</p>
+  The <code>label</code> property identifies the device. The <code>label</code>
+  property is set to an empty string if the user has not previously granted access to
+  a camera and microphone.
+<p></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getAudioOutputDevices">OT.getAudioOutputDevices()</a></li>
+        
+            <li><a href="#setAudioOutputDevice">OT.setAudioOutputDevice()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getAudioOutputDevices"><span class="type-signature">(static) </span>getAudioOutputDevices<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Enumerates the audio output devices (such as speakers) available to the browser.
+<p>
+  The method returns a Promise which resolves an array of objects corresponding to
+  available audio output devices. Each object has two properties: <code>deviceId</code>
+  and <code>label</code>, each of which are strings.
+</p>
+<p>
+  The <code>deviceId</code> property is a unique ID for the device. You can pass
+  the <code>deviceId</code> as the parameter of the <a href="#setAudioOutputDevice">
+  OT.setAudioOutputDevice()</a> method. The <code>deviceId</code>
+  property is set to undefined if the user has not previously granted access to
+  a camera and microphone. In the case there are no audio output devices available, the property
+  is set to `null`.
+</p><p>
+</p>
+  The <code>label</code> property identifies the device. The <code>label</code>
+  property is set to an empty string if the user has not previously granted access to
+  a camera and microphone.
+<p></p>
+<i>Note:</i> The browser may limit the number of returned audio output devices
+to one before the user has granted access to a camera or microphone.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setAudioOutputDevice">OT.setAudioOutputDevice()</a></li>
+        
+            <li><a href="#getActiveAudioOutputDevice">OT.getActiveAudioOutputDevice()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getDevices"><span class="type-signature">(static) </span>getDevices<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Enumerates the audio input devices (such as microphones) and video input devices
+(cameras) available to the browser.
+<p>
+The array of devices is passed in as the <code>devices</code> parameter of
+the <code>callback</code> function passed into the method.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The callback function invoked when the list of devices
+devices is available. This function takes two parameters:
+<ul>
+  <li><code>error</code> &#x2014; This is set to an error object when
+  there is an error in calling this method; it is set to <code>null</code>
+  when the call succeeds.</li>
+
+  <li><p><code>devices</code> &#x2014; An array of objects corresponding to
+  available microphones and cameras. Each object has three properties: <code>kind</code>,
+  <code>deviceId</code>, and <code>label</code>, each of which are strings.
+  </p><p>
+  The <code>kind</code> property is set to <code>&quot;audioInput&quot;</code> for audio input
+  devices or <code>&quot;videoInput&quot;</code> for video input devices.
+  </p><p>
+  The <code>deviceId</code> property is a unique ID for the device. You can pass
+  the <code>deviceId</code> in as the <code>audioSource</code> or <code>videoSource</code>
+  property of the <code>options</code> parameter of the
+  <a href="#initPublisher">OT.initPublisher()</a> method.
+  </p><p>
+  The <code>label</code> property identifies the device. The <code>label</code>
+  property is set to an empty string if the user has not previously granted access to
+  a camera and microphone.</p></li>
+</ul>
+<i>Note:</i> The browser may limit the number of returned audio and video input devices
+to one each before the user has granted access to a camera or microphone.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#initPublisher">OT.initPublisher()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getSupportedCodecs"><span class="type-signature">(static) </span>getSupportedCodecs<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Gets the list of supported codecs for encoding and decoding video streams.
+<p>
+The following example gets the list of supported codecs for encoding and
+decoding video streams:
+<pre>
+(async () =&gt; {
+  try {
+    const supportedCodecs = await OT.getSupportedCodecs();
+    if (supportedCodecs.videoEncoders.indexOf(&apos;H264&apos;) &lt; 0 &amp;&amp;
+        supportedCodecs.videoDecoders.indexOf(&apos;H264&apos;) &lt; 0) {
+      // The client does not support encoding or decoding H264.
+      // Let&apos;s recommend using a different browser.
+    }
+  } catch(err) {
+    console.log(err);
+  }
+})();
+</pre>
+</p><p>
+You can use the lists of supported video codecs to determine whether the client
+supports video, depending on the preferred video codec and the type of session being used.
+You can set the preferred video codec on the Project page of your
+<a href="https://ui.idp.vonage.com/ui/auth/login">Vonage Video API account</a>. In
+<a href="https://developer.vonage.com/video/guides/create-a-session/">routed sessions</a>
+(sessions that use the Vonage Video Media Router), the preferred video codec is used for all
+clients in the session. In relayed sessions, clients send streams directly to one another,
+and each publishing-subscribing pair tries to find a common video codec that they can both use.
+In this regard, the video codec used by the pair in a relayed session may be different from
+the preferred video codec setting. For more information see the Vonage Video
+<a href="https://developer.vonage.com/video/guides/codecs/">Video codecs</a> developer guide.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that is resolved when the list of supported codecs is ready.
+The promise is resolved (on success) with an object that has two properties:
+<code>videoDecoders</code>, an array of supported video codecs for decoding, and
+<code>videoEncoders</code>, an array of supported video codecs for encoding, such as:
+<pre>
+{
+   videoDecoders: [&apos;H264&apos;, &apos;VP8&apos;],
+   videoEncoders: [&apos;H264&apos;, &apos;VP8&apos;]
+}
+</pre>
+<p>
+The promise is rejected if there is an error in getting the list.
+</p></div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getUserMedia"><span class="type-signature">(static) </span>getUserMedia<span class="signature">(options)</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Gets a MediaStream object that uses a microphone and camera as the audio and video source.
+This method returns a promise that is resolved when the user has granted permission to
+use the camera or microphone (or both) and the MediaStream object is available. The
+promise is rejected if there is an error in getting the media or if the end user denies
+access to the camera or microphone.
+<p>
+You can use this method to get MediaStreamTrack objects to pass into the
+<code>audioSource</code> and <code>videoSource</code> options of the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method. For example, call this method
+to get a MediaStream that uses the microphone and camera as the audio and video sources. Then
+you can call <code>getVideoTracks()[0]</code> on the MediaStream object to get a video
+MediaStreamTrack object for the camera&apos;s video. You can then add the video MediaStreamTrack
+as a source for an HTML Video element, draw that Video element into an HTML Canvas element, and
+apply video filters or effects to the Canvas. Then you can call the <code>captureStream()</code>
+method of the HTMLCanvasElement object to get a MediaStream object and call
+<code>getVideoTracks()[0]</code> on the MediaStream object to get a video MediaStreamTrack
+object (with the video filters or effects applied). Finally, you can use the video
+MediaStreamTrack object as the <code>videoSource</code> property of the options you pass
+into <code>OT.initPublisher()</code>. The Vonage Video Publisher will use the
+video track (with the filters and effects applied) as the video source.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>(optional) Defines settings for the MediaStream object.
+The options are the same as those defined for the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method. However, only the following
+properties apply for <code>OT.getUserMedia()</code>:
+</p>
+<p>
+<ul>
+  <li><code>audioSource</code></li>
+  <li><code>autoGainControl</code></li>
+  <li><code>disableAudioProcessing</code></li>
+  <li><code>echoCancellation</code></li>
+  <li><code>enableStereo</code></li>
+  <li><code>facingMode</code></li>
+  <li><code>frameRate</code></li>
+  <li><code>maxResolution</code></li>
+  <li><code>noiseSuppression</code></li>
+  <li><code>resolution</code></li>
+  <li><code>videoSource</code></li>
+</ul>
+</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>The options (especially <code>audioSource</code> and <code>videoSource</code>) of the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that is resolved when the user has granted permission to
+use the camera or microphone (or both) and the MediaStream object is available. The
+promise is rejected if there is an error in getting the media, if the end user denies
+access to the camera or microphone, or if the method is called on Internet Explorer.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="hasMediaProcessorSupport"><span class="type-signature">(static) </span>hasMediaProcessorSupport<span class="signature">()</span><span class="type-signature"> &#x2192; {Boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Whether the client supports media processors, like video filters.
+
+<p>
+The following example enables the background blur filter, if supported
+by the client:
+<pre>
+// Add background blur, if supported
+if (OT.hasMediaProcessorSupport()) {
+  publisherOptions.videoFilter = {
+    type: &apos;backgroundBlur&apos;,
+  };
+}
+
+const publisher = OT.initPublisher(publisherOptions);
+</pre>
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#initPublisher">OT.initPublisher()</a></li>
+        
+            <li><a href="Publisher.html#applyVideoFilter">Publisher.applyVideoFilter()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Whether the client supports media processors (<code>true</code>), like
+video filters, or not (<code>false</code>).
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="initPublisher"><span class="type-signature">(static) </span>initPublisher<span class="signature">(targetElement, properties, completionHandler)</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p class="mSummary">
+  Initializes and returns a Publisher object. You can then pass this Publisher
+  object to <code>Session.publish()</code> to publish a stream to a session.
+</p>
+<p>
+  <i>Note:</i> If you intend to reuse a Publisher object to publish to different sessions
+  (or the same session) sequentially, add an event listener for the <code>streamDestroyed</code>
+  event dispatched by the Publisher object (when it stops publishing). In the event listener,
+  call the <code>preventDefault()</code> method of the event object to prevent the Publisher&apos;s
+  video from being removed from the page.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>targetElement</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The DOM element or the <code>id</code> attribute of the
+existing DOM element used to determine the location of the Publisher video in the HTML DOM. See
+the <code>insertMode</code> property of the <code>properties</code> parameter. If you do not
+specify a <code>targetElement</code>, the application appends a new DOM element to the HTML
+<code>body</code>.
+
+<p>
+      The application throws an error if an element with an ID set to the
+      <code>targetElement</code> value does not exist in the HTML DOM.
+</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>properties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) This object contains the following properties (each of which
+are optional):
+<p></p>
+<ul>
+<li>
+  <strong>audioBitrate</strong> (Number) &#x2014; The desired bitrate for the published audio,
+  in bits per second. The supported range of values is 6,000 - 510,000. (Invalid values are
+  ignored.) Set this value to enable high-quality audio (or to reduce bandwidth usage with
+  lower-quality audio).
+  <p>
+  The following are recommended settings:
+  <ul>
+    <li>8,000 - 12,000 for narrowband (NB) speech</li>
+    <li>16,000 - 20,000 for wideband (WB) speech</li>
+    <li>28,000 - 40,000 for full-band (FB) speech</li>
+    <li>48,000 - 64,000 for full-band (FB) music</li>
+  </ul>
+  </p>
+  <p>
+  The default value is 40,000.
+  </p>
+  <p>
+    Currently, this setting is not supported in streams published in Firefox.
+  </p>
+</li>
+<li>
+  <strong>audioFallbackEnabled</strong> (Boolean) &#x2014; Whether the stream will use the
+  audio-fallback feature (<code>true</code>) or not (<code>false</code>). The audio-fallback
+  feature is available in sessions that use the Vonage Video Media Router. With the audio-fallback
+  feature enabled (the default), when the server determines that a stream&apos;s quality has degraded
+  significantly for a specific subscriber, it disables the video in that subscriber in order to
+  preserve audio quality. For streams that use a camera as a video source, the default setting is
+  <code>true</code> (the audio-fallback feature is enabled). The default setting is
+  <code>false</code> (the audio-fallback feature is disabled) for screen-sharing streams, which
+  have the <code>videoSource</code> property set to <code>&quot;application&quot;</code>,
+  <code>&quot;screen&quot;</code>, or <code>&quot;window&quot;</code> in the <code>OT.initPublisher()</code>
+  options. For more information, see the Subscriber
+  <a href="Subscriber.html#event:videoDisabled">videoDisabled</a> event and
+  <a href="https://www.vonage.com/communications-apis/video/#media-mode">the Vonage Video Media
+  Router and media modes</a>.
+</li>
+<li>
+  <strong>audioSource</strong> (String, MediaStreamTrack, Boolean, or null) &#x2014;
+   The ID of the audio input device (such as a
+   microphone) to be used by the publisher. You can obtain a list of available devices, including
+   audio input devices, by calling the <a href="#getDevices">OT.getDevices()</a> method. Each
+   device listed by the method has a unique device ID. If you pass in a device ID that does not
+   match an existing audio input device, the call to <code>OT.initPublisher()</code> fails with an
+   error (error code 1500, &quot;Unable to Publish&quot;) passed to the completion handler function.
+   <p>
+   If you set this property to <code>null</code> or <code>false</code>, the browser does not
+   request access to the microphone, and no audio is published.
+   </p>
+   <p>
+   You can also set this property to an audio
+   <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack">
+   MediaStreamTrack</a> object. This lets you use the object as the audio source for
+   the published stream. For example, you can get an array of audio MediaStreamTrack objects
+   from the <code>audioTracks</code> property of an HTMLMediaElement object. Or you can call
+   the <code>getLocalStreams()</code> or <code>getRemoteStreams()</code> method of an
+   RTCPeerConnection object to get an array of MediaStream objects, and then call the
+   <code>getAudioTracks()</code> method of one of the MediaStream objects to get an audio
+   MediaStreamTrack object.
+   </p>
+</li>
+<li>
+  <strong>autoGainControl</strong> (Boolean) &#x2014; Whether to enable automatic gain control
+  for the published audio. You may want to set
+  this to <code>false</code> when publishing high-quality audio (by setting the
+  <code>audioBitrate</code> property of the <code>OT.initPublisher()</code> options). The
+  default value is <code>true</code>. This setting is ignored if you set <code>disableAudioProcessing</code>
+  to <code>false</code> (which disables echo cancellation, automatic gain control, and noise suppression for
+  the published stream).
+</li>
+<li>
+  <strong>disableAudioProcessing</strong> (Boolean) &#x2014; Whether to disable echo cancellation,
+  automatic gain control, and noise suppression for the published audio. You may want to set
+  this to <code>true</code> when publishing high-quality audio (by setting the
+  <code>audioBitrate</code> property of the <code>OT.initPublisher()</code> options). The
+  default value is <code>false</code>.
+</li>
+<li>
+  <strong>echoCancellation</strong> (Boolean) &#x2014; Whether to enable echo cancellation
+  for the published audio. You may want to set
+  this to <code>false</code> when publishing high-quality audio (by setting the
+  <code>audioBitrate</code> property of the <code>OT.initPublisher()</code> options). The
+  default value is <code>true</code>. This setting is ignored if you set <code>disableAudioProcessing</code>
+  to <code>false</code> (which disables echo cancellation, automatic gain control, and noise suppression for
+  the published stream).
+</li>
+<li>
+  <strong>enableStereo</strong> (Boolean) &#x2014; Whether to publish stereo audio. The default
+  value is <code>false</code>.
+  <p>
+  <i>Note:</i> Some browsers (such as Chome 73+) do not support
+  echo cancellation for stereo audio (see <a target="_blank" href="https://bugs.chromium.org/p/webrtc/issues/detail?id=10465">this
+  Chrome issue report</a>).
+</p></li>
+<li>
+  <strong>enableDtx</strong> (Boolean) &#x2014; Whether to enable
+  <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc7587#section-3.1.3">Opus DTX</a>. The default
+  value is <code>false</code>. Setting this to <code>true</code> can reduce bandwidth usage
+  in streams that have long periods of silence.
+</li>
+<li>
+  <strong>facingMode</strong> (String) &#x2014; The preferred camera position to use for the
+  video source. Generally, this setting only applies to mobile devices. This can be set to
+  one of the following values:
+  <p>
+    <ul>
+      <li>
+        <code>&quot;user&quot;</code> &#x2014; The front-facing camera.
+      </li>
+      <li>
+        <code>&quot;environment&quot;</code> &#x2014; The back camera.
+      </li>
+      <li>
+        <code>&quot;left&quot;</code> &#x2014; The camera facing the user but to the left
+        (uncommon).
+      </li>
+      <li>
+        <code>&quot;right&quot;</code> &#x2014; The camera facing the user but to the right
+        (uncommon).
+      </li>
+    </ul>
+  </p>
+</li>
+<li>
+  <strong>fitMode</strong> (String) &#x2014; Determines how the video is displayed if the its
+    dimensions do not match those of the DOM element. You can set this property to one of the
+    following values:
+    <p>
+    <ul>
+      <li>
+        <code>&quot;cover&quot;</code> &#x2014; The video is cropped if its dimensions do not match those of
+        the DOM element. This is the default setting for videos publishing a camera feed.
+      </li>
+      <li>
+        <code>&quot;contain&quot;</code> &#x2014; The video is letterboxed if its dimensions do not match
+        those of the DOM element. This is the default setting for screen-sharing videos.
+      </li>
+    </ul>
+</p></li>
+<li>
+  <strong>frameRate</strong> (Number) &#x2014; The desired frame rate, in frames per second,
+  of the video. Valid values are 30, 15, 7, and 1. The published stream will use the closest
+  value supported on the publishing client. The frame rate can differ slightly from the value
+  you set, depending on the browser of the client. And the video will only use the desired
+  frame rate if the client configuration supports it.
+  <br><br><p>If the publisher specifies a frame rate, the actual frame rate of the video stream
+  is set as the <code>frameRate</code> property of the Stream object, though the actual frame rate
+  will vary based on changing network and system conditions. If the developer does not specify a
+  frame rate, this property is undefined. Also, if the video source is a video MediaStreamTrack
+  object (see the <code>videoSource</code>), this value is ignored and the frame rate is
+  defined by the MediaStreamTrack object, which you can get by calling the
+  <code>getConstraints()</code> method of the MediaStreamTrack object.
+  </p>
+  <p>
+  For sessions that use the Vonage Video Media Router (sessions with
+  the <a href="https://www.vonage.com/communications-apis/video/#media-mode">media mode</a>
+  set to routed, lowering the frame rate proportionally reduces the maximum bandwidth the stream
+  uses. However, in sessions with the media mode set to relayed, lowering the frame rate does not
+  reduce the stream&apos;s bandwidth.
+  </p>
+  <p>
+  You can also restrict the frame rate of a Subscriber&apos;s video stream. To restrict the frame rate
+  a Subscriber, call the <code>restrictFrameRate()</code> method of the subscriber, passing in
+  <code>true</code>.
+  (See <a href="Subscriber.html#restrictFrameRate">Subscriber.restrictFrameRate()</a>.)
+  </p>
+</li>
+<li>
+  <strong>height</strong> (Number or String) &#x2014; The desired initial height of the displayed Publisher
+  video in the HTML page (default: 198 pixels). You can specify the number of pixels as either
+  a number (such as 300) or a string ending in &quot;px&quot; (such as &quot;300px&quot;). Or you can specify a
+  percentage of the size of the parent element, with a string ending in &quot;%&quot; (such as &quot;100%&quot;).
+  <i>Note:</i> To resize the publisher video, adjust the CSS of the publisher&apos;s DOM element
+  (the <code>element</code> property of the Publisher object) or (if the height is specified as
+  a percentage) its parent DOM element.
+</li>
+<li>
+  <strong>insertDefaultUI</strong> (Boolean) &#x2014; Whether to use the default Vonage Video UI
+  (<code>true</code>, the default) or not (<code>false</code>). The default UI element contains
+  user interface controls, a video loading indicator, and automatic video cropping or
+  letterboxing, in addition to the video. (If you leave <code>insertDefaultUI</code> set to
+  <code>true</code>, you can control individual UI settings using the <code>fitMode</code>,
+  <code>showControls</code>, and <code>style</code> options.)
+  <p>
+  If you set this option to <code>false</code>, OpenTok.js does not insert a default UI element
+  in the HTML DOM, and the <code>element</code> property of the Publisher object is undefined.
+  Instead, the Publisher object dispatches a
+  <a href="Publisher.html#event:videoElementCreated">videoElementCreated</a> event when
+  the <code>video</code> element (or in Internet Explorer the <code>object</code> element
+  containing the video) is created. The <code>element</code> property of the event object is a
+  reference to the Publisher&apos;s <code>video</code> (or <code>object</code>) element. Add it to
+  the HTML DOM to display the video.
+  </p><p>
+  Set this option to <code>false</code> if you want to move the Publisher&apos;s <code>video</code>
+  (or <code>object</code>) element in the HTML DOM.
+  </p><p>
+  If you set this to <code>false</code>, do not set the <code>targetElement</code> parameter.
+  (This results in an error passed into to the <code>OT.initPublisher()</code> callback
+  function.) To add the video to the HTML DOM, add an event listener for the
+  <code>videoElementCreated</code> event, and then add the <code>element</code> property of
+  the event object into the HTML DOM.
+</p></li>
+<li>
+  <strong>insertMode</strong> (String) &#x2014; Specifies how the Publisher object will be
+  inserted in the HTML DOM. See the <code>targetElement</code> parameter. This string can
+  have the following values:
+  <p>
+  <ul>
+    <li><code>&quot;replace&quot;</code> &#x2014; The Publisher object replaces contents of the
+      targetElement. This is the default.</li>
+    <li><code>&quot;after&quot;</code> &#x2014; The Publisher object is a new element inserted after
+      the targetElement in the HTML DOM. (Both the Publisher and targetElement have the
+      same parent element.)</li>
+    <li><code>&quot;before&quot;</code> &#x2014; The Publisher object is a new element inserted before
+      the targetElement in the HTML DOM. (Both the Publisher and targetElement have the same
+      parent element.)</li>
+    <li><code>&quot;append&quot;</code> &#x2014; The Publisher object is a new element added as a child
+      of the targetElement. If there are other child elements, the Publisher is appended as
+      the last child element of the targetElement.</li>
+  </ul></p>
+</li><li>
+  <strong>maxResolution</strong> (Object) &#x2014; Sets the maximum resolution to stream.
+  This setting only applies to when the <code>videoSource</code> property is set to
+  <code>&quot;application&quot;</code>, <code>&quot;screen&quot;</code>, or <code>&quot;window&quot;</code>
+  (when the publisher is screen-sharing). The resolution of the
+  stream will match the captured screen region unless the region is greater than the
+  <code>maxResolution</code> setting. Set this to an object that has two properties:
+  <code>width</code> and <code>height</code> (both numbers). The maximum value for each of
+  the <code>width</code> and <code>height</code> properties is 1920, and the minimum value
+  is 10.
+</li>
+<li>
+  <strong>mirror</strong> (Boolean) &#x2014; Whether the publisher&apos;s video image
+  is mirrored in the publisher&apos;s page. The default value is <code>true</code>
+  (the video image is mirrored), except for a screen-sharing video (when the
+  <code>videoSource</code> property is set to <code>&quot;application&quot;</code>,
+  <code>&quot;screen&quot;</code>, or <code>&quot;window&quot;</code>
+  (in which case the default is <code>false</code>). This property
+  does not affect the display on subscribers&apos; views of the video.
+</li>
+<li>
+  <strong>name</strong> (String) &#x2014; The name for this stream. The name appears at
+  the bottom of Subscriber videos. The default value is &quot;&quot; (an empty string). Setting
+  this to a string longer than 1000 characters results in an runtime exception.
+</li>
+<li>
+  <strong>noiseSuppression</strong> (Boolean) &#x2014; Whether to enable noise suppression
+  for the published audio. You may want to set
+  this to <code>false</code> when publishing high-quality audio (by setting the
+  <code>audioBitrate</code> property of the <code>OT.initPublisher()</code> options). The
+  default value is <code>true</code>. This setting is ignored if you set <code>disableAudioProcessing</code>
+  to <code>false</code> (which disables echo cancellation, automatic gain control, and noise suppression for
+  the published stream).
+</li>
+<li>
+  <strong>publishAudio</strong> (Boolean) &#x2014; Whether to initially publish audio
+  for the stream (default: <code>true</code>). This setting applies when you pass
+  the Publisher object in a call to the <code>Session.publish()</code> method.
+</li>
+<li>
+  <strong>publishVideo</strong> (Boolean) &#x2014; Whether to initially publish video
+  for the stream (default: <code>true</code>). This setting applies when you pass
+  the Publisher object in a call to the <code>Session.publish()</code> method.
+</li>
+<li>
+  <strong>resolution</strong> (String) &#x2014; The desired resolution of the video. The format
+  of the string is <code>&quot;widthxheight&quot;</code>, where the width and height are represented in
+  pixels. Valid values are <code>&quot;1920x1080&quot;</code>, <code>&quot;1280x720&quot;</code>, <code>&quot;640x480&quot;</code>,
+  and <code>&quot;320x240&quot;</code>. The published video will only use the desired resolution if the
+  client configuration supports it. Some browsers and clients do not support each of these
+  resolution settings.
+  <br><br><p>
+  The requested resolution of a video stream is set as the <code>videoDimensions.width</code> and
+  <code>videoDimensions.height</code> properties of the Stream object.
+  </p>
+  <p>
+  The default resolution for a stream (if you do not specify a resolution) is 640x480 pixels.
+  If the client system cannot support the resolution you requested, the stream will use the
+  next largest setting supported.
+  </p>
+  <p>
+  The actual resolution used by the Publisher is returned by the <code>videoHeight()</code> and
+  <code>videoWidth()</code> methods of the Publisher object. The actual resolution of a
+  Subscriber video stream is returned by the <code>videoHeight()</code> and
+  <code>videoWidth()</code> properties of the Subscriber object. These may differ from the values
+  of the <code>resolution</code> property passed in as the <code>properties</code> property of the
+  <code>OT.initPublisher()</code> method, if the browser does not support the requested
+  resolution, this value is ignored. Also, if the video source is a video MediaStreamTrack
+  object (see the <code>videoSource</code>), this value is ignored and the resolution
+  is defined by the MediaStreamTrack object, which you can get by calling the
+  <code>getConstraints()</code> method of the MediaStreamTrack object.
+  </p>
+</li>
+<li>
+  <strong>scalableScreenshare</strong> (Boolean) &#x2014; Whether to allow use of
+  scalable video for a publisher that has the <code>videoSource</code> set to <code>&quot;screen&quot;</code> (<code>true</code>)
+  or not (<code>false</code>, the default).
+</li>
+<li>
+  <strong>showControls</strong> (Boolean) &#x2014; Whether to display the built-in user interface
+  controls (default: <code>true</code>) for the Publisher. These controls include the name
+  display, the audio level indicator, and the microphone control button. You can turn off all user
+  interface controls by setting this property to <code>false</code>. You can control the display
+  of individual user interface controls by leaving this property set to <code>true</code> (the
+  default) and setting individual properties of the <code>style</code> property.
+</li>
+<li>
+  <strong>style</strong> (Object) &#x2014; An object containing properties that define the initial
+  appearance of user interface controls of the Publisher. The <code>style</code> object includes
+  the following properties:
+    <ul>
+      <li><code>audioLevelDisplayMode</code> (String) &#x2014; How to display the audio level
+      indicator. Possible values are: <code>&quot;auto&quot;</code> (the indicator is displayed when the
+      video is disabled), <code>&quot;off&quot;</code> (the indicator is not displayed), and
+      <code>&quot;on&quot;</code> (the indicator is always displayed).</li>
+
+      <li><code>archiveStatusDisplayMode</code> (String) &#x2014; How to display the archive status
+      indicator. Possible values are: <code>&quot;auto&quot;</code> (the indicator is displayed when the
+      session is being recorded), <code>&quot;off&quot;</code> (the indicator is not displayed). If you
+      disable the archive status display indicator, you can display your own user interface
+      notifications based on the <code>archiveStarted</code> and <code>archiveStopped</code>
+      events dispatched by the Session object.</li>
+
+      <li><code>backgroundImageURI</code> (String) &#x2014; A URI for an image to display as
+      the background image when a video is not displayed. (A video may not be displayed if
+      you call <code>publishVideo(false)</code> on the Publisher object). You can pass an http
+      or https URI to a PNG, JPEG, or non-animated GIF file location. You can also use the
+      <code>data</code> URI scheme (instead of http or https) and pass in base-64-encrypted
+      PNG data, such as that obtained from the
+      <a href="Publisher.html#getImgData">Publisher.getImgData()</a> method. (For example,
+      you could set the property to a value returned by calling <code>getImgData()</code> on
+      a previous Publisher object.) If the URL or the image data is invalid, the property
+      is ignored (the attempt to set the image fails silently).</li>
+
+      <li><code>buttonDisplayMode</code> (String) &#x2014; How to display the microphone controls
+      Possible values are: <code>&quot;auto&quot;</code> (controls are displayed when the stream is first
+      displayed and when the user mouses over the display), <code>&quot;off&quot;</code> (controls are not
+      displayed), and <code>&quot;on&quot;</code> (controls are always displayed).</li>
+
+      <li><code>nameDisplayMode</code> (String) &#x2014; Whether to display the stream name.
+      Possible values are: <code>&quot;auto&quot;</code> (the name is displayed when the stream is first
+      displayed and when the user mouses over the display), <code>&quot;off&quot;</code> (the name is not
+      displayed), and <code>&quot;on&quot;</code> (the name is always displayed).</li>
+  </ul>
+</li>
+<li>
+  <strong>videoContentHint</strong> (String) &#x2014; Sets the content hint of
+   the the video track of the publisher&apos;s stream. This allows browsers to use encoding
+   or processing methods more appropriate to the type of content. You can set this to one of
+   the following values:
+   <p>
+   <ul>
+     <li>
+       <code>&quot;&quot;</code> &#x2014; No hint is provided (the default).
+     </li>
+     <li>
+       <code>&quot;motion&quot;</code> &#x2014; The track should be treated as if it contains video
+       where motion is important. For example, you may use this setting for a screen-sharing
+       stream that contains video.
+     </li>
+     <li>
+       <code>&quot;detail&quot;</code> &#x2014; The track should be treated as if video details
+       are extra important. For example, you may use this setting for a screen-sharing
+       stream that contains text content, painting, or line art.
+     </li>
+     <li>
+       <code>&quot;text&quot;</code> &#x2014; The track should be treated as if text details are
+       extra important. For example, you may use this setting for a screen-sharing
+       stream that contains text content.
+     </li>
+   </ul>
+   </p>
+   <p>
+     With the &quot;text&quot; and &quot;detailed&quot; content hints, the browser attempts to maintain
+     high resolution, even if it must reduce the video frame rate. For the &quot;motion&quot; content hint,
+     the browser reduces resolution to prevent the frame rate from stalling.
+   </p>
+   <p>
+   You can read more about these options in the
+   <a href="https://www.w3.org/TR/mst-content-hint/#video-content-hints">W3C Working Draft</a>.
+   You may want to set the video content hint to optimize performance for screen-sharing
+   videos. For example, you can set it to <code>&quot;text&quot;</code> when sharing a screen that contains
+   a lot of text (such as a slideshow).
+   </p>
+   <p>
+   Chrome 60+, Safari 12.1+, Edge 79+, and Opera 47+ support video content hints.
+   </p>
+   <p>
+     Also see the <a href="Publisher.html#setVideoContentHint">Publisher.setVideoContentHint()</a> method
+     and the <a href="https://developer.vonage.com/video/tutorials/publish-stream/introduction">developer
+     guide topic on this feature</a>.
+   </p>
+</li>
+<li>
+  <strong>videoFilter</strong> (Object) &#x2014; An object containing properties that define the
+  video filter to be applied to the Publisher&apos;s video stream. The following
+  filters are supported:
+  <ul>
+    <li>
+      <p>
+      <em>Background blur filter</em> &#x2014; Set the <code>type</code> property of the object to
+      <code>&quot;backgroundBlur&quot;</code>.
+      </p><p>
+      A background blur filter object includes an additional <code>blurStrength</code> property, which
+      defines the blur radius and is optional. Set this to either <code>&quot;low&quot;</code> or
+      <code>&quot;high&quot;</code> (the default).
+    </p></li>
+    <li>
+      <p>
+      <em>Background replacement filter</em> &#x2014; Set the <code>type</code> property of the object to
+      <code>&quot;backgroundReplacement&quot;</code>.
+      </p><p>
+      A background replacement filter object includes an additional <code>backgroundImgUrl</code>
+      property, which defines the URL of the background image to use. Also accepted are image BLOBs
+      (a Base64-encoded string of image data).
+      The following image formats are supported: BMP, PNG, JPEG, and GIF.
+      </p><p>
+      This is a <em>beta</em> feature.
+    </p></li>
+  </ul>
+  <em>Note:</em> Video filters are only supported in recent versions of Chrome, Electron, Opera, and Edge.
+  They are not supported in other (non-Chromium-based) browsers or on iOS. You can check if the client
+  supports this feature by calling the
+  <a href="OT.html#hasMediaProcessorSupport">OT.hasMediaProcessorSupport()</a> method.
+  <p>
+  You can change the video filter by calling the
+  <a href="Publisher.html#applyVideoFilter">Publisher.applyVideoFilter()</a> method.
+  You can remove the video filter by calling the
+  <a href="Publisher.html#clearVideoFilter">Publisher.clearVideoFilter()</a> method.
+</p></li>
+<li>
+  <strong>videoSource</strong> (String, MediaStreamTrack, Boolean, or null) &#x2014;
+   The ID of the video input device (such as a
+   camera) to be used by the publisher. You can obtain a list of available devices, including
+   video input devices, by calling the <a href="#getDevices">OT.getDevices()</a> method. Each
+   device listed by the method has a unique device ID. If you pass in a device ID that does not
+   match an existing video input device, the call to <code>OT.initPublisher()</code> fails with an
+   error (error code 1500, &quot;Unable to Publish&quot;) passed to the completion handler function.
+   <p>
+   If you set this property to <code>null</code> or <code>false</code>, the browser does not
+   request access to the camera, and no video is published. In a voice-only call, set this
+   property to <code>null</code> or <code>false</code> for each Publisher.
+   </p>
+  <p>
+   To publish a screen-sharing stream, set this property to <code>&quot;screen&quot;</code>.
+   In older browser versions, you could also pass in <code>&quot;application&quot;</code> or
+   <code>&quot;window&quot;</code> to specify a type of screen-sharing source. However, in current
+   browsers that support screen sharing, passing in any of these values results in
+   the same behavior &#x2014; the browser displays a dialog box in which the end user
+   selects the screen-sharing source (which can be the entire screen or a specific window).
+   In Electron, screen sharing captures the entire screen, without prompting
+   the user for permission. For screen-sharing streams, the following are
+   default values for other properties: <code>audioFallbackEnabled == false</code>,
+   <code>maxResolution == {width: 1920, height: 1920}</code>, <code>mirror == false</code>,
+   <code>scaleMode == &quot;fit&quot;</code>. Also, the default <code>scaleMode</code> setting for
+   subscribers to the stream is <code>&quot;fit&quot;</code>.
+  </p>
+  <p>
+   You can also set this property to a video
+   <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack">
+   MediaStreamTrack</a> object. This lets you use the MediaStreamTrack object as the
+   video source for the published stream. For example, you can get a CanvasCaptureMediaStream
+   object by calling the <code>captureStream()</code> method of a HTMLCanvasElement, and then
+   you can call the <code>getVideoTracks()</code> method of the CanvasCaptureMediaStream object
+   to get a video MediaStreamTrack object. Or you can get an array of video MediaStreamTrack
+   object from the <code>videoTracks</code> property of an HTMLMediaElement object. Or you can
+   call the <code>getLocalStreams()</code> or <code>getRemoteStreams()</code> method of an
+   RTCPeerConnection object to get an array of MediaStream objects, and then call the
+   <code>getVideoTracks()</code> method of one of the MediaStream objects to get an array
+   of video MediaStreamTrack objects. Note that by default the publisher uses a microphone
+   as the audio source, so be sure to set the <code>audioSource</code> option if you want
+   to use a MediaStreamTrack as the audio source or if you do not want to publish an audio
+   track. The default <code>mirror</code> setting for a Publisher with a MediaStreamTrack video
+   source is <code>false</code>. You can also call
+   <a href="OT.html#getUserMedia">OT.getUserMedia()</a> to get a MediaStream object that uses
+   the microphone and camera as the audio and video sources.
+  </p>
+</li>
+<li>
+  <strong>width</strong> (Number or String) &#x2014; The desired initial width of the displayed Publisher
+  video in the HTML page (default: 264 pixels). You can specify the number of pixels as either
+  a number (such as 400) or a string ending in &quot;px&quot; (such as &quot;400px&quot;). Or you can specify a
+  percentage of the size of the parent element, with a string ending in &quot;%&quot; (such as &quot;100%&quot;).
+  <i>Note:</i> To resize the publisher video, adjust the CSS of the publisher&apos;s DOM element
+  (the <code>element</code> property of the Publisher object) or (if the width is specified as
+  a percentage) its parent DOM element.
+</li>
+</ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) A function to be called when the method succeeds
+or fails in initializing a Publisher object. This function takes one parameter &#x2014;
+<code>error</code>. On success, the <code>error</code> object is set to <code>null</code>. On
+failure, the <code>error</code> object has two properties: <code>code</code> (an integer) and
+<code>message</code> (a string), which identify the cause of the failure. The method succeeds
+when the user grants access to the camera and microphone. The method fails if the user denies
+access to the camera and microphone. The <code>completionHandler</code> function is called
+before the Publisher dispatches an <code>accessAllowed</code> (success) event or an
+<code>accessDenied</code> (failure) event.
+<p>
+The following code adds a <code>completionHandler</code> when calling the
+<code>OT.initPublisher()</code> method:
+</p>
+<pre>
+var publisher = OT.initPublisher(&apos;publisher&apos;, null, function (error) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(&quot;Publisher initialized.&quot;);
+  }
+});
+</pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Session.html#publish">Session.publish()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Publisher object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Publisher.html">Publisher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="initSession"><span class="type-signature">(static) </span>initSession<span class="signature">(apiKey, sessionId, options)</span><span class="type-signature"> &#x2192; {<a href="Session.html">Session</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p class="mSummary">
+Initializes and returns the local session object for a specified session ID.
+</p>
+<p>
+You connect to an Vonage Video session using the <code>connect()</code> method
+of the Session object returned by the <code>OT.initSession()</code> method.
+Note that calling <code>OT.initSession()</code> does not initiate communications
+with the cloud. It simply initializes the Session object that you can use to
+connect (and to perform other operations once connected).
+</p>
+
+<p>
+Note that you can initialize only one Session object per session ID. Calling
+<code>OT.initSession()</code> a second time with the same session ID returns the
+previously created Session object. However, you can initialize multiple Session objects
+for different sessions (with different session IDs) to connect to multiple sessions.
+</p>
+
+<p>
+When the client disconnects from the session (and the session dispatches a
+<code>sessionDisconnected</code> event), you can reuse the Session object to
+reconnect to the session. However, the Session object will retain any existing
+event handlers attached to it. You can remove all event handlers by calling the
+<code>off()</code> method of the Session object (passing in no parameters).
+</p>
+
+ <p>
+   For an example, see <a href="Session.html#connect">Session.connect()</a>.
+ </p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>apiKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Your Vonage Video API key (see your <a href="https://ui.idp.vonage.com/ui/auth/login">Vonage Video API
+account page</a>).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sessionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The session ID identifying the Vonage Video session. For more
+information, see <a href="https://developer.vonage.com/video/guides/create-a-session/">Session
+creation</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object that includes optional options for initializing the session.
+This object includes the following properties:
+<ul>
+  <li><code>connectionEventsSuppressed</code> &#x2014; (Boolean)
+    Set this property to <code>true</code> to support large interactive video sessions.
+    This prevents the Session object from dispatching <code>connectionCreated</code> and
+    <code>connectionDestroyed</code> events when other clients connect to or disconnect from
+    the session. (Also, the Vonage Video server does not send these events to the web client.)
+  </li>
+  <li><code>ipWhitelist</code> &#x2014; (Boolean) This is available as an
+    <a href="https://www.vonage.com/communications-apis/video/pricing" target="_blank">add-on feature</a>.
+    Set this to <code>true</code> if IP white listing is enabled for your project.
+    The default value is <code>false</code>.
+  </li>
+  <li><code>iceConfig</code> &#x2014; (Object) This feature is part of the configurable TURN
+    <a href="https://www.vonage.com/communications-apis/video/pricing" target="_blank">add-on feature</a>.
+  </li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The session object through which all further interactions with
+the session will occur.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Session.html">Session</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="log"><span class="type-signature">(static) </span>log<span class="signature">(message)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sends a string to the debugger console. However, the function only logs to the console
+if you have set the log level to <code>OT.LOG</code> or <code>OT.DEBUG</code>,
+by calling <code>OT.setLogLevel(OT.LOG)</code> or <code>OT.setLogLevel(OT.DEBUG)</code>.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string to log.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setLogLevel">OT.setLogLevel()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="off"><span class="type-signature">(static) </span>off<span class="signature">(type, handler, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes an event handler.
+
+<p>Pass in an event name and a handler method, the handler is removed for that event:</p>
+
+<pre>OT.off(&quot;exceptionEvent&quot;, exceptionEventHandler);</pre>
+
+<p>If you pass in an event name and <i>no</i> handler method, all handlers are removed for that
+events:</p>
+
+<pre>OT.off(&quot;exceptionEvent&quot;);</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that is a
+hash map of
+event names and handler functions and the second parameter (optional) is the context for matching
+handlers:
+</p>
+<pre>
+OT.off(
+  {
+    exceptionEvent: exceptionEventHandler
+  },
+  this
+);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The string identifying the type of event. You can use a space to
+specify multiple events, as in &quot;eventName1 eventName2 eventName3&quot;. If you pass in no
+<code>type</code> value (or other arguments), all event handlers are removed for the object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The event handler function to remove. If you pass in no
+<code>handler</code>, all event handlers are removed for the specified event <code>type</code>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event handler is
+removed for all specified events and handlers that use the specified context.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="on"><span class="type-signature">(static) </span>on<span class="signature">(type, handler, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events.
+
+<p>
+The OT object dispatches one type of event &#x2014; an <code>exception</code> event. The following
+code adds an event
+listener for the <code>exception</code> event:
+</p>
+
+<pre>
+OT.on(&quot;exception&quot;, function (event) {
+  // This is the event handler.
+});
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to define the
+value of
+<code>this</code> in the handler method:</p>
+
+<pre>
+OT.on(&quot;exception&quot;,
+  function (event) {
+    // This is the event handler.
+  }),
+  session
+);
+</pre>
+
+<p>
+If you do not add a handler for an event, the event is ignored locally.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes the event
+object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event handler
+function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="once"><span class="type-signature">(static) </span>once<span class="signature">(type, handler, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for an event. Once the handler is called, the specified handler
+method is
+removed as a handler for this event. (When you use the <code>OT.on()</code> method to add an event
+handler, the handler
+is <i>not</i> removed when it is called.) The <code>OT.once()</code> method is the equivilent of
+calling the <code>OT.on()</code>
+method and calling <code>OT.off()</code> the first time the handler is invoked.
+
+<p>
+The following code adds a one-time event handler for the <code>exception</code> event:
+</p>
+
+<pre>
+OT.once(&quot;exception&quot;, function (event) {
+  console.log(event);
+}
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to define the
+value of
+<code>this</code> in the handler method:</p>
+
+<pre>
+OT.once(&quot;exception&quot;,
+  function (event) {
+    // This is the event handler.
+  },
+  session
+);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that is a
+hash map of
+event names and handler functions and the second parameter (optional) is the context for this in
+each handler:
+</p>
+<pre>
+OT.once(
+  {exeption: function (event) {
+    // This is the event handler.
+    }
+  },
+  session
+);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple event
+names in this string,
+separating them with a space. The event handler will process the first occurence of the events.
+After the first event,
+the handler is removed (for all specified events).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes the event
+object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event handler
+function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="registerScreenSharingExtension"><span class="type-signature">(static) </span>registerScreenSharingExtension<span class="signature">(kind, id, version)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Register an extension for screen-sharing support in an older version of Chrome or Opera.
+<p>
+<b>Note:</b> A screen-sharing extension is not required in Chrome 72+ or Opera 59+.
+The end user is prompted to grant access to the screen, just as they would be when granting
+access to a camera. You only need a screen-sharing extension for older versions
+of Opera and Chrome.
+</p><p>
+Use the <code>OT.checkScreenSharingCapability()</code> method to check if an extension is
+required, registered, and installed.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set this parameter to <code>&quot;chrome&quot;</code>. Currently, you can only
+register a screen-sharing extension for older versions of Chrome and Opera.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID for your screen-sharing extension. You can find this ID at
+chrome://extensions.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>version</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The version of the screen-sharing extension from the
+screensharing-extensions repo (not available in the Alpha release).
+Set this if you are using version 2 or later. For example, if you are using version 2, set this
+to 2. With version 2, the client can use the extension immediately after installing it, without
+reloading the page.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+        
+            <li><a href="OT.html#checkScreenSharingCapability">OT.checkScreenSharingCapability()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeEventListener"><span class="type-signature">(static) </span>removeEventListener<span class="signature">(type, listener)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    This method is deprecated. Use <a href="#off">off()</a> instead.
+
+<p>
+Removes an event listener for a specific event.
+</p>
+
+<p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event listener function to remove.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="reportIssue"><span class="type-signature">(static) </span>reportIssue<span class="signature">(completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Report that your app experienced an issue. You can use the issue ID with
+<a href="http://tokbox.com/developer/tools/Inspector">Inspector</a> or when discussing
+an issue with the Vonage API support team.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A function that is called when the call to this method
+succeeds or fails. This function has two parameters. The first parameter is an
+<a href="Error.html">Error</a> object that is set when the call to the
+<code>reportIssue()</code> method fails (for example, if the client is not connected to the
+network) or <code>null</code> when the call to the <code>reportIssue()</code> method succeeds.
+The second parameter is set to the report ID (a unique string) when the call succeeds.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setAudioOutputDevice"><span class="type-signature">(static) </span>setAudioOutputDevice<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the new audio output device.
+<p>
+  The method returns a Promise which resolves when the operation completes
+  successfully. If there is an error, the promise is rejected.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getAudioOutputDevices">OT.getAudioOutputDevices()</a></li>
+        
+            <li><a href="#getActiveAudioOutputDevice">OT.getActiveAudioOutputDevice()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes successfully.
+If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setLogLevel"><span class="type-signature">(static) </span>setLogLevel<span class="signature">(logLevel)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the API log level.
+<p>
+Calling <code>OT.setLogLevel()</code> sets the log level for runtime log messages that
+are the Vonage Video library generates. The default value for the log level is
+<code>OT.ERROR</code>.
+</p>
+<p>
+The Vonage Video JavaScript library displays log messages in the debugger console (such as
+Firebug), if one exists.
+</p>
+<p>
+The following example logs the session ID to the console, by calling <code>OT.log()</code>.
+The code also logs an error message when it attempts to publish a stream before you have
+connected to the session (by calling <code>Session.connect()</code>).
+</p>
+<pre>
+OT.setLogLevel(OT.LOG);
+session = OT.initSession(sessionId);
+OT.log(sessionId);
+publisher = OT.initPublisher(&quot;publishContainer&quot;);
+session.publish(publisher);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>logLevel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The degree of logging desired by the developer:
+
+<p>
+<ul>
+  <li>
+    <code>OT.NONE</code> &#x2014; API logging is disabled.
+  </li>
+  <li>
+    <code>OT.ERROR</code> &#x2014; Logging of errors only.
+  </li>
+  <li>
+    <code>OT.WARN</code> &#x2014; Logging of warnings and errors.
+  </li>
+  <li>
+    <code>OT.INFO</code> &#x2014; Logging of other useful information, in addition to
+    warnings and errors.
+  </li>
+  <li>
+    <code>OT.LOG</code> &#x2014; Logging of <code>OT.log()</code> messages, in addition
+    to Vonage Video info, warning,
+    and error messages.
+  </li>
+  <li>
+    <code>OT.DEBUG</code> &#x2014; Fine-grained logging of all API actions, as well as
+    <code>OT.log()</code> messages.
+  </li>
+</ul>
+</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#log">OT.log()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setProxyUrl"><span class="type-signature">(static) </span>setProxyUrl<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the URL of the IP proxy server. With the IP proxy feature, the client
+routes all internet traffic (except for media streams) via your proxy server.
+<p>
+You must call this method before calling any other Vonage Video methods.
+This ensures that the proxy server is used for Vonage Video traffic. Otherwise,
+the call fails, and the <code>OT</code> object dispatches an
+<code>exception</code> event. The <code>OT</code> object also dispatches an
+<code>exception</code> event if you call this method after having
+previously called it.
+</p><p>
+This is available as an add-on feature.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="unblockAudio"><span class="type-signature">(static) </span>unblockAudio<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Causes subscribers&apos; audio to play back in browsers where audio is blocked.
+You must call this method in response to an HTML element dispaching
+a <code>click</code> event.
+<p>
+You only need to call this method if you disable display of
+the Subscriber&apos;s default audio playback icon (by setting the
+<code>style.audioBlockedDisplayMode</code> property of the
+<code>options</code> parameter of the
+<a href="Session.html#subscribe">Session.subscribe()</a> method).
+You may call this method in response to the user clicking an HTML element
+that you display on the page.
+</p><p>
+The Subscriber dispatches an
+<a href="Subscriber.html#event:audioBlocked">audioBlocked</a> event
+if audio is blocked. In response to that event, you can display a UI
+element to notify the end user to respond to playback subscriber audio.
+Call the <code>OT.unblockAudio()</code> method in response to the user
+clicking a DOM element.
+</p><p>
+<i>Note:</i> Subscriber audio is also unblocked automatically if
+the local client gains access to the camera or microphone (for instance,
+in response to a successful call to <code>OT.initPublisher()</code>).
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Subscriber.html#isAudioBlocked">Subscriber.isAudioBlocked()</a></li>
+        
+            <li>The <a href="Subscriber.html#event:audioBlocked">audioBlocked</a>
+and <a href="Subscriber.html#event:audioUnblocked">audioUnblocked</a>
+Subscriber events</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Promise The promise resolves if audio playback succeeds
+on all blocked subscribers. The promise is rejected if playback fails.
+See <a href="Error.html">Error</a> for details.
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="upgradeSystemRequirements"><span class="type-signature">(static) </span>upgradeSystemRequirements<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Displays information about system requirements for Vonage Video for WebRTC. This
+information is displayed in an iframe element that fills the browser window.
+<p>
+<i>Note:</i> this information is displayed automatically when you call the
+<code>OT.initSession()</code> or the <code>OT.initPublisher()</code> method
+if the client does not support Vonage Video for WebRTC.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#checkSystemRequirements">OT.checkSystemRequirements()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:exception">exception</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched by the OT class when the app encounters an exception.
+Note that you set up an event handler for the <code>exception</code> event by calling the
+<code>OT.on()</code> method.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="ExceptionEvent.html">ExceptionEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,5794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Publisher</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Publisher</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Publisher
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Publisher"><span class="type-signature"></span>new Publisher<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    The Publisher object  provides the mechanism through which control of the
+published stream is accomplished. Calling the <code>OT.initPublisher()</code> method
+creates a Publisher object. <p></p>
+
+ <p>The following code instantiates a session, and publishes an audio-video stream
+ upon connection to the session: </p>
+
+ <pre>
+ var apiKey = &apos;&apos;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
+ var sessionID = &apos;&apos;; // Replace with your own session ID.
+                     // See https://developer.vonage.com/video/guides/create-a-session.
+ var token = &apos;&apos;; // Replace with a generated token that has been assigned the moderator role.
+                 // See https://developer.vonage.com/video/guides/create-token/.
+
+ var session = OT.initSession(apiKey, sessionID);
+ session.connect(token, function(error) {
+   if (error) {
+     console.log(error.message);
+   } else {
+     // This example assumes that a DOM element with the ID &apos;publisherElement&apos; exists
+     var publisherProperties = {width: 400, height:300, name:&quot;Bob&apos;s stream&quot;};
+     publisher = OT.initPublisher(&apos;publisherElement&apos;, publisherProperties);
+     session.publish(publisher);
+   }
+ });
+ </pre>
+
+     <p>This example creates a Publisher object and adds its video to a DOM element
+     with the ID <code>publisherElement</code> by calling the <code>OT.initPublisher()</code>
+     method. It then publishes a stream to the session by calling
+     the <code>publish()</code> method of the Session object.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>accessAllowed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether the user has granted access to the camera
+and microphone. The Publisher object dispatches an <code>accessAllowed</code> event when
+the user grants access. The Publisher object dispatches an <code>accessDenied</code> event
+when the user denies access.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Element</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The HTML DOM element containing the Publisher. (<i>Note:</i>
+when you set the <code>insertDefaultUI</code> option to <code>false</code> in the call to
+<a href="OT.html#initPublisher">OT.initPublisher</a>, the <code>element</code> property
+is undefined.)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The DOM ID of the Publisher.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>stream</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Stream.html">Stream</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The <a href="Stream.html">Stream</a> object corresponding the stream of
+the Publisher.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>session</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Session.html">Session</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The <a href="Session.html">Session</a> to which the Publisher belongs.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#initPublisher">OT.initPublisher</a></li>
+        
+            <li><a href="Session.html#publish">Session.publish()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="EventDispatcher.html">EventDispatcher</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+	    <a name="methods"></a><h3 class="subsection-title">Methods</h3>
+
+	    <table class="props method-table">
+	        <thead>
+	            <tr>
+	                <th>Name</th>
+	                <th>Description</th>
+	            </tr>
+	        </thead>
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#addEventListener"><span class="type-signature"></span>addEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#applyVideoFilter"><span class="type-signature"></span>applyVideoFilter</a><span class="signature">(videoFilter)</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Applies a video filter for the publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#clearVideoFilter"><span class="type-signature"></span>clearVideoFilter</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Removes the video filter being applied to the publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#cycleVideo"><span class="type-signature"></span>cycleVideo</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Switches the video input source used by the publisher to the next one in the list
+of available devices.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#destroy"><span class="type-signature"></span>destroy</a><span class="signature">()</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></code></span></td>
+                <td>Deletes the Publisher object and removes it from the HTML DOM.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getAudioSource"><span class="type-signature"></span>getAudioSource</a><span class="signature">()</span><span class="type-signature"> &#x2192; {MediaStreamTrack}</span></code></span></td>
+                <td>Returns the MediaStreamTrack object used as the audio input source for the publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getImgData"><span class="type-signature"></span>getImgData</a><span class="signature">()</span><span class="type-signature"> &#x2192; {String}</span></code></span></td>
+                <td>Returns the base-64-encoded string of PNG data representing the Publisher video.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getRtcStatsReport"><span class="type-signature"></span>getRtcStatsReport</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Returns a promise that, on success, resolves with an array of objects that include
+RTCStatsReport properties for the published stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getStats"><span class="type-signature"></span>getStats</a><span class="signature">(completionHandler)</span><span class="type-signature"></span></code></span></td>
+                <td>Returns the details on the publisher&apos;s stream quality, including the following:
+
+<ul>
+
+  <li>The total number of audio and video packets lost</li>
+  <li>The total number of audio and video packets sent</li>
+  <li>The total number of audio and video bytes sent</li>
+  <li>The current average video frame rate</li>
+
+</ul>
+
+You can use these stats to assess the quality of the publisher&apos;s audio-video stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getStyle"><span class="type-signature"></span>getStyle</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Returns an object that has the properties that define the current user interface controls of
+the Publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getVideoContentHint"><span class="type-signature"></span>getVideoContentHint</a><span class="signature">()</span><span class="type-signature"> &#x2192; {String}</span></code></span></td>
+                <td>Returns the content hint for the video track.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getVideoFilter"><span class="type-signature"></span>getVideoFilter</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Returns the video filter applied used by the publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#getVideoSource"><span class="type-signature"></span>getVideoSource</a><span class="signature">()</span><span class="type-signature"> &#x2192; {VideoSource}</span></code></span></td>
+                <td>Returns an object containing properties defining the publisher&apos;s current
+video source.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#off"><span class="type-signature"></span>off</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Removes an event handler or handlers.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#on"><span class="type-signature"></span>on</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#once"><span class="type-signature"></span>once</a><span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></code></span></td>
+                <td>Adds an event handler function for one or more events.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#publishAudio"><span class="type-signature"></span>publishAudio</a><span class="signature">(value)</span><span class="type-signature"></span></code></span></td>
+                <td>Starts publishing audio (if it is currently not being published)
+when the <code>value</code> is <code>true</code>; stops publishing audio
+(if it is currently being published) when the <code>value</code> is <code>false</code>.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#publishVideo"><span class="type-signature"></span>publishVideo</a><span class="signature">(value)</span><span class="type-signature"></span></code></span></td>
+                <td>Starts publishing video (if it is currently not being published)
+when the <code>value</code> is <code>true</code>; stops publishing video
+(if it is currently being published) when the <code>value</code> is <code>false</code>.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#removeEventListener"><span class="type-signature"></span>removeEventListener</a><span class="signature">(type, listener, context)</span><span class="type-signature"></span></code></span></td>
+                <td></td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setAudioSource"><span class="type-signature"></span>setAudioSource</a><span class="signature">(audioSource)</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>Switches the audio input source used by the publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setStyle"><span class="type-signature"></span>setStyle</a><span class="signature">(style, value)</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></code></span></td>
+                <td>Sets properties that define the appearance of some user interface controls of the Publisher.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setVideoContentHint"><span class="type-signature"></span>setVideoContentHint</a><span class="signature">(videoContentHint)</span><span class="type-signature"></span></code></span></td>
+                <td>Sets the content hint for the video track of the publisher&apos;s stream.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#setVideoSource"><span class="type-signature"></span>setVideoSource</a><span class="signature">(videoSourceId)</span><span class="type-signature"> &#x2192; {Promise}</span></code></span></td>
+                <td>This method sets the video source for a publisher that is using a camera.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#videoHeight"><span class="type-signature"></span>videoHeight</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></code></span></td>
+                <td>Returns the height, in pixels, of the Publisher video.</td>
+            </tr>
+
+	        
+	            
+            <tr>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#videoWidth"><span class="type-signature"></span>videoWidth</a><span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></code></span></td>
+                <td>Returns the width, in pixels, of the Publisher video.</td>
+            </tr>
+
+	        
+	    </table>
+
+        
+            
+
+    
+
+    <h4 class="name" id="addEventListener"><span class="type-signature"></span>addEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The function to be invoked when the object dispatches the event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#on">on()</a> or <a href="#once">once()</a> instead.
+<p>
+This method registers a method as an event listener for a specific event.
+</p><p>
+
+</p><p>
+  If a handler is not registered for an event, the event is ignored locally. If the
+  event listener function does not exist, the event is ignored locally.
+</p>
+<p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="applyVideoFilter"><span class="type-signature"></span>applyVideoFilter<span class="signature">(videoFilter)</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Applies a video filter for the publisher. You can apply a background blur filter.  A
+publisher can have only one (or zero) applied at one time.  When you set a new
+filter, a previously set filter is removed.
+
+<p>
+<em>Note:</em> Video filters are only supported in recent versions of Chrome, Electron, Opera, and Edge.
+They are not supported in other (non-Chromium-based) browsers or on iOS.  You can check if the client
+supports this feature by calling the
+<a href="OT.html#hasMediaProcessorSupport">OT.hasMediaProcessorSupport()</a> method.
+
+</p><p>
+Calling this method results in an error (the Promise returned by the method is rejected)
+in the following conditions:
+<ul>
+  <li>
+    The browser does not support this method.
+  </li>
+  <li>
+    The publisher is not using a camera video source. (The <code>videoSource</code>
+    option of the <a href="OT.html#initPublisher">OT.initPublisher()</a> method was
+    set to <code>null</code>, <code>false</code>, a MediaStreamTrack object, or
+    <code>&quot;screen&quot;</code>).
+  </li>
+  <li>
+    There are no video input devices (cameras) available.
+  </li>
+  <li>
+    There was an error acquiring video from the video input device.
+  </li>
+  <li>
+    There was an error applying the transformation filter.
+  </li>
+ </ul>
+</p>
+
+<p>
+You can also set the initial video filter by setting a <code>videoFilter</code> option
+when calling <a href="OT.html#initPublisher">OT.initPublisher()</a>.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>videoFilter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object defining the video filter to be applied. The following
+filters are supported:
+<ul>
+  <li>
+    <p>
+    <em>Background blur filter:</em> &#x2014; Set the <code>type</code> property of the object to
+    <code>&quot;backgroundBlur&quot;</code>.
+    </p><p>
+    A background blur filter object includes an additional <code>blurStrength</code> property, which
+    defines the blur radius and is optional. Set this to either <code>&quot;low&quot;</code> or
+    <code>&quot;high&quot;</code> (the default).
+  </p></li>
+  <li>
+    <p>
+    <em>Background replacement filter</em> &#x2014; Set the <code>type</code> property of the object to
+    <code>&quot;backgroundReplacement&quot;</code>.
+    </p><p>
+    A background replacement filter object includes an additional <code>backgroundImgUrl</code> property,
+    which defines the URL of the background image to use. Also accepted are image BLOBs
+    (a Base64-encoded string of image data).
+    The following image formats are supported: BMP, PNG, JPEG, and GIF.
+    </p><p>
+    This is a <em>beta</em> feature.
+  </p></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#hasMediaProcessorSupport">OT.hasMediaProcessorSupport()</a></li>
+        
+            <li><a href="Publisher.html#getVideoFilter">Publisher.getVideoFilter()</a></li>
+        
+            <li><a href="Publisher.html#clearVideoFilter">Publisher.clearVideoFilter()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes successfully.
+If there is an error, the promise is rejected and no new video filter is set.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="clearVideoFilter"><span class="type-signature"></span>clearVideoFilter<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes the video filter being applied to the publisher.
+
+<p>
+This will result in an error (the Promise returned by the method is rejected) if the
+video filter could not be stopped.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#hasMediaProcessorSupport">OT.hasMediaProcessorSupport()</a></li>
+        
+            <li><a href="Publisher.html#applyVideoFilter">Publisher.applyVideoFilter()</a></li>
+        
+            <li><a href="Publisher.html#getVideoFilter">Publisher.getVideoFilter()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes successfully.
+If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="cycleVideo"><span class="type-signature"></span>cycleVideo<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Switches the video input source used by the publisher to the next one in the list
+of available devices.
+<p>
+This will result in an error (the Promise returned by the method is rejected) in the
+following conditions:
+<ul>
+  <li>
+    The user denied access to the video input device.
+  </li>
+  <li>
+    The publisher is not using a camera video source. (The <code>videoSource</code>
+    option of the <a href="OT.html#initPublisher">OT.initPublisher()</a> method was
+    set to <code>null</code>, <code>false</code>, a MediaStreamTrack object, or
+    <code>&quot;screen&quot;</code>).
+  </li>
+  <li>
+    There are no video input devices (cameras) available.
+  </li>
+  <li>
+    There was an error acquiring video from the video input device.
+  </li>
+ </ul>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setVideoSource">Publisher.setVideoSource()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes
+successfully. The promise resolves with an object that has a
+<code>deviceId</code> property set to the device ID of the camera used:
+
+<pre>
+  publisher.cycleVideo().then(console.log);
+  // Output: {deviceId: &quot;967a86e52...&quot;}
+</pre>
+
+If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span class="signature">()</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Deletes the Publisher object and removes it from the HTML DOM.
+<p>
+The Publisher object dispatches a <code>destroyed</code> event when the DOM
+element is removed.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Publisher.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Publisher.html">Publisher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getAudioSource"><span class="type-signature"></span>getAudioSource<span class="signature">()</span><span class="type-signature"> &#x2192; {MediaStreamTrack}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the MediaStreamTrack object used as the audio input source for the publisher.
+If the publisher does not have an audio source, this method returns null.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setAudioSource">Publisher.setAudioSource()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The audio source for the publisher (or null, if there is none).
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">MediaStreamTrack</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getImgData"><span class="type-signature"></span>getImgData<span class="signature">()</span><span class="type-signature"> &#x2192; {String}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the base-64-encoded string of PNG data representing the Publisher video.
+
+  <p>You can use the string as the value for a data URL scheme passed to the src parameter of
+  an image file, as in the following:</p>
+
+<pre>
+ var imgData = publisher.getImgData();
+
+ var img = document.createElement(&quot;img&quot;);
+ img.setAttribute(&quot;src&quot;, &quot;data:image/png;base64,&quot; + imgData);
+ var imgWin = window.open(&quot;about:blank&quot;, &quot;Screenshot&quot;);
+ imgWin.document.write(&quot;&lt;body&gt;&lt;/body&gt;&quot;);
+ imgWin.document.body.appendChild(img);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The base-64 encoded string. Returns an empty string if there is no video.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getRtcStatsReport"><span class="type-signature"></span>getRtcStatsReport<span class="signature">()</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns a promise that, on success, resolves with an array of objects that include
+RTCStatsReport properties for the published stream. (See
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport" target="_blank">
+RTCStatsReport</a>.)
+
+<p>
+For a publisher in a routed session (one that uses the
+<a href="https://developer.vonage.com/video/guides/create-a-session/">Vonage Video
+Media Router</a>), this array includes one object, defining the statistics for the single
+audio-media stream that is sent to the Vonage Video Media Router. In a relayed session, the
+array includes an object for each subscriber to the published stream. Each object in the
+array contains an <code>rtcStatsReport</code> property that is a RTCStatsReport object.
+
+</p><p>
+Additionally, for a publisher in a relayed session, each object in the array contains
+the following two properties:
+
+    <ul>
+
+      <li><code>connectionId</code> (String) &#x2014; The unique ID of the client&apos;s
+      connection, which matches the <code>id</code> property of the <code>connection</code>
+      property of the <a href="Session.html#.event:connectionCreated">connectionCreated</a>
+      event that the Session object dispatched for the remote client.</li>
+
+      <li><code>subscriberId</code> (String) &#x2014; The unique ID of the subscriber, which
+      matches the <code>id</code> property of the Subscriber object in the subscribing
+      client&apos;s app.</li>
+
+    </ul>
+
+</p><p>
+These two properties are undefined for a publisher in a routed session.
+
+</p><p>
+The Promise will be rejected in the following conditions:
+<ul>
+  <li>
+    The browser does not support this method (for example, in Chrome version 57 and lower,
+    which does not support the <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats" target="_blank">
+    RTCPeerConnection.getStats()</a> standard).
+  </li>
+  <li>
+    The <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection" target="_blank">
+    PeerConnection</a> for the Publisher is not connected.
+  </li>
+ </ul>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Subscriber.html#getRtcStatsReport">Subscriber.getRtcStatsReport()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes successfully.
+If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getStats"><span class="type-signature"></span>getStats<span class="signature">(completionHandler)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the details on the publisher&apos;s stream quality, including the following:
+
+<ul>
+
+  <li>The total number of audio and video packets lost</li>
+  <li>The total number of audio and video packets sent</li>
+  <li>The total number of audio and video bytes sent</li>
+  <li>The current average video frame rate</li>
+
+</ul>
+
+You can use these stats to assess the quality of the publisher&apos;s audio-video stream.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>completionHandler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A function that takes the following
+parameters:
+
+<ul>
+
+  <li><code>error</code> (<a href="Error.html">Error</a>) &#x2014; Upon successful completion
+  the method, this is undefined. An error results if the publisher is not connected to a
+  session or if it is not publishing audio or video.</li>
+
+  <li><code>statsArray</code> (Array) &#x2014; An array of objects defining the current
+  audio-video statistics for the publisher. For a publisher in a routed session (one that
+  uses the <a href="https://developer.vonage.com/video/guides/create-a-session">Vonage Video
+  Media Router</a>), this array includes one object, defining the statistics for the single
+  audio-media stream that is sent to the Vonage Video Media Router. In a relayed session, the
+  array includes an object for each subscriber to the published stream. Each object in the
+  array contains a <code>stats</code> property that includes the following properties:
+
+    <p>
+    <ul>
+      <li><code>audio.bytesSent</code> (Number) &#x2014; The total number of audio bytes
+        sent to the subscriber (or to the Vonage Video Media Router)</li>
+
+      <li><code>audio.packetsLost</code> (Number) &#x2014; The total number audio packets
+       that did not reach the subscriber (or to the Vonage Video Media Router)</li>
+
+      <li><code>audio.packetsSent</code> (Number) &#x2014; The total number of audio
+       packets sent to the subscriber (or to the Vonage Video Media Router)</li>
+
+      <li><code>timestamp</code> (Number) &#x2014; The timestamp, in milliseconds since
+        the Unix epoch, for when these stats were gathered</li>
+
+      <li><code>video.bytesSent</code> (Number) &#x2014; The total video bytes sent to
+        the subscriber (or to the Vonage Video Media Router)</li>
+
+      <li><code>video.packetsLost</code> (Number) &#x2014; The total number of video packets
+        that did not reach the subscriber (or to the Vonage Video Media Router)</li>
+
+      <li><code>video.packetsSent</code> (Number) &#x2014; The total number of video
+        packets sent to the subscriber</li>
+
+      <li><code>video.frameRate</code> (Number) &#x2014; The current average video frame rate</li>
+    </ul>
+
+    </p><p>Additionally, for a publisher in a relayed session, each object in the array contains
+    the following two properties:
+
+    <ul>
+      <li><code>connectionId</code> (String) &#x2014; The unique ID of the client&apos;s
+      connection, which matches the <code>id</code> property of the <code>connection</code>
+      property of the <a href="Session.html#.event:connectionCreated">connectionCreated</a>
+      event that the Session object dispatched for the remote client.</li>
+
+      <li><code>subscriberId</code> (String) &#x2014; The unique ID of the subscriber, which
+      matches the <code>id</code> property of the Subscriber object in the subscribing
+      client&apos;s app.</li>
+    </ul>
+
+    </p><p>These two properties are undefined for a publisher in a routed session.
+
+  </p></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Subscriber.html#getStats">Subscriber.getStats()</a></li>
+        
+            <li><a href="#getRtcStatsReport">Publisher.getRtcStatsReport()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getStyle"><span class="type-signature"></span>getStyle<span class="signature">()</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns an object that has the properties that define the current user interface controls of
+the Publisher. You can modify the properties of this object and pass the object to the
+<code>setStyle()</code> method of thePublisher object. (See the documentation for
+<a href="#setStyle">setStyle()</a> to see the styles that define this object.)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setStyle">setStyle()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that defines the styles of the Publisher.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getVideoContentHint"><span class="type-signature"></span>getVideoContentHint<span class="signature">()</span><span class="type-signature"> &#x2192; {String}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the content hint for the video track.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setVideoContentHint">Publisher.setVideoContentHint()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    One of the following values: <code>&quot;&quot;</code>,
+        <code>&quot;motion&quot;</code>, <code>&quot;detail</code>, or <code>&quot;text&quot;</code>.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getVideoFilter"><span class="type-signature"></span>getVideoFilter<span class="signature">()</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the video filter applied used by the publisher.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#hasMediaProcessorSupport">OT.hasMediaProcessorSupport()</a></li>
+        
+            <li><a href="Publisher.html#applyVideoFilter">Publisher.applyVideoFilter()</a></li>
+        
+            <li><a href="Publisher.html#clearVideoFilter">Publisher.clearVideoFilter()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The video filter being applied to the video input source used by the publisher.
+Check the <code>type</code> property of the object to see the video filter type. The following
+filters are supported:
+  <ul>
+    <li><em>Background blur filter</em> &#x2014; The <code>type</code> property of the object
+      is set to <code>&quot;backgroundBlur&quot;</code>. A background blur
+      filter object includes an additional <code>blurStrength</code> property, which
+      defines the blur radius, set to either <code>&quot;low&quot;</code> or <code>&quot;high&quot;</code>.
+    </li>
+    <li><em>Background replacement filter</em> &#x2014; The <code>type</code> type property
+       of the object is set to <code>&quot;backgroundReplacement&quot;</code>.
+      A background replacement filter object includes an additional <code>backgroundImgUrl</code>
+      property, which defines the URL of the background image to use.
+      This is a <em>beta</em> feature.
+    </li>
+  </ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getVideoSource"><span class="type-signature"></span>getVideoSource<span class="signature">()</span><span class="type-signature"> &#x2192; {VideoSource}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns an object containing properties defining the publisher&apos;s current
+video source.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#setVideoSource">Publisher.setVideoSource()</a></li>
+        
+            <li><a href="#setVideoSource">OT.initPublisher()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The return object has the following properties:
+
+<p>
+<ul>
+  <li><code>deviceId</code> (String | null) &#x2014; The device ID.</li>
+  <li><code>type</code> (String | null) &#x2014; This is set to
+  &apos;camera&apos; (for a  camera-based video), &apos;screen&apos; (for a screen-sharing video),
+  or &apos;custom&apos; (for a video  with a MediaStreamTrack source). </li>
+  <li><code>track</code> (MediaStreamTrack | null) &#x2014; The
+  MediaStreamTrack for the video.</li>
+</ul>
+</p><p>
+Any inapplicable properties will be set to null.
+</p></div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">VideoSource</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="off"><span class="type-signature"></span>off<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Removes an event handler or handlers.
+
+<p>If you pass in one event name and a handler method, the handler is removed for that
+event:</p>
+
+<pre>obj.off(&quot;eventName&quot;, eventHandler);</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is removed for
+those events:</p>
+
+<pre>obj.off(&quot;eventName1 eventName2&quot;, eventHandler);</pre>
+
+<p>If you pass in an event name (or names) and <i>no</i> handler method, all handlers are
+removed for those events:</p>
+
+<pre>obj.off(&quot;event1Name event2Name&quot;);</pre>
+
+<p>If you pass in no arguments, <i>all</i> event handlers are removed for all events
+dispatched by the object:</p>
+
+<pre>obj.off();</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is
+the context for this in each handler:
+</p>
+<pre>
+obj.off(
+   {
+      eventName1: event1Handler,
+      eventName2: event2Handler
+   });
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The string identifying the type of event. You can
+use a space to specify multiple events, as in &quot;accessAllowed accessDenied
+accessDialogClosed&quot;. If you pass in no <code>type</code> value (or other arguments),
+all event handlers are removed for the object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) The event handler function to remove. The handler
+must be the same function object as was passed into <code>on()</code>. Be careful with
+helpers like <code>bind()</code> that return a new function when called. If you pass in
+no <code>handler</code>, all event handlers are removed for the specified event
+<code>type</code>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event handler
+is removed for all specified events and handlers that use the specified context. (The
+context must match the context passed into <code>on()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="on"><span class="type-signature"></span>on<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {<a href="EventDispatcher.html">EventDispatcher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events.
+
+<p>
+The following code adds an event handler for one event:
+</p>
+
+<pre>
+obj.on(&quot;eventName&quot;, function (event) {
+    // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is
+registered for each of those events:</p>
+
+<pre>
+obj.on(&quot;eventName1 eventName2&quot;,
+       function (event) {
+           // This is the event handler.
+       });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to
+define the value of <code>this</code> in the handler method:</p>
+
+<pre>obj.on(&quot;eventName&quot;,
+       function (event) {
+           // This is the event handler.
+       },
+       obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object
+that is a hash map of event names and handler functions and the second parameter (optional)
+is the context for this in each handler:
+</p>
+<pre>
+obj.on(
+   {
+      eventName1: function (event) {
+              // This is the handler for eventName1.
+          },
+      eventName2:  function (event) {
+              // This is the handler for eventName2.
+          }
+   },
+   obj);
+</pre>
+
+<p>
+If you do not add a handler for an event, the event is ignored locally.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple event
+names in this string, separating them with a space. The event handler will process each of
+the events.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#once">once()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The EventDispatcher object.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="EventDispatcher.html">EventDispatcher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="once"><span class="type-signature"></span>once<span class="signature">(type, handler, context)</span><span class="type-signature"> &#x2192; {Object}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an event handler function for one or more events. Once the handler is called,
+the specified handler method is removed as a handler for this event. (When you use
+the <code>on()</code> method to add an event handler, the handler is <i>not</i>
+removed when it is called.) The <code>once()</code> method is the equivilent of
+calling the <code>on()</code>
+method and calling <code>off()</code> the first time the handler is invoked.
+
+<p>
+The following code adds a one-time event handler for one event:
+</p>
+
+<pre>
+obj.once(&quot;eventName&quot;, function (event) {
+   // This is the event handler.
+});
+</pre>
+
+<p>If you pass in multiple event names and a handler method, the handler is registered
+for each of those events:</p>
+
+<pre>obj.once(&quot;eventName1 eventName2&quot;
+         function (event) {
+             // This is the event handler.
+         });
+</pre>
+
+<p>You can also pass in a third <code>context</code> parameter (which is optional) to define
+the value of
+<code>this</code> in the handler method:</p>
+
+<pre>obj.once(&quot;eventName&quot;,
+         function (event) {
+             // This is the event handler.
+         },
+         obj);
+</pre>
+
+<p>
+The method also supports an alternate syntax, in which the first parameter is an object that
+is a hash map of event names and handler functions and the second parameter (optional) is the
+context for this in each handler:
+</p>
+<pre>
+obj.once(
+   {
+      eventName1: function (event) {
+                 // This is the event handler for eventName1.
+          },
+      eventName2:  function (event) {
+                 // This is the event handler for eventName1.
+          }
+   },
+   obj);
+</pre>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event. You can specify multiple
+event names in this string, separating them with a space. The event handler will process
+the first occurence of the events. After the first event, the handler is removed (for
+all specified events).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The handler function to process the event. This function takes
+the event object as a parameter.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) Defines the value of <code>this</code> in the event
+handler function.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#on">on()</a></li>
+        
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The object that dispatched the event.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="publishAudio"><span class="type-signature"></span>publishAudio<span class="signature">(value)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Starts publishing audio (if it is currently not being published)
+when the <code>value</code> is <code>true</code>; stops publishing audio
+(if it is currently being published) when the <code>value</code> is <code>false</code>.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether to start publishing audio (<code>true</code>)
+or not (<code>false</code>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+        
+            <li><a href="Stream.html#hasAudio">Stream.hasAudio</a></li>
+        
+            <li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="publishVideo"><span class="type-signature"></span>publishVideo<span class="signature">(value)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Starts publishing video (if it is currently not being published)
+when the <code>value</code> is <code>true</code>; stops publishing video
+(if it is currently being published) when the <code>value</code> is <code>false</code>.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether to start publishing video (<code>true</code>)
+or not (<code>false</code>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+        
+            <li><a href="Stream.html#hasVideo">Stream.hasVideo</a></li>
+        
+            <li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="removeEventListener"><span class="type-signature"></span>removeEventListener<span class="signature">(type, listener, context)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string identifying the type of event.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event listener function to remove.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">(Optional) If you specify a <code>context</code>, the event
+handler is removed for all specified events and event listeners that use the specified
+     context. (The context must match the context passed into
+<code>addEventListener()</code>.)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>use <a href="#off">off()</a> instead.
+<p>
+Removes an event listener for a specific event.
+</p><p>
+
+</p><p>
+  Throws an exception if the <code>listener</code> name is invalid.
+</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#off">off()</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setAudioSource"><span class="type-signature"></span>setAudioSource<span class="signature">(audioSource)</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Switches the audio input source used by the publisher. You can set the
+<code>audioSource</code> to a device ID (string) or audio MediaStreamTrack object.
+<p>
+This will result in an error (the Promise returned by the method is rejected) in the
+following conditions:
+<ul>
+  <li>
+    The browser does not support this method. This method is not supported in
+    Internet Explorer or non-Chromium versions of Edge (older than version 79).
+  </li>
+  <li>
+    The publisher was not initiated with an audio source. (The <code>audioSource</code>
+    option of the <a href="OT.html#initPublisher">OT.initPublisher()</a> method was
+    set to <code>null</code> or <code>false</code>).
+  </li>
+  <li>
+    The user denied access to the audio input device.
+  </li>
+  <li>
+    There was an error acquiring audio from the audio input device or MediaStreamTrack
+    object.
+  </li>
+  <li>
+    The <code>audioSource</code> value is not a string or MediaStreamTrack object.
+  </li>
+  <li>
+    The <code>audioSource</code> string is not a valid audio input device available
+    to the browser.
+  </li>
+ </ul>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>audioSource</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The device ID (string) of an audio input device, or an audio
+MediaStreamTrack object.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getAudioSource">Publisher.getAudioSource()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves when the operation completes successfully.
+If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setStyle"><span class="type-signature"></span>setStyle<span class="signature">(style, value)</span><span class="type-signature"> &#x2192; {<a href="Publisher.html">Publisher</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets properties that define the appearance of some user interface controls of the Publisher.
+
+<p>You can either pass one parameter or two parameters to this method.</p>
+
+<p>If you pass one parameter, <code>style</code>, it is an object that has the following
+properties:
+
+    <ul>
+      <li><code>audioLevelDisplayMode</code> (String) &#x2014; How to display the audio level
+      indicator. Possible values are: <code>&quot;auto&quot;</code> (the indicator is displayed when the
+      video is disabled), <code>&quot;off&quot;</code> (the indicator is not displayed), and
+      <code>&quot;on&quot;</code> (the indicator is always displayed).</li>
+
+      <li><code>archiveStatusDisplayMode</code> (String) &#x2014; How to display the archive
+      status indicator. Possible values are: <code>&quot;auto&quot;</code> (the indicator is displayed
+      when the session is being recorded), <code>&quot;off&quot;</code> (the indicator is not displayed).
+      If you disable the archive status display indicator, you can display your own user
+      interface notifications based on the <code>archiveStarted</code> and
+      <code>archiveStopped</code> events dispatched by the Session object.</li>
+
+      <li><code>backgroundImageURI</code> (String) &#x2014; A URI for an image to display as
+      the background image when a video is not displayed. (A video may not be displayed if
+      you call <code>publishVideo(false)</code> on the Publisher object). You can pass an http
+      or https URI to a PNG, JPEG, or non-animated GIF file location. You can also use the
+      <code>data</code> URI scheme (instead of http or https) and pass in base-64-encrypted
+      PNG data, such as that obtained from the <a href="Publisher.html#getImgData">
+      Publisher.getImgData()</a> method (for example, you could call
+      <code>myPublisher.setStyle(&quot;backgroundImageURI&quot;, myPublisher.getImgData())</code>).
+      If the URL or the image data is invalid, the property is ignored (the attempt to set
+      the image fails silently).</li>
+
+      <li><code>buttonDisplayMode</code> (String) &#x2014; How to display the microphone
+      controls. Possible values are: <code>&quot;auto&quot;</code> (controls are displayed when the
+      stream is first displayed and when the user mouses over the display), <code>&quot;off&quot;</code>
+      (controls are not displayed), and <code>&quot;on&quot;</code> (controls are always displayed).</li>
+
+      <li><code>nameDisplayMode</code> (String) &#x2014; Whether to display the stream name.
+      Possible values are: <code>&quot;auto&quot;</code> (the name is displayed when the stream is first
+      displayed and when the user mouses over the display), <code>&quot;off&quot;</code> (the name is not
+      displayed), and <code>&quot;on&quot;</code> (the name is always displayed).</li>
+  </ul>
+</p>
+
+<p>For example, the following code passes one parameter to the method:</p>
+
+<pre>myPublisher.setStyle({nameDisplayMode: &quot;off&quot;});</pre>
+
+<p>If you pass two parameters, <code>style</code> and <code>value</code>, they are
+key-value pair that define one property of the display style. For example, the following
+code passes two parameter values to the method:</p>
+
+<pre>myPublisher.setStyle(&quot;nameDisplayMode&quot;, &quot;off&quot;);</pre>
+
+<p>You can set the initial settings when you call the <code>Session.publish()</code>
+or <code>OT.initPublisher()</code> method. Pass a <code>style</code> property as part of the
+<code>properties</code> parameter of the method.</p>
+
+<p>The OT object dispatches an <code>exception</code> event if you pass in an invalid style
+to the method. The <code>code</code> property of the ExceptionEvent object is set to 1011.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>style</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Either an object containing properties that define the style, or a
+String defining this single style property to set.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to set for the <code>style</code> passed in. Pass a value
+for this parameter only if the value of the <code>style</code> parameter is a String.<p></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getStyle">getStyle()</a></li>
+        
+            <li><a href="#setStyle">setStyle()</a></li>
+        
+            <li><a href="Session.html#subscribe">Session.publish()</a></li>
+        
+            <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Publisher object
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Publisher.html">Publisher</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setVideoContentHint"><span class="type-signature"></span>setVideoContentHint<span class="signature">(videoContentHint)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Sets the content hint for the video track of the publisher&apos;s stream. This allows browsers
+to use encoding or processing methods more appropriate to the type of content.
+<p>
+Use this method to change the video content hit dynamically. Set the initial video content
+hit by setting the <code>videoContentHint</code> property of the options passed into the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method.
+</p><p>
+Chrome 60+, Safari 12.1+, Edge 79+, and Opera 47+ support video content hints.
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>videoContentHint</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">You can set this to one of the following values:
+   <p>
+   <ul>
+     <li>
+       <code>&quot;&quot;</code> &#x2014; No hint is provided.
+     </li>
+     <li>
+       <code>&quot;motion&quot;</code> &#x2014; The track should be treated as if it contains video
+       where motion is important. For example, you may use this setting for a screen-sharing
+       stream that contains video.
+     </li>
+     <li>
+       <code>&quot;detail&quot;</code> &#x2014; The track should be treated as if video details
+       are extra important. For example, you may use this setting for a screen-sharing
+       stream that contains text content, painting, or line art.
+     </li>
+     <li>
+       <code>&quot;text&quot;</code> &#x2014; The track should be treated as if text details are
+       extra important. For example, you may use this setting for a screen-sharing
+       stream that contains text content.
+     </li>
+   </ul></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="#getVideoContentHint">Publisher.getVideoContentHint()</a></li>
+        
+            <li><a href="OT.html#initPublisher">OT.initPublisher()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setVideoSource"><span class="type-signature"></span>setVideoSource<span class="signature">(videoSourceId)</span><span class="type-signature"> &#x2192; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    This method sets the video source for a publisher that is using a camera.
+Pass in the device ID of the new video source.
+
+<p>
+The following will result in errors:
+
+<ul>
+<li>If the <code>videoSourceId</code> parameter is not a string
+or the device ID for a valid video input device, the promise
+will reject with an error with the <code>name</code> property
+set to <code>&apos;OT_INVALID_VIDEO_SOURCE&apos;</code>.
+</li>
+
+<li>If the publisher does not currently use a camera input, the promise
+will reject with an error with the <code>name</code> property
+set to <code>&apos;OT_SET_VIDEO_SOURCE_FAILURE&apos;</code>.
+</li>
+</ul>
+</p></div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>videoSourceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The device ID of a video input (camera) device.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OT.html#getDevices">OT.getDevices()</a></li>
+        
+            <li><a href="#getVideoSource">Publisher.getVideoSource()</a></li>
+        
+            <li><a href="#cycleVideo">Publisher.cycleVideo()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that resolves with no value when the operation
+completes successfully. If there is an error, the promise is rejected.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="videoHeight"><span class="type-signature"></span>videoHeight<span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the height, in pixels, of the Publisher video. This may differ from the
+<code>resolution</code> property passed in as the <code>properties</code> property
+the options passed into the <code>OT.initPublisher()</code> method, if the browser
+does not support the requested resolution.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the height, in pixels, of the Publisher video.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="videoWidth"><span class="type-signature"></span>videoWidth<span class="signature">()</span><span class="type-signature"> &#x2192; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns the width, in pixels, of the Publisher video. This may differ from the
+<code>resolution</code> property passed in as the <code>properties</code> property
+the options passed into the <code>OT.initPublisher()</code> method, if the browser
+does not support the requested resolution.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the width, in pixels, of the Publisher video.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:accessAllowed">accessAllowed</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the user has clicked the Allow button, granting the
+app access to the camera and microphone. The Publisher object has an
+<code>accessAllowed</code> property which indicates whether the user
+has granted access to the camera and microphone.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:accessDenied">accessDenied</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the user has clicked the Deny button, preventing the
+app from having access to the camera and microphone.
+<p>
+<i>Note:</i> On macOS 10.15+ (Catalina), to publish a screen-sharing stream
+the user must grant the browser access to the screen in macOS System Preferences &gt;
+Security &amp; Privacy &gt; Privacy &gt; Screen Recording. Otherwise,
+the Publisher will dispatch an <code>accessDenied</code> event.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:accessDialogClosed">accessDialogClosed</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Allow/Deny box is closed. (This is the dialog box in which the
+user can grant the app access to the camera and microphone.)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:accessDialogOpened">accessDialogOpened</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Allow/Deny dialog box is opened. (This is the dialog box in which
+the user can grant the app access to the camera and microphone.)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:audioLevelUpdated">audioLevelUpdated</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched periodically to indicate the publisher&apos;s audio level. The event is dispatched
+up to 60 times per second, depending on the browser. The <code>audioLevel</code> property
+of the event is audio level, from 0 to 1.0. See <a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a> for more
+information.
+<p>
+The following example adjusts the value of a meter element that shows volume of the
+publisher. Note that the audio level is adjusted logarithmically and a moving average
+is applied:
+</p><p>
+<pre>
+var movingAvg = null;
+publisher.on(&apos;audioLevelUpdated&apos;, function(event) {
+  if (movingAvg === null || movingAvg &lt;= event.audioLevel) {
+    movingAvg = event.audioLevel;
+  } else {
+    movingAvg = 0.7 * movingAvg + 0.3 * event.audioLevel;
+  }
+
+  // 1.5 scaling to map the -30 - 0 dBm range to [0,1]
+  var logLevel = (Math.log(movingAvg) / Math.LN10) / 1.5 + 1;
+  logLevel = Math.min(Math.max(logLevel, 0), 1);
+  document.getElementById(&apos;publisherMeter&apos;).value = logLevel;
+});
+</pre>
+</p><p>This example shows the algorithm used by the default audio level indicator displayed
+in an audio-only Publisher.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:destroyed">destroyed</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Publisher element is removed from the HTML DOM. When this event
+is dispatched, you may choose to adjust or remove HTML DOM elements related to the publisher.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:mediaStopped">mediaStopped</h4>
+
+    
+
+
+
+<div class="description">
+    The user publishing the stream has stopped sharing one or all media
+types (video, audio and/or screen). This can occur when a user disconnects a camera or
+microphone used as a media source for the Publisher. Or it can occur when a user closes
+a when the video and audio sources of the stream are MediaStreamTrack elements and
+tracks are stopped or destroyed.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:muteForced">muteForced</h4>
+
+    
+
+
+
+<div class="description">
+    A moderator has forced this client to mute audio.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="Event.html">Event</a></li>
+        
+            <li><a href="Session.html#forceMuteAll">Session.forceMuteAll()</a></li>
+        
+            <li><a href="Session.html#forceMuteStream">Session.forceMuteStream()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:streamCreated">streamCreated</h4>
+
+    
+
+
+
+<div class="description">
+    The publisher has started streaming to the session.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="StreamEvent.html">StreamEvent</a></li>
+        
+            <li><a href="Session.html#publish">Session.publish()</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:streamDestroyed">streamDestroyed</h4>
+
+    
+
+
+
+<div class="description">
+    The publisher has stopped streaming to the session. The default behavior is that
+the Publisher object is removed from the HTML DOM. The Publisher object dispatches a
+<code>destroyed</code> event when the element is removed from the HTML DOM. If you call the
+<code>preventDefault()</code> method of the event object in the event listener, the default
+behavior is prevented, and you can, optionally, retain the Publisher for reuse or clean it up
+using your own code.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="StreamEvent.html">StreamEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoDimensionsChanged">videoDimensionsChanged</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the video dimensions of the video change. This can only occur in when the
+<code>stream.videoType</code> property is set to <code>&quot;screen&quot;</code> (for a screen-sharing
+video stream), when the user resizes the window being captured. This event object has a
+<code>newValue</code> property and an <code>oldValue</code> property, representing the new and
+old dimensions of the video. Each of these has a <code>height</code> property and a
+<code>width</code> property, representing the height and width, in pixels.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="event:videoElementCreated">videoElementCreated</h4>
+
+    
+
+
+
+<div class="description">
+    Dispatched when the Publisher&apos;s video element is created. Add a listener for this event when
+you set the <code>insertDefaultUI</code> option to <code>false</code> in the call to the
+<a href="OT.html#initPublisher">OT.initPublisher()</a> method. The <code>element</code>
+property of the event object is a reference to the Publisher&apos;s <code>video</code> element
+(or in Internet Explorer the <code>object</code> element containing the video). Add it to
+the HTML DOM to display the video. When you set the <code>insertDefaultUI</code> option to
+<code>false</code>, the <code>video</code> (or <code>object</code>) element is not
+automatically inserted into the DOM.
+<p>
+Add a listener for this event only if you have set the <code>insertDefaultUI</code> option to
+<code>false</code>. If you have not set <code>insertDefaultUI</code> option to
+<code>false</code>, do not move the <code>video</code> (or <code>object</code>) element in
+in the HTML DOM. Doing so causes the Publisher object to be destroyed.
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

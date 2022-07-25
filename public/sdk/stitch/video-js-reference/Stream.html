@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Stream</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Stream</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Stream
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Stream"><span class="type-signature"></span>new Stream<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Specifies a stream. A stream is a representation of a published stream in a session. When a
+client calls the <a href="Session.html#publish">Session.publish() method</a>, a new stream is
+created. Properties of the Stream object provide information about the stream.
+
+ <p>When a stream is added to a session, the Session object dispatches a
+<code>streamCreatedEvent</code>. When a stream is destroyed, the Session object dispatches a
+<code>streamDestroyed</code> event. The StreamEvent object, which defines these event objects,
+has a <code>stream</code> property, which is an array of Stream object. For details and a code
+example, see <a href="StreamEvent.html">StreamEvent</a>.</p>
+
+ <p>When a connection to a session is made, the Session object dispatches a
+<code>sessionConnected</code> event, defined by the SessionConnectEvent object. The
+SessionConnectEvent object has a <code>streams</code> property, which is an array of Stream
+objects pertaining to the streams in the session at that time. For details and a code example,
+see <a href="SessionConnectEvent.html">SessionConnectEvent</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>connection</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Connection.html">Connection</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The Connection object corresponding
+to the connection that is publishing the stream. You can compare this to the
+<code>connection</code> property of the Session object to see if the stream is being published
+by the local web page.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>creationTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The timestamp for the creation
+of the stream. This value is calculated in milliseconds. You can convert this value to a
+Date object by calling <code>new Date(creationTime)</code>, where <code>creationTime</code> is
+the <code>creationTime</code> property of the Stream object.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>frameRate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The frame rate of the video stream. This property is only set if
+the publisher of the stream specifies a frame rate when calling the
+<code>OT.initPublisher()</code> method; otherwise, this property is undefined.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>hasAudio</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether the stream has audio. This property can change if the
+publisher turns on or off audio (by calling
+<a href="Publisher.html#publishAudio">Publisher.publishAudio()</a>). When this occurs, the
+<a href="Session.html">Session</a> object dispatches a <code>streamPropertyChanged</code> event (see
+<a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a>).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>hasVideo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether the stream has video. This property can change if the
+publisher turns on or off video (by calling
+<a href="Publisher.html#publishVideo">Publisher.publishVideo()</a>). When this occurs, the
+<a href="Session.html">Session</a> object dispatches a <code>streamPropertyChanged</code> event (see
+<a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a>).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the stream. Publishers can specify a name when publishing
+a stream (using the <code>publish()</code> method of the publisher&apos;s Session object).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>streamId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique ID of the stream.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>videoDimensions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">This object has two properties: <code>width</code> and
+<code>height</code>. Both are numbers. The <code>width</code> property is the width of the
+encoded stream; the <code>height</code> property is the height of the encoded stream. (These
+are independent of the actual width of Publisher and Subscriber objects corresponding to the
+stream.) This property can change if a stream published from a mobile device resizes, based on
+a change in the device orientation. When the video dimensions change,
+the <a href="Session.html">Session</a> object dispatches a <code>streamPropertyChanged</code> event
+(see <a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a>).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>videoType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The type of video &#x2014; either <code>&quot;camera&quot;</code>,
+<code>&quot;screen&quot;</code>, or <code>&quot;custom&quot;</code>.
+A <code>&quot;screen&quot;</code> video uses screen sharing on the publisher
+as the video source; for other videos, this property is set to <code>&quot;camera&quot;</code>.
+A <code>&quot;custom&quot;</code> video uses a VideoTrack element as the video source on the publisher.
+(See the <code>videoSource</code> property of the <code>options</code> parameter passed
+into the <a href="OT.html#initPublisher">OT.initPublisher()</a> method.)
+The <code>videoType</code> is <code>undefined</code> when a stream is voice-only.
+This property can change if a stream published from a mobile device changes from a
+camera to a screen-sharing video type. When the video type changes, the <a href="Session.html">Session</a> object
+dispatches a <code>streamPropertyChanged</code> event (see <a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a>).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ArchiveEvent.html">ArchiveEvent</a></li><li><a href="AudioLevelUpdatedEvent.html">AudioLevelUpdatedEvent</a></li><li><a href="Capabilities.html">Capabilities</a></li><li><a href="Connection.html">Connection</a></li><li><a href="ConnectionEvent.html">ConnectionEvent</a></li><li><a href="Error.html">Error</a></li><li><a href="Event.html">Event</a></li><li><a href="EventDispatcher.html">EventDispatcher</a></li><li><a href="ExceptionEvent.html">ExceptionEvent</a></li><li><a href="MediaStoppedEvent.html">MediaStoppedEvent</a></li><li><a href="MuteForcedEvent.html">MuteForcedEvent</a></li><li><a href="NativeVideoElementWrapper.html">NativeVideoElementWrapper</a></li><li><a href="OT.html">OT</a></li><li><a href="Publisher.html">Publisher</a></li><li><a href="Session.html">Session</a></li><li><a href="SessionConnectEvent.html">SessionConnectEvent</a></li><li><a href="SessionDisconnectEvent.html">SessionDisconnectEvent</a></li><li><a href="SessionInfo.html">SessionInfo</a></li><li><a href="SignalEvent.html">SignalEvent</a></li><li><a href="StaticConfig.html">StaticConfig</a></li><li><a href="Stream.html">Stream</a></li><li><a href="StreamEvent.html">StreamEvent</a></li><li><a href="StreamPropertyChangedEvent.html">StreamPropertyChangedEvent</a></li><li><a href="Subscriber.html">Subscriber</a></li><li><a href="VideoDimensionsChangedEvent.html">VideoDimensionsChangedEvent</a></li><li><a href="VideoElementCreatedEvent.html">VideoElementCreatedEvent</a></li><li><a href="VideoElementFacadeFactory-VideoElementFacade.html">VideoElementFacade</a></li><li><a href="VideoEnabledChangedEvent.html">VideoEnabledChangedEvent</a></li><li><a href="WidgetView.html">WidgetView</a></li></ul>
+</nav>
+
+<br class="clear">
+
+
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
