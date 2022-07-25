@@ -46,4 +46,4 @@ If the publisher specifies a frame rate, the actual frame rate of the video stre
 
 For sessions that use the OpenTok Media Router (sessions with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), lowering the frame rate proportionally reduces the maximum bandwidth the stream can use. However, in session with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to relayed, lowering the frame rate does not reduce the stream's bandwidth.
 
-You can also restrict the frame rate of a Subscriber's video stream. For more information, see [Restricting the frame rate of a subscribed stream](0/video/tutorials/subscribe-stream).
+You can also restrict the frame rate of a Subscriber's video stream. For more information, see [Restricting the frame rate of a subscribed stream](0/video/tutorials/subscribe-streams).

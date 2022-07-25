@@ -48,7 +48,7 @@ You can read more about these options in the [W3C Working Draft](https://www.w3.
 
 Chrome 60+, Safari 12.1+, Edge 79+, and Opera 47+ support video content hints. The setting is ignored in other browsers.
 
-If you can accept a slow frame rate, you may also consider [restricting the frame rate of subscribed streams](/video/tutorials/subscribe-stream) to improve quality.
+If you can accept a slow frame rate, you may also consider [restricting the frame rate of subscribed streams](/video/tutorials/subscribe-streams) to improve quality.
 
 <!-- OPT-TODO: ## Other audio and video options
 
