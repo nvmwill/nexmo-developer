@@ -20,10 +20,10 @@ Note that calling the `OT.initSession()` method does not _create_ an OpenTok ses
 If the user's browser does not support WebRTC, the call to `OT.initSession()` results in the page displaying a message to the user. To check for WebRTC support and prevent this message from being displayed, you can call the `OT.checkSystemRequirements()` method before calling `OT.initSession()`:
 
 ```js
-    if (OT.checkSystemRequirements() == 1) {
-      var session = OT.initSession(apiKey, sessionId);
-    } else {
-      // The client does not support WebRTC.
-      // You can display your own message.
-    }
+if (OT.checkSystemRequirements() == 1) {
+  var session = OT.initSession(apiKey, sessionId);
+} else {
+  // The client does not support WebRTC.
+  // You can display your own message.
+}
 ```

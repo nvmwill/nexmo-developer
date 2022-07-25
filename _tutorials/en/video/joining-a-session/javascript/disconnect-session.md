@@ -9,5 +9,5 @@ product: video
 To disconnect from a session, call the `disconnect()` method of the Session object:
 
 ```js
-    session.disconnect();
+session.disconnect();
 ```

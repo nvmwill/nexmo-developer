@@ -13,17 +13,17 @@ When the connection is dropped and the client tries to reconnect, the Session ob
 In response to these events, your application can (optionally) display user interface notifications indicating the temporary disconnection, reconnection, and disconnection states:
 
 ```js
-    session.on(
-      sessionReconnecting: function() {
-        // Display a user interface notification.
-      },
-      sessionReconnected: function() {
-        // Adjust user interface.
-      },
-      sessionDisconnected: function() {
-        // Adjust user interface.
-      }
-    );
+session.on(
+  sessionReconnecting: function() {
+    // Display a user interface notification.
+  },
+  sessionReconnected: function() {
+    // Adjust user interface.
+  },
+  sessionDisconnected: function() {
+    // Adjust user interface.
+  }
+);
 ```
 
 When your client temporarily disconnects from a session, the Subscriber objects in clients subscribing to a stream you publish dispatch events when your published stream drops and when (and if) it resumes automatically. 

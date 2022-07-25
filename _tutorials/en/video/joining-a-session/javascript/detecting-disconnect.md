@@ -9,13 +9,13 @@ product: video
 When your client disconnects from a session, the Session object dispatches a `sessionDisconnected` event:
 
 ```js
-    session.on("sessionDisconnected", function (event) {
-      // The event is defined by the SessionDisconnectEvent class
-      if (event.reason == "networkDisconnected") {
-        alert("Your network connection terminated.")
-      }
-    });
-    session.connect(token);
+session.on("sessionDisconnected", function (event) {
+  // The event is defined by the SessionDisconnectEvent class
+  if (event.reason == "networkDisconnected") {
+    alert("Your network connection terminated.")
+  }
+});
+session.connect(token);
 ```
 
 The `reason` property of the event is a string that describes why the session disconnected. For example, the previous example notifies the user if they were disconnected due to the network connection terminating.
