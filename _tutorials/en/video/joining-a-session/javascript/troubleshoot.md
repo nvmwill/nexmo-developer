@@ -25,7 +25,7 @@ Another common reason for connecting to a session failing is due to the end user
 * The end user has lost their internet connection
 * The end user has common ports blocked because they're on a restrictive network.
 
-This will result in an error with the code 1006. We recommend you handle this using the code below. Other reasons for connecting to a session failing include the OpenTok servers being down, or that some kind of unexpected error happened (such as a 500-level error in the server). While this doesn't happen often, it is good practice to handle these errors.
+This will result in an error with the code 1006. We recommend you handle this using the code below. Other reasons for connecting to a session failing include the Vonage video servers being down, or that some kind of unexpected error happened (such as a 500-level error in the server). While this doesn't happen often, it is good practice to handle these errors.
 
 If you follow these instructions your error handling code should look something like:
 

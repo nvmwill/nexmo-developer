@@ -19,7 +19,9 @@ publisher.on('streamCreated', function(event) {
 });
 ```
 
-This `resolution` property is a string, defining the desired resolution of the video. The format of the string is `"_width_x_height_"`, where the width and height are represented in pixels. Valid values are `"1920x1080"`, `"1280x720"`, `"640x480"`, and `"320x240"`. _Note:_ support for `"1920x1080"` is a _private beta_ feature — please contact Vonage if you would like to enable it for your Video API project.
+This `resolution` property is a string, defining the desired resolution of the video. The format of the string is `"_width_x_height_"`, where the width and height are represented in pixels. Valid values are `"1920x1080"`, `"1280x720"`, `"640x480"`, and `"320x240"`. 
+
+>_Note:_ support for `"1920x1080"` is a _private beta_ feature — please contact Vonage if you would like to enable it for your Video API project.
 
 The requested resolution of a video stream is set as the `videoDimensions.width` and `videoDimensions.height` properties of the Stream object.
 
@@ -44,6 +46,8 @@ Set the value to the desired frame rate, in frames per second, of the video. Val
 
 If the publisher specifies a frame rate, the actual frame rate of the video stream is set as the `frameRate` property of the Stream object, though the actual frame rate will vary based on changing network and system conditions. If you do not specify a frame rate when you call `OT.initPublisher`, this property is undefined.
 
-For sessions that use the OpenTok Media Router (sessions with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), lowering the frame rate proportionally reduces the maximum bandwidth the stream can use. However, in session with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to relayed, lowering the frame rate does not reduce the stream's bandwidth.
+For sessions that use the Media Router (sessions with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to routed), lowering the frame rate proportionally reduces the maximum bandwidth the stream can use.
 
-You can also restrict the frame rate of a Subscriber's video stream. For more information, see [Restricting the frame rate of a subscribed stream](0/video/tutorials/subscribe-streams).
+However, in session with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to relayed, lowering the frame rate does not reduce the stream's bandwidth.
+
+You can also restrict the frame rate of a Subscriber's video stream. For more information, see [subscribing streams](/video/tutorials/subscribe-streams).

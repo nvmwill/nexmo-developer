@@ -25,6 +25,6 @@ var pubOptions = {usePreviousDeviceSelection: true};
 var publisher = OT.initPublisher(null, pubOptions, function(error) {
   console.log("OT.initPublisher error: ", error);
 });
-```   
+```
 
 To prompt the user to select the camera and microphone to use in IE (and ignore previous device selections), do _not_ set the `usePreviousDevices` property in the options you pass into the `OT.initPublisher()` method (or set it to `false`, the default).

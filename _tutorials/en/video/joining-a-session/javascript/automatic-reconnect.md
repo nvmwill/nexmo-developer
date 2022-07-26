@@ -6,9 +6,11 @@ product: video
 
 # Automatic reconnection
 
-Clients will attempt to automatically reconnect to a session they disconnect unexpectedly (for example, due to a drop in network connectivity). You do not need to add any code to have the clients reconnect automatically, unless you want to respond to events dispatched when your client disconnects and reconnects. For sample code that demonstrates the use of these events, see the [opentok-reconnection](https://github.com/opentok/opentok-reconnection/) repo on GitHub.
+Clients will attempt to automatically reconnect to a session they disconnect unexpectedly (for example, due to a drop in network connectivity). You do not need to add any code to have the clients reconnect automatically, unless you want to respond to events dispatched when your client disconnects and reconnects. 
 
-When the connection is dropped and the client tries to reconnect, the Session object dispatches a `reconnecting` event. When the connection is restored, the Session object dispatches a `reconnected` event. If the client cannot restore the connection, the client disconnects from the OpenTok session, and the Session object dispatches the `sessionDisconnected` event.
+For sample code that demonstrates the use of these events, see the [opentok-reconnection](https://github.com/opentok/opentok-reconnection/) repo on GitHub.
+
+When the connection is dropped and the client tries to reconnect, the Session object dispatches a `reconnecting` event. When the connection is restored, the Session object dispatches a `reconnected` event. If the client cannot restore the connection, the client disconnects from the session, and the Session object dispatches the `sessionDisconnected` event.
 
 In response to these events, your application can (optionally) display user interface notifications indicating the temporary disconnection, reconnection, and disconnection states:
 

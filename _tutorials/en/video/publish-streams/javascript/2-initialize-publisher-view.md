@@ -43,13 +43,13 @@ The `insertMode` property of the `properties` parameter of the `OT.initPublisher
 For example, the following code adds a new Publisher object as a child of a `publisherContainer` DOM element:
 
 ```js
-    // Try setting insertMode to other values: "replace", "after", or "before":
-    var publisherProperties = {insertMode: "append"};
-    var publisher = OT.initPublisher('publisherContainer', publisherProperties, function (error) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Publisher initialized.");
-      }
-    });
+// Try setting insertMode to other values: "replace", "after", or "before":
+var publisherProperties = {insertMode: "append"};
+var publisher = OT.initPublisher('publisherContainer', publisherProperties, function (error) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Publisher initialized.");
+  }
+});
 ```

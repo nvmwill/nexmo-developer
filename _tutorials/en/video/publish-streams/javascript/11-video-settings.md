@@ -32,7 +32,7 @@ var publisher = OT.initPublisher(targetElement, publisherOptions, callbackFuncti
 You can change the video content hint dynamically by calling the [setVideoContentHint()](/sdk/stitch/video-js-reference/Publisher.html#setVideoContentHint) method of a Publisher object:
 
 ```js
-    publisher.setVideoContentHint("motion");
+publisher.setVideoContentHint("motion");
 ```
 
 You can set the video content hint to one of the following values:

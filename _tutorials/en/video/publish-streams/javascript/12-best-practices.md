@@ -10,7 +10,9 @@ This section includes tips for successfully publishing streams.
 
 ### Allowing Device Access
 
-It is best practice to let your users know that they are going to be asked to allow access to their camera and microphone. We find that by far the largest number of failures to publish are a result of users clicking the "deny" button or not clicking the allow button at all. We provide you with all of the events you need to be able to guide your users through this process:
+It is best practice to let your users know that they are going to be asked to allow access to their camera and microphone.
+
+We find that by far the largest number of failures to publish are a result of users clicking the "deny" button or not clicking the allow button at all. We provide you with all of the events you need to be able to guide your users through this process:
 
 ```js
 publisher.on({

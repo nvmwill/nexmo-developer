@@ -16,7 +16,7 @@ Calling the `destroy()` method deletes the Publisher object and removes it from 
 
 ## Getting statistics about a publisher's stream
 
-The [`Publisher.getStats()`](/sdk/stitch/video-js-reference/Publisher.html#getStats) method provides you with an array of objects defining the current audio-video statistics for the publisher. For a publisher in a routed session (one that uses the [OpenTok Media Router](/video/guides/create-session#the-opentok-media-router-and-media-modes)), this array includes one object, defining the statistics for the single audio-media stream that is sent to the OpenTok Media Router. In a relayed session, the array includes an object for each subscriber to the published stream. Each object in the array contains a `stats` property that includes the following properties:
+The [`Publisher.getStats()`](/sdk/stitch/video-js-reference/Publisher.html#getStats) method provides you with an array of objects defining the current audio-video statistics for the publisher. For a publisher in a routed session (one that uses the [Media Router](/video/guides/create-session#the-media-router-and-media-modes)), this array includes one object, defining the statistics for the single audio-media stream that is sent to the OpenTok Media Router. In a relayed session, the array includes an object for each subscriber to the published stream. Each object in the array contains a `stats` property that includes the following properties:
 
 * The total number of audio and video packets sent
 * The total number of audio and video packets lost
@@ -74,5 +74,4 @@ publisher.getRtcStatsReport()
 
 You can publish a test stream and check its audio and video statistics to determine the type of stream (such as high-resolution or audio-only) supported by your connection.
 
-To get statistics for a stream published by the local client, you must use a session that uses the OpenTok Media Router (sessions with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), and you must set the `testNetwork` property to `true` in the `options` object you pass into the [Session.subscribe()](/sdk/stitch/video-js-reference/Session.html#subscribe) method. You can then use the `getStats()` method of the Subscriber object to get audio and video statistics for the stream you publish. See [this tutorial](/video/tutorials/subscribe-streams) for more information.
-
+To get statistics for a stream published by the local client, you must use a session that uses the  Media Router (sessions with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to routed), and you must set the `testNetwork` property to `true` in the `options` object you pass into the [Session.subscribe()](/sdk/stitch/video-js-reference/Session.html#subscribe) method. You can then use the `getStats()` method of the Subscriber object to get audio and video statistics for the stream you publish. See [this tutorial](/video/tutorials/subscribe-streams) for more information.

@@ -20,4 +20,4 @@ session.connect(token);
 
 The `reason` property of the event is a string that describes why the session disconnected. For example, the previous example notifies the user if they were disconnected due to the network connection terminating.
 
-<!-- OPT-TODO: For details, see [SessionDisconnectEvent](/developer/sdks/js/reference/SessionDisconnectEvent.html). -->
+For details, see [SessionDisconnectEvent](/sdk/stitch/video-js-reference/SessionDisconnectEvent.html).

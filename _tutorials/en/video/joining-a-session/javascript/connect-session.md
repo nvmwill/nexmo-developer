@@ -19,6 +19,6 @@ session.connect(token, function(error) {
 });
 ```
 
-An error object is passed into the completion handler of the `connect` event when the client fails to connect to the OpenTok session. Otherwise, no error object is passed in, indicating that the client connected successfully to the session.
+An error object is passed into the completion handler of the `connect` event when the client fails to connect to the session. Otherwise, no error object is passed in, indicating that the client connected successfully to the session.
 
-The Session object also dispatches a `sessionConnected` event when the client connects to the OpenTok session. And the OT object dispatches an `exception` event when there is an error in connecting. However, it is simpler to check for success in connecting by passing a completion handler into the `connect()` method, as the last parameter.
+The Session object also dispatches a `sessionConnected` event when the client connects to the session. And the OT object dispatches an `exception` event when there is an error in connecting. However, it is simpler to check for success in connecting by passing a completion handler into the `connect()` method, as the last parameter.
