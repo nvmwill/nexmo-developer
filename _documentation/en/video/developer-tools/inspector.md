@@ -48,7 +48,7 @@ Inspector is a tool to help understand what happened in specific Vonage Video [s
 
 Inspector is primarily used for **debugging problematic sessions** that have occurred in your application.
 
-You must be logged into your Vonage Video API account to access Inspector, and you can only view sessions created from API Keys associated with your account.
+You must be logged into your Vonage Video API account to access the Inspector, and you can only view sessions created from API Keys associated with your account.
 
 ## Searching for Sessions
 
@@ -87,8 +87,8 @@ The Meetings Statistics panel includes the following information:
 * The number of individual users, connections, published streams, and subscribers to the streams in the meeting. If there are SIP users connected to the meeting, the number of SIP users is also listed.
 * The total number of streamed minutes in the meeting.
 * The number of issue occurrence in the meeting.
-* The number of different Vonage Video API SDKs used in the meeting. Mouse over the SDKs entry to see a list of the different SDKs and the number of users for each.
-* The number of different endpoints used in the meeting. An endpoint is either a browser version (such as Chrome 98) for clients using OpenTok.js; a Vonage Video API SDK for iOS, Android, Linux or Windows; or SIP. Mouse over the Endpoints entry to see a list of the different endpoints and the number of users for each.
+* The number of different Vonage Video SDKs used in the meeting. Mouse over the SDKs entry to see a list of the different SDKs and the number of users for each.
+* The number of different endpoints used in the meeting. An endpoint is either a browser version (such as Chrome 98) for clients using OpenTok.js; a Vonage Video SDK, or SIP. Mouse over the endpoints entry to see a list of the different endpoints and the number of users for each.
 
 ### User Data
 
@@ -136,7 +136,7 @@ You can click and drag on the chart to zoom in on a specific section of the grap
 
 >**Note:** For a stream that does not use scalable video (such as a stream in a relayed session), the publisher adapts the published video to accommodate the subscriber with the worst network conditions. Inspector will show quality information based on this worst-performing subscriber. So the reported publisher video quality might not reflect the actual video quality experienced by all subscribers to the stream.
 
-For a stream that uses scalable video, Inspector shows video quality information based on the link between the stream's publisher and the OpenTok Media Router.
+For a stream that uses scalable video, Inspector shows video quality information based on the link between the stream's publisher and the Media Router.
 
 Publisher audio quality always reflects what the worst subscriber reports. This means that the reported publisher audio quality might not reflect the actual audio quality experienced by all subscribers to the stream.
 
@@ -157,7 +157,7 @@ You can also filter by user with the Inspector sidebar filters.
 
 ## Sessions vs. Meetings
 
-All OpenTok interactions occur within a session (for more on this, see [Video API Basics](/video/overview)) — you can think of a session as a "room". Sessions are created using the OpenTok [Server SDKs](/video/server-sdks/node), and every session is associated with a session ID.
+All interactions occur within a session (for more on this, see [Video API Basics](/video/overview)) — you can think of a session as a "room". Sessions are created using the [Server SDKs](/video/server-sdks/node), and every session is associated with a session ID.
 
 Although we recommend generating a new session for every "meeting" between participants — for example, if a team joins together for a group conference — but sometimes session IDs are reused across multiple "meetings."
 
@@ -179,7 +179,7 @@ This section will outline how these objects (along with the "user" object) are r
 
 ### Connections
 
-In order to participate in a session, a connection must be made between a client and the OpenTok platform (except in a [relayed](/video/guides/create-session#the-opentok-media-router-and-media-modes) session, where clients connect directly).
+In order to participate in a session, a connection must be made between a client and the video platform (except in a [relayed](/video/guides/create-session#the-media-router-and-media-modes) session, where clients connect directly).
 
 This connection is associated with a unique connection ID. The connection ID is important when debugging a session in Inspector, as any stream published to the session is associated with the connection that it was published from.
 
