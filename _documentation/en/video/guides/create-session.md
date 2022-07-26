@@ -44,7 +44,7 @@ The Media Router can decrease bandwidth usage in multiparty sessions. (When the 
 
   * The Media Router supports the scalable video feature. Scalable video can greatly improve the quality of video in multi-party sessions.
 
-  <!-- OPT-TODO: * In clients using the iOS and Android SDKs, relayed sessions support only two clients connected to the session. The Media Router supports additional clients for multiparty sessions on mobile devices. -->
+<!-- OPT-TODO: * In clients using the iOS and Android SDKs, relayed sessions support only two clients connected to the session. The Media Router supports additional clients for multiparty sessions on mobile devices. -->
 
   * The Media Router supports the SIP interconnect feature, which lets you connect sessions to SIP gateways.
 
@@ -77,7 +77,7 @@ When possible, do not reuse session IDs between different video chat conversatio
 Instead, generate new session IDs for each distinct video chat on your application.
 
 
-This is important, especially when using [Inspector](/video/developer-tools/inspector).
+This is important, especially when using the [Session inspector](/video/developer-tools/inspector).
 
 In Inspector, session quality scores and data are indexed by session ID.
 
@@ -154,7 +154,7 @@ source: '_examples/video/create-auto-archived-session/temp'
 
 > Note: Archived sessions must use the routed media mode.
 
-For more information, see the [Recording](/video/guides/archiving) guide.
+For more information, see the [archiving](/video/guides/archiving) guide.
 
 ## Using sessions in client applications
 
