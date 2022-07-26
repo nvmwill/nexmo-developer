@@ -74,7 +74,7 @@ The JSON object includes the following properties:
 
 For each distinct event, the server sends an HTTP POST request to the URL you supply.
 
-The Content-Type for the request is application/json.
+The Content-Type for the request is `application/json`.
 
 The data of the request is a JSON object of the following form:
 
@@ -120,7 +120,7 @@ When clients receive `streamCreated` and `streamDestroyed` events in response to
 
 For each distinct event, the server sends an HTTP POST request to the URL you supply.
 
-The Content-Type for the request is application/json. The data of the request is a JSON object of the following form: 
+The Content-Type for the request is `application/json`. The data of the request is a JSON object of the following form: 
 
 ```json
 {
@@ -160,7 +160,7 @@ The Content-Type for the request is application/json. The data of the request is
 
 For each distinct event, the server sends an HTTP POST request to the URL you supply.
 
-The Content-Type for the request is application/json. The data of the request is a JSON object of the following form:
+The Content-Type for the request is `application/json`. The data of the request is a JSON object of the following form:
 
 ```js
 {
@@ -209,10 +209,10 @@ Each archive goes through multiple states through the lifespan of the archive. F
 
 This is particularly useful for triggering post-processing of an archive, or for performing any necessary administrative tasks after an archive has been uploaded to persistent storage.
 
-For more information see the [archive status changes](/video/guides/archiving#recording-status-changes) section of the Vonage Video archiving developer guide.
+For more information see the [archive status changes](/video/guides/archiving#archive-status-changes) section of the Vonage Video archiving developer guide.
 
 ## Monitoring SIP call progress
 
-You can monitor status updates for SIP connections to Vonage Video session.
+You can monitor status updates for SIP connections to a session.
 
 <!-- OPT-TODO: See the [Monitoring call progress](/guides/sip/#monitoring-call-progress) section of the Vonage Video SIP Interconnect developer guide. -->
