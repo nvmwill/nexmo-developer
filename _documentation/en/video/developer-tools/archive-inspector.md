@@ -4,11 +4,11 @@ description: Learn how to use the Archive Inspector tool, a post-call diagnostic
 product: video
 --- 
 
-# Recording Inspector Overview
+# Archive Inspector Overview
 
-[Use Recording Inspector](https://tokbox.com/developer/tools/archive-inspector)
+[Use Archive inspector](https://tokbox.com/developer/tools/archive-inspector)
 
-Recording Inspector provides diagnostic information about archives created for a session.
+Archive inspector provides diagnostic information about archives created for a session.
 
 * It helps customers identify issues with the archiving feature by providing details about archiving events, the expected duration of archives, and the current state of archives.
 * It is intended to be used by developers using the Vonage video platform and respective support representatives.
