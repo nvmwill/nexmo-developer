@@ -6,15 +6,15 @@ product: video
 
 ## Creating a relayed session
 
-Here is PHP sample code that creates a new session with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to relayed:
+Here is PHP sample code that creates a new session with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to relayed:
 
 ```php
-use OpenTok\OpenTok;
+use Vonage\Video\MediaMode;
+use Vonage\Video\SessionOptions;
 
-$apiObj = new OpenTok($API_KEY, $API_SECRET);
+$session = $client->video()->createSession(new SessionOptions(['mediaMode' => MediaMode::RELAYED]));
 
-$session = $apiObj->createSession();
-echo $session->getSessionId();
+$sessionId = $session->getSessionId();
 ```  
 
 In a relayed session, clients will attempt to send streams directly between each other. However, if clients cannot connect due to firewall restrictions, the session uses the Vonage Video TURN server to relay audio-video streams.

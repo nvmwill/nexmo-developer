@@ -9,13 +9,20 @@ product: video
 You can create a session that is automatically archived. Here is PHP sample code that creates an automatically archived session:
 
 ```php
-$sessionOptions = array(
+use Vonage\Video\MediaMode;
+use Vonage\Video\SessionOptions;
+use Vonage\Video\Archive\ArchiveMode;
+
+// An automatically archived session:
+$sessionOptions = new SessionOptions([
     'archiveMode' => ArchiveMode::ALWAYS,
     'mediaMode' => MediaMode::ROUTED
-);
-$session = $opentok->createSession($sessionOptions);
+]);
+$session = $client->video()->createSession($sessionOptions);
 
-echo $session->getSessionId();
+
+// Store this sessionId in the database for later use
+$sessionId = $session->getSessionId();
 ```
 
 Note that archived sessions must use the routed media mode.
