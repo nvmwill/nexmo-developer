@@ -6,6 +6,6 @@ product: video
 
 # Video API Tools
 
-- **[Session inspector](/video/developer-tools/inspector)** is a post-call diagnostic tool for your Video API sessions.
+- **[Session inspector](/video/developer-tools/inspector)** is a post-call diagnostic tool for your Video sessions.
 
-- **[Recording Inspector](/video/developer-tools/recording-inspector)** is a diagnostic tool for Video API archiving.
+- **[Archive inspector](/video/developer-tools/archive-inspector)** is a diagnostic tool for Video archiving.
