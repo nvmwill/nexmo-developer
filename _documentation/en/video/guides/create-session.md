@@ -27,7 +27,7 @@ When you create a session, you can specify the following options, which are desc
 * The archiving preference (whether to automatically archive the session).
 * A location hint (to specify the geolocation of the session).
 
-## The OpenTok Media Router and media modes
+## The Media Router and media modes
 
 When you create a session, you specify how clients in the session will send audio-video streams, known as the media mode. There are two options:
 
@@ -44,11 +44,11 @@ The Media Router can decrease bandwidth usage in multiparty sessions. (When the 
 
   * The Media Router supports the scalable video feature. Scalable video can greatly improve the quality of video in multi-party sessions.
 
-  <!-- OPT-TODO: * In clients using the OpenTok iOS and Android SDKs, relayed sessions support only two clients connected to the session. The OpenTok Media Router supports additional clients for multiparty sessions on mobile devices. -->
+  <!-- OPT-TODO: * In clients using the iOS and Android SDKs, relayed sessions support only two clients connected to the session. The Media Router supports additional clients for multiparty sessions on mobile devices. -->
 
   * The Media Router supports the SIP interconnect feature, which lets you connect sessions to SIP gateways.
 
-<!-- OPT-TODO-REMOVE? > **Note:** In version 2.2 of the OpenTok server SDKs, the default media mode is relayed. In earlier versions, the default was to use OpenTok Media Router. -->
+<!-- OPT-TODO-REMOVE? > **Note:** In version 2.2 of the server SDKs, the default media mode is relayed. In earlier versions, the default was to use Media Router. -->
 
 ## Archive mode
 
@@ -76,9 +76,8 @@ When possible, do not reuse session IDs between different video chat conversatio
 
 Instead, generate new session IDs for each distinct video chat on your application.
 
-<!-- OPT-TODO: check if OpenTok Inspector link is updated  -->
 
-This is important, especially when using [OpenTok Inspector](https://tokbox.com/developer/tools/inspector).
+This is important, especially when using [Inspector](/video/developer-tools/inspector).
 
 In Inspector, session quality scores and data are indexed by session ID.
 
@@ -94,7 +93,7 @@ Routed sessions are required if you want to archive your session.
 
 They are recommended if you have more than two or three participants in the session.
 
-For more information, see The OpenTok Media Router and media modes.
+For more information, see The Media Router and media modes.
 
 ## Creating sessions
 
@@ -109,9 +108,9 @@ You can also use one of the [server-side SDKs](/video/resources#server-sdks).
 
 If you need to dynamically generate multiple session IDs, use the [server-side SDKs](/video/resources#server-sdks) not the Project Page.
 
-## Creating a session that uses OpenTok Media Router
+## Creating a session that uses the Media Router
 
-The following code creates a session that uses the OpenTok Media Router:
+The following code creates a session that uses the Media Router:
 
 ```tabbed_content
 source: '_examples/video/create-session/temp'
