@@ -1,0 +1,15 @@
+---
+title: Java
+language: java
+client:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/sms/SendSmsText.java
+  from_line: 43
+  to_line: 48
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/sms/SendSmsText.java
+  from_line: 50
+  to_line: 73
+run_command: java-ide
+file_name: SendSmsText.java
+unindent: true
+
