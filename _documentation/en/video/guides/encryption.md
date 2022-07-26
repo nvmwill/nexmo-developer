@@ -1,30 +1,30 @@
 ---
-title: Encryption
+title: Archive Encryption
 meta_title: Create encrypted archives.
 description: The Vonage Video platform's encrypted archiving feature allows you to create archives where the data is never at rest in an unencrypted state.
 product: video
 navigation_weight: 
 ---
 
-# Vonage Video API Encryption
+# Archive Encryption
 
-Vonage Video encryption allows you to create OpenTok archives in which the data is never at rest in an unencrypted state.
+Vonage Video encryption allows you to create archives in which the data is never at rest in an unencrypted state.
 
-You can secure your Vonage Video archives in the following ways:
+You can secure your archives in the following ways:
 
-* Turn off archive storage fallback — By default, Vonage stores an archive file on OpenTok servers if it was unable to upload the file to your specified Amazon S3 or Microsoft Azure server. You can prevent this fallback storage when use the OpenTok REST API to set the archive upload target.
-* Use OpenTok encryption — This lets you to create OpenTok archives where the data is never at rest in an unencrypted state. This provides the highest level of security.
+* Turn off archive storage fallback — By default, Vonage stores an archive file on its servers if it was unable to upload the file to your specified Amazon S3 or Microsoft Azure server. You can prevent this fallback storage by using the REST API to set the archive upload target.
+* Use Vonage video encryption — This lets you to create archives where the data is never at rest in an unencrypted state. This provides the highest level of security.
 * Use Amazon S3 server-side encryption — This uses Amazon S3-managed encryption keys for encryption. For details, see [this developer guide](/video/guides/amazon-s3-encryption). 
 
-With OpenTok encryption, video and audio data in an OpenTok archive is encrypted using a public key certificate you provide Vonage.
+With Vonage video encryption, video and audio data in a Vonage archive is encrypted using a public key certificate you provide Vonage.
 
-**Important:** The OpenTok encryption feature is available as an [add-on feature](https://www.vonage.com/communications-apis/video/pricing). [Contact us](https://video-api.support.vonage.com/hc/en-us/requests/new) to enable this feature for your OpenTok project keys.
+**Important:** The Vonage encryption feature is available as an [add-on feature](https://www.vonage.com/communications-apis/video/pricing). [Contact us](https://video-api.support.vonage.com/hc/en-us/requests/new) to enable this feature for your project keys.
 
 ## Feature overview
 
 The Vonage Video platform's encrypted archiving feature allows you to create archives where the data is never at rest in an unencrypted state. 
 
-First, create a public and private RSA key pair to use with your OpenTok archives. Using an OpenTok REST API call, you share the public key certificate with Vonage. (In the same REST call, you send details on the Amazon S3 or Microsoft Azure upload target to use for your archives. 
+First, create a public and private RSA key pair to use with your archives. Using a REST API call, you share the public key certificate with Vonage. (In the same REST call, you send details on the Amazon S3 or Microsoft Azure upload target to use for your archives. 
 
 The encrypted archiving feature requires you to set an upload target.) You save the private key locally for your **private use only**.
 
@@ -62,7 +62,7 @@ openssl req -new -x509 -days 365 -newkey rsa:2048 -out cert.pem -keyout key.pem
 
 You will send the certificate to Vonage, which will use it to generate an encrypted password, needed to decrypt the archive. The password can be decrypted with your private key, and the archive can be decrypted with the password. The password will be different for each archive. 
 
-The size of the key must be 2048 bits or smaller. You will send the certificate in JSON data to the OpenTok REST API for setting the archive target (see the next section). Since the certificate will be included in JSON data, send the data base64 encoded or replace newline characters in the cert with "\n".
+The size of the key must be 2048 bits or smaller. You will send the certificate in JSON data to the Vonage video REST API for setting the archive target (see the next section). Since the certificate will be included in JSON data, send the data base64 encoded or replace newline characters in the cert with "\n".
 
 The following example base64 encodes the certificate:
 
@@ -90,7 +90,7 @@ To set the certificate, and enable archive encryption, submit an HTTP PUT reques
 https://api.opentok.com/v2/project//archive/storage 
 ``` 
 
-Replace `apiKey` with your OpenTok project API key.
+Replace `apiKey` with your project API key.
 
 Authenticate the REST API request using a custom HTTP header: `X-OPENTOK-AUTH`. Set this to a JSON Web token: 
 
@@ -120,22 +120,22 @@ Create the JSON web token with the following claims:
 * Set `exp` to the expiration time for the token. For security, we recommend that you use an expiration time close to the token creation time (for example, 3 minutes after creation) and that you create a new token for each REST API call. The maximum allowed expiration time range is 5 minutes.
 * Set `jti` to a unique identifier for the JWT. This is optional. See the [JSON web token spec](https://tools.ietf.org/html/rfc7519#section-4.1.7) for details. 
 
-Use your OpenTok project API secret as the JWT secret key and sign this with the HMAC-SHA256 encryption algorithm. (Your API secret is provided to you in your [Video API account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) on the Project page.) For example, the following Python code creates a token that can be used in an OpenTok REST API call:
+Use your project API secret as the JWT secret key and sign this with the HMAC-SHA256 encryption algorithm. (Your API secret is provided to you in your [Video API account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) on the Project page.) For example, the following Python code creates a token that can be used in a REST API call:
 
 ```python
 import jwt # See https://pypi.python.org/pypi/PyJWT
 import time
 import uuid
-print jwt.encode({"iss": "my-OpenTok-project-API-key",
+print jwt.encode({"iss": "my-project-API-key",
   "iat": int(time.time()),
   "exp": int(time.time()) + 180,
   "ist": "project",
   "jti": str(uuid.uuid4())()},
-  'my-OpenTokproject-API-secret',
+  'my-project-API-secret',
   algorithm='HS256')
 ```
 
-Replace `my-OpenTok-project-API-key` and `my-OpenTok-project-API-secret` with the Vonage Video project API key and secret. 
+Replace `my-project-API-key` and `my-project-API-secret` with the Vonage Video project API key and secret. 
 Set the `Content-type` header for the REST API call to `application/json`:
 
 ```
@@ -163,7 +163,7 @@ To specify a public key certificate to use with an Amazon S3 target, set the JSO
 
 Set `bucket` to the name of the Amazon S3 bucket you want to use for archive upload. Set the `secretKey` and `accessKey` properties to the Amazon S3 secret key and access key for that bucket.
 
-Set the fallback property to `"none"` to prevent archive files from being stored in the OpenTok cloud if the upload fails. Set the property to `"opentok"` to have the archive available at the OpenTok dashboard if upload fails. 
+Set the fallback property to `"none"` to prevent archive files from being stored in the Vonage video cloud if the upload fails. Set the property to `"opentok"` to have the archive available on your dashboard if upload fails. 
 
 Set the certificate property to the public key certificate Vonage will use to encrypt the archive. Be sure to base64 encode the certificate or replace newline characters in the certificate with `"\n"`, so that you can use it in the string literal in the JSON data.
 
@@ -186,7 +186,7 @@ To specify a public key certificate to use with a Microsoft Azure target, set th
 
 Set container to match your Microsoft Azure container name. Set the `accountName` and `accountKey` properties to match your Microsoft Azure storage credentials.
 
-Set the `fallback` property to `"none"` to prevent archive files from being stored in the OpenTok cloud if the upload fails. Set the property to `"opentok"` to have the archive available at the OpenTok dashboard if upload fails.
+Set the `fallback` property to `"none"` to prevent archive files from being stored in the Vonage video cloud if the upload fails. Set the property to `"opentok"` to have the archive available on the dashboard if upload fails.
 
 Set the `certificate` property to the public key certificate Vonage will use to encrypt the archive. Be sure to base64 encode the certificate or replace newline characters in the certificate with `"\n"`, so that you can use it in the string literal in the JSON data. A base64-encoded certificate string looks like this:
 
@@ -198,7 +198,7 @@ Set the `certificate` property to the public key certificate Vonage will use to 
 
 * A response with status code 200 indicates success. 
 * A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target. 
-* A response with a 403 status code indicates you passed in an invalid OpenTok project API key or API secret.
+* A response with a 403 status code indicates you passed in an invalid project API key or API secret.
 
 ## Examples
 
@@ -236,7 +236,7 @@ Set the values for `your-azure-account-name`, `your-azure-account-name`, and `yo
 
 ## Decrypting an archive
 
-You can set an archive status callback using the OpenTok dashboard. See "Archive status changes" in the [OpenTok Archiving developer guide](/video/guides/archiving/#recording-status-changes).
+You can set an archive status callback using the dashboard. See "Archive status changes" in the [Archiving developer guide](/video/guides/archiving/#archive-status-changes).
 
 After the archive is created, the archive status POST requests to your callback URL include a password property:
 
@@ -338,7 +338,7 @@ Set the `certificate` property to `null`.
 
 * A response with status code 200 indicates success in disabling encryption.
 * A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target.
-* A response with a 403 status code indicates you passed in an invalid OpenTok project API key or partner secret.
+* A response with a 403 status code indicates you passed in an invalid project API key or partner secret.
 
 ### Example
 
