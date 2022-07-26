@@ -20,7 +20,7 @@ subscriber.restrictFrameRate(false);
 
 When the frame rate is restricted, the Subscriber video frame will update once or less per second.
 
-This feature is only available in sessions that use the OpenTok Media Router (sessions with the [media mode](video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), not in sessions with the media mode set to relayed. In relayed sessions, calling this method has no effect.
+This feature is only available in sessions that use the Media Router (sessions with the [media mode](video/guides/create-session#the-media-router-and-media-modes) set to routed), not in sessions with the media mode set to relayed. In relayed sessions, calling this method has no effect.
 
 Restricting the subscriber frame rate has the following benefits:
 
@@ -76,12 +76,12 @@ subscriber.on("videoDisabled", function(event) {
 });
 ```
 
-When the OpenTok Media Router disables the video of a subscriber, you may want to adjust the user interface related to the subscriber.
+When the Media Router disables the video of a subscriber, you may want to adjust the user interface related to the subscriber.
 
 The `reason` property of the `videoDisabled` event object defines the reason the video was disabled. This can be set to one of the following values:
 
 * `"publishVideo"` — The publisher stopped publishing video by calling `publishVideo(false)`.
-* `"quality"` — The OpenTok Media Router stopped sending video to the subscriber based on stream quality changes. This feature of the OpenTok Media Router has a subscriber drop the video stream when connectivity degrades. (The subscriber continues to receive the audio stream, if there is one.)
+* `"quality"` — The Media Router stopped sending video to the subscriber based on stream quality changes. This feature of the Media Router has a subscriber drop the video stream when connectivity degrades. (The subscriber continues to receive the audio stream, if there is one.)
     
     Before sending this event, when the Subscriber's stream quality deteriorates to a level that is low enough that the video stream is at risk of being disabled, the Subscriber dispatches a `videoDisableWarning` event.
     
@@ -89,7 +89,7 @@ The `reason` property of the `videoDisabled` event object defines the reason the
     
     By default, the Subscriber displays a video disabled indicator when a `videoDisabled` event with this reason is dispatched and removes the indicator when the `videoDisabled` event with this reason is dispatched. You can control the display of this icon by calling the `setStyle()` method of the Subscriber, setting the `videoDisabledDisplayMode` property; or you can set the style when calling the `Session.subscribe()` method, setting the `style` property of the `properties` parameter.
     
-    This feature is only available in sessions that use the OpenTok Media Router (sessions with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), not in sessions with the media mode set to relayed.
+    This feature is only available in sessions that use the Media Router (sessions with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to routed), not in sessions with the media mode set to relayed.
     
     When you publish a stream, you can prevent it from having its video disabled due to stream quality. Set `audioFallbackEnabled` to `false` in the `properties` object you pass into the [OT.initPublisher()](/sdk/stitch/video-js-reference/OT.html#initPublisher) method.
     
@@ -120,9 +120,9 @@ subscriber.on("videoEnabled", function(event) {
 The `reason` property of the `videoEnabled` event object defines the reason the video was enabled. This can be set to one of the following values:
 
 * `"publishVideo"` — The publisher started publishing video by calling `publishVideo(true)`.
-* `"quality"` — The OpenTok Media Router resumed sending video to the subscriber based on stream quality changes. This feature of the OpenTok Media Router has a subscriber drop the video stream when connectivity degrades and then resume the video stream if the stream quality improves.
+* `"quality"` — The Media Router resumed sending video to the subscriber based on stream quality changes. This feature of the Media Router has a subscriber drop the video stream when connectivity degrades and then resume the video stream if the stream quality improves.
     
-    This feature is only available in sessions that use the OpenTok Media Router (sessions with the [media mode](video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), not in sessions with the media mode set to relayed.
+    This feature is only available in sessions that use the Media Router (sessions with the [media mode](video/guides/create-session#the-media-router-and-media-modes) set to routed), not in sessions with the media mode set to relayed.
     
 * `"subscribeToVideo"` — The subscriber started or stopped subscribing to video, by calling `subscribeToVideo(false)`.
 * `"codecChanged"` — The subscriber video was enabled after a codec change from an incompatible codec (see the [Video codecs](/video/guides/codecs) developer guide).
@@ -194,7 +194,7 @@ window.setInterval(function() {
 }, 1000);
 ```
 
-To get statistics for a stream published by the local client, you must use a session that uses the OpenTok Media Router (sessions with the [media mode](video/guides/create-session#the-opentok-media-router-and-media-modes) set to routed), and you must set the `testNetwork` property to `true` in the `options` object you pass into the `Session.subscribe()` method:
+To get statistics for a stream published by the local client, you must use a session that uses the Media Router (sessions with the [media mode](video/guides/create-session#the-media-router-and-media-modes) set to routed), and you must set the `testNetwork` property to `true` in the `options` object you pass into the `Session.subscribe()` method:
 
 ```js
 var publisher = OT.initPublisher();

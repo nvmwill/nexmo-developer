@@ -9,7 +9,7 @@ product: video
 To subscribe to a stream, pass the Stream object into the `subscribe` method of the Session object:
 
 ```js
-    session.subscribe(stream, replacementElementId);
+session.subscribe(stream, replacementElementId);
 ```
 
 The `subscribe()` method takes the following parameters:
