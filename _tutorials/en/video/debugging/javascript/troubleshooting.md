@@ -6,7 +6,7 @@ product: video api
 
 ## Troubleshooting sessions with Inspector
 
-[Inspector](/video/developer-tools/inspector) provides post-mortem diagnostic information about Vonage Video sessions. Enter a session ID or a reported issue ID into Inspector to view raw information at stream and user levels to help pinpoint errors, failures, and quality issues.
+The [Session Inspector](/video/developer-tools/inspector) tool provides post-mortem diagnostic information about Vonage Video sessions. Enter a session ID or a reported issue ID into Inspector to view raw information at stream and user levels to help pinpoint errors, failures, and quality issues.
 
 
 <!-- OPT-TODO: ## Reproducing issues with Vonage Video Playground
@@ -17,18 +17,18 @@ For details, see the [Playground documentation](/developer/tools/playground_doc/
 
 ## Reporting an issue
 
-You can call the `OT.reportIssue()` method to programmatically report when your app experiences an issue. This method provides you with an issue ID, which you can use with the [Inspector](/video/developer-tools/inspector) or when discussing the issue with the Vonage API support team.
+You can call the `OT.reportIssue()` method to programmatically report when your app experiences an issue. This method provides you with an issue ID, which you can use with the [Session Inspector](/video/developer-tools/inspector) or when discussing the issue with the Vonage API support team.
 
 ```js
-    OT.reportIssue(function(error, issueId) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(issueId);
-        // You may want to use XMLHttpRequest to report this issue ID to a server
-        // that can store it in a database for later reference.
-      }
-    });
+OT.reportIssue(function(error, issueId) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(issueId);
+    // You may want to use XMLHttpRequest to report this issue ID to a server
+    // that can store it in a database for later reference.
+  }
+});
 ```
 
 The `OT.reportIssue()` method takes one parameter, a completion handler function, which is called when the call to `OT.reportIssue()` succeeds or fails. The completion handler function has two parameters.

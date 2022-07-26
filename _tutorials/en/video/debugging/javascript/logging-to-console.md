@@ -9,13 +9,13 @@ product: video api
 When you're developing your application, place the code below somewhere in your application. Doing so will produce more logging output to your console, allowing you to better trace your program and understand what is happening behind the scenes.
 
 ```js
-      OT.setLogLevel(OT.DEBUG);
+OT.setLogLevel(OT.DEBUG);
 ```
 
 You can also log messages to the console by calling the `OT.log()` method:
 
 ```js
-    OT.log("my session ID: " + session.sessionId);
+OT.log("my session ID: " + session.sessionId);
 ```
 
 (Call `OT.setLogLevel(OT.DEBUG)` or `OT.setLogLevel(OT.LOG)` before calling `OT.log()`.)
