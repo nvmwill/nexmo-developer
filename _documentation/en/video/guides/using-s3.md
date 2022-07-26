@@ -1,20 +1,20 @@
 ---
-title: Vonage Video API archiving using S3 storage
+title: Archiving using AWS S3
 meta_title: Use AWS S3 storage with Vonage Video API archiving.
 description: You can use AWS S3 storage for Vonage Video API archiving.
 product: video
 navigation_weight: 3
 ---
 
-# Vonage Video API archiving using S3 storage
+# Archiving using AWS S3
 
-Use the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint or Windows Azure container for completed recordings to be uploaded to. (For more information on Windows Azure see [Using a Windows Azure container with Vonage Video API archiving](/video/guides/using-azure).)
+Use the [Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint for completed archives to be uploaded to. (For more information on Windows Azure see [Archiving using a Windows Azure container](/video/guides/using-azure).)
 
 You can create an Amazon S3 account at [http://aws.amazon.com/s3](http://aws.amazon.com/s3).
 
 **Note:** You can also use an S3-compliant storage provider other than Amazon S3. We support Cloudian and Google Cloud Storage (accessed using the AWS S3 API) as S3-compatible storage solutions. Other S3-compatible services may have feature limitations.
 
-You will provide the following information to the Video API account:
+You will need to set the following in your Vonage video account:
 
 * The name of the S3 bucket
 * The access key ID
@@ -23,7 +23,7 @@ You will provide the following information to the Video API account:
 
 You can create an Amazon S3 bucket (or find names of existing buckets) at the [Amazon S3 console](https://console.aws.amazon.com/s3).
 
-**Note:** Vonage Video recording does not support S3 buckets in the China (Beijing) region.
+**Note:** Vonage video archives do not support S3 buckets in the China (Beijing) region.
 
 To obtain an Amazon S3 access key ID and secret access key:
 
@@ -73,7 +73,7 @@ If you want to use an IAM user, assign it the following user policy:
 
 (Replace _&lt;bucketName&gt;_ with your bucket name.)
 
-Now, go to the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) and complete the following steps:
+Now, go to the [Vonage Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) and complete the following steps:
 
 1.  Click on a **Project** in the left nav that will contain sessions that you are archiving.
 2.  In the Archiving section, click the **Set up your cloud storage now** button, and then click on **Amazon S3**.
@@ -81,25 +81,25 @@ Now, go to the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexm
 4.  If you are using a S3-compliant storage provider other than Amazon, enter the endpoint base URL, including the protocol (http or https), such as `https://s3.cloudianhyperstore.com` or `https://storage.googleapis.com`.
 5.  Click the **Connect to cloud storage** button.
 
-<!-- **Note:** You can also set a recording upload target using the Vonage REST API. -->
+<!-- **Note:** You can also set an archive upload target using the Vonage server-side SDKs. -->
 
 <!-- OPT-TODO: Add a link to the video API reference  -->
 
 Recordings are uploaded to the Amazon S3 bucket you specify.
 
-All recordings are saved to a subdirectory of your S3 bucket that has your Vonage Video API key as its name, and each recording is saved to a subdirectory that has the recording ID as its name. The name of the recording file is archive.mp4 (for a composed recording) or archive.zip (for an individual stream recording). (See [Individual stream and composed recordings](/video/guides/archiving#individual-stream-and-composed-recordings).)
+All archives are saved to a subdirectory of your S3 bucket that has your Vonage Video API key as its name, and each archive is saved to a subdirectory that has the archive's ID as its name. The name of the archive file is `archive.mp4` (for a composed archives) or archive.zip (for an individual stream archive). (See [Individual stream and composed archives](/video/guides/archiving#individual-stream-and-composed-archives).)
 
-For example, consider a recording with the following API key and ID:
+For example, consider an archive with the following API key and ID:
 
 * API key 123456
-* Recording ID **ab0baa3d-2539-43a6-be42-b41ff1488af3**
+* Archive ID **ab0baa3d-2539-43a6-be42-b41ff1488af3**
 
-The file for this recording is uploaded to the following directory your S3 bucket.
+The file for this archive is uploaded to the following directory your S3 bucket.
 
 **123456/ab0baa3d-2539-43a6-be42-b41ff1488af3/archive.mp4**
 
-At the [Amazon S3 console](https://console.aws.amazon.com/s3) you can make an uploaded recording file public:
+At the [Amazon S3 console](https://console.aws.amazon.com/s3) you can make an uploaded archive file public:
 
-1. Navigate to the recording file in the console and right-click it.
-2. Select the **Make public** command. 
+1. Navigate to the archive file in the console and right-click it.
+2. Select the **Make public** command.
 3. You can obtain the public URL for the file in the **Properties** panel for the file in the Amazon S3 console.
