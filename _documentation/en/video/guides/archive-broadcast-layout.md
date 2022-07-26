@@ -11,7 +11,7 @@ There are a number of predefined layout types that you can use with composed arc
 
 These layout options apply to composed archives (not individual archives) and live streaming broadcasts (not interactive broadcasts).
 
-See [Customizing the video layout for composed recordings](/video/guides/layout-control)
+See [Customizing the video layout for composed archives](/video/guides/layout-control)
 
 <!-- * OPT-TODO: See [Configuring video layout for live streaming broadcasts](/developer/guides/broadcast/live-streaming/#configuring-video-layout-for-opentok-live-streaming-broadcasts) -->
 
@@ -19,7 +19,7 @@ You can assign layout classes to streams to affect how they are displayed in an 
 
 * [Predefined layout types](#predefined-layout-types)
 
-* [Assigning layout classes to OpenTok streams](#assigning-layout-classes-to-vonage-video-streams)
+* [Assigning layout classes to streams](#assigning-layout-classes-to-vonage-video-streams)
 
 * [Layout types for screen sharing](#layout-types-for-screen-sharing)
 
@@ -35,7 +35,7 @@ There are four predefined layout types available: best fit, picture-in-picture, 
 
 This is the default initial layout type. This is a tiled layout, which scales according to the number of videos.
 
-The number of columns and rows of varies depending on the number of OpenTok streams in the broadcast.
+The number of columns and rows of varies depending on the number of streams in the broadcast.
 
 For example, the following illustrates the layout when there are 1, 2, 4, or 5 streams in a session:
 
@@ -46,7 +46,7 @@ For example, the following illustrates the layout when there are 1, 2, 4, or 5 s
 
 Layout classes on these streams will have no effect on the layout. Each position in the list will be translated to a position in the grid.
 
-This layout supports up to 16 OpenTok streams (in a grid).
+This layout supports up to 16 streams (in a grid).
 
 Streams are included in the layout based on [stream prioritization rules](#stream-prioritization-rules).
 
@@ -62,8 +62,9 @@ This is a picture-in-picture layout, where a small stream is visible over a full
 
 <img src="/images/video/pip.png" alt="Vonage video API pip layout" style="width: 20%;">
 
-C = corner
-Set the layout class of the full-size stream to `"full"`. (See [Assigning layout classes to OpenTok streams](#assigning-layout-classes-to-vonage-video-streams).)
+**C = corner**
+
+Set the layout class of the full-size stream to `"full"`. (See [Assigning layout classes to streams](#assigning-layout-classes-to-vonage-video-streams).)
 
 The first stream without this class occupies the corner position.
 
@@ -81,7 +82,7 @@ This is a layout with one large stream on the right edge of the output, and seve
 
 <img src="/images/video/verticalPresentation.png" alt="Vonage video API vertical layout" style="width: 20%;">
 
-Set the layout class of the focus stream to `"focus"`. (See [Assigning layout classes to OpenTok streams](#assigning-layout-classes-to-vonage-video-streams).) The streams without the focus class will occupy the left edge and divide the space evenly.
+Set the layout class of the focus stream to `"focus"`. (See [Assigning layout classes to streams](#assigning-layout-classes-to-vonage-video-streams).) The streams without the focus class will occupy the left edge and divide the space evenly.
 
 For landscape orientation videos (640x480, 1280x720, 1920x1080), this layout supports 1 focus stream and up to 5 other streams (or up to 7 for 1920x1080 videos).
 
@@ -99,7 +100,7 @@ This is a layout with one large stream on the top edge of the output, and severa
 
 <img src="/images/video/horizontalPresentation.png" alt="Vonage video API vertical layout" style="width: 20%;">
 
-There is one layout class used to specify the position of streams in this layout: `focus`. (See [Assigning layout classes to OpenTok streams](#assigning-layout-classes-to-vonage-video-streams)).
+There is one layout class used to specify the position of streams in this layout: `focus`. (See [Assigning layout classes to streams](#assigning-layout-classes-to-vonage-video-streams)).
 
 The streams without this class will occupy the bottom edge and divide the space evenly.
 
@@ -125,7 +126,7 @@ When using a layout type other than the default Best Fit, you must set the layou
 
 ### Setting the initial layout class list for a client's streams
 
-When you create a token for a client to connect to the OpenTok session, you can (optionally) specify the initial layout class list for streams published by the client.
+When you create a token for a client to connect to the session, you can (optionally) specify the initial layout class list for streams published by the client.
 
 To do this, generate a token that includes the initial layout class list setting.
 
@@ -166,13 +167,16 @@ opentok.createSession({mediaMode:"routed"}, function(err, session) {
 PHP:
 
 ```php
-use OpenTok\Session;
-use OpenTok\Role;
+use Vonage\Video\Role;
 
-$token = $opentok->generateToken($sessionId);
+// Generate a Token from just a sessionId (fetched from a database)
+$token = $client->video()->generateToken($sessionId);
+// Generate a Token by calling the method on the Session (returned from createSession)
+$token = $session->generateToken();
 
+// Set some options in a token
 $token = $session->generateToken(array(
-    'initialLayoutClassList' => array('focus')
+    'initialLayoutClassList' => ['focus']
 ));
 ```
 <!-- 
@@ -216,7 +220,7 @@ string token = session.GenerateToken(initialLayoutClassList: initialLayoutClassL
 
 ### Modifying the layout class list for a stream
 
-You can dynamically change the layout class list for a stream by calling the OpenTok [/session/{sessionId}/stream REST API](/developer/rest/#change-stream-layout-classes).
+You can dynamically change the layout class list for a stream by calling the  `/session/{sessionId}/stream` REST API.
 
 Make a PUT request to the following URL:
 
@@ -241,7 +245,7 @@ The `id` property is the stream ID. Note that you can update the layout class li
 
 The request returns a 400 response code if you specify an invalid layoutClassList value. The value must be an array of strings.
 
-You can also modify the layout class list for a stream using the OpenTok server SDKs:
+You can also modify the layout class list for a stream using the server SDKs:
 
 <!-- * Java — OPT-TODO: [`OpenTok.setStreamLayouts()`](/developer/sdks/java/reference/com/opentok/OpenTok.html#setStreamLayouts-java.lang.String-com.opentok.StreamListProperties-) -->
 
@@ -258,10 +262,10 @@ You can also modify the layout class list for a stream using the OpenTok server 
 
 <!-- OPT-TODO [/session/{sessionId}/stream/{streamId} REST API](/developer/rest/#get-stream-info) -->
 
-You can get the layout class list for a stream by calling the OpenTok `/session/{sessionId}/stream/{streamId}` REST API. Make a GET request to the following URL:
+You can get the layout class list for a stream by calling the REST API `/session/{sessionId}/stream/{streamId}`. Make a GET request to the following URL:
 
 ```
-    https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream/{streamId}
+https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream/{streamId}
 ```
 
 The response includes JSON data, which includes a `layoutClassList` array:
@@ -282,7 +286,7 @@ The response includes JSON data, which includes a `layoutClassList` array:
 
 The request returns a 408 error response code if you specify an invalid stream ID.
 
-You can also get the layout class list for a stream using the OpenTok server SDKs:
+You can also get the layout class list for a stream using the server SDKs:
 
 <!-- * Java — [`OpenTok.listStreams()`](/developer/sdks/java/reference/com/opentok/OpenTok.html#listStreams-java.lang.String-) (call the `getLayoutClassList()` method of each Stream object) -->
 
@@ -299,10 +303,10 @@ You can also get the layout class list for a stream using the OpenTok server SDK
 
 <!-- OPT-TODO [/session/{sessionId}/stream REST API](/developer/rest/#get-stream-info) -->
 
-You can get the layout class list for all streams in a session by calling the `/session/{sessionId}/stream` REST API. Make a GET request to the following URL:
+You can get the layout class list for all streams in a session by calling the REST API `/session/{sessionId}/stream`. Make a GET request to the following URL:
 
 ```
-    https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream/
+https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream/
 ```
 
 The response includes JSON data, which includes an `items` property, which is array containing layout information for streams in the session:
@@ -424,7 +428,7 @@ For an archive:
 <!-- OPT-TODO:[start archive](/developer/rest/#start_archive)
 [start broadcast](/developer/rest/#start_broadcast) -->
 
-when you call the start archive or the start broadcast method of the OpenTok REST API. 640x480-pixel and 480x640-pixel (SD) archives have 4:3 and 3:4 aspect ratios. 1280x720-pixel, 720x1280-pixel, 1920x1080-pixel, and 1080x1920-pixel (HD and FHD) archives have 16:9 and 9:16 aspect ratios. 
+when you call the start archive or the start broadcast method of the REST API. 640x480-pixel and 480x640-pixel (SD) archives have 4:3 and 3:4 aspect ratios. 1280x720-pixel, 720x1280-pixel, 1920x1080-pixel, and 1080x1920-pixel (HD and FHD) archives have 16:9 and 9:16 aspect ratios. 
 
 Keep these aspect ratios in mind when defining the CSS for a custom layout.
 
@@ -457,7 +461,7 @@ broadcast {
 <!-- OPT-TODO:[start archive](/developer/rest/#start_archive)
 [start broadcast](/developer/rest/#start_broadcast) -->
 
-The default dimensions are 640x480 pixels (SD landscape). You can also set a composed archive or broadcast to use a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), or 1080x1920 (FHD portrait) resolution when you call the start archive or start broadcast method of the OpenTok REST API.
+The default dimensions are 640x480 pixels (SD landscape). You can also set a composed archive or broadcast to use a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), or 1080x1920 (FHD portrait) resolution when you call the start archive or start broadcast method of the REST API.
 
 The following default rules are applied to elements:
 
