@@ -1,20 +1,20 @@
 ---
 title: Amazon S3 server-side encryption
-meta_title: Amazon Web Services provides a server-side encryption feature you can use when uploading Vonage recordings to an S3 target.
-description: Use the AWS server-side encryption feature when uploading your Vonage recordings to an S3 target.
+meta_title: Amazon Web Services provides a server-side encryption feature you can use when uploading Vonage archives to an S3 target.
+description: Use the AWS server-side encryption feature when uploading your Vonage archives to an S3 target.
 product: video
 navigation_weight: 6
 ---
 
 # Amazon S3 server-side encryption
 
-Amazon Web Services provides a server-side encryption feature you can use when uploading Vonage Video recordings to an S3 target.
+Amazon Web Services provides a server-side encryption feature you can use when uploading Vonage Video archives to an S3 target.
 
 This uses Amazon S3-managed encryption keys for encryption. For more information, see
 [this Amazon web services documentation](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). 
 (Vonage Video supports using only Amazon S3-managed encryption keys and not KMS or customer-provided keys.)
 
-To use this feature, set the `sse` property to `"s3"` when you call the Vonage Video REST API to set the Vonage Video recording upload target. 
+To use this feature, set the `sse` property to `"s3"` when you call the Vonage Video REST API to set the archives upload target. 
 
 Submit an HTTP PUT request to the following URL:
 
@@ -51,7 +51,7 @@ Include a JSON object as the POST data:
 }
 ```
 
-Set `bucket` to the name of the Amazon S3 bucket you want to use for recording upload. Set the `secretKey` and `accessKey` properties to the Amazon S3 secret key and access key for that bucket.
+Set `bucket` to the name of the Amazon S3 bucket you want to use for archive upload. Set the `secretKey` and `accessKey` properties to the Amazon S3 secret key and access key for that bucket.
 
 Set the `endpoint` property if you want to use an S3-compliant storage provider other than Amazon.
 This is optional. Set this to the endpoint base URL, including the protocol (http or https),
@@ -86,7 +86,6 @@ curl \
      https://api.opentok.com/v2/partner/$api_key/archive/storage
 ```
 
-Set the value for `api_key` to your OpenTok API key. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
+Set the value for `api_key` to your API key. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
 
-For more information, see [Using an Amazon S3 bucket with Vonage Video
-recording](using-s3).
+For more information, see [Archiving using AWS S3](/video/guides/using-s3).
