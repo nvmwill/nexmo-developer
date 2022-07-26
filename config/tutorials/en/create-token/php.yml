@@ -9,7 +9,7 @@ introduction:
   description: In this tutorial, you will learn how to connect to a session from your web frontend.
   content: |
     # Introduction
-    In order to authenticate a user connecting to an Vonage Video session, a client must connect using a token (see [this overview](/video/guides/create-token)).
+    In order to authenticate a user connecting to a session, a client must connect using a token (see [this overview](/video/guides/create-token)).
 
 prerequisites:
   - video/general-prerequisites/video-api-account

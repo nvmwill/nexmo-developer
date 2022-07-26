@@ -9,12 +9,12 @@ product: video
 The following PHP code example shows how to generate a token using the Vonage Video PHP server-side library:
 
 ```php
-use OpenTok\OpenTok;
+use Vonage\Video\Role;
 
-$opentok = new OpenTok(API_KEY,API_SECRET);
-// Replace with the correct session ID:
-print $opentok->generateToken('your_session_ID');
-print "\n";
+// Generate a Token from just a sessionId (fetched from a database)
+$token = $client->video()->generateToken($sessionId);
+// Generate a Token by calling the method on the Session (returned from createSession)
+$token = $session->generateToken();
 ```
 
 Calling the `generateToken()` method returns a string. This string is the token. Use server-side PHP code to include the token in the served web page.
@@ -22,14 +22,20 @@ Calling the `generateToken()` method returns a string. This string is the token.
 The following PHP code example shows how to obtain a token that has a role of "publisher" and that has a connection metadata string:
 
 ```php
-use OpenTok\OpenTok;
+use Vonage\Video\Role;
 
-$opentok = new OpenTok(API_KEY,API_SECRET);
-// Replace with meaningful metadata for the connection:
-$connectionMetaData = "username=Bob,userLevel=4";
-// Replace with the correct session ID:
-print $opentok->generateToken('your_session_ID', array('role' => Role::PUBLISHER, 'expireTime' => time()+(7 * 24 * 60 * 60), 'data' =>  $connectionMetaData);
-print "\n";
+// Generate a Token from just a sessionId (fetched from a database)
+$token = $client->video()->generateToken($sessionId);
+// Generate a Token by calling the method on the Session (returned from createSession)
+$token = $session->generateToken();
+
+// Set some options in a token
+$token = $session->generateToken(array(
+    'role'       => Role::MODERATOR,
+    'ttl'        => 7 * 24 * 60 * 60, // in one week
+    'data'       => 'name=Johnny',
+    'initialLayoutClassList' => ['focus']
+));
 ```
 
 The method takes the following arguments:
