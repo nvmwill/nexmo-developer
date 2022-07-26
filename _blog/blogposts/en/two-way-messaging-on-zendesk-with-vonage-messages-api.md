@@ -5,8 +5,8 @@ description: Connect WhatsApp with Zendesk via Vonage Messages API to create and
 thumbnail: /content/blog/two-way-messaging-on-zendesk-with-vonage-messages-api/zendesk_messengerapi.png
 author: nourhan-kandeel
 published: true
-published_at: 2022-07-21T09:28:05.470Z
-updated_at: 2022-07-21T09:28:07.337Z
+published_at: 2022-07-26T09:28:05.470Z
+updated_at: 2022-07-26T09:28:07.337Z
 category: tutorial
 tags:
   - javascript
