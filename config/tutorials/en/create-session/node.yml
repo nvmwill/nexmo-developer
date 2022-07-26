@@ -9,7 +9,7 @@ introduction:
   description: In this tutorial, you will learn how to connect to a session from your web frontend.
   content: |
     # Introduction
-    You can use the Vonage Video Node.js SDK to generate Vonage Video sessions. Each session has a unique session ID, which you can use in an OpenTok client library to connect to an Vonage Video session. (See ["Joining a Session"](/video/tutorials/joining-a-session)
+    You can use the Vonage Video Node.js SDK to generate Vonage Video sessions. Each session has a unique session ID, which you can use in the client SDKs to connect to a session. (See ["Joining a Session"](/video/tutorials/joining-a-session)
 
     For general information regarding creating a session, see [Session Creation](/video/guides/create-session).
 

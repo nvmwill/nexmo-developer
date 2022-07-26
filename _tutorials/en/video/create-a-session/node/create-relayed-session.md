@@ -6,19 +6,19 @@ product: video
 
 ## Creating a relayed session
 
-Here is Node.js sample code that creates a new session with the [media mode](/video/guides/create-session#the-opentok-media-router-and-media-modes) set to relayed:
+Here is Node.js sample code that creates a new session with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to relayed:
 
 ```js
-    var opentok = new OpenTok(API_KEY, API_SECRET);
-    var sessionId;
-    opentok.createSession({mediaMode:"relayed"}, function(error, session) {
-      if (error) {
-        console.log("Error creating session:", error)
-      } else {
-        sessionId = session.sessionId;
-        console.log("Session ID: " + sessionId);
-      }
-    });
+var opentok = new OpenTok(API_KEY, API_SECRET);
+var sessionId;
+opentok.createSession({mediaMode:"relayed"}, function(error, session) {
+  if (error) {
+    console.log("Error creating session:", error)
+  } else {
+    sessionId = session.sessionId;
+    console.log("Session ID: " + sessionId);
+  }
+});
 ```  
 
 In a relayed session, clients will attempt to send streams directly between each other. However, if clients cannot connect due to firewall restrictions, the session uses the Vonage Video TURN server to relay audio-video streams.

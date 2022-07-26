@@ -6,4 +6,4 @@ product: video
 
 ## Using sessions in client applications
 
-Use the session ID with the [OpenTok client SDK](/video/resources#client-sdks) to [connect to an OpenTok session](/video/tutorials/joining-a-session).
+Use the session ID with the [client SDK](/video/resources#client-sdks) to [connect to an session](/video/tutorials/joining-a-session).
