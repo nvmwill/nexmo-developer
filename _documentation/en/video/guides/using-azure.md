@@ -1,18 +1,18 @@
 ---
-title: Vonage Video API archiving using a Windows Azure container.
+title: Archiving using a Windows Azure container.
 meta_title: Use a Windows Azure container with Vonage Video API archiving.
 description: You can use a Windows Azure container for Vonage Video API archiving.
 product: video
 navigation_weight: 4
 ---
 
-# Vonage Video API archiving using a Windows Azure container
+# Archiving using a Windows Azure container
 
-Use the [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) to specify your S3-compliant endpoint or Windows Azure container for completed recordings to be uploaded to. (For more information on Amazon S3 see [Using S3 storage with Vonage Video API recording](/video/guides/using-s3).)"
+From the [Vonage dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) specify your S3-compliant endpoint or Windows Azure container for completed archives to be uploaded to. (For more information on Amazon S3 see [Archiving using AWS S3](/video/guides/using-s3).)"
 
 You can create a Windows Azure account at [http://azure.microsoft.com](http://azure.microsoft.com).
 
-You will provide the following information to the Video API account:
+You will need to set the following in your Vonage video account:
 
 * Your Azure account name
 * Your Azure account key
@@ -24,12 +24,12 @@ You can create an Azure container (or find names of existing containers) at the 
 To obtain an Account Key:
 
 1. At the [Windows Azure portal](https://portal.azure.com), click **All Resources** on the left-hand menu.
-2. Click the storage account that you want to use for Vonage recordings, and then click the **Settings** button.
+2. Click the storage account that you want to use for archiving, and then click the **Settings** button.
 3. Click **Keys** in the right-hand side of the page.
 4. Make a record of the storage account name and one of the access keys (either the primary access key or the secondary access key).
-5. Click the **Blobs** button and record the blob (storage container) name you will use to store Vonage recordings.
+5. Click the **Blobs** button and record the blob (storage container) name you will use to store archives.
 
-Now, log in to your [Vonage API Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) and complete the following steps:
+Now, log in to your [Vonage Dashboard](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) and complete the following steps:
 
 1. Click on a **Projects** in the left nav that will contain sessions that you are archiving.
 2. Click the **Project Archives** tab.
@@ -45,11 +45,11 @@ Now, log in to your [Vonage API Dashboard](https://identity.nexmo.com/login?icid
 
 <!-- OPT-TODO: Add a link to the video API reference  -->
 
-Recordings are uploaded to the Windows Azure container you specify.
+Archives are uploaded to the Windows Azure container you specify.
 
-All recordings are saved to a subdirectory of your Azure container that has your Vonage API key as its name, and each archive is saved to a subdirectory that has the archive ID as its name. The name of the archive file is archive.mp4 (for a composed archive) or archive.zip (for an individual stream archive). (See [Individual stream and composed recordings](/video/guides/archiving#individual-stream-and-composed-recordings).)
+All archives are saved to a subdirectory of your Azure container that has your Vonage API key as its name, and each archive is saved to a subdirectory that has the archive ID as its name. The name of the archive file is archive.mp4 (for a composed archive) or archive.zip (for an individual stream archive). (See [Individual stream and composed archives](/video/guides/archiving#individual-stream-and-composed-archives).)
 
-For example, consider a recording with the following API key and ID:
+For example, consider an archive with the following API key and ID:
 
 * API key -- 123456
 * Archive ID -- **ab0baa3d-2539-43a6-be42-b41ff1488af3**
