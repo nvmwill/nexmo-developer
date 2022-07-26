@@ -35,7 +35,7 @@ Field | Required? | Description |
 ``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
 ``recording_options`` | No | An object containing recording options for the meeting. For example:
 | | | If ``auto_record``=``true``, the session will be recorded. If ``false``, the session will not be recorded.
-| | | If ``record_only_owner``=``true``, only the owner of the room will be recorded. If ``false``, all users in the session will be recorded.
+| | | If ``record_only_owner``=``true``, all audio in the session will be recorded but only the video of the owner of the room will be recorded. If ``false``, all users in the session will be recorded.
 
 ## Request
 
@@ -48,19 +48,6 @@ You can use the following code to start an instant room (default options):
    -H 'content-type: application/json' \
    -d '{
    "display_name":"New Meeting Room"
-               }'
-```
-
-To create an instant room and automatically turn on recording:
-
-``` curl
-   curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
-   -H 'Authorization: Bearer XXXXX' \
-   -H 'Content-Type: application/json' \
-   -d '{
-   "display_name":"New Meeting Room",
-   "recording_options": {
-       "auto_record": true}
                }'
 ```
 
@@ -94,7 +81,8 @@ As this room has not yet expired, ``is_available`` is set to true.
    "type":"instant",
    "expires_at":"2021-10-19T17:54:17.219Z",
    "recording_options":{
-      "auto_record":true
+      "auto_record":true,
+      "record_only_owner":true
    },
    "meeting_code":"982515622",
    "_links":{

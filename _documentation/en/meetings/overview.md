@@ -88,7 +88,7 @@ End Meeting | ✅ | ✅ | ✅
 
 ¹ Recording is still available in 360-500PX meetings by setting the ``auto_record`` parameter in the API call.
 
-> You will also need to send an email request to the [Meetings API team](meetings-api@vonage.com) to whitelist the domain of the website the iFrame is used in.
+> You will also need to send an email request to the [Meetings API team](mailto:meetings-api@vonage.com) to whitelist the domain of the website the iFrame is used in.
 
 ## Code Snippets
 
