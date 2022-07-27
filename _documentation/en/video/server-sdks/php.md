@@ -8,13 +8,13 @@ product: video
 
 The Vonage Video PHP SDK provides methods for:
 
-* [Creating sessions](/video/server-sdks/php#creating-sessions).
-* [Generating tokens](/video/server-sdks/php#generating-tokens)
-* [Working with streams](/video/server-sdks/php#working-with-streams)
-* [Working with archives](https://tokbox.com/opentok/tutorials/archiving)
-* [Disconnecting clients from sessions](/video/server-sdks/php#force-a-client-to-disconnect)
-* [Forcing clients in a session to disconnect or mute published audio](/video/server-sdks/php#forcing-clients-in-a-session-mute-published-audio)
-* [Sending signals to clients connected to a session](/video/server-sdks/php#sending-signals)
+* [Creating sessions](#creating-sessions).
+* [Generating tokens](#generating-tokens)
+* [Working with streams](#working-with-streams)
+* [Working with archives](#working-with-archives)
+* [Disconnecting clients from sessions](#force-a-client-to-disconnect)
+* [Forcing clients in a session to disconnect or mute published audio](#forcing-clients-in-a-session-mute-published-audio)
+* [Sending signals to clients connected to a session](#sending-signals)
 
 ## Installation
 
@@ -90,18 +90,15 @@ $vonageVideoClient = $client->video();
 
 ### Creating Sessions
 
-To create an OpenTok Session, use the `createSession($options)` method of the
+To create a Session, use the `createSession($options)` method of the
 Vonage Video client. The `$options` parameter is an optional array used to specify the following:
 
-- Setting whether the session will use the OpenTok Media Router or attempt to send streams directly
+- Setting whether the session will use the  Media Router or attempt to send streams directly
   between clients.
 
 - Setting whether the session will automatically create archives (implies use of routed session)
 
 - Specifying a location hint.
-
-The `getSessionId()` method of the `OpenTok\Session` instance returns the session ID,
-which you use to identify the session in the Vonage Video client libraries.
 
 ```php
 use Vonage\Video\MediaMode;
@@ -129,13 +126,17 @@ $session = $client->video()->createSession($sessionOptions);
 $sessionId = $session->getSessionId();
 ```
 
+The `getSessionId()` method returns the session ID,
+which you use to identify the session in the Vonage Video client libraries.
+
 For more information on sessions, see the [sessions](/video/tutorials/create-session) developer guide.
 
 ### Generating Tokens
 
 Once a Session is created, you can start generating Tokens for clients to use when connecting to it.
-You can generate a token either by calling the `generateToken($sessionId, $options)` method of the
-Vonage Video client. The `$options` parameter is an optional array used to set the role,
+You can generate a token either by calling the `generateToken($sessionId, $options)` method.
+
+The `$options` parameter is an optional array used to set the role,
 how long until the token expires, and connection data of the Token. For layout control in archives and broadcasts,
 the initial layout class list of streams published from connections using this token can be set as well.
 
@@ -273,10 +274,8 @@ $client->video()->setArchiveLayout($archiveId, $layout);
 ```
 
 You can set the initial layout class for a client's streams by setting the `layout` option when
-you create the token for the client, using the `OpenTok->generateToken()` method or the
+you create the token for the client, using the `generateToken()` method or the
 `Session->generateToken()` method.
-
-You can change the layout classes for a stream by calling the `OpenTok->updateStream()` method.
 
 Setting the layout of composed archives is optional. By default, composed archives use the
 "best fit" layout (see [Customizing the video layout for composed
