@@ -8,7 +8,7 @@ published_at: 2022-03-29T15:26:31.727Z
 updated_at: 2022-03-29T15:26:31.761Z
 category: release
 tags:
-  - video-api
+  - meetings-api
 comments: false
 spotlight: false
 redirect: ""
