@@ -9,7 +9,7 @@ product: video
 The following Node.js code creates a session that uses the Media Router:
 
 ```js
-var opentok = new OpenTok(API_KEY, API_SECRET);
+var opentok = new OpenTok(App_ID, API_SECRET);
 var sessionId;
 opentok.createSession({mediaMode:"routed"}, function(error, session) {
   if (error) {

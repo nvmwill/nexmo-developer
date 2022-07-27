@@ -11,7 +11,7 @@ The following Node.js code shows how to generate a token using the Vonage Video 
 ```js
     // Set the following constants with the App ID and API secret
     // that you receive when you sign up to use the OpenTok API:
-    var opentok = new OpenTok(API_KEY, API_SECRET);
+    var opentok = new OpenTok(App_ID, API_SECRET);
     
     //Generate a basic session. Or you could use an existing session ID.
     var sessionId;
@@ -34,7 +34,7 @@ The following Node.js code shows how to obtain a token that has a role of "publi
 ```js
     // Set the following constants with the App ID and API secret
     // that you receive when you sign up to use the OpenTok API:
-    var opentok = new OpenTok(API_KEY, API_SECRET);
+    var opentok = new OpenTok(App_ID, API_SECRET);
     
     //Generate a basic session. Or you could use an existing session ID.
     var sessionId;

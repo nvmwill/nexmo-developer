@@ -9,7 +9,7 @@ At this point, your `app.js` file should look something like this (with a few ad
 
 ```js
 // replace these values with those generated in your Video API account
-var appId = "YOUR_API_KEY";
+var appId = "YOUR_APP_ID";
 var sessionId = "YOUR_SESSION_ID";
 var token = "YOUR_TOKEN";
 
@@ -54,7 +54,7 @@ function initializeSession() {
 }
 ```
 
-In your completed code, you should have hard coded values to replace **YOUR_API_KEY**, **YOUR_SESSION_ID** and **YOUR_TOKEN**. If you haven't done this, see [Setting up authentication](/video/tutorials/create-video-conferencing-app/video/create-video-conferencing-app/javascript/auth-setup/javascript).
+In your completed code, you should have hard coded values to replace **YOUR_APP_ID**, **YOUR_SESSION_ID** and **YOUR_TOKEN**. If you haven't done this, see [Setting up authentication](/video/tutorials/create-video-conferencing-app/video/create-video-conferencing-app/javascript/auth-setup/javascript).
 
 1. If everything checks out, go ahead and test your code by loading the `index.html` file in Chrome, Firefox or any other [supported browser](/video/resources#supported-browsers).
 
