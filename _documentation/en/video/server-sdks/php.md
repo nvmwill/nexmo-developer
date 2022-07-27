@@ -192,7 +192,9 @@ You can only archive sessions that use the Vonage Video Media Router
 (sessions with the media mode set to routed).
 
 You can start the recording of an Vonage Video Session using the `startArchive($archiveConfig)` method
-of the Vonage Video client. This will return an `Vonage\Video\Archive` instance. The parameter
+of the Vonage Video client. This will return an `Vonage\Video\Archive` instance.
+
+The parameter
 `$archiveConfig` is an configuration object and is used to determine the session ID, assign a name, whether to record audio and/or
 video, the desired output mode for the Archive, and the desired resolution if applicable. Note that you can only start an
 Archive on a Session that has clients connected.
