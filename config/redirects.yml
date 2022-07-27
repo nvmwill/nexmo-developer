@@ -343,7 +343,7 @@
 "/devtv": "/community"
 "/messages/10-dlc/api-reference": "/api/10dlc"
 "/messages/concepts/10-dlc": "/messages/10-dlc/10-dlc-registration-dashboard"
-"/verify/verify-v2/api-reference": "/api/verify"
+"/verify/verify-v2/api-reference": "/api/verify.v2"
 "/verify/verify-v2-early-access": "/verify/verify-v2/overview"
 "/concepts/guides/authentication": "/getting-started/concepts/authentication"
 "/concepts/guides/glossary": "/getting-started/concepts/glossary"

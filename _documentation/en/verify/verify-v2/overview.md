@@ -58,4 +58,4 @@ One-time passcodes sent to email are also a good alternative to the channels men
 
 ![Verify V2 Request with Event & Summary Callbacks Using WhatsApp Codeless](/images/verifyv2_whatsapp_sequence_diagram.png)
 
-> You can view the Verify V2 API Reference [here](https://developer.vonage.com/verify/api-reference).
+> You can view the Verify V2 API Reference [here](/api/verify.v2).
