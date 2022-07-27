@@ -219,7 +219,7 @@ method. Other methods of the OT object check for system requirements and set up 
 	        
 	            
             <tr>
-                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#initSession"><span class="type-signature">(static) </span>initSession</a><span class="signature">(apiKey, sessionId, options)</span><span class="type-signature"> &#x2192; {<a href="Session.html">Session</a>}</span></code></span></td>
+                <td><span style="color:#4d4e53; font-size:16px"><code><a href="#initSession"><span class="type-signature">(static) </span>initSession</a><span class="signature">(appID, sessionId, options)</span><span class="type-signature"> &#x2192; {<a href="Session.html">Session</a>}</span></code></span></td>
                 <td><p class="mSummary">
 Initializes and returns the local session object for a specified session ID.</p></td>
             </tr>
@@ -2410,7 +2410,7 @@ var publisher = OT.initPublisher(&apos;publisher&apos;, null, function (error) {
 
     
 
-    <h4 class="name" id="initSession"><span class="type-signature">(static) </span>initSession<span class="signature">(apiKey, sessionId, options)</span><span class="type-signature"> &#x2192; {<a href="Session.html">Session</a>}</span></h4>
+    <h4 class="name" id="initSession"><span class="type-signature">(static) </span>initSession<span class="signature">(appID, sessionId, options)</span><span class="type-signature"> &#x2192; {<a href="Session.html">Session</a>}</span></h4>
 
     
 
@@ -2481,7 +2481,7 @@ event handlers attached to it. You can remove all event handlers by calling the
 
         <tr>
             
-                <td class="name"><code>apiKey</code></td>
+                <td class="name"><code>appID</code></td>
             
 
             <td class="type">
