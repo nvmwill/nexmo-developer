@@ -6,10 +6,10 @@ product: video
 
 # Initializing a Session object
 
-Before you can connect to a session, instantiate a Session object by calling the `OT.initSession()` method with your API key and the appropriate session ID:
+Before you can connect to a session, instantiate a Session object by calling the `OT.initSession()` method with your App ID and the appropriate session ID:
 
 ```js
-// Replace with your API key and session ID:
+// Replace with your App ID and session ID:
 var session = OT.initSession(appID, sessionID);
 ```
 

@@ -7,7 +7,7 @@ navigation_weight:
 
 # Token Creation Overview
 
-In order to authenticate a user connecting to a session, a user's page must pass a token along with the API key. You generate a token for each user connecting to a session. For more information on connecting, see the documentation on [joining a session](/video/tutorials/create-session).
+In order to authenticate a user connecting to a session, a user's page must pass a token along with the App ID. You generate a token for each user connecting to a session. For more information on connecting, see the documentation on [joining a session](/video/tutorials/create-session).
 
 ## Roles
 

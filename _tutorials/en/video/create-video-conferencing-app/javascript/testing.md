@@ -62,6 +62,6 @@ In your completed code, you should have hard coded values to replace **YOUR_API_
 
 2. If that worked, mute your audio then open another tab (keeping the original open) and load the same   URL. You should now be able to scroll down and see a second video. If you right-click on either video and "Inspect Element", you should see that one of the videos is filling the `subscriber` div, and the other is filling the `publisher` div.
 
->**Troubleshooting tip:** If there's no video showing up on the page, open the "console" tab in your browser tools (command+option+i on Mac, CTRL+i on Windows) and check for errors. The most likely issue is that your **API key**, **session ID**, or **token** is not set up properly. Since you hard coded your credentials, it's also possible that your token has expired.
+>**Troubleshooting tip:** If there's no video showing up on the page, open the "console" tab in your browser tools (command+option+i on Mac, CTRL+i on Windows) and check for errors. The most likely issue is that your **App ID**, **session ID**, or **token** is not set up properly. Since you hard coded your credentials, it's also possible that your token has expired.
 
 In the next step we will take a look at ways we can [style the video app with css](/video/tutorials/create-video-conferencing-app/video/create-video-conferencing-app/javascript/css-customization/javascript)

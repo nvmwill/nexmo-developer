@@ -285,7 +285,7 @@ Property | Description |
 ``duration`` | The duration of the archive in seconds. For archive that are in progress (with the status property set `started`), this value is set to 0.
 ``id`` | The archive's unique ID.
 ``name`` | The name of the archive you supplied (this is optional).
-``partnerId`` | Your Vonage API key.
+``partnerId`` | Your Vonage App ID.
 ``resolution`` | The resolution of the archive (either `640x480`, `480x640`, `1280x720`, `720x1280`, `1920x1080`, or `1080x1920`). This property is only set for composed archives. You can set the resolution of a composed archive when calling the start archive method of the Vonage Video server-side SDK.
 ``reason`` | For archives with the status `stopped` or `failed`, this string describes the reason the archive stopped (such as "maximum duration exceeded") or failed.
 ``sessionId`` | The session ID of the Vonage Video session that was archived.

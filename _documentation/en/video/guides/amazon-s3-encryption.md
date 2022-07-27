@@ -68,7 +68,7 @@ A response with status code 200 indicates success.
 
 A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target.
 
-A response with a 403 status code indicates you passed in an invalid Vonage Video API key or API secret.
+A response with a 403 status code indicates you passed in an invalid Vonage Video App ID or API secret.
 
 ## Example
 
@@ -86,6 +86,6 @@ curl \
      https://api.opentok.com/v2/partner/$app_id/archive/storage
 ```
 
-Set the value for `app_id` to your API key. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
+Set the value for `app_id` to your App ID. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
 
 For more information, see [Archiving using AWS S3](/video/guides/using-s3).

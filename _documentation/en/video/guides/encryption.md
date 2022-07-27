@@ -90,7 +90,7 @@ To set the certificate, and enable archive encryption, submit an HTTP PUT reques
 https://api.opentok.com/v2/project//archive/storage 
 ``` 
 
-Replace `appId` with your project API key.
+Replace `appId` with your project App ID.
 
 Authenticate the REST API request using a custom HTTP header: `X-OPENTOK-AUTH`. Set this to a JSON Web token: 
 
@@ -114,7 +114,7 @@ Create the JSON web token with the following claims:
 }
 ```
 
-* Set `iss` to your Vonage Video API key (provided to you in your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) on the Project page).
+* Set `iss` to your Vonage Video App ID (provided to you in your [Vonage Account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) on the Project page).
 * Set `ist` to "project". 
 * Set `iat` to the current Unix epoch timestamp (when the token was created), in seconds.
 * Set `exp` to the expiration time for the token. For security, we recommend that you use an expiration time close to the token creation time (for example, 3 minutes after creation) and that you create a new token for each REST API call. The maximum allowed expiration time range is 5 minutes.
@@ -135,7 +135,7 @@ print jwt.encode({"iss": "my-project-API-key",
   algorithm='HS256')
 ```
 
-Replace `my-project-API-key` and `my-project-API-secret` with the Vonage Video project API key and secret. 
+Replace `my-project-API-key` and `my-project-API-secret` with the Vonage Video project App ID and secret. 
 Set the `Content-type` header for the REST API call to `application/json`:
 
 ```
@@ -198,7 +198,7 @@ Set the `certificate` property to the public key certificate Vonage will use to 
 
 * A response with status code 200 indicates success. 
 * A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target. 
-* A response with a 403 status code indicates you passed in an invalid project API key or API secret.
+* A response with a 403 status code indicates you passed in an invalid project App ID or API secret.
 
 ## Examples
 
@@ -214,7 +214,7 @@ curl \
      https://api.opentok.com/v2/project/$app_id/archive/storage
 ``` 
 
-Set the value for `app_id` to your Vonage Video project API key. 
+Set the value for `app_id` to your Vonage Video project App ID. 
 Set the value for `json_web_token` to a JSON web token. 
 Set the values for `your-s3-bucket` and `your-s3-access-key` to match your Amazon S3 credentials. Replace the certificate value with the certificate string. 
 
@@ -230,7 +230,7 @@ curl \
      https://api.opentok.com/v2/project/$app_id/archive/storage
 ```
 
-Set the value for `app_id` to your Vonage Video project API key.
+Set the value for `app_id` to your Vonage Video project App ID.
 Set the value for `json_web_token` to a JSON web token. 
 Set the values for `your-azure-account-name`, `your-azure-account-name`, and `your-azure-container` to match your Amazon S3 credentials. Replace the certificate value with the certificate string.
 
@@ -338,7 +338,7 @@ Set the `certificate` property to `null`.
 
 * A response with status code 200 indicates success in disabling encryption.
 * A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target.
-* A response with a 403 status code indicates you passed in an invalid project API key or partner secret.
+* A response with a 403 status code indicates you passed in an invalid project App ID or partner secret.
 
 ### Example
 
@@ -358,7 +358,7 @@ curl \
      https://api.opentok.com/v2/project/$app_id/archive/storage
 ```
 
-Set the value for `app_id` to your Vonage Video API key.
+Set the value for `app_id` to your Vonage Video App ID.
 Set the value for `json_web_token` to a JSON web token.
 Set the values for `your-s3-bucket` and `your-s3-access-key` to match your Amazon S3 credentials.
 

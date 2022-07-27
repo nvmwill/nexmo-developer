@@ -47,11 +47,11 @@ Now, log in to your [Vonage Dashboard](https://identity.nexmo.com/login?icid=nex
 
 Archives are uploaded to the Windows Azure container you specify.
 
-All archives are saved to a subdirectory of your Azure container that has your Vonage API key as its name, and each archive is saved to a subdirectory that has the archive ID as its name. The name of the archive file is archive.mp4 (for a composed archive) or archive.zip (for an individual stream archive). (See [Individual stream and composed archives](/video/guides/archiving#individual-stream-and-composed-archives).)
+All archives are saved to a subdirectory of your Azure container that has your Vonage App ID as its name, and each archive is saved to a subdirectory that has the archive ID as its name. The name of the archive file is archive.mp4 (for a composed archive) or archive.zip (for an individual stream archive). (See [Individual stream and composed archives](/video/guides/archiving#individual-stream-and-composed-archives).)
 
-For example, consider an archive with the following API key and ID:
+For example, consider an archive with the following App ID and ID:
 
-* API key -- 123456
+* App ID -- 123456
 * Archive ID -- **ab0baa3d-2539-43a6-be42-b41ff1488af3**
 
 The file for this archive is uploaded to the following directory in your Azure container:

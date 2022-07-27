@@ -9,7 +9,7 @@ product: video
 The following Node.js code shows how to generate a token using the Vonage Video Node.js server-side library:
 
 ```js
-    // Set the following constants with the API key and API secret
+    // Set the following constants with the App ID and API secret
     // that you receive when you sign up to use the OpenTok API:
     var opentok = new OpenTok(API_KEY, API_SECRET);
     
@@ -32,7 +32,7 @@ Calling the `generateToken()` method returns a string. This string is the token.
 The following Node.js code shows how to obtain a token that has a role of "publisher" and that has a connection metadata string:
 
 ```js
-    // Set the following constants with the API key and API secret
+    // Set the following constants with the App ID and API secret
     // that you receive when you sign up to use the OpenTok API:
     var opentok = new OpenTok(API_KEY, API_SECRET);
     

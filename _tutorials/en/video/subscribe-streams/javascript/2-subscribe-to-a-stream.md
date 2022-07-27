@@ -31,7 +31,7 @@ session.on("streamCreated", function(event) {
     session.subscribe(event.stream);
 });
 
-// Replace with your API key and token:
+// Replace with your App ID and token:
 session.connect(token, function (error) {
     if(error) {
         // failed to connect
