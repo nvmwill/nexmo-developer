@@ -26,7 +26,7 @@ npm helps manage dependencies for node projects. Find more info here: <a href="h
 Run this command to install the package and adding it to your `package.json`:
 
 ```
-$ npm install opentok --save
+npm install @vonage/server-sdk
 ```
 
 ## Usage
@@ -37,16 +37,48 @@ Import the module to get a constructor function for an OpenTok object, then call
 instantiate an OpenTok object with your own API Key and API Secret.
 
 ```javascript
-const OpenTok = require("opentok");
-const opentok = new OpenTok(apiKey, apiSecret);
+const { Video } = require('@vonage/video');
+const videoClient = new Video({
+    applicationId: APP_ID,
+    privateKey: PRIVATE_KEY_PATH,
+    baseUrl: string
+}, options);
+```
+
+`options` are
+
+```javascript
+{
+  // If true, log information to the console
+  debug: true|false,
+  // append info the the User-Agent sent to Nexmo
+  // e.g. pass 'my-app' for /nexmo-node/1.0.0/4.2.7/my-app
+  appendToUserAgent: string,
+  // Set a custom logger
+  logger: {
+    log: function() {level, args...}
+    info: function() {args...},
+    warn: function() {args...}
+  },
+  // Set a custom timeout for requests to Nexmo in milliseconds. Defaults to the standard for Node http requests, which is 120,000 ms.
+  timeout: integer,
+  // Set a custom host for requests instead of api.nexmo.com
+  apiHost: string,
+  // Set a custom host for requests instead of rest.nexmo.com
+  restHost: string
+}
 ```
 
 #### Increasing Timeouts
 The library currently has a 20 second timeout for requests. If you're on a slow network, and you need to increase the timeout, you can pass it (in milliseconds) when instantiating the OpenTok object.
 
 ```javascript
-const OpenTok = require("opentok");
-const opentok = new OpenTok(apiKey, apiSecret, { timeout: 30000});
+const { Video } = require('@vonage/video');
+const videoClient = new Video({
+    applicationId: APP_ID,
+    privateKey: PRIVATE_KEY_PATH,
+    baseUrl: string
+}, {timeout: 30000});
 ```
 
 ### Creating Sessions
@@ -60,40 +92,41 @@ useful to be saved to a persistent store (such as a database).
 
 ```javascript
 // Create a session that will attempt to transmit streams directly between
-// clients. If clients cannot connect, the session uses the OpenTok TURN server:
-opentok.createSession(function (err, session) {
-  if (err) return console.log(err);
+// clients. If clients cannot connect, the session uses the Vonage TURN server:
+try {
+    const session = await videoClient.createSession();
+    // save the sessionId
+    db.save("session", session.sessionId, done);
+} catch(error) {
+    console.error("Error creating session: ", error);
+}
 
-  // save the sessionId
-  db.save("session", session.sessionId, done);
-});
-
-// The session will the OpenTok Media Router:
-opentok.createSession({ mediaMode: "routed" }, function (err, session) {
-  if (err) return console.log(err);
-
-  // save the sessionId
-  db.save("session", session.sessionId, done);
-});
+// The session will use the Vonage Media Router:
+try {
+    const session = await videoClient.createSession({ mediaMode: "routed" });
+    // save the sessionId
+    db.save("session", session.sessionId, done);
+} catch(error) {
+    console.error("Error creating session: ", error);
+}
 
 // A Session with a location hint
-opentok.createSession({ location: "12.34.56.78" }, function (err, session) {
-  if (err) return console.log(err);
-
-  // save the sessionId
-  db.save("session", session.sessionId, done);
-});
+try {
+    const session = await videoClient.createSession({ location: "12.34.56.78" });
+    // save the sessionId
+    db.save("session", session.sessionId, done);
+} catch(error) {
+    console.error("Error creating session: ", error);
+}
 
 // A Session with an automatic archiving
-opentok.createSession({ mediaMode: "routed", archiveMode: "always" }, function (
-  err,
-  session
-) {
-  if (err) return console.log(err);
-
-  // save the sessionId
-  db.save("session", session.sessionId, done);
-});
+try {
+    const session = await videoClient.createSession({ mediaMode: "routed", archiveMode: "always" });
+    // save the sessionId
+    db.save("session", session.sessionId, done);
+} catch(error) {
+    console.error("Error creating session: ", error);
+}
 ```
 
 ### Generating Tokens
@@ -107,8 +140,13 @@ from connections using this token can be set as well.
 
 ```javascript
 // Generate a Token from just a sessionId (fetched from a database)
-token = opentok.generateToken(sessionId);
+try {
+    const token = await videoClient.generateClientToken(sessionId);
+} catch(error) {
+    console.error("Error generating Client Token: ", error);
+}
 
+// ***NOT SURE IF THE SDK DOES THIS. I'LL CHECK.***
 // Generate a Token from a session object (returned from createSession)
 token = session.generateToken();
 
@@ -129,17 +167,13 @@ the callback is an instance of `Archive`. Note that you can only start an archiv
 connected clients.
 
 ```javascript
-opentok.startArchive(sessionId, { name: "Important Presentation" }, function (
-  err,
-  archive
-) {
-  if (err) {
-    return console.log(err);
-  } else {
+try {
+    const archive = await videoClient.startArchive(sessionId);
     // The id property is useful to save off into a database
-    console.log("new archive:" + archive.id);
-  }
-});
+    console.log("new archive:", archive.id);
+} catch(error) {
+    console.error("Error starting archive: ", error);
+}
 ```
 
 You can also disable audio or video recording by setting the `hasAudio` or `hasVideo` property of
@@ -150,14 +184,13 @@ var archiveOptions = {
   name: "Important Presentation",
   hasVideo: false, // Record audio only
 };
-opentok.startArchive(sessionId, archiveOptions, function (err, archive) {
-  if (err) {
-    return console.log(err);
-  } else {
-    // The id property is useful to save to a database
-    console.log("new archive:" + archive.id);
-  }
-});
+try {
+    const archive = await videoClient.startArchive(sessionId, archiveOptions);
+    // The id property is useful to save off into a database
+    console.log("new archive:", archive.id);
+} catch(error) {
+    console.error("Error starting archive: ", error);
+}
 ```
 
 By default, all streams are recorded to a single (composed) file. You can record the different
@@ -169,14 +202,13 @@ var archiveOptions = {
   name: "Important Presentation",
   outputMode: "individual",
 };
-opentok.startArchive(sessionId, archiveOptions, function (err, archive) {
-  if (err) {
-    return console.log(err);
-  } else {
+try {
+    const archive = await videoClient.startArchive(sessionId, archiveOptions);
     // The id property is useful to save off into a database
-    console.log("new archive:" + archive.id);
-  }
-});
+    console.log("new archive:", archive.id);
+} catch(error) {
+    console.error("Error starting archive: ", error);
+}
 ```
 
 You can stop the recording of a started Archive using the `OpenTok.stopArchive(archiveId, callback)`
@@ -185,11 +217,14 @@ callback has a signature `function(err, archive)`. The `archive` returned in the
 instance of `Archive`.
 
 ```javascript
-opentok.stopArchive(archiveId, function (err, archive) {
-  if (err) return console.log(err);
+try {
+    const archiveResponse = await videoClient.stopArchive(archiveId);
+    console.log("Successfully stopped archive:", archiveResponse.id);
+} catch(error) {
+    console.error("Error stopping archive: ", error);
+}
 
-  console.log("Stopped archive:" + archive.id);
-});
+// ***NOT SURE IF THE SDK DOES THIS. I'LL CHECK.***
 
 archive.stop(function (err, archive) {
   if (err) return console.log(err);
@@ -201,11 +236,12 @@ To get an `Archive` instance (and all the information about it) from an `archive
 `function(err, archive)`. You can inspect the properties of the archive for more details.
 
 ```javascript
-opentok.getArchive(archiveId, function (err, archive) {
-  if (err) return console.log(err);
-
-  console.log(archive);
-});
+try {
+    const archive = await videoClient.getArchive(archiveId);
+    console.log("Successfully retrieved archive:", archive.id);
+} catch(error) {
+    console.error("Error retrieving archive: ", error);
+}
 ```
 
 To delete an Archive, you can call the `OpenTok.deleteArchive(archiveId, callback)` method or the
@@ -213,9 +249,14 @@ To delete an Archive, you can call the `OpenTok.deleteArchive(archiveId, callbac
 
 ```javascript
 // Delete an Archive from an archiveId (fetched from database)
-opentok.deleteArchive(archiveId, function (err) {
-  if (err) console.log(err);
-});
+try {
+    const archiveResponse = await videoClient.deleteArchive(archiveId);
+    console.log("Successfully deleted archive:", archiveResponse.id);
+} catch(error) {
+    console.error("Error deleting archive: ", error);
+}
+
+// ***NOT SURE IF THE SDK DOES THIS. I'LL CHECK.***
 
 // Delete an Archive from an Archive instance, returned from the OpenTok.startArchive(),
 // OpenTok.getArchive(), or OpenTok.listArchives() methods
@@ -232,18 +273,19 @@ the callback is an array of `Archive` instances. The `totalCount` returned from 
 the total number of archives your API Key has generated.
 
 ```javascript
-opentok.listArchives({ offset: 100, count: 50 }, function (
-  error,
-  archives,
-  totalCount
-) {
-  if (error) return console.log("error:", error);
-
-  console.log(totalCount + " archives");
-  for (var i = 0; i < archives.length; i++) {
-    console.log(archives[i].id);
-  }
-});
+const filter = {
+    offset: 100,
+    count: 50
+}
+try {
+    const archives = await videoClient.searchArchives(filter);
+    console.log(`Successfully retrieved ${archives.count} archives`);
+    for (let i = 0; i < archives.length; i++) {
+        console.log(archives.items[i].id);
+    }
+} catch(error) {
+    console.error("Error returning list of archives: ", error);
+}
 ```
 
 Note that you can also create an automatically archived session, by passing in `'always'`
@@ -254,9 +296,15 @@ For composed archives, you can set change the layout dynamically, using the
 `OpenTok.setArchiveLayout(archiveId, type, stylesheet, screenshareType, callback)` method:
 
 ```javascript
-opentok.setArchiveLayout(archiveId, type, null, null, function (err) {
-  if (err) return console.log("error:", error);
-});
+const layout = {
+    type: "bestFit"
+}
+try {
+    const archiveResponse = await videoClient.updateArchiveLayout(archiveId,layout);
+    console.log("Successfully updated archive layout:", archiveResponse);
+} catch(error) {
+    console.error("Error deleting archive: ", error);
+}
 ```
 
 You can set the initial layout class for a client's streams by setting the `layout` option when
@@ -271,6 +319,7 @@ archives](/developer/guides/archiving/layout-control.html)).
 For more information on archiving, see the
 [OpenTok archiving developer guide](/developer/guides/archiving/).
 
+## *** Doesn't do live streaming yet!!! ***
 ### Working with live streaming broadcasts
 
 _Important:_
@@ -380,13 +429,15 @@ You can send a signal to all participants in an OpenTok Session by calling the
 the `connectionId` parameter to `null`:
 
 ```javascript
-var sessionId =
+const sessionId =
   "2_MX2xMDB-flR1ZSBOb3YgMTkgMTE6MDk6NTggUFNUIDIwMTN-MC2zNzQxNzIxNX2";
-opentok.signal(sessionId, null, { type: "chat", data: "Hello!" }, function (
-  error
-) {
-  if (error) return console.log("error:", error);
-});
+
+try {
+    const signalResponse = await videoClient.sendSignal({ type: "chat", data: "Hello" }, sessionId);
+    console.log("Successfully sent signal:", signalResponse);
+} catch(error) {
+    console.error("Error sending signal: ", error);
+}
 ```
 
 Or send a signal to a specific participant in the session by calling the
@@ -397,14 +448,12 @@ including `connectionId`:
 var sessionId =
   "2_MX2xMDB-flR1ZSBOb3YgMTkgMTE6MDk6NTggUFNUIDIwMTN-MC2zNzQxNzIxNX2";
 var connectionId = "02e80876-02ab-47cd-8084-6ddc8887afbc";
-opentok.signal(
-  sessionId,
-  connectionId,
-  { type: "chat", data: "Hello!" },
-  function (error) {
-    if (error) return console.log("error:", error);
-  }
-);
+try {
+    const signalResponse = await videoClient.sendSignal({ type: "chat", data: "Hello" }, sessionId, connectionId);
+    console.log("Successfully sent signal:", signalResponse);
+} catch(error) {
+    console.error("Error sending signal: ", error);
+}
 ```
 
 This is the server-side equivalent to the signal() method in the OpenTok client SDKs. See
@@ -416,9 +465,12 @@ You can disconnect participants from an OpenTok Session using the
 `OpenTok.forceDisconnect(sessionId, connectionId, callback)` method.
 
 ```javascript
-opentok.forceDisconnect(sessionId, connectionId, function (error) {
-  if (error) return console.log("error:", error);
-});
+try {
+    const disconnectResponse = await videoClient.disconnectClient(sessionId, connectionId);
+    console.log("Successfully disconnected client:", disconnectResponse);
+} catch(error) {
+    console.error("Error disconnecting client: ", error);
+}
 ```
 
 This is the server-side equivalent to the forceDisconnect() method in OpenTok.js:
@@ -433,6 +485,9 @@ You can force the publisher of all streams in a session (except for an optional 
 to stop publishing audio using the `Opentok.forceMuteAll()` method.
 You can then disable the mute state of the session by calling the
 `Opentok.disableForceMute()` method.
+
+## *** Doesn't do SIP Interconnect yet!!! ***
+
 
 ### Working with SIP Interconnect
 
@@ -468,16 +523,15 @@ You can get information on an active stream in an OpenTok session:
 var sessionId =
   "2_MX6xMDB-fjE1MzE3NjQ0MTM2NzZ-cHVTcUIra3JUa0kxUlhsVU55cTBYL0Y1flB";
 var streamId = "2a84cd30-3a33-917f-9150-49e454e01572";
-opentok.getStream(sessionId, streamId, function (error, streamInfo) {
-  if (error) {
-    console.log(error.message);
-  } else {
+try {
+    const stream = await videoClient.getStreamInfo(sessionId, streamId);
     console.log(stream.id); // '2a84cd30-3a33-917f-9150-49e454e01572'
     console.log(stream.videoType); // 'camera'
     console.log(stream.name); // 'Bob'
     console.log(stream.layoutClassList); // ['main']
-  }
-});
+} catch(error) {
+    console.error("Error retrieving stream: ", error.message);
+}
 ```
 
 Pass a session ID, stream ID, and callback function to the `OpenTok.getStream()` method.
@@ -490,18 +544,15 @@ passing in a session ID and a callback function. Upon success, the callback func
 with an array of Stream objects passed into the second parameter:
 
 ```javascript
-opentok.listStreams(sessionId, function(error, streams) {
-  if (error) {
-    console.log(error.message);
-  } else {
-    streams.map(function(stream) {
-      console.log(stream.id); // '2a84cd30-3a33-917f-9150-49e454e01572'
-      console.log(stream.videoType); // 'camera'
-      console.log(stream.name); // 'Bob'
-      console.log(stream.layoutClassList); // ['main']
-    }));
-  }
-});
+try {
+    const streams = await videoClient.getStreamInfo(sessionId);
+    console.log(`Successfully retrieved ${streams.count} streams`);
+    for (let i = 0; i < sreams.length; i++) {
+        console.log(streams.items[i].id);
+    }
+} catch(error) {
+    console.error("Error retrieving streams: ", error);
+}
 ```
 
 ## Requirements
@@ -535,6 +586,7 @@ and `mediaMode` properties. The `mediaMode` property replaces the `properties.p2
 parameter in the previous version of the SDK.
 
 The `generateToken()` has changed to take two parameters: the session ID and an `options` object that has `role`, `expireTime` and `data` properties.
+
 
 <script>
   var currentPage = 'node_sdk';
