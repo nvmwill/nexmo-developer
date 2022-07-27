@@ -8,18 +8,25 @@ product: video
 
 The Vonage Video PHP SDK provides methods for:
 
-* Generating
-[sessions](/developer/guides/create-session/) and
-[tokens](/developer/guides/create-token/) for
-[Vonage Video](https://www.tokbox.com/) applications that run on PHP
-* Working with [Vonage Video archives](https://tokbox.com/opentok/tutorials/archiving)
-* [Sending signals to clients connected to a session](/developer//guides/signaling/)
-* [Disconnecting clients from sessions](/developer/guides/moderation/rest/)
-* [Forcing clients in a session to disconnect or mute published audio](/developer/guides/moderation/)
+* [Creating sessions](/video/server-sdks/php#creating-sessions).
+* [Generating tokens](/video/server-sdks/php#generating-tokens)
+* [Working with streams](/video/server-sdks/php#working-with-streams)
+* [Working with archives](https://tokbox.com/opentok/tutorials/archiving)
+* [Disconnecting clients from sessions](/video/server-sdks/php#force-a-client-to-disconnect)
+* [Forcing clients in a session to disconnect or mute published audio](/video/server-sdks/php#forcing-clients-in-a-session-mute-published-audio)
+* [Sending signals to clients connected to a session](/video/server-sdks/php#sending-signals)
 
 ## Installation
 
-### Composer (recommended):
+## Requirements
+
+You need to create a Vonage Application with Video capabilities. You will then use the private key and application ID
+to configure the API client. You can create the application by logging into your
+[Vonage Video API account](https://dashboard.nexmo.com).
+
+The Vonage Video PHP SDK requires PHP 7.4 or higher.
+
+### Composer (recommended)
 
 Composer helps manage dependencies for PHP projects. Find more info here: <http://getcomposer.org>
 
@@ -122,6 +129,8 @@ $session = $client->video()->createSession($sessionOptions);
 $sessionId = $session->getSessionId();
 ```
 
+For more information on sessions, see the [sessions](/video/tutorials/create-session) developer guide.
+
 ### Generating Tokens
 
 Once a Session is created, you can start generating Tokens for clients to use when connecting to it.
@@ -146,6 +155,8 @@ $token = $session->generateToken(array(
     'initialLayoutClassList' => ['focus']
 ));
 ```
+
+For more information on Tokens, see the [Create Token](/video/guides/create-token) developer guide.
 
 ### Working with Streams
 
@@ -172,6 +183,7 @@ $streamList = $client->video()->listStreams($sessionId);
 
 $streamList->count(); // total count
 ```
+
 
 ### Working with Archives
 
@@ -206,7 +218,7 @@ $archiveId = $archive->getId();
 
 If you set the `outputMode` option to `ArchiveConfig::OUTPUT_MODE_INDIVIDUAL`, it causes each stream in the archive to be recorded to its own individual file. Please note that you cannot specify the resolution when you set the `outputMode` option to `ArchiveConfig::OUTPUT_MODE_INDIVIDUAL`. The `ArchiveConfig::OUTPUT_MODE_COMPOSED` setting (the default) causes all streams in the archive to be recorded to a single (composed) file.
 
-Note that you can also create an automatically archived session, by passing in `ArchiveMode::ALWAYS`
+> Note that you can also create an automatically archived session, by passing in `ArchiveMode::ALWAYS`
 as the `archiveMode` key of the `options` parameter passed into the `$client->video()->createSession()`
 method (see "Creating Sessions," above).
 
@@ -233,7 +245,9 @@ $client->video()->deleteArchive($archiveId);
 ```
 
 You can also get a list of all the Archives you've created (up to 1000) with your API Key. This is
-done using the `listArchives($filter)` method of the Vonage Video Client. You can pass a `KeyValueFilter` object with `offset`, `count`, or `sessionId` options. The filter is optional and can help you subset results. Note that the list will automatically return the next page of results, so you do not need to manually call an `offset` or `count` unless specifically needed.
+done using the `listArchives($filter)` method of the Vonage Video Client.
+
+You can pass a `KeyValueFilter` object with `offset`, `count`, or `sessionId` options. The filter is optional and can help you subset results. Note that the list will automatically return the next page of results, so you do not need to manually call an `offset` or `count` unless specifically needed.
 
 ```php
 use Vonage\Entity\Filter\KeyValueFilter;
@@ -260,15 +274,15 @@ $client->video()->setArchiveLayout($archiveId, $layout);
 
 You can set the initial layout class for a client's streams by setting the `layout` option when
 you create the token for the client, using the `OpenTok->generateToken()` method or the
-`Session->generateToken()` method. And you can change the layout classes for a stream
-by calling the `OpenTok->updateStream()` method.
+`Session->generateToken()` method.
+
+You can change the layout classes for a stream by calling the `OpenTok->updateStream()` method.
 
 Setting the layout of composed archives is optional. By default, composed archives use the
 "best fit" layout (see [Customizing the video layout for composed
-archives](/developer/guides/archiving/layout-control.html)).
+archives](/video/guides/layout-control)).
 
-For more information on archiving, see the
-[Vonage Video archiving](/developer/guides/archiving/) developer guide.
+For more information on archiving, see the [Vonage Video archiving](/video/guides/archiving) developer guide.
 
 ### Force a Client to Disconnect
 
@@ -319,16 +333,8 @@ $type => 'signal type';
 $client->video()->signal($sessionId, $signalPayload);
 ```
 
-For more information, see the [Vonage Video signaling developer
-guide](/developer/guides/signaling/).
-
-## Requirements
-
-You need to create a Vonage Application with Video capabilities. You will then use the private key and application ID
-to configure the API client. You can create the application by logging into your
-[Vonage Video API account](https://dashboard.nexmo.com).
-
-The Vonage Video PHP SDK requires PHP 7.4 or higher.
+<!-- OPT-TODO: For more information, see the [Vonage Video signaling developer
+guide](/developer/guides/signaling/). -->
 
 ## Release Notes
 
