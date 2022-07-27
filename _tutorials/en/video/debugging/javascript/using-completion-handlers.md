@@ -11,7 +11,7 @@ For many methods that complete asynchronously, the final parameter you pass in i
 For example, the following code calls the `Session.connect()` method, passing in a completion handler:
 
 ```js
-var session = OT.initSession(apiKey, session);
+var session = OT.initSession(appId, session);
 session.connect(token, function (error) {
   if (error) {
     if (error.name === "OT_NOT_CONNECTED") {

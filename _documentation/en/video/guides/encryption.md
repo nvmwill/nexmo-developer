@@ -90,7 +90,7 @@ To set the certificate, and enable archive encryption, submit an HTTP PUT reques
 https://api.opentok.com/v2/project//archive/storage 
 ``` 
 
-Replace `apiKey` with your project API key.
+Replace `appId` with your project API key.
 
 Authenticate the REST API request using a custom HTTP header: `X-OPENTOK-AUTH`. Set this to a JSON Web token: 
 

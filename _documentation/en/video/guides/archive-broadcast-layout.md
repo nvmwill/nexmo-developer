@@ -140,7 +140,7 @@ The following examples use the Node, and PHP SDKs.
 import com.opentok.OpenTok;
 import com.opentok.TokenOptions;
 
-OpenTok opentok = new OpenTok(apiKey, apiSecret)
+OpenTok opentok = new OpenTok(appId, apiSecret)
 List<String> classList = List.of("focus", "bar", "inactive");
 String token = session.generateToken(new TokenOptions.Builder()
   .initialLayoutClassList(classList)
@@ -151,7 +151,7 @@ Node:
 
 ```js
 var OpenTok = require('opentok'),
-    opentok = new OpenTok(apiKey, apiSecret);
+    opentok = new OpenTok(appId, apiSecret);
 
 opentok.createSession({mediaMode:"routed"}, function(err, session) {
   if (err) return console.log(err);
@@ -225,7 +225,7 @@ You can dynamically change the layout class list for a stream by calling the  `/
 Make a PUT request to the following URL:
 
 ```
-https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream
+https://api.opentok.com/v2/project/{appId}/session/{sessionId}/stream
 ```
 
 Set the Content-Type to `"application/json"` and include the layout class list as a property of the JSON data in the PUT request:
@@ -265,7 +265,7 @@ You can also modify the layout class list for a stream using the server SDKs:
 You can get the layout class list for a stream by calling the REST API `/session/{sessionId}/stream/{streamId}`. Make a GET request to the following URL:
 
 ```
-https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream/{streamId}
+https://api.opentok.com/v2/project/{appId}/session/{sessionId}/stream/{streamId}
 ```
 
 The response includes JSON data, which includes a `layoutClassList` array:
@@ -306,7 +306,7 @@ You can also get the layout class list for a stream using the server SDKs:
 You can get the layout class list for all streams in a session by calling the REST API `/session/{sessionId}/stream`. Make a GET request to the following URL:
 
 ```
-https://api.opentok.com/v2/project/{apiKey}/session/{sessionId}/stream/
+https://api.opentok.com/v2/project/{appId}/session/{sessionId}/stream/
 ```
 
 The response includes JSON data, which includes an `items` property, which is array containing layout information for streams in the session:

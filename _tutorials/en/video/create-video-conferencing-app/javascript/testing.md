@@ -9,7 +9,7 @@ At this point, your `app.js` file should look something like this (with a few ad
 
 ```js
 // replace these values with those generated in your Video API account
-var apiKey = "YOUR_API_KEY";
+var appId = "YOUR_API_KEY";
 var sessionId = "YOUR_SESSION_ID";
 var token = "YOUR_TOKEN";
 
@@ -24,7 +24,7 @@ function handleError(error) {
 initializeSession();
 
 function initializeSession() {
-  var session = OT.initSession(apiKey, sessionId);
+  var session = OT.initSession(appId, sessionId);
 
   // Subscribe to a newly created stream
   session.on('streamCreated', function(event) {

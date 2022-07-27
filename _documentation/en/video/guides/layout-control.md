@@ -52,7 +52,7 @@ When you start the recording for a session, using the Vonage Video REST API, you
 
 Set the request URL for the POST request to the following:
 
-`https://api.opentok.com/v2/project/{apiKey}/archive`
+`https://api.opentok.com/v2/project/{appId}/archive`
 
 Set the `Content-Type` to `application/json` and set the `layout` `type` as a property of the JSON data sent in the POST request:
 
@@ -127,7 +127,7 @@ You can dynamically change the layout type by calling the `/archive/layout` REST
 
 Make a PUT request to the following URL:
 
-`https://api.opentok.com/v2/project/{apiKey}/archive/{archiveId}/layout`
+`https://api.opentok.com/v2/project/{appId}/archive/{archiveId}/layout`
 
 Set the `Content-Type` to `application/json` and include the layout `type` as a property of the JSON data in the PUT request:
 

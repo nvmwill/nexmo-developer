@@ -24,7 +24,7 @@ publisher.on({
   }
 });
 
-// Replace apiKey and sessionID with your own values:
+// Replace appId and sessionID with your own values:
 session = OT.initSession(appID, sessionID);
 // Replace token with your own value:
 session.connect(token, function (error) {

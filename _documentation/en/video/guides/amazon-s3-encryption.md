@@ -19,7 +19,7 @@ To use this feature, set the `sse` property to `"s3"` when you call the Vonage V
 Submit an HTTP PUT request to the following URL:
 
 ```lang-none
-https://api.opentok.com/v2/project/<apiKey>/archive/storage
+https://api.opentok.com/v2/project/<appId>/archive/storage
 ```
 
 Replace `<appId>` with your Vonage Video APP ID.
