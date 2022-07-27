@@ -9,7 +9,7 @@ product: video
 Once you have initialized a Session object, call its `connect()` method, passing in a token and a completion handler function:
 
 ```js
-var session = OT.initSession(apiKey, sessionId);
+var session = OT.initSession(appID, sessionId);
 session.connect(token, function(error) {
   if (error) {
     console.log("Error connecting: ", error.name, error.message);

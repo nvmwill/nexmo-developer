@@ -22,7 +22,7 @@ Submit an HTTP PUT request to the following URL:
 https://api.opentok.com/v2/project/<apiKey>/archive/storage
 ```
 
-Replace `<apiKey>` with your Vonage Video API key.
+Replace `<appId>` with your Vonage Video APP ID.
 
 
 Authenticate the REST API request using a custom HTTP header: `X-OPENTOK-AUTH`. Set this to a JSON Web token.

@@ -48,7 +48,7 @@ Inspector is a tool to help understand what happened in specific Vonage Video [s
 
 Inspector is primarily used for **debugging problematic sessions** that have occurred in your application.
 
-You must be logged into your Vonage Video API account to access the Inspector, and you can only view sessions created from API Keys associated with your account.
+You must be logged into your Vonage Video API account to access the Inspector, and you can only view sessions created from App IDs associated with your account.
 
 ## Searching for Sessions
 

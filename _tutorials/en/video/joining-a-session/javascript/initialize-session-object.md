@@ -10,7 +10,7 @@ Before you can connect to a session, instantiate a Session object by calling the
 
 ```js
 // Replace with your API key and session ID:
-var session = OT.initSession(apiKey, sessionID);
+var session = OT.initSession(appID, sessionID);
 ```
 
 The `OT.initSession()` method returns a Session object, through which subsequent API calls take place.
@@ -21,7 +21,7 @@ If the user's browser does not support WebRTC, the call to `OT.initSession()` re
 
 ```js
 if (OT.checkSystemRequirements() == 1) {
-  var session = OT.initSession(apiKey, sessionId);
+  var session = OT.initSession(appID, sessionId);
 } else {
   // The client does not support WebRTC.
   // You can display your own message.

@@ -14,7 +14,7 @@ var connectionCount = 0;
 
 function connect() {
   // Replace apiKey and sessionId with your own values:
-  session = OT.initSession(apiKey, sessionId);
+  session = OT.initSession(appID, sessionId);
   session.on({
     connectionCreated: function (event) {
       connectionCount++;
