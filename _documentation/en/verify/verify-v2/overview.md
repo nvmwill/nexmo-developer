@@ -30,13 +30,13 @@ WhatsApp is a great channel for two-factor authentication because of its popular
 
 Unlike the WhatsApp Business API you might use for customer support, Vonage Verify + WhatsApp lets you start sending one-time passcodes with a generic WhatsApp Business Account (WABA) or your own WABA, if your company already has one registered.
 
-> By default WhatsApp messages will be sent using a Vonage WhatsApp Business Account (WABA). Please contact Sales in order to configure Verify V2 to use your company’s WABA.
+> By default WhatsApp messages will be sent using a Vonage WhatsApp Business Account (WABA). Please contact [Sales](https://www.vonage.com/communications-apis/contact-api/) in order to configure Verify V2 to use your company’s WABA.
 
 ### WhatsApp Codeless
 
-WhatsApp Codeless allows you to authenticate an end-user without sending a one-time passcode. This improves the experience because there is no need to remember a code. The end-user just has to press “yes” or “no” in WhatsApp and an event callback is sent to your back-end on when to proceed.
+WhatsApp Codeless allows you to authenticate an end-user without sending a one-time passcode. This improves the experience because there is no need to remember a code. The end-user presses “yes” or “no” in WhatsApp and an event callback is sent to your back-end on when to proceed.
 
-> By default WhatsApp messages will be sent using a Vonage WhatsApp Business Account (WABA). Please contact Sales in order to configure Verify V2 to use your company’s WABA.
+> By default WhatsApp messages will be sent using a Vonage WhatsApp Business Account (WABA). Please contact [Sales](https://www.vonage.com/communications-apis/contact-api/) in order to configure Verify V2 to use your company’s WABA.
 
 ### Voice
 
@@ -46,7 +46,7 @@ Voice is a great backup to SMS for two-factor authentication, especially in geog
 
 One-time passcodes sent to email are also a good alternative to the channels mentioned above, especially in the instance of network congestion at the mobile operator level.
 
-> Our email solution supports domain registration, if you plan to scale email verification to high volumes with Verify V2, please contact Sales in order to get your account configured properly.
+> Our email solution supports domain registration, if you plan to scale email verification to high volumes with Verify V2, please contact [Sales](https://www.vonage.com/communications-apis/contact-api/) in order to get your account configured properly.
 
 ## Verify V2 Sequence Diagrams
 
