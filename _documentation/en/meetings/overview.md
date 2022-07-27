@@ -23,7 +23,7 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Meetings API or Video API?
 
-Both the Meetings API and the Video API allow you to use high-quality interactive video meetings in your web applications. The Meetings API is ideal for those who want plug and play meetings with limited customization; it takes just a few lines of code to generate a meeting and embed it into your application. The Video API is ideal for those who want more customization and flexibility, but it will take more development effort.
+Both the Meetings API and the Video API allow you to use high-quality interactive video meetings in your web applications. The Meetings API is ideal for those who want plug and play meetings with limited customization; it takes only a few lines of code to generate a meeting and embed it into your application. The Video API is ideal for those who want more customization and flexibility, but it will take more development effort.
 
 Take a look at the [Video API](https://tokbox.com/developer/) documentation for more information.
 
@@ -88,7 +88,7 @@ End Meeting | ✅ | ✅ | ✅
 
 ¹ Recording is still available in 360-500PX meetings by setting the ``auto_record`` parameter in the API call.
 
-> You will also need to send an email request to the [Meetings API team](mailto:meetings-api@vonage.com) to whitelist the domain of the website the iFrame is used in.
+> You will also need to send an email request to the [Meetings API team](mailto:meetings-api@vonage.com) to whitelabel the domain of the website the iFrame is used in.
 
 ## Code Snippets
 
