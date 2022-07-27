@@ -184,6 +184,7 @@ navigation_overrides:
   video:
     svg: 'video'
     svgColor: 'orange'
+    collapsible: false
   vonage-business-cloud:
     svg: 'telephone'
     svgColor: 'green'
