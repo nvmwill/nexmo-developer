@@ -722,3 +722,6 @@ api.support.vonage.com
 localStorage
 sessionStorage
 MediaStream
+iFrame
+360-500PX
+500-600PX
