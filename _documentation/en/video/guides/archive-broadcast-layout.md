@@ -187,7 +187,7 @@ from opentok import OpenTok
 from opentok import MediaModes
 from opentok import Roles
 
-opentok = OpenTok(api_key, api_secret)
+opentok = OpenTok(app_id, api_secret)
 session = opentok.create_session(media_mode=MediaModes.routed)
 token = session.generate_token(expire_time=int(time.time()) + 10,
                                data=u'name=Johnny'
@@ -197,7 +197,7 @@ token = session.generate_token(expire_time=int(time.time()) + 10,
 Ruby:
 
 ```ruby
-opentok = OpenTok::OpenTok.new api_key, api_secret
+opentok = OpenTok::OpenTok.new app_id, api_secret
 
 session = opentok.create_session :media_mode => :routed
 token = session.generate_token({

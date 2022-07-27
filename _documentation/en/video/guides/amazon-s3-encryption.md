@@ -75,7 +75,7 @@ A response with a 403 status code indicates you passed in an invalid Vonage Vide
 The following command line example securely sets the server-side encryption flag for Vonage to use when archives are uploaded to an Amazon S3 bucket:
 
 ```sh
-api_key=12345
+app_id=12345
 data='{"type":"s3","config":{"bucket": "your-s3-bucket","secretKey": "your-s3-secret-key","accessKey": "your-s3-access-key","sse" : "s3"}, "fallback" : "none"}'
 curl \
      -i \
@@ -83,9 +83,9 @@ curl \
      -X PUT \
      -H "X-OPENTOK-AUTH:$json_web_token" \
      -d "$data" \
-     https://api.opentok.com/v2/partner/$api_key/archive/storage
+     https://api.opentok.com/v2/partner/$app_id/archive/storage
 ```
 
-Set the value for `api_key` to your API key. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
+Set the value for `app_id` to your API key. Set the value for `json_web_token` to a JSON web token. Set the values for `your-s3-bucket` and `your-s3-access-key` to credentials that have appropriate access to your Amazon S3 account.
 
 For more information, see [Archiving using AWS S3](/video/guides/using-s3).

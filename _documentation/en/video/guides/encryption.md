@@ -106,7 +106,7 @@ Create the JSON web token with the following claims:
 
 ```json
 {
-    "iss": "your_api_key",
+    "iss": "your_app_id",
     "ist": "project",
     "iat": current_timestamp_in_seconds,
     "exp": expire_timestamp_in_seconds,
@@ -205,32 +205,32 @@ Set the `certificate` property to the public key certificate Vonage will use to 
 The following command line example securely sets the certificate for Vonage to use when encrypting archives to be uploaded to an Amazon S3 bucket:
 
 ```sh
-api_key=12345
+app_id=12345
 data='{"type":"s3","config":{"bucket":"your-s3-bucket","secretKey":"your-s3-secret-key","accessKey":"your-s3-access-key"},"certificate" : "...your-cert..."}'
 curl \
      -i \
      -H "Content-Type: application/json" \
      -X PUT -H "X-OPENTOK-AUTH:$json_web_token" -d '$data' \
-     https://api.opentok.com/v2/project/$api_key/archive/storage
+     https://api.opentok.com/v2/project/$app_id/archive/storage
 ``` 
 
-Set the value for `api_key` to your Vonage Video project API key. 
+Set the value for `app_id` to your Vonage Video project API key. 
 Set the value for `json_web_token` to a JSON web token. 
 Set the values for `your-s3-bucket` and `your-s3-access-key` to match your Amazon S3 credentials. Replace the certificate value with the certificate string. 
 
 The following command line example securely sets the certificate for Vonage to use when encrypting archives to be uploaded to an Microsoft Azure bucket:
 
 ```sh
-api_key=12345
+app_id=12345
 data='{"type":"azure","config":{"accountName":"your-azure-account-name","accountKey":"your-azure-account-key", "container":"your-azure-container"}, "certificate": "...your-cert..."}'
 curl \
      -i \
      -H "Content-Type:application/json" \
      -X PUT -H "X-OPENTOK-AUTH:$json_web_token" -d "$data" \
-     https://api.opentok.com/v2/project/$api_key/archive/storage
+     https://api.opentok.com/v2/project/$app_id/archive/storage
 ```
 
-Set the value for `api_key` to your Vonage Video project API key.
+Set the value for `app_id` to your Vonage Video project API key.
 Set the value for `json_web_token` to a JSON web token. 
 Set the values for `your-azure-account-name`, `your-azure-account-name`, and `your-azure-container` to match your Amazon S3 credentials. Replace the certificate value with the certificate string.
 
@@ -345,7 +345,7 @@ Set the `certificate` property to `null`.
 The following command line example disables encrypted archiving for an S3 target:
 
 ```sh
-api_key=12345
+app_id=12345
 data='"type":
 "s3","config": {"bucket":
 "your-s3-bucket","secretKey":
@@ -355,10 +355,10 @@ curl \
      -i \
      -H "Content-Type:application/json" \
      -X PUT -H "X-OPENTOK-AUTH:$json_web_token" -d "$data" \
-     https://api.opentok.com/v2/project/$api_key/archive/storage
+     https://api.opentok.com/v2/project/$app_id/archive/storage
 ```
 
-Set the value for `api_key` to your Vonage Video API key.
+Set the value for `app_id` to your Vonage Video API key.
 Set the value for `json_web_token` to a JSON web token.
 Set the values for `your-s3-bucket` and `your-s3-access-key` to match your Amazon S3 credentials.
 
