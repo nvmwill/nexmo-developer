@@ -71,7 +71,7 @@ When an instant room is created the expiration date is set to 10 minutes.
 
 As this room has not yet expired, ``is_available`` is set to true.
 
-> If you set ``auto_record`` to ``true`` in your request, this option will be shown as ``true`` in the code below.
+> If you set either ``auto_record`` or ``record_only_owner`` to ``true`` in your request, this option will be shown as ``true`` in the code below.
 
 ``` json
 {

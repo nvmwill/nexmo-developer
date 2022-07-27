@@ -8,7 +8,7 @@ description: Setting up an Instant Meeting Room
 
 API meetings callbacks allow you to receive information about session events, participant activity, recording details, and room expiration.
 
-> To register for callbacks, please send a request to the [Meetings API Team](mailto:meetings-api@vonage.com).
+> To configure callbacks, enable the Meetings API capability in your application via the [Vonage API Dashboard](https://dashboard.nexmo.com).
 
 ## Types of Callbacks
 
