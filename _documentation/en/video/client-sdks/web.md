@@ -4,7 +4,7 @@ description: Use the OpenTok.js library to build Vonage Video API-powered WebRTC
 product: video
 ---
 
-# Vonage Video Web Client SDK
+# Web Client SDK
 
 This page covers the following topics:
 
