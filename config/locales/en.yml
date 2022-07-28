@@ -66,6 +66,7 @@ en:
     getting-started: Getting Started
     setup: Setup
     configuration: Configuration
+    client-sdks: Client SDKs
     server-sdks: Server SDKs
     developer-tools: "Developer tools"
     tools: Tools
