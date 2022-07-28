@@ -102,11 +102,11 @@ While working on a test version of your app, you can obtain a test session ID fr
 
 Learn how to create a session by following our [step-by-step tutorial](/video/tutorials/create-session/introduction).
 
-You can also use one of the [server-side SDKs](/video/resources#server-sdks).
+You can also use one of the [server-side SDKs](/video/server-sdks/overview).
 
 <!-- OPT-TODO: change server SDK link  -->
 
-If you need to dynamically generate multiple session IDs, use the [server-side SDKs](/video/resources#server-sdks) not the Project Page.
+If you need to dynamically generate multiple session IDs, use the [server-side SDKs](/video/server-sdks/overview) not the Project Page.
 
 ## Creating a session that uses the Media Router
 
@@ -116,7 +116,7 @@ The following code creates a session that uses the Media Router:
 source: '_examples/video/create-session/temp'
 ```
 
-Use the session ID with a [client SDK](/video/resources#client-sdks) to connect to a session.
+Use the session ID with a [client SDK](/video/client-sdks/overview) to connect to a session.
 
 You will also need to generate a token for each user connecting to the session. 
 
@@ -158,7 +158,7 @@ For more information, see the [archiving](/video/guides/archiving) guide.
 
 ## Using sessions in client applications
 
-Use the session ID in an [client SDK](/video/resources#client-sdks) to connect to a session.
+Use the session ID in the [client SDK](/video/client-sdks/overview) to connect to a session.
 
 <!-- OPT-TODO: change client SDK link  -->
 

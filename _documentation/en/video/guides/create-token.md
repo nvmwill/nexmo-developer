@@ -15,7 +15,7 @@ Each token is assigned a _role_, which determine the capabilities of the client 
 
 * **Subscriber** — Clients that connect with a subscriber token can connect to sessions and subscribe to other clients' streams. They cannot publish their own streams to a session.
 * **Publisher** — Clients that connect with a publisher token can connect to Vonage Video sessions, publish audio-video streams to the session, and subscribe to other clients' streams.
-* **Moderator** — In addition to publishing and subscribing to streams, moderators connected in a client using the [OpenTok.js](/video/resources#client-sdks) SDK can force other clients to disconnect from a session or to stop publishing audio-video streams. (Any client can be forced to disconnect or stop publishing, but only a moderator using the OpenTok.js SDK can perform these moderation functions.) Additionally, moderators connected can force one or more streams in the session to mute published audio.
+* **Moderator** — In addition to publishing and subscribing to streams, moderators connected in a client using the [OpenTok.js](/video/client-sdks/web) SDK can force other clients to disconnect from a session or to stop publishing audio-video streams. (Any client can be forced to disconnect or stop publishing, but only a moderator using the OpenTok.js SDK can perform these moderation functions.) Additionally, moderators connected can force one or more streams in the session to mute published audio.
 
 ## Expiration dates
 

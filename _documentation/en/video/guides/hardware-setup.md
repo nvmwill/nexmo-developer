@@ -138,6 +138,6 @@ component.destroy();
 ```
 
 
-[1]: /video/resources#client-sdks
+[1]: /video/client-sdks/web
 [2]: http://nodejs.org/
 [3]: http://gulpjs.com/

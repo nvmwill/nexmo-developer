@@ -12,7 +12,7 @@ The Vonage video platform leverages the WebRTC protocol and the real-time video 
 
 You can select which video codec you want to assign as your preferred codec for a particular project.
 
-Across the broad ecosystem of devices and [browsers that are supported](/video/resources) there are varying levels of support for the VP8 and H.264 real-time video codecs. 
+Across the broad ecosystem of devices and [browsers that are supported](/video/client-sdks/web#browser-support) there are varying levels of support for the VP8 and H.264 real-time video codecs. 
 
 Some endpoints support both video codecs, and some support one video codec. Depending on the type of application you are building and the types of browsers and devices your end users will use, your choice of preferred codec will change.
 

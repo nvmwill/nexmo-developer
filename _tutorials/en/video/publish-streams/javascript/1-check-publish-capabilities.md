@@ -18,6 +18,6 @@ if (session.capabilities.publish == 1) {
 }
 ```
 
-To publish, the client must connect to the session with a token that is assigned a role that supports publishing. There must be a connected camera and microphone. Also, the client environment must support publishing (see [Browser support](/video/resources#supported-browsers)).
+To publish, the client must connect to the session with a token that is assigned a role that supports publishing. There must be a connected camera and microphone. Also, the client environment must support publishing (see [Browser support](/video/client-sdks/web#browser-support)).
 
 Also, publishing is only supported on HTTPS pages.

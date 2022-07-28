@@ -41,7 +41,7 @@ This topic includes the following sections:
 
 > **Important:** You can only archive sessions that use the Media Router (sessions with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to routed).
 
-You can create an archive for a session using one of the [Server SDKs](/video/resources#server-sdks). When you create an archive, the recording starts.
+You can create an archive for a session using one of the [Server SDKs](/video/server-sdks/overview). When you create an archive, the recording starts.
 
 You can only create an archive for sessions that have at least one client connected. (A client must start publishing a stream within one minute or the archive stops.)
 
@@ -61,7 +61,7 @@ The Server SDKs include methods for the following:
 
 When you stop recording an archive, the Vonage video platform creates an MP4 file or (in the case of individual stream archives) a ZIP file. (See [Individual stream and composed archives](#individual-stream-and-composed-archives).)
 
-When an archive recording starts and stops, events are sent in the clients. For example, the [OpenTok.js](/video/resources#client-sdks) library includes `archiveStarted` and `archiveStopped` events dispatched by the Session object.
+When an archive recording starts and stops, events are sent in the clients. For example, the [OpenTok.js](/video/client-sdks/web) library includes `archiveStarted` and `archiveStopped` events dispatched by the Session object.
 
 ## Archive duration
 

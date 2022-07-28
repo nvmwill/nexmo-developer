@@ -5,7 +5,7 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/resources#client-sdks).
+  description: In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/client-sdks/web).
   content: |
     # Introduction
     Once you have [connected to a session](/video/tutorials/joining-a-session), you can publish a stream that other clients connected to the session can view.

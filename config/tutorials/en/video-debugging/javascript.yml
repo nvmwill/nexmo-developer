@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/resources#client-sdks).
+  description: In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/client-sdks/web).
   content: |
     # Introduction
-    In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/resources#client-sdks).
+    In this tutorial, you will learn how to debug your web frontend when working with the [Javascript Client SDK](/video/client-sdks/web).
 
 tasks:
     - video/debugging/javascript/logging-to-console

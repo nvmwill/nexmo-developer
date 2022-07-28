@@ -19,7 +19,7 @@ $sessionId = $session->getSessionId();
 
 Use the session ID with a video client SDK to connect to a session.
 
-In an HTML page that uses the [JS client SDK](/video/resources#client-sdks), you can embed PHP that references the App ID, the session ID, and the generated token string, as in the following:
+In an HTML page that uses the [JS client SDK](/video/client-sdks/web), you can embed PHP that references the App ID, the session ID, and the generated token string, as in the following:
 
 ```js
 var appId = <?php print $App_ID?>;

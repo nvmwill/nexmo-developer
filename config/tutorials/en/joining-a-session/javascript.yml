@@ -8,7 +8,7 @@ introduction:
   description: In this tutorial, you will learn how to connect to a session from your web frontend.
   content: |
     # Introduction
-    Using a session ID and token, you can connect to a session using the [OpenTok.js](/video/resources#client-sdks) library.
+    Using a session ID and token, you can connect to a session using the [OpenTok.js](/video/client-sdks/web) library.
 
     Get started by fullfiling the [prerequisites](/video/tutorials/joining-a-session/prerequisites/javascript).
 
