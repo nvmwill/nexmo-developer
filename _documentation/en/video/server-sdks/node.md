@@ -140,23 +140,13 @@ from connections using this token can be set as well.
 
 ```javascript
 // Generate a Token from just a sessionId (fetched from a database)
-try {
-    const token = await videoClient.generateClientToken(sessionId);
-} catch(error) {
-    console.error("Error generating Client Token: ", error);
+const options = {
+    role: "moderator",
+    expireTime: new Date().getTime() / 1000 + 7 * 24 * 60 * 60, // in one week
+    data: "name=Johnny",
+    initialLayoutClassList: ["focus"]
 }
-
-// ***NOT SURE IF THE SDK DOES THIS. I'LL CHECK.***
-// Generate a Token from a session object (returned from createSession)
-token = session.generateToken();
-
-// Set some options in a Token
-token = session.generateToken({
-  role: "moderator",
-  expireTime: new Date().getTime() / 1000 + 7 * 24 * 60 * 60, // in one week
-  data: "name=Johnny",
-  initialLayoutClassList: ["focus"],
-});
+const token = videoClient.generateClientToken(sessionId, options);
 ```
 
 ### Working with archives
@@ -223,12 +213,6 @@ try {
 } catch(error) {
     console.error("Error stopping archive: ", error);
 }
-
-// ***NOT SURE IF THE SDK DOES THIS. I'LL CHECK.***
-
-archive.stop(function (err, archive) {
-  if (err) return console.log(err);
-});
 ```
 
 To get an `Archive` instance (and all the information about it) from an `archiveId`, use the
@@ -255,14 +239,6 @@ try {
 } catch(error) {
     console.error("Error deleting archive: ", error);
 }
-
-// ***NOT SURE IF THE SDK DOES THIS. I'LL CHECK.***
-
-// Delete an Archive from an Archive instance, returned from the OpenTok.startArchive(),
-// OpenTok.getArchive(), or OpenTok.listArchives() methods
-archive.delete(function (err) {
-  if (err) console.log(err);
-});
 ```
 
 You can also get a list of all the Archives you've created (up to 1000) with your App ID. This is
