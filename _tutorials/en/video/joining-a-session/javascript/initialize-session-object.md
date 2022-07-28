@@ -10,7 +10,7 @@ Before you can connect to a session, instantiate a Session object by calling the
 
 ```js
 // Replace with your App ID and session ID:
-var session = OT.initSession(appID, sessionID);
+var session = OT.initSession(appID, sessionId);
 ```
 
 The `OT.initSession()` method returns a Session object, through which subsequent API calls take place.
