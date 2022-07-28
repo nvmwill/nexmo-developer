@@ -9,22 +9,23 @@ product: video
 The following Node.js code shows how to generate a token using the Vonage Video Node.js server-side library:
 
 ```js
-    // Set the following constants with the App ID and API secret
-    // that you receive when you sign up to use the OpenTok API:
-    var opentok = new OpenTok(App_ID, API_SECRET);
-    
-    //Generate a basic session. Or you could use an existing session ID.
-    var sessionId;
-    opentok.createSession({}, function(error, session) {
-      if (error) {
-        console.log("Error creating session:", error)
-      } else {
-        sessionId = session.sessionId;
-        console.log("Session ID: " + sessionId);
-      }
-    });
-    
-    var token = opentok.generateToken(sessionId);
+const { Video } = require('@vonage/video');
+const videoClient = new Video({
+    applicationId: APP_ID,
+    privateKey: PRIVATE_KEY_PATH,
+    baseUrl: string
+}, {timeout: 30000});
+
+// Generate a Token from just a sessionId (fetched from a database)
+try {
+    const token = await videoClient.generateClientToken(sessionId);
+} catch(error) {
+    console.error("Error generating Client Token: ", error);
+}
+
+// Generate a Token from a session object (returned from createSession)
+token = session.generateToken();
+
 ```    
 
 Calling the `generateToken()` method returns a string. This string is the token.
@@ -32,9 +33,9 @@ Calling the `generateToken()` method returns a string. This string is the token.
 The following Node.js code shows how to obtain a token that has a role of "publisher" and that has a connection metadata string:
 
 ```js
-    // Set the following constants with the App ID and API secret
+    // Set the following constants with the App ID and Private Key
     // that you receive when you sign up to use the OpenTok API:
-    var opentok = new OpenTok(App_ID, API_SECRET);
+    var opentok = new OpenTok(App_ID, Private_Key);
     
     //Generate a basic session. Or you could use an existing session ID.
     var sessionId;

@@ -114,7 +114,7 @@ archive.delete(function (err) {
 
 You can also get a list of all the archives you've created (up to 1000) with your API Key. This is done using the `OpenTok.listArchives(options, callback)` method. The parameter options is an optional object used to specify an **offset** and **count** to help you paginate through the results. The callback has a signature `function(err, archives, totalCount)`. The archives returned from the callback is an array of an archive instance.
 
-The **totalCount** returned from the callback is the total number of archives your API Key has generated.
+The **totalCount** returned from the callback is the total number of archives your App ID has generated.
 
 ```js
 opentok.listArchives({ offset: 100, count: 50 }, function (

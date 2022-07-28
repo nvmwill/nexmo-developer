@@ -34,7 +34,7 @@ npm install @vonage/server-sdk
 ### Initializing
 
 Import the module to get a constructor function for an OpenTok object, then call it with `new` to
-instantiate an OpenTok object with your own API Key and API Secret.
+instantiate an OpenTok object with your own App ID and private key.
 
 ```javascript
 const { Video } = require('@vonage/video');
@@ -265,12 +265,12 @@ archive.delete(function (err) {
 });
 ```
 
-You can also get a list of all the Archives you've created (up to 1000) with your API Key. This is
+You can also get a list of all the Archives you've created (up to 1000) with your App ID. This is
 done using the `OpenTok.listArchives(options, callback)` method. The parameter `options` is an
 optional object used to specify an `offset` and `count` to help you paginate through the results.
 The callback has a signature `function(err, archives, totalCount)`. The `archives` returned from
 the callback is an array of `Archive` instances. The `totalCount` returned from the callback is
-the total number of archives your API Key has generated.
+the total number of archives your App ID has generated.
 
 ```javascript
 const filter = {
@@ -393,7 +393,7 @@ done using the `OpenTok.listBroadcasts(options, callback)` method. The parameter
 optional object used to specify an `offset`, `count`, and `sessionId` to help you paginate through the results.
 The callback has a signature `function(err, broadcasts, totalCount)`. The `broadcasts` returned from
 the callback is an array of `Broadcast` instances. The `totalCount` returned from the callback is
-the total number of broadcasts your API Key has generated.
+the total number of broadcasts your App ID has generated.
 
 ```javascript
 opentok.listBroadcasts({ offset: 100, count: 50 }, function (
@@ -557,7 +557,7 @@ try {
 
 ## Requirements
 
-You need an OpenTok API key and API secret, which you can obtain by logging into your
+You need an OpenTok App ID and private key, which you can obtain by logging into your
 [Vonage Video API account](https://tokbox.com/account).
 
 The OpenTok Node SDK requires Node.js 6 or higher. It may work on older versions but they are no longer tested.

@@ -11,12 +11,12 @@ This package follows the [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloading 
 require "<projectpath>/vendor/autoload.php";
 ```
 
-Once the SDK is loaded, you need to instantiate an `OpenTok\OpenTok` object using your API Key and API Secret as parameters.
+Once the SDK is loaded, you need to instantiate an `OpenTok\OpenTok` object using your App ID and private key as parameters.
 
 ```php
 use OpenTok\OpenTok;
 
-$opentok = new OpenTok($apiKey, $apiSecret);
+$opentok = new OpenTok($appId, $privateKey);
 ```
 
 **Initialization Options**
@@ -38,7 +38,7 @@ $options = [
     'client' => new CustomOpenTokClient(),
     'timeout' => 10,
 ]
-$opentok = new OpenTok($apiKey, $apiSecret, $options);
+$opentok = new OpenTok($appId, $privateKey, $options);
 ```
 
 In the next section you will learn how to [create a session](/video/tutorials/server-side-setup/video/server-side/php/creating-sessions/php).

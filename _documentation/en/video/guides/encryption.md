@@ -120,7 +120,7 @@ Create the JSON web token with the following claims:
 * Set `exp` to the expiration time for the token. For security, we recommend that you use an expiration time close to the token creation time (for example, 3 minutes after creation) and that you create a new token for each REST API call. The maximum allowed expiration time range is 5 minutes.
 * Set `jti` to a unique identifier for the JWT. This is optional. See the [JSON web token spec](https://tools.ietf.org/html/rfc7519#section-4.1.7) for details. 
 
-Use your project API secret as the JWT secret key and sign this with the HMAC-SHA256 encryption algorithm. (Your API secret is provided to you in your [Video API account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) on the Project page.) For example, the following Python code creates a token that can be used in a REST API call:
+Use your project private key as the JWT secret key and sign this with the HMAC-SHA256 encryption algorithm. (Your private key is provided to you on your [Video API account](https://identity.nexmo.com/login?icid=nexmocustomer_api-developer-adp_nexmodashbdsigin_nav) on the Project page.) For example, the following Python code creates a token that can be used in a REST API call:
 
 ```python
 import jwt # See https://pypi.python.org/pypi/PyJWT
@@ -198,7 +198,7 @@ Set the `certificate` property to the public key certificate Vonage will use to 
 
 * A response with status code 200 indicates success. 
 * A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target. 
-* A response with a 403 status code indicates you passed in an invalid project App ID or API secret.
+* A response with a 403 status code indicates you passed in an invalid project App ID or Private key.
 
 ## Examples
 

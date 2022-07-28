@@ -9,16 +9,20 @@ product: video
 The following Node.js code creates a session that uses the Media Router:
 
 ```js
-var opentok = new OpenTok(App_ID, API_SECRET);
-var sessionId;
-opentok.createSession({mediaMode:"routed"}, function(error, session) {
-  if (error) {
-    console.log("Error creating session:", error)
-  } else {
-    sessionId = session.sessionId;
-    console.log("Session ID: " + sessionId);
-  }
+const { Video } = require('@vonage/video');
+const videoClient = new Video({
+    applicationId: APP_ID,
+    privateKey: PRIVATE_KEY_PATH,
+    baseUrl: string
 });
+
+// The session will use the Vonage Media Router:
+try {
+    const session = await videoClient.createSession({ mediaMode: "routed" });
+    console.log(session.sessionId);
+} catch(error) {
+    console.error("Error creating session: ", error);
+}
 ```
 
 Use the session ID in an Vonage Video client library to connect to a Vonage Video session.

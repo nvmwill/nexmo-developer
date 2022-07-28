@@ -68,7 +68,7 @@ A response with status code 200 indicates success.
 
 A response with a 400 status code indicates that you have included invalid JSON data or that you did not specify the upload target.
 
-A response with a 403 status code indicates you passed in an invalid Vonage Video App ID or API secret.
+A response with a 403 status code indicates you passed in an invalid Vonage Video App ID or Private key.
 
 ## Example
 

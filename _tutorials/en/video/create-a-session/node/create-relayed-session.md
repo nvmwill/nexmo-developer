@@ -9,7 +9,7 @@ product: video
 Here is Node.js sample code that creates a new session with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to relayed:
 
 ```js
-var opentok = new OpenTok(AppID, APISecret);
+var opentok = new OpenTok(AppID, PrivateKey);
 var sessionId;
 opentok.createSession({mediaMode:"relayed"}, function(error, session) {
   if (error) {

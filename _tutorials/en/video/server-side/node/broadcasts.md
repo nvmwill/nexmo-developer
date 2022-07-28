@@ -75,7 +75,7 @@ The parameter options is an optional object used to specify an **offset**, **cou
 
 The callback has a signature `function(err, broadcasts, totalCount)`. The broadcasts returned from the callback is an array of broadcast instances.
 
-The **totalCount** returned from the callback is the total number of broadcasts your API Key has generated.
+The **totalCount** returned from the callback is the total number of broadcasts your App ID has generated.
 
 ```js
 opentok.listBroadcasts({ offset: 100, count: 50 }, function (
