@@ -121,7 +121,7 @@ Your brand information is displayed in the Brand list on the Brands and campaign
 
 This example shows you how to send an SMS to your chosen number.
 
-First, [sign up for a Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you don't already have one, and make a note of your API key and secret on the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide).
+First, [sign up for a Vonage account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink) if you don't already have one, and make a note of your API key and secret on the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide).
 
 Replace the following placeholder values in the sample code:
 
