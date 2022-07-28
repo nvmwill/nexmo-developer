@@ -1,7 +1,7 @@
 ---
 title: The Vonage Messages API is Now in Our Server SDKs
 description: Announcing that the Vonage Messages API has been added to Server
-  SDKs for Ruby, Node, Python, PHP, Java, and .net
+  SDKs for Ruby, Node, Python, PHP, Java, and .NET
 thumbnail: /content/blog/the-vonage-messages-api-is-now-in-our-server-sdks/sdk_updates.png
 author: karl-lingiah
 published: true
@@ -21,7 +21,7 @@ Vonage's [Messages API](https://developer.vonage.com/messages/overview) offers d
 
 Up until now though, if you wanted to use the Messages API, you needed to access the endpoint directly. That meant dealing with all the various low-level concerns such as managing the Request/Response cycle, creating headers, dealing with authentication, and serializing data.
 
-I'm super excited to announce that our [Server SDKs](https://developer.vonage.com/tools) now support the Messages API. So, if you're a developer working with [Ruby](https://github.com/vonage/vonage-ruby-sdk), [Node](https://github.com/vonage/vonage-node-sdk), [PHP](https://github.com/vonage/vonage-php-sdk), [Python](https://github.com/vonage/vonage-python-sdk), [Java](https://github.com/Vonage/vonage-java-sdk), or [.net](https://github.com/vonage/vonage-dotnet-sdk), you can let our SDKs deal with the low-level detail for you and instead focus on building your application!
+I'm super excited to announce that our [Server SDKs](https://developer.vonage.com/tools) now support the Messages API. So, if you're a developer working with [Ruby](https://github.com/vonage/vonage-ruby-sdk), [Node](https://github.com/vonage/vonage-node-sdk), [PHP](https://github.com/vonage/vonage-php-sdk), [Python](https://github.com/vonage/vonage-python-sdk), [Java](https://github.com/Vonage/vonage-java-sdk), or [.NET](https://github.com/vonage/vonage-dotnet-sdk), you can let our SDKs deal with the low-level detail for you and instead focus on building your application!
 
 Let's take a look at just a few of the things you can do using the Messages API via our SDKs.
 
@@ -48,7 +48,7 @@ message = Vonage::Messaging::Message.sms(
 )
 
 # sending the SMS
-client.messaging.send(
+response = client.messaging.send(
   from: '447700900000',
   to: '447700900001',
   **message
@@ -92,47 +92,27 @@ vonage.messages.send(
 
 Another Messages API channel now available in the SDKs is MMS (Multimedia Message Service). This channel lets you send messages that include multimedia content such as images, audio, video, and vCards (`.vcf` files).
 
-Here's an example of sending an MMS image message using the **.net SDK**.
+Here's an example of sending an MMS image message using the **.NET SDK**.
 
 ```c#
-using System;
-using System.Threading.Tasks;
-using Vonage;
-using Vonage.Messages;
-using Vonage.Request;
+var credentials = Credentials.FromApiKeyAndSecret(
+  "76543a12-1b87-4c32-a1b2-1d9876543210",
+  "abc123"
+);
 
-namespace DotnetCliCodeSnippets.Messages.Mms;
+var vonageClient = new VonageClient(credentials);
 
-public class SendMmsImage : ICodeSnippet
+var request = new Vonage.Messages.Mms.MmsImageRequest
 {
-    public async Task Execute()
+    To = "447700900000",
+    From = "447700900001",
+    Image = new Attachment
     {
-        var to = Environment.GetEnvironmentVariable("TO_NUMBER") ?? "TO_NUMBER";
-        var brandName = Environment.GetEnvironmentVariable("VONAGE_BRAND_NAME") ?? "VONAGE_BRAND_NAME";
-        var apiKey = Environment.GetEnvironmentVariable("VONAGE_API_KEY") ?? "VONAGE_API_KEY";
-        var apiSecret = Environment.GetEnvironmentVariable("VONAGE_API_SECRET") ?? "VONAGE_API_SECRET";
-
-        var credentials = Credentials.FromApiKeyAndSecret(
-            apiKey,
-            apiSecret
-        );
-
-        var vonageClient = new VonageClient(credentials);
-
-        var request = new Vonage.Messages.Mms.MmsImageRequest
-        {
-            To = to,
-            From = brandName,
-            Image = new Attachment
-            {
-                Url = "https://example.com/image.jpg"
-            }
-        };
-
-        var response = await vonageClient.MessagesClient.SendAsync(request);
-        Console.WriteLine($"Message UUID: {response.MessageUuid}");
+        Url = "https://example.com/image.jpg"
     }
-}
+};
+
+var response = await vonageClient.MessagesClient.SendAsync(request);
 ```
 
 ## WhatsApp
@@ -179,25 +159,17 @@ Similarly to WhatsApp, the Messages API lets you use Facebook Messenger in a bus
 You can find out more about Messenger in our documentation, and check out an example below of using the **Java SDK** to send a Messenger audio message.
 
 ```java
-import com.vonage.client.VonageClient;
-import static com.vonage.quickstart.Util.envVar;
+var client = VonageClient.builder()
+    .applicationId("76102c93-1d87-4a13-a1d5-1c9863095337")
+    .privateKeyPath("/path/to/private.key")
+    .build();
 
-String VONAGE_APPLICATION_ID = envVar("VONAGE_APPLICATION_ID");
-String VONAGE_PRIVATE_KEY_PATH = envVar("VONAGE_PRIVATE_KEY_PATH");
-String FROM_ID = envVar("FROM_ID");
-String TO_ID = envVar("TO_ID");
+var message = MessengerAudioRequest.builder()
+    .from("9876543210").to("0123456789")
+    .url("https://example.com/audio.mp3")
+    .build();
 
-VonageClient client = VonageClient.builder()
-                                  .applicationId(VONAGE_APPLICATION_ID)
-                                  .privateKeyPath(VONAGE_PRIVATE_KEY_PATH)
-                                  .build();
-
-client.getMessagesClient().sendMessage(
-   MessengerAudioRequest.builder()
-                        .from(FROM_ID).to(TO_ID)
-                        .url("https://example.com/audio.mp3")
-                        .build()
-);
+var response = client.getMessagesClient().sendMessage(message);
 ```
 
 ## Viber
