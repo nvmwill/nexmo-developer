@@ -9,7 +9,9 @@ navigation_weight: 1
 # Video API Platform Overview
 
 The Vonage Video API platform makes it possible to embed real-time, high-quality interactive video, messaging, screen-sharing, and more into web and mobile apps. The platform includes client libraries for web as well as server-side SDKs. Vonage Video API uses [WebRTC](https://www.vonage.com/communications-apis/video/) for audio-video communications.
- <!-- OPT-TODO: and a REST API -->
+
+<!-- OPT-TODO: and a REST API -->
+
 **All applications built with the Vonage Video API platform require two primary components:**
 
 * **The Client** — client-side code that runs in a browser or mobile app, set up by the developer using the Vonage Video API client-side libraries, which are available for Web. The client-side handles the majority of Vonage Video API functionality.
