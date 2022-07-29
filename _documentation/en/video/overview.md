@@ -15,7 +15,7 @@ The Vonage Video API platform makes it possible to embed real-time, high-quality
 **All applications built with the Vonage Video API platform require two primary components:**
 
 * **The Client** — client-side code that runs in a browser or mobile app, set up by the developer using the Vonage Video API client-side libraries, which are available for Web. The client-side handles the majority of Vonage Video API functionality.
-* **The Server** — server-side code executed on a web server set up by the developer using the Vonage Video API server SDKs, which are available for [Node JS](http://localhost:3000/video/server-sdks/node) and [PHP](http://localhost:3000/video/server-sdks/php). 
+* **The Server** — server-side code executed on a web server set up by the developer using the Vonage Video API server SDKs, which are available for [Node JS](/video/server-sdks/node) and [PHP](/video/server-sdks/php). 
 
 ## Contents
 
