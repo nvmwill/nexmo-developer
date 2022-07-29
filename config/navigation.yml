@@ -83,25 +83,6 @@ navigation_overrides:
           navigation_weight: 2
     conversion-api:
       navigation_weight: 2
-  video:
-    overview:
-      navigation_weight: 0
-    guides:
-      navigation_weight: 1
-      create-session:
-        navigation_weight: 100
-      archiving:
-        navigation_weight: 0
-      create-token:
-        navigation_weight: 2
-    tutorials:
-      navigation_weight: 2
-    client-sdks:
-      navigation_weight: 3
-    server-sdks:
-      navigation_weight: 4
-    developer-tools:
-      navigation_weight: 5
   voice:
     svg: 'phone'
     svgColor: 'green'
