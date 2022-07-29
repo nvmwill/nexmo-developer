@@ -3,7 +3,7 @@ title: Archiving using AWS S3
 meta_title: Use AWS S3 storage with Vonage Video API archiving.
 description: You can use AWS S3 storage for Vonage Video API archiving.
 product: video
-navigation_weight: 3
+navigation_weight: 1
 ---
 
 # Archiving using AWS S3

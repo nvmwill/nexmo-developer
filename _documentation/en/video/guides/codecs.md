@@ -3,7 +3,7 @@ title: Video codecs
 meta_title: The Vonage Video platform leverages the WebRTC protocol and the real-time video codecs that are supported by WebRTC.
 description: Information on video codecs supported in the Vonage Video API.
 product: video
-navigation weight: 
+navigation weight: 6
 ---
 
 # Video codecs

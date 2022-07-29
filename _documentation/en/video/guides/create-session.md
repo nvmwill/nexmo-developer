@@ -3,7 +3,7 @@ title: Create a session
 meta_title: Create a video session. You specify how clients in the session send audio-video streams when you create a session.
 description: The Vonage Video API platform allows you to create video sessions. You specify how clients in the session send audio-video streams when you create create it.
 product: video
-navigation_weight: 1
+navigation_weight: 3
 ---
 
 # Create a session

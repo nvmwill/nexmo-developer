@@ -2,6 +2,7 @@
 title: Layouts for composed archives and live streaming broadcasts
 description: Video layouts for composed archives and live streaming broadcasts
 product: video
+navigation_weight: 5
 ---
 
 # Video layouts for composed archives and live streaming broadcasts

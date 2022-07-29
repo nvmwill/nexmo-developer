@@ -96,6 +96,20 @@ navigation_overrides:
     sip:
       concepts:
         programmable-sip:
+  video:
+    overview:
+      navigation_weight: 0
+    guides:
+      navigation_weight: 1
+      archiving: 1
+    tutorials:
+      navigation_weight: 7
+    client-sdks:
+      navigation_weight: 8
+    server-sdks:
+      navigation_weight: 9
+    developer-tools:
+      navigation_weight: 10
   verify:
     svg: 'lock'
     svgColor: 'indigo'

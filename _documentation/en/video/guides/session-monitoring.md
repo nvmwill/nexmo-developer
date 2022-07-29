@@ -1,8 +1,8 @@
 ---
-title: Session Monitoring 
+title: Session monitoring 
 description: Learn how to setup up and receive real-time session event callbacks so you can monitor sessions in your application server. You can use events for monitoring or sending events to the client. 
 product: video
-navigation_weight: 
+navigation_weight: 8
 ---
 
 # Session Monitoring

@@ -1,8 +1,8 @@
 ---
-title: Create Token
+title: Create a token
 description: Use the our server libraries to learn how to create a token. Tokens allow participants to use audio, video, and messaging functionality in your application.
 product: video
-navigation_weight: 
+navigation_weight: 2 
 ---
 
 # Token Creation Overview

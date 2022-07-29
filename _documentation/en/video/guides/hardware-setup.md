@@ -1,8 +1,9 @@
 ---
-title: "Hardware Setup component"
+title: "Hardware setup component"
 description: "The Vonage Video API Hardware Setup component provides a user interface for clients using the OpenTok.js library to select the camera and microphone."
 h1: "The Vonage Video API Hardware Setup component"
 p: "<a href='https://github.com/opentok/opentok-hardware-setup.js'>Source Code</a><a href='https://github.com/opentok/opentok-hardware-setup.js/blob/master/index.html'>Sample</a>"
+navigation_weight: 7
 ---
 The Hardware Setup component provides a user interface for clients
 using the [OpenTok.js] [1] library to select the camera and microphone. The

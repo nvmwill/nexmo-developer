@@ -3,7 +3,7 @@ title: Archive Encryption
 meta_title: Create encrypted archives.
 description: The Vonage Video platform's encrypted archiving feature allows you to create archives where the data is never at rest in an unencrypted state.
 product: video
-navigation_weight: 
+navigation_weight: 0
 ---
 
 # Archive Encryption

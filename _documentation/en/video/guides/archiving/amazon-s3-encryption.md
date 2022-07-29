@@ -3,7 +3,7 @@ title: Amazon S3 server-side encryption
 meta_title: Amazon Web Services provides a server-side encryption feature you can use when uploading Vonage archives to an S3 target.
 description: Use the AWS server-side encryption feature when uploading your Vonage archives to an S3 target.
 product: video
-navigation_weight: 6
+navigation_weight: 1
 ---
 
 # Amazon S3 server-side encryption

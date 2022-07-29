@@ -3,7 +3,7 @@ title: Archiving using a Windows Azure container.
 meta_title: Use a Windows Azure container with Vonage Video API archiving.
 description: You can use a Windows Azure container for Vonage Video API archiving.
 product: video
-navigation_weight: 4
+navigation_weight: 1
 ---
 
 # Archiving using a Windows Azure container

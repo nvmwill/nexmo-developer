@@ -3,7 +3,7 @@ title: Customizing the video layout for composed archives
 meta_title: Adjust the visual arrangement of streams and which streams are displayed.
 description: You can customize the video layout for composed archives including adjusting the visual arrangement of streams and which streams are displayed.
 product: video
-navigation_weight: 5
+navigation_weight: 4
 ---
 
 # Customizing the video layout for composed archives

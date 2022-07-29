@@ -3,7 +3,7 @@ title: Overview
 meta_title: Use the Vonage Video API to record, save, and retrieve sessions.
 description: The Vonage Video API allows you to record, save and retrieve sessions.
 product: video
-navigation_weight: 2
+navigation_weight: 1
 ---
 
 # Archiving
