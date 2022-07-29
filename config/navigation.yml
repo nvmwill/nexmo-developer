@@ -89,9 +89,9 @@ navigation_overrides:
     guides:
       navigation_weight: 1
       create-session:
-        navigation_weight: 0
+        navigation_weight: 100
       archiving:
-        navigation_weight: 1
+        navigation_weight: 0
       create-token:
         navigation_weight: 2
     tutorials:
