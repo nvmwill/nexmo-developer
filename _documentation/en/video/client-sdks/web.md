@@ -43,6 +43,8 @@ To load OpenTok.js in your web page, add the following script tag:
 
 You can also install OpenTok.js using the [@opentok/client](https://www.npmjs.com/package/@opentok/client) npm package.
 
+> Visit the [Reference guide](/sdk/stitch/video-js-reference) to see all methods available for the OpenTok.js SDK.
+
 <!-- OPT-TODO: The current version of the OpenTok.js library can interoperate with Vonage Video apps written with version 2.21+ of the Vonage Video client SDKs:
 
 * OpenTok Android SDK (coming soon)
