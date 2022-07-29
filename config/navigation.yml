@@ -100,10 +100,8 @@ navigation_overrides:
       navigation_weight: 3
     server-sdks:
       navigation_weight: 4
-    resources:
-      navigation_weight: 5
     developer-tools:
-      navigation_weight: 6
+      navigation_weight: 5
   voice:
     svg: 'phone'
     svgColor: 'green'

@@ -6,7 +6,7 @@ product: video
 
 # The Vonage Video API Server SDKs
 
-The Vonage Video Server SDKs let you [create sessions](/video/guides/create-session), [generate tokens](/video/guides/create-token), and work with Vonage Video API [archiving](/video/guides/archiving).
+The Vonage Video Server SDKs let you [create sessions](/video/guides/create-session), [generate tokens](/video/guides/create-token), and work with Vonage Video API [archiving](/video/guides/archiving/overview).
 
 The Server SDKs are available for the following languages:
 

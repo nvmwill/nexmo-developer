@@ -103,7 +103,7 @@ Now that it’s connected to the session, Client 2 can subscribe to Client 1’s
 
 <video class="infographic" src="/videos/video-api/step5-2.webm" type="video/x-webm" style="width:50%;" autoplay loop muted></video>
 
-Vonage Video API supports one-to-one communication and group communication. Multiple clients can connect to a session and each connected clients can subscribe to each stream in the session. In addition to the basic functionality above, the Vonage Video API platform provides the ability to save [recordings](/video/guides/archiving) of sessions.
+Vonage Video API supports one-to-one communication and group communication. Multiple clients can connect to a session and each connected clients can subscribe to each stream in the session. In addition to the basic functionality above, the Vonage Video API platform provides the ability to save [recordings](/video/guides/archiving/overview) of sessions.
 
 ## Building a Vonage Video API application
 

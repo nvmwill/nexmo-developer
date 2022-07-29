@@ -154,7 +154,7 @@ source: '_examples/video/create-auto-archived-session/temp'
 
 > Note: Archived sessions must use the routed media mode.
 
-For more information, see the [archiving](/video/guides/archiving) guide.
+For more information, see the [archiving](/video/guides/archiving/overview) guide.
 
 ## Using sessions in client applications
 

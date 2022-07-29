@@ -10,7 +10,7 @@ navigation_weight: 5
 
 You can use the Vonage Video REST API to customize the layout of videos in an archive.
 
-This feature applies to composed archives, not individual archives. For general information on archives, see the [Archiving](/video/guides/archiving) guide.
+This feature applies to composed archives, not individual archives. For general information on archives, see the [Archiving](/video/guides/archiving/overview) guide.
 
 ## Overview
 

@@ -283,7 +283,7 @@ Setting the layout of composed archives is optional. By default, composed archiv
 "best fit" layout (see [Customizing the video layout for composed
 archives](/video/guides/layout-control)).
 
-For more information on archiving, see the [Vonage Video archiving](/video/guides/archiving) developer guide.
+For more information on archiving, see the [Vonage Video archiving](/video/guides/archiving/overview) developer guide.
 
 ### Force a Client to Disconnect
 

@@ -140,7 +140,7 @@ The following examples use the Node, and PHP SDKs.
 import com.opentok.OpenTok;
 import com.opentok.TokenOptions;
 
-OpenTok opentok = new OpenTok(appId, apiSecret)
+OpenTok opentok = new OpenTok(appId, privateKey)
 List<String> classList = List.of("focus", "bar", "inactive");
 String token = session.generateToken(new TokenOptions.Builder()
   .initialLayoutClassList(classList)
@@ -149,19 +149,21 @@ String token = session.generateToken(new TokenOptions.Builder()
 
 Node:
 
-```js
-var OpenTok = require('opentok'),
-    opentok = new OpenTok(appId, apiSecret);
+```javascript
+use Vonage\Video\Role;
 
-opentok.createSession({mediaMode:"routed"}, function(err, session) {
-  if (err) return console.log(err);
+// Generate a Token from just a sessionId (fetched from a database)
+$token = $client->video()->generateToken($sessionId);
+// Generate a Token by calling the method on the Session (returned from createSession)
+$token = $session->generateToken();
 
-  token = session.generateToken({
-    expireTime : (new Date().getTime() / 1000)+(7 * 24 * 60 * 60), // in one week
-    data :       'name=Johnny',
-    initialLayoutClassList : ['focus', 'inactive']
-  });
-});
+// Set some options in a token
+$token = $session->generateToken(array(
+    'role'       => Role::MODERATOR,
+    'ttl'        => 7 * 24 * 60 * 60, // in one week
+    'data'       => 'name=Johnny',
+    'initialLayoutClassList' => ['focus']
+));
 ```
 
 PHP:
@@ -187,7 +189,7 @@ from opentok import OpenTok
 from opentok import MediaModes
 from opentok import Roles
 
-opentok = OpenTok(app_id, api_secret)
+opentok = OpenTok(app_id, private_key)
 session = opentok.create_session(media_mode=MediaModes.routed)
 token = session.generate_token(expire_time=int(time.time()) + 10,
                                data=u'name=Johnny'
@@ -197,7 +199,7 @@ token = session.generate_token(expire_time=int(time.time()) + 10,
 Ruby:
 
 ```ruby
-opentok = OpenTok::OpenTok.new app_id, api_secret
+opentok = OpenTok::OpenTok.new app_id, private_key
 
 session = opentok.create_session :media_mode => :routed
 token = session.generate_token({

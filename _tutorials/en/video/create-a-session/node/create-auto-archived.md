@@ -21,4 +21,4 @@ opentok.createSession({mediaMode:'routed', archiveMode:'always'}, function(err, 
 
 Note that archived sessions must use the routed media mode.
 
-For more information, see the [archiving](/video/guides/archiving) developer guide.
+For more information, see the [archiving](/video/guides/archiving/overview) developer guide.

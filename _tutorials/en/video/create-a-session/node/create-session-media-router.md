@@ -33,4 +33,4 @@ The [Media Router](https://www.vonage.com/communications-apis/video/features) pr
 
 * The Vonage Video Media Router can decrease bandwidth usage in multiparty sessions. (When the mediaMode property is set to `MediaMode.RELAYED`, each client must send a separate audio-video stream to each client subscribing to it.)
 * The Vonage Video Media Router can improve the quality of the user experience through [audio fallback and video recovery](https://www.vonage.com/communications-apis/video/features). With these features, if a client's connectivity degrades to a degree that it does not support video for a stream it's subscribing to, the video is dropped on that client (without affecting other clients), and the client receives audio only. If the client's connectivity improves, the video returns.
-* The Vonage Video Media Router supports the [archiving feature](/video/guides/archiving), which lets you record, save, and retrieve Vonage Video sessions.
+* The Vonage Video Media Router supports the [archiving feature](/video/guides/archiving/overview), which lets you record, save, and retrieve Vonage Video sessions.

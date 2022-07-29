@@ -209,7 +209,7 @@ Each archive goes through multiple states through the lifespan of the archive. F
 
 This is particularly useful for triggering post-processing of an archive, or for performing any necessary administrative tasks after an archive has been uploaded to persistent storage.
 
-For more information see the [archive status changes](/video/guides/archiving#archive-status-changes) section of the Vonage Video archiving developer guide.
+For more information see the [archive status changes](/video/guides/archiving/overview#archive-status-changes) section of the Vonage Video archiving developer guide.
 
 ## Monitoring SIP call progress
 
