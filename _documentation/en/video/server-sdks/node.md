@@ -6,22 +6,25 @@ product: video
 
 # Vonage Video API Node SDK
 
-The OpenTok Node SDK provides methods for:
+The Node SDK provides methods for:
 
-* Generating [sessions](/guides/create-session/) and
-  [tokens](/guides/create-token/) for
-  [OpenTok](https://www.vonage.com/communications-apis/video/) applications
-* Working with OpenTok [archives](/developer/guides/archiving)
-* Working with OpenTok [live streaming broadcasts](/developer/guides/broadcast/live-streaming/)
-* Working with OpenTok [SIP interconnect](/developer/guides/sip)
-* [Sending signals to clients connected to a session](/developer/guides/signaling/)
-* [Disconnecting clients from sessions](/developer/guides/moderation/rest/)
-* [Forcing clients in a session to disconnect or mute published audio](/developer/guides/moderation/)
+* Generating [sessions](#creating-sessions) and
+  [tokens](#generating-tokens)
+* [Working with archives](#working-with-archives)
+
+<!-- * OPT-TODO: Working with [live streaming broadcasts](#working-with-live-streaming-broadcasts) -->
+
+* [Sending signals to clients connected to a session](#sending-signals)
+
+<!-- OPT-TODO: * Working with OpenTok [SIP interconnect](#working-with-sip-interconnect) -->
+
+* [Disconnecting clients from sessions](#disconnecting-participants)
+* [Forcing clients in a session to disconnect or mute published audio](#forcing-clients-in-a-session-to-mute-published-audio)
 
 
 ## Installation using npm (recommended):
 
-npm helps manage dependencies for node projects. Find more info here: <a href="http://npmjs.org">http://npmjs.org</a>
+NPM helps manage dependencies for node projects. Find more info here: <a href="http://npmjs.org">http://npmjs.org</a>
 
 Run this command to install the package and adding it to your `package.json`:
 
@@ -33,8 +36,8 @@ npm install @vonage/server-sdk
 
 ### Initializing
 
-Import the module to get a constructor function for an OpenTok object, then call it with `new` to
-instantiate an OpenTok object with your own App ID and private key.
+Import the module to get a constructor function for a video object, then call it with `new` to
+instantiate a video object with your own App ID and private key.
 
 ```javascript
 const { Video } = require('@vonage/video');
@@ -70,7 +73,7 @@ const videoClient = new Video({
 ```
 
 #### Increasing Timeouts
-The library currently has a 20 second timeout for requests. If you're on a slow network, and you need to increase the timeout, you can pass it (in milliseconds) when instantiating the OpenTok object.
+The SDK currently has a 20 second timeout for requests. If you're on a slow network, and you need to increase the timeout, you can pass it (in milliseconds) when instantiating the object.
 
 ```javascript
 const { Video } = require('@vonage/video');
@@ -83,11 +86,10 @@ const videoClient = new Video({
 
 ### Creating Sessions
 
-To create an OpenTok Session, use the `OpenTok.createSession(properties, callback)` method. The
-`properties` parameter is an optional object used to specify whether the session uses the OpenTok
+To create a session, use the `createSession(properties)` method. The
+`properties` parameter is an optional object used to specify whether the session uses the
 Media Router, to specify a location hint, and to specify whether the session will be automatically
-archived or not. The callback has the signature `function(error, session)`. The `session` returned
-in the callback is an instance of Session. Session objects have a `sessionId` property that is
+archived or . The `session` returned is an instance of session. Session objects have a `sessionId` property that is
 useful to be saved to a persistent store (such as a database).
 
 ```javascript
@@ -132,9 +134,9 @@ try {
 ### Generating Tokens
 
 Once a Session is created, you can start generating Tokens for clients to use when connecting to it.
-You can generate a token by calling the `OpenTok.generateToken(sessionId, options)` method. Another
-way is to call the `generateToken(options)` method of a Session object. The `options`
-parameter is an optional object used to set the role, expire time, and connection data of the Token.
+You can generate a token by calling the `generateClientToken(sessionId)` method.
+
+<!-- OPT-TODO: double check options param -->
 For layout control in archives and broadcasts, the initial layout class list of streams published
 from connections using this token can be set as well.
 
@@ -151,9 +153,11 @@ const token = videoClient.generateClientToken(sessionId, options);
 
 ### Working with archives
 
-You can start the recording of an OpenTok Session using the `OpenTok.startArchive(sessionId, options, callback)` method. The `options` parameter is an optional object used to set the name of
-the Archive. The callback has the signature `function(err, archive)`. The `archive` returned in
-the callback is an instance of `Archive`. Note that you can only start an archive on a Session with
+You can start the recording of a session using the `startArchive(sessionId, options)` method. The `options` parameter is an optional object used to set the name of
+the Archive.
+The `archive` returned is an instance of `Archive`. 
+
+>Note that you can only start an archive on a Session with
 connected clients.
 
 ```javascript
@@ -185,7 +189,7 @@ try {
 
 By default, all streams are recorded to a single (composed) file. You can record the different
 streams in the session to individual files (instead of a single composed file) by setting the
-`outputMode` option to `'individual'` when you call the `OpenTok.startArchive()` method:
+`outputMode` option to `'individual'` when you call the `startArchive()` method:
 
 ```javascript
 var archiveOptions = {
@@ -201,10 +205,9 @@ try {
 }
 ```
 
-You can stop the recording of a started Archive using the `OpenTok.stopArchive(archiveId, callback)`
-method. You can also do this using the `Archive.stop(callback)` method an `Archive` instance. The
-callback has a signature `function(err, archive)`. The `archive` returned in the callback is an
-instance of `Archive`.
+You can stop the recording of a started Archive using the `stopArchive(archiveId)`
+method.
+The `archive` returned in the callback is an instance of `Archive`.
 
 ```javascript
 try {
@@ -216,8 +219,9 @@ try {
 ```
 
 To get an `Archive` instance (and all the information about it) from an `archiveId`, use the
-`OpenTok.getArchive(archiveId, callback)` method. The callback has a function signature
-`function(err, archive)`. You can inspect the properties of the archive for more details.
+`getArchive(archiveId)` method.
+
+You can inspect the properties of the archive for more details.
 
 ```javascript
 try {
@@ -228,8 +232,7 @@ try {
 }
 ```
 
-To delete an Archive, you can call the `OpenTok.deleteArchive(archiveId, callback)` method or the
-`delete(callback)` method of an `Archive` instance. The callback has a signature `function(err)`.
+To delete an Archive, you can call the `deleteArchive(archiveId)` method.
 
 ```javascript
 // Delete an Archive from an archiveId (fetched from database)
@@ -242,10 +245,11 @@ try {
 ```
 
 You can also get a list of all the Archives you've created (up to 1000) with your App ID. This is
-done using the `OpenTok.listArchives(options, callback)` method. The parameter `options` is an
+done using the `searchArchives(options)` method. The parameter `options` is an
 optional object used to specify an `offset` and `count` to help you paginate through the results.
-The callback has a signature `function(err, archives, totalCount)`. The `archives` returned from
-the callback is an array of `Archive` instances. The `totalCount` returned from the callback is
+
+The `archives` returned is an array of `Archive` instances.
+The `totalCount` returned from the callback is
 the total number of archives your App ID has generated.
 
 ```javascript
@@ -264,12 +268,11 @@ try {
 }
 ```
 
-Note that you can also create an automatically archived session, by passing in `'always'`
-as the `archiveMode` option when you call the `OpenTok.createSession()` method (see "Creating
-Sessions," above).
+>Note that you can also create an automatically archived session, by passing in `'always'`
+as the `archiveMode` option when you call the `createSession()` method (see ["Creating Sessions,"](#creating-sessions) above).
 
 For composed archives, you can set change the layout dynamically, using the
-`OpenTok.setArchiveLayout(archiveId, type, stylesheet, screenshareType, callback)` method:
+`updateArchiveLayout(archiveId, layout)` method:
 
 ```javascript
 const layout = {
@@ -284,19 +287,17 @@ try {
 ```
 
 You can set the initial layout class for a client's streams by setting the `layout` option when
-you create the token for the client, using the `OpenTok.generateToken()` method. And you can
-change the layout classes for streams in a session by calling the
-`OpenTok.setStreamClassLists(sessionId, classListArray, callback)` method.
+you create the token for the client, using the `generateToken()` method.
+And you can change the layout classes for streams in a session by calling the `setStreamClassLists(sessionId, classListArray)` method.
 
 Setting the layout of composed archives is optional. By default, composed archives use the
 "best fit" layout (see [Customizing the video layout for composed
-archives](/developer/guides/archiving/layout-control.html)).
+archives](/video/guides/layout-control)).
 
 For more information on archiving, see the
-[OpenTok archiving developer guide](/developer/guides/archiving/).
+[archiving developer guide](/video/guides/archiving/overview).
 
-## *** Doesn't do live streaming yet!!! ***
-### Working with live streaming broadcasts
+<!-- OPT-TODO: ### Working with live streaming broadcasts
 
 _Important:_
 Only [routed OpenTok sessions](/developer/guides/create-session/#media-mode)
@@ -396,12 +397,12 @@ change the layout classes for streams in a session by calling the
 `OpenTok.setStreamClassLists(sessionId, classListArray, callback)` method.
 
 Setting the layout of a live streaming broadcast is optional. By default, live streaming broadcasts
-use the "best fit" layout.
+use the "best fit" layout. -->
 
 ### Sending signals
 
-You can send a signal to all participants in an OpenTok Session by calling the
-`OpenTok.signal(sessionId, connectionId, payload, callback)` method and setting
+You can send a signal to all participants in a session by calling the
+`sendSignal(payload, sessionId, connectionId)` method and setting
 the `connectionId` parameter to `null`:
 
 ```javascript
@@ -417,7 +418,7 @@ try {
 ```
 
 Or send a signal to a specific participant in the session by calling the
-`OpenTok.signal(sessionId, connectionId, payload, callback)` method and setting all parameters,
+`sendSignal(payload, sessionId, connectionId)` method and setting all parameters,
 including `connectionId`:
 
 ```javascript
@@ -432,13 +433,13 @@ try {
 }
 ```
 
-This is the server-side equivalent to the signal() method in the OpenTok client SDKs. See
-[OpenTok signaling developer guide](/developer/guides/signaling/) .
+<!-- OPT-TODO: This is the server-side equivalent to the `sendSignal()` method in the client SDKs. See
+[signaling developer guide](/developer/guides/signaling/) . -->
 
 ### Disconnecting participants
 
-You can disconnect participants from an OpenTok Session using the
-`OpenTok.forceDisconnect(sessionId, connectionId, callback)` method.
+You can disconnect participants from a session using the
+`disconnectClient(sessionId, connectionId)` method.
 
 ```javascript
 try {
@@ -449,23 +450,21 @@ try {
 }
 ```
 
-This is the server-side equivalent to the forceDisconnect() method in OpenTok.js:
-<https://www.tokbox.com/developer/guides/moderation/js/#force_disconnect>.
+<!-- OPT-TODO: This is the client-side equivalent to the `disconnectClient()` method in OpenTok.js:
+<https://www.tokbox.com/developer/guides/moderation/js/#force_disconnect>. -->
 
 ### Forcing clients in a session to mute published audio
 
 You can force the publisher of a specific stream to stop publishing audio using the 
-`Opentok.forceMuteStream(sessionId)`method.
+`muteStream(sessionId, streamId)`method.
 
 You can force the publisher of all streams in a session (except for an optional list of streams)
-to stop publishing audio using the `Opentok.forceMuteAll()` method.
+to stop publishing audio using the `forceMuteAll()` method.
 You can then disable the mute state of the session by calling the
-`Opentok.disableForceMute()` method.
-
-## *** Doesn't do SIP Interconnect yet!!! ***
+`disableForceMute()` method.
 
 
-### Working with SIP Interconnect
+<!-- OPT-TODO: ### Working with SIP Interconnect
 
 You can add an audio-only stream from an external third-party SIP gateway using the SIP Interconnect
 feature. This requires a SIP URI, the session ID you wish to add the audio-only stream to, and a
@@ -489,11 +488,11 @@ opentok.dial(sessionId, token, sipUri, options, function (error, sipCall) {
 ```
 
 For more information, see the
-[OpenTok SIP Interconnect developer guide](/developer/guides/sip/).
+[OpenTok SIP Interconnect developer guide](/developer/guides/sip/). -->
 
 ### Getting Stream Info
 
-You can get information on an active stream in an OpenTok session:
+You can get information on an active stream in a session:
 
 ```javascript
 var sessionId =
@@ -510,14 +509,12 @@ try {
 }
 ```
 
-Pass a session ID, stream ID, and callback function to the `OpenTok.getStream()` method.
-The callback function is called when the operation completes. It takes two parameters:
-`error` (in the case of an error) or `stream`. On successful completion, the `stream` object
-is set, containing properties of the stream.
+Pass a session ID and stream ID to the `getStreamInfo()` method.
+On successful completion, the `stream` object containing properties of the stream.
 
-To get information on _all_ active streams in a session, call the `OpenTok.listStreams()` method,
+<!-- OPT-TODO: [can't find listStreams method] To get information on _all_ active streams in a session, call the `OpenTok.listStreams()` method,
 passing in a session ID and a callback function. Upon success, the callback function is invoked
-with an array of Stream objects passed into the second parameter:
+with an array of Stream objects passed into the second parameter: -->
 
 ```javascript
 try {
@@ -533,36 +530,15 @@ try {
 
 ## Requirements
 
-You need an OpenTok App ID and private key, which you can obtain by logging into your
-[Vonage Video API account](https://tokbox.com/account).
+You need a Vonage App ID and private key, which you can obtain by logging into your
+[Vonage Video API account](https://ui.idp.vonage.com/ui/auth/login).
 
-The OpenTok Node SDK requires Node.js 6 or higher. It may work on older versions but they are no longer tested.
+The  Node SDK requires Node.js 6 or higher. It may work on older versions but they are no longer tested.
 
 ## Release Notes
 
-See the <a href="https://github.com/opentok/opentok-node/releases" onclick="gaEvent('node_sdk', 'body: releases-info')">Releases</a> page for details
+See the <a href="https://github.com/Vonage/vonage-node-sdkreleases" onclick="gaEvent('node_sdk', 'body: releases-info')">Releases</a> page for details
 about each release.
-
-### Important changes since v2.2.0
-
-**Changes in v2.2.3:**
-
-The default setting for the `createSession()` method is to create a session with the media mode set
-to relayed. In previous versions of the SDK, the default setting was to use the OpenTok Media Router
-(media mode set to routed). In a relayed session, clients will attempt to send streams directly
-between each other (peer-to-peer); if clients cannot connect due to firewall restrictions, the
-session uses the OpenTok TURN server to relay audio-video streams.
-
-**Changes in v2.2.0:**
-
-This version of the SDK includes support for working with OpenTok archives.
-
-The `createSession()` method has changed to take one parameter: an `options` object that has `location`
-and `mediaMode` properties. The `mediaMode` property replaces the `properties.p2p.preference`
-parameter in the previous version of the SDK.
-
-The `generateToken()` has changed to take two parameters: the session ID and an `options` object that has `role`, `expireTime` and `data` properties.
-
 
 <script>
   var currentPage = 'node_sdk';
