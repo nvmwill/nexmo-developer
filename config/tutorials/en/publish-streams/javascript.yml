@@ -16,10 +16,10 @@ tasks:
     - video/publish-streams/javascript/1-check-publish-capabilities
     - video/publish-streams/javascript/2-initialize-publisher-view
     - video/publish-streams/javascript/3-detect-access-cam-mic
-    - video/publish-streams/javascript/4-set-publisher-cam-mic.md
+    - video/publish-streams/javascript/4-set-publisher-cam-mic
     - video/publish-streams/javascript/5-use-cam-remember-cam-mic
     - video/publish-streams/javascript/6-publish-stream
-    - video/publish-streams/javascript/7-stop-publisher-stream.md
+    - video/publish-streams/javascript/7-stop-publisher-stream
     - video/publish-streams/javascript/8-stream-settings
     - video/publish-streams/javascript/9-managing-publishers
     - video/publish-streams/javascript/10-publish-vidaud-alternate-sources

@@ -216,4 +216,4 @@ subscriber.getRtcStatsReport()
 
 <!-- OPT-TODO: [scalable video feature](/developer/guides/scalable-video) -->
 
-When subscribing to a stream that uses the scalable video feature, you can set the preferred frame rate and resolution for the stream the subscribing client receives from the OpenTok Media Router. For details, see [Subscriber.setPreferredFrameRate()](/developer/sdks/js/reference/Subscriber.html#setPreferredFrameRate) and [Subscriber.setPreferredResolution()](/sdk/stitch/video-js-reference/Subscriber.html#setPreferredResolution).
+When subscribing to a stream that uses the scalable video feature, you can set the preferred frame rate and resolution for the stream the subscribing client receives from the OpenTok Media Router. For details, see [Subscriber.setPreferredFrameRate()](/sdk/stitch/video-js-reference/Subscriber.html#setPreferredFrameRate) and [Subscriber.setPreferredResolution()](/sdk/stitch/video-js-reference/Subscriber.html#setPreferredResolution).

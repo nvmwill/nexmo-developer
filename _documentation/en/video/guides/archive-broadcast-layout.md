@@ -293,8 +293,8 @@ You can also get the layout class list for a stream using the server SDKs:
 
 <!-- * Java — [`OpenTok.listStreams()`](/developer/sdks/java/reference/com/opentok/OpenTok.html#listStreams-java.lang.String-) (call the `getLayoutClassList()` method of each Stream object) -->
 
-* Node — [`OpenTok.getStream()`](/developer/sdks/node/reference/OpenTok.html#getStream) (call the `getLayoutClassList()` method of the Stream object)
-* PHP — [`OpenTok->getStream()`](/developer/sdks/php/reference/classes/OpenTok.OpenTok.html#method\_getStream) (check the `layoutClassList` property of the Stream object)
+* Node — [`getStreamInfo()`](/video/server-sdks/node#getting-stream-info) (call the `getLayoutClassList()` method of the Stream object)
+* PHP — [`getStream()`](/video/server-sdks/php#working-with-streams) (check the `layoutClassList` property of the Stream object)
 
 <!-- * Python — [`opentok.get_stream()`](/developer/sdks/python/reference/opentok.html#opentok.opentok.OpenTok.get\_stream) (check the `layoutClassList` property of the Stream object) -->
 

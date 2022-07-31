@@ -119,7 +119,7 @@ If you do not specify an initial layout type, the composed archive uses the Best
 If you specify any other layout type, be sure to apply appropriate layout classes for streams in the Vonage Video session
 
 See [Assigning layout classes to Vonage Video streams](/video/guides/archive-broadcast-layout/#assign-layout-classes-to-streams) and
-[Predefined layout types](/guides/archive-broadcast-layout/#predefined-layout-types ).
+[Predefined layout types](/video/guides/archive-broadcast-layout/#predefined-layout-types ).
 
 ## Dynamically changing the layout type during a recording
 
