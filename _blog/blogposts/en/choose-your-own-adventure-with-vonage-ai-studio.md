@@ -1,5 +1,5 @@
 ---
-title: Choose Your Own Adventure with Vonage AI Studio
+title: Choose Your Own Adventure With Vonage AI Studio
 description: Exploring the tools and features of Vonage AI Studio by creating a
   fun adventure game
 thumbnail: /content/blog/choose-your-own-adventure-with-vonage-ai-studio/vonageaistuido.png
