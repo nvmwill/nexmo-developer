@@ -19,7 +19,7 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Vonage AI Studio is a no-code/ low-code platform for creating conversational flows across various communication channels. It uses a drag and drop interface to connect modules and actions into complex flows that can automate processes and connect to many different services. AI Studio's conversational flows are built on Vonage AI's proprietary natural language understanding (NLU) algorithms to enable conversational interactions where users can communicate in 'natural language' without being required to use certain keywords, choose from a list of options, or formulate their questions in a specific way.
+Vonage AI Studio is a no-code/low-code platform for creating conversational flows across various communication channels. It uses a drag and drop interface to connect modules and actions into complex flows that can automate processes and connect to many different services. AI Studio's conversational flows are built on Vonage AI's proprietary natural language understanding (NLU) algorithms to enable conversational interactions where users can communicate in 'natural language' without being required to use certain keywords, choose from a list of options, or formulate their questions in a specific way.
 
 AI Studio has been available for a while in Developer Preview. It recently became generally available for use, which is super exciting, and so I wanted to highlight this fact by writing about some of its capabilities. There were several approaches I could have taken to do this, such as building 'real-world' customer service type flow. For this article though, I wanted to try something a little bit different, and explore some of AI Studio's features in a fun and interesting way.
 
