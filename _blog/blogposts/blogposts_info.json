@@ -1,5 +1,80 @@
 [
   {
+    "title": "Voice Enabling a Text-only Chatbot",
+    "description": "Learn here how to add voice interaction to your existing text-only chatbot.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/voice-enabling-a-text-only-chatbot/chatbots-voice-enable.png",
+    "author": {
+      "bio": "Customer Solutions Engineer at Vonage. With a background in product management, network and systems operations, customer support, quality assurance, software development team manager, Tony is working in the Telecommunications industry formerly in France and now in the US. He helps global large and smaller companies develop solutions using programmable voice, messaging, video, and multi-factor authentication services.",
+      "hidden": false,
+      "image_url": "/content/images/tony.png",
+      "name": "Tony Chan",
+      "spotlight": false,
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "tony-chan"
+    },
+    "published": true,
+    "published_at": "2022-07-28 09:30:05 UTC",
+    "updated_at": "2022-07-28 09:13:15 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "chatbot",
+      "javascript",
+      "voice-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/28/voice-enabling-a-text-only-chatbot",
+    "filename": "voice-enabling-a-text-only-chatbot"
+  },
+  {
+    "title": "Two-way Messaging on Zendesk With Vonage Messages API",
+    "description": "Connect WhatsApp with Zendesk via Vonage Messages API to create and update tickets.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/two-way-messaging-on-zendesk-with-vonage-messages-api/zendesk_messengerapi.png",
+    "author": {
+      "bio": "Nourhan is a Customer Solution Architect at Vonage based out of Dubai. Passionate about CPaaS and automation. She loves traveling and anything outdoors.",
+      "hidden": false,
+      "image_url": "/content/images/nourhan-kandeel.jpg",
+      "name": "Nourhan Kandeel",
+      "spotlight": false,
+      "title": " Customer Solution Architect ",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "nourhan-kandeel"
+    },
+    "published": true,
+    "published_at": "2022-07-26 09:28:05 UTC",
+    "updated_at": "2022-07-26 09:28:07 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "zendesk",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/26/two-way-messaging-on-zendesk-with-vonage-messages-api",
+    "filename": "two-way-messaging-on-zendesk-with-vonage-messages-api"
+  },
+  {
     "title": "Q2 2022: Vonage Developer News Recap",
     "description": "Read what we've been up to in the second quarter of 2022. SDKs updates, developer events, integration and more!",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/q2-2022-vonage-developer-news-recap/quaterly-releases_q2.png",
@@ -1118,7 +1193,7 @@
       "color": "#b779ff"
     },
     "tags": [
-      "video-api"
+      "meetings-api"
     ],
     "spotlight": false,
     "canonical": "",
@@ -18909,36 +18984,6 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "chinese",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -18967,6 +19012,36 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "chinese",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
