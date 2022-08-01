@@ -77,7 +77,7 @@ This section provides a visual breakdown of the steps required for two clients t
 
 ### Step 1: The session is created by your app server
 
-Your [app server](#server), using code from an [Vonage Video API server SDK](#server-sdk), creates a session in the cloud via the [Vonage Video REST API](#vonage-video-rest-api) and receives the session ID. Think of the session as a "room" where the video chat will occur. At this point it is unoccupied.
+Your [app server](#server), using code from an [Vonage Video API server SDK](#server-sdk), creates a session in the cloud via the [Vonage Video REST API](/video/api-reference) and receives the session ID. Think of the session as a "room" where the video chat will occur. At this point it is unoccupied.
 
 <video class="infographic" src="/videos/video-api/step1.webm" type="video/x-webm" style="width:50%;" autoplay loop muted></video>
 
@@ -165,7 +165,7 @@ The client SDKs are a set of code libraries available for web (JavaScript) used 
 
 ### Server SDK
 
-The server SDKs are a set of wrappers for the Vonage Video REST API available for Node and PHP. This code is set up on your app server and is used to generate new sessions and tokens for the client.
+The server SDKs are a set of wrappers for the [Vonage Video REST API](/video/api-reference) available for Node and PHP. This code is set up on your app server and is used to generate new sessions and tokens for the client.
 
 <!-- ### Vonage Video REST API
 
