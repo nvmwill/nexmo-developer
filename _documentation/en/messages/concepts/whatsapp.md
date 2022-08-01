@@ -48,6 +48,8 @@ For more information on Vonage WhatsApp pricing, see the [Messages API pricing](
 
 > **NOTE:** Since WhatsApp pricing is *per conversation* rather than *per message*, it is not possible to provide an accurate price per message. Therefore, the value given for the `price` property in the `usage` object contained in the body of a [Message Status callback](/api/messages-olympus#message-status) will be the *default price per conversation* rather than the actual price for *each message*.
 
+Data identifying the conversation to which a message relates is available in [Message Status callbacks](https://developer.vonage.com/api/messages-olympus#message-status) for messages that have a status of `delivered`.
+
 ## WhatsApp Number Hosting
 
 We have two ways of managing WhatsApp numbers. We can either host your number on our servers using **WhatsApp’s On-premises** solution, or handle it directly in **WhatsApp’s Cloud** solution.
