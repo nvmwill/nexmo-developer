@@ -722,3 +722,6 @@ api.support.vonage.com
 localStorage
 sessionStorage
 MediaStream
+codeless
+passthrough
+passcode
