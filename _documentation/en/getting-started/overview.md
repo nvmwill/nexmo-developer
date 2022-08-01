@@ -26,7 +26,7 @@ However, there are some fundamental concepts that you need to understand and too
 
 ## Signing up for an account
 
-To work with our APIs, you will need to [sign up for an account](/account/guides/dashboard-management#create-and-configure-a-nexmo-account). This will give you an API key and secret that you can use to access our APIs.
+To work with our APIs, you will need to [sign up for an account](/account/guides/dashboard-management#create-and-configure-a-vonage-account). This will give you an API key and secret that you can use to access our APIs.
 
 ## Accessing the Developer Dashboard
 
