@@ -33,6 +33,7 @@ There is an optional `mediaParams` parameter that can be added to modify the Med
 source: '_tutorials_tabbed_content/client-sdk/guides/reconnect-call/javascript/call'
 frameless: false
 ```
+A sample application can be found in this GitHub [repo](https://github.com/Vonage-Community/sample-clientsdk-js-reconnect_call).
 
 >Note: When reconnected, you will automatically join the call. No need to `answer()` on the Call Object. 
 
