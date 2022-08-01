@@ -1,6 +1,6 @@
 ## Prerequisites
 
-1. [Create a Vonage API Account](https://dashboard.nexmo.com/sign-in)
+1. [Create a Vonage API Account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 2. [Install Node JS](https://nodejs.org/en/download/) - required for using the Vonage Command Line Interface (CLI).
 3. [Install the Vonage CLI](/messages/code-snippets/install-cli)
 4. [Install or update the Beta version of the Node Server SDK](/messages/code-snippets/server-sdk) - only required if using Node.
