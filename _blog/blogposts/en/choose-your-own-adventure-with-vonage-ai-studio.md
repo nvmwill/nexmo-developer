@@ -4,7 +4,7 @@ description: Exploring the tools and features of Vonage AI Studio by creating a
   fun adventure game
 thumbnail: /content/blog/choose-your-own-adventure-with-vonage-ai-studio/vonageaistuido.png
 author: karl-lingiah
-published: false
+published: true
 published_at: 2022-08-02T14:11:14.333Z
 updated_at: 2022-08-02T09:52:26.475Z
 category: inspiration
@@ -29,11 +29,11 @@ In my younger days, I loved reading 'choose your own adventure' books. These boo
 
 ## Agents
 
-Within the AI Studio interface, each conversation flow is created as an 'agent'. There are different types of agents available depending on your use cases, such as Voice, SMS, WhatsApp, and HTTP. 
+Within the AI Studio interface, each conversation flow is created as an 'agent'. There are different types of agents available depending on your use cases, such as Voice, SMS, WhatsApp, and HTTP.
 
 ![A screenshot of the Agent Creation step in Vonage AI Studio showing the channel selection options: Telephony, WhatsApp, SMS, HTTP ](/content/blog/choose-your-own-adventure-with-vonage-ai-studio/agent-creation-screenshot.png "AI Studio screenshot: Agent Creation")
 
-For my 'choose your own adventure' story, I decided to create a Voice agent. AI Studio’s Voice agents combine Vonage’s proprietary automated speech recognition (ASR) with its NLU capabilities to provide naturalistic voice interactions. 
+For my 'choose your own adventure' story, I decided to create a Voice agent. AI Studio’s Voice agents combine Vonage’s proprietary automated speech recognition (ASR) with its NLU capabilities to provide naturalistic voice interactions.
 
 When first creating an agent, there are several settings to set, such as the Agent name, Country, Language, and Timezone.
 
