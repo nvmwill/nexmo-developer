@@ -111,8 +111,8 @@ You can also specify the initial layout type when starting a recording using the
 
 Language | Description |
 -- | -- | -- |
-Node | [OpenTok.startArchive()](https://github.com/opentok/opentok-node#working-with-archives) (set the `layout` property of the `options` parameter).
-PHP | [OpenTok->startArchive()](https://github.com/opentok/Opentok-PHP-SDK#working-with-archives) (call the `OpenTok->setArchiveLayout()` method after starting the recording).
+Node | [OpenTok.startArchive()](/video/server-sdks/node#working-with-archives) (set the `layout` property of the `options` parameter).
+PHP | [OpenTok->startArchive()](/video/server-sdks/php#working-with-archivess) (call the `OpenTok->setArchiveLayout()` method after starting the recording).
 
 If you do not specify an initial layout type, the composed archive uses the Best Fit layout type.
 
