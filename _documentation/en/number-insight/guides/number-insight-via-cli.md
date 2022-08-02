@@ -14,7 +14,7 @@ You can use the [Vonage CLI](https://github.com/vonage/vonage-cli) to work with 
 
 ### Before you begin:
 
-* Sign up for a [Vonage account](https://dashboard.nexmo.com/signup) - this will give you the API key and secret that you will need to access the Number Insight API.
+* Sign up for a [Vonage account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink) - this will give you the API key and secret that you will need to access the Number Insight API.
 * Install [Node.JS](https://nodejs.org/en/download/) - you will use `npm` (the Node Package Manager) to install the Vonage CLI.
 
 ### Install and Setup the Vonage CLI (Command Line Interface)

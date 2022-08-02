@@ -16,7 +16,7 @@ Please read this information carefully, so you can best use the code snippets.
 
 #### Vonage Developer Account
 
-If you don’t have a Vonage account yet, you can get sign up for one here: [Vonage Developers Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
+If you don’t have a Vonage account yet, you can get sign up for one here: [Vonage Developers Account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 
 #### Meetings API Activation
 

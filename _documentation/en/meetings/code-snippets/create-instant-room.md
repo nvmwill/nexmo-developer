@@ -10,7 +10,7 @@ How to set up an Instant (default) room using the Meetings API.
 
 ## Prerequisites
 
-* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
+* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 
 * **Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 

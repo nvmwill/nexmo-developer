@@ -37,7 +37,7 @@ Nexmo の SMS 用 API を使用すると、簡単な REST 用 API を使った�
 
 以下の例では、選択した番号への SMS 送信方法を説明します。
 
-Nexmo に登録していない場合は、まず [Nexmo アカウントにサインアップ](https://dashboard.nexmo.com/sign-up)します。[Dashboard の [最初のステップ] ページ](https://dashboard.nexmo.com/getting-started-guide)の API キーとシークレットを書き留めます。
+Nexmo に登録していない場合は、まず [Nexmo アカウントにサインアップ](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)します。[Dashboard の [最初のステップ] ページ](https://dashboard.nexmo.com/getting-started-guide)の API キーとシークレットを書き留めます。
 
 次のサンプルコードに含まれるプレースホルダーの値を置き換えます。
 

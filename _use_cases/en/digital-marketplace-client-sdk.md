@@ -25,7 +25,7 @@ In this use case you use custom events in the Client SDK. Custom events are used
 
 It is assumed you have done the following:
 
-1. Created a [Vonage Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
+1. Created a [Vonage Account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 2. Made a note of your Vonage API key and API secret, which are displayed in the [Dashboard](https://dashboard.nexmo.com/getting-started-guide).
 
 ## Steps
