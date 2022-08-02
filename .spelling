@@ -844,6 +844,7 @@ checkboxes
 localStorage
 sessionStorage
 MediaStream
+<<<<<<< HEAD
 opentok-reconnection
 ConnectionEvent
 sessionconnection
@@ -877,3 +878,8 @@ v2.4.0
 v2.2.
 opentok
 v2.4
+=======
+codeless
+passthrough
+passcode
+>>>>>>> main
