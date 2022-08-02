@@ -71,6 +71,12 @@ A meeting created through the API can be embedded into your website. To do this,
 <iframe src="Meeting link here" title="Embedded Meeting"></iframe>
 ```
 
+This is currently supported both desktop and mobile using the following browsers:
+
+* Desktop - Supported on Firefox and Chrome based browsers.
+* iOS 14+ - Supported on Safari, Edge or Firefox.
+* Android - Supported on Chrome or Samsung browser v14+.
+
 The meeting can be displayed in any size above 360PX, however the number of features available depends on the size of the iFrame:
 
 Feature | 360-500PX | 500-600PX | 600PX+
