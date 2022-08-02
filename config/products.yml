@@ -215,3 +215,11 @@ products:
     translate: false
     translation_frequency: 5
     dropdown: true
+  -
+    name: 'Campaign'
+    icon: 'calendar-3'
+    icon_colour: 'purple-dark' 
+    path: campaign
+    translate: false
+    translation_frequency: 5
+    dropdown: true

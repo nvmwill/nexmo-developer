@@ -68,6 +68,7 @@ en:
     configuration: Configuration
     tools: Tools
     ai-studio: AI Studio
+    campaign: Campaign API
 
     administration: Administration
     tasks: Tasks

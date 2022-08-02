@@ -151,6 +151,10 @@ navigation_overrides:
     svg: 'flow'
     svgColor: 'purple'
     label: 'Beta'
+  campaign:
+    svg: 'calendar-3'
+    svgColor: 'purple'
+    label: 'Beta'
   conversation:
     svg: 'message'
     svgColor: 'teal'
