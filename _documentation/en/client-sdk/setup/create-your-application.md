@@ -21,7 +21,7 @@ If you wish to get started and experience using the SDK without any implementati
 
 Make sure you have the following:
 
-* A Vonage account - [sign up](https://dashboard.nexmo.com)
+* A Vonage account - [sign up](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 * [Node.JS](https://nodejs.org/en/download/) and NPM installed
 * Install the Vonage CLI.
 

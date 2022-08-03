@@ -24,7 +24,7 @@ To achieve that, this guide consists of three parts:
 
 ## Before You Begin
 
-Make sure you have a Vonage account, or [sign up](https://dashboard.nexmo.com/) to get started for free!
+Make sure you have a Vonage account, or [sign up](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink) to get started for free!
 
 ## Set Up Your Backend
 

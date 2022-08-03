@@ -1,11 +1,266 @@
 [
   {
+    "title": "How an SDK Can Add Value to REST APIs",
+    "description": "This article provides an inside look into the design of the Java SDK's implementation of the Vonage Messages v1 API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-an-sdk-can-add-value-to-rest-apis/sdk-rest-apis.png",
+    "author": {
+      "team": true,
+      "name": "Sina Madani",
+      "image_url": "https://github.com/SMadani.png",
+      "bio": "Sina is a Java Developer Advocate at Vonage. He comes from an academic background and is generally curious about anything related to cars, computers, programming, technology and human nature. In his spare time, he can be found walking or playing competitive video games.",
+      "title": "Java Developer Advocate",
+      "short_name": "sina-madani"
+    },
+    "published": false,
+    "published_at": "2022-08-04 11:48:15 UTC",
+    "updated_at": "2022-08-04 11:48:16 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "java",
+      "messages-v1",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/04/how-an-sdk-can-add-value-to-rest-apis",
+    "filename": "how-an-sdk-can-add-value-to-rest-apis"
+  },
+  {
+    "title": "Builder Pattern With Inheritance in Java",
+    "description": "This article demonstrates the Builder pattern within a class hierarchy, using the Messages API as an example",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/builder-pattern-with-inheritance-in-java/pattern.png",
+    "author": {
+      "team": true,
+      "name": "Sina Madani",
+      "image_url": "https://github.com/SMadani.png",
+      "bio": "Sina is a Java Developer Advocate at Vonage. He comes from an academic background and is generally curious about anything related to cars, computers, programming, technology and human nature. In his spare time, he can be found walking or playing competitive video games.",
+      "title": "Java Developer Advocate",
+      "short_name": "sina-madani"
+    },
+    "published": false,
+    "published_at": "2022-08-03 11:25:38 UTC",
+    "updated_at": "2022-08-03 10:03:31 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "java",
+      "messages-api",
+      "design-pattern"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/03/builder-pattern-with-inheritance-in-java",
+    "filename": "builder-pattern-with-inheritance-in-java"
+  },
+  {
+    "title": "Choose Your Own Adventure With Vonage AI Studio",
+    "description": "Exploring the tools and features of Vonage AI Studio by creating a fun adventure game",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/choose-your-own-adventure-with-vonage-ai-studio/vonageaistuido.png",
+    "author": {
+      "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
+      "hidden": false,
+      "image_url": "/content/images/karl-b-w-crop.png",
+      "name": "Karl Lingiah",
+      "twitter": "KarlLingiah",
+      "spotlight": false,
+      "title": "Ruby Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "karl-lingiah"
+    },
+    "published": true,
+    "published_at": "2022-08-02 14:11:14 UTC",
+    "updated_at": "2022-08-02 09:52:26 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "ai-studio",
+      "no-code",
+      "low-code"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/02/choose-your-own-adventure-with-vonage-ai-studio",
+    "filename": "choose-your-own-adventure-with-vonage-ai-studio"
+  },
+  {
+    "title": "Helena Bower Joins the Vonage Developer Relations Team",
+    "description": "Helena Bower is thrilled to join Vonage as a Technical Writer!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/helena-bower-joins-the-vonage-developer-relations-team/helena-bower.png",
+    "author": {
+      "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
+      "hidden": false,
+      "image_url": "/content/images/helena-bower.jpg",
+      "name": "Helena Bower",
+      "spotlight": false,
+      "title": "Technical Writer",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "helena-bower"
+    },
+    "published": true,
+    "published_at": "2022-08-01 09:16:33 UTC",
+    "updated_at": "2022-08-01 09:16:33 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "careers",
+      "new-joiner",
+      "introduction"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/01/helena-bower-joins-the-vonage-developer-relations-team",
+    "filename": "helena-bower-joins-the-vonage-developer-relations-team"
+  },
+  {
+    "title": "Voice Enabling a Text-only Chatbot",
+    "description": "Learn here how to add voice interaction to your existing text-only chatbot.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/voice-enabling-a-text-only-chatbot/chatbots-voice-enable.png",
+    "author": {
+      "bio": "Customer Solutions Engineer at Vonage. With a background in product management, network and systems operations, customer support, quality assurance, software development team manager, Tony is working in the Telecommunications industry formerly in France and now in the US. He helps global large and smaller companies develop solutions using programmable voice, messaging, video, and multi-factor authentication services.",
+      "hidden": false,
+      "image_url": "/content/images/tony.png",
+      "name": "Tony Chan",
+      "spotlight": false,
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "tony-chan"
+    },
+    "published": true,
+    "published_at": "2022-07-28 09:30:05 UTC",
+    "updated_at": "2022-07-28 09:13:15 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "chatbot",
+      "javascript",
+      "voice-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/28/voice-enabling-a-text-only-chatbot",
+    "filename": "voice-enabling-a-text-only-chatbot"
+  },
+  {
+    "title": "Two-way Messaging on Zendesk With Vonage Messages API",
+    "description": "Connect WhatsApp with Zendesk via Vonage Messages API to create and update tickets.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/two-way-messaging-on-zendesk-with-vonage-messages-api/zendesk_messengerapi.png",
+    "author": {
+      "bio": "Nourhan is a Customer Solution Architect at Vonage based out of Dubai. Passionate about CPaaS and automation. She loves traveling and anything outdoors.",
+      "hidden": false,
+      "image_url": "/content/images/nourhan-kandeel.jpg",
+      "name": "Nourhan Kandeel",
+      "spotlight": false,
+      "title": " Customer Solution Architect ",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "nourhan-kandeel"
+    },
+    "published": true,
+    "published_at": "2022-07-26 09:28:05 UTC",
+    "updated_at": "2022-07-26 09:28:07 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "zendesk",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/26/two-way-messaging-on-zendesk-with-vonage-messages-api",
+    "filename": "two-way-messaging-on-zendesk-with-vonage-messages-api"
+  },
+  {
+    "title": "Q2 2022: Vonage Developer News Recap",
+    "description": "Read what we've been up to in the second quarter of 2022. SDKs updates, developer events, integration and more!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/q2-2022-vonage-developer-news-recap/quaterly-releases_q2.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-07-20 08:37:43 UTC",
+    "updated_at": "2022-07-20 08:21:57 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "releases",
+      "messages-api",
+      "video-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/07/20/q2-2022-vonage-developer-news-recap",
+    "filename": "q2-2022-vonage-developer-news-recap"
+  },
+  {
     "title": "Michael Crump Joins the Vonage Developer Relations Team",
     "description": "Meet Michael Crump, the new Senior Developer Advocate at Vonage!",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/michael-crump-joins-the-vonage-developer-relations-team/michael-crump-welcome.png",
     "author": {
       "hidden": false,
       "image_url": "/content/images/michael-crump.jpg",
+      "bio": "Michael Crump works at Vonage on the Developer Relations team and is a coder, YouTuber, and frequent speaker of various .NET and cloud/communication development topics. He’s passionate about helping developers understand the benefits of each in a no-nonsense way.",
       "name": "Michael Crump",
       "twitter": "mbcrump",
       "spotlight": false,
@@ -187,7 +442,7 @@
   },
   {
     "title": "The Vonage Messages API is Now in Our Server SDKs",
-    "description": "Announcing that the Vonage Messages API has been added to Server SDKs for Ruby, Node, Python, PHP, Java, and .net",
+    "description": "Announcing that the Vonage Messages API has been added to Server SDKs for Ruby, Node, Python, PHP, Java, and .NET",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/the-vonage-messages-api-is-now-in-our-server-sdks/sdk_updates.png",
     "author": {
       "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
@@ -1083,7 +1338,7 @@
       "color": "#b779ff"
     },
     "tags": [
-      "video-api"
+      "meetings-api"
     ],
     "spotlight": false,
     "canonical": "",

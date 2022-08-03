@@ -19,6 +19,7 @@ Find the description for all variables used in each code snippet below:
 ```snippet_variables
 - VONAGE_APPLICATION_ID
 - VONAGE_APPLICATION_PRIVATE_KEY_PATH
+- VONAGE_PRIVATE_KEY_PATH
 - FROM_NUMBER.MMS.MESSAGES
 - VONAGE_NUMBER.MMS.MESSAGES
 - VONAGE_FROM_NUMBER

@@ -22,7 +22,7 @@ replacement_url: ""
 ---
 Vonage has recently released [Experience Composer (EC) API](https://tokbox.com/developer/guides/experience-composer/). This offering provides an API-driven cloud service to capture the entire experience of your web application using the Vonage Video API. This means that the look and feel of your web application can now be entirely recorded, broadcasted via HLS or RTMP, or published as a new stream into a video session. 
 
-In this post, we will go through how you can use Experience Composer to add a new video stream to an existing Vonage session containing your brand logo, custom HTML elements, and an iframe with Google Calendar. You can see a of what the application looks like at the end of this post.
+In this post, we will go through how you can use Experience Composer to add a new video stream to an existing Vonage session containing your brand logo, custom HTML elements, and an iframe with Google Calendar. You can see a [video](#video-demo) of what the application looks like at the end of this post.
 
 ![Diagram of the host's view of the stream with a calendar to the left and on the right in a column from top to bottom is the host camera feed with a Vonage logo overlay, a data table with columns, number, status and Assignee, and a video guest feed](/content/blog/why-experience-composer-api-is-great/host-view.png "Host View Diagram")
 
@@ -262,7 +262,7 @@ This is the Experience Composer view with the subscribed stream from the host at
 
 ![Diagram of the Experience Composer's view of the stream with a calendar to the left and on the right in a column from top to bottom is the host camera feed with a Vonage logo overlay, a data table with columns, number, status and Assignee](/content/blog/why-experience-composer-api-is-great/ec-view.png "Experience Composer View Diagram")
 
-## Video Demo
+##<a name="video-demo">Video Demo</a>
 
 The following video shows you the host view and the guest view.
 

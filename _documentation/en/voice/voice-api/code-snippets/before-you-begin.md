@@ -14,7 +14,7 @@ Please read this information carefully, so you can best use the code snippets.
 
 ## Prerequisites
 
-1. [Create a Vonage account](/account/guides/dashboard-management#create-and-configure-a-nexmo-account)
+1. [Create a Vonage account](/account/guides/dashboard-management#create-and-configure-a-vonage-account)
 2. [Rent a Vonage Number](/numbers/guides/number-management#rent-a-virtual-number)
 3. [Install the Vonage Command Line tools](/tools)
 4. [Create a Vonage Application using the command line tools or Dashboard](/concepts/guides/applications#getting-started-with-applications)

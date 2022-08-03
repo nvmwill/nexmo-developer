@@ -1,0 +1,14 @@
+---
+title: Java
+language: java
+client:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/viber/SendViberText.java
+  from_line: 44
+  to_line: 49
+code:
+  source: .repos/vonage/vonage-java-code-snippets/src/main/java/com/vonage/quickstart/messages/viber/SendViberText.java
+  from_line: 51
+  to_line: 75
+run_command: java-ide
+file_name: SendViberText.java
+unindent: true
