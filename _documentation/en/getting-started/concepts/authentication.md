@@ -37,9 +37,9 @@ In this document you can learn about authentication via the following means:
   - [Secret Rotation](#secret-rotation)
 - [JSON Web Tokens (JWT)](#json-web-tokens)
   - [Header and Payload](#header-and-payload)
-  - [Vonage Client SDKs](#vonage-client-sdks)
+  - [Vonage SDKs](#vonage-sdks)
   - [ACLs](#acls)
-  - [Vonage Server SDKs](#vonage-server-sdks)
+  - [Generating JWTs](#generating-jwts)
 
 - [References](#references)
 
@@ -132,9 +132,9 @@ Name | Description | Required
 
 If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWT.
 
-## Vonage Client SDKs
+## Vonage SDKs
 
-The Vonage Client SDKs use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials).
+The [Vonage SDKs](/tools) use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials).
 
 ### Claims
 
@@ -202,7 +202,7 @@ In the previous section, you can see that the `acl` claim has a `paths` object c
 
 You should provide the user you are generating with permissions to access only the relevant paths. For instance, if a user is not going to upload or receive push notifications, you can create a JWT without including the `/*/applications/**`or `/*/push/**` paths.
 
-## Vonage Server SDKs
+## Generating JWTs
 
 ### Using the Vonage API online tool to generate a JWT
 
