@@ -37,11 +37,11 @@ Discussion on the extent to which optional parameters obsolete the builder patte
 
 To model the various types of messages that can be sent via the [Messages API](https://developer.vonage.com/messages/overview), an object-oriented approach is used, where a class is created for every valid combination of message type and service. There is a three-level inheritance hierarchy. Take the following example:
 
-* `MessageRequest`
+- `MessageRequest`
 
   * `MmsRequest`
 
-    * `MmsVcardRequest`
+    + `MmsVcardRequest`
 
 `MessageRequest` and `MmsRequest` are abstract classes, and `MmsVcardRequest` is the class which represents the combination of sending a vCard over MMS. 
 
