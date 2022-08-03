@@ -4,7 +4,7 @@ description: This article demonstrates the Builder pattern within a class
   hierarchy, using the Messages API as an example
 thumbnail: /content/blog/builder-pattern-with-inheritance-in-java/pattern.png
 author: sina-madani
-published: false
+published: true
 published_at: 2022-08-03T11:25:38.518Z
 updated_at: 2022-08-03T10:03:31.114Z
 category: tutorial
@@ -25,7 +25,7 @@ The typical way we instantiate objects is through a constructor, passing in the 
 
 The Builder pattern is a well-known design pattern in object-oriented languages for controlling object construction. Like many (perhaps most) design patterns, it exists to address a deficiency in the language. In languages with named parameters (such as Kotlin, Scala, Python, C#, Ruby and many others), the need for builders is diminished in many cases. Using the builder pattern is a recommendation in Effective Java, but for languages with named arguments, its value becomes questionable (see, for example [this article which explores its utility in Kotlin](https://blog.kotlin-academy.com/effective-java-in-kotlin-item-2-consider-a-builder-when-faced-with-many-constructor-parameters-1927e69608e1)).
 
-Discussion on the extent to which optional parameters obsolete the builder pattern is beyond the scope of this article. Instead, the purpose is to explain the rationale for what appears to be a complicated application of the builder pattern in the recently released [Messages API implementation in the Vonage Java SDK](https://github.com/Vonage/vonage-java-sdk/tree/main/src/main/java/com/vonage/client/messages). 
+Discussion on the extent to which optional parameters obsolete the builder pattern is beyond the scope of this article. Instead, the purpose is to explain the rationale for what appears to be a complicated application of the builder pattern in the recently released [Messages API implementation in the Vonage Java SDK](https://github.com/Vonage/vonage-java-sdk/tree/main/src/main/java/com/vonage/client/messages).
 
 ## `MessageRequest` Classes
 
@@ -63,7 +63,7 @@ public abstract static class Builder<B extends Builder<? extends B>> {
         this.from = from;
         return (B) this;
     }
-    
+
     public B to(String to) {
         this.to = to;
         return (B) this;
@@ -73,7 +73,7 @@ public abstract static class Builder<B extends Builder<? extends B>> {
         this.clientRef = clientRef;
         return (B) this;
     }
-    
+
     public abstract MessageRequest build();
 }
 ```
