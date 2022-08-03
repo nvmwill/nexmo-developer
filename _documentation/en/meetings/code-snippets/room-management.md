@@ -1,6 +1,6 @@
 ---
 title: Meeting Room Management
-navigation_weight: 2
+navigation_weight: 4
 description: Managing Rooms with the Meetings API
 ---
 
