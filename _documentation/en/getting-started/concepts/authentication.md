@@ -134,7 +134,7 @@ If you are not using a Vonage library you should refer to [RFC 7519](https://too
 
 ## Vonage SDKs
 
-The [Vonage SDKs](/tools) use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials).
+The [Vonage Client SDKs](/tools) use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials).
 
 ### Claims
 
