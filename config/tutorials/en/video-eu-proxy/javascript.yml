@@ -1,0 +1,21 @@
+title: EU Proxy Routing 
+description: Learn how to route Vonage Video API traffic within the EU
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to route Vonage Video API traffic within the EU.
+  content: |
+    # Introduction
+    The EU proxy feature is available when you purchase a European Regional Media Zone [add-on feature](https://www.vonage.com/communications-apis/video/pricing/), which lets you restrict all media stream traffic within the EU. Combined, these features let you restrict all Vonage Video API traffic (both media and non-media) within the EU.
+
+    Non-media traffic includes Video API calls, WebSocket connections,and log traffic.
+
+    Vonage provides you with a URL for the EU proxy server, which you will set on the client-side
+     
+    > Contact your Vonage sales representative to obtain the EU proxy server URL.
+
+tasks:
+    - video/eu-proxy/js/web-service-setup
+    - video/eu-proxy/js/client-side-setup
