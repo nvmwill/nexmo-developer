@@ -14,7 +14,7 @@ Please read this information carefully before attempting to use the code snippet
 
 ## Prerequisites
 
-1. [Create a Vonage account](/account/guides/dashboard-management#create-and-configure-a-nexmo-account) - so that you can access your API key and secret to authenticate requests.
+1. [Create a Vonage account](/account/guides/dashboard-management#create-and-configure-a-vonage-account) - so that you can access your API key and secret to authenticate requests.
 2. [Rent a Vonage Number](/numbers/guides/number-management#rent-a-virtual-number) - to send verification requests from.
 3. [Install a Server SDK](/tools) - for your chosen programming language.
 

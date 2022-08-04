@@ -61,7 +61,7 @@ This example shows you how to use the [Vonage CLI](/tools) to access the Number 
 
 ### Before you begin:
 
-* Sign up for a [Vonage API account](https://dashboard.nexmo.com/signup)
+* Sign up for a [Vonage API account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 * Install [Node.JS](https://nodejs.org/en/download/)
 
 ### Install and set up the Vonage CLI

@@ -69,7 +69,7 @@ page:
       - type: github_repo
         github_repo:
           repo_url: https://github.com/vonage/vonage-php-sdk
-          badge_url: //badge.fury.io/ph/vonage%2Fclient.svg
+          badge_url: http://poser.pugx.org/vonage/client/v
           github_repo_title: "Vonage REST API client for PHP"
           language: "PHP"
       - type: github_repo
@@ -143,9 +143,9 @@ page:
     - column:
       - type: github_repo
         github_repo:
-          repo_url: https://github.com/Nexmo/nexmo-laravel
-          badge_url: //badge.fury.io/ph/nexmo%2Flaravel.svg
-          github_repo_title: "Nexmo framework library for Laravel"
+          repo_url: https://github.com/vonage/vonage-laravel
+          badge_url: http://poser.pugx.org/vonage/vonage-laravel/version
+          github_repo_title: "Vonage framework library for Laravel"
           language: "PHP"
     - column:
       - type: github_repo
