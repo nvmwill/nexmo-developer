@@ -7,7 +7,7 @@ navigation_weight:
 
 # Scalable video
 
-Scalable video can greatly improve the quality of video in multi-party sessions.Using this feature, a client automatically publishes a multi-quality video stream, composed of multiple video resolutions and frame rates. This allows simultaneous subscribing endpoints to consume different video resolutions and frame rates.
+Scalable video can greatly improve the quality of video in multi-party sessions. Using this feature, a client automatically publishes a multi-quality video stream, composed of multiple video resolutions and frame rates. This allows simultaneous subscribing endpoints to consume different video resolutions and frame rates.
 
 The scalable video feature is only available in routed sessions (sessions that use the Media Router). See [The Media Router and media modes](/video/guides/create-session#the-media-router-and-media-modes).
 
