@@ -29,7 +29,7 @@ NPM helps manage dependencies for node projects. Find more info here: <a href="h
 Run this command to install the package and adding it to your `package.json`:
 
 ```
-npm install @vonage/server-sdk
+npm install @vonage/server-sdk@beta @vonage/video
 ```
 
 ## Usage
@@ -40,48 +40,11 @@ Import the module to get a constructor function for a video object, then call it
 instantiate a video object with your own App ID and private key.
 
 ```javascript
-const { Video } = require('@vonage/video');
-const videoClient = new Video({
+const Vonage = require('@vonage/server-sdk');
+const vonage = new Vonage({
     applicationId: APP_ID,
-    privateKey: PRIVATE_KEY_PATH,
-    baseUrl: string
-}, options);
-```
-
-`options` are
-
-```javascript
-{
-  // If true, log information to the console
-  debug: true|false,
-  // append info the the User-Agent sent to Nexmo
-  // e.g. pass 'my-app' for /nexmo-node/1.0.0/4.2.7/my-app
-  appendToUserAgent: string,
-  // Set a custom logger
-  logger: {
-    log: function() {level, args...}
-    info: function() {args...},
-    warn: function() {args...}
-  },
-  // Set a custom timeout for requests to Nexmo in milliseconds. Defaults to the standard for Node http requests, which is 120,000 ms.
-  timeout: integer,
-  // Set a custom host for requests instead of api.nexmo.com
-  apiHost: string,
-  // Set a custom host for requests instead of rest.nexmo.com
-  restHost: string
-}
-```
-
-#### Increasing Timeouts
-The SDK currently has a 20 second timeout for requests. If you're on a slow network, and you need to increase the timeout, you can pass it (in milliseconds) when instantiating the object.
-
-```javascript
-const { Video } = require('@vonage/video');
-const videoClient = new Video({
-    applicationId: APP_ID,
-    privateKey: PRIVATE_KEY_PATH,
-    baseUrl: string
-}, {timeout: 30000});
+    privateKey: PRIVATE_KEY_PATH
+});
 ```
 
 ### Creating Sessions
@@ -96,7 +59,7 @@ useful to be saved to a persistent store (such as a database).
 // Create a session that will attempt to transmit streams directly between
 // clients. If clients cannot connect, the session uses the Vonage TURN server:
 try {
-    const session = await videoClient.createSession();
+    const session = await vonage.video.createSession();
     // save the sessionId
     db.save("session", session.sessionId, done);
 } catch(error) {
@@ -105,7 +68,7 @@ try {
 
 // The session will use the Vonage Media Router:
 try {
-    const session = await videoClient.createSession({ mediaMode: "routed" });
+    const session = await vonage.videocreateSession({ mediaMode: "routed" });
     // save the sessionId
     db.save("session", session.sessionId, done);
 } catch(error) {
@@ -114,7 +77,7 @@ try {
 
 // A Session with a location hint
 try {
-    const session = await videoClient.createSession({ location: "12.34.56.78" });
+    const session = await vonage.video.createSession({ location: "12.34.56.78" });
     // save the sessionId
     db.save("session", session.sessionId, done);
 } catch(error) {
@@ -123,7 +86,7 @@ try {
 
 // A Session with an automatic archiving
 try {
-    const session = await videoClient.createSession({ mediaMode: "routed", archiveMode: "always" });
+    const session = await vonage.video.createSession({ mediaMode: "routed", archiveMode: "always" });
     // save the sessionId
     db.save("session", session.sessionId, done);
 } catch(error) {
@@ -148,7 +111,7 @@ const options = {
     data: "name=Johnny",
     initialLayoutClassList: ["focus"]
 }
-const token = videoClient.generateClientToken(sessionId, options);
+const token = vonage.video.generateClientToken(sessionId, options);
 ```
 
 ### Working with archives
@@ -162,7 +125,7 @@ connected clients.
 
 ```javascript
 try {
-    const archive = await videoClient.startArchive(sessionId);
+    const archive = await vonage.video.startArchive(sessionId);
     // The id property is useful to save off into a database
     console.log("new archive:", archive.id);
 } catch(error) {
@@ -179,7 +142,7 @@ var archiveOptions = {
   hasVideo: false, // Record audio only
 };
 try {
-    const archive = await videoClient.startArchive(sessionId, archiveOptions);
+    const archive = await vonage.video.startArchive(sessionId, archiveOptions);
     // The id property is useful to save off into a database
     console.log("new archive:", archive.id);
 } catch(error) {
@@ -197,7 +160,7 @@ var archiveOptions = {
   outputMode: "individual",
 };
 try {
-    const archive = await videoClient.startArchive(sessionId, archiveOptions);
+    const archive = await vonage.video.startArchive(sessionId, archiveOptions);
     // The id property is useful to save off into a database
     console.log("new archive:", archive.id);
 } catch(error) {
@@ -211,7 +174,7 @@ The `archive` returned in the callback is an instance of `Archive`.
 
 ```javascript
 try {
-    const archiveResponse = await videoClient.stopArchive(archiveId);
+    const archiveResponse = await vonage.video.stopArchive(archiveId);
     console.log("Successfully stopped archive:", archiveResponse.id);
 } catch(error) {
     console.error("Error stopping archive: ", error);
@@ -225,7 +188,7 @@ You can inspect the properties of the archive for more details.
 
 ```javascript
 try {
-    const archive = await videoClient.getArchive(archiveId);
+    const archive = await vonage.video.getArchive(archiveId);
     console.log("Successfully retrieved archive:", archive.id);
 } catch(error) {
     console.error("Error retrieving archive: ", error);
@@ -237,7 +200,7 @@ To delete an Archive, you can call the `deleteArchive(archiveId)` method.
 ```javascript
 // Delete an Archive from an archiveId (fetched from database)
 try {
-    const archiveResponse = await videoClient.deleteArchive(archiveId);
+    const archiveResponse = await vonage.video.deleteArchive(archiveId);
     console.log("Successfully deleted archive:", archiveResponse.id);
 } catch(error) {
     console.error("Error deleting archive: ", error);
@@ -258,7 +221,7 @@ const filter = {
     count: 50
 }
 try {
-    const archives = await videoClient.searchArchives(filter);
+    const archives = await vonage.video.searchArchives(filter);
     console.log(`Successfully retrieved ${archives.count} archives`);
     for (let i = 0; i < archives.length; i++) {
         console.log(archives.items[i].id);
@@ -279,7 +242,7 @@ const layout = {
     type: "bestFit"
 }
 try {
-    const archiveResponse = await videoClient.updateArchiveLayout(archiveId,layout);
+    const archiveResponse = await vonage.video.updateArchiveLayout(archiveId,layout);
     console.log("Successfully updated archive layout:", archiveResponse);
 } catch(error) {
     console.error("Error deleting archive: ", error);
@@ -410,7 +373,7 @@ const sessionId =
   "2_MX2xMDB-flR1ZSBOb3YgMTkgMTE6MDk6NTggUFNUIDIwMTN-MC2zNzQxNzIxNX2";
 
 try {
-    const signalResponse = await videoClient.sendSignal({ type: "chat", data: "Hello" }, sessionId);
+    const signalResponse = await vonage.video.sendSignal({ type: "chat", data: "Hello" }, sessionId);
     console.log("Successfully sent signal:", signalResponse);
 } catch(error) {
     console.error("Error sending signal: ", error);
@@ -426,7 +389,7 @@ var sessionId =
   "2_MX2xMDB-flR1ZSBOb3YgMTkgMTE6MDk6NTggUFNUIDIwMTN-MC2zNzQxNzIxNX2";
 var connectionId = "02e80876-02ab-47cd-8084-6ddc8887afbc";
 try {
-    const signalResponse = await videoClient.sendSignal({ type: "chat", data: "Hello" }, sessionId, connectionId);
+    const signalResponse = await vonage.video.sendSignal({ type: "chat", data: "Hello" }, sessionId, connectionId);
     console.log("Successfully sent signal:", signalResponse);
 } catch(error) {
     console.error("Error sending signal: ", error);
@@ -443,7 +406,7 @@ You can disconnect participants from a session using the
 
 ```javascript
 try {
-    const disconnectResponse = await videoClient.disconnectClient(sessionId, connectionId);
+    const disconnectResponse = await vonage.video.disconnectClient(sessionId, connectionId);
     console.log("Successfully disconnected client:", disconnectResponse);
 } catch(error) {
     console.error("Error disconnecting client: ", error);
@@ -499,7 +462,7 @@ var sessionId =
   "2_MX6xMDB-fjE1MzE3NjQ0MTM2NzZ-cHVTcUIra3JUa0kxUlhsVU55cTBYL0Y1flB";
 var streamId = "2a84cd30-3a33-917f-9150-49e454e01572";
 try {
-    const stream = await videoClient.getStreamInfo(sessionId, streamId);
+    const stream = await vonage.video.getStreamInfo(sessionId, streamId);
     console.log(stream.id); // '2a84cd30-3a33-917f-9150-49e454e01572'
     console.log(stream.videoType); // 'camera'
     console.log(stream.name); // 'Bob'
@@ -518,7 +481,7 @@ with an array of Stream objects passed into the second parameter: -->
 
 ```javascript
 try {
-    const streams = await videoClient.getStreamInfo(sessionId);
+    const streams = await vonage.video.getStreamInfo(sessionId);
     console.log(`Successfully retrieved ${streams.count} streams`);
     for (let i = 0; i < sreams.length; i++) {
         console.log(streams.items[i].id);
