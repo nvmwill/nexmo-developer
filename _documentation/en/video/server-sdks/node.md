@@ -68,7 +68,7 @@ try {
 
 // The session will use the Vonage Media Router:
 try {
-    const session = await vonage.videocreateSession({ mediaMode: "routed" });
+    const session = await vonage.video.createSession({ mediaMode: "routed" });
     // save the sessionId
     db.save("session", session.sessionId, done);
 } catch(error) {
