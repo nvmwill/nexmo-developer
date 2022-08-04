@@ -39,7 +39,7 @@ In this document you can learn about authentication via the following means:
   - [Header and Payload](#header-and-payload)
   - [Generating JWTs](#generating-jwts)
   - [Vonage Client SDKs](#vonage-client-sdks)
-  - [ACls](#acls)
+  - [ACLs](#acls)
   - [Generating JWTs for the Client SDKs](#generating-jwts-for-the-client-sdks)
 
 - [References](#references)
