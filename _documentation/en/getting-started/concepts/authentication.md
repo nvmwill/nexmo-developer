@@ -37,9 +37,10 @@ In this document you can learn about authentication via the following means:
   - [Secret Rotation](#secret-rotation)
 - [JSON Web Tokens (JWT)](#json-web-tokens)
   - [Header and Payload](#header-and-payload)
-  - [Vonage SDKs](#vonage-sdks)
-  - [ACLs](#acls)
   - [Generating JWTs](#generating-jwts)
+  - [Vonage Client SDKs](#vonage-client-sdks)
+  - [ACls](#acls)
+  - [Generating JWTs for the Client SDKs](#generating-jwts-for-the-client-sdks)
 
 - [References](#references)
 
@@ -109,11 +110,11 @@ It is possible to have two API secrets to be used against one API key at the sam
 
 ## JSON Web Tokens
 
-JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties. For a full list of the APIs that use JWTs, please see the table [above](#authentication).
+[JSON Web Tokens (JWTs)](https://jwt.io/) are a compact, URL-safe means of representing claims to be transferred between two parties. For a full list of the APIs that use JWTs, please see the table [above](#authentication).
 
 ### Header and Payload
 
-Values for the Header are:
+JWTs consist of a Header and a Payload. The values for the Header are:
 
 Name | Description | Required
 -- | -- | --
@@ -130,15 +131,39 @@ Name | Description | Required
 `nbf` | The UNIX timestamp at UTC + 0 indicating the moment the JWT became valid. | ❌
 `exp` | The UNIX timestamp at UTC + 0 indicating the moment the JWT is no longer valid. A minimum value of 30 seconds from the time the JWT is generated. A maximum value of 24 hours from the time the JWT is generated. A default value of 15 minutes from the time the JWT is generated. | ❌
 
-If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWT.
+### Generating JWTs
 
-## Vonage SDKs
+#### Using the Vonage API online tool to generate a JWT
 
-The [Vonage Client SDKs](/tools) use [JWTs](https://jwt.io/) for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials).
+You can generate a JWT using our [online tool](/jwt).
 
-### Claims
+#### Using the Vonage CLI to generate JWTs
 
-Using that `private.key` and the application ID, we can mint a new JWT. In order to log a user into a Vonage client, the JWT will need the following claims:
+The [Vonage CLI](https://github.com/vonage/vonage-cli) provides a command for generating a JWT. The general syntax is:
+
+``` shell
+vonage jwt [options]
+```
+
+An example of generating a JWT for an application is as follows:
+
+``` shell
+vonage jwt --key_file=path/to/private.key --app_id=asdasdas-asdd-2344-2344-asdasdasd345
+```
+
+> The private key in question is generated and stored in the current directory where you created your app using the CLI. It will have the same name as your application. You can also find it in the generated `vonage_app.json` file.
+
+Further information on the Vonage CLI can be found in its [repository on GitHub](https://github.com/vonage/vonage-cli).
+
+For examples of using the Vonage libraries to generate JWTs please read [below](#generating-jwts-for-the-client-sdks). If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWTs.
+
+### Vonage Client SDKs
+
+The [Vonage Client SDKs](/client-sdk/overview) use JWTs for authentication when a user logs in. These JWTs are generated using the application ID and private key that is provided [when a new application is created](/tutorials/client-sdk-generate-test-credentials).
+
+#### Claims
+
+Using that `private.key` and the application ID, you can mint a new JWT. In order to log a user into a Vonage client, the JWT will need the following claims:
 
 |Claim | Description |
 | --------- | ----------- |
@@ -151,7 +176,7 @@ Using that `private.key` and the application ID, we can mint a new JWT. In order
 
 > *The `exp` claim is optional.* If the claim is not provided, then the JWT will expire by default in 15 minutes. The max expiration time for a JWT is 24 hours. JWTs should typically be short-lived, as it is trivial to create a new JWT and some JWTs can have multiple far-reaching permissions.
 
-### Sample JWT Payload
+#### Sample JWT Payload
 
 Once all the claims have been provided, the resulting claims should appear like so:
 
@@ -179,13 +204,13 @@ Once all the claims have been provided, the resulting claims should appear like 
 }
 ```
 
-## ACLs
+### ACLs
 
-### Overview
+#### Overview
 
 In the previous section, you can see that the `acl` claim has a `paths` object containing multiple endpoints. These endpoints correspond with certain permissions a user can have when utilizing Client SDK features.
 
-### Paths
+#### Paths
 
 |Endpoint | Description |
 | --------- | ----------- |
@@ -202,126 +227,21 @@ In the previous section, you can see that the `acl` claim has a `paths` object c
 
 You should provide the user you are generating with permissions to access only the relevant paths. For instance, if a user is not going to upload or receive push notifications, you can create a JWT without including the `/*/applications/**`or `/*/push/**` paths.
 
-## Generating JWTs
+### Generating JWTs for the Client SDKs
 
-### Using the Vonage API online tool to generate a JWT
-
-You can generate a JWT using our [online tool](/jwt).
-
-### Using the Vonage CLI to generate JWTs
-
-The [Vonage CLI](https://github.com/vonage/vonage-cli) provides a command for generating a JWT. The general syntax is:
-
-``` shell
-vonage jwt [options]
-```
-
-An example of generating a JWT for a Voice API application is as follows:
-
-``` shell
-vonage jwt --key_file=path/to/private.key --app_id=asdasdas-asdd-2344-2344-asdasdasd345
-```
-
-An example of generating a JWT for a Client SDK application is as follows:
+An example of generating a JWT for a Client SDK application with the Vonage CLI is as follows:
 
 ``` shell
 vonage jwt --key_file=./private.key --subject=MY_USER_NAME --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=MY_APP_ID
 ```
-**NB:** The private key in question is generated and stored in the current directory where you created your app using the CLI. It will have the same name as your application. You can also find it in the generated `vonage_app.json` file.
 
-Further information on the Vonage CLI can be found in its [repository on GitHub](https://github.com/vonage/vonage-cli).
+It is expected that the accompanying server for your Vonage application will mint JWTs for the Client SDK. Here are some examples using the Vonage Server SDKs:
 
-### Node
-
-The beta version of the [Vonage Node Server SDK](https://github.com/Nexmo/nexmo-node/tree/beta#jwt) can also create a JWT [including the appropriate claims](https://github.com/Nexmo/nexmo-node/tree/beta#jwt).
-
-```js
-const aclPaths = {
-  "paths": {
-    "/*/users/**": {},
-    "/*/conversations/**": {},
-    "/*/sessions/**": {},
-    "/*/devices/**": {},
-    "/*/image/**": {},
-    "/*/media/**": {},
-    "/*/applications/**": {},
-    "/*/push/**": {},
-    "/*/knocking/**": {},
-    "/*/legs/**": {}
-  }
-}
-
-Nexmo.generateJwt(PRIVATE_KEY, {
-            application_id: "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
-            sub: "alice",
-            //expire in 24 hours
-            exp: Math.round(new Date().getTime()/1000)+86400,
-            acl: aclPaths
-          })
+```tabbed_content
+source: '/_examples/getting-started/authentication-jwts'
 ```
 
-### PHP
-
-The current version of the [Vonage PHP Server SDK](https://github.com/Nexmo/nexmo-php) can also create a JWT including the appropriate claims when using the Keypair authentication.
-
-```php
-$keypair = new \Vonage\Client\Credentials\Keypair(
-    file_get_contents('/path/to/private.key'),
-    'aaaaaaaa-bbbb-cccc-dddd-0123456789ab'
-);
-$client = new \Vonage\Client($keypair);
-
-$claims = [
-    'acl' => [
-        'paths' => [
-            '/*/users/**' => (object) [],
-            '/*/conversations/**' => (object) [],
-            '/*/sessions/**' => (object) [],
-            '/*/devices/**' => (object) [],
-            '/*/image/**' => (object) [],
-            '/*/media/**' => (object) [],
-            '/*/applications/**' => (object) [],
-            '/*/push/**' => (object) [],
-            '/*/knocking/**' => (object) [],
-            '/*/legs/**' => (object) [],
-        ]
-    ]
-];
-$token = $client->generateJwt($claims);
-$tokenString = (string) $token;
-```
-
-### Java / Kotlin
-
-The [Nexmo JWT JDK library](https://github.com/Nexmo/nexmo-jwt-jdk) can be used to generate a signed JWT with claims.
-
-```kotlin
-val token : String = Jwt.builder()
-    .applicationId("aaaaaaaa-bbbb-cccc-dddd-0123456789ab")
-    .privateKeyPath("/path/to/private.key")
-    .issuedAt(ZonedDateTime.now())
-    .subject("alice")
-    .addClaim("acl", mapOf(
-        "paths" to mapOf(
-            "/*/users/**" to mapOf<String, Any>(),
-            "/*/conversations/**" to mapOf(),
-            "/*/sessions/**" to mapOf(),
-            "/*/devices/**" to mapOf(),
-            "/*/image/**" to mapOf(),
-            "/*/media/**" to mapOf(),
-            "/*/applications/**" to mapOf(),
-            "/*/push/**" to mapOf(),
-            "/*/knocking/**" to mapOf(),
-            "/*/legs/**" to mapOf()
-        )
-    ))
-    .build()
-    .generate()
-```
-
-### Other languages
-
-Creating a JWT with the appropriate claims for authenticating a Vonage user is not currently provided in any of the other Vonage Client Libraries. Instead, you are encouraged to use your Server SDK of choice to create a new JWT with the [Sample JWT Payload](#sample-jwt-payload). [JWT.io](https://jwt.io/#libraries-io) has a selection of libraries for generating JWTs in multiple languages.
+> If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWT. [JWT.io](https://jwt.io/#libraries-io) has a selection of libraries for generating JWTs in multiple languages. 
 
 ## References
 
