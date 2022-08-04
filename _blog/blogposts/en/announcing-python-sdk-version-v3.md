@@ -17,13 +17,11 @@ outdated: false
 replacement_url: ""
 ---
 
-# Version 3.0.0 of the Vonage Python SDK is now available!
-
 **Tl;dr: [v3.0.0 of the Python SDK is out](https://pypi.org/project/vonage/)! Most of the PR is internal refactoring to lay the groundwork for future enhancements, but we also add a few new features to help you get the most out of using the SDK.**
 
-Since joining Vonage 4 months ago, I've spent a significant amount of time refactoring Vonage's [core Python SDK](https://github.com/Vonage/vonage-python-sdk). Technical debt and a lack of attention had left it in a state where I needed to sort out some of the more fundamental issues before adding enhancements. As a result, the changes made in the v3.0.0 release mostly focus on internal improvements and preparing the SDK to add cool new features in a later release.
+Since I (Max) joined Vonage 4 months ago, I've spent a significant amount of time refactoring Vonage's [core Python SDK](https://github.com/Vonage/vonage-python-sdk). In this release, I focused on improvements to reduce technical debt and increase readability. As a result, the changes made in the v3.0.0 release mostly lay the groundwork so that cool new features can be added later.
 
-I'll explain some of the changes I made for v3.0.0, and what the motivation for each was.
+In this post, I'll explain some of the changes I made for v3.0.0, and what the motivation for each of them was.
 
 ## An overview
 
@@ -31,7 +29,7 @@ The main structural change was to organise the methods for each API into separat
 
 There was also a lot of duplication. For instance, there were five separate methods, over 3 different files, to make the same basic POST request with a couple of variations. I consolidated all these methods into a single function that makes a REST call with the `requests` package, accounting for the different authentication methods and body types expected by each API.
 
-The main difference between v2 and v3 is that a lot of deprecated code has been removed. All the `Client` class methods that were actually calling a specific API were removed, as they're now accessed from the specific module for that API. There were also some methods that should have been deprecated and removed a long time ago, or never added, which we've now deprecated and will remove in a later release.
+The main difference between v2 and v3 is that a lot of deprecated code has been removed, so there are a number of breaking changes. All the `Client` class methods that were actually calling a specific API were removed, as they're now accessed from the specific module for that API. There were also some methods that should have been deprecated and removed a long time ago, or never added, which we've now deprecated and will remove in a later release.
 
 We added optional parameters to the `Client` class to let you customise timeout, retries and pooling options for the entire session with a Vonage client. We also added a couple of enhancements to the Pricing API, with a new method and the ability to query based on sms or voice traffic.
 
@@ -39,7 +37,7 @@ We added optional parameters to the `Client` class to let you customise timeout,
 
 ### Get the new release
 
-To download the new v3.0.0 release, enter a virtual Python environment and run this command:
+To download the new v3.0.0 release, just run this command (you might want to do this inside a virtual environment!):
 
 ```bash
 python3 -m pip install --upgrade vonage
@@ -95,6 +93,8 @@ max_retries=5
 
 These options are useful if you're sending many requests at once or want to allow requests to timeout and be retried.
 
+By default, the request will not time out, but any value in seconds can be specified. The default max number of retries is 3, but any integer value is valid. Likewise, you can specify any integer value for the number of pool connections and the maximum pool size (though both have a default of 10).
+
 ### New pricing keyword arguments in calls to the Pricing API
 
 It is now possible to specify if you want to see pricing for sms or voice in calls to the Pricing API. SMS is the default and voice pricing can be requested like this:
@@ -103,7 +103,7 @@ It is now possible to specify if you want to see pricing for sms or voice in cal
 client.account.get_country_pricing(country_code='GB', type='voice')
 ```
 
-### `get_all_countries_pricing` method
+### Added a method to get pricing for all countries
 
 We've added a `get_all_countries_pricing` method to the `Account` class. This allows you to see the pricing for all supported countries for sms or voice.
 
@@ -145,9 +145,19 @@ Finally, the method calling the Redact API (`redact_transaction`) has been depre
 
 These will all be removed in a later release.
 
+## Upgrading from 2.x
+
+If you're upgrading from v2.x to the new release, make sure that if you're using any API methods directly from the client class to instead use the methods on the relevant API class.
+
+E.g.
+
+```python
+client.get_basic_number_insight(number=MY_NUMBER) # API methods have been removed from the client class - this won't work
+client.number_insight.get_basic_number_insight(number=MY_NUMBER) # Call the methods using the relevant API classes instead
+```
 
 ## Where are we going?
 
 As you can see, we've made quite a few changes to how the APIs are called in this release. In future releases, we'll be adding video functionality into the SDK. We also plan to remove the deprecated methods, add support for `asyncio` and eventually do more to validate input, using a tool such as Pydantic.
 
-Feel free to download the new version and let us know what you think! If there's anything else you want to see, or anything you'd like to contribute, the whole SDK is open-source and [available on GitHub](https://github.com/Vonage/vonage-python-sdk).
+Feel free to download the new version and let us know what you think! If there's anything else you want to see, or anything you'd like to contribute, the whole SDK is open-source and [viewable on GitHub](https://github.com/Vonage/vonage-python-sdk). You can get started today with free credits on the [Vonage Developer website](https://developer.vonage.com).
