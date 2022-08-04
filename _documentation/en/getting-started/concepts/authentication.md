@@ -155,7 +155,7 @@ vonage jwt --key_file=path/to/private.key --app_id=asdasdas-asdd-2344-2344-asdas
 
 Further information on the Vonage CLI can be found in its [repository on GitHub](https://github.com/vonage/vonage-cli).
 
-For examples of using the Vonage libraries to generate JWTs please read [below](#generating-jwts-for-the-client-sdks). If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWTs.
+Examples of using the Vonage libraries to generate JWTs can be found [below](#generating-jwts-for-the-client-sdks). If you are not using a Vonage library you should refer to [RFC 7519](https://tools.ietf.org/html/rfc7519) to implement JWTs.
 
 ### Vonage Client SDKs
 
