@@ -26,7 +26,7 @@ This application uses Vonage Voice API for speech recognition and text-to-speech
 
 Over forty language locales are supported for voice enabling your chatbot.
 
-There are two sample Voice API application code and a simple text chatbot application in this tutorial; the first Voice API application will connect to the simple chatbot application service that simulates requests/responses whose only purpose is to illustrate how an actual chatbot can be voice-enabled, and the [second sample Voice API application has the same core voice capabilities as the first one, you will update that application to integrate with your actual chatbot for requests/responses using the first one as reference.
+There are two sample Voice API application code and a simple text chatbot application in this tutorial; the first Voice API application will connect to the simple chatbot application service that simulates requests/responses whose only purpose is to illustrate how an actual chatbot can be voice-enabled, and the second sample Voice API application has the same core voice capabilities as the first one, you will update that application to integrate with your actual chatbot for requests/responses using the first one as reference.
 
 Both Voice API applications code support inbound or outbound voice calls from/to users as needed for your chatbot use case.
 
@@ -46,8 +46,8 @@ Each prerequisite item setup is detailed as follows.
 ## Node.js Installation
 
 * [Install nvm](https://github.com/nvm-sh/nvm) (Node Version Manager); if you are using Windows OS, look at these [important notes](https://github.com/nvm-sh/nvm#important-notes)
-* Install Node.js version 16 with the command: nvm install 16
-* Use Node.js version 16 with the command: nvm use 16
+* Install Node.js version 16 with the command: `nvm install 16`
+* Use Node.js version 16 with the command: `nvm use 16`
 
   * We have tested the applications with Node.js version 16.15.1
 
@@ -64,9 +64,9 @@ To set up ngrok:
 * Sign up for a free [ngrok account](https://dashboard.ngrok.com/signup),
 * Verify your email address from the email sent by ngrok,
 * Retrieve [your Authoken](https://dashboard.ngrok.com/get-started/your-authtoken),
-* Run the command ngrok config add-authtoken <your-authtoken>
+* Run the command `ngrok config add-authtoken` <your-authtoken>
 * Set up both tunnels
-* * Run ngrok config edit
+* * Run `ngrok config edit`
   * * For a free ngrok account, add the following lines to the ngrok configuration file (under authoken line):
 
 ```
@@ -96,7 +96,7 @@ To set up ngrok:
 Note: The Voice API application will be running on local port 8000, and the simple chatbot application will be running on local port 6000
 
 * Start both ngrok tunnels
-* * Run ngrok start six eight
+* * Run `ngrok start six eight`
   * You will see lines like...
     Web Interface [http://127.0.0.1:4040](http://127.0.0.1:4040/) Forwarding [https://xxxxxxx.ngrok.io](https://xxxxxxx.ngrok.io/) -> [http://localhost:6000](http://localhost:6000/) Forwarding [https://yyyyyyy.ngrok.io](https://yyyyyyy.ngrok.io/) -> [http://localhost:8000](http://localhost:8000/)
   * Make a note of xxxxxxx.ngrok.io (without the leading https://), the one associated with local port 6000, as it will be set as `BOT_SERVER` in the next steps below,
@@ -347,4 +347,4 @@ You may optionally deploy to Heroku-hosted environments.
 
 Then you will update the other Voice API application to add only the specific code to integrate with your text chatbot for text requests/answers as all the necessary interaction with the Vonage Voice API, including handling of incoming/outgoing voice calls, automatic speech recognition and text-to-speech have been already implemented in that source code file.
 
-How did you like this tutorial? Have questions or feedback about Video Voice enabling a text-only chatbot? Join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack). And follow us on [Twitter](https://twitter.com/VonageDev) to keep up with the latest Vonage Developer updates
+How did you like this tutorial? Have questions or feedback about Voice enabling a text-only chatbot? Join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack). And follow us on [Twitter](https://twitter.com/VonageDev) to keep up with the latest Vonage Developer updates

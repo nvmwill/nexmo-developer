@@ -1,6 +1,6 @@
 ---
 title: Create an Instant Room
-navigation_weight: 0
+navigation_weight: 2
 description: Setting up an Instant Meeting Room
 ---
 
@@ -34,8 +34,8 @@ Field | Required? | Description |
 ``metadata`` | No | Metadata that will be included in all callbacks.
 ``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
 ``recording_options`` | No | An object containing recording options for the meeting. For example:
-| | | If ``auto_record``=``true``, the session will be recorded.
-| | | If ``auto_record``=``false``, the session will not be recorded.
+| | | If ``auto_record``=``true``, the session will be recorded. If ``false``, the session will not be recorded.
+| | | If ``record_only_owner``=``true``, all audio in the session will be recorded but only the video of the owner of the room will be recorded. If ``false``, all users in the session will be recorded.
 
 ## Request
 
@@ -51,7 +51,7 @@ You can use the following code to start an instant room (default options):
                }'
 ```
 
-To create an instant room and automatically turn on recording:
+To create an instant room, automatically record and only record the owner of the room:
 
 ``` curl
    curl -X POST 'https://api-eu.vonage.com/beta/meetings/rooms' \
@@ -60,7 +60,8 @@ To create an instant room and automatically turn on recording:
    -d '{
    "display_name":"New Meeting Room",
    "recording_options": {
-       "auto_record": true}
+       "auto_record": true,
+       "record_only_owner": true}
                }'
 ```
 
@@ -70,7 +71,7 @@ When an instant room is created the expiration date is set to 10 minutes.
 
 As this room has not yet expired, ``is_available`` is set to true.
 
-> If you set ``auto_record`` to ``true`` in your request, this option will be shown as ``true`` in the code below.
+> If you set either ``auto_record`` or ``record_only_owner`` to ``true`` in your request, this option will be shown as ``true`` in the code below.
 
 ``` json
 {
@@ -80,7 +81,8 @@ As this room has not yet expired, ``is_available`` is set to true.
    "type":"instant",
    "expires_at":"2021-10-19T17:54:17.219Z",
    "recording_options":{
-      "auto_record":true
+      "auto_record":true,
+      "record_only_owner":true
    },
    "meeting_code":"982515622",
    "_links":{
