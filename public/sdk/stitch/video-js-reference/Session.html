@@ -166,7 +166,7 @@ object and its completion handler is called without error. See the
 <a href="OT.html#initSession">OT.initSession()</a> and
 the <a href="#connect">Session.connect()</a>
 methods.) For more information on sessions and session IDs, see
-<a href="https://developer.vonage.com/video/guides/create-a-session">Session creation</a>.</td>
+<a href="/video/guides/create-session">Session creation</a>.</td>
         </tr>
 
     
@@ -637,9 +637,7 @@ This method registers a method as an event listener for a specific event.
  <pre>
  var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
  var sessionID = &quot;&quot;; // Replace with your own session ID.
-                     // See https://developer.vonage.com/video/guides/create-a-session.
  var token = &quot;&quot;; // Replace with a generated token.
-                 // See https://developer.vonage.com/video/guides/create-token/.
 
  var session = OT.initSession(apiKey, sessionID);
  session.connect(token, function(error) {
@@ -725,7 +723,7 @@ This method registers a method as an event listener for a specific event.
             <td class="description last">The session token. You generate a session token using our
 server-side libraries</a> or at your
 <a href="https://ui.idp.vonage.com/ui/auth/login">Vonage Video API account</a> page. For more information, see
-<a href="https://developer.vonage.com/video/guides/create-token/">Connection token creation</a>.</td>
+<a href="/video/guides/create-token">Connection token creation</a>.</td>
         </tr>
 
     
@@ -875,7 +873,7 @@ Calling this method causes the Session object in each connected clients to dispa
 Check the <code>capabilities.canForceMute</code> property of the Session object to see if
 you can call this function successfully. This is reserved for clients that have connected
 with a token that has been assigned the moderator role (see the
-<a href="https://developer.vonage.com/video/guides/create-token/">Token Creation</a>
+<a href="/video/guides/create-token">Token Creation</a>
 documentation).
 </p></div>
 
@@ -969,7 +967,7 @@ values, depending the type of error:
   <li><code>&apos;OT_PERMISSION_DENIED&apos;</code> &#x2014; The user&apos;s role does not
   include permissions required to force other users to mute.
   You define a user&apos;s role when you create the user token (see the
-  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  <a href="/video/guides/create-token">Token creation overview</a>).
   You pass the token string as a parameter of the <code>connect()</code> method of the Session
   object.
   </li>
@@ -1159,7 +1157,7 @@ Dispatched on other clients if streams are lost as a result of the session disco
   The OT object dispatches an <code>exception</code> event if the user&apos;s role
   does not include permissions required to force other users to disconnect.
   You define a user&apos;s role when you create the user token (see the
-  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  <a href="/video/guides/create-token">Token creation overview</a>).
   See <a href="ExceptionEvent.html">ExceptionEvent</a> and <a href="OT.html#on">OT.on()</a>.
 </p>
 <p>
@@ -1399,7 +1397,7 @@ event (with the <code>active</code> property of the event object set to <code>tr
 Check the <code>capabilities.canForceMute</code> property of the Session object to see if
 you can call this function successfully. This is reserved for clients that have connected
 with a token that has been assigned the moderator role (see the
-<a href="https://developer.vonage.com/video/guides/create-token/">Token Creation</a>
+<a href="/video/guides/create-token">Token Creation</a>
 documentation).
 </p></div>
 
@@ -1550,7 +1548,7 @@ values, depending the type of error:
   <li><code>&apos;OT_PERMISSION_DENIED&apos;</code> &#x2014; The user&apos;s role does not
   include permissions required to force other users to mute.
   You define a user&apos;s role when you create the user token (see the
-  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  <a href="/video/guides/create-token">Token creation overview</a>).
   You pass the token string as a parameter of the <code>connect()</code> method of the Session
   object.
   </li>
@@ -1601,7 +1599,7 @@ stream to dispatch a <code>muteForced</code> event.
 Check the <code>capabilities.canForceMute</code> property of the Session object to see if
 you can call this function successfully. This is reserved for clients that have connected
 with a token that has been assigned the moderator role (see the
-<a href="https://developer.vonage.com/video/guides/create-token/">Token Creation</a>
+<a href="/video/guides/create-token">Token Creation</a>
 documentation).
 </p></div>
 
@@ -1746,7 +1744,7 @@ values, depending the type of error:
   <li><code>&apos;OT_PERMISSION_DENIED&apos;</code> &#x2014; The user&apos;s role does not
   include permissions required to force other users to mute.
   You define a user&apos;s role when you create the user token (see the
-  <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+  <a href="/video/guides/create-token">Token creation overview</a>).
   You pass the token string as a parameter of the <code>connect()</code> method of the Session
   object.
   </li>
@@ -1801,7 +1799,7 @@ set to <code>&quot;forceUnpublished&quot;</code>.
 The OT object dispatches an <code>exception</code> event if the user&apos;s role
 does not include permissions required to force other users to unpublish.
 You define a user&apos;s role when you create the user token (see the
-<a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+<a href="/video/guides/create-token">Token creation overview</a>).
 You pass the token string as a parameter of the <code>connect()</code> method of the Session
 object. See <a href="ExceptionEvent.html">ExceptionEvent</a> and
 <a href="OT.html#on">OT.on()</a>.
@@ -3144,7 +3142,7 @@ object as a parameter.
 The OT object dispatches an <code>exception</code> event if the user&apos;s role does not
 include permissions required to publish. For example, if the user&apos;s role is set to subscriber,
 then they cannot publish. You define a user&apos;s role when you create the user token
-(see <a href="https://developer.vonage.com/video/guides/create-token/">Token creation overview</a>).
+(see <a href="/video/guides/create-token">Token creation overview</a>).
 You pass the token string as a parameter of the <code>connect()</code> method of the Session
 object. See <a href="ExceptionEvent.html">ExceptionEvent</a> and
 <a href="OT.html#on">OT.on()</a>.
@@ -3176,9 +3174,7 @@ subscribed to the stream, as well as on the publisher&apos;s client.
 <pre>
 var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
 var sessionId = &quot;&quot;; // Replace with your own session ID.
-                    // https://developer.vonage.com/video/guides/create-session/.
 var token = &quot;&quot;; // Replace with a generated token that has been assigned the publish role.
-                // See https://developer.vonage.com/video/guides/create-token/.
 var session = OT.initSession(apiKey, sessionID);
 session.connect(token, function(error) {
   if (error) {
@@ -3860,9 +3856,7 @@ The following code subscribes to other clients&apos; streams:
 <pre>
 var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
 var sessionID = &quot;&quot;; // Replace with your own session ID.
-                    // See https://developer.vonage.com/video/guides/create-a-session/.
 var token = &quot;&quot;; // Replace with a generated token.
-                // See https://developer.vonage.com/video/guides/create-token/.
 
 var session = OT.initSession(apiKey, sessionID);
 session.on(&quot;streamCreated&quot;, function(event) {
@@ -4066,7 +4060,7 @@ to the HTML <code>body</code>.</td>
   <ul>
   <li>
     Only in sessions that use the Vonage Video Media Router (sessions with the
-    <a href="https://developer.vonage.com/video/guides/create-a-session">media
+    <a href="/video/guides/create-session">media
     mode</a> set to routed).
   </li>
   <li>
@@ -4106,7 +4100,7 @@ to the HTML <code>body</code>.</td>
   <ul>
   <li>
     Only in sessions that use the Vonage Video Media Router (sessions with the
-    <a href="https://developer.vonage.com/video/guides/create-a-session">media
+    <a href="/video/guides/create-session">media
     mode</a> set to routed).
   </li>
   <li>
@@ -4203,7 +4197,7 @@ to the HTML <code>body</code>.</td>
       <a href="Subscriber.html#getStats">Subscriber.getStats()</a> method to check statistics
       for a stream you publish. This setting only applies to streams published by the local
       client in a session that uses the Vonage Video Media Router (sessions with the
-      <a href="https://developer.vonage.com/video/guides/create-a-session">media mode</a>
+      <a href="/video/guides/create-session">media mode</a>
       set to routed), not in sessions with the media mode set to relayed. The default value is
       <code>false</code>.</li>
 
@@ -4394,9 +4388,7 @@ web page. Clicking this link causes the stream to stop being published.
 &lt;script&gt;
   var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
   var sessionID = &quot;&quot;; // Replace with your own session ID.
-                   // See https://developer.vonage.com/video/guides/create-a-session/.
   var token = &quot;&quot;; // Replace with a generated token.
-                  // See https://developer.vonage.com/video/guides/create-token/.
   var publisher;
   var session = OT.initSession(apiKey, sessionID);
   session.connect(token, function(error) {
@@ -4572,9 +4564,9 @@ adds an Unsubscribe link.
 <pre>
 var apiKey = &quot;&quot;; // Replace with your API key. See See https://ui.idp.vonage.com/ui/auth/login
 var sessionID = &quot;&quot;; // Replace with your own session ID.
-                    // See https://developer.vonage.com/video/guides/create-a-session/.
+
 var token = &quot;&quot;; // Replace with a generated token.
-                // See https://developer.vonage.com/video/guides/create-token/.
+
 var streams = [];
 
 var session = OT.initSession(apiKey, sessionID);

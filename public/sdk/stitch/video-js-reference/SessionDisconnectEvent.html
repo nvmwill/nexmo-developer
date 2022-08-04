@@ -62,9 +62,8 @@ disconnected.
  </p>
 <pre>var apiKey = &quot;&quot;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
  var sessionID = &quot;&quot;; // Replace with your own session ID.
-                     // See https://developer.vonage.com/video/guides/create-a-session
  var token = &quot;&quot;; // Replace with a generated token that has been assigned the moderator role.
-                 // See https://developer.vonage.com/video/guides/create-token/
+
 
  var session = OT.initSession(apiKey, sessionID);
  session.on(&quot;sessionDisconnected&quot;, function(event) {

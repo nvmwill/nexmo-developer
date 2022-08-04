@@ -59,9 +59,7 @@ creates a Publisher object. <p></p>
  <pre>
  var apiKey = &apos;&apos;; // Replace with your API key. See https://ui.idp.vonage.com/ui/auth/login
  var sessionID = &apos;&apos;; // Replace with your own session ID.
-                     // See https://developer.vonage.com/video/guides/create-a-session.
  var token = &apos;&apos;; // Replace with a generated token that has been assigned the moderator role.
-                 // See https://developer.vonage.com/video/guides/create-token/.
 
  var session = OT.initSession(apiKey, sessionID);
  session.connect(token, function(error) {
@@ -1572,7 +1570,7 @@ RTCStatsReport</a>.)
 
 <p>
 For a publisher in a routed session (one that uses the
-<a href="https://developer.vonage.com/video/guides/create-a-session/">Vonage Video
+<a href="/video/guides/create-session">Vonage Video
 Media Router</a>), this array includes one object, defining the statistics for the single
 audio-media stream that is sent to the Vonage Video Media Router. In a relayed session, the
 array includes an object for each subscriber to the published stream. Each object in the
@@ -1795,7 +1793,7 @@ parameters:
 
   <li><code>statsArray</code> (Array) &#x2014; An array of objects defining the current
   audio-video statistics for the publisher. For a publisher in a routed session (one that
-  uses the <a href="https://developer.vonage.com/video/guides/create-a-session">Vonage Video
+  uses the <a href="/video/guides/create-session">Vonage Video
   Media Router</a>), this array includes one object, defining the statistics for the single
   audio-media stream that is sent to the Vonage Video Media Router. In a relayed session, the
   array includes an object for each subscriber to the published stream. Each object in the
