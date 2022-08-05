@@ -13,8 +13,8 @@ These messages allow developers to build basic text chat, send instructions from
 
 The client SDKs include methods for sending signals to clients connected to a session. They also include events that are dispatched when a signal is received.
 
-See the [signaling tutorials]() to learn how to send and receive signals.
-You can also use the [REST API](/api/video?#signaling) to send signals from the server to clients. 
+See the [signaling tutorials](/video/tutorials/video-signaling/introduction/javascript) to learn how to send and receive signals.
+You can also use the [REST API](/api/video?#signaling) to send signals from the server to clients.
 
 ## Signal payloads
 
@@ -37,4 +37,4 @@ Signal event order is preserved for signals sent from a signal client, but not a
 
 > Signaling is available to all Vonage video customers. Signaling does *not* require the [ Media Router](/video/guides/create-session#the-media-router-and-media-modes)) — it is available in all sessions (routed or relayed).
 
-See the [signaling tutorials]() to learn how to send and receive signals.
+See the [signaling tutorials](/video/tutorials/video-signaling/introduction/javascript) to learn how to send and receive signals.
