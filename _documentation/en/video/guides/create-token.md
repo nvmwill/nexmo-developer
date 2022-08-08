@@ -41,4 +41,4 @@ Tokens are cheap to generate. They are generated with a hashing function and you
 
 ## Generating tokens
 
-While working on a test version of your app, you can obtain a test token on from the application page of your [Vonage account](https://ui.idp.vonage.com/ui/auth/login). However, in a final production version of an app, you will want to use one of the Vonage Video [server-side SDKs](/video/server-sdks/overview), not the application page, to generate tokens.
+While working on a test version of your app, you can obtain a test token on from the project page of your [Vonage account](https://ui.idp.vonage.com/ui/auth/login). However, in a final production version of an app, you will want to use one of the Vonage Video [server-side SDKs](/video/server-sdks/overview), not the project page, to generate tokens.

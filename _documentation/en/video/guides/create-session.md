@@ -104,21 +104,12 @@ Learn how to create a session by following our [step-by-step tutorial](/video/tu
 
 You can also use one of the [server-side SDKs](/video/server-sdks/overview).
 
-<!-- OPT-TODO: change server SDK link  -->
-
 If you need to dynamically generate multiple session IDs, use the [server-side SDKs](/video/server-sdks/overview) not the Project Page.
 
-## Creating a session that uses the Media Router
 
-The following code creates a session that uses the Media Router:
+Use the session ID with a [client SDK](/video/client-sdks/overview) to connect to a video session.
 
-```tabbed_content
-source: '_examples/video/create-session/temp'
-```
-
-Use the session ID with a [client SDK](/video/client-sdks/overview) to connect to a session.
-
-You will also need to generate a token for each user connecting to the session. 
+You will also need to [generate a token](/video/tutorials/create-token) for each user connecting to the session. 
 
 <!-- OPT-TODO: See Connection Token Creation for information on the `generateToken()` or `generate_Token()` (depending on programming language) method. -->
 
@@ -130,36 +121,25 @@ The [Media Router](https://www.vonage.com/communications-apis/video/features/) p
 
 ## Creating a relayed session
 
-Here is sample code that creates a new session with the media mode set to relayed:
-
-```tabbed_content
-source: '_examples/video/create-relayed-session/temp'
-```
-
 In a relayed session, clients will attempt to send streams directly between each other.
 
 However, if clients cannot connect due to firewall restrictions, the session uses the TURN server to relay audio-video streams.
 
 > **Important:** Some features, such as archiving, are only available in routed (not relayed) sessions.
 
-See the previous section for instructions on creating a routed session.
+Follow our [step-by-step](/video/tutorials/create-session/video/create-a-session/node/create-relayed-session/node) tutorials to learn how to generate relayed sessions
 
 ## Creating an automatically recorded session
 
-You can create a session that is automatically recorded. Here is sample code that creates an automatically recorded session:
-
-```tabbed_content
-source: '_examples/video/create-auto-archived-session/temp'
-```
+You can create a session that is automatically recorded.
 
 > Note: Archived sessions must use the routed media mode.
 
 For more information, see the [archiving](/video/guides/archiving/overview) guide.
+There is also a tutorial on how to setup an [automatically recorded session]()
 
 ## Using sessions in client applications
 
 Use the session ID in the [client SDK](/video/client-sdks/overview) to connect to a session.
 
-<!-- OPT-TODO: change client SDK link  -->
-
-You will also need to generate a token for each user connecting to the session.
+You will also need to [generate a token](/video/tutorials/create-token) for each user connecting to the session.
