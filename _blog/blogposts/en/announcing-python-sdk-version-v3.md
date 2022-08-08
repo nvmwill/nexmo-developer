@@ -5,7 +5,7 @@ thumbnail: /content/blog/announcing-python-sdk-version-v3/python_sdk_updates.png
 author: max-kahan
 published: true
 published_at: 2022-08-08T11:48:15.975Z
-updated_at:
+updated_at: 2022-08-08T11:48:15.975Z
 category: release
 tags:
   - python
