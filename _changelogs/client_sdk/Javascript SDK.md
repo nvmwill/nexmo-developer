@@ -1,6 +1,7 @@
 ---
 version: '8.4.1'
 release: '14 Feb 2022'
+redirect_to: '/client-sdk/sdk-documentation/javascript/release-notes'
 ---
 # [Javascript SDK](https://developer.nexmo.com/client-sdk/sdk-documentation/javascript)
 
@@ -18,7 +19,7 @@ release: '14 Feb 2022'
 ## 8.4.0
 ### 21 Jan 2022
 
-*New* 
+*New*
 
 Added new `connectivityReport()` function to get a connectivity report for all Vonage data centers and media servers
 
