@@ -1,7 +1,7 @@
 ---
 title: Version 3.0.0 of the Vonage Python SDK is now available!
 description: Vonage's Python Server SDK Version 3.0.0 is now available. Find out what's new!
-thumbnail: /content/blog/how-an-sdk-can-add-value-to-rest-apis/python_sdk_updates.png
+thumbnail: /content/blog/announcing-python-sdk-version-v3/python_sdk_updates.png
 author: max-kahan
 published: true
 published_at: 2022-08-08T11:48:15.975Z
