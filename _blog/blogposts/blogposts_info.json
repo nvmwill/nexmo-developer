@@ -16,7 +16,7 @@
     },
     "published": true,
     "published_at": "2022-08-08 11:48:15 UTC",
-    "updated_at": null,
+    "updated_at": "2022-08-08 11:48:15 UTC",
     "category": {
       "name": "Release",
       "plural": "Releases",
@@ -11540,7 +11540,7 @@
       "alumni": true,
       "short_name": "michaeljolley"
     },
-    "published": true,
+    "published": false,
     "published_at": "2020-07-23 13:28:56 UTC",
     "updated_at": "2020-07-23 13:28:00 UTC",
     "category": {
