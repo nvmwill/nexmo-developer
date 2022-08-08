@@ -5,7 +5,7 @@ thumbnail: /content/blog/announcing-python-sdk-version-v3/python_sdk_updates.png
 author: max-kahan
 published: true
 published_at: 2022-08-08T11:48:15.975Z
-updated_at: 
+updated_at:
 category: release
 tags:
   - python
@@ -82,8 +82,8 @@ When you instantiate a `Client` object, you can now specify the optional `max_re
 
 ```python
 client = vonage.client(
-key='my_key', 
-secret='my_secret', 
+key='my_key',
+secret='my_secret',
 timeout=10,  # timeout in seconds
 pool_connections=10,
 pool_maxsize=10,
