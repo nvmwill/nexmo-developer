@@ -122,7 +122,7 @@ Vonage recommends migrating any calls to the Reports API. As this is a beta feat
 
 Previously, it was possible to instantiate an API class (e.g. `Sms`) directly, by passing in credentials, as a client was created when you did this. This has now been removed, as we want everyone to use the classes by creating a client and using it to call API methods.
 
-### Removed deprecated methods from `Voice` and `NumberInsight` classes
+### Removed deprecated methods from Voice and NumberInsight classes
 
 The `Voice` class contained methods (`initiate_call`, `initiate_tts_call` and `initiate_tts_prompt_call`) that exposed endpoints that were deprecated by Vonage in 2017! These have now been removed from the SDK. Similarly, the `request_number_insight` method has been removed as it was superseded by the `get_{basic/standard/advanced}_number_insight` methods and endpoints.
 
