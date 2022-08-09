@@ -11,7 +11,7 @@ There are two types of push notifications that you can use:
 
 * VoIP push *([PushKit](https://developer.apple.com/documentation/pushkit))* - the better fit for applications that use Vonage In-App Voice functionality. ([_Jump to section_](/client-sdk/setup/set-up-push-notifications/ios#integrate-voip-push-notifications-in-your-application))
 
-> There is VoIP push sample project on [GitHub](https://github.com/nexmo-community/swift-phone-to-app-callkit) and an accompanying [blog post](https://learn.vonage.com/blog/2021/01/28/handling-voip-push-notifications-with-callkit) which shows you how to integrate CallKit into an existing Vonage Client SDK project.
+> There is a VoIP push sample project on [GitHub](https://github.com/nexmo-community/swift-phone-to-app-callkit) and an accompanying [blog post](https://learn.vonage.com/blog/2021/01/28/handling-voip-push-notifications-with-callkit) which shows you how to integrate CallKit into an existing Vonage Client SDK project.
 
 * Regular push *([UserNotifications](https://developer.apple.com/documentation/usernotifications))* - the better fit for applications that use Vonage In-App Chat functionality. ([_Jump to section_](/client-sdk/setup/set-up-push-notifications/ios#integrate-regular-push-notifications-in-your-application))
 
@@ -37,7 +37,7 @@ To generate a push certificate you will need to log in to your Apple developer a
 
 ![Add certificate button](/images/client-sdk/push-notifications/add-certificate.png)
 
-Choose a *Apple Push Notification service SSL (Sandbox & Production)* and continue. 
+Choose an *Apple Push Notification service SSL (Sandbox & Production)* and continue. 
 
 ![Apple Push Notification service option](/images/client-sdk/push-notifications/apns-checkbox.png)
 
