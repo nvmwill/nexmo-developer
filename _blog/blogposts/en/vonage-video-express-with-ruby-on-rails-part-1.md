@@ -437,7 +437,7 @@ Successful logins will redirect to the `party_path`. This path will lead users t
 
 First, let's take a look at what we're building. This is the Party page in the "Chill Mode" as a non-moderator. But for Part 1 we won't worry about the header or toolbar components, so we really just have Video Chat left to build out.
 
-![Party Page: Chill Mode, Non Moderator](/content/blog/vonage-video-express-with-ruby-on-rails/macbook-pro-16_-10.png "Party Page: Chill Mode, Non Moderator")
+![Party Page: Chill Mode, Non Moderator](/content/blog/vonage-video-express-with-ruby-on-rails-part-1/macbook-pro-16_-10.png "Party Page: Chill Mode, Non Moderator")
 
 Let's start with the bones of the page, the HTML. We have 3 components: a header, the video call, and a toolbar. But for now we'll just leave comments where the `header` and `toolbar` will go: Add this to your `app/views/video/party.html.erb`:
 
