@@ -105,7 +105,7 @@ We'll be using two Javascript libraries in the front-end: Video Express and Vivi
 
 I promised that Video Express makes a developer's life easier, but how? In primarily two ways: **Performance** and **Design**.
 
-##### Performance
+#### Performance
 
 Video Express' **Quality Manager** continuously optimizes stream resolution, framerate, and rendering sizes. This is very important as the number of streams in a classic video conference session grows quadratically fast! For instance, 2 people in a video call create 1 stream. 6 people in a video call create 36 streams. But 25 people in a video call mean that 625 streams are concurrently active!
 
@@ -113,7 +113,7 @@ The quality manager works to upgrade and downgrade resolution as networks and CP
 
 This can result in **60% decreased Bandwith** usage for 10 participant sessions and **80% decreased Bandwith** usage for 25 participant sessions!
 
-##### Design
+#### Design
 
 Since the beginning of COVID, the world has become intimately familiar with video conferencing. Everyone at this point more or less knows what to expect from a video conference and for most applications, there's no need to reinvent the wheel. Video Express does the heavy lifting with its **Layout Manager** and **Experience Manager**.
 
@@ -131,7 +131,7 @@ All of this heavy lifting means Video Express has a ton of features built that j
 * Creating a preview publisher
 * Accessing the screen-sharing publisher's audio/video
 * Detecting when other clients publish screen-sharing streams
-* Enabling and disabling a screen-sharing subscriber's audio and video 
+* Enabling and disabling a screen-sharing subscriber's audio and video
 
 #### Vivid
 
@@ -200,7 +200,7 @@ Now we can add those Class methods. The Session#create_or_load_session_id method
 
 ```
 def self.create_or_load_session_id
-  unless WatchParty.any? 
+  unless WatchParty.any?
     return @session_id = create_new_session
   else
     last_session = WatchParty.last
@@ -311,7 +311,7 @@ From the command line generate the WatchParty controller with home, login, and p
 
 * The rails generator will some extra stuff we don't want. So now go and delete the routes it generated in `app/config/routes.rb`. And completely delete login view file; `app/views/watch_party/login.html.erb`
 
-At this point with all the main config and setup done, I just like to go one action/view pair at a time until I finish an application. 
+At this point with all the main config and setup done, I just like to go one action/view pair at a time until I finish an application.
 
 ### Building The Home Page
 
@@ -404,7 +404,7 @@ body {
 
 #### Defining The Login
 
-We have a form but we want to make sure only real fans aka our friends can join our watch party! So we'll add some Rails Strong Parameters logic to catch the `name` and `password` from the parameters sent in the form on the home page. 
+We have a form but we want to make sure only real fans aka our friends can join our watch party! So we'll add some Rails Strong Parameters logic to catch the `name` and `password` from the parameters sent in the form on the home page.
 
 ```
 class WatchPartyController < ApplicationController
@@ -437,7 +437,7 @@ Successful logins will redirect to the `party_path`. This path will lead users t
 
 First, let's take a look at what we're building. This is the Party page in the "Chill Mode" as a non-moderator. But for Part 1 we won't worry about the header or toolbar components, so we really just have Video Chat left to build out.
 
-![Party Page: Chill Mode, Non Moderator](/content/blog/vonage-video-express-with-ruby-on-rails/macbook-pro-16_-10.png "Party Page: Chill Mode, Non Moderator")
+![Party Page: Chill Mode, Non Moderator](/content/blog/vonage-video-express-with-ruby-on-rails-part-1/macbook-pro-16_-10.png "Party Page: Chill Mode, Non Moderator")
 
 Let's start with the bones of the page, the HTML. We have 3 components: a header, the video call, and a toolbar. But for now we'll just leave comments where the `header` and `toolbar` will go: Add this to your `app/views/video/party.html.erb`:
 
@@ -477,7 +477,7 @@ The Vonage Video API gives developers full control of customizing their video la
     </script>
 ```
 
-3. We can see that the roomContainer is looking for the entry point in the html where to latch onto and embed the Room. So we need to create an element with an id of `roomContainter`. 
+3. We can see that the roomContainer is looking for the entry point in the html where to latch onto and embed the Room. So we need to create an element with an id of `roomContainter`.
 
 The final code of the `party.html.erb` looks like this:
 
