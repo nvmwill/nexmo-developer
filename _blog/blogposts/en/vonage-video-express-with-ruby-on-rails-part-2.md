@@ -2,7 +2,7 @@
 title: Vonage Video Express with Ruby on Rails Part 2
 description: A ruby on rails tutorial that implements the Video Express
   javascript library for fast and easy WebRTC video conferencing applications.
-thumbnail: /content/blog/vonage-video-express-with-ruby-on-rails-part-2/video-express-ruby_part-2.png
+thumbnail: /content/blog/vonage-video-express-with-ruby-on-rails-part-2/video-express-ruby_part_2.png
 author: benjamin-aronov
 published: true
 published_at: 2022-08-10T09:29:42.442Z
@@ -129,7 +129,7 @@ if (switch_btn !== null){
   switch_btn.addEventListener('change', (event) => {
     if (event.target.checked){
       <!-- Custom Styles To Scope Moderator View --->
-      <!-- Start Screen Share --> 
+      <!-- Start Screen Share -->
     }
     else if (!event.target.checked){
       <!-- Stop Screen Share -->
@@ -141,7 +141,7 @@ if (switch_btn !== null){
 }
 ```
 
-Now before we can trigger the screenshare in Video Express, we need to prepare the Moderator's view so that the custom styling, which will touch the `layoutContainerWrapper` and `layoutContainer` doesn't affect the view of everyone else. We'll call this function `addModeratorCustomStyles`. 
+Now before we can trigger the screenshare in Video Express, we need to prepare the Moderator's view so that the custom styling, which will touch the `layoutContainerWrapper` and `layoutContainer` doesn't affect the view of everyone else. We'll call this function `addModeratorCustomStyles`.
 
 ```
 let addModeratorCustomStyles = () => {
@@ -492,7 +492,7 @@ const hide_self_btn = document.querySelector('#hide-self');
 const unhide_self_btn = document.querySelector('#unhide-self');
 ```
 
-Finally, all together we can call our code by passing the conditions, the buttons, and the actions: 
+Finally, all together we can call our code by passing the conditions, the buttons, and the actions:
 
 ```
 listenForToggle(room.camera.isVideoEnabled, hide_self_btn, unhide_self_btn, room.camera.disableVideo, room.camera.enableVideo);
@@ -501,7 +501,7 @@ listenForToggle(room.camera.isAudioEnabled, mute_self_btn, unmute_self_btn, room
 
 ### Building The Select Device Inputs
 
-Our select dropdowns for audio and video inputs are currently empty. Let's fill them up with each user's devices. Video Express gives us this functionality out of the box with `VideoExpress.getDevices()`. This returns an array of both audio and video inputs for the local VideoExpress instance. 
+Our select dropdowns for audio and video inputs are currently empty. Let's fill them up with each user's devices. Video Express gives us this functionality out of the box with `VideoExpress.getDevices()`. This returns an array of both audio and video inputs for the local VideoExpress instance.
 
 We'll need to retrieve this list and then sort it so we can add audio devices to the microphone input and video devices to the camera input. We do so with this asynchronous function, which waits for the Promise to return from querying VideoExpress and then iterates on the devices and appends them to the select element.
 
