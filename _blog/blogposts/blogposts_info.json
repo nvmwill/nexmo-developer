@@ -1,5 +1,43 @@
 [
   {
+    "title": "Announcing the Video Champions Program",
+    "description": "Come and test the Vonage Meetings API for free with the Video API Champions Program",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-video-champions-program/testing-meetings-api.png",
+    "author": {
+      "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
+      "hidden": false,
+      "image_url": "/content/images/helena-bower.jpg",
+      "name": "Helena Bower",
+      "spotlight": false,
+      "title": "Technical Writer",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "helena-bower"
+    },
+    "published": true,
+    "published_at": "2022-08-11 08:56:46 UTC",
+    "updated_at": "2022-08-11 08:56:47 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "meetings-api",
+      "video",
+      "announcement"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/11/announcing-the-video-champions-program",
+    "filename": "announcing-the-video-champions-program"
+  },
+  {
     "title": "Vonage Video Express with Ruby on Rails Part 2",
     "description": "A ruby on rails tutorial that implements the Video Express javascript library for fast and easy WebRTC video conferencing applications.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-video-express-with-ruby-on-rails-part-2/video-express-ruby_part_2.png",
@@ -8036,6 +8074,35 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -8097,35 +8164,6 @@
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
-  },
-  {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
