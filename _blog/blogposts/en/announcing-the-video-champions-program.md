@@ -43,21 +43,9 @@ With just a few lines of code, the Meetings API allows you to integrate high-qua
 
 
 ### Three Months Free Use 
-Vonage is pleased to announce the launch of the Video API Champions Program, where each account will receive **three months free use** followed by a discounted rate for testing the Meetings API; further details on pricing can be found below. 
+Vonage is pleased to announce the launch of the Video API Champions Program, where each account will receive **three months free use** for up to 50K participant minutes and 25K recording minutes. A participant minute is counted per participant per minute they are in a session, and a recording minute is counted per minute that the session is recorded. 
 
-### Discounted Rates
-
-
-As part of the Champions Program, each account will receive a discounted price for 50K participant minutes and 25K recording minutes per month at the following rate:
-
-1. For the first 3 months, there are no charges for use of the API.
-2. After that the charge will be:
-
-   - $0.00435 per participant per minute
-   - $0.025 per recording minute
-
-
-For example, it would cost $1.04 for a 1h call with 4 participants. If that call was recorded, those recording minutes would cost $1.50 for a total cost of $2.54. 
+Details on pricing outside of the Champions Program can be found below.
 
 ### Join the Program
 To get started and begin using the API, please contact the Meetings API team by filling out [this form](https://forms.gle/p3vVbPAqaWiGdzbU8).
