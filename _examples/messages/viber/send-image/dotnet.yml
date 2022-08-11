@@ -1,0 +1,8 @@
+---
+title: Dotnet
+language: dotnet
+code:
+    source: .repos/vonage/vonage-dotnet-code-snippets/DotNetCliCodeSnippets/Messages/Viber/SendViberImage.cs
+    from_line: 19
+    to_line: 36
+file_name: SendViberImage.cs
