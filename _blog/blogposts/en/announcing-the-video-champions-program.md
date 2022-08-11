@@ -23,11 +23,12 @@ replacement_url: ""
 
 In the past two years, consumers’ expectations and attitudes towards turning on their cameras in business interactions have changed dramatically. We know because we’ve been asking consumers about their communications preferences for a long time–ten years and counting, and the [2021 Vonage Global Customer Engagement Report](https://www.vonage.com/resources/publications/global-customer-engagement-report-2021/) revealed a big shift:
 
-55% have used video to connect with businesses and institutions
-40% more people prefer to connect with businesses via a video chat
-35% expect integrated communications when interacting with organizations
+* 55% have used video to connect with businesses and institutions
+* 40% more people prefer to connect with businesses via a video chat
+* 35% expect integrated communications when interacting with organizations
 
 Here are four simple examples of how video makes your conversations more personal and effective:
+
 * Showcase Your Product
 * Build Trust with Users
 * Offer Visual Support
@@ -41,18 +42,17 @@ With just a few lines of code, the Meetings API allows you to integrate high-qua
 ## Test the Meeting API for Free With the Video Champions Program
 
 
-
-
 ### Three Months Free Use 
 Vonage is pleased to announce the launch of the Video API Champions Program, where each account will receive **three months free use** followed by a discounted rate for testing the Meetings API; further details on pricing can be found below. 
 
 ### Discounted Rates
 
 
-
 As part of the Champions Program, each account will receive a discounted price for 50K participant minutes and 25K recording minutes per month at the following rate:
+
 1. For the first 3 months, there are no charges for use of the API.
 2. After that the charge will be:
+
    - $0.00435 per participant per minute
    - $0.025 per recording minute
 
@@ -70,6 +70,7 @@ For example, it would cost $1.14 for a 1h call with 4 participants. If that call
 
 ## Resources
 When you’re ready to start coding, there are several resources you can look at to get stuck in:
+
 * [Introducing the Meetings API](https://developer.vonage.com/blog/22/03/29/introducing-the-meetings-api) - This article has a great high-level summary of the features available.
 * [The full Meetings API Documentation](https://developer.vonage.com/meetings/overview) is available on the Vonage Developer Portal, and includes information on room types, terminology, and code snippets.
 * The [API Specification](https://developer.vonage.com/api/meetings)
