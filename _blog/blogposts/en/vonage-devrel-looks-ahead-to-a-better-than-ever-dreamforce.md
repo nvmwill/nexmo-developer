@@ -8,7 +8,7 @@ published_at: 2022-08-15T07:25:40.342Z
 updated_at: 2022-08-15T07:25:41.492Z
 category: event
 tags:
-  - "#dreamforce"
+  - "dreamforce"
 comments: true
 spotlight: false
 redirect: ""
