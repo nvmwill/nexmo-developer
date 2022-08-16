@@ -1,6 +1,6 @@
 ---
 title: Announcing the Video Champions Program
-description: Come and test the Vonage Meetings API for free with the Video API
+description: Come and test the Vonage Meetings API for free with the Video
   Champions Program
 thumbnail: /content/blog/announcing-the-video-champions-program/testing-meetings-api.png
 author: helena-bower
