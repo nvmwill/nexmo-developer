@@ -1,5 +1,44 @@
 [
   {
+    "title": "Office Hours Reservation Using Node.js and the Vonage Messages API",
+    "description": "A web application that allows students to reserve office hour time slots with their professors. Once an office hour reservation is booked, the student will receive a text message confirming the reservation using Vonage Messages API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/office-hours-reservation-using-node-js-and-the-vonage-messages-api/office-hours-reservation.png",
+    "author": {
+      "bio": "Zoe Mithaug is a Developer Relations Intern @ Vonage. She is a 4th-year undergrad student studying at the University of Florida.\n\nShe has a passion for programming, software development, video game development, animation, and digital design.",
+      "hidden": false,
+      "image_url": "/content/images/zoe.jpg",
+      "name": "Zoe Mithaug",
+      "twitter": "zoemithaug",
+      "spotlight": false,
+      "title": "Developer Relations Intern",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "zoe-mithaug"
+    },
+    "published": true,
+    "published_at": "2022-08-16 06:58:31 UTC",
+    "updated_at": "2022-08-16 06:58:32 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "node",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/16/office-hours-reservation-using-node-js-and-the-vonage-messages-api",
+    "filename": "office-hours-reservation-using-node-js-and-the-vonage-messages-api"
+  },
+  {
     "title": "Vonage DevRel Looks Ahead to a Better Than Ever Dreamforce",
     "description": "The low down on all you need to know about Vonage at Dreamforce 2022",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce/dreamforce-22.png",
@@ -25,7 +64,7 @@
       "color": "#e6ae00"
     },
     "tags": [
-      "#dreamforce"
+      "dreamforce"
     ],
     "spotlight": false,
     "canonical": "",
@@ -37,7 +76,7 @@
   },
   {
     "title": "Announcing the Video Champions Program",
-    "description": "Come and test the Vonage Meetings API for free with the Video API Champions Program",
+    "description": "Come and test the Vonage Meetings API for free with the Video Champions Program",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-video-champions-program/testing-meetings-api.png",
     "author": {
       "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
@@ -8110,36 +8149,6 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
-    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
-    "author": {
-      "team": true,
-      "name": "Avital Tzubeli",
-      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
-      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
-      "website_url": "",
-      "short_name": "avital-tzubelivonage-com"
-    },
-    "published": false,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "angular",
-      "rxjs"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
-    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
     "title": "Setting up CI/CD with Github Actions",
     "description": "This article walks you through the process of using github actions to build CI/CD flows.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
@@ -8200,6 +8209,36 @@
     "locale": "en",
     "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
     "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
+    "title": "Introducing RxZu, an Engine for Intuitive Graphs",
+    "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
+    "author": {
+      "team": true,
+      "name": "Avital Tzubeli",
+      "image_url": "https://secure.gravatar.com/avatar/c4fa0b461da586a7084b72403f44ad76?s=384&d=mm&r=g",
+      "bio": "Avital Tzubeli is a Developer Advocate at Vonage, where she’ll be building the local Vonage community in Tel Aviv. She’s originally from Miami Beach, and first spoke Spanish and Hebrew, before learning all her English from Harry Potter books. She studied CS and wrote some Java in NYC, then moved to Tel Aviv in search of better weather… where she fortunately also discovered the world of Developer Relations. Avital considers herself a storyteller, and loves the challenge of turning technical content into magical fairytales.",
+      "website_url": "",
+      "short_name": "avital-tzubelivonage-com"
+    },
+    "published": false,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "angular",
+      "rxjs"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
+    "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
