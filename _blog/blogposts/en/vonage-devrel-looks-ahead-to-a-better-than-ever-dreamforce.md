@@ -42,4 +42,4 @@ Below are the details of the sessions that our team is running at the Vonage Hub
 
 Besides bundles of great swag, unlimited networking opportunities and free to access workshops and demos, anyone who registers for a free Vonage API Developer account at any of our three locations is automatically entered into a raffle to win a pair of RayBan Stories - their first generation smart wear technology. Terms and conditions apply. You can also unlock $10 free credit for your API account, to get you started with our products.
 
-Sound good? See you there! You can find out more and read about how the rest of the Vonage universe is getting involved at Dreamforce [here](< https://www.vonage.com/events/Dreamforce2022/>).
+Sound good? See you there! You can find out more and read about how the rest of the Vonage universe is getting involved at Dreamforce [here](http://www.vonage.com/events/Dreamforce2022/).
