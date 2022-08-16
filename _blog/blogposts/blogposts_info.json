@@ -3,7 +3,19 @@
     "title": "Office Hours Reservation Using Node.js and the Vonage Messages API",
     "description": "A web application that allows students to reserve office hour time slots with their professors. Once an office hour reservation is booked, the student will receive a text message confirming the reservation using Vonage Messages API.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/office-hours-reservation-using-node-js-and-the-vonage-messages-api/office-hours-reservation.png",
-    "author": null,
+    "author": {
+      "bio": "Zoe Mithaug is a Developer Relations Intern @ Vonage. She is a 4th-year undergrad student studying at the University of Florida.\n\nShe has a passion for programming, software development, video game development, animation, and digital design.",
+      "hidden": false,
+      "image_url": "/content/images/zoe.jpg",
+      "name": "Zoe Mithaug",
+      "twitter": "zoemithaug",
+      "spotlight": false,
+      "title": "Developer Relations Intern",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "zoe-mithaug"
+    },
     "published": true,
     "published_at": "2022-08-16 06:58:31 UTC",
     "updated_at": "2022-08-16 06:58:32 UTC",
@@ -64,7 +76,7 @@
   },
   {
     "title": "Announcing the Video Champions Program",
-    "description": "Come and test the Vonage Meetings API for free with the Video API Champions Program",
+    "description": "Come and test the Vonage Meetings API for free with the Video Champions Program",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-video-champions-program/testing-meetings-api.png",
     "author": {
       "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
