@@ -6,7 +6,7 @@ thumbnail: /content/blog/how-to-build-a-visual-regression-test-system-using-play
 author: yonatankra
 published: true
 published_at: 2022-08-23T07:23:06.530Z
-updated_at: 2022-08-01T10:02:14.251Z
+updated_at: 2022-08-23T10:02:14.251Z
 category: tutorial
 tags:
   - playwright
