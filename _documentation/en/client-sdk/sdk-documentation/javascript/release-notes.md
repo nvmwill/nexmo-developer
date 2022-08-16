@@ -10,11 +10,11 @@ navigation_weight: 0
 
 ### New
 
-- Use preloaded media on inbound calls (start `WebRTC ice` gathering process as soon as member is invited to a call)
+- Use pre-loaded media on inbound calls (start `WebRTC ice` gathering process as soon as member is invited to a call)
 
 ### Fix
 
-- Remove `public-ip` library brcause of a security vulnerability (updated with `is-ip`)
+- Remove `public-ip` library because of a security vulnerability (updated with `is-ip`)
 
 ## Version 9.0.0 - June 30, 2022
 
