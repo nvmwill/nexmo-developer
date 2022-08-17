@@ -1,7 +1,82 @@
 [
   {
+    "title": "Office Hours Reservation Using Node.js and the Vonage Messages API",
+    "description": "A web application that allows students to reserve office hour time slots with their professors. Once an office hour reservation is booked, the student will receive a text message confirming the reservation using Vonage Messages API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/office-hours-reservation-using-node-js-and-the-vonage-messages-api/office-hours-reservation.png",
+    "author": {
+      "bio": "Zoe Mithaug is a Developer Relations Intern @ Vonage. She is a 4th-year undergrad student studying at the University of Florida.\n\nShe has a passion for programming, software development, video game development, animation, and digital design.",
+      "hidden": false,
+      "image_url": "/content/images/zoe.jpg",
+      "name": "Zoe Mithaug",
+      "twitter": "zoemithaug",
+      "spotlight": false,
+      "title": "Developer Relations Intern",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "zoe-mithaug"
+    },
+    "published": true,
+    "published_at": "2022-08-16 06:58:31 UTC",
+    "updated_at": "2022-08-16 06:58:32 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "node",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/16/office-hours-reservation-using-node-js-and-the-vonage-messages-api",
+    "filename": "office-hours-reservation-using-node-js-and-the-vonage-messages-api"
+  },
+  {
+    "title": "Vonage DevRel Looks Ahead to a Better Than Ever Dreamforce",
+    "description": "The low down on all you need to know about Vonage at Dreamforce 2022",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce/dreamforce-22.png",
+    "author": {
+      "bio": "Lucinda joined Vonage in January 2022 as the EMEA Community Manager. Lucinda has over 10 years experience in event management, with a recent focus on diversity and inclusion. She lives in Hampshire in the UK with her husband and Oggy the labrador.  ",
+      "hidden": false,
+      "image_url": "/content/images/1548775173293.jpeg",
+      "name": "Lucinda Bone",
+      "spotlight": false,
+      "title": "Community Manager, EMEA",
+      "noteworthy": false,
+      "team": false,
+      "alumni": false,
+      "short_name": "lucinda-bone"
+    },
+    "published": true,
+    "published_at": "2022-08-15 07:25:40 UTC",
+    "updated_at": "2022-08-15 07:25:41 UTC",
+    "category": {
+      "name": "Event",
+      "plural": "Events",
+      "slug": "event",
+      "color": "#e6ae00"
+    },
+    "tags": [
+      "dreamforce"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/15/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce",
+    "filename": "vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce"
+  },
+  {
     "title": "Announcing the Video Champions Program",
-    "description": "Come and test the Vonage Meetings API for free with the Video API Champions Program",
+    "description": "Come and test the Vonage Meetings API for free with the Video Champions Program",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-video-champions-program/testing-meetings-api.png",
     "author": {
       "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
@@ -8074,6 +8149,39 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Setting up CI/CD with Github Actions",
+    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
+    "author": {
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
+      "team": true,
+      "short_name": "yonatankra"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "github"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
+    "filename": "setting-up-ci-cd-with-github-actions"
+  },
+  {
     "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
     "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
@@ -8131,39 +8239,6 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
-    "title": "Setting up CI/CD with Github Actions",
-    "description": "This article walks you through the process of using github actions to build CI/CD flows.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
-    "author": {
-      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
-      "image_url": "/content/images/yonatankra.png",
-      "name": "Yonatan Kra",
-      "website_url": "https://yonatankra.com",
-      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
-      "twitter": "YonatanKra",
-      "github_url": "https://github.com/YonatanKra",
-      "title": "Vonage Software Architect",
-      "team": true,
-      "short_name": "yonatankra"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "github"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
-    "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -12216,36 +12291,6 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -12275,6 +12320,36 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
@@ -23220,7 +23295,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 18:23:30 +0100",
+    "published_at": "2017-12-21 17:23:30 +0000",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -26275,7 +26350,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 17:45:51 +0200",
+    "published_at": "2015-08-14 16:45:51 +0100",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -26351,7 +26426,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 19:55:05 +0200",
+    "published_at": "2015-04-29 18:55:05 +0100",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -26407,7 +26482,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 19:24:18 +0200",
+    "published_at": "2015-04-10 18:24:18 +0100",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -26539,7 +26614,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 14:02:36 +0100",
+    "published_at": "2014-11-18 13:02:36 +0000",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",

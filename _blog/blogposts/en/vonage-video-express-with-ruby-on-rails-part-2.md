@@ -46,7 +46,7 @@ Let's build out our partials where the HTML will live. From the root of your app
 
 And update the `party.html.erb` file to render the partials:
 
-```
+```ruby
 <header>
   <%= render partial: 'components/header' %>
 </header>
@@ -70,7 +70,7 @@ Here we'll add our component files:
 
 To require them for our clientside via Webpack, add the following lines in Application.js below our module imports.
 
-```
+```ruby
 require("components/header");
 require("components/toolbar");
 ```
@@ -94,7 +94,7 @@ The top app bar comes with a few slot options but two that we care about: `title
 
 Inside `app/view/watch_party/_header.html.erb` will look like this:
 
-```
+```ruby
 <vwc-top-app-bar-fixed alternate="true">
   <span slot="title" id="title">Big Game Chill Zone</span>
   <% if @name == @moderator_name  %>
@@ -122,7 +122,7 @@ We can see from the documentation that we just need to add an empty DIV with id 
 
 First let's create the base logic of the listener for the toggle:
 
-```
+```ruby
 const switch_btn = document.querySelector('vwc-switch');
 
 if (switch_btn !== null){
@@ -143,7 +143,7 @@ if (switch_btn !== null){
 
 Now before we can trigger the screenshare in Video Express, we need to prepare the Moderator's view so that the custom styling, which will touch the `layoutContainerWrapper` and `layoutContainer` doesn't affect the view of everyone else. We'll call this function `addModeratorCustomStyles`.
 
-```
+```ruby
 let addModeratorCustomStyles = () => {
   mode_name.innerHTML = "Watch Mode"
   layoutContainerWrapper.firstElementChild.classList.add("moderator-screenshare");
@@ -157,7 +157,7 @@ We can see this function does two things: update the label of the toggler and ad
 
 When the screenShare stops, we'll need to remove the custom styling so the Moderator's view is not messed up. So we have a function `removeModeratorCustomStyles` to undo everything from before:
 
-```
+```ruby
 let removeModeratorCustomStyles = () => {
   mode_name.innerHTML = "Chill Mode";
   layoutContainerWrapper.firstElementChild.classList.remove("moderator-screenshare");
@@ -169,7 +169,7 @@ let removeModeratorCustomStyles = () => {
 
 Now our toggle header is basically complete. We just need to query our elements and call the Video Express screensharing functions. The full header looks like this:
 
-```
+```ruby
 const switch_btn = document.querySelector('vwc-switch');
 const layoutContainer = document.querySelector('#layoutContainerWrapper');
 const screenShare = document.createElement('div');
@@ -219,19 +219,19 @@ A reminder of the toolbar we want to build:
 
 We can see in the toolbar that there are 3 groups of buttons that will toggle on/off some features in the room: mute/unmute all, disable/enable microphone, and disable/enable video camera. For all three we will use two buttons from Vivid and then use Javascript to hide the inactive button.
 
-```
+```ruby
 <!-- Mute all / Unmute all -->
 <vwc-icon-button icon="audio-max-solid" shape="circled" layout="filled" id="mute-all" class="white-border"></vwc-icon-button>
 <vwc-icon-button icon="audio-off-solid" shape="circled" layout="filled" id="unmute-all" class="hidden white-border"></vwc-icon-button>
 ```
 
-```
+```ruby
 <!-- Mute self / Unmute self -->
 <vwc-icon-button icon="mic-mute-solid" shape="circled" layout="ghost" id="mute-self" class="vvd-scheme-alternate" ></vwc-icon-button>
 <vwc-icon-button icon="microphone-2-solid" shape="circled" layout="ghost" id="unmute-self" class="hidden vvd-scheme-alternate"></vwc-icon-button>
 ```
 
-```
+```ruby
 <!-- Disable camera / Enable camera -->
 <vwc-icon-button icon="video-off-solid" shape="circled" layout="ghost" id="hide-self" class="vvd-scheme-alternate" ></vwc-icon-button>
 <vwc-icon-button icon="video-solid" shape="circled" layout="ghost" id="unhide-self" class="hidden vvd-scheme-alternate"></vwc-icon-button>
@@ -243,7 +243,7 @@ We can see that the second and third sets of buttons are a little different thou
 
 Our two action groups with buttons now look like this:
 
-```
+```ruby
 <!-- Mute Self / Unmute Self -->
 <!-- Select Mic Input -->
 <vwc-action-group layout="outlined" shape="pill" class="vvd-scheme-alternate">
@@ -261,7 +261,7 @@ Our two action groups with buttons now look like this:
 </vwc-action-group>
 ```
 
-```
+```ruby
 <!-- Disable Camera / Enable Camera -->
 <!-- Select Camera Input -->
 <vwc-action-group layout="outlined" shape="pill" class="vvd-scheme-alternate">
@@ -281,7 +281,7 @@ Our two action groups with buttons now look like this:
 
 We can see that we have a third action group: the audio inputs. We can use the same structure:
 
-```
+```ruby
 <!-- Select Audio Output -->
 <vwc-action-group layout="outlined" shape="pill" class="vvd-scheme-alternate" id="audio-output-target">
   <vwc-icon-button icon="headset-solid" shape="circled" layout="ghost" class="vvd-scheme-alternate"></vwc-icon-button>
@@ -305,7 +305,7 @@ There are three parts to the tooltips we care about: the `anchor`, the `corner`,
 
 With the Tooltips added, our full `_toolbar.html.erb` looks like this:
 
-```
+```ruby
 <!-- Mute all / Unmute all -->
 <vwc-icon-button icon="audio-max-solid" shape="circled" layout="filled" id="mute-all" class="white-border"></vwc-icon-button>
 <vwc-icon-button icon="audio-off-solid" shape="circled" layout="filled" id="unmute-all" class="hidden white-border"></vwc-icon-button>
@@ -370,7 +370,7 @@ With the Tooltips added, our full `_toolbar.html.erb` looks like this:
 
 Before we build out the Javascript for the components, let's make the toolbar look like our mockup:
 
-```
+```ruby
 // toolbar styles
 toolbar {
   display: flex;
@@ -405,7 +405,7 @@ vwc-tooltip {
 
 Going left to the right, the first component we need to build is the "Mute All" button. We want this to be a toggler which toggles on and off the audio of all other participants. But how can we have a toggle button? We really need two buttons: a "mute all" and an "unmute all" button. This pattern will be replicated several times in the toolbar so let's write a helper function for it.
 
-```
+```ruby
 // toggle hide/display of buttons
 let toggleButtonView = (buttonToHide, buttonToShow) => {
   buttonToHide.style.display = "none";
@@ -419,7 +419,7 @@ To mute all the participants we need to listen for the user to trigger the actio
 
 So to disable the audio, we need to iterate through all the participants in the room and use the `.camera.disableAudio()` function. You'll notice that we call this on participant\[1] because the participant object returns an array: [`id`, participantObject].
 
-```
+```ruby
 // toggle Mute All / Unmute All
 let toggleMuteAllButton = (button, state, participants) =>{
   button.addEventListener("click", function(){
@@ -438,12 +438,12 @@ let toggleMuteAllButton = (button, state, participants) =>{
 }
 ```
 
-```
+```ruby
 const mute_all_btn = document.querySelector('#mute-all');
 const unmute_all_btn = document.querySelector('#unmute-all');
 ```
 
-```
+```ruby
 toggleMuteAllButton(mute_all_btn, "mute", room.participants);
 toggleMuteAllButton(unmute_all_btn, "unmute", room.participants);
 ```
@@ -454,7 +454,7 @@ The Mute/Unmute Self and Disable/Enable Camera buttons follow the same logic as 
 
 We can create this function `toggleInputButton` which will accept a condition, the boolean we receive from our Video Express functions, and then call the corresponding Video Express action. It will also update the view with `toggleButtonView`.
 
-```
+```ruby
 // toggle button (display and functionality) of any audio and video input devices
 let toggleInputButton = (condition, defaultBtn, altBtn, action) => {
   if (condition()){
@@ -484,7 +484,7 @@ let listenForToggle = (condition, defaultBtn, altBtn, defaultAction, altAction) 
 
 We'll need the specific DOM elements to listen for and pass `listenForToggle`, so we create some query selectors.
 
-```
+```ruby
 const mute_self_btn = document.querySelector('#mute-self');
 const unmute_self_btn = document.querySelector('#unmute-self');
 
@@ -494,7 +494,7 @@ const unhide_self_btn = document.querySelector('#unhide-self');
 
 Finally, all together we can call our code by passing the conditions, the buttons, and the actions:
 
-```
+```ruby
 listenForToggle(room.camera.isVideoEnabled, hide_self_btn, unhide_self_btn, room.camera.disableVideo, room.camera.enableVideo);
 listenForToggle(room.camera.isAudioEnabled, mute_self_btn, unmute_self_btn, room.camera.disableAudio, room.camera.enableAudio);
 ```
@@ -505,7 +505,7 @@ Our select dropdowns for audio and video inputs are currently empty. Let's fill 
 
 We'll need to retrieve this list and then sort it so we can add audio devices to the microphone input and video devices to the camera input. We do so with this asynchronous function, which waits for the Promise to return from querying VideoExpress and then iterates on the devices and appends them to the select element.
 
-```
+```ruby
 // Retrieve available input devices from VideoExpress
 // add retrieved input devices to select options
 async function getDeviceInputs(audioTarget, videoTarget){
@@ -536,7 +536,7 @@ async function getDeviceInputs(audioTarget, videoTarget){
 
 We'll also want to update the room when a user changes their selection. We can trigger this by listening to changes in the select menus and then calling either `room.camera.setAudioDevice()` or `room.camera.setVideoDevice()`.
 
-```
+```ruby
 // // listen for changes to selected audio/video inputs
 // // update room when inputs are changed
 let listenInputChange = (target) => {
@@ -557,7 +557,7 @@ let listenInputChange = (target) => {
 
 Putting it all together, calling our functions looks like this:
 
-```
+```ruby
 getDeviceInputs("vwc-select#audio-input", "vwc-select#video-input");
 listenInputChange("vwc-select#audio-input");
 listenInputChange("vwc-select#video-input");
@@ -569,7 +569,7 @@ Retrieving the list of Audio Outputs from VideoExpress will look almost identica
 
 Because we are only listening for a single change, we can tie it all up nicely in a single function:
 
-```
+```ruby
 // Retrieve lists of auidoOutput
 // add audioOutputs to select menu
 // On user select new option, update audio input
@@ -591,7 +591,7 @@ async function audioOutputs() {
 
 And don't forget to call it in your code!
 
-```
+```ruby
 audioOutputs();
 ```
 
@@ -601,7 +601,7 @@ Our very last step in the toolbar is to add the behaviour of tooltips to appear 
 
 Our `addToolTipListeners` looks like this:
 
-```
+```ruby
 // toggle tooltips on hover
 let addToolTipListeners = (toolTipsToListen) => {
   toolTipsToListen.forEach(toolTipToListen => {
@@ -615,7 +615,7 @@ let addToolTipListeners = (toolTipsToListen) => {
 
 Then we'll define our tooltips to listen on:
 
-```
+```ruby
 const toolTipsToListen = [
   {targetId: "hide-self", toolTipId:"hide-self-tooltip"},
   {targetId: "unhide-self", toolTipId: "unhide-self-tooltip"},
@@ -629,13 +629,13 @@ const toolTipsToListen = [
 
 And lastly, call our code.
 
-```
+```ruby
 addToolTipListeners(toolTipsToListen);
 ```
 
 Our final code for `toolbar.js` looks like this:
 
-```
+```ruby
 // Start of Toolbar Code
 
 // toggle hide/display of buttons
@@ -715,8 +715,8 @@ async function getDeviceInputs(audioTarget, videoTarget){
 }
 
 
-// // listen for changes to selected audio/video inputs
-// // update room when inputs are changed
+// listen for changes to selected audio/video inputs
+// update room when inputs are changed
 let listenInputChange = (target) => {
   const targetSelect = document.querySelector(`${target}`);
   targetSelect.addEventListener('change', (inputOption) => {
