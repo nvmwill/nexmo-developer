@@ -7,24 +7,24 @@ thumbnail: /content/blog/how-to-send-and-receive-sms-messages-with-node-js-and-e
 author: laka
 published: true
 published_at: 2019-09-16T08:00:45.000Z
-updated_at: 2021-07-29T22:16:33.119Z
+updated_at: 2022-08-08T23:17:11.767Z
 category: tutorial
 tags:
   - javascript
   - node
-  - sms-api
+  - messages-api
 comments: true
 ---
-Vonage has a couple of APIs that allow you to send and receive a high volume of SMS messages anywhere in the world. Once you get your virtual phone number, you can use the APIs to manage outbound messages (“sending”) and inbound messages (“receiving”).  
+Vonage has a couple of APIs that allow you to send and receive a high volume of SMS messages anywhere in the world. Once you get your virtual phone number, you can use the APIs to manage outbound messages ("sending") and inbound messages ("receiving").  
 
 In this article, you will learn how to send and receive SMS messages with [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/).
 
-We will first send an SMS with Node.js and the new [Vonage Messages API](https://developer.vonage.com/messages/overview).\
+We will first send an SMS with Node.js and the new [Vonage Messages API](https://developer.vonage.com/messages/overview).
 We'll then build a Webhook that can receive SMS messages using Express. We'll focus in this article on sending and receiving SMS messages. Still, if you want to send and receive messages with Facebook Messenger, Viber, or WhatsApp, you can do that as well with the [Messages API](https://developer.vonage.com/messages/overview).
 
 You can extend the application we're building here to reply to incoming SMS messages or include more complex, interactive elements and give you a head start building autoresponders for your SMS needs.
 
-The code for this tutorial can be found on [GitHub](https://github.com/nexmo-community/nexmo-sms-autoresponder-node/) & [Glitch](https://glitch.com/edit/#!/whispering-rebel-ixia).
+The code for this tutorial can be found on [GitHub](https://github.com/nexmo-community/nexmo-sms-autoresponder-node/).
 
 ## Prerequisites
 
@@ -38,10 +38,10 @@ Before you begin, make  sure you have:
 
 ## Send an SMS Message With the Messages API
 
-You may already be familiar with the Vonage [SMS API](https://developer.vonage.com/messaging/sms/overview), but one of our newer APIs can also send text messages—the [Vonage Messages API](https://developer.vonage.com/messages/overview). It is a multi-channel API that can send a message via different channels, such as SMS, Facebook Messenger, Viber, and WhatsApp. The API is in Beta right now, so we need to install the beta version of the Vonage Node.js SDK.
+You may already be familiar with the Vonage [SMS API](https://developer.vonage.com/messaging/sms/overview), but one of our newer APIs can also send text messages—the [Vonage Messages API](https://developer.vonage.com/messages/overview). It is a multi-channel API that can send a message via different channels, such as SMS, Facebook Messenger, Viber, and WhatsApp. We need to install the Vonage Node.js SDK.
 
 ```
-npm install @vonage/server-sdk@beta
+npm install @vonage/server-sdk
 ```
 
 While Vonage has two different APIs capable of sending and receiving SMS, you can only use one at a time because it will change the format of the webhooks you receive.
@@ -61,13 +61,13 @@ After ngrok runs, it will give you a random-looking URL that we'll use as the ba
 
 ### Create a Messages-Enabled Vonage Application
 
-To interact with the Messages API, we'll need to create a Vonage API application to authenticate our requests. Think of applications more like containers, metadata to group all your data on the Vonage platform. We'll [create one using the Vonage API Dashboard](https://dashboard.nexmo.com/applications/new). 
+To interact with the Messages API, we'll need to create a Vonage API application to authenticate our requests. Think of applications more like containers, and metadata to group all your data on the Vonage platform. We'll [create one using the Vonage API Dashboard](https://dashboard.nexmo.com/applications/new). 
 
-Give it a name and click on *Generate public and private key*.
-You'll be prompted to save a keyfile to disk—the private key. It's usually a good call to keep it in your project folder, as you'll need it later.\
-Applications work on a public / private key system, so when you create an application, a public key is generated and kept with Vonage, and a private key is generated, not kept with Vonage, and returned to you via the creation of the application. We'll use the private key to authenticate our library calls later on.
+Give it a name and click on *Generate public and private keys*.
+You'll be prompted to save a key file to disk—the private key. It's usually a good call to keep it in your project folder, as you'll need it later.
+Applications work on a public/private key system, so when you create an application, a public key is generated and kept with Vonage, and a private key is generated, not kept with Vonage, and returned to you via the creation of the application. We'll use the private key to authenticate our library calls later on.
 
-Next, you need to enable the *Messages* capability and provide an inbound URL and a status URL.\
+Next, you need to enable the *Messages* capability and provide an inbound URL and a status URL.
 Use the ngrok URL you got in the previous step and fill in the fields, appending `/webhooks/inbound` and `/webhooks/status`, for the respective fields. When a message reaches the Messages API, the data about it is sent to the *inbound URL*. When you send a message using the API, the data about the message status gets sent to the *status URL*.
 
 Finally, link one or more of your virtual numbers to this application. Any messages received on these numbers will be passed along to your *inbound URL*.
@@ -84,10 +84,11 @@ touch index.js
 
 ```javascript
 import Vonage from '@vonage/server-sdk'
+import SMS from '@vonage/server-sdk/lib/Messages/SMS.js'
 
 const vonage = new Vonage({
-  applicationId: VONAGE_APPLICATION_ID,
-  privateKey: VONAGE_APPLICATION_PRIVATE_KEY_PATH
+  apiKey: VONAGE_API_KEY,
+  apiSecret: VONAGE_API_SECRET
 })
 ```
 
@@ -95,27 +96,20 @@ Replace the values in all caps with the application id for the Vonage applicatio
 
 ### Send the SMS Message
 
-To send an SMS message with the Messages API, we'll use the `vonage.channel.send` method of the Vonage node library. This method accepts objects as parameters, with information about the recipient, sender, and content. They vary for the different channels, so you'll need to check the [API documentation](https://developer.nexmo.com/api/messages-olympus) for the other channels mentioned.
+To send an SMS message with the Messages API, we'll use the `vonage.messages.send` method of the Vonage node library. This method accepts objects as parameters, with information about the recipient, sender, and content. They vary for the different channels, so you'll need to check the [API documentation](https://developer.vonage.com/api/messages-olympus) for the other channels mentioned.
 
 For SMS, the type of recipient and sender is `sms`, and the object has to contain a `number` property. The `content` object accepts a `type` of `text` and a text message. The callback returns an error and response object, and we'll log messages about the success or failure of the operation.
 
 ```javascript
 const text = "👋Hello from Vonage";
 
-vonage.channel.send(
-  { "type": "sms", "number": TO_NUMBER },
-  { "type": "sms", "number": "Vonage" },
-  {
-    "content": {
-      "type": "text",
-      "text": text
-    }
-  },
-  (err, responseData) => {
+vonage.messages.send(
+  new SMS(text, TO_NUMBER, "Vonage"),
+  (err, data) => {
     if (err) {
-      console.log("Message failed with error:", err);
+      console.error("Message failed with error:", err);
     } else {
-      console.log(`Message ${responseData.message_uuid} sent successfully.`);
+      console.log(`Message ${data.message_uuid} sent successfully.`);
     }
   }
 );
@@ -141,7 +135,7 @@ We'll create our webserver using `express` because it's one of the most popular 
 npm install express
 ```
 
-Let's create a new file for this, call it `server.js`:
+Let's create a new file for this; call it `server.js`:
 
 ```
 touch server.js
@@ -194,16 +188,15 @@ Now send an SMS message from your phone to your Vonage number. You should see th
 
 ```bash
 {
+  to: '447401234567',
+  from: '447312277109',
+  channel: 'sms',
   message_uuid: 'ecb3f7ab-5f70-4de1-9003-1e59a7270782',
-  to: { type: 'sms', number: '447401234567' },
-  from: { type: 'sms', number: '447312277109' },
-  timestamp: '2021-07-07T15:30:26.706Z',
+  timestamp: '2022-08-08T23:00:32Z',
   usage: { price: '0.0057', currency: 'EUR' },
-  message: {
-    content: { type: 'text', text: 'Chuck Norris can hear text messages.' },
-    sms: { num_messages: '1' }
-  },
-  direction: 'inbound'
+  message_type: 'text',
+  text: 'Chuck Norris can hear text messages.',
+  sms: { num_messages: '1' }
 }
 ```
 

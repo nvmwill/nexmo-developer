@@ -171,11 +171,11 @@ The Custom Code node lets you use JavaScript code to produce a particular value,
 
 I used the Custom Code node in a couple of places in my adventure story. One of these was where I wanted to remove any leading zeros (if present) from the mobile number and country code provided by the user, and then combine them into a single value and assign it to an output parameter, which I could then use in the Send SMS node to send the secret password.
 
-![A screenshot showing an the setup for a Custom Code Node, in this case the Set SMS Number part of the flow, which uses a regex to removing leading zeroes from the values of the $MOBILE_NUMBER and $COUNTRY_CODE paramters, and then combines them into a single ouput parameter SMS_TO_NUMBER](/content/blog/choose-your-own-adventure-with-vonage-ai-studio/custom-code-node-screenshot.png "AI Studio screenshot: Custom Code Node")
+![A screenshot showing an the setup for a Custom Code Node, in this case the Set SMS Number part of the flow, which uses Javascript type conversion to removing leading zeroes from the values of the $MOBILE_NUMBER and $COUNTRY_CODE paramters, and then combines them into a single ouput parameter SMS_TO_NUMBER](/content/blog/choose-your-own-adventure-with-vonage-ai-studio/custom-code-node-screenshot.png "AI Studio screenshot: Custom Code Node")
 
 Another use of the Custom Code node in my flow was to mimic a dice roll during a battle with the dragon.
 
-![A screenshot showing an the setup for a Custom Code Node, in this case the Roll Dice part of the flow, which uses Math.random to removing leading zeroes from the values of the $MOBILE_NUMBER and $COUNTRY_CODE paramters, and then sets the result as the new value of the ouput parameter DRAGON_HEALTH_POINTS](/content/blog/choose-your-own-adventure-with-vonage-ai-studio/custom-code-node-screenshot-2.png "AI Studio screenshot: Custom Code Node")
+![A screenshot showing an the setup for a Custom Code Node, in this case the Roll Dice part of the flow, which uses Math.random to determine the outcome of a battle with the dragon, and then sets the result as the value of the output parameter DRAGON_DEFEATED](/content/blog/choose-your-own-adventure-with-vonage-ai-studio/custom-code-node-screenshot-2.png "AI Studio screenshot: Custom Code Node")
 
 There are many other potential use-cases for the Custom Code node.
 
@@ -205,7 +205,7 @@ Want to go on an adventure where you can wander through enchanted forests, encou
 
 * UK: +44 (0)7418 371898
 * US: +1 (0)201 464 3585
-* AUS: +61 (0)485828863
+* AUS: +61 (0)485828854
 
 Have fun and good luck on your adventure!
 

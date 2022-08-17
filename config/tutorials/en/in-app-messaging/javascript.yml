@@ -29,7 +29,7 @@ tasks:
   - client-sdk/create-conversation
   - client-sdk/in-app-messaging/create-users
   - client-sdk/in-app-messaging/add-users-to-conversation
-  - client-sdk/in-app-messaging/generate-jwts
+  - client-sdk/generate-jwts-alice-and-bob
   - client-sdk/in-app-messaging/create-ui
   - client-sdk/in-app-messaging/authenticate-users
   - client-sdk/in-app-messaging/join-conversation

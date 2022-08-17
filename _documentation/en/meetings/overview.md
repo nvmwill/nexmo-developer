@@ -14,10 +14,18 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
 
 ## Contents
 
+* [Meetings API or Video API?](#meetings-api-or-video-api): Determine which API is more suited to your project.
 * [Terminology](#terminology): Key terms and definitions for the Meetings API.
 * [Room Types](#room-types): Defines the types of rooms available.
+* [Website Embed](#website-embed): Use an iFrame to embed a Meeting into a website.
 * [Code Snippets](#code-snippets): Code and instructions for using the Meetings API.
 * [Reference](#reference): Further information about the Meetings API.
+
+## Meetings API or Video API?
+
+Both the Meetings API and the Video API allow you to use high-quality interactive video meetings in your web applications. The Meetings API is ideal for those who want plug and play meetings with limited customization; it takes only a few lines of code to generate a meeting and embed it into your application. The Video API is ideal for those who want more customization and flexibility, but it will take more development effort.
+
+Take a look at the [Video API](https://tokbox.com/developer/) documentation for more information.
 
 ## Terminology
 
@@ -32,11 +40,11 @@ The Meetings API allows you to integrate real-time, high-quality interactive vid
   * **Session**: defined as all events that occur during this time, from when the first participant joins, until the last to leave.
   * **Guest URL**: meeting room URL used by guests.
   * **Host URL**: meeting room URL with meeting administration capabilities used by the host.
-  * **Theme**: the set of colors, logos and styles to apply to given rooms in the account. 
+  * **Theme**: the set of colors, logos and styles to apply to given rooms in the account.
 * **Features**:
-  * **Whitelabel**: ability to create rooms with specific branding or color schemes. 
+  * **Whitelabel**: ability to create rooms with specific branding or color schemes.
   * **Chat**: space for sending written messages that are visible to all attendees in the room.
-  * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request.
+  * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request. You can also choose to only record the owner of the room.
   * **Room Management**: you can delete, update or retrieve information about rooms.
   * **Callbacks**: allow you to receive information about a session.
 
@@ -54,6 +62,39 @@ There are two room types:
   * Typically linked to a recurring meeting, person, or resource.
   * Will require you to specify an expiration date (in ISO format).
   * Enables you to request that a room is automatically deleted ten minutes after the last participant leaves the room.
+
+## Website Embed
+
+A meeting created through the API can be embedded into your website. To do this, generate the meeting link and create an iFrame using that link:
+
+``` HTML
+<iframe src="Meeting link here" title="Embedded Meeting" allow="camera;microphone"></iframe>
+```
+
+This is currently supported both desktop and mobile using the following browsers:
+
+* Desktop - Supported on Firefox and Chrome based browsers.
+* iOS 14+ - Supported on Safari, Edge or Firefox.
+* Android - Supported on Chrome or Samsung browser v14+.
+
+The meeting can be displayed in any size above 360PX, however the number of features available depends on the size of the iFrame:
+
+Feature | 360-500PX | 500-600PX | 600PX+
+-- | :--: | :--: | :--:
+Microphone | ✅ | ✅ | ✅
+Video | ✅ | ✅ | ✅
+Record | ❌ ¹ | ✅ | ✅
+Share Screen | ❌ | ✅ | ✅
+Reactions | ❌ | ❌ | ✅
+Privacy | ❌ | ✅ | ✅
+Whiteboard | ❌ | ❌ | ✅
+Watch Together | ❌ | ❌ | ✅
+Round Table | ❌ | ❌ | ✅
+End Meeting | ✅ | ✅ | ✅
+
+¹ Recording is still available in 360-500PX meetings by setting the ``auto_record`` parameter in the API call.
+
+> You will also need to send an email request to the [Meetings API team](mailto:meetings-api@vonage.com) to whitelabel the domain of the website the iFrame is used in.
 
 ## Code Snippets
 

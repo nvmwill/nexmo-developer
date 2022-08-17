@@ -7,11 +7,11 @@ description: In this step you authenticate your users via the JWTs you created e
 
 Your users must be authenticated to be able to participate in the Conversation. You perform this authentication using the Conversation ID and the JWTs you generated in a previous step.
 
-Declare the following variables at the top of your `chat.js` file and populate `USER1_JWT`, `USER2_JWT` and `CONVERSATION_ID` with your own values:
+Declare the following variables at the top of your `chat.js` file and populate `ALICE_JWT`, `BOB_JWT` and `CONVERSATION_ID` with your own values:
 
 ```javascript
-const USER1_JWT = '';
-const USER2_JWT = '';
+const ALICE_JWT = '';
+const BOB_JWT = '';
 const CONVERSATION_ID = '';
 
 const messageTextarea = document.getElementById("messageTextarea");
@@ -30,11 +30,11 @@ let messagesCount = 0;
 let messageDate;
 
 function authenticate(username) {
-  if (username == "USER1_NAME") {
-    return USER1_JWT;
+  if (username == "Alice") {
+    return ALICE_JWT;
   }
-  if (username == "USER2_NAME") {
-    return USER2_JWT;
+  if (username == "Bob") {
+    return BOB_JWT;
   }
   alert("User not recognized");
 }
