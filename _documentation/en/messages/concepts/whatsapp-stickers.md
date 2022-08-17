@@ -6,9 +6,7 @@ navigation_weight: 7
 
 # Using WhatsApp Stickers with the Messages API
 
-Stickers allow businesses to communicate with end users in an informal way similar to emojis, but with larger images and which can be customized to represent a brand.
-
-To send a sticker via the Messages API it is necessary to:
+Stickers allow businesses to communicate with end users in an informal way similar to emojis, but with larger images and which can be customized to represent a brand. To send a sticker via the Messages API it is necessary to:
 
 1. Get the Sticker ID from a sticker pack using the WhatsApp Provisioning API.
     * [Get Deployment ID](#get-deployment-id)
