@@ -90,7 +90,7 @@ We'll need to add two gems: [Vonage Video API Ruby SDK](https://github.com/opent
 
 Open the `Gemfile` and add the gems:
 
-```
+```ruby
 gem 'opentok'
 gem 'dotenv-rails'
 ```
@@ -157,7 +157,7 @@ Before we run the migration to create this column in our database, we'll need to
 
 Open the `db/migrate` directory and find the file called:  TIMESTAMP_create_watch_parties.rb
 
-```
+```ruby
 //In TIMESTAMP_create_watch_parties.rb
 class CreateWatchParties < ActiveRecord::Migration[6.1]
   def change
@@ -191,14 +191,14 @@ Open `app/models/watch_party.rb`
 
 First, we need to access our Vonage Video API functionality by instantiating an instance of the OpenTok Ruby SDK. We'll pass our API_KEY and API_SECRET from the credentials section above through ENV environment variables
 
-```
+```ruby
 require 'opentok'
 @opentok = OpenTok::OpenTok.new(ENV['OPENTOK_API_KEY'], ENV['OPENTOK_API_SECRET'])
 ```
 
 Now we can add those Class methods. The Session#create_or_load_session_id method will check to see if there already is a session ID. If there is an ID, it will use that ID. If not, it will generate a new one.
 
-```
+```ruby
 def self.create_or_load_session_id
   unless WatchParty.any?
     return @session_id = create_new_session
@@ -217,7 +217,8 @@ end
 
 The above method also references an additional method we need to create called `create_new_session` that does the work of creating a new session if one does not exist:
 
-```def
+```ruby
+def
   session = @opentok.create_session
   @session_id = session.session_id
 end
@@ -225,7 +226,7 @@ end
 
 Lastly, we will create a method that will assign the right token for each participant:
 
-```
+```ruby
 def self.create_token(session_id)
   @token = @opentok.generate_token(session_id)
 end
@@ -233,7 +234,7 @@ end
 
 Your full WatchParty model should look like this :
 
-```
+```ruby
 class WatchParty < ApplicationRecord
   require 'opentok'
 
@@ -276,7 +277,7 @@ Create the `.env` file from the root of the `video-express` project:
 
 Inside define our ENV variables:
 
-```
+```ruby
 OPENTOK_API_KEY=''
 OPENTOK_API_SECRET=''
 MODERATOR_NAME=''
@@ -292,7 +293,7 @@ Don't forget to add a `MODERATOR_NAME` and `PARTY_PASSWORD`to use in the login p
 The user will see two pages: home and party. But we also need to catch the info from the login form to check that the password is correct and if the user is the moderator. So we will create two get requests and one post:
 
 ````
-```
+```ruby
 Rails.application.routes.draw do
   get '/', to: 'watch_party#home'
   get '/party', to: 'watch_party#party'
@@ -330,7 +331,7 @@ So with a bit of Rails magic with some Vivid magic, we have everything we need. 
 
 Secondly, the form doesn't help us actually pass the data to the server. So we need to make use of the Rails helper `form_with`. Altogether it looks like this:
 
-```
+```ruby
 <div class="card-wrapper">
   <vwc-card>
     <div slot="main" id="box">
@@ -367,7 +368,7 @@ Because although we have Vivid in our project, we haven't actually imported it i
 
 Now if you open the page it will work. But it's still pretty ugly. So let's style it. In `app/assets/stylesheets/watch_party.scss` let's add some css:
 
-```
+```ruby
 // Home Page Styles
 
 .card-wrapper {
@@ -395,7 +396,7 @@ form {
 
 Before we move on, let's add the beautiful Vonage background in `app/assets/stylesheets/application.scss`
 
-```
+```ruby
 body {
   background: linear-gradient(90deg, #9DD2FE 4.86%, #8728FB 96.11%);
   margin: 0px;
@@ -406,7 +407,7 @@ body {
 
 We have a form but we want to make sure only real fans aka our friends can join our watch party! So we'll add some Rails Strong Parameters logic to catch the `name` and `password` from the parameters sent in the form on the home page.
 
-```
+```ruby
 class WatchPartyController < ApplicationController
   def home
   end
@@ -441,7 +442,7 @@ First, let's take a look at what we're building. This is the Party page in the "
 
 Let's start with the bones of the page, the HTML. We have 3 components: a header, the video call, and a toolbar. But for now we'll just leave comments where the `header` and `toolbar` will go: Add this to your `app/views/video/party.html.erb`:
 
-```
+```ruby
 <header>
   <!-- Header Will Go Here -->
 </header>
@@ -464,7 +465,7 @@ The Vonage Video API gives developers full control of customizing their video la
    `<script src="https://static.opentok.com/v1/js/video-express.js"></script>`
 2. Now run create the room with the sample code from the Video Express documentation. Note that we pass the additional parameter `participantName`. Video Express is lightweight but comes with some options, explore the docs!
 
-```
+```ruby
     <script>
       const room = new VideoExpress.Room({
        apiKey: '<%= @api_key %>', // add your OpenTok API key
@@ -481,7 +482,7 @@ The Vonage Video API gives developers full control of customizing their video la
 
 The final code of the `party.html.erb` looks like this:
 
-```
+```ruby
 <script src="https://static.opentok.com/v1/js/video-express.js"></script>
 <header>
   <!-- Header Will Go Here -->
@@ -512,7 +513,7 @@ So we need to set our OpenTok variables in the `WatchParty Controller` and pass 
 
 In the WatchParty Controller we need to add the `set_opentok_vars` action"
 
-```
+```ruby
     def set_opentok_vars
       @api_key = ENV['OPENTOK_API_KEY']
       @api_secret = ENV['OPENTOK_API_SECRET']
@@ -525,7 +526,7 @@ In the WatchParty Controller we need to add the `set_opentok_vars` action"
 
 We will use the `before_action` which will call the method before entering the `party` action. So the full Controller looks like:
 
-```
+```ruby
 class WatchPartyController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_opentok_vars
@@ -566,7 +567,7 @@ Now if we refresh… we see that our camera turns on and the audio goes all weir
 
 Let's add some CSS from the Video Express boilerplate for the video screen. We target the #roomContainer and give it full width and full height, minus the header. We also add a bit of CSS to tell Video Express where to put local self-view and the screenshare when it is triggered.
 
-```
+```ruby
 // Video Express Styles
 #roomContainer {
   width: 100vw;
