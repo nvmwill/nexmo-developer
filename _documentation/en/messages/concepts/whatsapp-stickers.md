@@ -16,6 +16,8 @@ Stickers allow businesses to communicate with end users in an informal way simil
 2. Send a custom message type with the sticker ID inside using the Messages API.
     * [Sending Stickers via Messages API](#sending-stickers-via-messages-api)
 
+> Please note: WhatsApp numbers provisioned on WhatsApp Cloud Hosting currently do not support sending stickers. For more information, please see [WhatsApp Number Hosting](/messages/concepts/whatsapp#whatsapp-number-hosting).
+
 ## Retrieve the Sticker ID
 
 You can retrieve the ID of your chosen sticker via the [WhatsApp Provisioning API](/api/whatsapp-provisioning).
@@ -151,7 +153,7 @@ The property ``id`` contains the value we need to provide in a Messages API requ
 It is possible to send stickers via custom content as below:
 
 ```curl
-curl -X POST https://messages-sandbox.nexmo.com/v1/messages \
+curl -X POST https://api.nexmo.com/v1/messages \
 -u 'apiKey:apiSecret' \
 -H 'Content-Type: application/json' \
 -H 'Accept: application/json' \
