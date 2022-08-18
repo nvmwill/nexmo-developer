@@ -14,61 +14,10 @@ By using the Campaign API, you can create meaningful campaigns that reach custom
 
 ## Contents
 
-* [Getting Started](#getting-started)
 * [Concepts](#concepts)
 * [Code Snippets](#code-snippets)
-* [Use Cases](#use-cases)
+* [Guides](#guides)
 * [Reference](#reference)
-
-## Getting Started
-
-### Pre-Requisites
-
-In order to use the Campaign API you will need:
-
-* An account set up in the [Vonage Dashboard](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
-* An API Key and Secret, which can be found on the [dashboard](https://dashboard.nexmo.com/).
-* A [JWT](https://developer.vonage.com/getting-started/concepts/authentication#json-web-tokens).
-
-### Channel Setup
-
-The Campaign API is compatible with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview). You will need to have configurations set for the channels you want to use:
-
-Channel | Requirements
--- | --
-SMS | If you want to use SMS you will need a number linked to your [dashboard](https://dashboard.nexmo.com/) which enables SMS messaging.
-MMS | 
-Viber Business Messages | Contact [Sales](https://www.vonage.com/communications-apis/contact-api/) for your own verified Viber Business Account.
-WhatsApp | If you want to use WhatsApp you will need a WhatsApp number linked to your account. This can be done via Embedded sign up on the dashboard [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), or via the manual onboarding process.
-Facebook Messenger | If you wish to use Facebook Messenger, you will need a Facebook Messenger account set up and you will need your messenger ID. Once you link your Facebook account and select your business page in the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), you will see your Facebook ID listed.
-
-### Messages API Setting
-
-Go to [API Settings](https://dashboard.nexmo.com/settings) page of your dashboard and ensure your SMS settings are using the Messages API instead of the SMS API:
-
-![Dashboard SMS Settings](/images/dashboard-sms-settings.png)
-
-### Create an Application
-
-You can create an application in the [dashboard](https://dashboard.nexmo.com/applications). When you create your application you will be able to enter your inbound and status URLs; these should be:
-
-* INBOUND URL: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/recipients/responses?application_id=yourapplicationID``
-* STATUS URL: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/actions/status?application_id=yourapplicationID``
-
-You can also generate private and public keys which you will need to create your JWT [here](https://developer.vonage.com/jwt).
-
-In your application settings you will need to link any numbers you wish to use, and any social channels. Once created your application will generate a unique ID. Save this value as you will need it later.
-
-### Integrations
-
-* Check to see if 'Integrations' are enabled in the dashboard. Should show up in the left hand nav. Then need to create a Vonage Integration.
-* If you want to use Salesforce you will need to add a Salesforce Integration.
-
-Setting up an integration requires name (name of your integration) Application ID and Private Key encoded in base64. Your Private Key created when you set up your application can be converted e.g. using https://www.base64encode.org/
-
-Once you have your Integration set up it will look like this → (screenshot needed)
-
-> Will integrations be available to everyone by the time these docs go live?
 
 ## Concepts / Terminology
 
@@ -90,16 +39,15 @@ Once you have your Integration set up it will look like this → (screenshot nee
 
 ## Code Snippets
 
-* Before You Begin
-* How to Send an SMS Notification campaign
-* How to Send a WhatsApp campaign with Buttons (ecommerce)
-* How to Create a Voice Campaign with Studio AI (for EA and probably Beta you HAVE to use Studio)
-* How to Manage Unsubscribes
-* How to Upload a List from Salesforce
+```code_snippet_list
+product: campaign
+```
 
-## Use Cases
+## Guides
 
-Content here
+```concept_list
+product: voice/voice-api
+```
 
 ## Reference
 
