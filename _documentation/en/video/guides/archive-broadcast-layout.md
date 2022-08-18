@@ -36,7 +36,7 @@ There are four predefined layout types available: best fit, picture-in-picture, 
 
 This is the default initial layout type. This is a tiled layout, which scales according to the number of videos.
 
-The number of columns and rows of varies depending on the number of streams in the broadcast.
+The number of columns and rows varies depending on the number of streams in the broadcast.
 
 For example, the following illustrates the layout when there are 1, 2, 4, or 5 streams in a session:
 
@@ -45,7 +45,7 @@ For example, the following illustrates the layout when there are 1, 2, 4, or 5 s
 <img src="/images/video/bestFit4.png" alt="Vonage video API default layout 4" style="width: 20%;">
 <img src="/images/video/bestFit5.png" alt="Vonage video API default layout 5" style="width: 20%;">
 
-Layout classes on these streams will have no effect on the layout. Each position in the list will be translated to a position in the grid.
+Layout classes on these streams will not affect the layout. Each position in the list will be translated to a position in the grid.
 
 This layout supports up to 16 streams (in a grid).
 
@@ -312,7 +312,7 @@ You can get the layout class list for all streams in a session by calling the RE
 https://api.opentok.com/v2/project/{appId}/session/{sessionId}/stream/
 ```
 
-The response includes JSON data, which includes an `items` property, which is array containing layout information for streams in the session:
+The response includes JSON data, which includes an `items` property, which is an array containing layout information for streams in the session:
 
 ```json
 {
@@ -347,7 +347,7 @@ You can set this screen-sharing layout type (`screenshareType`) to one of the fo
 * `bestFit` — This uses the [best fit](#best-fit) layout. However, only screen-sharing streams are included in the layout.
 * `horizontalPresentation` — This uses the [horizontal presentation](#horizontal-presentation) layout. However, the screen-sharing stream (not a stream with a `focus` class applied) will occupy the focus position in the layout.
 * `verticalPresentation` — This uses the [vertical presentation](#vertical-presentation) layout. However, the screen-sharing stream (not a stream with a `focus` class applied) will occupy the focus position in the layout.
-* `pip` — This uses the [Picture-in-Picture](#picture-in-picture) layout. However, the screen-sharing stream (not a stream with a `full` class applied) will occupy the full position in the layout. The smaller video in the layout will be determined based on [stream prioritization rules](#stream-prioritization-rules). For example, if the client that publishes the screen-sharing stream is also publishing a stream with a camera video source, that video will occupy the smaller video position (unless another stream has a higher prioritization, for example because it has been assigned a layout class).
+* `pip` — This uses the [Picture-in-Picture](#picture-in-picture) layout. However, the screen-sharing stream (not a stream with a `full` class applied) will occupy the full position in the layout. The smaller video in the layout will be determined based on [stream prioritization rules](#stream-prioritization-rules). For example, if the client that publishes the screen-sharing stream is also publishing a stream with a camera video source, that video will occupy the smaller video position (unless another stream has a higher prioritization, for example, because it has been assigned a layout class).
 
 When there is a screen-sharing stream live in the session, the archive or broadcast uses the screen-sharing layout type you specify. When there is no screen-sharing video in the session, the archive or broadcast uses the best fit layout. (When you specify a `screenshareType`, you must set the main `layout type` to `bestFit`.
 
@@ -355,7 +355,7 @@ When there is a screen-sharing stream live in the session, the archive or broadc
 
 Composed archives and live streaming broadcasts can include up to 16 video streams at a time.
 
-The layout composer uses the following rules to determine the prioritization of which video streams are included in the archive or broadcast, and to determine how the streams will be ordered and added to the virtual DOM.
+The layout composer uses the following rules to determine the prioritization of which video streams are included in the archive or broadcast and to determine how the streams will be ordered and added to the virtual DOM.
 
 Streams are categorized into two tiers:
 
@@ -371,7 +371,7 @@ The stream prioritization is determined:
 * Lower-tier streams (streams that have *not* been assigned layout classes) are then prioritized next in this order:
   * Screen-sharing streams
   * Non-screen-sharing streams that are published by clients that are also publishing screen-sharing streams
-  * Streams that are published by clients that are also publishing upper-tier streams (streams that have been assigned layout classes)
+  * Streams that are published by clients that are also publishing upper-tier streams (streams that have been assigned, layout classes)
   * All other streams (ordered by the time they are added to the list of streams to be included in the archive or broadcast)
   
 The video streams included in the composed archive or broadcast are chosen based on their prioritization.

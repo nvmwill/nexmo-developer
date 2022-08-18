@@ -23,7 +23,7 @@ By default, archives arrange videos from the session in a tiled layout. For exam
 
 This is known as the "best fit" layout. Alternately, you can select from a number of other predefined layouts.
 
-For the other layouts, you assign a class name to each Vonage Video streams to determine how it will appear in the layout. (See [Predefined layout types](video/guides/archive-broadcast-layout/#predefined-layout-types ).)
+For the other layouts, you assign a class name to each Vonage Video stream to determine how it will appear in the layout. (See [Predefined layout types](video/guides/archive-broadcast-layout/#predefined-layout-types ).)
 
 
 You can also define your own custom layouts using CSS. See [Defining custom layouts](/video/guides/archive-broadcast-layout/#custom-layouts).
