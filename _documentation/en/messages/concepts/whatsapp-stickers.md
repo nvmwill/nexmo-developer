@@ -32,7 +32,7 @@ GET https://api.nexmo.com/v0.1/whatsapp-manager/deployments
 
 A successful response will contain the property ``deployment_id``:
 
-``` json
+```json
 {
     "deployment_id":"aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
     "country_code":"44",
@@ -154,21 +154,21 @@ It is possible to send stickers via custom content as below:
 
 ```curl
 curl -X POST https://api.nexmo.com/v1/messages \
--u 'apiKey:apiSecret' \
--H 'Content-Type: application/json' \
--H 'Accept: application/json' \
--d '{
-   "from":"14157386102",
-   "to":"44XXXXXXXXX",
-   "channel":"whatsapp",
-   "message_type":"custom",
-   "custom":{
-      "type":"sticker",
-      "sticker":{
-         "id":"13aaecab-2485-4255-a0a7-97a2be6906b9"
-      }
-   }
-}'
+    -H 'Authorization: Bearer '$JWT\
+    -H 'Content-Type: application/json' \
+    -H 'Accept: application/json' \
+    -d '{
+        "from":"14157386102",
+        "to":"44XXXXXXXXX",
+        "channel":"whatsapp",
+        "message_type":"custom",
+        "custom":{
+            "type":"sticker",
+            "sticker":{
+                "id":"13aaecab-2485-4255-a0a7-97a2be6906b9"
+            }
+        }
+    }'
 ```
 
 > Please note: Animated stickers are not supported.
