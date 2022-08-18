@@ -1,5 +1,38 @@
 [
   {
+    "title": "Community Member Spotlight: Kiran Krishnan",
+    "description": "A community spotlight of Vonage API developer Kiran Krishnan. In this article we learn about Kiran and how he integrated Vonage with Supabase.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/community-member-spotlight-kiran-krishnan/community-spotlight-kiran.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-18 14:02:36 UTC",
+    "updated_at": "2022-08-18 14:02:38 UTC",
+    "category": {
+      "name": "Community",
+      "plural": "Community Posts",
+      "slug": "community",
+      "color": "#fa7454"
+    },
+    "tags": [
+      "opensource",
+      "community"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/18/community-member-spotlight-kiran-krishnan",
+    "filename": "community-member-spotlight-kiran-krishnan"
+  },
+  {
     "title": "Experience Composer Sample Application With Vonage Video API",
     "description": "This article will describe two applications of the many ways developers can use Experience Composer: publishing to a Vonage Video API Session and capturing your website’s entire layout in an archived Vonage Video API stream.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/experience-composer-sample-application-with-vonage-video-api/video-stream-experience-composer.png",
