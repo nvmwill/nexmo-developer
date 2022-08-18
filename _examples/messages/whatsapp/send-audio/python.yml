@@ -6,6 +6,6 @@ dependencies:
 code:
     source: .repos/vonage/vonage-python-code-snippets/messages/whatsapp/send_audio.py
     from_line: 16
-    to_line: 29
+    to_line: 32
 file_name: send_audio.py
 run_command: 'python3 send_audio.py'
