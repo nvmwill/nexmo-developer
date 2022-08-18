@@ -1,5 +1,258 @@
 [
   {
+    "title": "Experience Composer Sample Application With Vonage Video API",
+    "description": "This article will describe two applications of the many ways developers can use Experience Composer: publishing to a Vonage Video API Session and capturing your website’s entire layout in an archived Vonage Video API stream.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/experience-composer-sample-application-with-vonage-video-api/video-stream-experience-composer.png",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "bio": "Megna is a software engineering intern at Vonage, based out of San Francisco. She is a third year computer engineering student at the University of Illinois Urbana-Champaign. Megna is passionate about learning about innovations and wants to build innovative technology for the future generations.",
+      "name": "Megna Biederman",
+      "image_url": "/content/images/megna-biederman.jpg",
+      "short_name": "megna-biederman"
+    },
+    "published": true,
+    "published_at": "2022-08-17 07:19:49 UTC",
+    "updated_at": "2022-08-17 07:19:50 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "video-api",
+      "nodejs"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/17/experience-composer-sample-application-with-vonage-video-api",
+    "filename": "experience-composer-sample-application-with-vonage-video-api"
+  },
+  {
+    "title": "Office Hours Reservation Using Node.js and the Vonage Messages API",
+    "description": "A web application that allows students to reserve office hour time slots with their professors. Once an office hour reservation is booked, the student will receive a text message confirming the reservation using Vonage Messages API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/office-hours-reservation-using-node-js-and-the-vonage-messages-api/office-hours-reservation.png",
+    "author": {
+      "bio": "Zoe Mithaug is a Developer Relations Intern @ Vonage. She is a 4th-year undergrad student studying at the University of Florida.\n\nShe has a passion for programming, software development, video game development, animation, and digital design.",
+      "hidden": false,
+      "image_url": "/content/images/zoe.jpg",
+      "name": "Zoe Mithaug",
+      "twitter": "zoemithaug",
+      "spotlight": false,
+      "title": "Developer Relations Intern",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "zoe-mithaug"
+    },
+    "published": true,
+    "published_at": "2022-08-16 06:58:31 UTC",
+    "updated_at": "2022-08-16 06:58:32 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "node",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/16/office-hours-reservation-using-node-js-and-the-vonage-messages-api",
+    "filename": "office-hours-reservation-using-node-js-and-the-vonage-messages-api"
+  },
+  {
+    "title": "Vonage DevRel Looks Ahead to a Better Than Ever Dreamforce",
+    "description": "The low down on all you need to know about Vonage at Dreamforce 2022",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce/dreamforce-22.png",
+    "author": {
+      "bio": "Lucinda joined Vonage in January 2022 as the EMEA Community Manager. Lucinda has over 10 years experience in event management, with a recent focus on diversity and inclusion. She lives in Hampshire in the UK with her husband and Oggy the labrador.  ",
+      "hidden": false,
+      "image_url": "/content/images/1548775173293.jpeg",
+      "name": "Lucinda Bone",
+      "spotlight": false,
+      "title": "Community Manager, EMEA",
+      "noteworthy": false,
+      "team": false,
+      "alumni": false,
+      "short_name": "lucinda-bone"
+    },
+    "published": true,
+    "published_at": "2022-08-15 07:25:40 UTC",
+    "updated_at": "2022-08-15 07:25:41 UTC",
+    "category": {
+      "name": "Event",
+      "plural": "Events",
+      "slug": "event",
+      "color": "#e6ae00"
+    },
+    "tags": [
+      "dreamforce"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/15/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce",
+    "filename": "vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce"
+  },
+  {
+    "title": "Announcing the Video Champions Program",
+    "description": "Come and test the Vonage Meetings API for free with the Video Champions Program",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-video-champions-program/testing-meetings-api.png",
+    "author": {
+      "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
+      "hidden": false,
+      "image_url": "/content/images/helena-bower.jpg",
+      "name": "Helena Bower",
+      "spotlight": false,
+      "title": "Technical Writer",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "helena-bower"
+    },
+    "published": true,
+    "published_at": "2022-08-11 08:56:46 UTC",
+    "updated_at": "2022-08-11 08:56:47 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "meetings-api",
+      "video",
+      "announcement"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/11/announcing-the-video-champions-program",
+    "filename": "announcing-the-video-champions-program"
+  },
+  {
+    "title": "Vonage Video Express with Ruby on Rails Part 2",
+    "description": "A ruby on rails tutorial that implements the Video Express javascript library for fast and easy WebRTC video conferencing applications.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-video-express-with-ruby-on-rails-part-2/video-express-ruby_part_2.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-10 09:29:42 UTC",
+    "updated_at": "2022-08-10 09:29:43 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "video-express",
+      "ruby-on-rails"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/10/vonage-video-express-with-ruby-on-rails-part-2",
+    "filename": "vonage-video-express-with-ruby-on-rails-part-2"
+  },
+  {
+    "title": "Vonage Video Express with Ruby on Rails Part 1",
+    "description": "A ruby on rails tutorial that implements the Video Express javascript library for fast and easy WebRTC video conferencing applications.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-video-express-with-ruby-on-rails-part-1/video-express-ruby_part-1.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-09 21:18:46 UTC",
+    "updated_at": "2022-08-09 21:18:46 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "video-express",
+      "ruby-on-rails"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/09/vonage-video-express-with-ruby-on-rails-part-1",
+    "filename": "vonage-video-express-with-ruby-on-rails-part-1"
+  },
+  {
+    "title": "Version 3.0.0 of the Vonage Python SDK is now available!",
+    "description": "Vonage's Python Server SDK Version 3.0.0 is now available. Find out what's new!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-python-sdk-version-v3/python_sdk_updates.png",
+    "author": {
+      "team": true,
+      "name": "Max Kahan",
+      "image_url": "https://github.com/maxkahan.png",
+      "bio": "Max is a Python Developer Advocate and Software Engineer who's passionate about technology. Interested in developer experience, machine learning, artificial intelligence, cloud development, enterprise messaging and swing dance! His training is in Physics, but now he uses his problem-solving skills daily in the technology industry.",
+      "title": "Python Developer Advocate",
+      "linkedin_url": "https://www.linkedin.com/in/maxkahan/",
+      "twitter": "max_does_tech",
+      "github_url": "https://github.com/maxkahan",
+      "short_name": "max-kahan"
+    },
+    "published": true,
+    "published_at": "2022-08-08 11:48:15 UTC",
+    "updated_at": "2022-08-08 11:48:15 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "python"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/08/announcing-python-sdk-version-v3",
+    "filename": "announcing-python-sdk-version-v3"
+  },
+  {
     "title": "How an SDK Can Add Value to REST APIs",
     "description": "This article provides an inside look into the design of the Java SDK's implementation of the Vonage Messages v1 API.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-an-sdk-can-add-value-to-rest-apis/sdk-rest-apis.png",
@@ -7933,6 +8186,35 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -7961,35 +8243,6 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
-  },
-  {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Setting up CI/CD with Github Actions",
@@ -11505,7 +11758,7 @@
       "alumni": true,
       "short_name": "michaeljolley"
     },
-    "published": true,
+    "published": false,
     "published_at": "2020-07-23 13:28:56 UTC",
     "updated_at": "2020-07-23 13:28:00 UTC",
     "category": {
@@ -14254,6 +14507,36 @@
     "filename": "usando-jwt-para-autenticação-em-uma-aplicação-golang"
   },
   {
+    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
+    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
+    "author": {
+      "name": "Victor Steven",
+      "image_url": "/content/images/0.png",
+      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
+      "website_url": "",
+      "spotlight": true,
+      "short_name": "victor-steven"
+    },
+    "published": true,
+    "published_at": "2020-03-13 13:00:25 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "go",
+      "chinese",
+      "messages-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
+    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
+  },
+  {
     "title": "Using JWT for Authentication in a Golang Application",
     "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
@@ -14282,36 +14565,6 @@
     ],
     "locale": "en",
     "link": "blog/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
-    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
-  },
-  {
-    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
-    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
-    "author": {
-      "name": "Victor Steven",
-      "image_url": "/content/images/0.png",
-      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
-      "website_url": "",
-      "spotlight": true,
-      "short_name": "victor-steven"
-    },
-    "published": true,
-    "published_at": "2020-03-13 13:00:25 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "go",
-      "chinese",
-      "messages-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
     "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
@@ -16758,7 +17011,7 @@
     },
     "published": true,
     "published_at": "2019-09-16 08:00:45 UTC",
-    "updated_at": "2021-07-29 22:16:33 UTC",
+    "updated_at": "2022-08-08 23:17:11 UTC",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
@@ -16768,7 +17021,7 @@
     "tags": [
       "javascript",
       "node",
-      "sms-api"
+      "messages-api"
     ],
     "locale": "en",
     "link": "blog/19/09/16/how-to-send-and-receive-sms-messages-with-node-js-and-express-dr",
@@ -19129,36 +19382,6 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "chinese",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -19187,6 +19410,36 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "chinese",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
@@ -23079,7 +23332,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 18:23:30 +0100",
+    "published_at": "2017-12-21 17:23:30 +0000",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -26134,7 +26387,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 17:45:51 +0200",
+    "published_at": "2015-08-14 16:45:51 +0100",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -26210,7 +26463,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 19:55:05 +0200",
+    "published_at": "2015-04-29 18:55:05 +0100",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -26266,7 +26519,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 19:24:18 +0200",
+    "published_at": "2015-04-10 18:24:18 +0100",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -26398,7 +26651,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 14:02:36 +0100",
+    "published_at": "2014-11-18 13:02:36 +0000",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",

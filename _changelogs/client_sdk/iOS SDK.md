@@ -1,6 +1,7 @@
 ---
 version: '4.2.1'
 release: '6 Apr 2022'
+redirect_to: '/client-sdk/sdk-documentation/ios/release-notes'
 ---
 # [iOS SDK](https://developer.nexmo.com/client-sdk/sdk-documentation/ios)
 
