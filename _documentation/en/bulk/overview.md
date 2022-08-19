@@ -1,16 +1,16 @@
 ---
 title: Overview
 meta_title: Send large scale outreach campaigns using any channel available through the Vonage APIs
-description: The Campaign API enables the developer to send large scale outreach campaigns using any channel available through the Vonage APIs.
+description: The Bulk API enables the developer to send large scale outreach campaigns using any channel available through the Vonage APIs.
 ---
 
-# Campaign API Overview
+# Bulk API Overview
 
-The Campaign API is a powerful tool that provides customers with a flexible and scalable way of sending large scale outreach campaigns using any channels available through the Vonage APIs. It allows users to configure every aspect of their campaign and is capable of scheduling, segmentation, intelligent failover and analytics.
+The Bulk API is a powerful tool that provides customers with a flexible and scalable way of sending large scale outreach campaigns using any channels available through the Vonage APIs. It allows users to configure every aspect of their campaign and is capable of scheduling, segmentation, intelligent failover and analytics.
 
 Accessible through an easy to use interface within the Customer Dashboard, the API works seamlessly with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview) and allows customers to create complex communication strategies which can take advantage of all aspects of VCP. Easily link your campaign to AI Studio, Vonage CC or third party applications like Salesforce.
 
-By using the Campaign API, you can create meaningful campaigns that reach customers based on their individual channel preferences, time zones and with content guaranteed to start conversations.
+By using the Bulk API, you can create meaningful campaigns that reach customers based on their individual channel preferences, time zones and with content guaranteed to start conversations.
 
 ## Contents
 
@@ -40,13 +40,13 @@ By using the Campaign API, you can create meaningful campaigns that reach custom
 ## Code Snippets
 
 ```code_snippet_list
-product: campaign
+product: bulk
 ```
 
 ## Guides
 
 ```concept_list
-product: voice/voice-api
+product: bulk
 ```
 
 ## Reference
@@ -54,5 +54,5 @@ product: voice/voice-api
 * [Messages API Reference](/api/messages-olympus)
 * [SMS API Reference](/api/sms)
 * [Voice API Reference](/api/voice)
-* [Campaign API Reference](/api/meetings)
+* [Bulk API Reference](/api/meetings)
 * [AI Studio](https://studio.docs.ai.vonage.com/)

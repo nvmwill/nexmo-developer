@@ -34,10 +34,10 @@ top-section:
       tutorials_link: ""
       icon: "Vlt-icon-flow"
 
-    - product_name: "Campaign API"
-      product_name_link: "/campaign/overview"
+    - product_name: "Bulk API"
+      product_name_link: "/bulk/overview"
       product_description: "Send large scale outreach campaigns using any channel available through the Vonage APIs."
-      getting_started_link: "/campaign/overview"
+      getting_started_link: "/bulk/overview"
       api_reference_link: "/api/dispatch"
       tutorials_link: ""
       icon: "Vlt-icon-calendar-3"

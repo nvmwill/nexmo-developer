@@ -18,7 +18,7 @@ source: _partials/reusable/prereqs.md
 
 ## Getting Started
 
-In order to use the Campaign API you will need:
+In order to use the Bulk API you will need:
 
 * An account set up in the [Vonage Dashboard](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 * An API Key and Secret, which can be found on the [dashboard](https://dashboard.nexmo.com/).
@@ -26,7 +26,7 @@ In order to use the Campaign API you will need:
 
 ### Channel Setup
 
-The Campaign API is compatible with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview). You will need to have configurations set for the channels you want to use:
+The Bulk- API is compatible with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview). You will need to have configurations set for the channels you want to use:
 
 Channel | Requirements
 -- | --

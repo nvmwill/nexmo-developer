@@ -216,10 +216,10 @@ products:
     translation_frequency: 5
     dropdown: true
   -
-    name: 'Campaign'
+    name: 'Bulk'
     icon: 'calendar-3'
     icon_colour: 'purple-dark' 
-    path: campaign
+    path: bulk
     translate: false
     translation_frequency: 5
     dropdown: true
