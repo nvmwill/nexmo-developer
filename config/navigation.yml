@@ -180,8 +180,10 @@ navigation_overrides:
       navigation_weight: 1
     getting-started:
       navigation_weight: 2
-    guides:
+    changelog:
       navigation_weight: 3
+    guides:
+      navigation_weight: 4
       cli:
         navigation_weight: 1
       manifest:
