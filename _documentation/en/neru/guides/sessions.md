@@ -20,11 +20,11 @@ const session = neru.createSession();
 The new session can be used to access providers and state:
 
 ```javascript
-import { neru, Voice } from 'neru-alpha';
+import { neru, Voice, State } from 'neru-alpha';
 
 const session = neru.createSession();
 const voice = new Voice(session);
-const state = session.getState();
+const state = new State(session);
 ```
 
 Calling functions on the `voice` or `state` object will now be associated with this session. This is done by NeRu setting a header on requests with the session ID.
@@ -97,7 +97,7 @@ Since the listeners are set up with a session, any requests that satisfy the fil
 router.post('/onEvent', async (req, res, next) => {
     if (req.body.speech != null) {
         const session = neru.getSessionFromRequest(req);
-        const state = session.getState();
+        const state = new State(session);
         await state.set('text', req.body.speech.results[0].text);
     } else {
         console.log(req.body)
@@ -112,7 +112,7 @@ In the `onEvent` route, a session is being restored by using `getSessionFromRequ
 router.post('/onMessage', async (req, res, next) => {
     const session = neru.getSessionFromRequest(req);
     const messages = new Messages(session);
-    const state = session.getState();
+    const state = new State(session);
     const text = await state.get('text');
    
     await messages.send({

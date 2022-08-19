@@ -31,7 +31,7 @@ To can access the state provider from a NeRu session:
 
 ```javascript
 const session = neru.createSession();
-const state = session.getState();
+const state = new State(session);
 ```
 
 On subsequent calls to your code, you want to make sure that you are using the same session to have access to your state. You can do so by initializing your instance from an incoming request: 
@@ -40,7 +40,7 @@ On subsequent calls to your code, you want to make sure that you are using the s
 router.post("/onMessage", async (req, res, next) => {
   try {
     const session = neru.getSessionFromRequest(req);
-    const state = session.getState();
+    const state = new State(session);
 
     // Handle incoming message
   } catch (error) {
@@ -74,7 +74,7 @@ For example, you can store, retrieve, and delete objects on a session using the 
 router.post("/key-value", async (req, res, next) => {
   try {
     const session = neru.createSession();
-    const state = session.getState();
+    const state = new State(session);
 
     // store object
     await state.set("test_obj", { "foo": bar });

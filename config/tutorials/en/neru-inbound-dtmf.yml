@@ -12,7 +12,7 @@ introduction:
     # Introduction
     [NeRu](/neru/overview) allows you to create and deploy serverless backends for your Vonage Applications.
 
-    This tutorial is will be using the [Voice](/neru/providers/voice) and [State](/neru/providers/state) providers in the NeRu SDK. 
+    This tutorial is will be using the [Voice](/neru/providers/voice) and [State](/neru/providers/state) providers in the NeRu SDK. The tutorial uses version 3.0.0 of the NeRu SDK.
 
 prerequisites:
   - create-nexmo-account

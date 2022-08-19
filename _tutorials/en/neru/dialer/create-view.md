@@ -44,41 +44,36 @@ mkdir public
 touch public/style.css
 ```
 
-The second part of serving static files happens in the server code.
+Add the following to the `style.css` file:
+
+```css
+p {
+    font-weight: bold;
+}
+```
 
 ## Serve the Site
 
-To expose your `public` folder add the following to your `index.html` file:
+Anything you add to the public folder will be available at the root of the website. For example, the CSS file can be access by `/style.css`. To have the view visible when you visit your website, you will need to render it. Add the following to the `index.js` file:
 
 ```javascript
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-router.use(express.static(path.join(__dirname, 'public')))
-```
+app.get('/_/health', async (req, res) => {
+    res.sendStatus(200);
+});
 
-Anything you add to the public folder will be available at the root of the website. For example, the CSS file can be access by `/style.css`.
-
-To have the view visible when you visit your website, you will need to render it. Add the following to the `index.js` file:
-
-```javascript
 router.get('/', async (req, res) => {
     res.sendFile('views/index.html', { root: '.' });
 });
 
-export { router };
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+});
 ```
 
 This will return the HTML file as the root page of the website. Now if you start the NeRu debugger for your project you can view the webpage:
 
 ```sh
-neru debug --name dialer
-```
-
-Your URL will be in this format
-
-```sh
-# https://api-eu.vonage.com/v1/neru/i/neru-abcd1234-debug-dialer/
-https://api-$REGION.vonage.com/v1/neru/i/neru-$APIKEY-debug-dialer/
+neru debug --name 
 ```
 
 ![The HTML form](/images/neru/neru-dialer-view.png)
