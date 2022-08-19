@@ -11,17 +11,16 @@ In your project folder create a new file by running:
 touch index.js
 ```
 
-Then open the new file in your text editor. This file will house the Node server that you will deploy to NeRu. At the top of the file import the dependencies:
+Then open the new file in your text editor. This file will house the Node server that you will deploy to NeRu. At the top of the file import the dependencies and configure express:
 
 ```javascript
 import { Voice, neru } from 'neru-alpha';
-import { fileURLToPath } from 'url';
 import express from 'express';
-import path from 'path';
-```
 
-This NeRu is using express to run a Node server. Below the imports, create a express router: 
+const app = express();
+const port = process.env.NERU_APP_PORT;
 
-```javascript
-const router = neru.Router();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 ```

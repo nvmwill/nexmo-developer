@@ -8,8 +8,8 @@ description: In this step you learn how to create an Outbound Call with NeRu.
 Now that the form is displaying, you will need to handle the form submission. Create a new route for `/call`:
 
 ```javascript
-router.post('/call', async (req, res, next) => {
-    try {
+app.post('/call', async (req, res, next) => {
+    try {  
         const session = neru.createSession();
         const voice = new Voice(session);
 
@@ -23,13 +23,14 @@ router.post('/call', async (req, res, next) => {
                 [
                     {
                         action: 'talk',
-                        text: "Hi! This is a call made by VAPI and NeRu",
+                        text: "Hi! This is a call made by the Voice API and NeRu",
                     }
                 ]
             )
             .execute();
-    
-        await voice.onVapiEvent(response?.uuid, 'onEvent').execute();
+        
+        await voice.onVapiEvent({ vapiUUID: response?.uuid, callback: 'onEvent' }).execute();
+        
         res.redirect('/');
     } catch (error) {
         next(error);
@@ -44,7 +45,7 @@ Then, `vapiCreateCall` is used to create the outbound call. `vapiCreateCall` tak
 Add a route to your `index.js` file to handle the incoming events:
 
 ```javascript
-router.post('/onEvent', async (req, res) => {
+app.post('/onEvent', async (req, res) => {
     console.log('event status is: ', req.body.status);
     console.log('event direction is: ', req.body.direction);
     res.sendStatus(200);

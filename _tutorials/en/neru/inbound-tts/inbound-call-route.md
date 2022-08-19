@@ -8,7 +8,11 @@ description: In this step you learn how to handle inbound calls with NeRu.
 As mentioned in the previous step, you need to define a route to handle your inbound calls. Add the following code below your existing code in the `index.js` file:
 
 ```javascript
-router.post("/onCall", async (req, res) => {
+app.get('/_/health', async (req, res) => {
+    res.sendStatus(200);
+});
+
+app.post("/onCall", async (req, res) => {
     const session = neru.createSession();
     const voice = new Voice(session);
     const conversation = await voice.createConversation();
@@ -24,7 +28,9 @@ router.post("/onCall", async (req, res) => {
     res.status(200);
 });
 
-export { router };
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+});
 ```
 
 The above code create a NeRu session, but this time it creates it from the incoming request. The session is used to create a voice provider, which is then used to create a [conversation](/conversation/concepts/conversation).
