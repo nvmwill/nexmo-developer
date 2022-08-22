@@ -37,7 +37,7 @@ npm install @vonage/server-sdk@beta @vonage/video
 ### Initializing
 
 Import the module to get a constructor function for a video object, then call it with `new` to
-instantiate a video object with your own App ID and private key.
+instantiate a video object with your own App Id and private key.
 
 ```javascript
 const Vonage = require('@vonage/server-sdk');
@@ -207,16 +207,17 @@ try {
 }
 ```
 
-You can also get a list of all the Archives you've created (up to 1000) with your App ID. This is
+You can also get a list of all the Archives you've created (up to 1000) with your App Id. This is
 done using the `searchArchives(options)` method. The parameter `options` is an
-optional object used to specify an `offset` and `count` to help you paginate through the results.
+optional object used to specify a `sessionId`, `offset` and `count` to help you paginate through the results.
 
 The `archives` returned is an array of `Archive` instances.
 The `totalCount` returned from the callback is
-the total number of archives your App ID has generated.
+the total number of archives your App Id has generated.
 
 ```javascript
 const filter = {
+    sessionId: "2_MX2xMDB-flR1ZSBOb3YgMTkgMTE6MDk6NTggUFNUIDIwMTN-MC2zNzQxNzIxNX2"
     offset: 100,
     count: 50
 }
@@ -268,7 +269,7 @@ support live streaming broadcasts.
 
 To start a [live streaming
 broadcast](/developer/guides/broadcast/live-streaming) of an OpenTok session,
-call the `OpenTok.startBroadcast()` method. Pass in three parameters: the session ID for the
+call the `OpenTok.startBroadcast()` method. Pass in three parameters: the session Id for the
 session, options for the broadcast, and a callback function:
 
 ```javascript
@@ -312,7 +313,7 @@ The Broadcast object has properties that define the broadcast, including a `broa
 property, which has URLs for the broadcast streams. See the API reference for details.
 
 Call the `OpenTok.stopBroadcast()` method to stop a live streaming broadcast pass in the
-broadcast ID (the `id` property of the Broadcast object) as the first parameter. The second
+broadcast Id (the `id` property of the Broadcast object) as the first parameter. The second
 parameter is the callback function:
 
 ```javascript
@@ -326,14 +327,14 @@ opentok.stopBroadcast(broadcastId, function (error, broadcast) {
 
 You can also call the `stop()` method of the Broadcast object to stop a broadcast.
 
-Call the `Opentok.getBroadcast()` method, passing in a broadcast ID, to get a Broadcast object.
+Call the `Opentok.getBroadcast()` method, passing in a broadcast Id, to get a Broadcast object.
 
 You can also get a list of all the Broadcasts you've created (up to 1000) with your API Key. This is
 done using the `OpenTok.listBroadcasts(options, callback)` method. The parameter `options` is an
 optional object used to specify an `offset`, `count`, and `sessionId` to help you paginate through the results.
 The callback has a signature `function(err, broadcasts, totalCount)`. The `broadcasts` returned from
 the callback is an array of `Broadcast` instances. The `totalCount` returned from the callback is
-the total number of broadcasts your App ID has generated.
+the total number of broadcasts your App Id has generated.
 
 ```javascript
 opentok.listBroadcasts({ offset: 100, count: 50 }, function (
@@ -351,7 +352,7 @@ opentok.listBroadcasts({ offset: 100, count: 50 }, function (
 ```
 
 To change the broadcast layout, call the `OpenTok.setBroadcastLayout()` method,
-passing in the broadcast ID and the [layout
+passing in the broadcast Id and the [layout
 type](/developer/guides/broadcast/live-streaming/#configuring-video-layout-for-opentok-live-streaming-broadcasts).
 
 You can set the initial layout class for a client's streams by setting the `layout` option when
@@ -430,8 +431,8 @@ You can then disable the mute state of the session by calling the
 <!-- OPT-TODO: ### Working with SIP Interconnect
 
 You can add an audio-only stream from an external third-party SIP gateway using the SIP Interconnect
-feature. This requires a SIP URI, the session ID you wish to add the audio-only stream to, and a
-token to connect to that session ID.
+feature. This requires a SIP URI, the session Id you wish to add the audio-only stream to, and a
+token to connect to that session Id.
 
 ```javascript
 var options = {
@@ -444,7 +445,7 @@ opentok.dial(sessionId, token, sipUri, options, function (error, sipCall) {
   console.log(
     "SIP audio stream Id: " +
       sipCall.streamId +
-      " added to session ID: " +
+      " added to session Id: " +
       sipCall.sessionId
   );
 });
@@ -472,11 +473,11 @@ try {
 }
 ```
 
-Pass a session ID and stream ID to the `getStreamInfo()` method.
+Pass a session Id and stream Id to the `getStreamInfo()` method.
 On successful completion, the `stream` object containing properties of the stream.
 
 <!-- OPT-TODO: [can't find listStreams method] To get information on _all_ active streams in a session, call the `OpenTok.listStreams()` method,
-passing in a session ID and a callback function. Upon success, the callback function is invoked
+passing in a session Id and a callback function. Upon success, the callback function is invoked
 with an array of Stream objects passed into the second parameter: -->
 
 ```javascript
@@ -493,7 +494,7 @@ try {
 
 ## Requirements
 
-You need a Vonage App ID and private key, which you can obtain by logging into your
+You need a Vonage App Id and private key, which you can obtain by logging into your
 [Vonage Video API account](https://ui.idp.vonage.com/ui/auth/login).
 
 The  Node SDK requires Node.js 6 or higher. It may work on older versions but they are no longer tested.
