@@ -208,7 +208,7 @@ try {
 ```
 
 You can also get a list of all the Archives you've created (up to 1000) with your App Id. This is
-done using the `searchArchives(options)` method. The parameter `options` is an
+done using the `searchArchives(filter)` method. The parameter `filter` is an
 optional object used to specify a `sessionId`, `offset` and `count` to help you paginate through the results.
 
 The `archives` returned is an array of `Archive` instances.
