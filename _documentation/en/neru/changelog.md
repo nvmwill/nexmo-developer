@@ -7,7 +7,7 @@ meta_title: NeRu Changelog
 # NeRu Changelog
 
 
-## SDK
+## SDKs
 
 * JavaScript SDK is available on [npm](https://www.npmjs.com/package/neru-alpha)
 
@@ -38,7 +38,7 @@ meta_title: NeRu Changelog
 ### 0.8.12 - (2022-08-17)
 
 * Fixed: 
-    * Missing incoming request parameters (e.g. `req.body`).
+    * Missing incoming request parameters (e.g. `req.query`).
 
 ### 0.8.11 - (2022-08-2)
 
