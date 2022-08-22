@@ -6,7 +6,7 @@ navigation_weight: 2
 
 # Cancel a Scheduled Callback
 
-The Scheduler provider allows you to cancel an existing scheduled callback using the schedule ID. A schedule ID is returned when [creating a scheduled callback](/neru/code-snippets/scheduler-provider/scheduler-callback.md).
+The Scheduler provider allows you to cancel an existing scheduled callback using the schedule ID. A schedule ID is returned when [creating a scheduled callback](/neru/code-snippets/scheduler-provider/schedule-callback.md).
 
 ## Method Signature
 ```javascript

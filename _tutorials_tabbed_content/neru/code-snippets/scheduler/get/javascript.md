@@ -8,5 +8,5 @@ menu_weight: 1
 const session = neru.createSession();
 const scheduler = new Scheduler(session);
 
-await scheduler.cancel("myScheduler").execute();
+await scheduler.get("myScheduler").execute();
 ```

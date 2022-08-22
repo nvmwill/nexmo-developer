@@ -6,13 +6,25 @@ navigation_weight: 5
 
 # Scheduler Provider
 
-The Scheduler provider allows you to schedule functions to be run at a specific time or after a time out.
+The Scheduler provider allows you to schedule functions to be run at a specified time in the future, or to recur based on an interval. The Scheduler provider also supports scheduling operations using [CRON](https://en.wikipedia.org/wiki/Cron) expressions.
+
+## How it works
+
+When you call the `startAt` function on the Scheduler, the NeRu platform creates a job with the details you provided, if you provided an ID that should be used, otherwise one will be generated for you. This ID is how you can cancel the job if needed using the `cancel` function. The Scheduler provider operates with the minimum of a minutes precision. For example, a job scheduled to be invocated at 10:01 will be invocated within that minute, between 10:01:00 and 10:01:59.
+
+When the job's invocation time is reached, your application will get a request to the callback you specified. You will have 30 seconds to respond to this request with a 200 status otherwise the request will be retried. Requests are retried 5 times before being abandoned.
+
+Each request from the scheduler has a hash on the request's header under `X-Neru-Scheduler-RequestHash`. Using this hash you can make sure to handle incoming scheduler requests once in case your application was not able to respond with a 200 status in time.
 
 ## Functions
 
 * [`startAt`](/neru/code-snippets/scheduler-provider/schedule-callback.md)
 
 * [`cancel`](/neru/code-snippets/scheduler-provider/cancel-callback.md)
+
+* [`get`](/neru/code-snippets/scheduler-provider/get-job.md)
+
+* [`listAll`](/neru/code-snippets/scheduler-provider/list-jobs.md)
 
 ## Initializing the Scheduler Provider
 
