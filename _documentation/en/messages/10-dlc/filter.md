@@ -47,12 +47,12 @@ You can have a maximum of **three [filter objects](#filter-object)** in a query.
 For example, you can fetch results that match one request object **OR** another. Also, results that match one request object **AND** another.
 
 
-Let's take the case where we will like to fetch brands where the `vertical` is either **REAL_ESTATE** OR **BANKING** AND where the id of the reseller(`reseller_id`) involved is **12345**.
+Let's take the case where we will like to fetch brands where the `vertical` is either **REAL_ESTATE** OR **NGO** AND where the id of the reseller(`reseller_id`) involved is **12345**.
 
-Expressed as a logical expression we have the following: `( (vertical == REAL_ESTATE OR vertical == BANKING) AND (reseller_id == 12345) )`
+Expressed as a logical expression we have the following: `( (vertical == REAL_ESTATE OR vertical == NGO) AND (reseller_id == 12345) )`
 
 When it comes to filter queries, **OR** expressions are represented using the square bracket `[]`. 
-For example the following expression`(vertical == REAL_ESTATE OR vertical == BANKING)` becomes `[ [{filter object 1}, {filter object 2}] ]`.
+For example the following expression`(vertical == REAL_ESTATE OR vertical == NGO)` becomes `[ [{filter object 1}, {filter object 2}] ]`.
 
 The inner square bracket denotes that you will like to fetch results matching either *filter object 1* **OR** *filter object 2*.
 
@@ -79,7 +79,7 @@ Also, further expanding the filter objects in example 4. we get the following fi
       {
          "field":"vertical",
          "type":"equal",
-         "value":"BANKING"
+         "value":"NGO"
       }
    ],
    [{
