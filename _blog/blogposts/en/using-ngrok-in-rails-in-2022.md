@@ -76,13 +76,13 @@ The best part of Ngrok is that it has the easiest command ever. Just a single li
 
 In your application, you’ll have a file `config/environments/development.rb`. This file tells Rails how to configure the development environment. 
 
-Here we’ll need to add one line:
-config.hosts << "\[ngrok url]"
+Here we’ll need to add one line:<br/>
+`config.hosts << "\[ngrok url]"`
 
 ![](/content/blog/using-ngrok-in-rails-in-2022/screen-shot-2022-07-25-at-15.50.34.png)
 
-For example, in the above instance of running ngrok I would add:
-config.hosts << "b994-77-73-159-12.ngrok.io"
+For example, in the above instance of running ngrok I would add:<br/>
+`config.hosts << "b994-77-73-159-12.ngrok.io"`
 
 It is important that this line is added within the `Rails.application.configure do` 
 block.
