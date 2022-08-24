@@ -7,7 +7,7 @@ description: A post-call diagnostics tool for Voice calls.
 
 # Voice Inspector (Beta)
 
-This is the Beta version of Voice Inspector, built to help understand what happened during In-App Calls (WebRTC), Phone Calls (PSTN), SIP, and WebSocket calls. The Voice Inspector Beta can be accessed [here](https://tools.vonage.com/voice-inspector/).
+This is the Beta version of Voice Inspector, built to help understand what happened during In-App Calls (WebRTC), Phone Calls (PSTN), SIP, and WebSocket calls. The Voice Inspector Beta can be accessed [here](http://tools.vonage.com/voice/inspector).
 
 Users can either enter a to or from phone number, [call leg ID or a conversation ID](#call-leg-id-vs-conversation-id) to access the following information for *specific call legs*:
 
