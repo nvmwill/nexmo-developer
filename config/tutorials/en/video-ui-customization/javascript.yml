@@ -1,0 +1,26 @@
+title: UI Customization 
+description:  Learn how to customize the video UI.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Learn how to use Vonage Video API signaling to build robust messaging into your  application.
+  content: |
+    # Introduction
+    In this tutorial you will learn how to resize, reposition and customize different parts of your video UI.
+
+tasks:
+    - video/video-ui-customization/js/initial-position
+    - video/video-ui-customization/js/resizing
+    - video/video-ui-customization/js/naming-streams
+    - video/video-ui-customization/js/hiding-video-name
+    - video/video-ui-customization/js/hiding-mute-button
+    - video/video-ui-customization/js/cropping-video
+    - video/video-ui-customization/js/snapshots
+    - video/video-ui-customization/js/image-display
+    - video/video-ui-customization/js/audio-ui-level
+    - video/video-ui-customization/js/audio-block
+    - video/video-ui-customization/js/enable-disable-video
+    - video/video-ui-customization/js/hiding-built-in-components
+    - video/video-ui-customization/js/access-video-elements
