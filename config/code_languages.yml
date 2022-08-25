@@ -125,14 +125,14 @@ languages:
     dependencies: []
 
   macos:
-    weight: 12
+    weight: 13
     label: macOS
     lexer: swift
     icon: macos
     dependencies: []
 
   linux:
-    weight: 12
+    weight: 14
     label: Linux
     lexer: c
     icon: linux
