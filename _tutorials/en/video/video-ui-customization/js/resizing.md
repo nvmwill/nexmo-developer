@@ -6,7 +6,7 @@ product: video
 
 # Resizing or repositioning a video
 
-The `element` property of the Publisher or Subscriber object is its HTML DOM element. You can reposition this in the HTML DOM and resize the element by editing its `style.width` and `style.height` properties, just as you would any other DOM element:
+The `element` property of the Publisher or Subscriber object is its HTML DOM element. You can reposition this in the HTML DOM and resize the element by editing its `style.width` and `style.height` properties as you would any other DOM element:
 
 ```javascript
 document.getElementById("target").appendChild(publisher.element);

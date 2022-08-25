@@ -28,7 +28,7 @@ subscriber.on('audioLevelUpdated', function(event) {
 ```
 The example assumes that there is an HTML meter element with the ID "subscriberMeter".
 
-Note that in audio-only mode, a Publisher or Subscriber DOM element displays a volume indicator by default (in the upper-righthand corner of the element). You can disable this default user interface element and display your own volume meter. See the next topic, [Adjusting user interface when video is enabled or disabled](/video/tutorials/video-ui-customization/video/video-ui-customization/js/audio-block/javascript).
+Note that in audio-only mode, a Publisher or Subscriber DOM element displays a volume indicator by default (in the upper right-hand corner of the element). You can disable this default user interface element and display your own volume meter. See the next topic, [Adjusting user interface when video is enabled or disabled](/video/tutorials/video-ui-customization/video/video-ui-customization/js/audio-block/javascript).
 
 You can also use the `audioLevelUpdated` event to determine when a publisher or subscriber's audio is loud enough for long enough to label the participant as having started talking. Or, if the audio has been quiet for long enough, you can identify the participant as having stopped talking:
 
@@ -71,4 +71,4 @@ var SpeakerDetection = function(subscriber, startTalking, stopTalking) {
   });
 };
 ```
-(Instead of logging to the console, your app could adjust a user interface element when the user starts and stops talkin
+(Instead of logging to the console, your app could adjust a user interface element when the user starts and stops talking.

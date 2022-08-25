@@ -30,5 +30,5 @@ subscriber.on('videoElementCreated', function(event) {
 
 If you set the `insertDefaultUI` property to `false`, do not set the `targetElement` parameter when calling [`OT.initPublisher()`](/sdk/stitch/video-js-reference/OT.html#initPublisher) or [`Session.subscribe()`](/sdk/stitch/video-js-reference/session.html#subscribe). (This results in an error.)
 
-The default user inteface element contains user interface controls, a video loading indicator, and automatic video cropping or letter-boxing, in addition to the video. If you leave `insertDefaultUI` set to `true` (the default), you can control individual user inteface settings using the `fitMode`, `showControls`, and `style` options. See the other topics in this page.
+The default user interface element contains user interface controls, a video loading indicator, and automatic video cropping or letter-boxing, in addition to the video. If you leave `insertDefaultUI` set to `true` (the default), you can control individual user interface settings using the `fitMode`, `showControls`, and `style` options. See the other topics in this page.
 

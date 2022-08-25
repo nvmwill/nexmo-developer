@@ -893,3 +893,12 @@ bitrate
 emojis
 stickerpacks
 stickerpack
+letterboxing
+VideoEnabledChangedEvent
+showControls
+setStyle
+style.nameDisplayMode
+resize
+insertDefaultUI
+videoElementCreated
+subscriberMeter
