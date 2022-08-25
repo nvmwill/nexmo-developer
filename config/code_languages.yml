@@ -126,7 +126,7 @@ languages:
 
   macos:
     weight: 12
-    label: Mac OS
+    label: macOS
     lexer: swift
     icon: macos
     dependencies: []
