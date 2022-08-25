@@ -240,7 +240,7 @@ Git docs for submodules: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
 A flow chart on surviving submodules from @lornajane: <https://lornajane.net/posts/2016/surviving-git-submodules>
 
 ## Adding a new programming language to tutorials
-Tutorials support a host of programming languages. The languages a tutorial support is always displayed on the right hand side of the page.
+Tutorials support a host of programming languages. The languages a tutorial supports is always displayed on the right hand side of the page.
 
 It allows users to follow tutorials in the programming language of their choice (if available).
 
