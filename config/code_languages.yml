@@ -117,6 +117,27 @@ languages:
     icon: android
     dependencies: []
 
+  windows:
+    weight: 12
+    label: Windows
+    lexer: c#
+    icon: windows
+    dependencies: []
+
+  macos:
+    weight: 12
+    label: Mac OS
+    lexer: swift
+    icon: macos
+    dependencies: []
+
+  linux:
+    weight: 12
+    label: Linux
+    lexer: c
+    icon: linux
+    dependencies: []
+
 platforms:
   ios:
     languages:
