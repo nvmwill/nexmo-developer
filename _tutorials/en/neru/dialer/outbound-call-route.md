@@ -5,7 +5,7 @@ description: In this step you learn how to create an Outbound Call with NeRu.
 
 # Create an Outbound Call
 
-Now that the form is displaying, you will need to handle the form submission. Create a new route for `/call`:
+Now that the form is displaying, you will need to handle the form submission. Create a new route for `/call` by adding the following to the index.js file:
 
 ```javascript
 app.post('/call', async (req, res, next) => {
@@ -52,7 +52,7 @@ app.post('/onEvent', async (req, res) => {
 });
 ```
 
-If you save the file, the debugger will reload with your new code. If you refresh the website and enter your phone number you will receive a call!
+If you save the file, the debugger will reload with your new code. If you refresh the website and enter your phone number you will receive a call! Once done testing locally, stop NeRu debugger server with Ctrl/CMD+C.
 
 ## Deploy an Instance of your Project
 
@@ -64,3 +64,4 @@ Stop your debug process, then deploy your project by running:
 neru deploy
 ```
 
+Much like debugging you will get two new urls for the deployed version of your project. The second url, ending in `.com`, is again better suited for use with static webpages.

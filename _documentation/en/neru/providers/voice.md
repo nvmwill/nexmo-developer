@@ -41,13 +41,12 @@ const voice = new Voice(session);
 For example, you can use the Voice provider to answer an incoming Voice API Call:
 
 ```javascript
-const router = neru.Router();
 const session = neru.createSession();
 const voice = new Voice(session);
 
 await voice.onVapiAnswer('onCall').execute();
 
-router.post('/onCall', async (req, res, next) => {
+app.post('/onCall', async (req, res, next) => {
     res.json([
         {
             action: 'talk',
@@ -60,14 +59,13 @@ router.post('/onCall', async (req, res, next) => {
 Or, you can handle inbound calls using the Conversation API:
 
 ```javascript
-const router = neru.Router();
 const session = neru.createSession();
 const voice = new Voice(session);
 
 const vonageNumber = { type: "phone", number: "447000000000"}
 await voice.onInboundCall('onCall', vonageNumber).execute();
 
-router.post("/onCall", async (req, res) => {
+app.post("/onCall", async (req, res) => {
     const session = neru.createSession();
     const voice = new Voice(session);
     const conversation = await voice.createConversation();

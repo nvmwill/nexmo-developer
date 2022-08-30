@@ -37,7 +37,7 @@ const state = new State(session);
 On subsequent calls to your code, you want to make sure that you are using the same session to have access to your state. You can do so by initializing your instance from an incoming request: 
 
 ```javascript
-router.post("/onMessage", async (req, res, next) => {
+app.post("/onMessage", async (req, res, next) => {
   try {
     const session = neru.getSessionFromRequest(req);
     const state = new State(session);
@@ -55,7 +55,7 @@ Instance level state is a singleton which you can use to share data across multi
 
 
 ```javascript
-router.post("/onMessage", async (req, res, next) => {
+app.post("/onMessage", async (req, res, next) => {
   try {
     const state = neru.getGlobalState();
 
@@ -71,7 +71,7 @@ router.post("/onMessage", async (req, res, next) => {
 For example, you can store, retrieve, and delete objects on a session using the key-value operations:
 
 ```javascript
-router.post("/key-value", async (req, res, next) => {
+app.post("/key-value", async (req, res, next) => {
   try {
     const session = neru.createSession();
     const state = new State(session);
@@ -94,7 +94,7 @@ router.post("/key-value", async (req, res, next) => {
 Or you can use instance state, and the hash table operations to persist data between sessions:
 
 ```javascript
-router.post("/add-customer", async (req, res, next) => {
+app.post("/add-customer", async (req, res, next) => {
 	try {
 	  const instanceState = neru.getGlobalState();
 	  const customer = req.body;
@@ -105,7 +105,7 @@ router.post("/add-customer", async (req, res, next) => {
 	}
 })
   
-router.get("/on-phone-call", async (req, res, next) => {
+app.get("/on-phone-call", async (req, res, next) => {
 	try {
 	  const instanceState = neru.getGlobalState();
 	  const number = req.query.number;

@@ -40,7 +40,7 @@ const session = neru.getSessionById('sessionID');
 When you have subsequent incoming requests into your application you can restore an existing session using the `getSessionFromRequest` function:
 
 ```javascript
-router.post('/onMessage', async (req, res, next) => {
+app.post('/onMessage', async (req, res, next) => {
     const session = neru.getSessionFromRequest(req);
     ...
 });
@@ -61,7 +61,7 @@ This simplifies state operations since you can be certain that the session's sta
 To demonstrate, here is the example of a NeRu application that carries context between an incoming phone call and text message from the same user:
 
 ```javascript
-router.post('/onCall', async (req, res, next) => {
+app.post('/onCall', async (req, res, next) => {
     const session = neru.createSession();
     const voice = new Voice(session);
     const messages = new Messages(session);
@@ -94,7 +94,7 @@ Since the listeners are set up with a session, any requests that satisfy the fil
 
 
 ```javascript
-router.post('/onEvent', async (req, res, next) => {
+app.post('/onEvent', async (req, res, next) => {
     if (req.body.speech != null) {
         const session = neru.getSessionFromRequest(req);
         const state = new State(session);
@@ -109,7 +109,7 @@ router.post('/onEvent', async (req, res, next) => {
 In the `onEvent` route, a session is being restored by using `getSessionFromRequest`. That session's state is being used to store the speech to text results from the phone call. Notice how there was no need to use any form of identifier on the state since the state is local to this session, which is the same session created when the user called.
 
 ```javascript
-router.post('/onMessage', async (req, res, next) => {
+app.post('/onMessage', async (req, res, next) => {
     const session = neru.getSessionFromRequest(req);
     const messages = new Messages(session);
     const state = new State(session);

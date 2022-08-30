@@ -23,7 +23,7 @@ Open `index.html` in your text editor and add the HTML form:
     <title> NeRu Dialer </title>
   </head>
   <body>
-    <p> Enter a phone number to receive a call from NeRu</p>
+    <p> Enter a phone number (e.g. 447000000000) to receive a call from NeRu</p>
     <form method="POST" action="call">
       <label for="number">Number:</label><br>
       <input type="text" id="number" name="number"><br>
@@ -61,7 +61,7 @@ app.get('/_/health', async (req, res) => {
     res.sendStatus(200);
 });
 
-router.get('/', async (req, res) => {
+app.get('/', async (req, res) => {
     res.sendFile('views/index.html', { root: '.' });
 });
 
@@ -73,7 +73,14 @@ app.listen(port, () => {
 This will return the HTML file as the root page of the website. Now if you start the NeRu debugger for your project you can view the webpage:
 
 ```sh
-neru debug --name 
+neru debug
 ```
+
+The debugger will give you two URLs for your debug instance. Use the second one, ending in `.com`, since the the lack of path parameters makes it better suited for using static files.
+
+![debug output](/images/neru/neru-dialer-debug)
+
+
+Opening this link will show you the webpage. Leave the debugger running as it will automatically reload as we add code to the project.
 
 ![The HTML form](/images/neru/neru-dialer-view.png)

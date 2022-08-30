@@ -42,7 +42,7 @@ Requests made from NeRu to your application via the Scheduler provider will cont
 For example, to use the Scheduler provider to send a one off reminder text in five minutes time after an incoming message:
 
 ```javascript
-router.post('/onMessage', async (req, res, next) => {
+app.post('/onMessage', async (req, res, next) => {
     try {
         const session = neru.createSession();
         const scheduler = new Scheduler(session);
@@ -65,7 +65,7 @@ router.post('/onMessage', async (req, res, next) => {
 After five minutes have passed the `textReminder` route will get called with the payload:
 
 ```javascript
-router.post('/textReminder', async (req, res, next) => {
+app.post('/textReminder', async (req, res, next) => {
     try {
         const session = neru.createSession();
         const messaging = new Messages(session);
@@ -91,7 +91,7 @@ router.post('/textReminder', async (req, res, next) => {
 The Scheduler provider also supports using CRON to define the interval in which it calls the defined route. This time, the code triggers the defined route every 10 minutes past the hour for a day:
 
 ```javascript
-router.post('/onMessage', async (req, res, next) => {
+app.post('/onMessage', async (req, res, next) => {
     try {
         const session = neru.createSession();
         const scheduler = new Scheduler(session);

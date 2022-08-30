@@ -54,7 +54,7 @@ neru deploy --filename production.yml
 
 ## View your Deployment
 
-To take a deeper look at your project and deployments you can use the [NeRu dashboard](https://dashboard.serverless.vonage.com/).
+To take a deeper look at your project and deployments you can use the [NeRu dashboard](https://dashboard.nexmo.com/serverless/).
 
 ![Screenshot of the neru dashboard home page](/images/neru/neru-dashboard-home.png)
 

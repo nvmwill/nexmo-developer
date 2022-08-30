@@ -5,7 +5,7 @@ description: In this step you learn how to view your project on the NeRu Dashboa
 
 # View the NeRu Dashboard
 
-To take a deeper look at your project and deployments you can use the [NeRu dashboard](https://dashboard.serverless.vonage.com/).
+To take a deeper look at your project and deployments you can use the [NeRu dashboard](https://dashboard.nexmo.com/serverless).
 
 ![Screenshot of the neru dashboard home page](/images/neru/neru-dashboard-home.png)
 

@@ -10,7 +10,7 @@ const voice = new Voice(session);
 
 await voice.onVapiAnswer("onAnswer").execute();
 
-router.post('/onAnswer', async (req, res, next) => {
+app.post('/onAnswer', async (req, res, next) => {
     const ncco = [
         {
             action: 'talk',

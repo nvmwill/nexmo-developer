@@ -5,7 +5,7 @@ menu_weight: 1
 ---
 
 ```javascript
-router.post("/onCall", async (req, res) => {
+app.post("/onCall", async (req, res) => {
     const session = neru.createSession();
     const voice = new Voice(session);
     const conversation = await voice.createConversation();
