@@ -62,7 +62,7 @@ Archiving allows one to record a video stream of the website using Experience Co
 
 ### Getting Started
 
-Start by creating a folder for the client-side code and a folder for server-side code. I will be focusing on the server-side aspect of the application; however, feel free to reference my [client code](https://github.com/mbiederman12/GamerECSAMPLE/tree/main/client) and check out this article, [Implement a Video API Application With React Hooks](https://developer.vonage.com/blog/22/04/13/implement-a-video-api-application-with-react-hooks), to help build your client side application.
+Start by creating a folder for the client-side code and a folder for server-side code. I will be focusing on the server-side aspect of the application; however, feel free to reference this article, [Implement a Video API Application With React Hooks](https://developer.vonage.com/blog/22/04/13/implement-a-video-api-application-with-react-hooks), to help build your client side application.
 
 In the server folder, create a server.js file and a package.json. Be sure to download both [Node.js](https://nodejs.org/en/download/) and the [Video Node SDK](https://tokbox.com/developer/sdks/node/#installation-using-npm-recommended-) to use for your project. All of the code written in this article will be included in the server.js file, unless specified elsewhere.
 
