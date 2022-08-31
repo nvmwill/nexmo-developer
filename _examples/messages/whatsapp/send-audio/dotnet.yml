@@ -1,0 +1,8 @@
+---
+title: Dotnet
+language: dotnet
+code:
+    source: .repos/vonage/vonage-dotnet-code-snippets/DotNetCliCodeSnippets/Messages/WhatsApp/SendWhatsAppAudio.cs
+    from_line: 18
+    to_line: 36
+file_name: SendWhatsAppAudio.cs

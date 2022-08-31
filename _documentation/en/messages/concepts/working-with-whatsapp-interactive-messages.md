@@ -1,6 +1,6 @@
 ---
 title: Working with WhatsApp Interactive Messages
-navigation_weight: 6
+navigation_weight: 5
 description: General workflow for working with WhatsApp interactive messages, and examples of lists and reply buttons
 ---
 

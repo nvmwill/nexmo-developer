@@ -239,6 +239,16 @@ Git docs for submodules: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
 
 A flow chart on surviving submodules from @lornajane: <https://lornajane.net/posts/2016/surviving-git-submodules>
 
+## Adding a new programming language to tutorials
+Tutorials support a host of programming languages. The languages a tutorial supports is always displayed on the right hand side of the page.
+
+It allows users to follow tutorials in the programming language of their choice (if available).
+
+The list of supported languages can be found in the `config/code_languages.yml` file.
+This file can be expanded to support additional languages if they are not yet available.
+
+**NB:** Icons for all languages can be found in the [Station](https://github.com/Nexmo/station/tree/main/lib/nexmo_developer/public/assets/images/brands) repository. You will need to upload one whenever you add a new language.
+
 ## Troubleshooting
 <details>
 <summary><b>My local setup stopped working after performing a <code>git pull</code>.</b></summary>

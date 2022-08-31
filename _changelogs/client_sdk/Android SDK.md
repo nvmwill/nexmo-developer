@@ -1,6 +1,7 @@
 ---
 version: '4.0.3'
 release: '4 Apr 2022'
+redirect_to: '/client-sdk/sdk-documentation/android/release-notes'
 ---
 # [Android SDK](https://developer.nexmo.com/client-sdk/sdk-documentation/android)
 

@@ -68,7 +68,7 @@ There are two room types:
 A meeting created through the API can be embedded into your website. To do this, generate the meeting link and create an iFrame using that link:
 
 ``` HTML
-<iframe src="Meeting link here" title="Embedded Meeting"></iframe>
+<iframe src="Meeting link here" title="Embedded Meeting" allow="camera;microphone"></iframe>
 ```
 
 This is currently supported both desktop and mobile using the following browsers:

@@ -10,6 +10,9 @@ On incoming events such as a new message, or an incoming call, the user often ex
 There are two types of push notifications that you can use:
 
 * VoIP push *([PushKit](https://developer.apple.com/documentation/pushkit))* - the better fit for applications that use Vonage In-App Voice functionality. ([_Jump to section_](/client-sdk/setup/set-up-push-notifications/ios#integrate-voip-push-notifications-in-your-application))
+
+> There is a VoIP push sample project on [GitHub](https://github.com/nexmo-community/swift-phone-to-app-callkit) and an accompanying [blog post](https://learn.vonage.com/blog/2021/01/28/handling-voip-push-notifications-with-callkit) which shows you how to integrate CallKit into an existing Vonage Client SDK project.
+
 * Regular push *([UserNotifications](https://developer.apple.com/documentation/usernotifications))* - the better fit for applications that use Vonage In-App Chat functionality. ([_Jump to section_](/client-sdk/setup/set-up-push-notifications/ios#integrate-regular-push-notifications-in-your-application))
 
 ## Create a push certificate
@@ -34,7 +37,13 @@ To generate a push certificate you will need to log in to your Apple developer a
 
 ![Add certificate button](/images/client-sdk/push-notifications/add-certificate.png)
 
-Choose a *Apple Push Notification service SSL (Sandbox & Production)* and continue. You will now need to choose the App ID for the app that you want to add push notifications to and continue. If your app is not listed you will have to create an App ID. Xcode can do this for you if it automatically if it manages your signing for you, otherwise you can create a new App ID on the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/certificates/list) page under *Identifiers*. Make sure to select the push notifications capability when doing so.
+Choose an *Apple Push Notification service SSL (Sandbox & Production)* and continue. 
+
+![Apple Push Notification service option](/images/client-sdk/push-notifications/apns-checkbox.png)
+
+> If the Apple Push Notification service option is not available to you, you will need to ask an admin for your Apple developer account to complete this step for you.
+
+You will now need to choose the App ID for the app that you want to add push notifications to and continue. If your app is not listed you will have to create an App ID. Xcode can do this for you if it automatically if it manages your signing for you, otherwise you can create a new App ID on the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/certificates/list) page under *Identifiers*. Make sure to select the push notifications capability when doing so.
 
 You will be prompted to upload a Certificate Signing Request (CSR). You can follow the instructions on [Apple's help website](https://help.apple.com/developer-account/#/devbfa00fef7) to create a CSR on your Mac. Once the CSR is uploaded you will be able to download the certificate. Double click the `.cer` file to install it in Keychain Access. 
  

@@ -1,16 +1,16 @@
 ---
 title: Version 3.0.0 of the Vonage Python SDK is now available!
 description: Vonage's Python Server SDK Version 3.0.0 is now available. Find out what's new!
-thumbnail:
+thumbnail: /content/blog/announcing-python-sdk-version-v3/python_sdk_updates.png
 author: max-kahan
-published: false
-published_at: 
-updated_at: 
-category:
+published: true
+published_at: 2022-08-08T11:48:15.975Z
+updated_at: 2022-08-08T11:48:15.975Z
+category: release
 tags:
   - python
 comments: true
-spotlight: =
+spotlight: false
 redirect: ""
 canonical: ""
 outdated: false
@@ -82,8 +82,8 @@ When you instantiate a `Client` object, you can now specify the optional `max_re
 
 ```python
 client = vonage.client(
-key='my_key', 
-secret='my_secret', 
+key='my_key',
+secret='my_secret',
 timeout=10,  # timeout in seconds
 pool_connections=10,
 pool_maxsize=10,
@@ -122,7 +122,7 @@ Vonage recommends migrating any calls to the Reports API. As this is a beta feat
 
 Previously, it was possible to instantiate an API class (e.g. `Sms`) directly, by passing in credentials, as a client was created when you did this. This has now been removed, as we want everyone to use the classes by creating a client and using it to call API methods.
 
-### Removed deprecated methods from `Voice` and `NumberInsight` classes
+### Removed deprecated methods from Voice and NumberInsight classes
 
 The `Voice` class contained methods (`initiate_call`, `initiate_tts_call` and `initiate_tts_prompt_call`) that exposed endpoints that were deprecated by Vonage in 2017! These have now been removed from the SDK. Similarly, the `request_number_insight` method has been removed as it was superseded by the `get_{basic/standard/advanced}_number_insight` methods and endpoints.
 

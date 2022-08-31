@@ -6,6 +6,22 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 9.1.1 - August 19, 2022
+
+### Fix
+
+- Fix events ordering for rtc:transfer on named conversations
+
+## Version 9.1.0 - August 16, 2022
+
+### New
+
+- Use pre-loaded media on inbound calls (start `WebRTC ice` gathering process as soon as member is invited to a call)
+
+### Fix
+
+- Remove `public-ip` library because of a security vulnerability (updated with `is-ip`)
+
 ## Version 9.0.0 - June 30, 2022
 
 ### Breaking changes
