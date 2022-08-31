@@ -1,5 +1,5 @@
 ---
-title: Experience Composer Sample Application With Vonage Video API
+title: Using Experience Composer With Vonage Video API
 description: "This article will describe two applications of the many ways
   developers can use Experience Composer: publishing to a Vonage Video API
   Session and capturing your website’s entire layout in an archived Vonage Video
@@ -62,7 +62,7 @@ Archiving allows one to record a video stream of the website using Experience Co
 
 ### Getting Started
 
-Start by creating a folder for the client-side code and a folder for server-side code. I will be focusing on the server-side aspect of the application; however, feel free to reference my [client code](https://github.com/mbiederman12/GamerECSAMPLE/tree/main/client) and check out this article, [Implement a Video API Application With React Hooks](https://developer.vonage.com/blog/22/04/13/implement-a-video-api-application-with-react-hooks), to help build your client side application.
+Start by creating a folder for the client-side code and a folder for server-side code. I will be focusing on the server-side aspect of the application; however, feel free to reference this article, [Implement a Video API Application With React Hooks](https://developer.vonage.com/blog/22/04/13/implement-a-video-api-application-with-react-hooks), to help build your client side application.
 
 In the server folder, create a server.js file and a package.json. Be sure to download both [Node.js](https://nodejs.org/en/download/) and the [Video Node SDK](https://tokbox.com/developer/sdks/node/#installation-using-npm-recommended-) to use for your project. All of the code written in this article will be included in the server.js file, unless specified elsewhere.
 
@@ -371,4 +371,4 @@ Followed by a call to the `stopArchive` function.
 
 Experience Composer has a variety of applications. In this tutorial, we have shown that it can be used to create a stream of a website such as videos, documents, slides, whiteboards or other features and publish it to a Vonage Video API session. Additionally, it allows users to fully customize their own website with logos, web components, and formatted layouts to capture the full experience in the form of an Experience Composer stream.
 
-Hopefully, this tutorial helped you learn the use cases of Experience Composer, and how it can be applied to your own projects! Take a look at my sample application [code](https://github.com/mbiederman12/GamerECSAMPLE) for more information. Let us know how you're enjoying Experience Composer on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
+Hopefully, this tutorial helped you learn the use cases of Experience Composer, and how it can be applied to your own projects! Let us know how you're enjoying Experience Composer on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
