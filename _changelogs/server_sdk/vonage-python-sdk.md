@@ -1,6 +1,6 @@
 ---
 version: '3.0.0'
-release: '5 Jan 2021'
+release: '27 Jul 2022'
 ---
 # [Vonage Python SDK](https://github.com/Vonage/vonage-python-sdk)
 
