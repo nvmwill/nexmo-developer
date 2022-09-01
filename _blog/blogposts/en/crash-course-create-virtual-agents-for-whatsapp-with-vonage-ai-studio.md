@@ -3,7 +3,7 @@ title: "Crash Course: Create Virtual Agents for WhatsApp with Vonage AI Studio"
 description: An overview of creating automated WhatsApp conversation flows with
   Vonage AI Studio. Learn about the different message types and use cases.
 thumbnail: /content/blog/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio/aistuido_whatsapp.png
-author: sejal-dsouza-1
+author: sejal-dsouza
 published: true
 published_at: 2022-09-01T07:13:49.000Z
 updated_at: 2022-09-01T07:13:50.068Z
