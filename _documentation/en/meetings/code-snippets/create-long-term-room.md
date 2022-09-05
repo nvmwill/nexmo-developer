@@ -1,6 +1,6 @@
 ---
 title: Create a Long Term Room
-navigation_weight: 1
+navigation_weight: 3
 description: Setting up a Long Term Meeting Room
 ---
 
@@ -10,7 +10,7 @@ How to setup a long term room using the Meetings API.
 
 ## Prerequisites
 
-* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
+* **Vonage Developer Account**: If you do not already have one, sign-up for a free account on the [Vonage Developers Account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 
 * **Meetings API Activation**: To activate the Meetings API, you must register. Please send an email request to the [Meetings API Team](mailto:meetings-api@vonage.com).
 
@@ -35,8 +35,8 @@ Field | Required? | Description |
 ``type``| No | The type of meeting which can be ``instant`` (the default) or ``long term``.
 ``expires_at`` | Yes | You need to supply a room expiration date in Universal Time Coordinated (UTC) format for a long term room.
 ``recording_options`` | No | An object containing various meeting recording options. For example:
-| | | If ``auto_record``=``true``, the session will be recorded.
-| | | If ``auto_record``=``false``, the session will not be recorded.
+| | | If ``auto_record``=``true``, the session will be recorded. If ``false``, the session will not be recorded.
+| | | If ``record_only_owner``=``true``, all audio in the session will be recorded but only the video of the owner of the room will be recorded. If ``false``, all users in the session will be recorded.
 
 ## Request
 

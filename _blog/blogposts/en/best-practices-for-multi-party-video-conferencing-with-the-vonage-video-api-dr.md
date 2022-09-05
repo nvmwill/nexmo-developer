@@ -5,7 +5,7 @@ description: Follow this guide to learn about platform limitations and best
   multi-party.
 thumbnail: /content/blog/best-practices-for-multi-party-video-conferencing-with-the-vonage-video-api-dr/Blog_Multi-Party-Video-Conferencing_1200x600.png
 author: michaeljolley
-published: true
+published: false
 published_at: 2020-07-23T13:28:56.000Z
 updated_at: 2020-07-23T13:28:00.000Z
 category: tutorial

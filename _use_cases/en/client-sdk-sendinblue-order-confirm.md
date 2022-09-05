@@ -10,7 +10,7 @@ languages:
 
 ## Before you begin
 
-It is assumed that you have both a [Vonage account](https://dashboard.nexmo.com/sign-in) and a [Sendinblue account](https://app.sendinblue.com/account/register), and associated API keys and secrets.
+It is assumed that you have both a [Vonage account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink) and a [Sendinblue account](https://app.sendinblue.com/account/register), and associated API keys and secrets.
 
 ## Overview
 

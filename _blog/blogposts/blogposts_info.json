@@ -1,5 +1,614 @@
 [
   {
+    "title": "Crash Course: Create Virtual Agents for WhatsApp with Vonage AI Studio",
+    "description": "An overview of creating automated WhatsApp conversation flows with Vonage AI Studio. Learn about the different message types and use cases.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio/aistuido_whatsapp.png",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Sejal D'souza",
+      "bio": "Sejal works as a Conversational Designer under the Vonage AI team, where she helps in the creation of virtual assistants for various channels. Formally trained in Psychology, Literature and Communications, getting into the AI world was a stroke of luck that she decided to run along with. Some things that make her day include learning from the experiences of individuals from different teams in Vonage, figuring out efficient ways of implementing virtual agents and herding street dogs for treats!",
+      "image_url": "/content/images/sejal-dsouza-blog-profile-image.jpg",
+      "short_name": "sejal-dsouza"
+    },
+    "published": true,
+    "published_at": "2022-09-01 07:13:49 UTC",
+    "updated_at": "2022-09-01 07:13:50 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "ai-studio"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/01/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio",
+    "filename": "crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio"
+  },
+  {
+    "title": "What Can I Do With MMS?",
+    "description": "An overview of the MMS channel of the Vonage Messages API, with a walkthrough of an example application which uses the Ruby SDK to send an MMS image message.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/what-can-i-do-with-mms/what-mms-can-do.png",
+    "author": {
+      "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
+      "hidden": false,
+      "image_url": "/content/images/karl-b-w-crop.png",
+      "name": "Karl Lingiah",
+      "twitter": "KarlLingiah",
+      "spotlight": false,
+      "title": "Ruby Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "karl-lingiah"
+    },
+    "published": true,
+    "published_at": "2022-08-30 09:27:46 UTC",
+    "updated_at": "2022-08-30 09:27:47 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "messages-api",
+      "ruby",
+      "mms"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/30/what-can-i-do-with-mms",
+    "filename": "what-can-i-do-with-mms"
+  },
+  {
+    "title": "Introducing the Vonage Client SDK V-App Demo Projects",
+    "description": "To showcase the multi-platform functionality of the SDKs and the Conversation API we have built the V-App!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-the-vonage-client-sdk-v-app-demo-projects/v-app-demo.png",
+    "author": {
+      "team": true,
+      "name": "Abdul Ajetunmobi",
+      "image_url": "https://github.com/abdulajet.png",
+      "bio": "Abdul is a Developer Advocate for Vonage. He has a background working in consumer products as an iOS Engineer. In his spare time, he enjoys biking, listening to music and mentoring those who are just beginning their journey in tech",
+      "website_url": "https://abdulajet.me",
+      "twitter": "abdulajet",
+      "title": "Vonage Developer Advocate",
+      "short_name": "abdul-ajetunmobi"
+    },
+    "published": true,
+    "published_at": "2022-08-25 15:08:48 UTC",
+    "updated_at": "2022-08-25 08:59:22 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "conversation-api",
+      "client-sdk",
+      "opensource"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/25/introducing-the-vonage-client-sdk-v-app-demo-projects",
+    "filename": "introducing-the-vonage-client-sdk-v-app-demo-projects"
+  },
+  {
+    "title": "Using ngrok in Rails in 2022",
+    "description": "A quick guide to using ngrok with Ruby on Rakils for tunneling in development environment.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-ngrok-in-rails-in-2022/ngrok_rails.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-24 12:32:43 UTC",
+    "updated_at": "2022-08-24 12:32:43 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "ruby-on-rails",
+      "ngrok",
+      "ruby"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/24/using-ngrok-in-rails-in-2022",
+    "filename": "using-ngrok-in-rails-in-2022"
+  },
+  {
+    "title": "How to Build a Visual Regression Test System Using Playwright",
+    "description": "How to create your own DIY visual regression system for your web application? Here’s how to do it with Playwright, rollup and GitHub actions.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-to-build-a-visual-regression-test-system-using-playwright/visual-regression-test.png",
+    "author": {
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
+      "team": true,
+      "short_name": "yonatankra"
+    },
+    "published": true,
+    "published_at": "2022-08-23 07:23:06 UTC",
+    "updated_at": "2022-08-23 10:02:14 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "playwright",
+      "github-actions",
+      "test"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/23/how-to-build-a-visual-regression-test-system-using-playwright",
+    "filename": "how-to-build-a-visual-regression-test-system-using-playwright"
+  },
+  {
+    "title": "Announcing the Vonage Java SDK v7.0.0",
+    "description": "Version 7.0.0 of the Vonage Java SDK is now available! This post describes the changes and what to expect in the near future.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-vonage-java-sdk-v7-0-0/java-sdk-updates.png",
+    "author": {
+      "team": true,
+      "name": "Sina Madani",
+      "image_url": "https://github.com/SMadani.png",
+      "bio": "Sina is a Java Developer Advocate at Vonage. He comes from an academic background and is generally curious about anything related to cars, computers, programming, technology and human nature. In his spare time, he can be found walking or playing competitive video games.",
+      "title": "Java Developer Advocate",
+      "short_name": "sina-madani"
+    },
+    "published": true,
+    "published_at": "2022-08-22 10:23:51 UTC",
+    "updated_at": "2022-08-22 10:23:51 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "java",
+      "SDK"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/22/announcing-the-vonage-java-sdk-v7-0-0",
+    "filename": "announcing-the-vonage-java-sdk-v7-0-0"
+  },
+  {
+    "title": "Community Member Spotlight: Kiran Krishnan",
+    "description": "A community spotlight of Vonage API developer Kiran Krishnan. In this article we learn about Kiran and how he integrated Vonage with Supabase.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/community-member-spotlight-kiran-krishnan/community-spotlight-kiran.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-18 14:02:36 UTC",
+    "updated_at": "2022-08-18 14:02:38 UTC",
+    "category": {
+      "name": "Community",
+      "plural": "Community Posts",
+      "slug": "community",
+      "color": "#fa7454"
+    },
+    "tags": [
+      "opensource",
+      "community"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/18/community-member-spotlight-kiran-krishnan",
+    "filename": "community-member-spotlight-kiran-krishnan"
+  },
+  {
+    "title": "Using Experience Composer With Vonage Video API",
+    "description": "This article will describe two applications of the many ways developers can use Experience Composer: publishing to a Vonage Video API Session and capturing your website’s entire layout in an archived Vonage Video API stream.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/experience-composer-sample-application-with-vonage-video-api/video-stream-experience-composer.png",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "title": "Software Engineering Intern",
+      "noteworthy": false,
+      "hidden": false,
+      "bio": "Megna is a software engineering intern at Vonage, based out of San Francisco. She is a third year computer engineering student at the University of Illinois Urbana-Champaign. Megna is passionate about learning about innovations and wants to build innovative technology for the future generations.",
+      "name": "Megna Biederman",
+      "image_url": "/content/images/megna-biederman.jpg",
+      "short_name": "megna-biederman"
+    },
+    "published": true,
+    "published_at": "2022-08-17 07:19:49 UTC",
+    "updated_at": "2022-08-17 07:19:50 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "video-api",
+      "nodejs"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/17/experience-composer-sample-application-with-vonage-video-api",
+    "filename": "experience-composer-sample-application-with-vonage-video-api"
+  },
+  {
+    "title": "Office Hours Reservation Using Node.js and the Vonage Messages API",
+    "description": "A web application that allows students to reserve office hour time slots with their professors. Once an office hour reservation is booked, the student will receive a text message confirming the reservation using Vonage Messages API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/office-hours-reservation-using-node-js-and-the-vonage-messages-api/office-hours-reservation.png",
+    "author": {
+      "bio": "Zoe Mithaug is a Developer Relations Intern @ Vonage. She is a 4th-year undergrad student studying at the University of Florida.\n\nShe has a passion for programming, software development, video game development, animation, and digital design.",
+      "hidden": false,
+      "image_url": "/content/images/zoe.jpg",
+      "name": "Zoe Mithaug",
+      "twitter": "zoemithaug",
+      "spotlight": false,
+      "title": "Developer Relations Intern",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "zoe-mithaug"
+    },
+    "published": true,
+    "published_at": "2022-08-16 06:58:31 UTC",
+    "updated_at": "2022-08-16 06:58:32 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "javascript",
+      "node",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/16/office-hours-reservation-using-node-js-and-the-vonage-messages-api",
+    "filename": "office-hours-reservation-using-node-js-and-the-vonage-messages-api"
+  },
+  {
+    "title": "Vonage DevRel Looks Ahead to a Better Than Ever Dreamforce",
+    "description": "The low down on all you need to know about Vonage at Dreamforce 2022",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce/dreamforce-22.png",
+    "author": {
+      "bio": "Lucinda joined Vonage in January 2022 as the EMEA Community Manager. Lucinda has over 10 years experience in event management, with a recent focus on diversity and inclusion. She lives in Hampshire in the UK with her husband and Oggy the labrador.  ",
+      "hidden": false,
+      "image_url": "/content/images/1548775173293.jpeg",
+      "name": "Lucinda Bone",
+      "spotlight": false,
+      "title": "Community Manager, EMEA",
+      "noteworthy": false,
+      "team": false,
+      "alumni": false,
+      "short_name": "lucinda-bone"
+    },
+    "published": true,
+    "published_at": "2022-08-15 07:25:40 UTC",
+    "updated_at": "2022-08-15 07:25:41 UTC",
+    "category": {
+      "name": "Event",
+      "plural": "Events",
+      "slug": "event",
+      "color": "#e6ae00"
+    },
+    "tags": [
+      "dreamforce"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/15/vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce",
+    "filename": "vonage-devrel-looks-ahead-to-a-better-than-ever-dreamforce"
+  },
+  {
+    "title": "Announcing the Video Champions Program",
+    "description": "Come and test the Vonage Meetings API for free with the Video Champions Program",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-video-champions-program/testing-meetings-api.png",
+    "author": {
+      "bio": "Helena is a Technical Writer at Vonage working on all things documentation for our Communications APIs. Based in London, she can often be found playing games, buying too many vinyl records, or watching a show at the theatre.",
+      "hidden": false,
+      "image_url": "/content/images/helena-bower.jpg",
+      "name": "Helena Bower",
+      "spotlight": false,
+      "title": "Technical Writer",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "helena-bower"
+    },
+    "published": true,
+    "published_at": "2022-08-11 08:56:46 UTC",
+    "updated_at": "2022-08-11 08:56:47 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "meetings-api",
+      "video",
+      "announcement"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/11/announcing-the-video-champions-program",
+    "filename": "announcing-the-video-champions-program"
+  },
+  {
+    "title": "Vonage Video Express with Ruby on Rails Part 2",
+    "description": "A ruby on rails tutorial that implements the Video Express javascript library for fast and easy WebRTC video conferencing applications.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-video-express-with-ruby-on-rails-part-2/video-express-ruby_part_2.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-10 09:29:42 UTC",
+    "updated_at": "2022-08-10 09:29:43 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "video-express",
+      "ruby-on-rails"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/10/vonage-video-express-with-ruby-on-rails-part-2",
+    "filename": "vonage-video-express-with-ruby-on-rails-part-2"
+  },
+  {
+    "title": "Vonage Video Express with Ruby on Rails Part 1",
+    "description": "A ruby on rails tutorial that implements the Video Express javascript library for fast and easy WebRTC video conferencing applications.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/vonage-video-express-with-ruby-on-rails-part-1/video-express-ruby_part-1.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-09 21:18:46 UTC",
+    "updated_at": "2022-08-09 21:18:46 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "video-api",
+      "video-express",
+      "ruby-on-rails"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/09/vonage-video-express-with-ruby-on-rails-part-1",
+    "filename": "vonage-video-express-with-ruby-on-rails-part-1"
+  },
+  {
+    "title": "Version 3.0.0 of the Vonage Python SDK is now available!",
+    "description": "Vonage's Python Server SDK Version 3.0.0 is now available. Find out what's new!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-python-sdk-version-v3/python_sdk_updates.png",
+    "author": {
+      "team": true,
+      "name": "Max Kahan",
+      "image_url": "https://github.com/maxkahan.png",
+      "bio": "Max is a Python Developer Advocate and Software Engineer who's passionate about technology. Interested in developer experience, machine learning, artificial intelligence, cloud development, enterprise messaging and swing dance! His training is in Physics, but now he uses his problem-solving skills daily in the technology industry.",
+      "title": "Python Developer Advocate",
+      "linkedin_url": "https://www.linkedin.com/in/maxkahan/",
+      "twitter": "max_does_tech",
+      "github_url": "https://github.com/maxkahan",
+      "short_name": "max-kahan"
+    },
+    "published": true,
+    "published_at": "2022-08-08 11:48:15 UTC",
+    "updated_at": "2022-08-08 11:48:15 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "python"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/08/announcing-python-sdk-version-v3",
+    "filename": "announcing-python-sdk-version-v3"
+  },
+  {
+    "title": "How an SDK Can Add Value to REST APIs",
+    "description": "This article provides an inside look into the design of the Java SDK's implementation of the Vonage Messages v1 API.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-an-sdk-can-add-value-to-rest-apis/sdk-rest-apis.png",
+    "author": {
+      "team": true,
+      "name": "Sina Madani",
+      "image_url": "https://github.com/SMadani.png",
+      "bio": "Sina is a Java Developer Advocate at Vonage. He comes from an academic background and is generally curious about anything related to cars, computers, programming, technology and human nature. In his spare time, he can be found walking or playing competitive video games.",
+      "title": "Java Developer Advocate",
+      "short_name": "sina-madani"
+    },
+    "published": true,
+    "published_at": "2022-08-04 11:48:15 UTC",
+    "updated_at": "2022-08-04 11:48:16 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "java",
+      "messages-v1",
+      "messages-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/04/how-an-sdk-can-add-value-to-rest-apis",
+    "filename": "how-an-sdk-can-add-value-to-rest-apis"
+  },
+  {
+    "title": "Builder Pattern With Inheritance in Java",
+    "description": "This article demonstrates the Builder pattern within a class hierarchy, using the Messages API as an example",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/builder-pattern-with-inheritance-in-java/builder-pattern.png",
+    "author": {
+      "team": true,
+      "name": "Sina Madani",
+      "image_url": "https://github.com/SMadani.png",
+      "bio": "Sina is a Java Developer Advocate at Vonage. He comes from an academic background and is generally curious about anything related to cars, computers, programming, technology and human nature. In his spare time, he can be found walking or playing competitive video games.",
+      "title": "Java Developer Advocate",
+      "short_name": "sina-madani"
+    },
+    "published": true,
+    "published_at": "2022-08-03 11:25:38 UTC",
+    "updated_at": "2022-08-03 10:03:31 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "java",
+      "messages-api",
+      "design-pattern"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/03/builder-pattern-with-inheritance-in-java",
+    "filename": "builder-pattern-with-inheritance-in-java"
+  },
+  {
+    "title": "Choose Your Own Adventure With Vonage AI Studio",
+    "description": "Exploring the tools and features of Vonage AI Studio by creating a fun adventure game",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/choose-your-own-adventure-with-vonage-ai-studio/vonageaistuido.png",
+    "author": {
+      "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
+      "hidden": false,
+      "image_url": "/content/images/karl-b-w-crop.png",
+      "name": "Karl Lingiah",
+      "twitter": "KarlLingiah",
+      "spotlight": false,
+      "title": "Ruby Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "karl-lingiah"
+    },
+    "published": true,
+    "published_at": "2022-08-02 14:11:14 UTC",
+    "updated_at": "2022-08-02 09:52:26 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "ai-studio",
+      "no-code",
+      "low-code"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/02/choose-your-own-adventure-with-vonage-ai-studio",
+    "filename": "choose-your-own-adventure-with-vonage-ai-studio"
+  },
+  {
     "title": "Helena Bower Joins the Vonage Developer Relations Team",
     "description": "Helena Bower is thrilled to join Vonage as a Technical Writer!",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/helena-bower-joins-the-vonage-developer-relations-team/helena-bower.png",
@@ -11398,7 +12007,7 @@
       "alumni": true,
       "short_name": "michaeljolley"
     },
-    "published": true,
+    "published": false,
     "published_at": "2020-07-23 13:28:56 UTC",
     "updated_at": "2020-07-23 13:28:00 UTC",
     "category": {
@@ -11968,6 +12577,36 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -11997,36 +12636,6 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
@@ -14147,6 +14756,36 @@
     "filename": "usando-jwt-para-autenticação-em-uma-aplicação-golang"
   },
   {
+    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
+    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
+    "author": {
+      "name": "Victor Steven",
+      "image_url": "/content/images/0.png",
+      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
+      "website_url": "",
+      "spotlight": true,
+      "short_name": "victor-steven"
+    },
+    "published": true,
+    "published_at": "2020-03-13 13:00:25 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "go",
+      "chinese",
+      "messages-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
+    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
+  },
+  {
     "title": "Using JWT for Authentication in a Golang Application",
     "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
@@ -14175,36 +14814,6 @@
     ],
     "locale": "en",
     "link": "blog/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
-    "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
-  },
-  {
-    "title": "在 Golang 应用程序中使用 JWT 进行身份验证",
-    "description": "Learn how to create a Go application that creates and invalidates JWT tokens to bring authentication to protected routes.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-jwt-for-authentication-in-a-golang-application-dr/Blog_JWT-Golang_Authentification_1200x600-2.png",
-    "author": {
-      "name": "Victor Steven",
-      "image_url": "/content/images/0.png",
-      "bio": "Victor Steven is a self-taught full-stack developer that loves researching about doing things differently. He has a degree in Engineering and over 5 years of experience as a software developer. Steven is very interested in designing and building scalable APIs and he enjoys writing about his discoveries in software development.",
-      "website_url": "",
-      "spotlight": true,
-      "short_name": "victor-steven"
-    },
-    "published": true,
-    "published_at": "2020-03-13 13:00:25 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "go",
-      "chinese",
-      "messages-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/20/03/13/using-jwt-for-authentication-in-a-golang-application-dr",
     "filename": "using-jwt-for-authentication-in-a-golang-application-dr"
   },
   {
@@ -16651,7 +17260,7 @@
     },
     "published": true,
     "published_at": "2019-09-16 08:00:45 UTC",
-    "updated_at": "2021-07-29 22:16:33 UTC",
+    "updated_at": "2022-08-08 23:17:11 UTC",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
@@ -16661,7 +17270,7 @@
     "tags": [
       "javascript",
       "node",
-      "sms-api"
+      "messages-api"
     ],
     "locale": "en",
     "link": "blog/19/09/16/how-to-send-and-receive-sms-messages-with-node-js-and-express-dr",
