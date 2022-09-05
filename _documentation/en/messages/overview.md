@@ -49,7 +49,7 @@ The following features are supported in both v0.1 and v1 versions of the API:
 Channel | Outbound Text | Outbound Image | Outbound Audio | Outbound Video | Outbound File | Outbound Template
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
-MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
+MMS | ✅ | ✅ | ✅ | ✅ | ✅ | n/a
 Viber Business Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
@@ -57,8 +57,8 @@ WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Channel | Inbound Text | Inbound Image | Inbound Audio | Inbound Video | Inbound File | Inbound Location
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
-MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Business Messages | ✅ | n/a | n/a | n/a | n/a | n/a
+MMS | ✅ | ✅ | ✅ | ✅ | ✅ | n/a
+Viber Business Messages | ✅ | ✅ | n/a | n/a | n/a | n/a
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
@@ -77,6 +77,12 @@ WhatsApp | ✅ | ✅ | ✅
 * ✅ = Supported.
 * ❌ = Supported by the channel, but not by Vonage.
 * n/a = Not supported by the channel.
+
+**Notes:**
+
+1. MMS text supported as an optional caption in other message types (e.g. Image, Audio, Video).
+2. MMS Video and Audio supported for 10DLC (10 Digit Long Codes) and TFN (Toll-Free Numbers).
+3. MMS Files support `.vcf` (vCard) files only. Files supported on 10DLC and SC (Short Codes) numbers.
 
 ### Additional v1 Features
 
