@@ -28,6 +28,9 @@ meta_title: NeRu Changelog
 * Fixed:
     * SDK Classes now all exported.
 
+* Removed:
+    * NeRu Router (`neru.Router()`) has been removed. Use a web server library of your choice (e.g. express/fast api) and expose it on the port provided by `process.env.NERU_APP_PORT`
+
 ### 2.4.0 - (2022-07-20)
 
 * Fixed:
