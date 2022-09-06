@@ -13,7 +13,7 @@ meta_title: NeRu Changelog
 
 * Python SDK is available on [pypi](https://pypi.org/project/nerualpha/)
 
-### 3.0.0 - (2022-08-9)
+### 3.0.0 - (2022-08-09)
 
 * Changed:
     * JavaScript: 
@@ -38,14 +38,17 @@ meta_title: NeRu Changelog
 
 ## CLI
 
+### 0.8.13 - (2022-08-25)
+
+* Fixed:
+    * Fix for empty instance IDs
+
 ### 0.8.12 - (2022-08-17)
 
 * Fixed: 
     * Missing incoming request parameters (e.g. `req.query`).
 
-### 0.8.11 - (2022-08-2)
+### 0.8.11 - (2022-08-02)
 
 * Fixed: 
     * Debug API Key issue.
-
-
