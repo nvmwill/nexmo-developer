@@ -38,7 +38,7 @@ Note: The complete source code for this application can be found in our [Vonage 
 
 Begin by launching [Visual Studio](https://visualstudio.microsoft.com/vs/) (Community Edition or higher) and selecting **Create a New Project**, and selecting **ASP.NET Core Web App (Model-View-Controller)** as shown below. I'll provide more information about what MVC is very shortly.
 
-![Create a new project](/content/blog/send-and-receive-sms-messages-with-asp-net-mvc-and-net-6/newproject.png)
+![Create a new project](/content/blog/build-an-asp-net-mvc-app-to-send-sms-messages/newproject.png)
 
 Give your project a name (example: SalesLeads) and press **Next**. For Framework, ensure it is set to **.NET 6.0** and leave the other options as their default settings and press the **Create** button.
 
