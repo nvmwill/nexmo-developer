@@ -9,7 +9,6 @@ const session = neru.createSession();
 const state = new State(session);
 
 const customer = req.body.customer;
-const number = customer.number;
 
-await state.hset("customers", [[number , customer]]);
+await state.hset("customers", {[customer.number]: JSON.stringify(customer)});
 ```
