@@ -273,7 +273,7 @@ Currently, this setting is not supported in streams published in Firefox.
 
 **echoCancellation** (Boolean) — Whether to enable echo cancellation for the published audio. You may want to set this to `false` when publishing high-quality audio (by setting the `audioBitrate` property of the `OT.initPublisher()` options). The default value is `true`. This setting is ignored if you set `disableAudioProcessing` to `false` (which disables echo cancellation, automatic gain control, and noise suppression for the published stream).
 
-Note: Some browsers (such as Chome 73+) do not support echo cancellation for stereo audio (see [this Chrome issue report](https://bugs.chromium.org/p/webrtc/issues/detail?id=10465)).
+Note: Some browsers (such as Chrome 73+) do not support echo cancellation for stereo audio (see [this Chrome issue report](https://bugs.chromium.org/p/webrtc/issues/detail?id=10465)).
 
 **enableStereo** (Boolean) — Whether to publish stereo audio. The default value is `false`.
 
