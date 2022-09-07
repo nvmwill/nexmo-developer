@@ -8,5 +8,5 @@ menu_weight: 1
 const session = neru.createSession();
 const voice = new Voice(session);
 
-const conversation = voice.getConversation("conversation_id", "conversation_name");
+const conversation = voice.getConversation("conversation_id");
 ```

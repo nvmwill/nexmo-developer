@@ -8,5 +8,5 @@ menu_weight: 1
 session = neru.createSession()
 voice = Voice(session)
 
-conversation = await voice.getConversation('conversation_id', 'conversation_name')
+conversation = await voice.getConversation('conversation_id')
 ```

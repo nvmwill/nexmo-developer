@@ -14,12 +14,12 @@ The Voice provider's `Conversation.sayText` function allows you to start playing
 
 ### Method Signature
 ```javascript
-Conversation.sayText(body: SayTextBody)
+Conversation.sayText(body: SayTextBody, to?: string)
 ```
 
 #### Types
 
-The function uses the NeRu `SayTextBody` type for customizing the text to be said.
+The function uses the NeRu `SayTextBody` type for customizing the text to be said. You can use the `to` parameter to say the TTS for a specific conversation member.
 
 ```partial
 source: _partials/neru/type-say-text-body.md

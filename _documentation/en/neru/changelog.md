@@ -13,17 +13,32 @@ meta_title: NeRu Changelog
 
 * Python SDK is available on [pypi](https://pypi.org/project/nerualpha/)
 
-### 3.0.0 - (2022-08-09)
+### 3.1.0 - (2022-09-07)
 
-* Changed:
-    * JavaScript: 
-        * The [State provider](/neru/providers/state) is now accessed via the new State provider initializer: `const state = new State(session);`
-        `neru.getSession` has been removed.
+* Added:
+    * Sessions now expire, the default TTL is 7 days. You can change this by passing a TTL in seconds when creating a session: `neru.createSession(5000)`.
+
+* Changed: 
+    * `session.log()` is no longer async.
+    * `conversation.sayText` now has an optional `to` parameter.
+    * `name` was removed as a parameter for `Conversation.init` and `voice.getConversation`.
+
+* Fixed:
+    * `conversation.sayText()` and `conversation.sayStop()` now work as expected with default values.
+    * `logAction.id` and `logAction.session_id` have the correct values.
+
+
+### 3.0.0 - (2022-08-09)
 
 * Added: 
     * Meetings API provider (Alpha).
     * Numbers API provider (Alpha).
     * `listAll` and `get` functions added to the Scheduler provider.
+
+* Changed:
+    * JavaScript: 
+        * The [State provider](/neru/providers/state) is now accessed via the new State provider initializer: `const state = new State(session);`
+        `neru.getSession` has been removed.
 
 * Fixed:
     * SDK Classes now all exported.

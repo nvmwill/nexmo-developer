@@ -6,11 +6,11 @@ navigation_weight: 2
 
 # Get a Conversation
 
-The Voice provider's `getConversation` function allows you to create a conversation.
+The Voice provider's `getConversation` function allows you to retrieve a conversation.
 
 ## Method Signature
 ```javascript
-getConversation(id: string, name: string)
+getConversation(id: string)
 ```
 
 ## Creating a Conversation
