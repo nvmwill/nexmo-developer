@@ -1,5 +1,46 @@
 [
   {
+    "title": "Chuck Reeves Joins the Vonage Developer Relations Team",
+    "description": "Meet Chuck (MANCHUCK) Reeves, the new Senior JavaScript Developer Advocate at Vonage",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/chuck-reeves-joins-the-vonage-developer-relations-team/chuck-reeves.png",
+    "author": {
+      "bio": "Long ago, in the dark ages before Google and StackOverflow, Chuck learned how to program. Those were the times when all you had to go on was the documentation or the source code itself. From humble beginnings as a Jr Full Stack developer, Chuck grew into the developer he is today, building out the tools that empower fellow developers to create amazing products. When he is not forging new tools, you can find him climbing up a mountain or on his bike.",
+      "hidden": false,
+      "image_url": "/content/images/besthead.png",
+      "name": "Chuck Reeves",
+      "twitter": "manchuck",
+      "github_url": "https://github.com/manchuck",
+      "spotlight": false,
+      "title": "Sr JavaScript Developer Advocate",
+      "email": "chuck.reeves@vonage.com",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "chuck-reeves"
+    },
+    "published": true,
+    "published_at": "2022-09-08 08:48:18 UTC",
+    "updated_at": "2022-09-08 08:48:19 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "career",
+      "new-joiners",
+      "introduction"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/08/chuck-reeves-joins-the-vonage-developer-relations-team",
+    "filename": "chuck-reeves-joins-the-vonage-developer-relations-team"
+  },
+  {
     "title": "Build an ASP.NET MVC App to Send SMS Messages",
     "description": "Learn how to use the Vonage SMS API with a real-world application using ASP.NET MVC Application and .NET 6.0.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/build-an-asp-net-mvc-app-to-send-sms-messages/asp-net_mvc-app.png",
@@ -8474,6 +8515,35 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
+  },
+  {
     "title": "Setting up CI/CD with Github Actions",
     "description": "This article walks you through the process of using github actions to build CI/CD flows.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/setting-up-ci-cd-with-github-actions/Blog_GitHub-Desktop_1200x600.png",
@@ -8505,35 +8575,6 @@
     "locale": "en",
     "link": "blog/21/02/17/setting-up-ci-cd-with-github-actions",
     "filename": "setting-up-ci-cd-with-github-actions"
-  },
-  {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
@@ -12616,36 +12657,6 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -12675,6 +12686,36 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
@@ -19670,36 +19711,6 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "chinese",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -19728,6 +19739,36 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "chinese",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
