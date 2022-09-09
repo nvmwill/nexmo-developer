@@ -931,3 +931,4 @@ Publisher.getVideoSource
 disableAudioProcessing
 OT.getAudioOutputDevices
 Publisher.getAudioSource
+UTF-8
