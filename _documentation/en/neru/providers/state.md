@@ -98,13 +98,15 @@ app.post("/add-customer", async (req, res, next) => {
 	try {
 	  const instanceState = neru.getGlobalState();
 	  const customer = req.body;
-	  await instanceState.hset("customers", {[customer.phone], JSON.stringify(customer)});
+	  await instanceState.hset("customers", { [customer.phone]: JSON.stringify(customer) });
     res.sendStatus(200);
 	} catch (error) {
 	  next(error);
 	}
 })
-  
+```
+
+```javascript
 app.get("/on-phone-call", async (req, res, next) => {
 	try {
 	  const instanceState = neru.getGlobalState();
@@ -125,7 +127,6 @@ curl --location --request POST '{INSTANCE_ENDPOINT}/add-customer' \
     "name": "John",
     "phone": "101"
 }'
-
 
 curl --location --request GET '{INSTANCE_ENDPOINT}/on-phone-call?number=101'
 ```

@@ -10,5 +10,5 @@ const state = new State(session);
 
 const customer = req.body.customer;
 
-await state.hset("customers", {[customer.number]: JSON.stringify(customer)});
+await state.hset("customers", { [customer.number]: JSON.stringify(customer) });
 ```
