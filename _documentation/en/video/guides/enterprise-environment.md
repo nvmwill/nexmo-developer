@@ -5,6 +5,8 @@ description: Using the Vonage Video API Enterprise environment
 navigation_weight: 
 ---
 
+## Enterprise environment
+
 The Enterprise environment ensures your application runs on Vonage Video API media services that are dedicated to the Enterprise environment. Vonage release management processes ensure our latest software is always validated in our Standard environment, before the Enterprise environment is upgraded, to minimize impact of change.
 
 As a dedicated environment, the Enterprise environment also protects against platform load spikes and offers longer support duration for client SDKs.
@@ -69,4 +71,6 @@ Vonage prides itself on shielding our partner application developers from change
 
 When external changes require Vonage to make changes to our SDKs, it may become necessary for partners to accelerate their adoption of newer SDK versions to maintain proper operation of their applications with these new WebRTC ecosystem components.
 
-Note: The Allowed IP list add-on (formerly IP whitelisting) requires that you use the Enterprise environment. See the [Allowed IP list developer guide](video/guides/ip-addresses/).
+<!--alex ignore whitelisting-->
+
+Note: The Allowed IP list add-on (formerly IP whitelisting) requires that you use the Enterprise environment. See the [Allowed IP list developer guide](/video/guides/ip-addresses/).
