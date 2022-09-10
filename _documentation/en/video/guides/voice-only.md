@@ -7,9 +7,9 @@ navigation-weight:
 
 # Voice-Only
 
-You can set up a voice-only session when instantiating a Publisher object:
+You can set up a voice-only session when instantiating a Publisher object.
 
-* [Web](/developer/guides/audio-video/js/#voice)
+<!-- * [Web](/developer/guides/audio-video/js/#voice) -->
 
 <!-- TODO: opentok * [Android](/developer/guides/audio-video/android/#voice)
 * [iOS](/developer/guides/audio-video/ios/#voice)
