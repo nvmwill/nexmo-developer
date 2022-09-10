@@ -992,3 +992,8 @@ Session.Builder
 enums
 otc_session
 OpenTok.js.
+AES-128
+256-bit
+AEAD_AES_128_GCM
+AES-256-bit
+SRTP_AES128_CM_SHA1_80
