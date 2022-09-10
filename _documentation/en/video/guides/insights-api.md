@@ -25,7 +25,7 @@ The Vonage Video Insights API is a [GraphQL API](https://graphql.org/graphql-js/
 
 **Note:** Please click [here](#data-retention-and-latency) for information on data retention and latency.
 
-The Insights Dashboard widget provides data at the project level. You can navigate to it by logging into your [Vonage Video API account](https://tokbox.com/account/#/) and selecting an Vonage Video project. It contains three tabs: Usage, Quality, and Errors, as well as filters for date range, location, and endpoints.
+The Insights Dashboard widget provides data at the project level. You can navigate to it by logging into your [Vonage Video API account](https://tokbox.com/account) and selecting an Vonage Video project. It contains three tabs: Usage, Quality, and Errors, as well as filters for date range, location, and endpoints.
 
 The Usage tab shows different types of minutes that the project generated. You can see a map of where minutes were generated and stack multiple filters as you please.
 
