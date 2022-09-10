@@ -82,7 +82,7 @@ See [this topic](/video/guides/create-session) on how to create sessions. See [t
 
 #### Ensure server generating token is behind authenticated endpoint
 
-It is important to place the server generating the token behind an authenticated endpoint because anyone with access to that server could end up generating new tokens and could abuse the app to generate usage.
+It is important to place the server generating the token behind an authenticated endpoint because anyone with access to that server could end up generating new tokens and could misuse the app.
 
 Don't use personal information in token data.
 
@@ -150,6 +150,6 @@ The Vonage platform provides the capability to remove a user from a session. For
 
 #### Allocate Subscriber-only permissions for those that do not need to publish
 
-In some use cases you may want to limit the number of people who can publish in a session. This is easily implemented by not extending publish permissions to every participant.
+In some use cases you may want to limit the number of people who can publish in a session. This is implemented by not extending publish permissions to every participant.
 
 See [this topic](/video/guides/create-token) for generating tokens with the right roles.
