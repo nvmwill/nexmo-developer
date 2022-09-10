@@ -5,7 +5,7 @@ description: Using the Vonage Video API Enterprise environment
 navigation_weight: 
 ---
 
-## Enterprise environment
+# Enterprise environment
 
 The Enterprise environment ensures your application runs on Vonage Video API media services that are dedicated to the Enterprise environment. Vonage release management processes ensure our latest software is always validated in our Standard environment, before the Enterprise environment is upgraded, to minimize impact of change.
 

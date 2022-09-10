@@ -4,7 +4,7 @@ meta_title: Use the allowed IP list feature for projects using the Enterprise en
 description: The allowed IP list feature lets projects using the Enterprise environment know IP addresses of Vonage Video API servers
 navigation_weight: 
 ---
-## IP addresses
+# IP addresses
 
 The allowed IP list feature is available as an [add-on feature](https://www.vonage.com/communications-apis/video/pricing/).
 
