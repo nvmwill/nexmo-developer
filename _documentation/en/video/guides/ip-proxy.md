@@ -17,7 +17,7 @@ There is also a [configurable TURN server](/video/guides/configurable-turn-serve
 
 ## Configuring the IP proxy server
 
-You set the URL or your proxy server when you initiate an session in the client SDKs.
+You set the URL or your proxy server when you initiate a session in the client SDKs.
 
 Vonage concatenates the destination URL for all internet traffic (except media streams) to the proxy URL you provide. This traffic includes Video API calls, WebSocket connections, and log traffic made by OpenTok.js.
 

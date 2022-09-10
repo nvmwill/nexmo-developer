@@ -6,4 +6,4 @@ product: video
 
 ## Using sessions in client applications
 
-Use the session ID with the [client SDK](/video/client-sdks/overview) to [connect to an session](/video/tutorials/joining-a-session).
+Use the session ID with the [client SDK](/video/client-sdks/overview) to [connect to a session](/video/tutorials/joining-a-session).
