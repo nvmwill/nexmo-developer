@@ -42,7 +42,7 @@ No, everything happens under the hood without any interaction with the user.
 
 No, the Vonage API doesn't change. The Vonage API does not expose these low-level details to developers.
 
-#### Does it have an impact on bandwidth and quality of the videoconference?
+#### Does it have an impact on bandwidth and quality of the video conference?
 
 It has, but very low. It increases the length of each audio and video packet by 8 bytes, but that is less than 1% of the typical bitrate of a session. Regarding the delay, the SRTP encryption framework was designed specifically for real-time applications, and the impact is not noticeable at all.
 

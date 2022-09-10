@@ -971,3 +971,7 @@ QoE
 320x180
 960x540
 540p
+hotspot
+DTLS-SRTP
+128-bit
+HMAC-SHA1
