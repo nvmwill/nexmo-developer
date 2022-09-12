@@ -284,7 +284,7 @@ The following query requests partial `SessionSummary` results:
 
 ## Response Objects
 
-Response objects adhere to the GraphQL schema and are JSON-formatted, but they only include fields you specify in your requests. The \`curl\` example above will result in a response object like the following:
+Response objects adhere to the GraphQL schema and are JSON-formatted, but they only include fields you specify in your requests. The `curl` example above will result in a response object like the following:
 
 ``` json
  {  
@@ -445,7 +445,7 @@ Errors are included in the response, in an `errors` array, like the following:
 ]
 ```
 
-The following table lists the error codes and descriptions. See the \`message\` property of the error for more details.
+The following table lists the error codes and descriptions. See the `message` property of the error for more details.
 
 | Error code | Error description |
 | --- | --- |
@@ -473,7 +473,7 @@ The following table lists the error codes and descriptions. See the \`message\` 
 | 1021 | You are not authorized to view data from this project. |
 | 1022 | Type error. See details in the `message` string. |
 
-\## Making POST Requests to the Vonage Video GraphQL API
+## Making POST Requests to the Vonage Video GraphQL API
 
 All Vonage Video GraphQL requests are made to https://insights.opentok.com/graphql. Set the `content-type` to `application/json`.
 
@@ -492,7 +492,7 @@ OT_START_DATE=$(($(date +%s)-864000))    # generates epoch time from 10 days ago
 
 # GraphQL query to obtain streamed subscribed minutes from the start date
 GRAPHQL_QUERY='{project
-  (projectId:'${YOUR_OT_PROJECT_API_KEY}') {
+  (projectId:'${YOUR_OT_PROJECT_APP_ID}') {
      projectData(
      start:\"'$OT_START_DATE'\" 
    ) {
