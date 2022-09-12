@@ -36,7 +36,7 @@ Unlike the WhatsApp Business API you might use for customer support, Vonage Veri
 
 WhatsApp Codeless allows you to authenticate an end-user without sending a one-time passcode. This improves the experience because there is no need to remember a code. The end-user presses "yes" or "no" in WhatsApp and an event callback is sent to your back-end on when to proceed.
 
-> By default WhatsApp messages will be sent using a Vonage WhatsApp Business Account (WABA). Please contact [Sales](https://www.vonage.com/communications-apis/contact-api/) in order to configure Verify V2 to use your company’s WABA.
+> By default WhatsApp messages will be sent using a Vonage WhatsApp Business Account (WABA). Please contact [Sales](https://www.vonage.com/communications-apis/contact-api/) in order to configure Verify V2 to use your company’s WABA. For managed accounts, please reach out to your dedicated account manager.
 
 ### Voice
 
