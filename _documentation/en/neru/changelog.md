@@ -34,6 +34,7 @@ meta_title: NeRu Changelog
     * Meetings API provider (Alpha).
     * Numbers API provider (Alpha).
     * `listAll` and `get` functions added to the Scheduler provider.
+    * `delete` function added to the State provider
 
 * Changed:
     * JavaScript: 
@@ -45,6 +46,7 @@ meta_title: NeRu Changelog
 
 * Removed:
     * NeRu Router (`neru.Router()`) has been removed. Use a web server library of your choice (e.g. express/fast api) and expose it on the port provided by `process.env.NERU_APP_PORT`
+    * State provider function `del` has been removed. Replaced with `delete`.
 
 ### 2.4.0 - (2022-07-20)
 
