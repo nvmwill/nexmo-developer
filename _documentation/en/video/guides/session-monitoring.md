@@ -215,4 +215,4 @@ For more information see the [archive status changes](/video/guides/archiving/ov
 
 You can monitor status updates for SIP connections to a session.
 
-<!-- OPT-TODO: See the [Monitoring call progress](/guides/sip/#monitoring-call-progress) section of the Vonage Video SIP Interconnect developer guide. -->
+See the [Monitoring call progress](/video/guides/sip-interconnect#monitoring-call-progress) section of the Vonage Video SIP Interconnect developer guide.

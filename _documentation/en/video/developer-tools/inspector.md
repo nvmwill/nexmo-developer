@@ -81,10 +81,8 @@ In cases where a session includes many distinct meetings, this can help simplify
 
 The Meetings Statistics panel includes the following information:
 
-<!-- OPT-TODO: [SIP users](/developer/guides/sip) -->
-
 * The call type. This can be multiparty, one-to-one, one-to-zero, or broadcast.
-* The number of individual users, connections, published streams, and subscribers to the streams in the meeting. If there are SIP users connected to the meeting, the number of SIP users is also listed.
+* The number of individual users, connections, published streams, and subscribers to the streams in the meeting. If there are [SIP users](/video/guides/sip-interconnect) connected to the meeting, the number of SIP users is also listed.
 * The total number of streamed minutes in the meeting.
 * The number of issue occurrence in the meeting.
 * The number of different Vonage Video SDKs used in the meeting. Mouse over the SDKs entry to see a list of the different SDKs and the number of users for each.
