@@ -997,3 +997,14 @@ AES-128
 AEAD_AES_128_GCM
 AES-256-bit
 SRTP_AES128_CM_SHA1_80
+omni-channel
+SIP-PSTN
+DTMFs
+callCreated
+callUpdated
+callDestroyed
+muteForced
+G.722
+telco
+Broadsoft
+interoperate
