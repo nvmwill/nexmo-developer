@@ -1,0 +1,301 @@
+<svg width="960px" height="734px" viewBox="0 0 960 734" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>SIP Graphic - dev center</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <style type="text/css">
+          @font-face {
+            font-family: ProximaNova-Bold;
+            src: url('/developer/fonts/ProximaNova-Bold.otf');
+          }
+          @font-face {
+            font-family: Raleway-SemiBold;
+            src: url('/developer/fonts/Raleway-SemiBold.ttf');
+          }
+        </style>
+        <path d="M706,383 L822,383 C824.209139,383 826,384.790861 826,387 L826,619 C826,621.209139 824.209139,623 822,623 L4,623 C1.790861,623 2.705415e-16,621.209139 0,619 L0,387 C-2.705415e-16,384.790861 1.790861,383 4,383 L120,383" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="826" height="240" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M119.75,133 L4,133 C1.790861,133 2.705415e-16,131.209139 0,129 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 L822,0 C824.209139,-6.3193319e-14 826,1.790861 826,4 L826,129 C826,131.209139 824.209139,133 822,133 L735.46875,133" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="826" height="133" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <linearGradient x1="50%" y1="3.34223533%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FDFEFE" offset="0%"></stop>
+            <stop stop-color="#F7F8F8" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-6" x="0.2" y="0.4" width="95.8" height="55.8"></rect>
+        <rect id="path-8" x="6" y="16" width="85.6195817" height="46.2501116"></rect>
+        <rect id="path-9" x="71" y="23" width="13.7989314" height="9.88476563"></rect>
+        <rect id="path-10" x="0" y="0" width="59" height="85" rx="3.51"></rect>
+        <rect id="path-11" x="3.63076923" y="7.26486486" width="51.7384615" height="69"></rect>
+        <rect id="path-12" x="0.630769231" y="0.264864865" width="51.7384615" height="69"></rect>
+        <rect id="path-14" x="7.53300614" y="20" width="41.4669939" height="45.3060826" rx="0.8"></rect>
+        <rect id="path-15" x="36" y="24" width="8.45595732" height="7.42753008"></rect>
+        <rect id="path-16" x="13.52" y="11" width="8.83384615" height="7"></rect>
+        <path d="M120,380 L4,380 C1.790861,380 2.705415e-16,378.209139 0,376 L-4.4408921e-16,324 C-7.1463071e-16,321.790861 1.790861,320 4,320 L119.189062,320 M703.049266,320 L822,320 C824.209139,320 826,321.790861 826,324 L826,376 C826,378.209139 824.209139,380 822,380 L706,380" id="path-17"></path>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="826" height="60" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <path d="M120,317 L4,317 C1.790861,317 2.705415e-16,315.209139 0,313 L-8.8817842e-16,174 C-1.15871992e-15,171.790861 1.790861,170 4,170 L120,170 M706,170 L822,170 C824.209139,170 826,171.790861 826,174 L826,313 C826,315.209139 824.209139,317 822,317 L706,317" id="path-19"></path>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="826" height="147" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+    </defs>
+    <g id="Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SIP-Graphic--dev-center">
+            <g id="Group-4" transform="translate(67.000000, 56.000000)">
+                <use id="Rectangle-13" stroke="#A0A8B8" mask="url(#mask-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,5,1,5" transform="translate(413.000000, 503.000000) scale(-1, 1) translate(-413.000000, -503.000000) " xlink:href="#path-1"></use>
+                <use id="Rectangle-13" stroke="#A0A8B8" mask="url(#mask-4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,5,1,5" transform="translate(413.000000, 66.500000) scale(-1, 1) translate(-413.000000, -66.500000) " xlink:href="#path-3"></use>
+                <path d="M535.755859,172.491405 L545.891602,172.491405 M568.275391,172.491405 L664.999551,172.491405 C669.418077,172.491405 673,176.071028 673,180.494269 L673,323.397136 C673,327.816996 669.415582,331.4 664.993305,331.4 L163.006695,331.4 C158.584719,331.4 155,327.820377 155,323.397136 L155,180.494269 C155,176.074409 158.585254,172.491405 163.006422,172.491405 L257.852293,172.491405 M269.049646,172.491405 L280.170773,172.491405 M290.212398,172.491405 L558.032227,172.491405" id="Shape" stroke="#A0A8B8" fill="#FDFEFE"></path>
+                <path d="M536.21302,173.056566 L536.213021,132.600001 L436.9,132.600001 C434.2,132.600001 432,130.400001 432,127.700001 L432,88.9000001 C432,86.2 434.2,84 436.9,84 L667.9,84 C670.6,84 672.8,86.2 672.8,88.9000001 L672.8,127.600001 C672.8,130.400001 670.6,132.600001 667.9,132.600001 L568.211133,132.600001 L568.211136,173.056566 M558.300586,173.056566 L558.300586,132.6 L546.223112,132.6 L546.223114,173.056564" id="Shape" stroke="#A0A8B8" fill="#FDFEFE"></path>
+                <g id="Group" transform="translate(537.000000, 126.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="2">
+                    <polyline id="Shape" stroke-linejoin="round" points="7.9 58 3.97883212 61.9708029 0 58"></polyline>
+                    <path d="M4.00000003,0.380859375 L4.00000003,56.6763021" id="Shape" stroke-dasharray="1,5,1,5"></path>
+                </g>
+                <g id="Group" transform="translate(563.000000, 151.000000) rotate(180.000000) translate(-563.000000, -151.000000) translate(559.000000, 120.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="2">
+                    <polyline id="Shape" stroke-linejoin="round" points="7.9 58 3.97883212 61.9708029 0 58"></polyline>
+                    <path d="M4.00000003,0.380859375 L4.00000003,56.6763021" id="Shape" stroke-dasharray="1,5,1,5"></path>
+                </g>
+                <path d="M258.21302,173.056566 L258.213021,132.600001 L158.9,132.600001 C156.2,132.600001 154,130.400001 154,127.700001 L154,88.9000001 C154,86.2 156.2,84 158.9,84 L389.9,84 C392.6,84 394.8,86.2 394.8,88.9000001 L394.8,127.600001 C394.8,130.400001 392.6,132.600001 389.9,132.600001 L290.211133,132.600001 L290.211136,173.056566 M280.300586,173.056566 L280.300586,132.6 L268.223112,132.6 L268.223114,173.056564" id="Shape" stroke="#A0A8B8" fill="#FDFEFE"></path>
+                <g id="Group" transform="translate(259.000000, 126.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="2">
+                    <polyline id="Shape" stroke-linejoin="round" points="7.9 58 3.97883212 61.9708029 0 58"></polyline>
+                    <path d="M4.00000003,0.380859375 L4.00000003,56.6763021" id="Shape" stroke-dasharray="1,5,1,5"></path>
+                </g>
+                <g id="Group" transform="translate(285.000000, 151.000000) rotate(180.000000) translate(-285.000000, -151.000000) translate(281.000000, 120.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="2">
+                    <polyline id="Shape" stroke-linejoin="round" points="7.9 58 3.97883212 61.9708029 -2.84217094e-14 58"></polyline>
+                    <path d="M4.00000003,0.380859375 L4.00000003,56.6763021" id="Shape" stroke-dasharray="1,5,1,5"></path>
+                </g>
+                <g id="SIP-endpoints" transform="translate(137.000000, 486.000000)">
+                    <path d="M270.655669,6 L281.882415,6 M290.609282,6 L530.4,6 C533.5,6 536,8.5 536,11.6 L536,50.9 C536,53.9 533.5,56.4 530.4,56.4 L23.421875,56.4 C20.621875,56.4 18.421875,54.1 18.421875,51.4 L18.421875,11 C18.421875,8.2 20.721875,6 23.421875,6 L261.246062,6" id="Shape" stroke="#A0A8B8" fill="#FDFEFE"></path>
+                    <g id="call-center-rep" transform="translate(359.000000, 0.000000)">
+                        <circle id="Oval" stroke="#A0A8B8" stroke-width="2" fill="#FFFFFF" cx="30.4" cy="30.7" r="30"></circle>
+                        <g id="avatar" transform="translate(11.000000, 12.000000)">
+                            <path d="M37.1658537,41.9853659 C35.3121951,41.3365854 30.8634146,39.8536585 27.2487805,38.8341463 L26.7853659,34.8487805 L11.1219512,34.8487805 L10.6585366,38.8341463 C7.04390244,39.7609756 2.59512195,41.2439024 0.741463415,41.9853659 C0.741463415,41.9853659 7.13658537,48.8439024 18.9073171,48.8439024 C30.5853659,48.8439024 37.1658537,41.9853659 37.1658537,41.9853659 L37.1658537,41.9853659 Z" id="Shape" stroke="#A0A8B8" fill="#F3F7F9"></path>
+                            <path d="M31.1414634,13.4390244 L31.1414634,12.604878 C31.1414634,6.02439024 25.7658537,0.370731707 19.1853659,0.370731707 C12.604878,0.370731707 6.95121951,5.93170732 6.95121951,12.604878 L6.95121951,13.3463415" id="Shape" stroke="#A0A8B8" fill="#F3F7F9"></path>
+                            <path d="M17.4243902,4.54146341 C12.697561,5.1902439 9.08292683,8.9902439 9.08292683,13.6243902 C9.08292683,13.995122 9.08292683,12.604878 9.17560976,12.9756098 C8.80487805,14.5512195 8.6195122,16.2195122 8.6195122,17.8878049 L8.43414634,17.8878049 C7.6,17.9804878 7.04390244,18.7219512 7.13658537,19.5560976 L7.69268293,23.1707317 C7.78536585,24.004878 8.52682927,24.5609756 9.36097561,24.4682927 C9.45365854,24.4682927 9.63902439,24.3756098 9.73170732,24.3756098 C10.3804878,26.3219512 11.4,28.0829268 12.5121951,29.3804878 L12.5121951,34.6634146 L25.395122,34.6634146 L25.395122,29.3804878 C26.6,27.9902439 27.5268293,26.3219512 28.1756098,24.3756098 C28.2682927,24.3756098 28.3609756,24.4682927 28.5463415,24.4682927 C29.3804878,24.5609756 30.1219512,24.004878 30.2146341,23.1707317 L30.7707317,19.4634146 C30.8634146,18.6292683 30.3073171,17.8878049 29.4731707,17.795122 L29.2878049,17.795122 C29.2878049,16.0341463 29.102439,14.4585366 28.7317073,12.8829268 C28.8243902,12.5121951 28.8243902,13.902439 28.8243902,13.5317073 C28.8243902,10.195122 26.9707317,7.32195122 24.1902439,5.65365854 C24.3756098,4.35609756 23.7268293,3.15121951 22.5219512,3.15121951 C21.595122,3.15121951 20.297561,4.26341463 20.297561,4.26341463 L17.4243902,4.54146341 L17.4243902,4.54146341 Z" id="Shape" stroke="#A0A8B8" fill="#FFFFFF"></path>
+                            <path d="M24.8390244,30.8634146 L27.2487805,30.8634146 C29.5658537,30.8634146 31.5121951,28.9170732 31.5121951,26.6 L31.5121951,24.8390244" id="Shape" stroke="#EAA430"></path>
+                            <circle id="Oval" stroke="#EAA430" fill="#FAF4E9" cx="22.9853659" cy="30.8634146" r="1.85365854"></circle>
+                            <path d="M32.902439,21.595122 C34.8487805,21.595122 35.7756098,20.4829268 35.7756098,19.1853659 C35.7756098,17.8878049 34.8487805,16.7756098 32.902439,16.7756098" id="Shape" stroke="#EAA430" fill-opacity="0.1" fill="#EAA430"></path>
+                            <path d="M4.54146341,21.595122 C2.59512195,21.595122 1.66829268,20.4829268 1.66829268,19.1853659 C1.66829268,17.8878049 2.59512195,16.7756098 4.54146341,16.7756098" id="Shape" stroke="#EAA430" fill-opacity="0.1" fill="#EAA430"></path>
+                            <path d="M28.0829268,24.9317073 L30.4926829,24.9317073 C31.9756098,24.9317073 32.902439,24.4682927 32.902439,22.8926829 L32.902439,15.5707317 C32.902439,14.2731707 31.7902439,13.2536585 30.4926829,13.2536585 L28.0829268,13.2536585 L28.0829268,24.9317073 L28.0829268,24.9317073 Z" id="Shape" stroke="#EAA430" fill="#FAF4E9"></path>
+                            <path d="M9.36097561,24.9317073 L6.95121951,24.9317073 C5.46829268,24.9317073 4.54146341,24.4682927 4.54146341,22.8926829 L4.54146341,15.5707317 C4.54146341,14.2731707 5.65365854,13.2536585 6.95121951,13.2536585 L9.36097561,13.2536585 L9.36097561,24.9317073 L9.36097561,24.9317073 Z" id="Shape" stroke="#EAA430" fill="#FAF4E9"></path>
+                        </g>
+                    </g>
+                    <g id="call-center-rep" transform="translate(158.000000, 0.000000)">
+                        <circle id="Oval" stroke="#A0A8B8" stroke-width="2" fill="#FFFFFF" cx="30.4" cy="30.7" r="30"></circle>
+                        <g id="avatar" transform="translate(11.000000, 12.000000)">
+                            <path d="M37.1658537,41.9853659 C35.3121951,41.3365854 30.8634146,39.8536585 27.2487805,38.8341463 L26.7853659,34.8487805 L11.1219512,34.8487805 L10.6585366,38.8341463 C7.04390244,39.7609756 2.59512195,41.2439024 0.741463415,41.9853659 C0.741463415,41.9853659 7.13658537,48.8439024 18.9073171,48.8439024 C30.5853659,48.8439024 37.1658537,41.9853659 37.1658537,41.9853659 L37.1658537,41.9853659 Z" id="Shape" stroke="#A0A8B8" fill="#F3F7F9"></path>
+                            <path d="M31.1414634,13.4390244 L31.1414634,12.604878 C31.1414634,6.02439024 25.7658537,0.370731707 19.1853659,0.370731707 C12.604878,0.370731707 6.95121951,5.93170732 6.95121951,12.604878 L6.95121951,13.3463415" id="Shape" stroke="#A0A8B8" fill="#F3F7F9"></path>
+                            <path d="M17.4243902,4.54146341 C12.697561,5.1902439 9.08292683,8.9902439 9.08292683,13.6243902 C9.08292683,13.995122 9.08292683,12.604878 9.17560976,12.9756098 C8.80487805,14.5512195 8.6195122,16.2195122 8.6195122,17.8878049 L8.43414634,17.8878049 C7.6,17.9804878 7.04390244,18.7219512 7.13658537,19.5560976 L7.69268293,23.1707317 C7.78536585,24.004878 8.52682927,24.5609756 9.36097561,24.4682927 C9.45365854,24.4682927 9.63902439,24.3756098 9.73170732,24.3756098 C10.3804878,26.3219512 11.4,28.0829268 12.5121951,29.3804878 L12.5121951,34.6634146 L25.395122,34.6634146 L25.395122,29.3804878 C26.6,27.9902439 27.5268293,26.3219512 28.1756098,24.3756098 C28.2682927,24.3756098 28.3609756,24.4682927 28.5463415,24.4682927 C29.3804878,24.5609756 30.1219512,24.004878 30.2146341,23.1707317 L30.7707317,19.4634146 C30.8634146,18.6292683 30.3073171,17.8878049 29.4731707,17.795122 L29.2878049,17.795122 C29.2878049,16.0341463 29.102439,14.4585366 28.7317073,12.8829268 C28.8243902,12.5121951 28.8243902,13.902439 28.8243902,13.5317073 C28.8243902,10.195122 26.9707317,7.32195122 24.1902439,5.65365854 C24.3756098,4.35609756 23.7268293,3.15121951 22.5219512,3.15121951 C21.595122,3.15121951 20.297561,4.26341463 20.297561,4.26341463 L17.4243902,4.54146341 L17.4243902,4.54146341 Z" id="Shape" stroke="#A0A8B8" fill="#FFFFFF"></path>
+                            <path d="M24.8390244,30.8634146 L27.2487805,30.8634146 C29.5658537,30.8634146 31.5121951,28.9170732 31.5121951,26.6 L31.5121951,24.8390244" id="Shape" stroke="#EAA430"></path>
+                            <circle id="Oval" stroke="#EAA430" fill="#FAF4E9" cx="22.9853659" cy="30.8634146" r="1.85365854"></circle>
+                            <path d="M32.902439,21.595122 C34.8487805,21.595122 35.7756098,20.4829268 35.7756098,19.1853659 C35.7756098,17.8878049 34.8487805,16.7756098 32.902439,16.7756098" id="Shape" stroke="#EAA430" fill-opacity="0.1" fill="#EAA430"></path>
+                            <path d="M4.54146341,21.595122 C2.59512195,21.595122 1.66829268,20.4829268 1.66829268,19.1853659 C1.66829268,17.8878049 2.59512195,16.7756098 4.54146341,16.7756098" id="Shape" stroke="#EAA430" fill-opacity="0.1" fill="#EAA430"></path>
+                            <path d="M28.0829268,24.9317073 L30.4926829,24.9317073 C31.9756098,24.9317073 32.902439,24.4682927 32.902439,22.8926829 L32.902439,15.5707317 C32.902439,14.2731707 31.7902439,13.2536585 30.4926829,13.2536585 L28.0829268,13.2536585 L28.0829268,24.9317073 L28.0829268,24.9317073 Z" id="Shape" stroke="#EAA430" fill="#FAF4E9"></path>
+                            <path d="M9.36097561,24.9317073 L6.95121951,24.9317073 C5.46829268,24.9317073 4.54146341,24.4682927 4.54146341,22.8926829 L4.54146341,15.5707317 C4.54146341,14.2731707 5.65365854,13.2536585 6.95121951,13.2536585 L9.36097561,13.2536585 L9.36097561,24.9317073 L9.36097561,24.9317073 Z" id="Shape" stroke="#EAA430" fill="#FAF4E9"></path>
+                        </g>
+                    </g>
+                    <text id="SIP-Endpoints" font-family="ProximaNova-Bold, Proxima Nova" font-size="14" fill="#3C424E">
+                        <tspan x="244.837" y="37">SIP Endpoints</tspan>
+                    </text>
+                </g>
+                <g id="SIP-network" transform="translate(155.000000, 383.000000)">
+                    <path d="M242.823563,109 L242.823568,70 L6.0625,70 C2.9625,70 0.4625,67.5 0.4625,64.4 L0.4625,5.6 C0.4625,2.5 2.9625,0 6.0625,0 L511.8,0 C515.2,0 518,2.8 518,6.2 L518,63.8 C518,67.3 515.3,70 511.8,70 L273.108887,70 L273.108887,109 M263.449951,109 L263.449951,70 L253.165039,70 L253.165039,109" id="Shape" stroke="#A0A8B8" fill="#FDFEFE"></path>
+                    <text id="SIP-Network" font-family="ProximaNova-Bold, Proxima Nova" font-size="14" fill="#3C424E">
+                        <tspan x="238.181" y="41">SIP Network</tspan>
+                    </text>
+                    <g id="Group-6" transform="translate(189.000000, 20.000000)">
+                        <g id="Group" transform="translate(0.000000, 12.705882)">
+                            <path d="M17.6361991,0.781900452 C17.6361991,0.781900452 21.1547511,11.0443439 30.0488688,11.0443439" id="Shape" stroke="#EAA430"></path>
+                            <path d="M17.6361991,0.781900452 C17.6361991,0.781900452 20.5606334,15.1908475 27.2067872,17.8297616" id="Shape" stroke="#EAA430"></path>
+                            <path d="M17.5384615,0.781900452 L17.5384615,18.3746606" id="Shape" stroke="#EAA430" stroke-width="0.5"></path>
+                            <circle id="Oval" stroke="#A0A8B8" fill="#FFFFFF" cx="32.3076923" cy="11.0769231" r="1.84615385"></circle>
+                            <circle id="Oval" stroke="#A0A8B8" fill="#FFFFFF" cx="27.2307692" cy="17.8461538" r="1.84615385"></circle>
+                            <path d="M17.6361991,0.781900452 C17.6361991,0.781900452 14.1176471,11.0443439 5.22352941,11.0443439" id="Shape" stroke="#EAA430"></path>
+                            <path d="M17.6361991,0.781900452 C17.6361991,0.781900452 14.6713003,15.0072538 8.02514648,17.6461678" id="Shape" stroke="#EAA430"></path>
+                            <path d="M17.5,0.5 L17.5,19.9164886" id="Line" stroke="#EAA430" stroke-linecap="square"></path>
+                            <circle id="Oval" stroke="#A0A8B8" fill="#FFFFFF" cx="2.34570136" cy="10.9900452" r="1.84615385"></circle>
+                            <circle id="Oval" stroke="#A0A8B8" fill="#FFFFFF" cx="7.84615385" cy="17.8461538" r="1.84615385"></circle>
+                            <circle id="Oval" stroke="#A0A8B8" fill="#FFFFFF" cx="17.5384615" cy="20.3076923" r="1.84615385"></circle>
+                        </g>
+                        <g id="Stroke-491-+-Stroke-492" transform="translate(5.809955, 0.000000)">
+                            <circle id="Oval-4" stroke="#A0A8B8" fill="#FFFFFF" cx="11.7285068" cy="11.7285068" r="11.7285068"></circle>
+                            <path d="M10.2632454,9.27356058 C10.7869951,8.74980044 10.8291264,7.94350724 10.3582473,7.47096655 L9.07778651,6.19213265 C8.60690739,5.72041808 7.79980404,5.76255021 7.27688038,6.28713646 L6.49621235,7.06616771 C5.8196334,7.74358618 5.66845641,8.75062656 6.1294223,9.48339508 C8.11041904,12.6251298 10.8316047,15.3463693 13.9741033,17.3274053 C14.704379,17.7892064 15.71553,17.6363742 16.3904567,16.9614341 L17.1702987,16.1807506 C17.6940484,15.6569905 17.7370058,14.8498712 17.2644745,14.3789827 L15.9856659,13.0993227 C15.5131346,12.6284342 14.7076834,12.6697403 14.1839337,13.1943265 L13.7097501,13.6668672 C12.2921561,12.5309521 10.9257806,11.1653756 9.78988793,9.74692739 L10.2632454,9.27356058 L10.2632454,9.27356058 Z" id="Stroke-491" stroke="#EAA430" fill-opacity="0.1" fill="#EAA430" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+                <g id="OT-SIP-interconnet" transform="translate(303.000000, 266.000000)">
+                    <g id="Group">
+                        <text id="OpenTok-SIP-Intercon" font-family="ProximaNova-Bold, Proxima Nova" font-size="14" fill="#3C424E">
+                            <tspan x="44.87495" y="39">OpenTok SIP Interconnect</tspan>
+                        </text>
+                        <g id="Group-3" transform="translate(0.000000, 18.000000)">
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="18" cy="2" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="34" cy="18" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="29" cy="7" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="18" cy="34" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="29" cy="29" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="2" cy="18" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="7" cy="29" r="2"></circle>
+                            <circle id="Oval-2" stroke="#A0A8B8" fill="#FFFFFF" cx="7" cy="7" r="2"></circle>
+                            <path d="M12,22.1129032 C12,21.3790323 12.5128205,20.9596774 13.1282051,20.8548387 L16.2051282,19.0725806 L16.2051282,18.0241935 C15.0769231,17.3951613 14.3589744,16.3467742 14.3589744,14.7741935 C14.3589744,12.5725806 15.8974359,11 17.9487179,11 C19.8974359,11 21.5384615,12.4677419 21.5384615,14.6693548 C21.5384615,16.1370968 20.8205128,17.2903226 19.7948718,17.9193548 L19.7948718,18.9677419 L22.8717949,20.75 C23.4871795,20.9596774 24,21.3790323 24,22.0080645 C24,22.0080645 22.6666667,24 17.9487179,24 C13.1282051,24 12,22.1129032 12,22.1129032 L12,22.1129032 Z" id="Shape" stroke="#871fff" fill-opacity="0.1" fill="#871fff"></path>
+                            <path d="M18,7 L18,8" id="Shape" stroke="#871fff" stroke-width="1.11100006" stroke-linecap="round"></path>
+                            <path d="M18,28 L18,29" id="Shape" stroke="#871fff" stroke-width="1.11100006" stroke-linecap="round"></path>
+                            <path d="M25.7071068,11 L25,11.7071068" id="Shape" stroke="#871fff" stroke-width="1.11100006" stroke-linecap="round"></path>
+                            <path d="M24.8660254,26.5 L24,26" id="Shape" stroke="#871fff" stroke-width="1.11100006" stroke-linecap="round"></path>
+                            <path d="M29,18 L28,18" id="Shape" stroke="#871fff" stroke-width="1.11100006" stroke-linecap="round"></path>
+                            <g id="Group-2" transform="translate(10.000000, 19.000000) scale(-1, 1) translate(-10.000000, -19.000000) translate(7.000000, 10.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="1.11100006">
+                                <path d="M2.70710678,1 L2,1.70710678" id="Shape"></path>
+                                <path d="M1.8660254,16.5 L1,16" id="Shape"></path>
+                                <path d="M6,8 L5,8" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="arrows" transform="translate(396.000000, 315.000000)">
+                    <rect id="Rectangle-path" fill="url(#linearGradient-5)" x="2" y="0" width="10" height="70"></rect>
+                    <path d="M11.5,15.9201172 L11.5,68.4594727" id="Shape" stroke="#A0A8B8"></path>
+                    <path d="M1.5,15.9291016 L1.5,68.4594727" id="Shape" stroke="#A0A8B8"></path>
+                    <polyline id="Shape" stroke="#871fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="10.9 76 6.97883212 79.9708029 3 76"></polyline>
+                    <path d="M7.00000003,6.68880209 L7.00000003,75.5144242" id="Shape" stroke="#871fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1,5,1,5"></path>
+                </g>
+                <g id="arrows" transform="translate(423.000000, 353.500000) rotate(-180.000000) translate(-423.000000, -353.500000) translate(417.000000, 315.000000)">
+                    <rect id="Rectangle-path" fill="url(#linearGradient-5)" transform="translate(6.000000, 40.961993) rotate(-180.000000) translate(-6.000000, -40.961993) " x="1" y="5.52306564" width="10" height="70.8778538"></rect>
+                    <path d="M11,8.43505859 L11,60.9403267" id="Shape" stroke="#A0A8B8"></path>
+                    <path d="M1,8.43505859 L1,60.971859" id="Shape" stroke="#A0A8B8"></path>
+                    <polyline id="Shape" stroke="#871fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="9.9 71 5.97883212 74.9708029 2 71"></polyline>
+                    <path d="M6.00000003,0.392968803 L6.00000003,70.7562501" id="Shape" stroke="#871fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="1,5,1,5"></path>
+                </g>
+                <g id="arrows" transform="translate(399.000000, 449.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="2">
+                    <path d="M4.00000003,0.427734375 L4.00000003,48.1787109" id="Shape" stroke-dasharray="1,5,1,5"></path>
+                    <polyline id="Shape" stroke-linejoin="round" points="7.9 47 3.97883212 50.9708029 0 47"></polyline>
+                </g>
+                <g id="arrows" transform="translate(423.000000, 470.500000) rotate(180.000000) translate(-423.000000, -470.500000) translate(419.000000, 445.000000)" stroke="#871fff" stroke-linecap="round" stroke-width="2">
+                    <path d="M4.00000003,0.427734375 L4.00000003,48.1787109" id="Shape" stroke-dasharray="1,5,1,5"></path>
+                    <polyline id="Shape" stroke-linejoin="round" points="7.9 47 3.97883212 50.9708029 -5.68434189e-14 47"></polyline>
+                </g>
+                <g id="Group" transform="translate(339.000000, 192.000000)">
+                    <text id="The-OpenTok-Platform" font-family="ProximaNova-Bold, Proxima Nova" font-size="14" fill="#3C424E">
+                        <tspan x="2.32695" y="59">The OpenTok Platform</tspan>
+                    </text>
+                    <path d="M90.8,17.7 C93.1,11.6 88.8,7.2 83.9,7.7 C82.3,3.2 78.2,0 73.2,0 C66.8,0 61.7,5.9 61.7,12.3 C55.8,12.3 51,17.2 51,23 C51,28.9 55.9,33.7 61.7,33.7 L87,33.7 C91.8,33.7 95.4,30.1 95.4,25.3 C95.4,22.2 93.3,19.2 90.8,17.7 L90.8,17.7 Z" id="Shape" stroke="#A0A8B8" fill="#FFFFFF"></path>
+                    <path d="M74.0370556,20.9592 C73.4934402,20.9592 73.0531798,20.5196 73.0531798,19.9768 C73.0531798,19.4344 73.4934402,18.9944 74.0370556,18.9944 C74.5802704,18.9944 75.0205308,19.4344 75.0205308,19.9768 C75.0205308,20.5196 74.5802704,20.9592 74.0370556,20.9592 L74.0370556,20.9592 Z M73.9849775,14 L68,14 L68,20 C68,23.3136 70.6784176,26 73.9969955,26 C77.315974,26 80,23.3136 80,20 C80,16.6864 77.3039559,14 73.9849775,14 L73.9849775,14 Z" id="Fill-1" stroke="#871fff" fill-opacity="0.1" fill="#871fff"></path>
+                </g>
+                <g id="laptop" transform="translate(106.000000, 70.000000)">
+                    <g id="Group" transform="translate(14.000000, 0.000000)">
+                        <path d="M4.8,0 C2.2,0 0,2.1 0,4.7 L0,67.1 L104.4,67.1 L104.4,4.7 C104.3,2.1 102.1,0 99.6,0 L4.8,0 Z" id="fill" fill="#F6F8FB"></path>
+                        <path d="M104.4,67.1 L104.4,4.7 C104.3,2.1 102.1,0 99.6,0 L4.8,0 L4.8,0 C2.2,0 0,2.1 0,4.7 L0,67.1" id="rectangle" stroke="#A0A8B8" stroke-width="1.5"></path>
+                    </g>
+                    <rect id="Rectangle-path" stroke="#A0A8B8" stroke-width="1.0023" fill="#FFFFFF" x="18.2" y="7.4" width="95.8" height="55.8"></rect>
+                    <g id="Browsing" transform="translate(18.000000, 7.000000)">
+                        <mask id="mask-7" fill="white">
+                            <use xlink:href="#path-6"></use>
+                        </mask>
+                        <use id="Rectangle-path" stroke="#BFC8D9" stroke-width="1.0023" fill="#FFFFFF" xlink:href="#path-6"></use>
+                        <g id="Group-2" mask="url(#mask-7)">
+                            <rect id="Rectangle-2416" stroke="#A0A8B8" fill="#F6F8FB" stroke-linecap="round" stroke-linejoin="round" x="0" y="10.8957589" width="96" height="49.8078125"></rect>
+                            <rect id="Rectangle-2416" stroke="#BFC8D9" stroke-linecap="round" stroke-linejoin="round" x="0" y="0.22265625" width="96" height="10.6731027"></rect>
+                            <rect id="Rectangle-2418" stroke="#BFC8D9" stroke-width="2" x="4.53300614" y="4.78035714" width="1.45051456" height="1.55770089"></rect>
+                            <rect id="Rectangle-2419" stroke="#BFC8D9" stroke-width="2" x="9.70877797" y="4.78035714" width="1.45051456" height="1.55770089"></rect>
+                            <rect id="Rectangle-2420" stroke="#BFC8D9" stroke-width="2" x="14.8845498" y="4.78035714" width="1.45051456" height="1.55770089"></rect>
+                            <g id="Rectangle-2421">
+                                <use fill-opacity="0.1" fill="#871fff" fill-rule="evenodd" xlink:href="#path-8"></use>
+                                <rect stroke="#871fff" stroke-width="1" x="6.5" y="16.5" width="84.6195817" height="45.2501116"></rect>
+                            </g>
+                            <g id="Rectangle-2421">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                                <rect stroke="#871fff" stroke-width="1" x="71.5" y="23.5" width="12.7989314" height="8.88476563"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(51.000000, 67.000000)"></g>
+                    <circle id="Oval" stroke="#CCCCCC" stroke-width="0.5" cx="66.2" cy="4.20000001" r="1"></circle>
+                    <circle id="Oval" fill-opacity="0.9" fill="#0EBE0E" cx="69.2" cy="4.20000001" r="1"></circle>
+                    <path d="M14.0184864,66.9189453 L1.43156335,66.9189453 C0.877583918,66.9189453 0.428494859,67.3702002 0.428494859,67.9114362 L0.428494859,69.4894427 C0.428494859,70.0375803 0.793530701,70.7406663 1.26179332,71.038065 C1.26179332,71.038065 3.63378899,72.987793 7.94482422,72.987793 L66.559873,72.987793 L124.590003,72.987793 C128.901038,72.987793 131.273033,71.038065 131.273033,71.038065 C131.741296,70.7406663 132.106332,70.0375803 132.106332,69.4894427 L132.106332,67.9114362 C132.106332,67.3702002 131.657243,66.9189453 131.103263,66.9189453 L118.391416,66.9189453" id="Path-2" stroke="#A0A8B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M14.3525391,67.4044922 L118.202454,67.4044922" id="Path-4" stroke="#A0A8B8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <g id="iPad" transform="translate(425.000000, 66.000000)">
+                    <g>
+                        <use fill="#F6F8FB" fill-rule="evenodd" xlink:href="#path-10"></use>
+                        <rect stroke="#A0A8B8" stroke-width="1.5" x="0.75" y="0.75" width="57.5" height="83.5" rx="3.51"></rect>
+                    </g>
+                    <g id="Screen">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                        <rect stroke="#CCCCCC" stroke-width="1" x="4.13076923" y="7.76486486" width="50.7384615" height="68"></rect>
+                    </g>
+                    <g id="Group-2" transform="translate(3.000000, 7.000000)">
+                        <mask id="mask-13" fill="white">
+                            <use xlink:href="#path-12"></use>
+                        </mask>
+                        <g id="Screen">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-12"></use>
+                            <rect stroke="#A0A8B8" stroke-width="1" x="1.13076923" y="0.764864865" width="50.7384615" height="68"></rect>
+                        </g>
+                        <rect id="Rectangle-2416" stroke="#A0A8B8" fill="#EEF1F7" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-13)" x="4" y="17" width="48.3692308" height="52.2648649"></rect>
+                        <g id="Rectangle-2421" mask="url(#mask-13)">
+                            <use fill-opacity="0.1" fill="#871fff" fill-rule="evenodd" xlink:href="#path-14"></use>
+                            <rect stroke="#871fff" stroke-width="1" x="8.03300614" y="20.5" width="40.4669939" height="44.3060826" rx="0.8"></rect>
+                        </g>
+                        <g id="Rectangle-2421" mask="url(#mask-13)">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                            <rect stroke="#871fff" stroke-width="1" x="36.5" y="24.5" width="7.45595732" height="6.42753008"></rect>
+                        </g>
+                        <rect id="Rectangle-2416" stroke="#A0A8B8" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-13)" x="4.08249158" y="7.58967634" width="63.8345193" height="9.30608259"></rect>
+                        <circle id="Oval-3" fill="#BFC8D9" mask="url(#mask-13)" cx="9.4835207" cy="12.5" r="1.5"></circle>
+                        <circle id="Oval-3" fill="#BFC8D9" mask="url(#mask-13)" cx="14.208778" cy="12.5" r="1.5"></circle>
+                        <circle id="Oval-3" fill="#BFC8D9" mask="url(#mask-13)" cx="19.208778" cy="12.5" r="1.5"></circle>
+                    </g>
+                    <ellipse id="Home-Button" fill="#BFC8D9" cx="29.6836996" cy="80.0972973" rx="1.99908425" ry="2"></ellipse>
+                    <ellipse id="Camera" stroke="#A0A8B8" stroke-width="0.5" fill="#24C324" cx="29.8457876" cy="4.31891893" rx="1" ry="1"></ellipse>
+                </g>
+                <g id="iPhone" transform="translate(416.000000, 94.000000)">
+                    <g id="Group">
+                        <g id="SVGID_5_-link" fill="#F6F8FB">
+                            <path d="M27.68,55.0135135 C27.68,56.8472973 26.16,58.3621622 24.32,58.3621622 L3.6,58.3621622 C1.76,58.3621622 0.24,56.8472973 0.24,55.0135135 L0.24,4.06621622 C0.24,2.23243243 1.76,0.717567568 3.6,0.717567568 L24.32,0.717567568 C26.16,0.717567568 27.68,2.23243243 27.68,4.06621622 L27.68,55.0135135 L27.68,55.0135135 Z" id="SVGID_5_"></path>
+                        </g>
+                        <g id="SVGID_5_-link" stroke="#A0A8B8" stroke-width="1.5">
+                            <path d="M27.68,55.0135135 C27.68,56.8472973 26.16,58.3621622 24.32,58.3621622 L3.6,58.3621622 C1.76,58.3621622 0.24,56.8472973 0.24,55.0135135 L0.24,4.06621622 C0.24,2.23243243 1.76,0.717567568 3.6,0.717567568 L24.32,0.717567568 C26.16,0.717567568 27.68,2.23243243 27.68,4.06621622 L27.68,55.0135135 L27.68,55.0135135 Z" id="SVGID_5_"></path>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(0.800000, 7.175676)" fill="#F9F9F9">
+                        <g id="SVGID_7_-link" transform="translate(0.800000, 0.797297)">
+                            <rect id="SVGID_7_" x="0.56" y="0.239189189" width="23.68" height="41.9378378"></rect>
+                        </g>
+                    </g>
+                    <rect id="Rectangle-path" stroke="#871fff" fill-opacity="0.1" fill="#871fff" x="3" y="8.21216216" width="22" height="41.9378378" rx="0.800000012"></rect>
+                    <g id="Rectangle-2421">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-16"></use>
+                        <rect stroke="#871fff" stroke-width="1" x="14.02" y="11.5" width="7.83384615" height="6"></rect>
+                    </g>
+                    <path d="M16.48,6.05945946 C16.48,6.21891892 16.4,6.29864865 16.24,6.29864865 L12,6.29864865 C11.92,6.29864865 11.76,6.21891892 11.76,6.05945946 L11.76,5.58108108 C11.76,5.42162162 11.84,5.34189189 12,5.34189189 L16.24,5.34189189 C16.32,5.34189189 16.48,5.42162162 16.48,5.58108108 L16.48,6.05945946 L16.48,6.05945946 Z" id="Shape" stroke="#A0A8B8" stroke-width="0.5"></path>
+                    <ellipse id="Oval" stroke="#A0A8B8" stroke-width="0.5" fill="#24C324" cx="14.16" cy="3.18918919" rx="1" ry="1"></ellipse>
+                    <ellipse id="Oval" fill="#BFC8D9" cx="14" cy="54.1364865" rx="2.16" ry="2.07297297"></ellipse>
+                </g>
+                <text id="WebRTC-App" font-family="ProximaNova-Bold, Proxima Nova" font-size="14" fill="#3C424E">
+                    <tspan x="510.00265" y="112">WebRTC App</tspan>
+                </text>
+                <text id="WebRTC-App" font-family="ProximaNova-Bold, Proxima Nova" font-size="14" fill="#3C424E">
+                    <tspan x="232.00265" y="112">WebRTC App</tspan>
+                </text>
+                <text id="End-Users" font-family="Spezia-SemiBold, Spezia" font-size="13" font-weight="500" letter-spacing="0.541666687" fill="#636B7A">
+                    <tspan x="25" y="30">End Users</tspan>
+                </text>
+                <use id="Rectangle-13" stroke="#A0A8B8" mask="url(#mask-18)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,5,1,5" transform="translate(413.000000, 350.000000) scale(-1, 1) translate(-413.000000, -350.000000) " xlink:href="#path-17"></use>
+                <text id="SIP-Interface" font-family="Spezia-SemiBold, Spezia" font-size="13" font-weight="500" letter-spacing="0.541666687" fill="#636B7A">
+                    <tspan x="25" y="354.947266">SIP Interface</tspan>
+                </text>
+                <use id="Rectangle-13" stroke="#A0A8B8" mask="url(#mask-20)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,5,1,5" transform="translate(413.000000, 243.500000) scale(-1, 1) translate(-413.000000, -243.500000) " xlink:href="#path-19"></use>
+                <text id="TokBox-Cloud" font-family="Spezia-SemiBold, Spezia" font-size="13" font-weight="500" line-spacing="14" letter-spacing="0.541666687" fill="#636B7A">
+                    <tspan x="25" y="206">TokBox </tspan>
+                    <tspan x="25" y="220">Cloud</tspan>
+                </text>
+                <text id="Customer-Network" font-family="Spezia-SemiBold, Spezia" font-size="13" font-weight="500" letter-spacing="0.541666687" fill="#636B7A">
+                    <tspan x="25" y="604">Customer Network</tspan>
+                </text>
+                <path d="M155.089787,270.5 L671.663604,270.5" id="Path-5" stroke="#A0A8B8" stroke-dasharray="1,4,1,4"></path>
+            </g>
+        </g>
+    </g>
+</svg>
