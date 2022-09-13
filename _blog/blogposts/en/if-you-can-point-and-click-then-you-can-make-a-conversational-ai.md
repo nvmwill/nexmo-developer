@@ -101,7 +101,7 @@ Next, under **Message**, you will see **Prompt**. This is where we will ask the 
 
 We will now use the **Classifications** node to understand what sort of help the user is asking for. 
 
-![Conversation Group for the Classification Node](./Images/collect-input-node.png "collect-input-node.png")
+![Conversation Group for the Classification Node](/content/blog/if-you-can-point-and-click-then-you-can-make-a-conversational-ai/collect-input-node.png "collect-input-node.png")
 
 First, we need to set the **Classification Parameter** to the parameter we created earlier, called **REQUEST**. Next, we need to select **Intent** and press the button to **Create Intent** to provide a list of questions a user can ask. For this sample, we will assume they want directions to the event.
 
