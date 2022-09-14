@@ -13,6 +13,17 @@ meta_title: NeRu Changelog
 
 * Python SDK is available on [pypi](https://pypi.org/project/nerualpha/)
 
+### 3.2.0 - (2022-09-12)
+
+* Added:
+    * Form-data dependency to support file uploads.
+    * Watch dev dependency to support watch mode.
+    * `RequestInterfaceWithParams` class to support passing request params to the request
+
+* Changed: 
+    * Removed the `RequestHeaders` class.
+    * Removed the `CommandHeaders` class.
+
 ### 3.1.0 - (2022-09-07)
 
 * Added:
