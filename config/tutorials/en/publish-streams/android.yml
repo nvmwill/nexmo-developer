@@ -1,0 +1,30 @@
+title: Publishing Streams 
+description: Learn how to publish Vonage Video API streams in your android application.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  content: |
+    # Introduction
+    Once you have [connected to a session](/video/tutorials/joining-a-session), you can publish a stream that other clients connected to the session can view.
+
+    In this tutorial, you will learn how to publish streams.
+
+tasks:
+    - video/publish-streams/android/2-initialize-publisher-object
+    - video/publish-streams/android/3-preview-publisher-stream
+    - video/publish-streams/android/4-publish-stream
+    - video/publish-streams/android/5-stop-publisher-stream
+    - video/publish-streams/android/6-get-statistics
+    - video/publish-streams/android/7-test-publisher-stream
+
+
+conclusion:
+  title: What's next?
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
