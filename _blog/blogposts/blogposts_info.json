@@ -1,5 +1,41 @@
 [
   {
+    "title": "Diana Pham Joins the Vonage Developer Relations Team",
+    "description": "Meet Diana (@dianasoyster)–the newest NA edition to the Outreach Team.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/diana-pham-joins-the-vonage-developer-relations-team/diana-pham.png",
+    "author": {
+      "bio": "Diana is a developer advocate at Vonage. She likes eating fresh oysters.",
+      "hidden": false,
+      "image_url": "/content/images/diana-pham.jpg",
+      "name": "Diana Pham",
+      "twitter": "dianasoyster",
+      "spotlight": false,
+      "noteworthy": false,
+      "team": false,
+      "alumni": false,
+      "short_name": "diana-pham"
+    },
+    "published": true,
+    "published_at": "2022-09-15 07:23:40 UTC",
+    "updated_at": "2022-09-15 07:23:41 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "careers"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/15/diana-pham-joins-the-vonage-developer-relations-team",
+    "filename": "diana-pham-joins-the-vonage-developer-relations-team"
+  },
+  {
     "title": "If You Can Point and Click Then You Can Make a Conversational AI",
     "description": "Learn all about AI Studio, a No Code / Low Code approach to help businesses handle complex customer interactions through the use of a Virtual Agent.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/if-you-can-point-and-click-then-you-can-make-a-conversational-ai/point-click_conversationai.png",
@@ -8586,35 +8622,6 @@
     "filename": "setting-up-ci-cd-with-github-actions"
   },
   {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
-  },
-  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -8643,6 +8650,35 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
+  },
+  {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Announcing Vonage Ruby SDK Version 7.3.0",
@@ -19749,6 +19785,36 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "chinese",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -19777,36 +19843,6 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "chinese",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
