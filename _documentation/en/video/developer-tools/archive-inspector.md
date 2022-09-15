@@ -6,7 +6,7 @@ product: video
 
 # Archive Inspector Overview
 
-[Use Archive inspector](https://tokbox.com/developer/tools/archive-inspector)
+[Use Archive inspector](https://tools.vonage.com/video/archive-inspector/index)
 
 Archive inspector provides diagnostic information about archives created for a session.
 
