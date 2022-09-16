@@ -1057,3 +1057,4 @@ Subscriber.Builder
 OTSubscriberVideoEventReason
 OpenTok.Subscriber
 System.Windows.Controls.Control.
+TokenOptions
