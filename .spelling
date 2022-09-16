@@ -1057,3 +1057,13 @@ Subscriber.Builder
 OTSubscriberVideoEventReason
 OpenTok.Subscriber
 System.Windows.Controls.Control.
+ios
+OTSessionConnectionStatus
+OKSubscriberKitDelegate
+OTError
+otc_session_callbacks
+OpentokError
+OpentokException.ErrorCode
+OTSessionErrorCode
+OTSessionDelegate
+SubscriberKit.StreamListener

@@ -1,0 +1,33 @@
+title: Joining a Session 
+description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your web application.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to connect to a session from your iOS(Swift) app.
+  content: |
+    # Introduction
+    Using a session ID and token, you can connect to a session. For information on creating a session ID, see [Session Creation](/video/guides/create-session).
+
+prerequisites:
+  - video/general-prerequisites/video-api-account
+
+tasks:
+    - video/joining-a-session/swift/2-initialize-session-object
+    - video/joining-a-session/swift/3-connect-session
+    - video/joining-a-session/swift/4-disconnect-session
+    - video/joining-a-session/swift/5-automatic-reconnect
+    - video/joining-a-session/swift/6-detect-client-connect
+
+
+
+conclusion:
+  title: What's next?
+  description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your web application.
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>
