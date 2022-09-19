@@ -47,10 +47,10 @@ mPublisher = new Publisher.Builder(context)
 
 Note that in sessions that use the Vonage Video Media Router (sessions with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to routed), lowering the frame rate proportionally reduces the bandwidth the stream uses. However, in sessions that have the media mode set to relayed, lowering the frame rate does not reduce the stream's bandwidth.
 
-<!--OPT-TODO: [Using a custom video capturer](/developer/guides/audio-video/android/#custom_capturer) -->
+[Using a custom video capturer](/video/tutorials/audio-video/video/audio-video/android/2-video-settings/android#using-a-custom-video-capturer)
 
 You can use a custom video capturer to publish a stream with a customized video source. You can also use the custom video capturer to publish a screen-sharing stream.
 
 <!-- OPT-TODO: [Screen-sharing](/developer/guides/screen-sharing/android/). -->
 
-<!-- OPT-TODO: You can also use a customized audio source for the published stream — see [Using a custom audio driver](/developer/guides/audio-video/android/#audio_driver). -->
+You can also use a customized audio source for the published stream — see [Using a custom audio driver](/video/tutorials/audio-video/video/audio-video/android/3-audio-settings/objective_c#using-a-custom-audio-driver).

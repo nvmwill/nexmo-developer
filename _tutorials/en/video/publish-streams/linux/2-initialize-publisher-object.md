@@ -77,10 +77,10 @@ The `otc_publisher_new()` method takes three arguments:
 * `name` — A name (optional) identifying the publisher of the stream.
 * `capturer` — Use this parameter if you want to provide a custom video capturer. If it is set to `NULL`, the publisher uses the default system camera as the video source.
 
-<!-- OPT-TODO: See [Using a custom video capturer](/developer/guides/audio-video/linux/#custom_capturer) to see how to implement a custom video capturer.) -->
+See [Using a custom video capturer](/video/tutorials/audio-video/video/audio-video/linux/2-video-settings/linux#using-a-custom-video-capturer) to see how to implement a custom video capturer.
 
 * `callbacks` — The `otc_publisher_callbacks` publisher callback structure, described above.
 
-<!--OPT-TODO: an create a [custom audio driver](/developer/guides/audio-video/linux/#audio_driver) to be used by all publishers and subscribers.
+Create a [custom audio driver](/video/tutorials/audio-video/video/audio-video/linux/3-audio-settings/linux#using-a-custom-audio-driver) to be used by all publishers and subscribers.
 
-You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/developer/guides/audio-video/linux/#custom_capturer). -->
+You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/video/tutorials/audio-video/video/audio-video/linux/2-video-settings/linux#using-a-custom-video-capturer).

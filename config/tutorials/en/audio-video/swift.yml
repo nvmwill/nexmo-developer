@@ -1,0 +1,33 @@
+title: Adjusting audio and video
+description: Learn more about manipulating audio and video of Vonage Video API streams for your web application. Publish only video or audio, adjust the frame rate, and more. 
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn how to adjust audio and video of a stream.
+  content: |
+    # Introduction
+    In this tutorial, you will learn how to adjust audio and video of a stream. Click **Next** to get started
+
+prerequisites:
+  - video/general-prerequisites/video-api-account
+
+tasks:
+    - video/audio-video/swift/1-intro
+    - video/audio-video/swift/2-video-settings
+    - video/audio-video/swift/3-audio-settings
+    - video/audio-video/swift/4-subscribe-audio-video
+    - video/audio-video/swift/5-detect-audio-video
+
+
+
+conclusion:
+  title: What's next?
+  description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your application.
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>

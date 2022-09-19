@@ -24,4 +24,4 @@ session.connect(token, function (error) {
 });
 ```
 
-<!-- OPT-TODO: For more information, see [Handling exceptions](/developer/guides/exception-handling/js/). -->
+For more information, see [Handling exceptions](/video/guides/exception-handling/js).
