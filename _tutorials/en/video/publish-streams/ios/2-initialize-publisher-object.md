@@ -36,6 +36,8 @@ _publisher = [[OTPublisher alloc]
 
 Note that in sessions that use the Vonage Video Media Router (sessions with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to routed), lowering the frame rate proportionally reduces the bandwidth the stream uses. However, in sessions that have the media mode set to relayed, lowering the frame rate does not reduce the stream's bandwidth.
 
-<!-- OPT-TODO: You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/tutorials/audio-video). You can also use the custom video capturer to publish a screen-sharing stream — see [Screen-sharing](/tutorials/screen-sharing).
+You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/video/tutorials/audio-video/video/audio-video/ios/2-video-settings/ios#using-a-custom-video-capturer).
 
-You can also use a customized audio source for the published stream — see [Using a custom audio driver](/tutorials/audio-video). -->
+<!-- You can also use the custom video capturer to publish a screen-sharing stream — see [Screen-sharing](/tutorials/screen-sharing). -->
+
+You can also use a customized audio source for the published stream — see [Using a custom audio driver](/video/tutorials/audio-video/video/audio-video/ios/3-audio-settings/objective_c).

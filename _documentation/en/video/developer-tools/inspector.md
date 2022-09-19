@@ -130,9 +130,7 @@ The Quality Metrics module is useful for understanding **bitrate**, **packet los
 
 You can click and drag on the chart to zoom in on a specific section of the graph. You can filter which data displays based on the checkboxes above the graph: Show Video, Show Audio, Publishers, Subscribers, and SIP (audio only). You can also filter by users using the Filter options in the left-hand side of the page.
 
-<!-- OPT-TODO: [scalable video](/developer/guides/scalable-video/) -->
-
->**Note:** For a stream that does not use scalable video (such as a stream in a relayed session), the publisher adapts the published video to accommodate the subscriber with the worst network conditions. Inspector will show quality information based on this worst-performing subscriber. So the reported publisher video quality might not reflect the actual video quality experienced by all subscribers to the stream.
+>**Note:** For a stream that does not use [scalable video](/video/guides/scalable-video) (such as a stream in a relayed session), the publisher adapts the published video to accommodate the subscriber with the worst network conditions. Inspector will show quality information based on this worst-performing subscriber. So the reported publisher video quality might not reflect the actual video quality experienced by all subscribers to the stream.
 
 For a stream that uses scalable video, Inspector shows video quality information based on the link between the stream's publisher and the Media Router.
 

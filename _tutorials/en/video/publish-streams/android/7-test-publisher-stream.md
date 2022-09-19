@@ -12,6 +12,6 @@ To get statistics for a stream published by the local client, you must use a ses
 
 You can then use the [SubscriberKit.setAudioStatsListener(AudioStatsListener listener)](/sdk/stitch/video-android-reference/com/opentok/android/SubscriberKit.html#setAudioStatsListener(com.opentok.android.SubscriberKit.AudioStatsListener)) and [SubscriberKit.setVideoStatsListener(VideoStatsListener listener)](/sdk/stitch/video-android-reference/com/opentok/android/SubscriberKit.html#setVideoStatsListener(com.opentok.android.SubscriberKit.VideoStatsListener)) methods of the Subscriber object to get audio and video statistics for the stream you publish. 
 
-<!-- OPT-TODO: See [this topic](/developer/guides/subscribe-stream/android/#stream_info) for more information. -->
+See [this topic](/video/tutorials/subscribe-streams/video/subscribe-streams/android/6-get-stream-info/android) for more information.
 
 <!-- OPT-TODO: The [Vonage Video-network-test](https://github.com/opentok/opentok-network-test) repo includes sample code for showing how to use statistics of a test stream before publishing to a session. -->

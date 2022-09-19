@@ -23,9 +23,9 @@ For screen-sharing streams, you need to enable scalable video for the published 
 
 * For the Web SDK, streams that have the video source set to "screen", set the `scalableScreenshare` option for the [OT.initPublisher()](/sdk/stitch/video-js-reference/OT.html#initPublisher) method.
 
-<!-- OPT-TODO: * In the OpenTok Android SDK, for streams that have the video type set to `PublisherKitVideoTypeScreen`, use the [PublisherKit.Builder.scalableScreenshare()](/developer/sdks/android/reference/com/opentok/android/PublisherKit.Builder.html#scalableScreenshare-boolean-) method.
-* In the OpenTok iOS SDK, for streams that have the `OTStreamVideoType` set to `OTStreamVideoTypeScreen`, use the [OTPublisherKitSettings.scalableScreenshare](/developer/sdks/ios/reference/Classes/OTPublisherKitSettings.html#//api/name/scalableScreenshare) property.
-* In Windows SDK, for streams that have the `VideoSourceType` set to `Screen`, use the [Publisher.Builder.ScalableScreenshare](/developer/sdks/windows/reference/class\_open\_tok\_1\_1\_publisher\_1\_1\_builder.html#aa4e5d1436b5f758f3e8ec37a10e3bc25) property.
+<!-- OPT-TODO: * In the OpenTok Android SDK, for streams that have the video type set to `PublisherKitVideoTypeScreen`, use the [PublisherKit.Builder.scalableScreenshare()](/sdk/stitch/video-android-reference/com/opentok/android/PublisherKit.Builder.html#scalableScreenshare-boolean-) method.
+* In the OpenTok iOS SDK, for streams that have the `OTStreamVideoType` set to `OTStreamVideoTypeScreen`, use the [OTPublisherKitSettings.scalableScreenshare](/sdk/stitch/video-ios-reference/Classes/OTPublisherKitSettings.html#//api/name/scalableScreenshare) property.
+* In Windows SDK, for streams that have the `VideoSourceType` set to `Screen`, use the [Publisher.Builder.ScalableScreenshare](/sdk/stitch/video-windows-reference/class\_open\_tok\_1\_1\_publisher\_1\_1\_builder.html#aa4e5d1436b5f758f3e8ec37a10e3bc25) property.
 * In the Linux SDK, for streams that have the video type set to `OTC\_PUBLISHER\_VIDEO\_TYPE\_SCREEN`, use the [otc\_publisher\_settings\_set\_scalable\_screenshare()](/developer/sdks/linux/reference/publisher\_8h.html#adcf56ed4ef26c0c61a429c6c4729953d) function. -->
 
 > **Note:** scalable video for screen-sharing streams is a _beta_ feature.
@@ -36,8 +36,8 @@ All clients can subscribe to scalable video streams. The client SDKs include met
 
 * Web SDK — [Subscriber.setPreferredFrameRate()](/sdk/stitch/video-js-reference/Subscriber.html#setPreferredFrameRate) and [Subscriber.setPreferredResolution()](/sdk/stitch/video-js-reference/Subscriber.html#setPreferredResolution)
 
-<!-- * In the OpenTok Android SDK — [SubscriberKit.setPreferredFrameRate()](/developer/sdks/android/reference/com/opentok/android/SubscriberKit.html#setPreferredFrameRate-float-) and [OSubscriberKit.setPreferredResolution()](/developer/sdks/android/reference/com/opentok/android/SubscriberKit.html#setPreferredResolution-com.opentok.android.VideoUtils.Size-)
-* In the OpenTok iOS SDK — [OTSubscriberKit.preferredFrameRate](/developer/sdks/ios/reference/Classes/OTSubscriberKit.html#//api/name/preferredFrameRate) and [SubscriberKit.preferredResolution](/developer/sdks/ios/reference/Classes/OTSubscriberKit.html#//api/name/preferredResolution)
-* In Windows SDK — [Subscriber.PreferredFramerate](/developer/sdks/windows/reference/class\_open\_tok\_1\_1\_subscriber.html#a16e8ad605d0e543d5051b85d4f9ad76d) and [Subscriber.PreferredResolution](/developer/sdks/windows/reference/class\_open\_tok\_1\_1\_subscriber.html#aaa7ba29740b752418ad71b336155b44b). -->
+* In the Android SDK — [SubscriberKit.setPreferredFrameRate()](/sdk/stitch/video-android-reference/com/opentok/android/SubscriberKit.html#setPreferredFrameRate-float-) and [OSubscriberKit.setPreferredResolution()](/sdk/stitch/video-android-reference/com/opentok/android/SubscriberKit.html#setPreferredResolution-com.opentok.android.VideoUtils.Size-)
+* In the iOS SDK — [OTSubscriberKit.preferredFrameRate](/sdk/stitch/video-ios-reference/Classes/OTSubscriberKit.html#//api/name/preferredFrameRate) and [SubscriberKit.preferredResolution](/sdk/stitch/video-ios-reference/Classes/OTSubscriberKit.html#//api/name/preferredResolution)
+* In the Windows SDK — [Subscriber.PreferredFramerate](/sdk/stitch/video-windows-reference/class\_open\_tok\_1\_1\_subscriber.html#a16e8ad605d0e543d5051b85d4f9ad76d) and [Subscriber.PreferredResolution](/sdk/stitch/video-windows-reference/class\_open\_tok\_1\_1\_subscriber.html#aaa7ba29740b752418ad71b336155b44b).
 
 For more information, see [this article](https://video-api.support.vonage.com/hc/en-us/articles/360029733831-TokBox-Scalable-Video-Simulcast-FAQ).

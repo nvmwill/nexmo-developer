@@ -131,11 +131,11 @@ When you create a token for a client to connect to the session, you can (optiona
 
 To do this, generate a token that includes the initial layout class list setting.
 
-<!-- The following examples use the OpenTok Java, Node, PHP, Python, Ruby, and .NET SDKs.  -->
+The following examples use the OpenTok Java, Node, PHP, Python, Ruby, and .NET SDKs. 
 
 The following examples use the Node, and PHP SDKs. 
 
-<!-- Java:
+Java:
 
 ```java
 import com.opentok.OpenTok;
@@ -146,7 +146,7 @@ List<String> classList = List.of("focus", "bar", "inactive");
 String token = session.generateToken(new TokenOptions.Builder()
   .initialLayoutClassList(classList)
   .build());
-``` -->
+```
 
 Node:
 
@@ -182,7 +182,7 @@ $token = $session->generateToken(array(
     'initialLayoutClassList' => ['focus']
 ));
 ```
-<!-- 
+
 Python:
 
 ```python
@@ -219,7 +219,7 @@ List< string >  initialLayoutClassList = new List<string>()
     "focus"
 };
 string token = session.GenerateToken(initialLayoutClassList: initialLayoutClassList);
-``` -->
+```
 
 ### Modifying the layout class list for a stream
 
@@ -263,7 +263,7 @@ You can also modify the layout class list for a stream using the server SDKs:
 
 ### Getting the layout class list for a stream
 
-<!-- OPT-TODO [/session/{sessionId}/stream/{streamId} REST API](/developer/rest/#get-stream-info) -->
+[/v2/project/:application_id/session/:session_id/stream/:stream_id REST API](/api/video?theme=dark#get-v2-project-application_id-session-session_id-stream-stream_id)
 
 You can get the layout class list for a stream by calling the REST API `/session/{sessionId}/stream/{streamId}`. Make a GET request to the following URL:
 
@@ -304,12 +304,12 @@ You can also get the layout class list for a stream using the server SDKs:
 
 ### Getting the layout class list for multiple streams
 
-<!-- OPT-TODO [/session/{sessionId}/stream REST API](/developer/rest/#get-stream-info) -->
+[/v2/project/:application_id/session/:session_id/stream REST API](/developer/rest/#get-stream-info)
 
 You can get the layout class list for all streams in a session by calling the REST API `/session/{sessionId}/stream`. Make a GET request to the following URL:
 
 ```
-https://api.opentok.com/v2/project/{appId}/session/{sessionId}/stream/
+https://video.api.vonage.com/v2/project/:application_id/session/:session_id/stream
 ```
 
 The response includes JSON data, which includes an `items` property, which is an array containing layout information for streams in the session:
@@ -428,10 +428,9 @@ For an archive:
 
 **Note:** By default, the composed archive or broadcast resolution is 640x480 pixels (SD landscape). You can also set a composed archive or broadcast to use a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), or 1080x1920 (FHD portrait) resolution.
 
-<!-- OPT-TODO:[start archive](/developer/rest/#start_archive)
-[start broadcast](/developer/rest/#start_broadcast) -->
+<!-- OPT-TODO: [start broadcast](/developer/rest/#start_broadcast) -->
 
-when you call the start archive or the start broadcast method of the REST API. 640x480-pixel and 480x640-pixel (SD) archives have 4:3 and 3:4 aspect ratios. 1280x720-pixel, 720x1280-pixel, 1920x1080-pixel, and 1080x1920-pixel (HD and FHD) archives have 16:9 and 9:16 aspect ratios. 
+when you call the [start archive](/api/video?theme=dark#patch-v2-project-application_id-archive-archive_id-streams) or the start broadcast method of the REST API. 640x480-pixel and 480x640-pixel (SD) archives have 4:3 and 3:4 aspect ratios. 1280x720-pixel, 720x1280-pixel, 1920x1080-pixel, and 1080x1920-pixel (HD and FHD) archives have 16:9 and 9:16 aspect ratios. 
 
 Keep these aspect ratios in mind when defining the CSS for a custom layout.
 
@@ -461,10 +460,9 @@ broadcast {
 }
 ```
 
-<!-- OPT-TODO:[start archive](/developer/rest/#start_archive)
-[start broadcast](/developer/rest/#start_broadcast) -->
+<!-- OPT-TODO: [start broadcast](/developer/rest/#start_broadcast) -->
 
-The default dimensions are 640x480 pixels (SD landscape). You can also set a composed archive or broadcast to use a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), or 1080x1920 (FHD portrait) resolution when you call the start archive or start broadcast method of the REST API.
+The default dimensions are 640x480 pixels (SD landscape). You can also set a composed archive or broadcast to use a 480x640 (SD portrait), 1280x720 (HD landscape), 720x1280 (HD portrait), 1920x1080 (FHD landscape), or 1080x1920 (FHD portrait) resolution when you call the [start archive](/api/video?theme=dark#patch-v2-project-application_id-archive-archive_id-streams) or start broadcast method of the REST API.
 
 The following default rules are applied to elements:
 
@@ -493,6 +491,7 @@ The following pseudo-class selectors are supported:
 * `:nth-last-child(n)`
 
 The following CSS selectors are not supported:
+
 * The universal selector is not supported (`*`).
 * Descendent selectors are not supported (`parent ancestor`, `parent * ancestor`).
 * Child selectors are not supported (`parent > child`).

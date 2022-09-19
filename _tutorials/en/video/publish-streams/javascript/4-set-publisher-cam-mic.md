@@ -42,7 +42,7 @@ var publisher = OT.initPublisher(null, pubOptions, function(error) {
 });
 ```
 
-<!-- OPT-TODO: Set the `videoSource` property to `null` or `false` in a voice-only session (see [Publishing in a voice session](/developer/guides/audio-video/js/#voice)). -->
+Set the `videoSource` property to `null` or `false` in a voice-only session (see [Publishing in a voice session](/video/tutorials/audio-video/video/audio-video/web/1-intro/javascript#publishing-in-a-voice-only-session)).
 
 Set the `videoSource` property to `null` or `false` in a voice-only session.
 
@@ -50,6 +50,6 @@ The [Vonage Video hardware set-up component](/video/guides/hardware-setup) provi
 
 <!-- OPT-TODO Note that you can also publish a screen-sharing stream — one in which the source is the client's screen, not a camera. For details, see [Screen sharing](/developer/guides/screen-sharing/js/). -->
 
-<!-- OPT-TODO You can also [change the camera used by the publisher](/developer/guides/audio-video/js/#cycleVideo), or set it to use the [front- or back-facing camera](facingMode) (when this option is available).
+You can also [change the camera used by the publisher](/video/tutorials/audio-video/video/audio-video/web/2-video-settings/javascript#publisher-cyclevideo).
 
-You can also [change the audio source used by the publisher](/developer/guides/audio-video/js/#setAudioSource). -->
+You can also [change the audio source used by the publisher](/video/tutorials/audio-video/video/audio-video/web/3-audio-settings/javascript#switching-the-audio-source-used-by-a-publisher).

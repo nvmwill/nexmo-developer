@@ -27,7 +27,7 @@ For each token, you can add a string containing metadata describing the client. 
 
 **Do not use personal information in token data** — token metadata is passed to all users in the session and is also readable through the Vonage video client logs, so you should never use unencrypted sensitive or personal information in the token data.
 
-<!--OPT-TODO See [security best practices](/developer/guides/security/#best-practices). -->
+See [security best practices](/video/guides/security).
 
 The Vonage Video client SDKs include properties for inspecting the connection data for a client connected to a session.
 

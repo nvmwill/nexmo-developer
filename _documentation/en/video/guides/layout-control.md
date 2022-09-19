@@ -34,9 +34,7 @@ If the aspect ratio of an individual stream's video does not match that of the c
 
 <img src="/images/video/aspect-ratios.png" alt="Vonage Video API layout aspect ratios" style="width: 20%;">
 
-You can also set a composed archive to use a 480x640 (SD portrait, 3:4 aspect ratio), 1280x720 (HD landscape, 16:9 aspect ratio), 720x1280 (HD portrait, 9:16 aspect ratio), 1920x1080 (FHD landscape, 16:9 aspect ratio), or 1080x1920 (FHD portrait, 9:16 aspect ratio) resolution when you call the start archive method of the Vonage Video REST API. You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio).
-
-<!-- OPT-TODO: Add a link to start recording text https://tokbox.com/developer/rest/#start_archive  -->
+You can also set a composed archive to use a 480x640 (SD portrait, 3:4 aspect ratio), 1280x720 (HD landscape, 16:9 aspect ratio), 720x1280 (HD portrait, 9:16 aspect ratio), 1920x1080 (FHD landscape, 16:9 aspect ratio), or 1080x1920 (FHD portrait, 9:16 aspect ratio) resolution when you call the [start archive](/api/video?theme=dark#patch-v2-project-application_id-archive-archive_id-streams) method of the Vonage Video REST API. You may want to use a portrait aspect ratio when recording archives that include video streams from mobile devices (which often use the portrait aspect ratio).
 
 To use this feature:
 
