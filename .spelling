@@ -1101,3 +1101,13 @@ onVideoDisableWarningLifted
 UIView
 BaseVideoRenderer.Frame
 TokenOptions
+application_id
+session_id
+stream_id
+MediaUtils.SupportedCodecs.getSupportedCodecs
+MediaUtils.SupportedCodecs
+MediaUtils.VideoCodecType
+SubscriberKit.setPreferredFrameRate
+Subscriber.PreferredFramerate
+OSubscriberKit.setPreferredResolution
+OTSubscriberKit.preferredFrameRate
