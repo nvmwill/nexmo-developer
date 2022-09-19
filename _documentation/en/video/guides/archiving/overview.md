@@ -318,10 +318,3 @@ You can secure your archives in the following ways:
 * **Turn off archive storage fallback** — By default, Vonage stores an archive file on Vonage servers if it was unable to upload the file to your specified S3 or Azure server. To prevent this fallback storage, log in to your Vonage Account, select the project, and set the option to disable archive storage fallback.
 * **Use Vonage encryption** — This allows you to create Vonage archives where the data is never at rest in an unencrypted state. Of the available methods of securing your Vonage recordings, this provides the highest level of security. This is available as an add-on feature. For more information, see the Vonage encryption documentation.
 * **Use Amazon S3 server-side encryption** — This uses Amazon S3-managed encryption keys for encryption. Learn about Amazon S3 server-side encryption [here](/video/guides/archiving/amazon-s3-encryption).
-
-
-<!-- ## More Information
-
-See the documentation for the archiving-related methods in the API references for the server SDKs. Also, each of the server SDKs includes a sample archiving application. -->
-
-<!-- OPT-TODO: add link to API/method reference page -->

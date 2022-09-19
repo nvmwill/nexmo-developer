@@ -63,8 +63,10 @@ You pass in other optional parameters of the `Publisher()` constructor to define
 * `hasVideoTrack` — Whether to include an audio track in the published stream. The default is `true`.
 * `stereo` — Whether to enable stereo audio in the published stream. The default is `false`. Set this to `true` to publish audio from a stereo microphone.
 
-<!-- OPT-TODO: You can also [change the audio source used by the publisher](/tutorials/audio-video). Or you can create a [custom audio driver](/tutorials/audio-video) to be used by all publishers and subscribers.
+You can also [change the audio source used by the publisher](/tutorials/audio-video). Or you can create a [custom audio driver](/video/tutorials/audio-video/video/audio-video/linux/2-video-settings/linux#using-a-custom-video-capturer) to be used by all publishers and subscribers.
 
-You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/tutorials/audio-video). You can also use the custom video capturer to publish a screen-sharing stream — see [Screen-sharing](/tutorials/screen-sharing). -->
+You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/video/tutorials/audio-video/video/audio-video/linux/2-video-settings/linux#using-a-custom-video-capturer).
+ 
+<!-- OPT-TODO: You can also use the custom video capturer to publish a screen-sharing stream — see [Screen-sharing](/tutorials/screen-sharing). -->
 
 **Note:** The OpenTok.Publisher class and the OpenTok.VideoCapturer implement the System.IDisposable interface. Be sure to call the `Dispose()` method of these objects to release their resources when you no longer need the object (for example, when the Publisher is removed or when the app or window is closing).

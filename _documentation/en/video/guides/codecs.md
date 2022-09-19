@@ -28,11 +28,7 @@ The mechanism for encoding and decoding the video is the codec standard and for 
 
 The VP8 real-time video codec is a software codec. It can work well at lower bitrates and is a mature video codec in the context of WebRTC.
 
-As a software codec it can be instantiated as many times as is needed by the application within the limits of memory and CPU. The VP8 codec supports the Scalable Video feature, which means it works well in large sessions with supported browsers and devices.
-
-<!-- [OpenTok Scalable Video](/developer/guides/scalable-video) -->
-
-<!-- OPT-TODO: add link to scalable video guide -->
+As a software codec it can be instantiated as many times as is needed by the application within the limits of memory and CPU. The VP8 codec supports the [Scalable Video](/video/guides/scalable-video) feature, which means it works well in large sessions with supported browsers and devices.
 
 The H.264 real-time video codec is available in both hardware and software forms depending on the device.
 
@@ -85,16 +81,8 @@ The following tables list the real-time video codec capabilities of the supporte
 
 3 Non-Safari browsers running in iOS (for example, Chrome and Firefox) use a Safari webview under the hood. The Safari webview does not support WebRTC and the OpenTok.js SDK.
 
-<!--  OPT-TODO:
-| Native SDKs | VP8 | H.264 |
-| --- | --- | --- |
-| iOS SDK (2.12+) | Yes | Yes |
-| Android SDK (2.13+) | Yes | Yes for most devices * |
-| Windows SDK (2.13+) | Yes | Yes |
-| Linux SDK | Yes | No  |
-| macOS SDK (beta) | Yes | No  |
 
-\* Hardware H.264 is supported on devices that contain the Qualcomm and Exynos chipsets, in addition to a subset of HiSilicon and MediaTek chipsets. Fallback to software H.264 is supported on Android M or higher. -->
+* Hardware H.264 is supported on devices that contain the Qualcomm and Exynos chipsets, in addition to a subset of HiSilicon and MediaTek chipsets. Fallback to software H.264 is supported on Android M or higher.
 
 ## Codec feature support across endpoints
 
@@ -106,14 +94,11 @@ Percentage of Android devices that support the codec
 
 ## Detecting codec support in clients
 
-<!-- OPT-TODO: Not all Android devices support the H.264 codec, and older versions of Safari do not support VP8. OpenTok.js and the OpenTok Android SDK include methods for checking the supported codecs available to the client.  -->
+Not all Android devices support the H.264 codec, and older versions of Safari do not support VP8. OpenTok.js and the OpenTok Android SDK include methods for checking the supported codecs available to the client. 
 
 Not all Android devices support the H.264 codec, and older versions of Safari do not support VP8. OpenTok.js include methods for checking the supported codecs available to the client.
 
 ### Detecting supported codecs in the browser
-
-
-<!-- OPT-TODO: Link to JS SDK methods reference page -->
 
 The [`OT.getSupportedCodecs()`](/sdk/stitch/video-js-reference/OT.html#getSupportedCodecs) method returns a Promise that is resolved (on success) with an object that has two properties: `videoDecoders`, an array of supported video codecs for decoding, and `videoEncoders`, an array of supported video codecs for encoding.
 
@@ -132,16 +117,14 @@ The following example gets the list of supported codecs for encoding and decodin
 })();
  ```   
 
-<!-- ### Detecting supported codecs using the Android SDK  -->
+### Detecting supported codecs using the Android SDK 
 
-<!-- [MediaUtils.SupportedCodecs.getSupportedCodecs(context)](/developer/sdks/android/reference/com/opentok/android/MediaUtils.html#getSupportedCodecs-android.content.Context-) -->
+* [MediaUtils.SupportedCodecs.getSupportedCodecs(context)](/sdk/stitch/video-android-reference/com/opentok/android/MediaUtils.html#getSupportedCodecs-android.content.Context-)
 
-<!-- OPT-TODO: Link to JS SDK methods reference page -->
+* [MediaUtils.SupportedCodecs](/sdk/stitch/video-android-reference/com/opentok/android/MediaUtils.SupportedCodecs.html)
 
-<!-- [MediaUtils.SupportedCodecs](/developer/sdks/android/reference/com/opentok/android/MediaUtils.SupportedCodecs.html) -->
+* [MediaUtils.VideoCodecType](/sdk/stitch/video-android-reference/com/opentok/android/MediaUtils.VideoCodecType.html)
 
-<!-- [MediaUtils.VideoCodecType](/developer/sdks/android/reference/com/opentok/android/MediaUtils.VideoCodecType.html) -->
-<!-- 
 The `MediaUtils.SupportedCodecs.getSupportedCodecs(context)` returns a `MediaUtils.SupportedCodecs` object that that has two properties: `videoDecoders`, an **ArrayList** of supported video codecs (defined by the `MediaUtils.VideoCodecTyp`e class) for decoding, and `videoEncoders`, an **ArrayList** of supported video codecs (defined by the` MediaUtils.VideoCodecType` class) for encoding. 
 
 The following example gets the list of supported codecs for encoding and decoding video streams:
@@ -154,14 +137,13 @@ The following example gets the list of supported codecs for encoding and decodin
     {
         // The device does not support encoding or decoding H264.
     }
-``` -->
+```
 
 ## Issues to consider when selecting your preferred real-time video codec
 
 ### Interoperability
 
-<!-- OPT-TODO: 
-The main interoperability conflict is around Android devices, older versions of Safari, and Linux. VP8 works on all Android devices, both on Android Chrome and the OpenTok Android SDK, but H.264 codec support on Android is not ubiquitous. Older versions of Safari do not have VP8 codec support. -->
+The main interoperability conflict is around Android devices, older versions of Safari, and Linux. VP8 works on all Android devices, both on Android Chrome and the OpenTok Android SDK, but H.264 codec support on Android is not ubiquitous. Older versions of Safari do not have VP8 codec support.
 
 The main interoperability conflict is around Android devices, older versions of Safari, and Linux. VP8 works on all Android devices, both on Android Chrome, but H.264 codec support on Android is not ubiquitous. Older versions of Safari do not have VP8 codec support.
 

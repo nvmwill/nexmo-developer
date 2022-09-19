@@ -30,8 +30,8 @@ session.on(
 
 When your client temporarily disconnects from a session, the Subscriber objects in clients subscribing to a stream you publish dispatch events when your published stream drops and when (and if) it resumes automatically. 
 
-<!-- OPT-TODO For more information, see [Automatic reconnection](/developer/guides/subscribe-stream/js/#automatic_reconnection) in the "Subscribing to streams" developer guide. -->
+For more information, see [Automatic reconnection](/video/tutorials/subscribe-streams/video/subscribe-streams/javascript/4-detect-stream-leave-reconnection/javascript#automatic-reconnection) in the "Subscribing to streams" developer guide.
 
 By default, any signals you send while your client is temporarily disconnected from a session are queued and sent when (and if) you successfully reconnect. You can set the `retryAfterReconnect` property to `false` in the options you pass into the `Session.signal()` method to prevent signals from being queued while you are disconnected. 
 
-<!-- OPT-TODO For more information, see [Preventing signals from being sent during automatic reconnection](/developer/guides/signaling/js/#automatic_reconnection). -->
+For more information, see [Preventing signals from being sent during automatic reconnection](/video/tutorials/video-signaling/video/video-signaling/js/signal-prevention/javascript#preventing-signals-from-being-sent-during-automatic-reconnection).

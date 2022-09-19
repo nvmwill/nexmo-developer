@@ -44,11 +44,9 @@ The Media Router can decrease bandwidth usage in multiparty sessions. (When the 
 
   * The Media Router supports the scalable video feature. Scalable video can greatly improve the quality of video in multi-party sessions.
 
-<!-- OPT-TODO: * In clients using the iOS and Android SDKs, relayed sessions support only two clients connected to the session. The Media Router supports additional clients for multiparty sessions on mobile devices. -->
+* In clients using the iOS and Android SDKs, relayed sessions support only two clients connected to the session. The Media Router supports additional clients for multiparty sessions on mobile devices.
 
   * The Media Router supports the SIP interconnect feature, which lets you connect sessions to SIP gateways.
-
-<!-- OPT-TODO-REMOVE? > **Note:** In version 2.2 of the server SDKs, the default media mode is relayed. In earlier versions, the default was to use Media Router. -->
 
 ## Archive mode
 
@@ -111,8 +109,6 @@ Use the session ID with a [client SDK](/video/client-sdks/overview) to connect t
 
 You will also need to [generate a token](/video/tutorials/create-token) for each user connecting to the session. 
 
-<!-- OPT-TODO: See Connection Token Creation for information on the `generateToken()` or `generate_Token()` (depending on programming language) method. -->
-
 The [Media Router](https://www.vonage.com/communications-apis/video/features/) provides the following benefits:
 
 * The Media Router can decrease bandwidth usage in multiparty sessions. (When the mediaMode property is set to MediaMode.RELAYED, each client must send a separate audio-video stream to each client subscribing to it.)
@@ -136,7 +132,7 @@ You can create a session that is automatically recorded.
 > Note: Archived sessions must use the routed media mode.
 
 For more information, see the [archiving](/video/guides/archiving/overview) guide.
-There is also a tutorial on how to setup an [automatically recorded session]()
+There is also a tutorial on how to setup an [automatically recorded session](/video/tutorials/create-session/video/create-a-session/node/create-auto-archived/node)
 
 ## Using sessions in client applications
 

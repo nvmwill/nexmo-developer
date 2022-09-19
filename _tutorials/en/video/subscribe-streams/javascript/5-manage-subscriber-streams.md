@@ -1,5 +1,5 @@
 ---
-title: Managing subsciber streams
+title: Managing subscriber streams
 description: Learn how to subscribe to an Vonage Video API stream in your web application. Once you have connected to a session, you can subscribe to a stream to view video, audio, and signalling data.
 product: video
 ---

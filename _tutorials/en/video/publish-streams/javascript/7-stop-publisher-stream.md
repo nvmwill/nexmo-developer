@@ -15,7 +15,7 @@ session.unpublish(publisher);
 Note that you can individually stop sending video or audio (while still publishing).
 
 
-<!-- OPT-TODO: For more information, see [Adjusting audio and video](/developer/guides/audio-video/js/). -->
+For more information, see [Adjusting audio and video](/video/tutorials/audio-video/introduction/javascript).
 
 
 ## Detecting when a published stream leaves a session

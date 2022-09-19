@@ -6,7 +6,7 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn how to connect to a session from your web frontend.
+  description: In this tutorial, you will learn how to generate a token using the NodeJS SDK.
   content: |
     # Introduction
     In order to authenticate a user connecting to a session, a client must connect using a token (see [this overview](/video/guides/create-token)).
