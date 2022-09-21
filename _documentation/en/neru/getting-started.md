@@ -19,6 +19,7 @@ Your development environment will depend on which runtime you are using, but thi
 
 * For the Node.JS SDK:
     * Node 16 or above installed.
+    * Nodemon installed globally (`npm install -g nodemon`)
 * For the Python SDK:
     * Python 3.10 or above installed.
 
