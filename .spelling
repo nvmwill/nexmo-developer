@@ -1121,3 +1121,5 @@ SubscriberKit.setPreferredFrameRate
 Subscriber.PreferredFramerate
 OSubscriberKit.setPreferredResolution
 OTSubscriberKit.preferredFrameRate
+streamId
+archiver
