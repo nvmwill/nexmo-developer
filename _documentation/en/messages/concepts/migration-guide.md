@@ -1,6 +1,6 @@
 ---
 title: WhatsApp v0.1 to v1 Migration Guide
-navigation_weight: 3
+navigation_weight: 6
 description: Differences to be aware of between the two versions of the API if migrating to v1
 ---
 

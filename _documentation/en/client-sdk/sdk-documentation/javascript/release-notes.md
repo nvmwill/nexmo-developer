@@ -6,6 +6,18 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 9.1.3 - September 07, 2022
+
+### Fix
+
+- Fix typescript module definition
+
+## Version 9.1.1 - August 19, 2022
+
+### Fix
+
+- Fix events ordering for rtc:transfer on named conversations
+
 ## Version 9.1.0 - August 16, 2022
 
 ### New

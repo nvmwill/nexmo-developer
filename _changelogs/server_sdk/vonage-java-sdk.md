@@ -1,12 +1,26 @@
 ---
-version: '7.0.0'
-release: '11 Aug 2022'
+version: '7.1.0'
+release: '25 Aug 2022'
 ---
 # [Vonage Java SDK](https://github.com/Vonage/vonage-java-sdk)
 
 ---
 
-## [7.0.0]
+## 7.1.0
+### 25 Aug 2022
+- Added convenience method to `MessagesClient` for using the Messages Sandbox endpoint
+- Added `network` field to `VerifyResponse`
+- Added missing documentation and validation to requests and responses in Verify API
+- Added `estimated_price_messages_sent` to `CheckResponse` and `VerifyDetails`
+- Updated `VerifyStatus` enum values
+- Fixed `MessageResponseException` deserialization when response body is empty
+- Fixed incorrect `Content-Type` header for `verify` and `check` endpoints
+- Deprecated `request_type` in `VerifyRequest`
+- Deprecated `ip_address` in `CheckRequest`
+
+---
+
+## 7.0.0
 ### 11 Aug 2022
 - Removed SMS Search API
 - Deprecated Redact client
@@ -41,7 +55,7 @@ release: '11 Aug 2022'
 
 ---
 
-## [6.5.0]
+## 6.5.0
 ### 20 Jun 2022
 - Added Messages v1 API implementation
 - Added `get-full-pricing` endpoint
@@ -50,7 +64,7 @@ release: '11 Aug 2022'
 
 ---
 
-## [6.4.2]
+## 6.4.2
 ### 14 Apr 2022
 - Added `call_uuid` to webhook call event.
 - Bumped dependency versions

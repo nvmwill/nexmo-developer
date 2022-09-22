@@ -97,3 +97,8 @@ current:
     email: 'edmond.mensah@vonage.com'
     role: 'Technical Writer'
     short-name: 'edmond-mensah'
+  - name: 'Chuck Reeves'
+    email: 'chuck.reeves@vonage.com'
+    role: 'Senior Developer Advocate'
+    twitter: 'manchuck'
+    short-name: 'chuck-reeves'

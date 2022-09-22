@@ -1,6 +1,6 @@
 ---
 title: WhatsApp Interactive Messages
-navigation_weight: 3
+navigation_weight: 4
 description: Brief overview of WhatsApp interactive messages.
 ---
 

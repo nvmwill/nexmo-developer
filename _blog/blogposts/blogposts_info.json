@@ -1,5 +1,451 @@
 [
   {
+    "title": "5 Things You Probably Didn’t Know About Vonage AI Studio",
+    "description": "Five tips to help anyone to get started with Vonage AI Studio!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/5-things-you-probably-did-not-know-about-vonage-ai-studio/5-things_ai-studio.png",
+    "author": {
+      "hidden": false,
+      "image_url": "/content/images/michael-crump.jpg",
+      "bio": "Michael Crump works at Vonage on the Developer Relations team and is a coder, YouTuber, and frequent speaker of various .NET and cloud/communication development topics. He’s passionate about helping developers understand the benefits of each in a no-nonsense way.",
+      "name": "Michael Crump",
+      "twitter": "mbcrump",
+      "spotlight": false,
+      "title": "Senior Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "michael-crump"
+    },
+    "published": true,
+    "published_at": "2022-09-22 07:10:00 UTC",
+    "updated_at": "2022-09-22 09:16:36 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "aistudio",
+      "lowcode",
+      "nocode"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/22/5-things-you-probably-did-not-know-about-vonage-ai-studio",
+    "filename": "5-things-you-probably-did-not-know-about-vonage-ai-studio"
+  },
+  {
+    "title": "Better together: GitHub & Vonage CLI",
+    "description": "Learn how you can take advantage of the GitHub & Vonage CLI to increase developer productivity with your upcoming apps.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/better-together-github-vonage-cli/github_vonage-cli.png",
+    "author": {
+      "hidden": false,
+      "image_url": "/content/images/michael-crump.jpg",
+      "bio": "Michael Crump works at Vonage on the Developer Relations team and is a coder, YouTuber, and frequent speaker of various .NET and cloud/communication development topics. He’s passionate about helping developers understand the benefits of each in a no-nonsense way.",
+      "name": "Michael Crump",
+      "twitter": "mbcrump",
+      "spotlight": false,
+      "title": "Senior Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "michael-crump"
+    },
+    "published": true,
+    "published_at": "2022-09-20 08:39:30 UTC",
+    "updated_at": "2022-09-20 08:39:31 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "cli",
+      "vonage",
+      "git"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/20/better-together-github-vonage-cli",
+    "filename": "better-together-github-vonage-cli"
+  },
+  {
+    "title": "Diana Pham Joins the Vonage Developer Relations Team",
+    "description": "Meet Diana (@dianasoyster)–the newest NA edition to the Outreach Team.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/diana-pham-joins-the-vonage-developer-relations-team/diana-pham.png",
+    "author": {
+      "bio": "Diana is a developer advocate at Vonage. She likes eating fresh oysters.",
+      "hidden": false,
+      "image_url": "/content/images/diana-pham.jpg",
+      "name": "Diana Pham",
+      "twitter": "dianasoyster",
+      "spotlight": false,
+      "noteworthy": false,
+      "team": false,
+      "alumni": false,
+      "short_name": "diana-pham"
+    },
+    "published": true,
+    "published_at": "2022-09-15 07:23:40 UTC",
+    "updated_at": "2022-09-15 07:23:41 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "careers"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/15/diana-pham-joins-the-vonage-developer-relations-team",
+    "filename": "diana-pham-joins-the-vonage-developer-relations-team"
+  },
+  {
+    "title": "If You Can Point and Click Then You Can Make a Conversational AI",
+    "description": "Learn all about AI Studio, a No Code / Low Code approach to help businesses handle complex customer interactions through the use of a Virtual Agent.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/if-you-can-point-and-click-then-you-can-make-a-conversational-ai/point-click_conversationai.png",
+    "author": {
+      "hidden": false,
+      "image_url": "/content/images/michael-crump.jpg",
+      "bio": "Michael Crump works at Vonage on the Developer Relations team and is a coder, YouTuber, and frequent speaker of various .NET and cloud/communication development topics. He’s passionate about helping developers understand the benefits of each in a no-nonsense way.",
+      "name": "Michael Crump",
+      "twitter": "mbcrump",
+      "spotlight": false,
+      "title": "Senior Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "michael-crump"
+    },
+    "published": true,
+    "published_at": "2022-09-13 08:07:02 UTC",
+    "updated_at": "2022-09-13 08:07:03 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "ai-studio",
+      "sms"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/13/if-you-can-point-and-click-then-you-can-make-a-conversational-ai",
+    "filename": "if-you-can-point-and-click-then-you-can-make-a-conversational-ai"
+  },
+  {
+    "title": "Chuck Reeves Joins the Vonage Developer Relations Team",
+    "description": "Meet Chuck (MANCHUCK) Reeves, the new Senior JavaScript Developer Advocate at Vonage",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/chuck-reeves-joins-the-vonage-developer-relations-team/chuck-reeves.png",
+    "author": {
+      "bio": "Long ago, in the dark ages before Google and StackOverflow, Chuck learned how to program. Those were the times when all you had to go on was the documentation or the source code itself. From humble beginnings as a Jr Full Stack developer, Chuck grew into the developer he is today, building out the tools that empower fellow developers to create amazing products. When he is not forging new tools, you can find him climbing up a mountain or on his bike.",
+      "hidden": false,
+      "image_url": "/content/images/besthead.png",
+      "name": "Chuck Reeves",
+      "twitter": "manchuck",
+      "github_url": "https://github.com/manchuck",
+      "spotlight": false,
+      "title": "Sr JavaScript Developer Advocate",
+      "email": "chuck.reeves@vonage.com",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "chuck-reeves"
+    },
+    "published": true,
+    "published_at": "2022-09-08 08:48:18 UTC",
+    "updated_at": "2022-09-08 08:48:19 UTC",
+    "category": {
+      "name": "Team",
+      "plural": "Team Posts",
+      "slug": "team",
+      "color": "#06ba77"
+    },
+    "tags": [
+      "career",
+      "new-joiners",
+      "introduction"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/08/chuck-reeves-joins-the-vonage-developer-relations-team",
+    "filename": "chuck-reeves-joins-the-vonage-developer-relations-team"
+  },
+  {
+    "title": "Build an ASP.NET MVC App to Send SMS Messages",
+    "description": "Learn how to use the Vonage SMS API with a real-world application using ASP.NET MVC Application and .NET 6.0.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/build-an-asp-net-mvc-app-to-send-sms-messages/asp-net_mvc-app.png",
+    "author": {
+      "hidden": false,
+      "image_url": "/content/images/michael-crump.jpg",
+      "bio": "Michael Crump works at Vonage on the Developer Relations team and is a coder, YouTuber, and frequent speaker of various .NET and cloud/communication development topics. He’s passionate about helping developers understand the benefits of each in a no-nonsense way.",
+      "name": "Michael Crump",
+      "twitter": "mbcrump",
+      "spotlight": false,
+      "title": "Senior Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "michael-crump"
+    },
+    "published": true,
+    "published_at": "2022-09-06 09:07:03 UTC",
+    "updated_at": "2022-09-06 09:07:04 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "csharp",
+      "sms-api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/06/build-an-asp-net-mvc-app-to-send-sms-messages",
+    "filename": "build-an-asp-net-mvc-app-to-send-sms-messages"
+  },
+  {
+    "title": "Crash Course: Create Virtual Agents for WhatsApp with Vonage AI Studio",
+    "description": "An overview of creating automated WhatsApp conversation flows with Vonage AI Studio. Learn about the different message types and use cases.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio/aistuido_whatsapp.png",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Sejal D'souza",
+      "bio": "Sejal works as a Conversational Designer under the Vonage AI team, where she helps in the creation of virtual assistants for various channels. Formally trained in Psychology, Literature and Communications, getting into the AI world was a stroke of luck that she decided to run along with. Some things that make her day include learning from the experiences of individuals from different teams in Vonage, figuring out efficient ways of implementing virtual agents and herding street dogs for treats!",
+      "image_url": "/content/images/sejal-dsouza-blog-profile-image.jpg",
+      "short_name": "sejal-dsouza"
+    },
+    "published": true,
+    "published_at": "2022-09-01 07:13:49 UTC",
+    "updated_at": "2022-09-01 07:13:50 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "ai-studio"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/09/01/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio",
+    "filename": "crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio"
+  },
+  {
+    "title": "What Can I Do With MMS?",
+    "description": "An overview of the MMS channel of the Vonage Messages API, with a walkthrough of an example application which uses the Ruby SDK to send an MMS image message.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/what-can-i-do-with-mms/what-mms-can-do.png",
+    "author": {
+      "bio": "Karl is a Developer Advocate for Vonage, focused on maintaining our Ruby server SDKs and improving the developer experience for our community. He loves learning, making stuff, sharing knowledge, and anything generally web-tech related.",
+      "hidden": false,
+      "image_url": "/content/images/karl-b-w-crop.png",
+      "name": "Karl Lingiah",
+      "twitter": "KarlLingiah",
+      "spotlight": false,
+      "title": "Ruby Developer Advocate",
+      "noteworthy": false,
+      "team": true,
+      "alumni": false,
+      "short_name": "karl-lingiah"
+    },
+    "published": true,
+    "published_at": "2022-08-30 09:27:46 UTC",
+    "updated_at": "2022-08-30 09:27:47 UTC",
+    "category": {
+      "name": "Inspiration",
+      "plural": "Ideas & Inspiration",
+      "slug": "inspiration",
+      "color": "#3298c4"
+    },
+    "tags": [
+      "messages-api",
+      "ruby",
+      "mms"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/30/what-can-i-do-with-mms",
+    "filename": "what-can-i-do-with-mms"
+  },
+  {
+    "title": "Introducing the Vonage Client SDK V-App Demo Projects",
+    "description": "To showcase the multi-platform functionality of the SDKs and the Conversation API we have built the V-App!",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-the-vonage-client-sdk-v-app-demo-projects/v-app-demo.png",
+    "author": {
+      "team": true,
+      "name": "Abdul Ajetunmobi",
+      "image_url": "https://github.com/abdulajet.png",
+      "bio": "Abdul is a Developer Advocate for Vonage. He has a background working in consumer products as an iOS Engineer. In his spare time, he enjoys biking, listening to music and mentoring those who are just beginning their journey in tech",
+      "website_url": "https://abdulajet.me",
+      "twitter": "abdulajet",
+      "title": "Vonage Developer Advocate",
+      "short_name": "abdul-ajetunmobi"
+    },
+    "published": true,
+    "published_at": "2022-08-25 15:08:48 UTC",
+    "updated_at": "2022-08-25 08:59:22 UTC",
+    "category": {
+      "name": "Announcement",
+      "plural": "Announcements",
+      "slug": "announcement",
+      "color": "#4cc3d2"
+    },
+    "tags": [
+      "conversation-api",
+      "client-sdk",
+      "opensource"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/25/introducing-the-vonage-client-sdk-v-app-demo-projects",
+    "filename": "introducing-the-vonage-client-sdk-v-app-demo-projects"
+  },
+  {
+    "title": "Using ngrok in Rails in 2022",
+    "description": "A quick guide to using ngrok with Ruby on Rakils for tunneling in development environment.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/using-ngrok-in-rails-in-2022/ngrok_rails.png",
+    "author": {
+      "team": true,
+      "name": "Benjamin Aronov",
+      "image_url": "https://secure.gravatar.com/avatar/005cdba1cbc6dc18ee2b1fedeeab12bf?s=384&d=mm&r=g",
+      "bio": "Benjamin Aronov is an online community manager at Vonage based in Tel Aviv, Israel.",
+      "website_url": "",
+      "short_name": "benjamin-aronov"
+    },
+    "published": true,
+    "published_at": "2022-08-24 12:32:43 UTC",
+    "updated_at": "2022-08-24 12:32:43 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "ruby-on-rails",
+      "ngrok",
+      "ruby"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/24/using-ngrok-in-rails-in-2022",
+    "filename": "using-ngrok-in-rails-in-2022"
+  },
+  {
+    "title": "How to Build a Visual Regression Test System Using Playwright",
+    "description": "How to create your own DIY visual regression system for your web application? Here’s how to do it with Playwright, rollup and GitHub actions.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/how-to-build-a-visual-regression-test-system-using-playwright/visual-regression-test.png",
+    "author": {
+      "bio": "Yonatan has been involved in some awesome projects in the academy and the industry - from C/C++ through Matlab to PHP and javascript. Former CTO at Webiks and Software Architect at WalkMe. Currently he is a software architect at Vonage and an egghead instructor.",
+      "image_url": "/content/images/yonatankra.png",
+      "name": "Yonatan Kra",
+      "website_url": "https://yonatankra.com",
+      "linkedin_url": "https://www.linkedin.com/in/jonathan-kra-99a5bb87/",
+      "twitter": "YonatanKra",
+      "github_url": "https://github.com/YonatanKra",
+      "title": "Vonage Software Architect",
+      "team": true,
+      "short_name": "yonatankra"
+    },
+    "published": true,
+    "published_at": "2022-08-23 07:23:06 UTC",
+    "updated_at": "2022-08-23 10:02:14 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "playwright",
+      "github-actions",
+      "test"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/23/how-to-build-a-visual-regression-test-system-using-playwright",
+    "filename": "how-to-build-a-visual-regression-test-system-using-playwright"
+  },
+  {
+    "title": "Announcing the Vonage Java SDK v7.0.0",
+    "description": "Version 7.0.0 of the Vonage Java SDK is now available! This post describes the changes and what to expect in the near future.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/announcing-the-vonage-java-sdk-v7-0-0/java-sdk-updates.png",
+    "author": {
+      "team": true,
+      "name": "Sina Madani",
+      "image_url": "https://github.com/SMadani.png",
+      "bio": "Sina is a Java Developer Advocate at Vonage. He comes from an academic background and is generally curious about anything related to cars, computers, programming, technology and human nature. In his spare time, he can be found walking or playing competitive video games.",
+      "title": "Java Developer Advocate",
+      "short_name": "sina-madani"
+    },
+    "published": true,
+    "published_at": "2022-08-22 10:23:51 UTC",
+    "updated_at": "2022-08-22 10:23:51 UTC",
+    "category": {
+      "name": "Release",
+      "plural": "Releases",
+      "slug": "release",
+      "color": "#b779ff"
+    },
+    "tags": [
+      "java",
+      "SDK"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/08/22/announcing-the-vonage-java-sdk-v7-0-0",
+    "filename": "announcing-the-vonage-java-sdk-v7-0-0"
+  },
+  {
     "title": "Community Member Spotlight: Kiran Krishnan",
     "description": "A community spotlight of Vonage API developer Kiran Krishnan. In this article we learn about Kiran and how he integrated Vonage with Supabase.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/community-member-spotlight-kiran-krishnan/community-spotlight-kiran.png",
@@ -33,13 +479,14 @@
     "filename": "community-member-spotlight-kiran-krishnan"
   },
   {
-    "title": "Experience Composer Sample Application With Vonage Video API",
+    "title": "Using Experience Composer With Vonage Video API",
     "description": "This article will describe two applications of the many ways developers can use Experience Composer: publishing to a Vonage Video API Session and capturing your website’s entire layout in an archived Vonage Video API stream.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/experience-composer-sample-application-with-vonage-video-api/video-stream-experience-composer.png",
     "author": {
       "team": true,
       "alumni": false,
       "spotlight": false,
+      "title": "Software Engineering Intern",
       "noteworthy": false,
       "hidden": false,
       "bio": "Megna is a software engineering intern at Vonage, based out of San Francisco. She is a third year computer engineering student at the University of Illinois Urbana-Champaign. Megna is passionate about learning about innovations and wants to build innovative technology for the future generations.",
@@ -1004,7 +1451,7 @@
       "name": "Daniela Facchinetti",
       "image_url": "/content/images/230962_10151269310519515_797260551_n.jpg",
       "team": true,
-      "author": "solomon-soh",
+      "author": "daniela-facchinetti",
       "short_name": "daniela-facchinetti"
     },
     "published": true,
@@ -1839,7 +2286,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -2198,7 +2645,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -2315,7 +2762,7 @@
       "twitter": "doesdotnet",
       "github_url": "https://github.com/matt-lethargic",
       "spotlight": false,
-      "title": "Sr .Net Developer Advocate",
+      "title": "Former Vonage Team Member",
       "email": "matt.hunt@vonage.com",
       "noteworthy": false,
       "team": true,
@@ -2354,7 +2801,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -2654,8 +3101,9 @@
       "bio": "Tolulope is a software engineer based in Nigeria. He loves building cross-platform solutions and communication tools for people and businesses. When he's not working, he loves to read books about product design, humanity and entrepreneurship.",
       "hidden": false,
       "image_url": "/content/images/tolulope-olanrewaju.jpg",
-      "name": " Tolulope Olanrewaju",
+      "name": "Tolulope Olanrewaju",
       "twitter": "tooluuwaa",
+      "title": "Guest Author",
       "spotlight": true,
       "email": "lanre.toluwa@gmail.com",
       "noteworthy": false,
@@ -3163,7 +3611,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -3474,7 +3922,7 @@
       "linkedin_url": "https://www.linkedin.com/in/tonyasims",
       "twitter": "tonyasims",
       "spotlight": false,
-      "title": "Python Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -3514,7 +3962,7 @@
       "website_url": "",
       "twitter": "moficodes",
       "spotlight": false,
-      "title": "Senior Developer Advocate",
+      "title": "Vonage Former Team Member",
       "email": "mofi.rahman@vonage.com",
       "noteworthy": false,
       "team": true,
@@ -3740,7 +4188,7 @@
       "twitter": "doesdotnet",
       "github_url": "https://github.com/matt-lethargic",
       "spotlight": false,
-      "title": "Sr .Net Developer Advocate",
+      "title": "Former Vonage Team Member",
       "email": "matt.hunt@vonage.com",
       "noteworthy": false,
       "team": true,
@@ -3781,7 +4229,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -3967,7 +4415,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -4008,7 +4456,7 @@
       "twitter": "doesdotnet",
       "github_url": "https://github.com/matt-lethargic",
       "spotlight": false,
-      "title": "Sr .Net Developer Advocate",
+      "title": "Former Vonage Team Member",
       "email": "matt.hunt@vonage.com",
       "noteworthy": false,
       "team": true,
@@ -4335,7 +4783,7 @@
       "linkedin_url": "https://www.linkedin.com/in/tonyasims",
       "twitter": "tonyasims",
       "spotlight": false,
-      "title": "Python Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -4456,7 +4904,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -4529,7 +4977,7 @@
       "linkedin_url": "https://www.linkedin.com/in/tonyasims",
       "twitter": "tonyasims",
       "spotlight": false,
-      "title": "Python Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -4569,7 +5017,7 @@
       "website_url": "",
       "twitter": "moficodes",
       "spotlight": false,
-      "title": "Senior Developer Advocate",
+      "title": "Vonage Former Team Member",
       "email": "mofi.rahman@vonage.com",
       "noteworthy": false,
       "team": true,
@@ -4784,7 +5232,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -5160,7 +5608,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -5271,7 +5719,7 @@
       "linkedin_url": "https://www.linkedin.com/in/tonyasims",
       "twitter": "tonyasims",
       "spotlight": false,
-      "title": "Python Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -5992,7 +6440,7 @@
       "linkedin_url": "https://www.linkedin.com/in/tonyasims",
       "twitter": "tonyasims",
       "spotlight": false,
-      "title": "Python Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -7741,7 +8189,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -7929,7 +8377,7 @@
       "linkedin_url": "https://www.linkedin.com/in/calthoff",
       "twitter": "coryalthoff",
       "spotlight": false,
-      "title": "Regional Developer Advocate",
+      "title": "Former Vonage Team Member",
       "noteworthy": false,
       "team": true,
       "alumni": false,
@@ -8219,35 +8667,6 @@
     "filename": "technical-guide-for-us-short-code-api-deprecation-1"
   },
   {
-    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
-    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
-    "author": {
-      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
-      "image_url": "/content/images/yuvalgolan.png",
-      "name": "Yuval Golan",
-      "title": "Vonage VP of Quality Assurance",
-      "team": true,
-      "short_name": "yuvalgolan"
-    },
-    "published": true,
-    "published_at": "2021-02-17 13:34:35 UTC",
-    "updated_at": "2021-02-17 13:34:35 UTC",
-    "category": {
-      "name": "Engineering",
-      "plural": "Posts by Engineering",
-      "slug": "engineering",
-      "color": "#669fc4"
-    },
-    "tags": [
-      "high-availability"
-    ],
-    "canonical": "",
-    "locale": "en",
-    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
-    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
-  },
-  {
     "title": "Introducing RxZu, an Engine for Intuitive Graphs",
     "description": "RxZu is a diagrams engine system, built on top of RxJS, that takes the  graphic visualization to the next level in terms of performance, optimization, and customizability.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/introducing-rxzu-an-engine-for-intuitive-graphs/Blog_1200x600.png",
@@ -8276,6 +8695,35 @@
     "locale": "en",
     "link": "blog/21/02/17/introducing-rxzu-an-engine-for-intuitive-graphs",
     "filename": "introducing-rxzu-an-engine-for-intuitive-graphs"
+  },
+  {
+    "title": "Quality and Velocity: Our Seven Year Journey to 99.999% Availability",
+    "description": "How can your teams take a stronger approach to software testing without compromising on speed and product growth? The growing software developer in test team defined a solution.",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/quality-and-velocity-our-seven-year-journey-to-availability/Blog_1200x600-1.png",
+    "author": {
+      "bio": "Yuval is VP Quality Assurance Engineering at Vonage, where he leads the software testing, automation and deployment across multiple Vonage platforms. Yuval has always been passionate about producing high quality products, and believes that it's the people who make all the difference. After work, Yuval enjoys swimming, tennis, and spending quality time with family and friends.",
+      "image_url": "/content/images/yuvalgolan.png",
+      "name": "Yuval Golan",
+      "title": "Vonage VP of Quality Assurance",
+      "team": true,
+      "short_name": "yuvalgolan"
+    },
+    "published": true,
+    "published_at": "2021-02-17 13:34:35 UTC",
+    "updated_at": "2021-02-17 13:34:35 UTC",
+    "category": {
+      "name": "Engineering",
+      "plural": "Posts by Engineering",
+      "slug": "engineering",
+      "color": "#669fc4"
+    },
+    "tags": [
+      "high-availability"
+    ],
+    "canonical": "",
+    "locale": "en",
+    "link": "blog/21/02/17/quality-and-velocity-our-seven-year-journey-to-availability",
+    "filename": "quality-and-velocity-our-seven-year-journey-to-availability"
   },
   {
     "title": "Setting up CI/CD with Github Actions",
@@ -15628,7 +16076,7 @@
       "name": "Daniela Facchinetti",
       "image_url": "/content/images/230962_10151269310519515_797260551_n.jpg",
       "team": true,
-      "author": "solomon-soh",
+      "author": "daniela-facchinetti",
       "short_name": "daniela-facchinetti"
     },
     "published": true,
@@ -19415,6 +19863,36 @@
     "filename": "getting-started-with-the-nexmo-number-insight-api-and-rails-dr"
   },
   {
+    "title": "使用 Google Cloud Functions 从 Python 发送短信",
+    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
+    "author": {
+      "spotlight": true,
+      "name": "Tom Morris",
+      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
+      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
+      "website_url": "",
+      "short_name": "tom"
+    },
+    "published": true,
+    "published_at": "2019-03-21 20:21:36 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "python",
+      "chinese",
+      "sms-api"
+    ],
+    "spotlight": true,
+    "locale": "cn",
+    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
+    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
+  },
+  {
     "title": "Sending SMS from Python with Google Cloud Functions",
     "description": "This tutorial shows how to deploy a function on Google Cloud Platform using Python 3.7 and the Vonage SMS API to send a text message to a user.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
@@ -19443,36 +19921,6 @@
     "spotlight": true,
     "locale": "en",
     "link": "blog/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
-    "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
-  },
-  {
-    "title": "使用 Google Cloud Functions 从 Python 发送短信",
-    "description": "This tutorial teaches how to deploy a function on Google Cloud Platform using Python 3.7, showing how to send a message inviting the user to download an app",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/sending-sms-from-python-with-google-cloud-functions-dr/Blog_Google-Cloud_SMS_1200x600-1.png",
-    "author": {
-      "spotlight": true,
-      "name": "Tom Morris",
-      "image_url": "https://secure.gravatar.com/avatar/ddea4317847eafccd60f8a4e10b195bc?s=384&d=mm&r=g",
-      "bio": "Polyglot hacker and lifelong student trying a little bit of everything and documenting the experience.",
-      "website_url": "",
-      "short_name": "tom"
-    },
-    "published": true,
-    "published_at": "2019-03-21 20:21:36 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "python",
-      "chinese",
-      "sms-api"
-    ],
-    "spotlight": true,
-    "locale": "cn",
-    "link": "blog/cn/19/03/21/sending-sms-from-python-with-google-cloud-functions-dr",
     "filename": "sending-sms-from-python-with-google-cloud-functions-dr"
   },
   {
@@ -23365,7 +23813,7 @@
       "short_name": "chrisguzman"
     },
     "published": true,
-    "published_at": "2017-12-21 17:23:30 +0000",
+    "published_at": "2017-12-21 18:23:30 +0100",
     "updated_at": "2021-05-20 08:29:04 UTC",
     "category": {
       "name": "Tutorial",
@@ -26420,7 +26868,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-08-14 16:45:51 +0100",
+    "published_at": "2015-08-14 17:45:51 +0200",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -26496,7 +26944,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-29 18:55:05 +0100",
+    "published_at": "2015-04-29 19:55:05 +0200",
     "category": {
       "name": "Community",
       "plural": "Community Posts",
@@ -26552,7 +27000,7 @@
       "short_name": "tjlytle"
     },
     "published": true,
-    "published_at": "2015-04-10 18:24:18 +0100",
+    "published_at": "2015-04-10 19:24:18 +0200",
     "category": {
       "name": "Event",
       "plural": "Events",
@@ -26684,7 +27132,7 @@
       "short_name": "jackshirazi"
     },
     "published": true,
-    "published_at": "2014-11-18 13:02:36 +0000",
+    "published_at": "2014-11-18 14:02:36 +0100",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
