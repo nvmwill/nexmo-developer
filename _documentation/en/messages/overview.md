@@ -19,6 +19,7 @@ The following diagram illustrates how the Vonage Messages API enables you to sen
 
 * [Versions](#versions)
 * [Supported features](#supported-features)
+* [Authentication](#authentication)
 * [External Accounts API](#external-accounts-api)
 * [Getting started](#getting-started)
 * [Concepts](#concepts)
@@ -95,6 +96,17 @@ As well as all of the existing features from v0.1, there are some additional fea
 - **WhatsApp Profile Name**: in v1 of the Messages API, the callbacks to the inbound messages webhooks can provide [profile name](https://developers.facebook.com/docs/whatsapp/api/webhooks/components#profile).
 
 - **Provider messages**: in v1 of the Messages API, the callbacks to the inbound messages webhooks can provide [error messages from WhatsApp](https://developers.facebook.com/docs/whatsapp/api/webhooks/components#errors-object) under a new `provider_message` field.
+
+## Authentication
+
+The Messages API supports *either* Basic authentication *or* JWT (JSON Web Token) authentication, but there are some important differences between the two to be aware of:
+
+- Basic authentication uses an encoded [API key and secret](https://developer.vonage.com/getting-started/concepts/authentication#api-key-and-secret), and authenticates at the [account](https://developer.vonage.com/account/overview) level.
+- JWT authentication uses a [JSON Web Token](https://developer.vonage.com/getting-started/concepts/authentication#json-web-tokens) generated using a private key and application id. JWTs support advanced features such as ACLs and authenticate at the [application](https://developer.vonage.com/application/overview) level, meaning that you can access your Vonage application's settings such as application [webhooks](https://developer.vonage.com/application/overview#webhooks) and Secure Inbound Media.
+
+We recommend that you use **JWT authentication** in production for most use-cases. Basic authentication may suffice when trying out the API, such as when using the Messages Sandbox, or for some basic use-cases (e.g. when webhooks are not required).
+
+If you are using our [Server SDKs](https://developer.vonage.com/tools) to interact with the Messages API, these can automatically create JWTs for you.
 
 ## External Accounts API
 
