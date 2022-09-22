@@ -22,15 +22,15 @@ replacement_url: ""
 
 I was recently introduced to [Studio by Vonage AI](https://dashboard.nexmo.com/studio). For the uninitiated, Studio is a Low/No code virtual assistant builder that allows developers and non-developers alike to design, create and deploy Virtual agents that operate with Natural language understanding. It uses your Vonage API account to create customer engagements over voice, SMS, HTTP and WhatsApp channels.
 
-I built a Virtual Agent for a fictitious event that allowed customers to ask questions regarding event logistics. They would then get a reply with the information requested. 
+I built a Virtual Agent for a fictitious event that allowed customers to ask questions regarding event logistics. They would then get a reply with the information requested.
 
 I wrote about my initial experiences in a blog post, "[If You Can Point and Click, Then You Can Make a Conversational AI](https://developer.vonage.com/blog/22/09/13/if-you-can-point-and-click-then-you-can-make-a-conversational-ai)." During that whole process, I came across a number of features that are super-useful. I thought it would be helpful to summarize these features as five tips for anyone getting started with AI Studio!
 
-Let's jump into it! 
+Let's jump into it!
 
 ## Tip #1 - Learn how to easily Export and Import Agents
 
-Maybe you'd like to export your Virtual Agent after creation, keep it on your servers, or import it to a different account. Thankfully, this is straightforward to do. Navigate to your **Agents**  list, click on the three dots next to the agent name and select **Export Agent**. 
+Maybe you'd like to export your Virtual Agent after creation, keep it on your servers, or import it to a different account. Thankfully, this is straightforward to do. Navigate to your **Agents**  list, click on the three dots next to the agent name and select **Export Agent**.
 
 ![Export Agent Option](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/export-agent.png "export-agent.png")
 
@@ -54,12 +54,12 @@ C:.
 
 Below is a summary of what each file does:
 
-* The `Agent.json` contains information about the Agent that you specified during the Agent creation process. Items such as the Agent Name, Language, TimeZone, etc. 
+* The `Agent.json` contains information about the Agent that you specified during the Agent creation process. Items such as the Agent Name, Language, TimeZone, etc.
 * The `nlu-application.zip` contains two files: the `<id>.json` and a `signature.sig`. The `<id>.json` contains application-specific information, `intents`, and `entities`, whereas the `signature.sig` is the application's signature.
 
-The `version.json` contain information specific to the different versions that your Agent has. There is more to come on this topic later. 
+The `version.json` contain information specific to the different versions that your Agent has. There is more to come on this topic later.
 
-Now that we know how to **Export an Agent** let's cover **Importing** one. 
+Now that we know how to **Export an Agent** let's cover **Importing** one.
 
 Next, to import your agent, log into your desired Studio account and click on the Import agent button on the top right of your screen. It should be right next to the **Create Agent** button.
 
@@ -81,11 +81,11 @@ Finally, click on the **Import Agent** button on the top right. Your new agent w
 
 ## Tip #2 - Reporting features for past channel conversations
 
-Sometimes you need to view past What's App, SMS, HTTP conversations between a user and your virtual Agent for reporting or troubleshooting purposes. Select the **Agent** from which you want to view the conversation data and click on **Reports** from the top menu navigation. 
+Sometimes you need to view past What's App, SMS, HTTP conversations between a user and your virtual Agent for reporting or troubleshooting purposes. Select the **Agent** from which you want to view the conversation data and click on **Reports** from the top menu navigation.
 
 ![Reports](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/reports.png "reports.png")
 
-You can filter reports by **Session ID** or the **Caller Number**. Regardless of which item is selected, you'll see a **Search** box where you can enter information. 
+You can filter reports by **Session ID** or the **Caller Number**. Regardless of which item is selected, you'll see a **Search** box where you can enter information.
 
 ![Filter Reports](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/filter-report.png "filter-report.png")
 
@@ -104,7 +104,7 @@ Once you press **Apply**, you will see if the data exists, as shown below.
 
 ![Reports Results](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/report-results.png "report-results.png")
 
-If you click on the **ID**, you'll see details such as the **Caller phone**, **Agent phone**, **Session ID**, and a **Transcript** of the recorded conversation. 
+If you click on the **ID**, you'll see details such as the **Caller phone**, **Agent phone**, **Session ID**, and a **Transcript** of the recorded conversation.
 
 ![Reports Details](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/report-details.png "report-details.png")
 
@@ -118,63 +118,63 @@ Sometimes after publishing your Agent, you might wish to go back to a previous v
 
 ![Versions Option](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/versions.png "versions.png")
 
-Once clicked the canvas will display all the different agent versions you have created so far. You will be able to see the differences between the published agent and draft versions. By default, the current view will be your most recent published version. 
+Once clicked the canvas will display all the different agent versions you have created so far. You will be able to see the differences between the published agent and draft versions. By default, the current view will be your most recent published version.
 
 ![Click on Versions](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/click-on-versions.png "click-on-versions.png")
 
-If you want to revert to a previous version, you can click on the three dots next to the version and select "**Open in editor**." We'll do this for **Version 1** (as shown in the previous screenshot) of our SMS Virtual Agent. 
+If you want to revert to a previous version, you can click on the three dots next to the version and select "**Open in editor**." We'll do this for **Version 1** (as shown in the previous screenshot) of our SMS Virtual Agent.
 
 ![Open in Editor](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/open-in-editor.png "open-in-editor.png")
 
-A warning will pop up notifying you that any unsaved changes will be lost if you proceed. 
+A warning will pop up notifying you that any unsaved changes will be lost if you proceed.
 
 ![Dialog to Save New Version](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/dialog-save-new-version.png "dialog-save-new-version.png")
 
- Click "Back to Editor" on the top left to begin working with the previous version. 
+ Click "Back to Editor" on the top left to begin working with the previous version.
 
 ![Restored Version](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/restored-version.png "restored-version.png")
 
 ## Tip #4 - Would you prefer an actual voice vs. using text-to-speech?
 
-AI Studio's Text-to-speech (powered by Amazon Polly voices) offers a wide variety of human-sounding voices with different accents, however in the case that you would prefer to give your customers a human voice vs. using text-to-speech for your conversation flow. You can do this simply by looking under **Properties**, then **Recordings**. 
+AI Studio's Text-to-speech (powered by Amazon Polly voices) offers a wide variety of human-sounding voices with different accents, however in the case that you would prefer to give your customers a human voice vs. using text-to-speech for your conversation flow. You can do this simply by looking under **Properties**, then **Recordings**.
 
-NOTE: Recordings is only for telephony. 
+NOTE: Recordings is only for telephony.
 
 ![Recordings Option](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/recordings.png "recordings.png")
 
-You can **Drag and Drop** an audio file on the **Recordings** dialog. 
+You can **Drag and Drop** an audio file on the **Recordings** dialog.
 
 ![Recordings Dialog](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/recordings-dialog.png "recordings-dialog.png")
 
 **Quick Tip:** Please note that the supported file types are wav, mp3, and ogg and that files may not be larger than four MB in file size.
 
-Once you've uploaded your file, you can preview it and see a **Transcript** of the audio. 
+Once you've uploaded your file, you can preview it and see a **Transcript** of the audio.
 
 ![Uploaded Recording](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/uploaded-recording.png "uploaded-recording.png")
 
-Using a **Telephony** Agent, you'll see the **Speak** node under **Conversation**. Select this and drag and drop it onto the designer. 
+Using a **Telephony** Agent, you'll see the **Speak** node under **Conversation**. Select this and drag and drop it onto the designer.
 
 ![Speak Node](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/speak-node.png "speak-node.png")
 
-Click on **Speak 1**, and you'll see an option to select **Audio**. Under **Use Recording**, you'll see the recording  you uploaded from the earlier step. 
+Click on **Speak 1**, and you'll see an option to select **Audio**. Under **Use Recording**, you'll see the recording  you uploaded from the earlier step.
 
 ![Selecting an Audio Recording](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/selecting-audio-recording.png "selecting-audio-recording.png")
 
-Select **Done** and then **Save & Exit**. 
+Select **Done** and then **Save & Exit**.
 
 ![Speak Node Connected](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/speak-1-connected.png "speak-1-connected.png")
 
 ## Tip #5 - Integrations
 
-Sometimes you will need to integrate with a third-party service to send and receive data. Vonage AI Studio has several **Integration** nodes that you can use. 
+Sometimes you will need to integrate with a third-party service to send and receive data. Vonage AI Studio has several **Integration** nodes that you can use.
 
 ![Integrations](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/integrations.png "integrations.png")
 
-There are three main types at the time of writing this blog post: 
+There are three main types at the time of writing this blog post:
 
-1. Webhook - It supports multiple ways to send an API request, such as **GET, POST, PUT, DELETE, and PATCH**. It also provides support for **HTTP headers** and **Response Mapping**. 
+1. Webhook - It supports multiple ways to send an API request, such as **GET, POST, PUT, DELETE, and PATCH**. It also provides support for **HTTP headers** and **Response Mapping**.
 
-A built-in way to test your Webhook is by clicking on **Test Request** on the top right of the node settings. 
+A built-in way to test your Webhook is by clicking on **Test Request** on the top right of the node settings.
 
 ![WebHook](/content/blog/5-things-you-probably-did-not-know-about-vonage-ai-studio/webhook.png "webhook.png")
 
@@ -188,6 +188,6 @@ A built-in way to test your Webhook is by clicking on **Test Request** on the to
 
 ## Wrap-up
 
-There you have it! You know five more things about Vonage AI Studio to help you get started. If you haven't explored [Vonage AI Studio](https://studio.ai.vonage.com/), I will encourage you to do so, and please share your unique creation with us!  
+There you have it! You know five more things about Vonage AI Studio to help you get started. If you haven't explored [Vonage AI Studio](https://studio.ai.vonage.com/), I will encourage you to do so, and please share your unique creation with us!
 
 As always, if you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
