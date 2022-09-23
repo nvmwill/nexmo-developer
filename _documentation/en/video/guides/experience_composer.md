@@ -10,7 +10,7 @@ Experience Composer is an API-driven cloud service to capture the entire experie
 
 Web applications use UI libraries to build rich UI/UX experiences for end users. This experience entails time-synchronized web elements, custom layouts, and dynamic web components, such as application UI, chat widgets, participant reactions, and whiteboards.
 
-Using Experience Composer, you can capture a view of your web application into a stream published to an Vonage Video session. This composed stream can be used for archive recording, broadcasting, and streaming into other interactive Vonage Video sessions, while keeping the rich UI/UX experiences delivered to users intact.
+Using Experience Composer, you can capture a view of your web application into a stream published to a Vonage Video session. This composed stream can be used for archive recording, broadcasting, and streaming into other interactive Vonage Video sessions, while keeping the rich UI/UX experiences delivered to users intact.
 
 Experience Composer is only compatible with routed sessions (sessions that use the [Vonage Video Media Router](/video/guides/create-session#the-media-router-and-media-modes)).
 
@@ -59,7 +59,7 @@ The JSON object includes the following properties:
 * `streamId`: The ID of the composed stream being published. The streamId may not be available when the status is `"failed"`.
 * `status`: The status of the Experience Composer. This property is set to one of the following:
     * `"started"`: The Vonage Video API platform has successfully connected to the remote application server
-      and is publishing the web view to an Vonage Video stream.
+      and is publishing the web view to a Vonage Video stream.
     * `"stopped"`: The Experience Composer has stopped.
     * `"failed"`: An error occurred and the Experience Composer could not proceed. This may occur at startup if the Vonage Video
       server cannot connect to the remote application server or republish the stream. It may also occur at any point during
@@ -72,7 +72,7 @@ You can use an Experience Composer stream in a variety of ways. Here are a few p
 
 ### Experience Composer Archive
 
-You can use the Vonage Video [archive](/video/guides/archiving/overview) feature to record audio and video of an Vonage Video session. However, the video layout for the composed archive is limited to supported [video layout options](/video/guides/layout-control).
+You can use the Vonage Video [archive](/video/guides/archiving/overview) feature to record audio and video of a Vonage Video session. However, the video layout for the composed archive is limited to supported [video layout options](/video/guides/layout-control).
 
 You can use Experience Composer to use your site's *actual* layout for the archive layout:
 
@@ -87,7 +87,7 @@ You can use Experience Composer to use your site's *actual* layout for the archi
 
 <!-- OPT-TODO: ### Experience Composer Broadcast
 
-With the Vonage Video [live streaming broadcast feature](/guides/broadcast/live-streaming/), you can broadcast an Vonage Video session to an HLS or RTMP stream. However, the video layout for a live streaming broadcast is limited to supported [video layout options](/guides/archive-broadcast-layout).
+With the Vonage Video [live streaming broadcast feature](/guides/broadcast/live-streaming/), you can broadcast a Vonage Video session to an HLS or RTMP stream. However, the video layout for a live streaming broadcast is limited to supported [video layout options](/guides/archive-broadcast-layout).
 
 You can use Experience Composer to use your site's *actual* layout for the broadcast layout:
 
@@ -120,7 +120,7 @@ The resulting array of Experience Composer sessions will support up to 15,000 * 
 
 ### Other use cases
 
-The first three use cases described here show how to use Experience Composer to enhance the Vonage Video archive and broadcast features. These uses cases have Experience Composer create a stream in a new Vonage Video session, separate from the session being archived or broadcast. However, you can also use Experience Composer to capture any web page and send it as an audio-video stream into an Vonage Video session for others to view. The page may include audio and video from sources other than Vonage Video streams. Or it may include dynamic content with complex UI layout that clients connected to the Vonage Video session can view.
+The first three use cases described here show how to use Experience Composer to enhance the Vonage Video archive and broadcast features. These uses cases have Experience Composer create a stream in a new Vonage Video session, separate from the session being archived or broadcast. However, you can also use Experience Composer to capture any web page and send it as an audio-video stream into a Vonage Video session for others to view. The page may include audio and video from sources other than Vonage Video streams. Or it may include dynamic content with complex UI layout that clients connected to the Vonage Video session can view.
 
 ## View data in Insights API
 

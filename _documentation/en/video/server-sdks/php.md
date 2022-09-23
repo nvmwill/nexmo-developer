@@ -191,7 +191,7 @@ $streamList->count(); // total count
 You can only archive sessions that use the Vonage Video Media Router
 (sessions with the media mode set to routed).
 
-You can start the recording of an Vonage Video Session using the `startArchive($archiveConfig)` method
+You can start the recording of a Vonage Video Session using the `startArchive($archiveConfig)` method
 of the Vonage Video client. This will return an `Vonage\Video\Archive` instance.
 
 The parameter
@@ -287,7 +287,7 @@ For more information on archiving, see the [Vonage Video archiving](/video/guide
 
 ### Force a Client to Disconnect
 
-Your application server can disconnect a client from an Vonage Video session by calling the `disconnectClient($sessionId, $connectionId)`
+Your application server can disconnect a client from a Vonage Video session by calling the `disconnectClient($sessionId, $connectionId)`
 method of the Vonage Video client.
 
 ```php

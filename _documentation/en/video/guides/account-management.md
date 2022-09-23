@@ -13,7 +13,7 @@ For example, you may want to create different projects that correspond to differ
 
 Each project has its own unique Vonage Video *project* App ID and *project* API secret.
 
-For example, a customer — Acme — is using your service. You can use the Vonage Video REST API to create an Vonage Video project App ID and project API secret for that customer. 
+For example, a customer — Acme — is using your service. You can use the Vonage Video REST API to create a Vonage Video project App ID and project API secret for that customer. 
 
 You can use the Vonage Video REST API to do the following:
 

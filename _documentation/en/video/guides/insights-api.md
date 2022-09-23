@@ -25,7 +25,7 @@ The Vonage Video Insights API is a [GraphQL API](https://graphql.org/graphql-js/
 
 **Note:** Please click [here](#data-retention-and-latency) for information on data retention and latency.
 
-The Insights Dashboard widget provides data at the project level. You can navigate to it by logging into your [Vonage Video API account](https://tokbox.com/account) and selecting an Vonage Video project. It contains three tabs: Usage, Quality, and Errors, as well as filters for date range, location, and endpoints.
+The Insights Dashboard widget provides data at the project level. You can navigate to it by logging into your [Vonage Video API account](https://tokbox.com/account) and selecting a Vonage Video project. It contains three tabs: Usage, Quality, and Errors, as well as filters for date range, location, and endpoints.
 
 The Usage tab shows different types of minutes that the project generated. You can see a map of where minutes were generated and stack multiple filters as you please.
 
@@ -150,7 +150,7 @@ The `sessions` field returns a `Sessions` object. Pass in the session IDs as the
 * `publisherMinutes` — The total number of minutes streamed for all publishers in the session. Note that including this field will slow down query results.
 * `subscriberMinutes` — The total number of minutes streamed for all subscribers in the session. Note that including this field will slow down query results.
 * `participantMinutes` — The total number of minutes separated by publisher tiers across all meetings in the session.
-* `meetings` — An array of `Meeting` objects. An Vonage Video session can have multiple _meetings_. When the first client connects to the session, the first meeting starts. The meeting ends when there are no connections in the session for at least 10 minutes. When a client connects again, a new meeting starts. Each Meeting object includes the following properties:
+* `meetings` — An array of `Meeting` objects. a Vonage Video session can have multiple _meetings_. When the first client connects to the session, the first meeting starts. The meeting ends when there are no connections in the session for at least 10 minutes. When a client connects again, a new meeting starts. Each Meeting object includes the following properties:
   * `subscriberMinutes` — The total number of subscriber minutes in the meeting.
   * `publisherMinutes` — The total number of publisher minutes in the meeting.
   * `participantMinutes` — The total number of minutes separated by publisher tiers in the meeting.
@@ -206,7 +206,7 @@ The following query requests some publisher details on two Vonage Video sessions
 
 The `resources` property of the MeetingPublishers object is an array of Publisher objects. And the Publisher object includes PublisherStreamStatsCollection object. This object is a resource collection, and its `resources` property is an array of PublisherStats objects. Each PublisherStats includes stream statistics for the publisher taken periodically (every 30 seconds) during the course of the publisher's streaming. These statistics include data about the audio and video latency, audio and video bitrate, audio and video packet loss ratio, the video resolution, the audio and video codecs, and whether the stream included audio and video at the time of the stream statistics snapshot.
 
-The following query requests the periodic audio and video bitrate statistics for publishers in an Vonage Video session:
+The following query requests the periodic audio and video bitrate statistics for publishers in a Vonage Video session:
 
 ```javascript
 {
@@ -456,7 +456,7 @@ The following table lists the error codes and descriptions. See the `message` pr
 | 1004 | Invalid parameters. |
 | 1005 | Invalid parameter. |
 | 1006 | Invalid parameter. The value must be an integer. |
-| 1007 | Invalid parameter for specifying an Vonage Video SDK version number. The format required is 0.0.0. |
+| 1007 | Invalid parameter for specifying a Vonage Video SDK version number. The format required is 0.0.0. |
 | 1008 | You must provide a valid project ID. |
 | 1009 | Invalid parameter. |
 | 1010 | Invalid parameter passed in. The parameter accepts only one value. |
