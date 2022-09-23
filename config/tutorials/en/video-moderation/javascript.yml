@@ -1,0 +1,14 @@
+title: Moderation 
+description: Learn how to set up moderation for your video application using the Vonage Video API. With moderator privileges, you can force partipcants to disconnect from the session, or stop publishing to the session.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description:  Learn how to set up moderation for your video application using the Vonage Video API. With moderator privileges, you can force partipcants to disconnect from the session, or stop publishing to the session.
+  content: |
+    # Introduction
+    In this tutorial you will learn how to apply moderate your video streams.
+
+tasks:
+    - video/moderation/js/moderation

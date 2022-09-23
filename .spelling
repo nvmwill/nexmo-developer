@@ -1194,3 +1194,9 @@ streamDestroyed
 OTPublisherKitSettings.scalableScreenshare
 Stream.StreamVideoType
 PublisherKit.Builder.scalableScreenshare
+Video.js
+OTMuteForcedInfo
+MuteForcedInfo
+ErrorEventArgs
+MuteForcedEventArgs
+nullptr
