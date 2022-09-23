@@ -25,7 +25,7 @@ try {
 }
 ```
 
-Use the session ID in an Vonage Video client library to connect to a Vonage Video session.
+Use the session ID in a Vonage Video client library to connect to a Vonage Video session.
 
 <!-- OPT-TODO: You will also need to generate a token for each user connecting to the Vonage Video session. See [Connection Token Creation](/developer/guides/create-token/node/) for information on the `generateToken()` method. -->
 

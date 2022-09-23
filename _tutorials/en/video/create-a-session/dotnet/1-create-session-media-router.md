@@ -13,7 +13,7 @@ OpenTok opentok = new OpenTok(APP_ID, API_SECRET);
 string sessionId = opentok.CreateSession(mediaMode: MediaMode.ROUTED).Id;
 ```
 
-Use the session ID in an Vonage Video client library to connect to an Vonage Video session.
+Use the session ID in a Vonage Video client library to connect to a Vonage Video session.
 
 You will also need to generate a token for each user connecting to the Vonage Video session. See [Connection Token Creation](/video/tutorials/create-token) for information on the `GenerateToken()` method.
 

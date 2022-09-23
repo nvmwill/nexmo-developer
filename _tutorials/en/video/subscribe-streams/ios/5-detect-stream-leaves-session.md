@@ -1,6 +1,6 @@
 ---
 title: Detecting when streams leave a session and a subscriber's video is disabled
-description: Learn how to subscribe to an Vonage Video API stream in your iOS application. Once you have connected to a session, you can subscribe to a stream to view video, audio, and signalling data.
+description: Learn how to subscribe to a Vonage Video API stream in your iOS application. Once you have connected to a session, you can subscribe to a stream to view video, audio, and signalling data.
 product: video
 ---
 

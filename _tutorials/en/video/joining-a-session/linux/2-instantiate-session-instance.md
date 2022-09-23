@@ -1,6 +1,6 @@
 --- 
 title: Instantiate a session instance 
-description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your Linux application.
+description: Learn how to connect to a Vonage Video API session so that participants can use audio, video, and messaging functionality in your Linux application.
 product: video 
 ---
 
@@ -53,7 +53,7 @@ Use the `user_data` member of the `otc_session_callbacks` structure to set data 
 
 The other members of the `otc_session_callbacks` structure are callback functions that are called when events related to the Vonage Video session occur. The previous example includes callbacks for the following:
 
-* `on_connected\` -- Called when the `otc_session_connect()` function (see below) successfully connects the instance to an Vonage Video session.
+* `on_connected\` -- Called when the `otc_session_connect()` function (see below) successfully connects the instance to a Vonage Video session.
 * `on_stream_received` -- Called when there is a new stream in the Vonage Video session (when another client publishes a stream to the session).
 * `on_stream_dropped` -- Called when another client's stream is dropped from the Vonage Video session. This can happen when the client stops publishing the stream or if the client's network connection drops.
 * `on_disconnected` -- Called when a the application disconnects from the Vonage Video session (see below).
@@ -70,7 +70,7 @@ otc_session *session = NULL;
 session = otc_session_new(API_KEY, SESSION_ID, &session_callbacks);
 ```
 
-The `otc_session_new()` function returns an `otc_session` structure, which represents an Vonage Video session.
+The `otc_session_new()` function returns an `otc_session` structure, which represents a Vonage Video session.
 
 To use advanced session settings, call the `otc_session_new_with_settings()`, instead of the `otc_session_new()` function. This function takes an `settings` parameter that is a pointer to an `otc_session_settings` struct that defines the advanced settings. For example, the following code uses the `otc\_session_settings_new ()` function to instantiate an `otc_session_settings` struct and calls `otc_session_settings_set_connection_events_suppressed(OTC_TRUE)` to have the SDK suppress connection events, to support large interactive video sessions. It then passes the `otc_session_settings` struct into the `otc_session_new_with_settings()` function:
 

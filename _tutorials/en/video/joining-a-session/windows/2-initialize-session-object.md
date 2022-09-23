@@ -1,6 +1,6 @@
 --- 
 title: Initialize session object 
-description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your Windows application.
+description: Learn how to connect to a Vonage Video API session so that participants can use audio, video, and messaging functionality in your Windows application.
 product: video 
 ---
 
@@ -12,7 +12,7 @@ Before you can connect to a session, instantiate a Session object by calling the
 session = new Session(Context.Instance, API_KEY, SESSION_ID);
 ```
 
-Note that calling the `Session()` constructor does not _create_ a Vonage Video session; it creates a C# Session object, which represents an existing Vonage Video session. You create a Vonage Video session using the Vonage Video server-side libraries. See [Creating an Vonage Video session](/video/tutorials/create-session).
+Note that calling the `Session()` constructor does not _create_ a Vonage Video session; it creates a C# Session object, which represents an existing Vonage Video session. You create a Vonage Video session using the Vonage Video server-side libraries. See [Creating a Vonage Video session](/video/tutorials/create-session).
 
 You will want to add handlers for basic session-related events:
 

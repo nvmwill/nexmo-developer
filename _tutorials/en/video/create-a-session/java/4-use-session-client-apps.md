@@ -6,6 +6,6 @@ product: video
 
 ## Using sessions in client applications
 
-Use the session ID in an [Vonage Video client SDK](/video/client-sdks/overview) to connect to an Vonage Video session.
+Use the session ID in an [Vonage Video client SDK](/video/client-sdks/overview) to connect to a Vonage Video session.
 
 You will also need to generate a token for each user connecting to the Vonage Video session. See [Connection Token Creation](/video/tutorials/create-token) for information on the `generateToken()` method.

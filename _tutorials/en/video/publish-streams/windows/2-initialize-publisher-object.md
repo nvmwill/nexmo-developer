@@ -6,7 +6,7 @@ product: video
 
 ## Initializing a Publisher object
 
-A Publisher object is used to capture an audio-video stream from the systems's microphone and camera for use in an Vonage Video session. 
+A Publisher object is used to capture an audio-video stream from the systems's microphone and camera for use in a Vonage Video session. 
 
 <!-- OPT-TODO: You can also use a Publisher to publish a [screen-sharing](/tutorials/screen-sharing) video stream. -->
 

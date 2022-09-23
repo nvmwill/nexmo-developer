@@ -1,6 +1,6 @@
 --- 
 title: Connecting to a session 
-description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your ios application.
+description: Learn how to connect to a Vonage Video API session so that participants can use audio, video, and messaging functionality in your ios application.
 product: video 
 ---
 

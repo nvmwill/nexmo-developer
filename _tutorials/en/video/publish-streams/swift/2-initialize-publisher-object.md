@@ -6,7 +6,7 @@ product: video
 
 ## Initializing an OTPublisher object
 
-The `OTPublisher` object is used to capture an audio-video stream from the device's microphone and camera for use in an Vonage Video session. The `view` property of the object contains the view of the video you publish:
+The `OTPublisher` object is used to capture an audio-video stream from the device's microphone and camera for use in a Vonage Video session. The `view` property of the object contains the view of the video you publish:
 
 ```swift
 let publisher = OTPublisher(delegate: self, settings: OTPublisherSettings())!

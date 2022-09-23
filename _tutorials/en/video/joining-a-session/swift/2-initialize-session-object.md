@@ -1,6 +1,6 @@
 --- 
 title: Initialize session object 
-description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your ios application.
+description: Learn how to connect to a Vonage Video API session so that participants can use audio, video, and messaging functionality in your ios application.
 product: video 
 ---
 
@@ -14,7 +14,7 @@ Before you can connect to a session, instantiate an OTSession object by calling 
 session = OTSession(apiKey: kApiKey, sessionId: kSessionId, delegate: self)
 ```
 
-Note that calling the `OTSession init(apiKey: sessionId: delegate:)` method does not _create_ an Vonage Video session; it creates the Swift OTSession object, which represents an existing Vonage Video session. You create an Vonage Video session using the Vonage Video server-side libraries.
+Note that calling the `OTSession init(apiKey: sessionId: delegate:)` method does not _create_ a Vonage Video session; it creates the Swift OTSession object, which represents an existing Vonage Video session. You create a Vonage Video session using the Vonage Video server-side libraries.
 
 See [Creating a Vonage Video session](/video/tutorials/create-session/introduction).
 

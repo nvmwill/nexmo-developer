@@ -1,6 +1,6 @@
 --- 
 title: Initialize session object 
-description: Learn how to connect to an Vonage Video API session so that participants can use audio, video, and messaging functionality in your Android application.
+description: Learn how to connect to a Vonage Video API session so that participants can use audio, video, and messaging functionality in your Android application.
 product: video 
 ---
 

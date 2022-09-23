@@ -4,7 +4,7 @@ description: Use the Vonage Video API Python SDK to learn how to create a sessio
 product: video
 ---
 
-You can use the Vonage Video Python library to generate Vonage Video sessions. Each session has a unique session ID, which you can use in an Vonage Video client library to connect to an Vonage Video session. (See [Joining a Session](/video/tutorials/joining-a-session))
+You can use the Vonage Video Python library to generate Vonage Video sessions. Each session has a unique session ID, which you can use in a Vonage Video client library to connect to a Vonage Video session. (See [Joining a Session](/video/tutorials/joining-a-session))
 
 ## Creating a session that uses the Vonage Video Media Router
 
@@ -21,7 +21,7 @@ session = opentok_sdk.create_session(media_mode=MediaModes.routed)
 print session.session_id
 ```
 
-Use the session ID in an Vonage Video client library to connect to an Vonage Video session.
+Use the session ID in a Vonage Video client library to connect to a Vonage Video session.
 
 You will also need to generate a token for each user connecting to the Vonage Video session. See [Connection Token Creation](/video/tutorials/create-token) for information on the `generate_token()` method.
 

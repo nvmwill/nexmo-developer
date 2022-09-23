@@ -6,7 +6,7 @@ product: video
 
 ## Initializing a Publisher object
 
-A Publisher object is used to capture an audio-video stream from the device's microphone and camera for use in an Vonage Video session.
+A Publisher object is used to capture an audio-video stream from the device's microphone and camera for use in a Vonage Video session.
 
 For a basic publisher, use the `Publisher.Builder` class to instantiate a Publisher object. Pass in the Android application context for the publisher:
 

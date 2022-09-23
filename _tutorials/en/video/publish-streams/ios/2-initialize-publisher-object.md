@@ -6,7 +6,7 @@ product: video
 
 ## Initializing an OTPublisher object
 
-The `OTPublisher` object is used to capture an audio-video stream from the device's microphone and camera for use in an Vonage Video session. The `view` property of the object contains the view of the video you publish:
+The `OTPublisher` object is used to capture an audio-video stream from the device's microphone and camera for use in a Vonage Video session. The `view` property of the object contains the view of the video you publish:
 
 ```objective-c
 OTPublisher publisher = [[OTPublisher alloc]
@@ -38,6 +38,6 @@ Note that in sessions that use the Vonage Video Media Router (sessions with the 
 
 You can use a custom video capturer to publish a stream with a customized video source — see [Using a custom video capturer](/video/tutorials/audio-video/video/audio-video/ios/2-video-settings/ios#using-a-custom-video-capturer).
 
-<!-- You can also use the custom video capturer to publish a screen-sharing stream — see [Screen-sharing](/tutorials/screen-sharing). -->
+<!-- OPT-TODO: You can also use the custom video capturer to publish a screen-sharing stream — see [Screen-sharing](/tutorials/screen-sharing). -->
 
 You can also use a customized audio source for the published stream — see [Using a custom audio driver](/video/tutorials/audio-video/video/audio-video/ios/3-audio-settings/objective_c).
