@@ -1,0 +1,26 @@
+title: Screen Sharing
+description: Learn how to implement screen sharing using the video client SDKs.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will Learn how to implement screen sharing using the [iOS Client SDK](/video/client-sdks/windows).
+  content: |
+    # Introduction
+    In this tutorial, you will Learn how to implement screen sharing using the [Windows Client SDK](/video/client-sdks/windows).
+
+tasks:
+    - video/screen-sharing/windows/screen-sharing
+
+
+
+conclusion:
+  title: What's next?
+  description: Learn how to use the debugging tools the video platform provides.
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>

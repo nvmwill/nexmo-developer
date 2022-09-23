@@ -1185,3 +1185,12 @@ adm64
 200x200-pixel
 tgz
 bullseye
+preload
+preload.js
+BrowserWindow
+OTPublisherKitVideoType
+Publisher.Builder.ScalableScreenshare
+streamDestroyed
+OTPublisherKitSettings.scalableScreenshare
+Stream.StreamVideoType
+PublisherKit.Builder.scalableScreenshare
