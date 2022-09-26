@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will Learn how to implement screen sharing using the [Android Client SDK](/video/client-sdks/android).
+  description: In this tutorial, you will learn how to implement screen sharing using the [Android Client SDK](/video/client-sdks/android).
   content: |
     # Introduction
-    In this tutorial, you will Learn how to implement screen sharing using the [Android Client SDK](/video/client-sdks/android).
+    In this tutorial, you will learn how to implement screen sharing using the [Android Client SDK](/video/client-sdks/android).
 
 tasks:
     - video/screen-sharing/android/screen-sharing

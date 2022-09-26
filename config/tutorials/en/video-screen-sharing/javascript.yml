@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will Learn how to implement screen sharing using the [Javascript Client SDK](/video/client-sdks/web).
+  description: In this tutorial, you will learn how to implement screen sharing using the [Javascript Client SDK](/video/client-sdks/web).
   content: |
     # Introduction
-    In this tutorial, you will Learn how to implement screen sharing using the [Javascript Client SDK](/video/client-sdks/web).
+    In this tutorial, you will learn how to implement screen sharing using the [Javascript Client SDK](/video/client-sdks/web).
 
 tasks:
     - video/screen-sharing/js/screen-sharing

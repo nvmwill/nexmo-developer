@@ -1,0 +1,25 @@
+title: Mobile Guidelines
+description: Learn best practices about developing for Android. Learn which permissions the Vonage Video API Android SDK requires, and find links to useful articles about Android development.
+product: video
+
+introduction:
+  title: Introduction
+  description: In this tutorial, you will learn some best practices to follow when working with the [Android Client SDK](/video/client-sdks/android).
+  content: |
+    # Introduction
+    In this tutorial, you will learn some best practices to follow when working with the [Android Client SDK](/video/client-sdks/android).
+
+tasks:
+  - video/mobile-guidelines/android
+
+
+
+conclusion:
+  title: What's next?
+  description: Learn best practices about developing for Android. Learn which permissions the Vonage Video API Android SDK requires, and find links to useful articles about Android development.
+  content: |
+
+    # What's next?
+    You can learn more about the video platform concepts used in this tutorial from the [overview page](/video/overview).
+
+    If you happen to have any ideas in mind please contact us at <a href="mailto:devrel@vonage.com">devrel@vonage.com</a>

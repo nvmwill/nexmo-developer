@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will Learn how to implement screen sharing using the [iOS Client SDK](/video/client-sdks/ios).
+  description: In this tutorial, you will learn how to implement screen sharing using the [iOS Client SDK](/video/client-sdks/ios).
   content: |
     # Introduction
-    In this tutorial, you will Learn how to implement screen sharing using the [iOS Client SDK](/video/client-sdks/ios).
+    In this tutorial, you will learn how to implement screen sharing using the [iOS Client SDK](/video/client-sdks/ios).
 
 tasks:
     - video/screen-sharing/ios/screen-sharing

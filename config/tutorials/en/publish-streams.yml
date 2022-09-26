@@ -1,4 +1,4 @@
-title: Publishing Streams 
+title: Publishing streams 
 description: Learn how to publish Vonage Video API streams in your application. Once you have connected to a session, you can send video, audio, and messages by publishing a stream.
 products:
   - video

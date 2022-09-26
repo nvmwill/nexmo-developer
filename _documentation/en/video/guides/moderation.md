@@ -1,5 +1,5 @@
 ---
-title: Moderation Overview
+title: Moderation
 description: Learn how to moderate users in Vonage Video API sessions.
 product: video
 ---
