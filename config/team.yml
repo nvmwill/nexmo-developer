@@ -102,3 +102,7 @@ current:
     role: 'Senior Developer Advocate'
     twitter: 'manchuck'
     short-name: 'chuck-reeves'
+  - name: 'Guillaume Faas'
+    email: 'guillaume.faas@vonage.com'
+    role: 'Senior .Net Developer Advocate'
+    short-name: 'guillaume-faas'
