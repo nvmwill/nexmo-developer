@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '3.0.0'
 
-gem "station", "0.5.10"
+gem "station", "0.5.11"
 
 group :test do
   gem 'rspec'
