@@ -9,7 +9,7 @@ product: video
 <center>![](/images/video/party_hat.png)</center>
 
 **Congratulations! You've finished the 'Set up a Basic Web Client' tutorial.**  
-You can continue to play with and adjust the code you've developed here for the client-side of your application, but keep in mind that you'll need to implement the **server component** of your application before going to production (see [server SDK](/video/server-sdks/overview) below).
+You can continue to play with and adjust the code you've developed here for the client-side of your application, but keep in mind that you'll need to implement the **server component** of your application before going to production (see [Server SDKs](/video/server-sdks/overview) below).
 
 When you're finished here, continue building and enhancing your Vonage Video application with these helpful resources:
 

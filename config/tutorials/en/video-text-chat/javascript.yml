@@ -8,7 +8,7 @@ introduction:
   description: Follow this tutorial to build basic text chat from scratch using the Vonage Video API. It is the quickest way to build a proof of concept for this functionality on the video platform. 
   content: |
     # Introduction
-    In this tutorial you will learn tto build basic text chat from scratch using the Javascript SDK.
+    In this tutorial you will learn to build basic text chat from scratch using the Javascript SDK.
 
     For conceptual information on the video API, see the [General overview page](/video/overview).
 

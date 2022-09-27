@@ -15,7 +15,7 @@ You can view a completed version of this sample app in the **Basic-Video-Chat-Ja
 
 When you're finished here, continue building and enhancing your Vonage Video application with these helpful resources:
 
-* [server SDK](/video/server-sdks/overview) — Before going to production, you'll need to set up a server to generate credentials.
+* [Server SDKs](/video/server-sdks/overview) — Before going to production, you'll need to set up a server to generate credentials.
 * [Video API Basics](/video/overview) — If you haven't already, take a few minutes to learn exactly how Vonage Video works.
 * [Developer Guides](/video/guides/create-token) — detailed documentation on all Vonage Video features and functionality.
 * Check out the tutorials section — walkthroughs for implementing other Vonage Video features and use cases.

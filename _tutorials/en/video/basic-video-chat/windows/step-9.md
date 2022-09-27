@@ -7,7 +7,7 @@ product: video
 <center>![](/images/video/party_hat.png)</center>
 
 **Congratulations! You've finished the 'Set up a Basic Windows Client' tutorial.**  
-You can continue to play with and adjust the code you've developed here for the client-side of your application, but keep in mind that you'll need to implement the **server component** of your application before going to production (see [server SDK](#server) below).
+You can continue to play with and adjust the code you've developed here for the client-side of your application, but keep in mind that you'll need to implement the **server component** of your application before going to production (see [Server SDKs](#server) below).
 
 You can view a completed version of this sample app in the **BasicVideoChat** folder of the [opentok-windows-sdk-samples](https://github.com/opentok/opentok-windows-sdk-samples) repo on GitHub. This completed version adds code to load the session ID, token, and API key from a web service (instead of using hard-coded values).
 
@@ -15,7 +15,7 @@ You can view a completed version of this sample app in the **BasicVideoChat** fo
 
 When you're finished here, continue building and enhancing your Vonage Video application with these helpful resources:
 
-* [server SDK](/video/server-sdks/overview) — Before going to production, you'll need to set up a server to generate credentials]
+* [Server SDKs](/video/server-sdks/overview) — Before going to production, you'll need to set up a server to generate credentials]
 * [Video API Basics](/developer/guides/basics) — If you haven't already, take a few minutes to learn exactly how Vonage Video works
 * Visit the guides section for detailed documentation on all Vonage Video features and functionality
 * Visit the tutorials section for walkthroughs on implementing other Vonage Video features and use cases

@@ -1,13 +1,13 @@
 ---
 title: Conclusion
-description: Follow this tutorial to build basic text chat from scratch using the Vonage Video API. It is the quickest way to build a proof of concept for this functionality on the video platform. 
+description: Add a custom audio driver to your application using the Vonage Video API.
 product: video
 ---
 
 <center>![](/images/video/party_hat.png)</center>
 
-**Congratulations! You've finished Text Chat Tutorial for Android.**  
-You can continue to play with and adjust the code you've developed here, or check out the **Next Steps** below. For more information on signaling, see the [Vonage Video signaling developer guide](/video/guides/signaling/).
+**Congratulations! You've finished the Custom Audio Driver Tutorial for Android.**  
+You can continue to play with and adjust the code you've developed here, or check out the **Next Steps** below.
 
 ## Next Steps
 
@@ -18,4 +18,3 @@ When you're finished here, continue building and enhancing your Vonage Video app
 * Visit the guides section for detailed documentation on all Vonage Video features and functionality
 * Visit the tutorials section for walkthroughs on implementing other Vonage Video features and use cases
 * [Android SDK reference](/sdk/stitch/video-android-reference/) — explore the methods and events associated with the Vonage Video Android SDK
-

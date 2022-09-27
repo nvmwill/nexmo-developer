@@ -6,7 +6,7 @@ product: video
 
 ## Setting up authentication
 
-In order to connect to an Vonage Video session, the client will need access to some authentication credentials — an **API key**, **session ID**, and **token**. In a production application, these credentials should be generated using a [server SDK](/video/server-sdks/overview), but to speed things up we will hard code the values for now:
+In order to connect to an Vonage Video session, the client will need access to some authentication credentials — an **API key**, **session ID**, and **token**. In a production application, these credentials should be generated using a [Server SDKs](/video/server-sdks/overview), but to speed things up we will hard code the values for now:
 
 1. Create the `OpenTokConfig` class (File | New | Java Class), add some static variables to store the API key, session ID, and token. We'll also add some constants for our log message identifier and permissions:
 

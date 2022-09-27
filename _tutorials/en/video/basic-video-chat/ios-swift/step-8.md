@@ -8,7 +8,7 @@ product: video
 
 **Congratulations! You've finished the 'Set up a Basic iOS Client (Swift)' tutorial.**
 
-You can continue to play with and adjust the code you've developed here for the client-side of your application, but keep in mind that you'll need to implement the **server component** of your application before going to production (see [server SDK](/video/server-sdks/overview) below).
+You can continue to play with and adjust the code you've developed here for the client-side of your application, but keep in mind that you'll need to implement the **server component** of your application before going to production (see [Server SDKs](/video/server-sdks/overview) below).
 
 You can view a completed version of this sample app in the **Basic-Video-Chat** folder of the [opentok-ios-sdk-samples-swift](https://github.com/opentok/opentok-ios-sdk-samples-swift) repo on GitHub. This completed version adds code to load the session ID, token, and API key from a web service (instead of using hard coded values).
 

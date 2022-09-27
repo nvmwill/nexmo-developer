@@ -17,4 +17,4 @@ When you're finished here, continue building and enhancing your Vonage Video app
 * [Video API Basics](/developer/guides/basics) — If you haven't already, take a few minutes to learn exactly how Vonage Video works
 * Visit the guides section for detailed documentation on all Vonage Video features and functionality
 * Visit the tutorials section for walkthroughs on implementing other Vonage Video features and use cases
-* [iOS SDK reference](/sdk/stitch/video-ios-reference/) — explore the methods and events associated with the Vonage Video Windows SDK
+* [iOS SDK reference](/sdk/stitch/video-ios-reference/) — explore the methods and events associated with the Vonage Video iOS SDK

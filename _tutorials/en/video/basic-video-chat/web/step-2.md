@@ -10,7 +10,7 @@ Pull up your blank **app.js** file in your code editor — most of the remaining
 
 In order to connect to a Vonage Video session, the client will need access to some authentication credentials — an **APP ID**, **Session ID**, and **Token**.
 
-In a production application, these credentials should be generated using a [server SDK](/video/server-sdks/overview), but to speed things up we will hard code the values for now.
+In a production application, these credentials should be generated using a [Server SDKs](/video/server-sdks/overview), but to speed things up we will hard code the values for now.
 
 1. Start by copying the following code block and adding it to your app.js file:
 

@@ -1250,3 +1250,7 @@ ListView
 Signaling.xcworkspace
 Config.h
 learning-opentok-php
+NoiseAudioDevice
+OTAudioFormat
+OTKBasicAudioDevice
+OTAudioDevice
