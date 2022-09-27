@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn how to implement screen sharing using the [iOS Client SDK](/video/client-sdks/windows).
+  description: In this tutorial, you will learn how to implement screen sharing using the [windows Client SDK](/video/client-sdks/windows/overview).
   content: |
     # Introduction
-    In this tutorial, you will learn how to implement screen sharing using the [Windows Client SDK](/video/client-sdks/windows).
+    In this tutorial, you will learn how to implement screen sharing using the [Windows Client SDK](/video/client-sdks/windows/overview).
 
 tasks:
     - video/screen-sharing/windows/screen-sharing

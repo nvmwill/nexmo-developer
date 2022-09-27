@@ -1,11 +1,11 @@
 ---
-title: iOS
+title: Overview
 description: Use the Vonage Video API iOS library to build Vonage Video API-powered WebRTC video apps for the iOS operating system. Use video, voice, messaging, and more in your iOS application with our SDK.
 keywords: Vonage, Vonage Video API, Vonage Video for iOS, mobile, mobile WebRTC, interoperability, iOS, iPhone, iPad, WebRTC, Real-time communications, Developer, Developer Center, SDKs, tutorials, WebRTC tutorials, Developer Guides, Components
 product: video
 ---
 
-Vonage Video iOS SDK
+# iOS SDK
 
 The iOS SDK lets you use Vonage Video API-powered video sessions in apps built for iPad, iPhone, and iPod touch devices.
 
@@ -25,7 +25,7 @@ The iOS client SDK provides the following functionalities:
 
 You can learn more about the basics of Vonage Video clients, servers, sessions, and more on the [Video API Basics](/video/overview) page.
 
-## Building with the Vonage Video iOS SDK
+## Building with the iOS SDK
 
 <!-- OPT-TODO: The best way to learn how to use the Vonage Video iOS SDK is to follow the [Vonage Video Basic Video Chat tutorial](/developer/tutorials/ios/). -->
 
@@ -112,6 +112,6 @@ For samples using Objective-C, visit our [Objective-C sample app repo](https://g
 
 You can find detailed documentation of each iOS method in the  [reference guide](/sdk/stitch/video-ios-reference/)
 
-<!-- OPT-TODO: ## More information -->
+## More information
 
-<!-- For a list of new features and known issues, see the [release notes](/developer/sdks/ios/release-notes.html). -->
+For a list of new features and known issues, see the [release notes](/video/client-sdks/ios/release-notes).

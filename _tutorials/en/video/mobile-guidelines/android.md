@@ -61,7 +61,7 @@ See the [sample VOIP app](https://github.com/opentok/opentok-android-sdk-samples
 
 For more information, see:
 
-* [Vonage Video Android SDK](/video/client-sdks/android)
+* [Vonage Video Android SDK](/video/client-sdks/android/overview)
 
 <!-- OPT-TODO: * [Vonage Video Android SDK release notes](/developer/sdks/android/release-notes.html) -->
 

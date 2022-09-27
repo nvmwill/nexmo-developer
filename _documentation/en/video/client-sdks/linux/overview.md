@@ -1,5 +1,5 @@
 ---
-title: Linux
+title: Overview
 description: Learn about the Linux SDK, which makes it easy to use many of Vonage Video's REST API's functionality. Use the SDK to generate sessions and tokens, and more.
 product: video
 ---
@@ -37,15 +37,15 @@ to install the packages from our repository.
 
 * Add packagecloud repository:
 
-  ```bash
-  curl -s https://packagecloud.io/install/repositories/tokbox/debian/script.deb.sh | sudo bash
-  ```
+```bash
+curl -s https://packagecloud.io/install/repositories/tokbox/debian/script.deb.sh | sudo bash
+```
 
 * Install the Vonage Video Linux SDK packages.
 
-  ```bash
-  sudo apt-get install libopentok-dev
-  ```
+```bash
+sudo apt-get install libopentok-dev
+```
 
 ### `tgz` packages
 
@@ -69,16 +69,16 @@ list of include folders with the `INCLUDE_DIRECTORIES()` command and finally add
 `libopentok` to the list of target link libraries.
 
 ```c
-  ADD_SUBDIRECTORY(<absolute-path-to-package-folder> ${CMAKE_CURRENT_BINARY_DIR}/libopentok)
+ADD_SUBDIRECTORY(<absolute-path-to-package-folder> ${CMAKE_CURRENT_BINARY_DIR}/libopentok)
 
-  # ...
+# ...
 
-  INCLUDE_DIRECTORIES(<other-include-directories> $<TARGET_PROPERTY:libopentok,INTERFACE_INCLUDE_DIRECTORIES>)
+INCLUDE_DIRECTORIES(<other-include-directories> $<TARGET_PROPERTY:libopentok,INTERFACE_INCLUDE_DIRECTORIES>)
 
-  # ...
+# ...
 
-  ADD_EXECUTABLE(${PROJECT_NAME} <sources>)
-  TARGET_LINK_LIBRARIES(${PROJECT_NAME} <other-libraries> libopentok)
+ADD_EXECUTABLE(${PROJECT_NAME} <sources>)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} <other-libraries> libopentok)
 ```
 
 ## Sample Applications

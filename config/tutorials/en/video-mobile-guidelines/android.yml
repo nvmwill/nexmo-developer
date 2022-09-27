@@ -4,10 +4,10 @@ product: video
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn some best practices to follow when working with the [Android Client SDK](/video/client-sdks/android).
+  description: In this tutorial, you will learn some best practices to follow when working with the [Android Client SDK](/video/client-sdks/android/overview).
   content: |
     # Introduction
-    In this tutorial, you will learn some best practices to follow when working with the [Android Client SDK](/video/client-sdks/android).
+    In this tutorial, you will learn some best practices to follow when working with the [Android Client SDK](/video/client-sdks/android/overview).
 
 tasks:
   - video/mobile-guidelines/android

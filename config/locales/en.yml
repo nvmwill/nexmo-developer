@@ -85,6 +85,8 @@ en:
     viber: Viber Business Messages
     subaccounts: Subaccounts
     use-cases: Use Cases
+    linux: Linux
+    windows: Windows
   layouts:
     partials:
       header:

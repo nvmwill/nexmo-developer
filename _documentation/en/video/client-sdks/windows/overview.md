@@ -1,5 +1,5 @@
 ---
-title: Windows
+title: Overview
 description: Use the Vonage Video Windows library to add Vonage Video API-powered WebRTC video to Windows apps. Use video, voice, messaging, and more in your Windows application with our SDK.
 keywords: Vonage, Vonage Video API, Vonage Video for Windows, mobile, mobile WebRTC, interoperability, Windows, WebRTC, Real-time communications, Developer, Developer Center, SDKs, tutorials, WebRTC tutorials, Developer Guides, Components
 product: video
@@ -58,6 +58,6 @@ For sample code, go to the [vonage-video-windows-sdk-samples repo](https://githu
 
 See the [Vonage Video Windows SDK API reference](/sdk/stitch/video-windows-reference/annotated.html) and the [Vonage Video developer guides](/video/guides/create-session).
 
-<!-- OPT-TODO: ## More information
+## More information
 
-For a list of new features and known issues, see the [release notes](/developer/sdks/windows/release-notes.html). -->
+For a list of new features and known issues, see the [release notes](/video/client-sdks/windows/release-notes).

@@ -5,10 +5,10 @@ products:
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn how to debug your web frontend when working with the [iOS (Objective C) Client SDK](/video/client-sdks/android).
+  description: In this tutorial, you will learn how to debug your web frontend when working with the [iOS (Objective C) Client SDK](/video/client-sdks/ios/overview).
   content: |
     # Introduction
-    In this tutorial, you will learn how to debug your web frontend when working with the [iOS (Objective C) Client SDK](/video/client-sdks/android).
+    In this tutorial, you will learn how to debug your web frontend when working with the [iOS (Objective C) Client SDK](/video/client-sdks/ios/overview).
 
 tasks:
     - video/debugging/ios/debugging

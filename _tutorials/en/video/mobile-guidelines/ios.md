@@ -73,7 +73,7 @@ As long as your controller is processing the error and disconnected delegate eve
 
 For more information, see:
 
-* [Vonage Video iOS SDK](/video/client-sdks/ios)
+* [Vonage Video iOS SDK](/video/client-sdks/ios/overview)
 
 <!-- OPT-TODO: * [Vonage Video iOS SDK release notes](/developer/sdks/ios/release-notes.html) -->
 

@@ -4,10 +4,10 @@ product: video
 
 introduction:
   title: Introduction
-  description: In this tutorial, you will learn some best practices to follow when working with the [iOS Client SDK](/video/client-sdks/iOS).
+  description: In this tutorial, you will learn some best practices to follow when working with the [iOS Client SDK](/video/client-sdks/ios/overview).
   content: |
     # Introduction
-    In this tutorial, you will learn some best practices to follow when working with the [iOS Client SDK](/video/client-sdks/iOS).
+    In this tutorial, you will learn some best practices to follow when working with the [iOS Client SDK](/video/client-sdks/ios/overview).
 
 tasks:
   - video/mobile-guidelines/ios

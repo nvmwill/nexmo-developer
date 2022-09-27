@@ -1,11 +1,11 @@
 ---
-title: Android
+title: Overview
 description: Use the Vonage Video API Android library to build Vonage Video API-powered WebRTC video apps for the Android operating system. Use video, voice, messaging, and more in your Android application with our SDK. 
 keywords: Vonage, Vonage Video API, Vonage Video for Android, mobile, mobile WebRTC, interoperability, Android, WebRTC, Real-time communications, Developer, Developer Center, SDKs, tutorials, WebRTC tutorials, Developer Guides, Components 
 product: video
 ---
 
-# Vonage Video API Android SDK
+# Android SDK
 
 The Vonage Video API Android SDK lets you use Vonage Video API-powered video sessions in apps you build for Android devices.
 
@@ -21,7 +21,7 @@ The Android SDK provides the following functionalities:
 
 You can learn more about the basics of Vonage Video clients, servers, sessions, and more on the [Video API Basics](/video/overview) page.
 
-## Building with the Vonage Video Android SDK
+## Building with the Android SDK
 
 Once you understand the basics of building with the Vonage Video iOS SDK, you can get more detailed information and learn how to customize your application with the Vonage Video [developer guides](/video/guides/create-token).
 
@@ -57,7 +57,7 @@ The SDK is supported on high-speed Wi-Fi and 4G LTE networks. The Vonage Video A
 
 The Vonage Video Android SDK works with any Android 4.1+ device (Jelly Bean, API Level 16) that has a camera (for publishing video) and adequate CPU and memory support.
 
-## Creating your own app using the Vonage Video Android SDK
+## Creating your own app using the Android SDK
 
 The library is provided in the vonage-video-android-sdk-2.22.3.aar file. You no longer need to include architecture-dependent .so files (which was required in previous versions).
 
