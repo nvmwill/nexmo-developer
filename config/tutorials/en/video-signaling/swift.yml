@@ -1,0 +1,16 @@
+title: Signaling 
+description: Learn how to use Vonage Video API signaling to build robust messaging into your Android, iOS, or web application. With signaling, users can send messages, control robots, and more!
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Learn how to use Vonage Video API signaling to build robust messaging into your  application.
+  content: |
+    # Introduction
+    In this tutorial you will learn how to use the Vonage video platform to send text and data between clients connected to a session.
+
+    For conceptual information on signaling, see the [Signaling overview guide](/video/guides/signaling).
+
+tasks:
+    - video/video-signaling/ios-swift/signaling

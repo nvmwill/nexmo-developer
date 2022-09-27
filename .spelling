@@ -1207,3 +1207,7 @@ unsuspended
 checkbox
 Session.reportIssue
 reportIssue
+SignalEventArgs
+connectionCreated
+SignalListener
+Session.SignalListener
