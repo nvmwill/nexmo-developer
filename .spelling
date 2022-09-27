@@ -1254,3 +1254,8 @@ NoiseAudioDevice
 OTAudioFormat
 OTKBasicAudioDevice
 OTAudioDevice
+OTKBasicVideoRender
+CGImageRef
+OTKCustomRenderView
+OTVideoFrame
+renderVideoFrame
