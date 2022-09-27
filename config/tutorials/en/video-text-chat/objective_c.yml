@@ -1,0 +1,18 @@
+title: Basic video chat 
+description: Follow this tutorial to build basic text chat from scratch using the Vonage Video API. It is the quickest way to build a proof of concept for this functionality on the video platform. 
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Follow this tutorial to build basic text chat from scratch using the Vonage Video API. It is the quickest way to build a proof of concept for this functionality on the video platform. 
+  content: |
+    # Introduction
+    In this tutorial you will learn tto build basic text chat from scratch using the iOS SDK.
+
+    For conceptual information on the video API, see the [General overview page](/video/overview).
+
+tasks:
+    - video/text-chat/ios/step-0
+    - video/text-chat/ios/step-1
+    - video/text-chat/ios/step-2
