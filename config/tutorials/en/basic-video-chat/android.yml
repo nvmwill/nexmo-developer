@@ -1,0 +1,26 @@
+title: Basic video chat 
+description: Learn the basic concepts of the Vonage Video API platform, including how users can communicate through video, voice, and messaging. Explore a basic Vonage Video API flow.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Learn the basic concepts of the Vonage Video API platform, including how users can communicate through video, voice, and messaging. Explore a basic Vonage Video API flow.
+  content: |
+    # Introduction
+    In this tutorial you will learn the basic concepts of the Vonage Video API platform, including how users can communicate through video, voice, and messaging.
+
+    For conceptual information on the video API, see the [General overview page](/video/overview).
+
+tasks:
+    - video/basic-video-chat/android/step-0
+    - video/basic-video-chat/android/step-1
+    - video/basic-video-chat/android/step-2
+    - video/basic-video-chat/android/step-3
+    - video/basic-video-chat/android/step-4
+    - video/basic-video-chat/android/step-5
+    - video/basic-video-chat/android/step-6
+    - video/basic-video-chat/android/step-7
+    - video/basic-video-chat/android/step-8
+    - video/basic-video-chat/android/step-9
+    - video/basic-video-chat/android/step-10
