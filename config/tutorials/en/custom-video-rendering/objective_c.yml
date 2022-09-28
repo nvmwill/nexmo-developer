@@ -1,0 +1,20 @@
+title: Custom video rendering (Mobile Only)
+description: Add custom video rendering to your application using the Vonage Video API.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Add custom video rendering to your application using the iOS SDK.
+  content: |
+    # Introduction
+    This tutorial walks through the steps required to make minor modifications to the video renderer used by an OTPublisher object.
+    
+    You can also use the same techniques to modify the video renderer used by an `OTSubscriber` object (though this example only illustrates a custom renderer for a publisher).
+
+    For conceptual information on the video API, see the [General overview page](/video/overview).
+
+tasks:
+    - video/custom-video-rendering/ios/step-1
+    - video/custom-video-rendering/ios/step-2
+    - video/custom-video-rendering/ios/step-3

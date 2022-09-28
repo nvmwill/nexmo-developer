@@ -1,13 +1,11 @@
 ---
 title: Conclusion
-description: Follow this tutorial to build basic text chat from scratch using the Vonage Video API. It is the quickest way to build a proof of concept for this functionality on the video platform. 
+description: Add custom video rendering to your application using the Vonage Video API.
 product: video
 ---
 
-<center>![](/images/video/party_hat.png)</center>
-
-**Congratulations! You've finished Text Chat Tutorial for Android.**  
-You can continue to play with and adjust the code you've developed here, or check out the **Next Steps** below. For more information on signaling, see the [Vonage Video signaling developer guide](/video/guides/signaling/).
+**Congratulations! You've finished the Custom Video Rendering Tutorial for Android.**  
+You can continue to play with and adjust the code you've developed here, or check out the **Next Steps** below.
 
 ## Next Steps
 

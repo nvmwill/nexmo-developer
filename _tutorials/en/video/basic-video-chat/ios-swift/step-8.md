@@ -17,7 +17,7 @@ You can view a completed version of this sample app in the **Basic-Video-Chat** 
 When you're finished here, continue building and enhancing your Vonage Video application with these helpful resources:
 
 * [Server SDK](/video/server-sdks/overview) — Before going to production, you'll need to set up a server to generate credentials
-* [Video API Basics](/developer/guides/basics) — If you haven't already, take a few minutes to learn exactly how Vonage Video works
+* [Video API Basics](/video/overview) — If you haven't already, take a few minutes to learn exactly how Vonage Video works
 * Visit the guides section for detailed documentation on all Vonage Video features and functionality
 * Visit the tutorials section for walkthroughs on implementing other Vonage Video features and use cases
 * [iOS SDK Reference](/sdk/stitch/video-ios-reference/) — explore the specific methods and events associated with Vonage Video iOS SDK.
