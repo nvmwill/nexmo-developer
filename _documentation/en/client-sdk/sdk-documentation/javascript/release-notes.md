@@ -6,6 +6,12 @@ navigation_weight: 0
 
 # Release Notes
 
+## Version 9.1.4 - September 23, 2022
+
+### Changes
+
+- Use `v2` of Nexmo Conversation Websocket
+
 ## Version 9.1.3 - September 07, 2022
 
 ### Fix
