@@ -33,7 +33,7 @@ The `[OTKBasicVideoRender init:]` method sets a `_renderView` property to a UIVi
 
 The OTKCustomRenderView class includes methods (discussed later) that convert a video frame to a black-and-white representation.
 
-The `[OTVideoRender renderVideoFrame:]` method is called when the publisher (or subscriber) renders a video frame to the video renderer. The frame an OTVideoFrame object (defined by the Vonage Video iOS SDK). In the OTKCustomRenderView implementation of this method, it simply takes the frame and passes it along to the `[renderVideoFrame]` method of the OTKCustomRenderView object:
+The `[OTVideoRender renderVideoFrame:]` method is called when the publisher (or subscriber) renders a video frame to the video renderer. The frame an OTVideoFrame object (defined by the Vonage Video iOS SDK). In the OTKCustomRenderView implementation of this method, it takes the frame and passes it along to the `[renderVideoFrame]` method of the OTKCustomRenderView object:
 
 ```objc
 - (void)renderVideoFrame:(OTVideoFrame*) frame
