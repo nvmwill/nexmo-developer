@@ -8,7 +8,7 @@ introduction:
   description: Add a custom audio driver to your application using the Vonage Video API. 
   content: |
     # Introduction
-    In this tutorial you will learn to how to add a custom audio driver to your application using the iOS SDK
+    In this tutorial you will learn how to add a custom audio driver to your application using the iOS SDK
 
     For conceptual information on the video API, see the [General overview page](/video/overview).
 

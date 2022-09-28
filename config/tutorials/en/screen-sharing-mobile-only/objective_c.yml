@@ -1,0 +1,18 @@
+title: Screen Sharing
+description: Follow this tutorial to add screen sharing to your mobile application using the Vonage Video API.
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Learn how to add screen sharing to your mobile application using the iOS SDK 
+  content: |
+    # Introduction
+    In this tutorial you will learn how to add screen sharing to your mobile application using the iOS SDK
+
+    For conceptual information on the video API, see the [General overview page](/video/overview).
+
+tasks:
+    - video/screen-sharing-mobile-only/ios/step-0
+    - video/screen-sharing-mobile-only/ios/step-1
+    - video/screen-sharing-mobile-only/ios/step-2

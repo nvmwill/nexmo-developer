@@ -1259,3 +1259,9 @@ CGImageRef
 OTKCustomRenderView
 OTVideoFrame
 renderVideoFrame
+OTKBasicVideoCapturer
+consumeFrame
+fillPixelBufferFromCGImage
+CGImage
+CVPixelBuffer
+OTVideoKit
