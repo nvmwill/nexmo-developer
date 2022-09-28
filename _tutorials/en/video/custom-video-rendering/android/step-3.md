@@ -4,6 +4,8 @@ description: Add custom video rendering to your application using the Vonage Vid
 product: video
 ---
 
+<center>![](/images/video/party_hat.png)</center>
+
 **Congratulations! You've finished the Custom Video Rendering Tutorial for Android.**  
 You can continue to play with and adjust the code you've developed here, or check out the **Next Steps** below.
 
