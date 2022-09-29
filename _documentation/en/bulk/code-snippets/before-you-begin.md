@@ -1,5 +1,6 @@
 ---
 title: Before You Begin
+product: bulk
 navigation_weight: 0
 ---
 

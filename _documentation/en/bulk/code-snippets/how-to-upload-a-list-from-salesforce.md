@@ -1,6 +1,7 @@
 ---
 title: How to Upload a List From Salesforce
-navigation_weight: 6
+product: bulk
+navigation_weight: 5
 ---
 
 # How to Upload a List From Salesforce

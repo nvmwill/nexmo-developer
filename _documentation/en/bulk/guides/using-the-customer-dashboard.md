@@ -1,9 +1,10 @@
 ---
-title: Using the Campaign API Dashboard
-description: How to use the Campaign API Dashboard to send bulk messaging campaigns.
-navigation_weight: 0
+title: Using the Dashboard to Set Up an Outbound Messaging Campaign
+description: How to use the dashboard to send bulk messaging campaigns.
+product: bulk
+navigation_weight: 1
 ---
 
-# Using the Campaign API Dashboard
+# Using the Dashboard
 
 Content here

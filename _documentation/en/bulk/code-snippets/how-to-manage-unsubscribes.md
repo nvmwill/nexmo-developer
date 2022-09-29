@@ -1,6 +1,7 @@
 ---
 title: How to Manage Unsubscribes
-navigation_weight: 5
+product: bulk
+navigation_weight: 4
 ---
 
 # How to Manage Unsubscribes

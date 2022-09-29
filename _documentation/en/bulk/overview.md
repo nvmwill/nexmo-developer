@@ -14,7 +14,7 @@ By using the Bulk API, you can create meaningful campaigns that reach customers 
 
 ## Contents
 
-* [Concepts](#concepts)
+* [Concepts](#concepts--terminology)
 * [Code Snippets](#code-snippets)
 * [Guides](#guides)
 * [Reference](#reference)
@@ -23,29 +23,26 @@ By using the Bulk API, you can create meaningful campaigns that reach customers 
 
 * Lists
   * Contains the list of targets with which to run the campaign. Lists can be directly uploaded at the time of creation or imported from an external resource, like a file or CRM.
-* Events
-  * Events are configured to enable the api to 'listen' for certain responses or events. This might be to unsubscribe a user, create a new list based on a response, invoke a chat bot agent or trigger certain analytics. Again, it's totally up to the user.
-* Items
-  * The lists contains items  - we can think of these as rows within the spreadsheet of targets. This is used to help perform segmentation. When a campaign is configured the api moves through each item applying segmentation and actions.
 * Actions
   * Configure the action to be performed on a list entry when running a campaign. Actions are typically used to send an SMS, message, email or make a phone call. Actions can also be used as reactions, to trigger an API call upon receiving a response from the target user.
-* Event Handler
-* Scheduler
-* Analytics
 * Jobs
   * Configure the main resource that defines the campaign. A job iterates through the list and applies a predefined set of actions to each element of the list. Create a job to apply different actions based on different conditions.
 * Runs
   * See all jobs that have run, are running, or are scheduled to run, and find out how your campaigns are performing.
-
-## Code Snippets
-
-```code_snippet_list
-product: bulk
-```
+* Events
+  * Events are configured to enable the api to 'listen' for certain responses or events. This might be to unsubscribe a user, create a new list based on a response, invoke a chat bot agent or trigger certain analytics. Again, it's totally up to the user.
+* Items
+  * The lists contains items  - we can think of these as rows within the spreadsheet of targets. This is used to help perform segmentation. When a campaign is configured the api moves through each item applying segmentation and actions.
 
 ## Guides
 
 ```concept_list
+product: bulk
+```
+
+## Code Snippets
+
+```code_snippet_list
 product: bulk
 ```
 
