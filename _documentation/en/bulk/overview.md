@@ -8,7 +8,7 @@ description: The Bulk API enables the developer to send large scale outreach cam
 
 The Bulk API is a powerful tool that provides customers with a flexible and scalable way of sending large scale outreach campaigns using any channels available through the Vonage APIs. It allows users to configure every aspect of their campaign and is capable of scheduling, segmentation, intelligent failover and analytics.
 
-Accessible through an easy to use interface within the Customer Dashboard, the API works seamlessly with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview) and allows customers to create complex communication strategies which can take advantage of all aspects of VCP. Easily link your campaign to AI Studio, Vonage CC or third party applications like Salesforce.
+Also accessible through a user interface within the Customer Dashboard, the API works seamlessly with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview) and allows customers to create complex communication strategies which can take advantage of all aspects of VCP. Link your campaign to AI Studio, Vonage CC or third party applications like Salesforce.
 
 By using the Bulk API, you can create meaningful campaigns that reach customers based on their individual channel preferences, time zones and with content guaranteed to start conversations.
 
