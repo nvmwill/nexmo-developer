@@ -1,0 +1,18 @@
+title: Archiving
+description: Learn how to record and store video streams using the Vonage SDK
+products:
+  - video
+
+introduction:
+  title: Introduction
+  description: Learn how to record and store video streams using the Vonage SDK.
+  content: |
+    # Introduction
+    In this tutorial you will learn how to record and store video streams using the Vonage Javascript SDK
+
+    For conceptual information on the video API, see the [General overview page](/video/overview).
+
+tasks:
+    - video/archiving/web/step-1
+    - video/archiving/web/step-2
+    - video/archiving/web/step-3

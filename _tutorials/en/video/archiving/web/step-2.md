@@ -1,0 +1,17 @@
+---
+title: Setting up your project
+description: Follow this tutorial to build basic archiving for a web application from scratch using the Vonage Video API. It is the quickest way to build a proof of concept for this functionality on the Vonage Video API platform.
+product: video 
+---
+
+## Setting up your project
+
+To follow this tutorial, clone Vonage Video's [Web sample apps](https://github.com/opentok/opentok-web-samples) repo on GitHub:
+
+```bash
+$ git clone https://github.com/opentok/opentok-web-samples.git
+```
+
+Then open the **Archiving** folder in your code editor to follow along.
+
+**Important:** You can only archive sessions that use the [Vonage Video Media Router](/video/guides/create-session#the-media-router-and-media-modes) (sessions with the media mode set to routed). The default [learning-opentok-php](https://github.com/opentok/learning-opentok-php) code used by this tutorial app uses routed sessions.

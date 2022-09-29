@@ -6,7 +6,7 @@ product: video
 
 ## Creating a relayed session
 
-Here is Ruby sample code that creates a new session with the [media mode](/guides/create-session#the-media-router-and-media-modes) set to relayed:
+Here is Ruby sample code that creates a new session with the [media mode](/video/guides/create-session#the-media-router-and-media-modes) set to relayed:
 
 ``` ruby
     api_key = "your_API_key"        # Replace with your OpenTok API key.
