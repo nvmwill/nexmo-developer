@@ -76,6 +76,7 @@ en:
     scheduler-provider: Scheduler
     voice-provider-conversation: Conversation
     state-provider: State
+    assets-provider: Assets
     administration: Administration
     tasks: Tasks
     application: Application

@@ -208,6 +208,8 @@ navigation_overrides:
         navigation_weight: 4  
       scheduler: 
         navigation_weight: 5
+      assets:
+        navigation_weight: 6
     code-snippets:
       navigation_weight: 9
       neru-global: 
@@ -220,3 +222,5 @@ navigation_overrides:
         navigation_weight: 4  
       scheduler-provider: 
         navigation_weight: 5
+      assets-provider: 
+        navigation_weight: 6
