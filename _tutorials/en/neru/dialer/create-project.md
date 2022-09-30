@@ -36,7 +36,7 @@ This will install the NeRu SDK and Express JS.
 
 ## Configure your project 
 
-Open the `neru.yml` file in your text editor and update the configuration object with the number you bought earlier, the voice capability and entrypoint. Your file should look similar to this, with your own application ID and vonage number:
+Open the `neru.yml` file in your text editor and add an `environment` object with the number you bought earlier, the voice capability and entrypoint. Your file should look similar to this, with your own application ID and vonage number:
 
 ```yml
 project:
@@ -48,10 +48,9 @@ instance:
     application-id: $VONAGE_APPLICATION_ID
     capabilities:
         - voice
-    configurations:
-        contact:
-            number: "$VONAGE_NUMBER"
-            type: "phone"
+    environment:
+        - name: VONAGE_NUMBER
+          value: "44700000000"
     entrypoint: [node, index.js]
 debug:
     entrypoint: [nodemon, --inspect, index.js]

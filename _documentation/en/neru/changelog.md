@@ -20,10 +20,6 @@ meta_title: NeRu Changelog
     * Watch dev dependency to support watch mode.
     * `RequestInterfaceWithParams` class to support passing request params to the request
 
-* Changed: 
-    * Removed the `RequestHeaders` class.
-    * Removed the `CommandHeaders` class.
-
 ### 3.1.0 - (2022-09-07)
 
 * Added:
@@ -65,6 +61,14 @@ meta_title: NeRu Changelog
     * Request headers added to log submissions.
 
 ## CLI
+
+### 0.8.14 - (2022-09-23)
+
+* Added:
+    * Adding `environment` capabilities support for `neru.yml`. The `configurations` capability has been deprecated.
+
+* Fixed:
+    * Assets provider support
 
 ### 0.8.13 - (2022-08-25)
 

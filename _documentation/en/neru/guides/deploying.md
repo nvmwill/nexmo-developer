@@ -70,4 +70,4 @@ If you deploy more than one instance for your project it will show like so:
 
 ![Screenshot of the neru dashboard showing multiple instances](/images/neru/neru-dashboard-instances.png)
 
-This is a project named `vapi`, which has two configuration files. One configuration file has an instance named `dev` and the other has an instance named `prod`. This allows you to have multiple instances running the same code but with different secrets and configurations.
+This is a project named `vapi`, which has two configuration files. One configuration file has an instance named `dev` and the other has an instance named `prod`. This allows you to have multiple instances running the same code but with different environments.

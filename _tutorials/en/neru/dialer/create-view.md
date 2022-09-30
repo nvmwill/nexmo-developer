@@ -78,7 +78,7 @@ neru debug
 
 The debugger will give you two URLs for your debug instance. Use the second one, ending in `.com`, since the the lack of path parameters makes it better suited for using static files.
 
-![debug output](/images/neru/neru-dialer-debug)
+![debug output](/images/neru/neru-dialer-debug.png)
 
 
 Opening this link will show you the webpage. Leave the debugger running as it will automatically reload as we add code to the project.

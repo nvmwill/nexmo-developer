@@ -20,8 +20,6 @@ Your development environment will depend on which runtime you are using, but thi
 * For the Node.JS SDK:
     * Node 16 or above installed.
     * Nodemon installed globally (`npm install -g nodemon`)
-* For the Python SDK:
-    * Python 3.10 or above installed.
 
 ## 3. Download the NeRu CLI
 
@@ -80,13 +78,17 @@ neru init
 * Choose runtime environment - `nodejs16`
 * Choose a region
 * Choose the instance name - `dev`
-* Choose the template for this sample - `AkiraQuizVoice`
+* Choose the template for this sample - `VoiceQuiz`
 
-This will create a NeRu project and download the `AkiraQuizVoice` template. It will create the NeRu configuration file (neru.yml).
+This will create a NeRu project and download the `VoiceQuiz` template. It will create the NeRu configuration file (neru.yml). Install the dependencies for the `VoiceQuiz` project:
+
+```
+npm install
+```
 
 ## 7. Adapt your NeRu Project
 
-The `AkiraQuizVoice` template is a voice quiz you can play by calling a Vonage number linked to your Vonage application. Buy and link a number to your application:
+The `VoiceQuiz` template is a voice quiz you can play by calling a Vonage number linked to your Vonage application. Buy and link a number to your application:
 
 * [Buy a number](https://dashboard.nexmo.com/buy-numbers) if you do not already have one.
 * Find your application in the [Dashboard](https://dashboard.nexmo.com/voice/your-applications).
@@ -96,7 +98,7 @@ The `AkiraQuizVoice` template is a voice quiz you can play by calling a Vonage n
 Now that you have a number linked to your Vonage application, update the configuration file: 
 
 * Open the neru.yml file in a text editor
-* Update the configuration object with the number you bought earlier, and linked to your application.
+* Add the environment capability with the number you bought earlier, and linked to your application.
 * Ensure you have both the `rtc` and `messages` capabilities.
 
 Your file should look similar to this, with `$VONAGE_NUMBER` being your Vonage number:
@@ -109,15 +111,20 @@ instance:
     runtime: nodejs16
     region: aws.euw1
     application-id: d9725658-1dcb-4e99-80b5-5ec1b75f47dc
-    capabilities: [rtc, messaging]
-    entrypoint: [node, index.js]
-    configurations:
-        contact:
-            number: "$VONAGE_NUMBER"
-            type: "phone"
+    capabilities: 
+        - rtc
+        - messaging
+    environment:
+        - name: VONAGE_NUMBER
+          value: "$VONAGE_NUMBER"
+    entrypoint:
+        - node
+        - index.js
 debug:
-    name: quiz
-    entrypoint: [nodemon, --inspect, index.js]
+    name: debug
+    entrypoint:
+        - nodemon
+        - index.js
 ```
 
 ## 8. Debug Your NeRu Project

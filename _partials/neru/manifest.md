@@ -10,10 +10,11 @@ instance:
     capabilities:
         - voice
         - messaging
-    configurations:
-        contact:
-            number: "44700000000"
-            type: phone
+    environment:
+        - name: VONAGE_NUMBER
+          value: "44700000000"
+        - name: API_KEY
+          secret: NERU_SECRET_API_KEY
     secrets:
         - FOO
         - BAR

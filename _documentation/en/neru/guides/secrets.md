@@ -30,7 +30,7 @@ neru secrets create --name <name> --file <path/to/file>
 
 ## Accessing your Secrets
 
-To access a secret in your instance, you need to add it to your configuration file to expose it. Add a `secrets` key to your configuration file with a list of the secrets you want to expose:
+To access a secret in your instance, you need to add it to your configuration file to expose it. Add a `environment` key to your configuration file with a list of the secrets you want to expose and a name to refer to them by:
 
 ```yml
 project:
@@ -42,15 +42,17 @@ instance:
     application-id: fcd08ece-f3c2-4adf-bf84-5ba8a1c86e0e
     capabilities: [voice, messages]
     entrypoint: [node, index.js]
-    secrets:
-        - FOO
-        - BAR
+    environment:
+        - name: FOO_SECRET
+          secret: FOO
+        - name: BAZ_SECRET
+          secret: BAZ
 ```
 
-Now that the secret is in your configuration file, they will be injected into your instance when you run the NeRu deploy your project. So for the above example of `FOO`:
+Now that the secret is in your configuration file, they will be injected into your instance when you run the NeRu debugger or deploy your project. So for the above example of `FOO`:
 
 ```javascript
-const fooSecret = process.env.FOO;
+const fooValue = process.env.FOO_SECRET;
 ```
 
 ## Updating Secrets

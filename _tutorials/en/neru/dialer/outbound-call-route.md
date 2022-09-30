@@ -13,7 +13,7 @@ app.post('/call', async (req, res, next) => {
         const session = neru.createSession();
         const voice = new Voice(session);
 
-        const vonageNumber = JSON.parse(process.env.NERU_CONFIGURATIONS).contact;
+        const vonageNumber = { number: process.env.VONAGE_NUMBER, type: "phone"};
         const to = { type: 'phone', number: req.body.number };
     
         const response = await voice

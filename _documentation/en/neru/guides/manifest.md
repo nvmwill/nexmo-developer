@@ -75,17 +75,23 @@ The first item is the command to be run, followed by any flags or parameters
 
 > Note: You cannot use the voice capability and rtc capability at the same time.
 
-### Configurations
+### Environment
 
-`configurations` allows you to optionally pass information to your application's code as NeRu injects them for you. They will be available on the environment, so the above example will be available as:
+`environment` allows you to optionally pass information to your application's code as NeRu injects them for you. They will be available on the environment, so the above example will be available as:
 
 ```
-process.env.NERU_CONFIGURATIONS.contact;
+process.env.VONAGE_NUMBER;
 ```
 
-### Secrets
+#### Secrets
 
-`secrets` allows you to optionally expose secrets you have created with the CLI already to the instance. For more information on creating and managing secrets view the [NeRu secrets guide](/neru/guides/secrets).
+You can expose secrets you have created with the CLI already to the instance by adding them to the environment object as shown above. The above example will be available as:
+
+```
+process.env.API_KEY;
+```
+
+For more information on creating and managing secrets view the [NeRu secrets guide](/neru/guides/secrets).
 
 
 ## Debug
