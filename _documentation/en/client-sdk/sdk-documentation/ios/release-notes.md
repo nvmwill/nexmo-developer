@@ -6,6 +6,13 @@ navigation_weight: 0
 
 # Release Notes
 
+## 5.0.1  - 2022-09-29
+
+### Fixed
+
+- Socket handshake config cleared on logout
+
+
 ## 5.0.0  - 2022-09-01
 
 ### Added
