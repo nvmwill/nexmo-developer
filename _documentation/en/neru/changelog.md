@@ -13,6 +13,22 @@ meta_title: NeRu Changelog
 
 * Python SDK is available on [pypi](https://pypi.org/project/nerualpha/)
 
+### 3.3.1 - (2022-10-04)
+
+* Fixed:
+    * Issue in `bridge.toISOString()` that caused it to return a wrong date.
+
+### 3.3.0 - (2022-10-03)
+
+* Added:
+    * Response schemas to the SDK's public methods to support type checks.
+    * `neru.getGlobalSession` method.
+    * [Assets API](/neru/providers/assets) Provider
+
+* Changed:
+    * `neru.getGlobalState` now uses `neru.globalSession`.
+
+
 ### 3.2.0 - (2022-09-12)
 
 * Added:
