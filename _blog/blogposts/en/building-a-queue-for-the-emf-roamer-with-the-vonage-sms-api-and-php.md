@@ -5,8 +5,8 @@ description: Learn about the EMF Roamer, a quarter-scale wooden Tesla Cybertruck
 thumbnail: /content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/building-queue_roamer.png
 author: chris-stubbs
 published: true
-published_at: 2022-09-06T22:27:53.156Z
-updated_at: 2022-09-06T22:27:53.233Z
+published_at: 2022-10-06T22:27:53.156Z
+updated_at: 2022-10-06T22:27:53.233Z
 category: community
 tags:
   - PHP
