@@ -24,7 +24,7 @@ One of these wacky inventions was the EMF Roamer, a quarter-scale wooden Tesla C
 
 ![The Roamer, photographed at dusk with RGB underglow lighting.](/content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/52125273707_4ab982b7a7_c.jpg "The Roamer, photographed at dusk with RGB underglow lighting.")
 
-**The Roamer, photographed at dusk with RGB underglow lighting. Image credit [VicHarkness](https://www.flickr.com/photos/vicharkness/52125273707/in/album-72177720299576154/).**
+Image credit [VicHarkness](https://www.flickr.com/photos/vicharkness/52125273707/in/album-72177720299576154/).
 
 Just allowing people to drive it line of sight wasn’t good enough! Especially not in the world of the Internet of Things. Live video from a camera, along with the location on a map is streamed to the user while they have control of the roamer. 
 
@@ -36,7 +36,6 @@ This article will describe how to set up the required libraries and database, th
 
 ![Flowchart illustrating the queueing process (Start > Wait until at the front > Control until time is up > Leave](/content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/diagram.png "Flowchart illustrating the queueing process (Start > Wait until at the front > Control until time is up > Leave")
 
-**Flowchart illustrating the queueing process (Start > Wait until at the front > Control until time is up > Leave**
 
 ## Installation
 
@@ -72,7 +71,6 @@ Create a blank database using MySQL server with default settings and associate a
 
 ![Minimum required MySQL permissions are SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, INDEX.](/content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/database-specific.png "Minimum required MySQL permissions are SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, INDEX.")
 
-**Minimum required MySQL permissions are SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, INDEX.**
 
 Then run the setup script to create the required tables:
 
@@ -138,7 +136,6 @@ if (!isset($_SESSION["i"])){
 
 ![The form before joining the queue.](/content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/smsqueue.png "The form before joining the queue.")
 
-**The form before joining the queue.**
 
 If the user has posted the form, we add them to the queue:
 
@@ -184,7 +181,6 @@ else{//User is in the queue
 
 ![Waiting in the queue](/content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/smsqueue1.png "Waiting in the queue")
 
-**Waiting in the queue**
 
 ### Reaching the front
 
@@ -255,7 +251,6 @@ If you’d like to build upon this example further with some administrative tool
 
 ![The queue bouncer (queue admin tool)](/content/blog/building-a-queue-for-the-emf-roamer-with-the-vonage-sms-api-and-php/admin.png "The queue bouncer (queue admin tool)")
 
-**The queue bouncer (queue admin tool)**
 
 We hope to see the EMF Roamer again at EMF Camp in 2024!
 
