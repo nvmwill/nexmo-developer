@@ -40,7 +40,7 @@ Here is an example cURL request with the token:
 
 ```
 curl --location --request GET 'https://api-us.nexmo.com/v3/media/1b456509-974c-458b-aafa-45fc48a4d976' \
---header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NjUwNTEyNDQsImV4cCI6MTY2NTA3Mjg0NCwianRpIjoieTRrTmJ6QjNLNG4wIiwiYXBwbGljYXRpb25faWQiOiJhMzJhMmQ3MS02NmQwLTQ5ZTMtYWI4ZC01MTQxMzVhYzQ5YWUifQ.pYkzoxT8DY47-YymxhdTrizx7lEcmjzwng9AEpkqYFh22X3CZrKgK2bSNX9obv-X08f_EZMyiQ3elobckW8ivKeuUjdMHCTQr0e5goWUEmf4_4XItwtrmddXM9ufcy1PuyHzwC-MlPbLsiivGK8TUqKZVqSJzvGVfFv2yupQNIk-CtuhQ5F8CcD1OMPLVk-W-a_mrUZW2mwUTbhu680nuaG-ZZbeANgYE-bt7iDXMLLOSzLsNdTYg4SGGyc-Q6KNTFCpG6P9gODfgPPJsizlqebgWbLGVJKeMWgyCKNs13-VfmvSBW_7z552PkzNQ_qzhh0fh-CmfWdAmGxdHTxVEA'
+--header 'Authorization: Bearer '$JWT
 ```
 
 If the request is successful, then you'll see a 200 code and the media file. If it is unsuccessful, then you'll see an unauthorized response. 
