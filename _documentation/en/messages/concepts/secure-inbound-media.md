@@ -34,7 +34,7 @@ More information about applications is available [here](https://developer.vonage
 
 ## Accessing secured media
 
-When an end user sends a message with a media file, the business receives a callback with a URL to the media file. The media will require the JWT generated from the application to access the file if it has been secured.
+When an end user sends a message with a media file, the business receives a callback with a URL to the media file. Accessing the media will require a `GET` request to the URL with an `Authorization` header with a value set as a JWT generated using the Application ID and Private Key associated with the same Vonage application where the webhook which received the inbound message has been set up.
 
 Here is an example cURL request with the token:
 
