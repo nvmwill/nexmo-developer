@@ -130,3 +130,7 @@ current:
     email: 'Doru.Moise@vonage.com'
     role: 'Senior Product Manager'
     short-name: 'doru-moise'
+  - name: 'Curtis Chan' 
+    email: 'Curtis.Chan@vonage.com'
+    role: 'Data Analyst'
+    short-name: 'curtis-chan'
