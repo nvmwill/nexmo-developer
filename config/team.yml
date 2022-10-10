@@ -106,3 +106,7 @@ current:
     email: 'guillaume.faas@vonage.com'
     role: 'Senior .Net Developer Advocate'
     short-name: 'guillaume-faas'
+  - name: 'Rachel Sunderland'
+    email: 'Rachel.Sunderland@vonage.com'
+    role: 'Head of Community'
+    short-name: 'rachel-sunderland'
