@@ -17,7 +17,7 @@ source: _partials/client-sdk/messaging/chat-app-tutorial-note.md
 
 This guide will make use of the following concepts:
 
-- **Conversation Events** - `image` events that fire on a Conversation, after you are a Member
+- **Conversation Events** - `message` events that fire on a Conversation, after you are a Member
 
 ## Send an Image
 
@@ -29,7 +29,7 @@ source: _tutorials_tabbed_content/client-sdk/guides/messaging/send-images
 
 ## Receive an Image URL
 
-A `image` conversation event will be received when a member sends an image to a conversation:
+A `message` conversation event will be received when a member sends an image to a conversation:
 
 ```tabbed_content
 source: _tutorials_tabbed_content/client-sdk/guides/messaging/receive-image-urls

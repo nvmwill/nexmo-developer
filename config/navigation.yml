@@ -92,11 +92,9 @@ navigation_overrides:
         signed-webhooks:
           label: 'Beta'
         payments:
-          label: 'Dev Preview'        
     sip:
       concepts:
         programmable-sip:
-          label: 'Dev Preview'
   verify:
     svg: 'lock'
     svgColor: 'indigo'
@@ -120,9 +118,9 @@ navigation_overrides:
     setup:
       navigation_weight: 2
     configuration:
-      navigation_weight: 3  
+      navigation_weight: 3
     in-app-voice:
-      navigation_weight: 4 
+      navigation_weight: 4
     in-app-messaging:
       navigation_weight: 5
       label: 'Beta'
@@ -143,7 +141,6 @@ navigation_overrides:
   messages:
     svg: 'chat'
     svgColor: 'purple'
-    label: 'Beta'
     code-snippets:
       collapsible: false
   meetings:
@@ -166,6 +163,9 @@ navigation_overrides:
     label: 'Beta'
   vonage-business-cloud:
     svg: 'telephone'
+    svgColor: 'green'
+  ai-studio:
+    svg: 'group-8'
     svgColor: 'green'
   tools:
     svg: 'tool'

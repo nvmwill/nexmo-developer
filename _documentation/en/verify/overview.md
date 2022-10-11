@@ -2,6 +2,7 @@
 title: Overview
 meta_title: Enable 2FA with the Verify API
 description: The Verify API enables you to confirm that you can contact a user at a specific number.
+navigation_weight: 1
 ---
 
 # Verify API

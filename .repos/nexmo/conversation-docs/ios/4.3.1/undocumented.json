@@ -1,0 +1,54 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 11,
+      "symbol": "NXMLegTransferEvent",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 13,
+      "symbol": "NXMLegTransferEvent.conversationId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 14,
+      "symbol": "NXMLegTransferEvent.memberId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 15,
+      "symbol": "NXMLegTransferEvent.previousConversationId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 16,
+      "symbol": "NXMLegTransferEvent.previousMemberId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 17,
+      "symbol": "NXMLegTransferEvent.legId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios/NexmoClient/Internal/NexmoCore/Models/Events/Media/NXMLegTransferEvent.h",
+      "line": 18,
+      "symbol": "NXMLegTransferEvent.timestamp",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/nexmoclient-sdk-ios/nexmoclient-sdk-ios"
+}

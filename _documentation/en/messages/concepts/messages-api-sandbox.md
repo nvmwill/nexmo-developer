@@ -1,6 +1,6 @@
 ---
 title: Messages API Sandbox
-navigation_weight: 5
+navigation_weight: 9
 description: Understanding and utilizing the Messages API Sandbox.
 ---
 

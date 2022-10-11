@@ -4,7 +4,7 @@ products: voice/voice-api
 description: Build an automated phone system for users to input information with the keypad and hear a spoken response
 languages:
     - PHP
-navigation_weight: 3    
+navigation_weight: 5    
 ---
 
 # Interactive Voice Response
@@ -31,7 +31,7 @@ This tutorial is based on the [IVR](https://www.nexmo.com/use-cases/interactive-
 
 In order to work through this tutorial you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav).
+* A [Vonage account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 * The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and set up.
 * A publicly accessible PHP web server so that Vonage can make webhook requests to your app, or for local development we recommend [ngrok](https://ngrok.com). 
 * The [tutorial code](https://github.com/Nexmo/php-phone-menu), either clone the repository or download and extract the zip file to your machine.

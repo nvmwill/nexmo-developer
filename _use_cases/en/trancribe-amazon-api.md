@@ -4,7 +4,7 @@ products: voice/voice-api
 description: "This tutorial shows you how to use the Amazon Transcribe API to transcribe a phone conversation recorded with the Vonage Voice API."
 languages:
     - Node
-navigation_weight: 9    
+navigation_weight: 1    
 ---
 # Transcribe a Recorded Call with Amazon Transcribe
 
@@ -21,7 +21,7 @@ You need at least two personal phone numbers:
 
 If you have access to more than two numbers you can include them as participants in the conference call too. See [adding more callers](#adding-more-callers).
 
-You also need a Vonage account. [Sign up here](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you don't already have one.
+You also need a Vonage account. [Sign up here](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink) if you don't already have one.
 
 ## Install and configure Vonage CLI
 
@@ -30,7 +30,7 @@ This tutorial uses the [Vonage Command line tool](https://github.com/vonage/vona
 Run the following `npm` command at a terminal prompt to install the CLI tool:
 
 ```sh
-npm install -g @vonage/cli
+npm install --location=global @Vonage/cli
 ```
 
 Configure the CLI tool with your `VONAGE_API_KEY` and `VONAGE_API_SECRET`, which you will find in the Developer Dashboard:

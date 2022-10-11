@@ -24,7 +24,7 @@ Action | Description | Synchronous
 [stream](#stream) | Send audio files to a Conversation. | Yes, unless *bargeIn=true*
 [input](#input) | Collect digits or capture speech input from the person you are calling. | Yes
 [notify](#notify) | Send a request to your application to track progress through an NCCO | Yes
-[pay](#pay) [Developer Preview] | Ask the user for card details and process payment. See the [Guide](/voice/voice-api/guides/payments) for more details | Yes
+[pay](#pay) | Ask the user for card details and process payment. See the [Guide](/voice/voice-api/guides/payments) for more details | Yes
 
 > **Note**: [Connect an inbound call](/voice/voice-api/code-snippets/connect-an-inbound-call) provides an example of how to serve your NCCOs to Vonage after a Call or Conference is initiated.
 
@@ -203,6 +203,7 @@ You can use the following options to control a *talk* action:
 | `level` | The volume level that the speech is played. This can be any value between `-1` to `1` with `0` being the default.  | No |
 | `language` | The language ([BCP-47](https://tools.ietf.org/html/bcp47) format) for the message you are sending. Default: `en-US`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
 | `style` | The vocal style (vocal range, tessitura and timbre). Default: `0`. Possible values are listed in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#supported-languages). | No |
+| `premium` | Set to `true` to use the premium version of the specified style if available, otherwise the standard version will be used. The default value is `false`. You can find more information about Premium Voices in the [Text-To-Speech guide](/voice/voice-api/guides/text-to-speech#premium-voices). | No |
 
 ## Stream
 The `stream` action allows you to send an audio stream to a Conversation
@@ -444,6 +445,7 @@ Option | Description | Required
 
 ### Error Prompts
 Possible errors depend on prompt `type` (see above):
+
 Prompt Type | Error Type | Description 
 -- | -- | --
 `CardNumber` | `InvalidCardType` | The type of the card entered is not in the list of allowed card types

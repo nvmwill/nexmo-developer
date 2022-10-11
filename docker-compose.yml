@@ -7,7 +7,7 @@ services:
       - POSTGRES_USER=nexmo_developer
       - POSTGRES_DB=nexmo_developer_production
   web:
-    image: nexmodev/station:v0.1.6
+    image: nexmodev/station:v0.5.12
     volumes:
       - .:/docs
     ports:
@@ -16,3 +16,5 @@ services:
       - db
     environment:
       - POSTGRES_HOST=db
+      - CHANGELOGS_PATH=/docs/_changelogs
+      - BLOG_PATH=/docs/_blog

@@ -44,11 +44,11 @@ A JSON Web Token (JWT) is necessary to log in to your Vonage Application. The Cl
 
 ### Instantiate and log in the NexmoClient
 
-No arguments are necessary to instantiate a new `NexmoClient`, but you will need to pass your JWT as the argument to `login()`.
+No arguments are necessary to instantiate a new `NexmoClient`, but you will need to pass your JWT as the argument to `createSession()`.
 
 ```javascript
 let nexmo = new NexmoClient()
-  .login(jwt)
+  .createSession(jwt)
   .then(app => console.log('Logged in to app', app))
   .catch(err => console.log(err));
 ```

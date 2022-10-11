@@ -6,6 +6,64 @@ navigation_weight: 0
 
 # Release Notes
 
+## 4.1.1 - May 25, 2022
+
+### Fixed 
+
+- Fix `NexmoMessage` serialization
+- Fix error handling within `NexmoClient.getConversation()` when not a member.
+
+## 4.1.0 - May 11, 2022
+
+### Added
+
+- Support for `call:transfer` within `NexmoCall`
+- Added `NexmoLegTransferEvent` containing details of previous and current conversation when a call is transferred
+- Added `CallEventListener` to receive `NexmoLegTransferEvent` with new members when a call is transferred to a new conversation.
+
+```java
+   NexmoCallEventListener callEventListener = new NexmoCallEventListener() {
+        @Override
+        public void onLegTransfer(NexmoLegTransferEvent event, NexmoMember member) {
+            Log.d(TAG, "Call Transferred");
+        }
+   };
+```
+
+- Expose `pushNotificationTTL` at the `NexmoClient.Builder()` level to set registered device Push TTL
+- New public events `NexmoSubmittedEvent`, `NexmoRejectedEvent` and `NexmoUndeliverableEvent` for messages states.
+- New Message state listeners added to `NexmoMessageEventListener` interface.
+
+```java
+   NexmoCallEventListener messageEventListener = new NexmoMessageEventListener() {
+        @Override
+        public void onSubmittedReceipt(@NonNull NexmoSubmittedEvent event) {
+            Log.d("onSubmittedReceipt", "Got [" + event + "] from:" + event.getFromMember());
+        }
+        @Override
+        public void onRejectedReceipt(@NonNull NexmoRejectedEvent event) {
+            Log.d("onSubmittedReceipt", "Got [" + event + "] from:" + event.getFromMember());
+        }
+        @Override
+        public void onUndeliverableReceipt(@NonNull NexmoUndeliverableEvent event) {
+            Log.d("onSubmittedReceipt", "Got [" + event + "] from:" + event.getFromMember());
+        }
+   };
+```
+
+## 4.0.4 - Apr 14, 2022
+
+### Fixed
+
+- Changed timestamp default from local timezone to UTC
+
+## 4.0.3 - Apr 4, 2022
+
+### Fixed
+
+- Added check to ensure user logged in during setup of prewarm outbound call.
+- Changed timestamp default to UTC without time zone.
+
 ## 4.0.2 - Mar 9, 2022
 
 ### Enhancements

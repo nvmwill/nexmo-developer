@@ -21,14 +21,14 @@ If you wish to get started and experience using the SDK without any implementati
 
 Make sure you have the following:
 
-* A Vonage account - [sign up](https://dashboard.nexmo.com)
+* A Vonage account - [sign up](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 * [Node.JS](https://nodejs.org/en/download/) and NPM installed
 * Install the Vonage CLI.
 
 To install the Vonage CLI, run the following command in a terminal:
 
 ```bash
-npm install -g @vonage/cli @vonage/cli-plugin-conversations
+npm install --location=global @Vonage/cli-plugin-conversations
 ```
 
 Set up the Vonage CLI to use your Vonage API Key and API Secret. You can get these from the [settings page](https://dashboard.nexmo.com/settings) in the Vonage Dashboard.

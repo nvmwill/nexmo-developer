@@ -9,7 +9,7 @@ client:
   to_line: 16
 code:
   source: .repos/vonage/vonage-python-code-snippets/sms/send-an-sms.py
-  from_line: 18
+  from_line: 17
   to_line: 29
 file_name: send-an-sms.py
 run_command: "python send-an-sms.py"

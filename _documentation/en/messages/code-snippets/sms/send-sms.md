@@ -22,10 +22,14 @@ JWT Auth | [application-level webhook](https://dashboard.nexmo.com/applications)
 
 ## Example
 
-Ensure the following variables are set to your required values using any convenient method:
+Find the description for all variables used in each code snippet below:
 
 ```snippet_variables
 - VONAGE_APPLICATION_ID
+- VONAGE_APPLICATION_PRIVATE_KEY_PATH
+- VONAGE_PRIVATE_KEY_PATH
+- VONAGE_FROM_NUMBER
+- VONAGE_BRAND_NAME
 - FROM_NUMBER.SMS
 - TO_NUMBER.SMS
 ```

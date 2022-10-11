@@ -4,7 +4,7 @@ products: voice/voice-api
 description: In this tutorial, you will learn how to contact a list of people by phone, convey a message, and see who confirmed that they had received the message. These voice-based critical alerts are more persistent than a text message, making your message more likely to be noticed. Additionally, with the recipient confirmation, you can be sure that your message made it through.
 languages:
     - PHP
-navigation_weight: 1    
+navigation_weight: 9    
 ---
 
 # Broadcast Voice-based Critical Alerts
@@ -17,7 +17,7 @@ In this tutorial, you will learn how to contact a list of people by phone, conve
 
 In order to work through this tutorial you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
+* A [Vonage account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 * [Composer](http://getcomposer.org/) to install the [Vonage PHP Server SDK](https://github.com/nexmo/nexmo-php)
 * A publicly accessible web server so Vonage can make webhook requests to your app, or [ngrok](https://ngrok.com/) to be able to access your local development platform from the outside world.
 * The tutorial code from <https://github.com/Nexmo/php-voice-alerts-tutorial> - either clone the project or download the zip file.

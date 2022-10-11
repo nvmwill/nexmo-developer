@@ -181,8 +181,6 @@ steps:
 
 We need to explicitly set the token so that we can do things that the default token, `secrets.GITHUB_TOKEN`, doesn't have permissions for. In our case, we'll want to push a change to main without a code review, so we need a token with admin privileges. We set this token in Settings -> Secrets. 
 
-TODO: no picture? 
-
 ### Raise package versions
 
 This step differs from project to project.  The idea is to raise the version of the package you intend to publish to the packages repository. We'll do this by going over all of the libraries that have changed in this branch, and raise their NPM version:
@@ -259,7 +257,7 @@ Lastly, we build our app and deploy it:
     CLEAN: true # Automatically remove deleted files from the deploy branch
 ```
 
-TODO: You can find the complete yaml code [here](https://gist.github.com/YonatanKra/36d2d5f68b750d6bf0edc5cfe94be277#file-cd-yml)
+You can find the complete yaml code [here](https://gist.github.com/YonatanKra/36d2d5f68b750d6bf0edc5cfe94be277#file-cd-yml)
 
 
 ## Optimizing the CI/CD Flow 

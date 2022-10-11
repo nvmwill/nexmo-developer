@@ -4,7 +4,7 @@ products: voice/voice-api
 description: "Phone numbers are everywhere in advertising: on billboards, in TV ads, on websites, in newspapers. Often these numbers all redirect to the same call center, where an agent needs to inquire why the person is calling, and where they saw the advert. Call Whispers make this so much simpler."
 languages:
     - Node
-navigation_weight: 8
+navigation_weight: 3
 ---
 
 # Add a Call whisper to an inbound call
@@ -43,7 +43,7 @@ Before we grab and run the code, there are a few things we need to do first.
 
 ### Sign up for Vonage
 
-[Sign up for a Vonage API account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav) if you don't have one already.
+[Sign up for a Vonage API account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink) if you don't have one already.
 
 ### Set up the CLI
 

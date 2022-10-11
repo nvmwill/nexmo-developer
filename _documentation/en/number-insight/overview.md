@@ -44,6 +44,7 @@ Original Carrier (network code, name, country, network type) | ❌ | ✅ | ✅
 Porting Information | ❌ | ✅ | ✅
 Validity* | ❌ | ❌ | ✅
 Reachability* | ❌ | ❌ | ✅
+Real-Time Data | ❌ | ❌ | ✅
 Roaming status* | ❌ | ❌ | ✅
 Roaming carrier & country* | ❌ | ❌ | ✅
 CNAM (add-on) | ❌ | ✅ | ✅
@@ -60,13 +61,13 @@ This example shows you how to use the [Vonage CLI](/tools) to access the Number 
 
 ### Before you begin:
 
-* Sign up for a [Vonage API account](https://dashboard.nexmo.com/signup)
+* Sign up for a [Vonage API account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 * Install [Node.JS](https://nodejs.org/en/download/)
 
 ### Install and set up the Vonage CLI
 
 ```
-$ npm install -g @vonage/cli
+$ npm install --location=global @Vonage/cli
 ```
 
 > Note: Depending on your user permissions, you might need to prefix the above command with `sudo`.

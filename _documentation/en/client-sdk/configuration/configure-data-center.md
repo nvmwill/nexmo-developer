@@ -23,8 +23,8 @@ Data Center | Location
 `WDC` | Washington DC
 `DAL` | Dallas
 `LON` | London
-`SNG` | Singapore
 `AMS` | Amsterdam
+`SNG` | Singapore
 
 ## URLs
 
@@ -45,8 +45,8 @@ Data Center | URL
 `WDC` | `https://api-us-1.nexmo.com`
 `DAL` | `https://api-us-2.nexmo.com`
 `LON` | `https://api-eu-1.nexmo.com`
-`SNG` | `https://api-sg-1.nexmo.com`
 `AMS` | `https://api-eu-2.nexmo.com`
+`SNG` | `https://api-sg-1.nexmo.com`
 
 ### `url`
 
@@ -59,8 +59,8 @@ Data Center | URL
 `WDC` | `wss://ws-us-1.nexmo.com`
 `DAL` | `wss://ws-us-2.nexmo.com`
 `LON` | `wss://ws-eu-1.nexmo.com`
-`SNG` | `wss://ws-sg-1.nexmo.com`
 `AMS` | `wss://ws-eu-2.nexmo.com`
+`SNG` | `wss://ws-sg-1.nexmo.com`
 
 ### `ips_url`
 
@@ -73,12 +73,14 @@ Data Center | URL
 `WDC` | `https://api-us-1.nexmo.com/v1/image`
 `DAL` | `https://api-us-2.nexmo.com/v1/image`
 `LON` | `https://api-eu-1.nexmo.com/v1/image`
-`SNG` | `https://api-sg-1.nexmo.com/v1/image`
 `AMS` | `https://api-eu-2.nexmo.com/v1/image`
+`SNG` | `https://api-sg-1.nexmo.com/v1/image`
 
 ## Configuration
 
 You can specify your preferred URLs when you create the Client SDK `NexmoClient` object:
+
+> **Note**: The iOS SDK expects a trailing `/` as shown in the code snippets below.
 
 ```tabbed_content
 source: '/_examples/client-sdk/dc-config'

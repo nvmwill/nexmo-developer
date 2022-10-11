@@ -6,6 +6,60 @@ navigation_weight: 0
 
 # Release Notes
 
+## 5.0.1  - 2022-09-29
+
+### Fixed
+
+- Socket handshake config cleared on logout
+
+
+## 5.0.0  - 2022-09-01
+
+### Added
+
+- Support for XCFrameworks for M1
+
+## 4.3.2  - 2022-07-01
+
+### Fix
+
+- Fix transition from mute to unmute on media object
+- Fix event parsing for `NXMCustomEvent.customType`
+
+## 4.3.1  - 2022-05-09
+
+### Fix
+
+- Fix `[NXMConversation sendMessage:message completionHandler:handler]` for `NXMMessageTypeImage`, `NXMMessageTypeAudio`, `NXMMessageTypeVideo` and `NXMMessageTypeFile` message types.
+
+
+## 4.3.0  - 2022-04-28
+
+### Added
+
+- `pushNotificationTTL` property added to `NXMClientConfig` to set TTL for push notifications.
+- `[NXMConversation sendMarkDeliveredMessage:message completionHandler:handler]` method added to send delivery receipts.
+- `[NXMConversation sendMarkSeenMessage]` now supports seen status for all messages.
+- `NXMMessageStatusTypeSubmitted`, `NXMMessageStatusTypeRejected`, `NXMMessageStatusTypeUndeliverable` states added to `NXMMessageStatusEvent`
+
+
+## 4.2.1  - 2022-04-06
+
+### Fixed
+
+- `[NXMClient uploadAttachmentWithType:name:data:completionHandler:]` method to upload attachments returns with image data
+
+## 4.2.0  - 2022-03-24
+
+### Added
+
+- Support for `call:transfer` within `NXMCall`
+- `[NXMCallDelegate call:didTransfer:event:]` to receive new call transfer event when call transferred to a new conversation.
+
+### Enhancements
+
+- WebRTC dependency upgraded to version `84.0.22`.
+
 ## 4.1.0  - 2022-02-25
 
 ### Added

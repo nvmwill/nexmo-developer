@@ -9,15 +9,17 @@ navigation_weight: 1
 
 The Messages API allows you to send and in some cases receive messages over SMS, MMS, Facebook Messenger, Viber, and WhatsApp. Further channels may be supported in the future.
 
+> Note: Major US carriers have announced their requirements for a new standard for application-to-person (A2P) messaging in the USA, which applies to all messaging over 10-digit geographic phone numbers, also known as 10 DLC. If you are or are planning to send SMS/MMS traffic from a +1 Country Code 10 Digit Long Code into US networks, you will need to register a brand and campaign in order to get approval for sending messages. See the [10 DLC documentation](10-dlc/overview.md) for details.
+
 The following diagram illustrates how the Vonage Messages API enables you to send messages via multiple channels from a single endpoint:
 
 <img src="/images/messages-overview.png" alt="Messages and Dispatch Overview" style="width: 75%;">
 
 ## Contents
 
-* [Beta](#beta)
 * [Versions](#versions)
 * [Supported features](#supported-features)
+* [Authentication](#authentication)
 * [External Accounts API](#external-accounts-api)
 * [Getting started](#getting-started)
 * [Concepts](#concepts)
@@ -26,20 +28,12 @@ The following diagram illustrates how the Vonage Messages API enables you to sen
 * [Use Cases](#use-cases)
 * [Reference](#reference)
 
-## Beta
-
-This API is currently in Beta.
-
-Vonage always welcomes your feedback. Your suggestions help us improve the product. If you do need help, please email [support@vonage.com](mailto:support@vonage.com) and include the Messages API in the subject line. Please note that during the Beta period, support times are limited to Monday to Friday.
-
-During Beta Vonage will expand the capabilities of the API.
-
 ## Versions
 
 There are currently two versions of the API, v0.1 and v1. Each version has its own API endpoint:
 
-- **v0.1**: `https://api.nexmo.com/v0.1/messages`
 - **v1**: `https://api.nexmo.com/v1/messages`
+- **v0.1**: `https://api.nexmo.com/v0.1/messages`
 
 One of the primary differences between the two versions is that v1 provides a much simpler and flatter structure for the JSON structure used in the request and response data. Check the relevant [API specification](/api/messages-olympus) for details of the required structure.
 
@@ -47,7 +41,7 @@ One of the primary differences between the two versions is that v1 provides a mu
 
 As well as the difference in JSON structure, v1 supports some [additional features](#additional-v1-features).
 
-If you are currently using v0.1 of the API, and are intending to move to v1, check our [Migration Guide](/messages/concepts/migration-guide).
+We recommend using v1 of the API. If you are using v0.1 of the API, and are intending to move to v1, check our [Migration Guide](/messages/concepts/migration-guide).
 
 ## Supported features
 
@@ -56,16 +50,16 @@ The following features are supported in both v0.1 and v1 versions of the API:
 Channel | Outbound Text | Outbound Image | Outbound Audio | Outbound Video | Outbound File | Outbound Template
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
-MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
+MMS | ✅ | ✅ | ✅ | ✅ | ✅ | n/a
+Viber Business Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
 Channel | Inbound Text | Inbound Image | Inbound Audio | Inbound Video | Inbound File | Inbound Location
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
-MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
-Viber Service Messages | ✅ | n/a | n/a | n/a | n/a | n/a
+MMS | ✅ | ✅ | ✅ | ✅ | ✅ | n/a
+Viber Business Messages | ✅ | ✅ | n/a | n/a | n/a | n/a
 Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
@@ -75,7 +69,7 @@ Channel | Outbound Button | Outbound Location | Outbound Contact
 :--- | :---: | :---: | :---:
 SMS | n/a | n/a | n/a
 MMS | n/a | n/a | n/a
-Viber Service Messages | ✅ | n/a | n/a
+Viber Business Messages | ✅ | n/a | n/a
 Facebook Messenger | ✅ | n/a | n/a
 WhatsApp | ✅ | ✅ | ✅
 
@@ -84,6 +78,12 @@ WhatsApp | ✅ | ✅ | ✅
 * ✅ = Supported.
 * ❌ = Supported by the channel, but not by Vonage.
 * n/a = Not supported by the channel.
+
+**Notes:**
+
+1. MMS text supported as an optional caption in other message types (e.g. Image, Audio, Video).
+2. MMS Video and Audio supported for 10DLC (10 Digit Long Codes) and TFN (Toll-Free Numbers).
+3. MMS Files support `.vcf` (vCard) files only. Files supported on 10DLC and SC (Short Codes) numbers.
 
 ### Additional v1 Features
 
@@ -97,9 +97,20 @@ As well as all of the existing features from v0.1, there are some additional fea
 
 - **Provider messages**: in v1 of the Messages API, the callbacks to the inbound messages webhooks can provide [error messages from WhatsApp](https://developers.facebook.com/docs/whatsapp/api/webhooks/components#errors-object) under a new `provider_message` field.
 
+## Authentication
+
+The Messages API supports *either* Basic authentication *or* JWT (JSON Web Token) authentication, but there are some important differences between the two to be aware of:
+
+- Basic authentication uses an encoded [API key and secret](https://developer.vonage.com/getting-started/concepts/authentication#api-key-and-secret), and authenticates at the [account](https://developer.vonage.com/account/overview) level.
+- JWT authentication uses a [JSON Web Token](https://developer.vonage.com/getting-started/concepts/authentication#json-web-tokens) generated using a private key and application id. JWTs support advanced features such as ACLs and authenticate at the [application](https://developer.vonage.com/application/overview) level, meaning that you can access your Vonage application's settings such as application [webhooks](https://developer.vonage.com/application/overview#webhooks) and Secure Inbound Media.
+
+We recommend that you use **JWT authentication** in production for most use-cases. Basic authentication may suffice when trying out the API, such as when using the Messages Sandbox, or for some basic use-cases (e.g. when webhooks are not required).
+
+If you are using our [Server SDKs](https://developer.vonage.com/tools) to interact with the Messages API, these can automatically create JWTs for you.
+
 ## External Accounts API
 
-The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Service Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
+The [External Accounts API](/api/external-accounts) is used to manage your accounts for Viber Business Messages, Facebook Messenger and WhatsApp when using those channels with the Messages and Dispatch APIs.
 
 ## Getting started
 

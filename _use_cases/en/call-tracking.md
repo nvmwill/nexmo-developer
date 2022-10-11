@@ -4,7 +4,7 @@ products: voice/voice-api
 description: Keep track of which campaigns are working well by using different numbers for each one and tracking the incoming calls. This tutorial shows you how to handle incoming calls, connect them to another number, and track the phone numbers that called each of your Vonage numbers.
 languages:
     - Node
-navigation_weight: 7    
+navigation_weight: 2    
 ---
 
 # Track Usage Across Your Vonage Numbers
@@ -17,7 +17,7 @@ Today's example uses node.js and all the code is [available on GitHub](https://g
 
 In order to work through this tutorial you need:
 
-* A [Vonage account](https://dashboard.nexmo.com/sign-up?icid=tryitfree_api-developer-adp_nexmodashbdfreetrialsignup_nav)
+* A [Vonage account](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink)
 * The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and set up.
 * A publicly accessible web server so Vonage can make webhook requests to your app. If you're developing locally we recommend [ngrok](https://ngrok.com/).
 
