@@ -38,7 +38,7 @@ Basically, I'm getting familiar with is [F#](https://learn.microsoft.com/en-us/d
 What a coincidence...
 
 # A need to share
-One of the most significant milestones in my career is hearing the [Software Craftsmanship](https://manifesto.softwarecraftsmanship.org/) mindset. It revealed itself to be the perfect match for what I consider meaningful in terms of mindset.
+One of the most significant milestones in my career is hearing about [Software Craftsmanship](https://manifesto.softwarecraftsmanship.org/). It revealed itself to be the perfect match for what I consider meaningful in terms of mindset.
 
 While it encourages us to "build the thing right", we need to remember that building software is not just about building software and being a Craftsman is as much about your soft skills as your technical skills. Indeed, quality is important, and you have to be proud of your work. But so is your own (continuous) improvement, the will to share with others, or practicing [egoless programming](https://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/).
 
