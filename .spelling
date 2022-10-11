@@ -743,3 +743,5 @@ vCard
 UTF-8
 salesforce
 base64
+refresh_token
+offline_access
