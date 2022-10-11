@@ -1,7 +1,7 @@
 ---
 title: Recording
 description: Recording audio input from a caller or recording the conversation between two callers.
-navigation_weight: 5
+navigation_weight: 6
 ---
 
 # Recording audio

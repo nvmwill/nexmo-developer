@@ -1,7 +1,7 @@
 ---
 title: Customizing Spoken Text
 description: Use Speech Synthesis Markup Language (SSML) to control how text-to-speech is read out
-navigation_weight: 4
+navigation_weight: 6
 ---
 
 # Customizing Spoken Text
