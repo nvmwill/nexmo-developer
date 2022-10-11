@@ -8,5 +8,5 @@ menu_weight: 1
 const session = neru.createSession();
 const assets = new Assets(session);
 
-
+const file = await assets.getRemoteFile('/imgs/image.png').execute();
 ```

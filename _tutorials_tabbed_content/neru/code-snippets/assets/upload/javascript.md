@@ -8,5 +8,5 @@ menu_weight: 1
 const session = neru.createSession();
 const assets = new Assets(session);
 
-
+await assets.uploadFiles([filePath], '/imgs').execute();
 ```

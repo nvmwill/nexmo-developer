@@ -8,4 +8,5 @@ menu_weight: 1
 session = neru.createSession()
 assets = Assets(session)
 
+file = await assets.getRemoteFile('/imgs/image.png').execute();
 ```

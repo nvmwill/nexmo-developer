@@ -8,5 +8,5 @@ menu_weight: 1
 const session = neru.createSession();
 const assets = new Assets(session);
 
-
+const fileData = await assets.generateLink('/imgs/image.png', '5m').execute();
 ```
