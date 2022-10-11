@@ -7,7 +7,11 @@ navigation_weight: 0
 
 # How to Configure Your Dashboard Account
 
-1. Link social channels you want to use by going to the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels) of the [Dashboard](https://dashboard.nexmo.com).
+Configuring your Dashboard Account to use the Bulk API requires the following steps:
+
+1. [Messages API Setting](#messages-api-setting): Ensure your SMS settings are using the correct API.
+2. [Create an Application](#create-an-application): Create a Vonage application using either the Vonage CLI or the dashboard.
+3. [Setup Your Integrations](#setup-your-integrations): Connect the accounts you wish to use with the Bulk API.
 
 ## Messages API Setting
 
@@ -22,7 +26,7 @@ There are two alternative methods for creating a Messages and Dispatch applicati
 1. Using the Vonage CLI
 2. Using the Dashboard
 
-Each of these methods is described in the following sections. When you create your application you will be able to enter your inbound and status URLs; these should be:
+Each of these methods is described in the following sections. When you create your application you will be able to enter your inbound and status URLs. These should be:
 
 * INBOUND URL: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/recipients/responses?application_id=yourapplicationID``
 * STATUS URL: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/actions/status?application_id=yourapplicationID``
@@ -35,7 +39,7 @@ To create your application using the Vonage CLI, enter the following command int
 vonage apps:create "My Messages App" --messages_inbound_url=https://api-eu.vonage.com/v0.1/bulk/webhooks/recipients/responses?application_id=yourapplicationID --messages_status_url=https://api-eu.vonage.com/v0.1/bulk/webhooks/actions/status?application_id=yourapplicationID
 ```
 
-This creates a Vonage API application with a messages [capability](/application/overview#capabilities), with the webhook URLs configured as specified, and generate a private key file `my_messages_app.key` and creates or updates the `vonage_app.json` file.
+This creates a Vonage API application with a messages [capability](/application/overview#capabilities), with the webhook URLs configured as specified, generates a private key file `my_messages_app.key`, and creates or updates the `vonage_app.json` file.
 
 ### How to create a Messages and Dispatch application using the Dashboard
 
@@ -61,7 +65,7 @@ You have now created your application. Next, you will need to link any numbers a
 
 > **NOTE:** Before testing your application ensure that your webhooks are configured and your webhook server is running.
 
-## Setup your Integration
+## Setup your Integrations
 
 Setting up an integration requires:
 
@@ -125,7 +129,7 @@ Once you have your Integration set up it will appear in the list of 'Existing in
     * Contact Email
     * Tick 'Enable OAuth Settings'
     * Callback URL - enter `https://api-eu.vonage.com/oauth/redirect`
-    * Selected OAuth Scopes - Add 'Full access (full)' and 'Perform requests at any time (refresh_token, offline_access)
+    * Selected OAuth Scopes - Add 'Full access (full)' and 'Perform requests at any time (refresh_token, offline_access)'
 5. Click 'Save' at the top of the form when complete.
 6. Once created, select the 'Manage Consumer Details' button under 'API (Enable OAuth Settings)'
 7. Make note of the Consumer Key and Consumer Secret; these will be used to link Salesforce to your Vonage application.
