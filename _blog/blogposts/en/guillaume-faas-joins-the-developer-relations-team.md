@@ -1,11 +1,14 @@
 ---
-title: Guillaume Faas joins the Developer Relations team
+title: Guillaume Faas Joins the Developer Relations Team
 description: Meet Guillaume Faas, the new Senior .Net Developer Advocate at Vonage!
+thumbnail: /content/blog/guillaume-faas-joins-the-developer-relations-team/guillaume-faas.png
 author: guillaume-faas
 published: true
+published_at: 2022-10-11T09:12:20.831Z
+updated_at: 2022-10-11T09:07:51.509Z
 category: team
 tags:
-- careers
+  - careers
 comments: true
 spotlight: false
 redirect: ""
