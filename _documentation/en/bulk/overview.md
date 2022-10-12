@@ -15,8 +15,8 @@ By using the Bulk API, you can create meaningful campaigns that reach customers 
 ## Contents
 
 * [Concepts](#concepts--terminology)
-* [Code Snippets](#code-snippets)
 * [Guides](#guides)
+* [Code Snippets](#code-snippets)
 * [Reference](#reference)
 
 ## Concepts / Terminology

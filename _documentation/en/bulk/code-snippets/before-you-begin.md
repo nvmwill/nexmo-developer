@@ -24,11 +24,11 @@ In order to use the Bulk API you will need:
 * An account set up in the [Vonage Dashboard](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink).
 * An API Key and Secret, which can be found on the [dashboard](https://dashboard.nexmo.com/).
 * A [JWT](https://developer.vonage.com/getting-started/concepts/authentication#json-web-tokens).
-* An application
+* An application [configured for the Bulk API](/bulk/guides/configure-dashboard-account).
 
 ### Channel Setup
 
-The Bulk- API is compatible with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview). You will need to have configurations set for the channels you want to use:
+The Bulk API is compatible with any channel in the [Vonage Messages API](https://developer.vonage.com/messages/overview). You will need to have configurations set for the channels you want to use:
 
 Channel | Requirements
 -- | --
@@ -38,4 +38,4 @@ Viber Business Messages | Contact [Sales](https://www.vonage.com/communications-
 WhatsApp | If you want to use WhatsApp you will need a WhatsApp number linked to your account. This can be done via Embedded sign up on the dashboard [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), or via the manual onboarding process.
 Facebook Messenger | If you wish to use Facebook Messenger, you will need a Facebook Messenger account set up and you will need your messenger ID. Once you link your Facebook account and select your business page in the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), you will see your Facebook ID listed.
 
-> For more detailed instructions, see the guide on [How to Configure Your Dashboard Account](/bulk/guides/configure-dashboard-account).
+> For more detailed instructions and to ensure your account is configured correctly, see the guide on [How to Configure Your Dashboard Account](/bulk/guides/configure-dashboard-account).
