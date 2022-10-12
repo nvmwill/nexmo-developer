@@ -1,11 +1,11 @@
 ---
 title: 'Q3 2022: Third Quarter in Review'
-description:
-thumbnail:
+description: Product updates 
+thumbnail: /content/blog/q3-2022-third-quarter-in-review/quaterly-releases.png
 author: edmond-mensah
 published: true
-published_at:
-updated_at:
+published_at: 2022-10-11T09:12:20.831Z
+updated_at: 2022-10-11T09:12:20.831Z
 category: announcement
 tags:
   - video-api
@@ -19,53 +19,59 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+<!-- Force all links to open in a new tab -->
+<base target="_blank">
+
+It's hard for me to believe we're already 10 months in! As we approach the end of the year, it feels like the year has flown by.
+
+Every month at Vonage counts, and the last three have been no exception. Here's what we've been up to.
 
 ### Enhanced Customer Engagement
- 
-**AI Studio**
 
-https://developer.vonage.com/blog/22/08/02/choose-your-own-adventure-with-vonage-ai-studio 
+**Vonage AI Studio**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Imagine if you could improve customer satisfaction by offering better conversation-based self-service to multiple customers at the same time. That's what the Vonage AI studio does.
 
-**Vonage AI Assistant updates** 
+The best part is you need little to no coding skills to get started. You can focus on designing the best conversation flows to engage your customers with the drag-and-drop interface. It is also possible to use AI Studio through different channels such as voice (telephone), WhatsApp, SMS, and any other channels by using the HTTP agent.
 
-https://developer.vonage.com/blog/22/09/01/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio
+Our Ruby Developer Advocate [Karl Lingiah](https://developer.vonage.com/blog/authors/karl-lingiah) authored [a piece](https://developer.vonage.com/blog/22/08/02/choose-your-own-adventure-with-vonage-ai-studio) about using AI studio with voice as a channel (phone). **Hint:** You might want to read until the end if you are a fan of 'choose your own adventure' books.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+If you are interested in using AI studio with WhatsApp as a channel  Sejal D'souza covers this in her [crash course](https://developer.vonage.com/blog/22/09/01/crash-course-create-virtual-agents-for-whatsapp-with-vonage-ai-studio).
 
-**Meetings API champion** 
 
-https://developer.vonage.com/blog/22/08/11/announcing-the-video-champions-program  
+Also, you no longer have to wait! With Vonage AI Studio out of Developer Preview and generally available, you can [sign up](https://studio.ai.vonage.com/) and get started right away.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+**Meetings API Champions Program** 
 
-###  In the world of SDKs…
- 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Continuing on the topic of improving customer engagement, video is one of the most effective ways to connect deeply with your customers, whether through product demos, conversations, or supporting them.
 
-**REST To SDK**
+This is why we are happy to announce the Meetings API Champion Program. We're giving qualifying accounts three months of free use of our Meetings API. Check out the [official announcement](https://developer.vonage.com/blog/22/08/11/announcing-the-video-champions-program) to learn more about the program.
 
-https://developer.vonage.com/blog/22/08/04/how-an-sdk-can-add-value-to-rest-apis 
+### In the world of SDKs…
 
-**Messages API To SDK**
+**Messages API**
 
-https://developer.vonage.com/blog/22/07/05/the-vonage-messages-api-is-now-in-our-server-sdks
+SDKs, what will we do without them? I will tell you, we will be wasting time writing wrapper code. This is why our Developer Relations Tooling Team provides SDKs for our APIs, and the newest API to be added to our SDKs is the [Messages API](https://developer.vonage.com/blog/22/07/05/the-vonage-messages-api-is-now-in-our-server-sdks).
 
-**Python SDK v3**
+Speaking of the benefits of going beyond APIs and providing customers with SDKs, [Sina Madani](https://developer.vonage.com/blog/authors/sina-madani) our Java Developer Advocate wrote [a post](https://developer.vonage.com/blog/22/08/04/how-an-sdk-can-add-value-to-rest-apis) on the subject using the [Messages API](https://developer.vonage.com/messages/overview) as an example.
 
-https://developer.vonage.com/blog/22/08/08/announcing-python-sdk-version-v3 
+**SDK Releases**
 
-**Java SDK v7**
+It's time to get rid of the old and bring in the new. We released major Ruby and Java SDK updates, including improvements, fixes, and deprecations.
 
-https://developer.vonage.com/blog/22/08/22/announcing-the-vonage-java-sdk-v7-0-0
 
-**Client SDK demo**
+You can find details on what's changed in the [Ruby v3](https://developer.vonage.com/blog/22/08/08/announcing-python-sdk-version-v3) and [Java v7](https://developer.vonage.com/blog/22/08/22/announcing-the-vonage-java-sdk-v7-0-0) release posts.
 
-https://developer.vonage.com/blog/22/08/25/introxxducing-the-vonage-client-sdk-v-app-demo-projects
+**The V-app**
+
+Do you know what is better than SDKs? Demo apps that show you SDKs in action. Let me introduce you to the [V-app](https://github.com/nexmo-community/clientsdk-the-v-app) a multi-platform (iOS, Android, Web) demo app that demonstrates the implementation of voice and messaging funtionalities.
+
+Here is [a post](https://developer.vonage.com/blog/22/08/25/introducing-the-vonage-client-sdk-v-app-demo-projects
+) to walk you through the codebase and get you started.
+
+### Let's Connect!
+In the last three months, a lot has happened. We have a lot more in the works and will share them with you in the coming months.
+
+In the mean time we would love to hear from you.
+Catch us on [Slack] (https://developer.vonage.com/community/slack), [Twitter] (https://twitter.com/VonageDev), or at [upcoming events] (https://developer.vonage.com/community).
