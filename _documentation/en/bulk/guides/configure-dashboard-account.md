@@ -11,7 +11,8 @@ Configuring your Dashboard Account to use the Bulk API requires the following st
 
 1. [Messages API Setting](#messages-api-setting): Ensure your SMS settings are using the correct API.
 2. [Create an Application](#create-an-application): Create a Vonage application using either the Vonage CLI or the dashboard.
-3. [Setup Your Integrations](#setup-your-integrations): Connect the accounts you wish to use with the Bulk API.
+3. [Connect Social Channels](#connect-social-channels): Connect the social channels you want to use with the Bulk API.
+4. [Setup Your Integrations](#setup-your-integrations): Connect the accounts, for example Salesforce, that you want to use with the Bulk API.
 
 ## Messages API Setting
 
@@ -26,10 +27,7 @@ There are two alternative methods for creating a Messages and Dispatch applicati
 1. Using the Vonage CLI
 2. Using the Dashboard
 
-Each of these methods is described in the following sections. When you create your application you will be able to enter your inbound and status URLs. These should be:
-
-* INBOUND URL: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/recipients/responses?application_id=yourapplicationID``
-* STATUS URL: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/actions/status?application_id=yourapplicationID``
+Each of these methods is described in the following sections.
 
 ### How to create a Messages and Dispatch application using the Vonage CLI
 
@@ -39,7 +37,7 @@ To create your application using the Vonage CLI, enter the following command int
 vonage apps:create "My Messages App" --messages_inbound_url=https://api-eu.vonage.com/v0.1/bulk/webhooks/recipients/responses?application_id=yourapplicationID --messages_status_url=https://api-eu.vonage.com/v0.1/bulk/webhooks/actions/status?application_id=yourapplicationID
 ```
 
-This creates a Vonage API application with a messages [capability](/application/overview#capabilities), with the webhook URLs configured as specified, generates a private key file `my_messages_app.key`, and creates or updates the `vonage_app.json` file.
+This creates a Vonage API application with a messages capability, with the webhook URLs configured as specified, generates a private key file `my_messages_app.key`, and creates or updates the `vonage_app.json` file.
 
 ### How to create a Messages and Dispatch application using the Dashboard
 
@@ -59,11 +57,48 @@ To create your application using the Dashboard:
 
 6. In the **Status URL** box, enter the URL for your message status webhook: ``https://api-eu.vonage.com/v0.1/bulk/webhooks/actions/status?application_id=yourapplicationID``
 
-7. Click the **Generate new application** button. You are now taken to the next step of the Create Application procedure where you can link a Vonage API number to the application, and link external accounts such as Facebook to this application.
+7. Click the **Generate new application** button.
 
 You have now created your application. Next, you will need to link any numbers and social channels that you wish to use.
 
 > **NOTE:** Before testing your application ensure that your webhooks are configured and your webhook server is running.
+
+## Connect Social Channels
+
+### WhatsApp
+
+#### Connecting to WhatsApp
+
+1. On the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), select 'Setup my WhatsApp Business Account' and click Next.
+2. Fill in the fields and click 'Get my WhatsApp number Live' to connect your WhatsApp Number.
+
+#### Updating your WhatsApp Profile
+
+1. On the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), find your WhatsApp number in the list of connected social channels and click Edit.
+2. Here, you can update the information which is publicly visible in the WhatsApp mobile app, including your:
+    * Profile Picture
+    * Business description
+    * Business category
+    * Address
+    * Contact email
+    * Website
+
+#### Link WhatsApp to your Vonage application
+
+1. If you haven't already, [create an application](#create-an-application).
+2. In the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), find your WhatsApp account in the list of connected social channels and click 'Link to an application'.
+3. Select the Application you want to link to your WhatsApp account.
+4. Click 'Link social channels' and find your WhatsApp account in the list; click Link to connect the account.
+5. This will now show as "Linked to this application" under Status.
+
+### Facebook Messenger
+
+1. On the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), select 'Connect Facebook pages'.
+2. Follow the steps to authenticate and connect your Facebook Business Page to your Vonage account.
+3. In the External Accounts Page, find your Facebook page in the list of connected social channels and click 'Link to an application'.
+4. Select the Application you want to link to your Facebook account.
+5. Click 'Link social channels' and find your WhatsApp account in the list; click Link to connect the account.
+6. This will now show as "Linked to this application" under Status.
 
 ## Setup your Integrations
 
@@ -78,47 +113,11 @@ Setting up an integration requires:
 2. Under 'Setup an integration', select Vonage.
 3. Enter a name for your integration, your Application ID, and your Private Key encoded in base64.
 
-Once you have your Integration set up it will appear in the list of 'Existing integrations' on the Integrations page.
+Once you have your Integration set up it will appear in the list of 'Existing integrations' on the Integrations page. See below for specific instructions on how to connect Salesforce.
 
-## WhatsApp
+### Salesforce
 
-### Connecting to WhatsApp
-
-1. If you don't already have a WhatsApp number to connect, go to ???????
-2. On the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), select 'Setup my WhatsApp Business Account' and click Next.
-3. Fill in the fields and click 'Get my WhatsApp number Live' to connect your WhatsApp Number.
-
-### Updating your WhatsApp Profile
-
-1. On the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), find your WhatsApp number in the list of connected social channels and click Edit.
-2. Here, you can update the information which is publicly visible in the WhatsApp mobile app, including your:
-    * Profile Picture
-    * Business description
-    * Business category
-    * Address
-    * Contact email
-    * Website
-
-### Link WhatsApp to your Vonage application
-
-1. If you haven't already, [create an application](#create-an-application).
-2. In the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), find your WhatsApp account in the list of connected social channels and click 'Link to an application'.
-3. Select the Application you want to link to your WhatsApp account.
-4. Click 'Link social channels' and find your WhatsApp account in the list; click Link to connect the account.
-5. This will now show as "Linked to this application" under Status.
-
-## Facebook Messenger
-
-1. On the [External Accounts Page](https://dashboard.nexmo.com/messages/social-channels), select 'Connect Facebook pages'.
-2. Follow the steps to authenticate and connect your Facebook Business Page to your Vonage account.
-3. In the External Accounts Page, find your Facebook page in the list of connected social channels and click 'Link to an application'.
-4. Select the Application you want to link to your Facebook account.
-5. Click 'Link social channels' and find your WhatsApp account in the list; click Link to connect the account.
-6. This will now show as "Linked to this application" under Status.
-
-## Salesforce
-
-### Configure your Salesforce Account
+#### Configure your Salesforce Account
 
 1. In your Salesforce account, click ????? then Setup.
 2. In the left hand menu, click Apps -> App Manager.
