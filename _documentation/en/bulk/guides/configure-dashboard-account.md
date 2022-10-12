@@ -119,7 +119,7 @@ Once you have your Integration set up it will appear in the list of 'Existing in
 
 #### Configure your Salesforce Account
 
-1. In your Salesforce account, click ????? then Setup.
+1. In your Salesforce account, click the cog icon in the top right, then Setup.
 2. In the left hand menu, click Apps -> App Manager.
 3. Select 'New Connected App' in the top right corner.
 4. Fill in the following fields:
@@ -133,14 +133,14 @@ Once you have your Integration set up it will appear in the list of 'Existing in
 6. Once created, select the 'Manage Consumer Details' button under 'API (Enable OAuth Settings)'
 7. Make note of the Consumer Key and Consumer Secret; these will be used to link Salesforce to your Vonage application.
 
-### Link Salesforce to your Vonage application
+#### Link Salesforce to your Vonage application
 
 1. In the [dashboard](https://dashboard.nexmo.com), select 'Integrations' in the left hand menu.
 2. Select Salesforce under 'Setup an integration'.
 3. Enter the following details:
     * Name - A name for your integration
-    * Customer Secret - the Salesforce customer secret?
-    * Customer Key - the Salesforce customer key?
+    * Customer Secret - your Salesforce customer secret
+    * Customer Key - your Salesforce customer key
     * Redirect URI - Enter `http://api-eu.dev.v1.vonagenetworks.net/oauth/redirect`
 4. Click 'Connect with sf-oauth-1'.
 
