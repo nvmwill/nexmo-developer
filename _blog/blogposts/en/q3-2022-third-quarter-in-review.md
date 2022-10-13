@@ -1,11 +1,11 @@
 ---
 title: 'Q3 2022: Third Quarter in Review'
-description: Product updates 
+description: A summary of product updates and feature releases for Q3 2022.
 thumbnail: /content/blog/q3-2022-third-quarter-in-review/quaterly-releases.png
 author: edmond-mensah
 published: true
-published_at: 2022-10-11T09:12:20.831Z
-updated_at: 2022-10-11T09:12:20.831Z
+published_at: 2022-10-18T09:12:20.831Z
+updated_at: 2022-10-18T09:12:20.831Z
 category: announcement
 tags:
   - video-api
@@ -65,7 +65,7 @@ You can find details on what's changed in the [Ruby v3](https://developer.vonage
 
 **The V-app**
 
-Do you know what is better than SDKs? Demo apps that show you SDKs in action. Let me introduce you to the [V-app](https://github.com/nexmo-community/clientsdk-the-v-app) a multi-platform (iOS, Android, Web) demo app that demonstrates the implementation of voice and messaging funtionalities.
+Do you know what is better than SDKs? Demo apps showing SDKs in action. Let me introduce you to the [V-app](https://github.com/nexmo-community/clientsdk-the-v-app) a multi-platform (iOS, Android, Web) demo app that demonstrates the implementation of voice and messaging funtionalities.
 
 Here is [a post](https://developer.vonage.com/blog/22/08/25/introducing-the-vonage-client-sdk-v-app-demo-projects
 ) to walk you through the codebase and get you started.
