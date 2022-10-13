@@ -20,7 +20,7 @@ outdated: false
 replacement_url: ""
 ---
 
-<!-- Force all links to open in a new tab -->
+<!-- Force all links to open up in a new tab -->
 <base target="_blank">
 
 It's hard for me to believe we're already 10 months in! As we approach the end of the year, it feels like the year has flown by.
@@ -74,4 +74,4 @@ Here is [a post](https://developer.vonage.com/blog/22/08/25/introducing-the-vona
 In the last three months, a lot has happened. We have a lot more in the works and will share them with you in the coming months.
 
 In the mean time we would love to hear from you.
-Catch us on [Slack] (https://developer.vonage.com/community/slack), [Twitter] (https://twitter.com/VonageDev), or at [upcoming events] (https://developer.vonage.com/community).
+Catch us on [Slack](https://developer.vonage.com/community/slack), [Twitter] (https://twitter.com/VonageDev), or at [upcoming events](https://developer.vonage.com/community).
