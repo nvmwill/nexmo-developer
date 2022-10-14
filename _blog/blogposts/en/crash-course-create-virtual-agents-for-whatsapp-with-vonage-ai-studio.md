@@ -19,7 +19,7 @@ replacement_url: ""
 ---
 Companies are increasingly looking at expanding the number of channels through which they communicate and keep in touch with customers. To help businesses meet the diverse communication needs of their client base, Vonage AI has begun to prioritize multi-channel offerings with their virtual assistants.
 
-In addition to our Voice and HTTP virtual assistants, the Vonage AI Studio platform (a low-code virtual agent builder) also offers you the ability to create agents for WhatsApp and SMS. Let's take a quick look at some of the nifty features available on our WhatsApp agent type.
+In addition to our Voice and HTTP virtual assistants, the [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav|l3nav_gototheaistudiooverviewpage_novalue) platform (a low-code virtual agent builder) also offers you the ability to create agents for WhatsApp and SMS. Let's take a quick look at some of the nifty features available on our WhatsApp agent type.
 
 ## Message Types
 
@@ -86,6 +86,6 @@ Here's an example agent we built to record cases of animal sickness, injury, cru
 
 ## Conclusion and Next Steps
 
-In this blog post, we learned about the capabilities and uses of WhatsApp conversation agents in the Vonage AI Studio platform.
+In this blog post, we learned about the capabilities and uses of WhatsApp conversation agents in the Vonage AI Studio platform. Full documentation for the AI Studio platform can be found [here](https://studio.docs.ai.vonage.com/#_ga=2.52857896.1004057560.1652645262-2049185403.1651612958).
 
 We always welcome community involvement. Please feel free to join us on the [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
