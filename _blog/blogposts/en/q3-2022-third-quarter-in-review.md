@@ -20,9 +20,6 @@ outdated: false
 replacement_url: ""
 ---
 
-<!-- Force all links to open up in a new tab -->
-<base target="_blank">
-
 It's hard for me to believe we're already 10 months in! As we approach the end of the year, it feels like the year has flown by.
 
 Every month at Vonage counts, and the last three have been no exception. Here's what we've been up to.
