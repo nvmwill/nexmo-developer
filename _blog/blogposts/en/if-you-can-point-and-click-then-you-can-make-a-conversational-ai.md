@@ -23,7 +23,7 @@ replacement_url: ""
 
 Customer service had changed over the years from when the only option was to phone a call center during business hours to today, where customers expect 24/7 service via the telephone and other means. Some of those means are SMS/MMS messages, social media, communications apps (such as WhatsApp), and even voice assistants. Many customers today prefer to resolve most service issues independently without talking to someone and are used to getting answers instantly. So how does a business address customer demand in 2022 without hiring a development team to build these solutions? 
 
-Today, I wanted to bring to your attention [Vonage AI Studio](https://studio.ai.vonage.com/). It is a No Code / Low Code conversation AI platform that helps businesses handle complex customer interactions through voice and text. It starts with a friendly user interface where you can drag and drop modules to build a conversational Virtual Agent that your customers can use. No development team is required! 
+Today, I wanted to bring to your attention [Vonage AI Studio](https://www.vonage.com/communications-apis/ai-studio/?icmp=l3nav|l3nav_gototheaistudiooverviewpage_novalue). It is a No Code / Low Code conversation AI platform that helps businesses handle complex customer interactions through voice and text. It starts with a friendly user interface where you can drag and drop modules to build a conversational Virtual Agent that your customers can use. No development team is required! 
 
 ## What we are going to build
 
@@ -33,7 +33,7 @@ We will build a Virtual Agent for a fictitious event called the **Video Game Con
 
 ## Getting Started
 
-To begin, you'll need to log into the [Vonage Developer Portal](https://developer.vonage.com) first. If you don't have one, you can create one, and we'll give you free credit to play around with our APIs. Next, navigate the [Vonage AI Studio](https://studio.ai.vonage.com/) home page and press the button to **Create Agent**. You will see an option of what type of Agent you would like to create. 
+To begin, you'll need to log into the [Vonage Developer Portal](https://developer.vonage.com) first. If you don't have one, you can create one, and we'll give you free credit to play around with our APIs. Next, navigate the [Vonage AI Studio](https://studio.docs.ai.vonage.com/#_ga=2.52857896.1004057560.1652645262-2049185403.1651612958) home page and press the button to **Create Agent**. You will see an option of what type of Agent you would like to create. 
 
 ![The Agent Creation Screen](/content/blog/if-you-can-point-and-click-then-you-can-make-a-conversational-ai/agent-creation.png "agent-creation.png")
 
@@ -157,6 +157,6 @@ If we rerun **Tester** and type in the same comment, the flow displays the assig
 
 ## Wrap-up
 
-Now that you have a basic Virtual Agent setup, you could extend this project by adding additional questions that a user might enter. You also might want to try to publish the agent and test it with your cellphone! Whatever the case, we barely scratched the surface when it comes to the [Vonage AI Studio](https://studio.ai.vonage.com/)
+Now that you have a basic Virtual Agent setup, you could extend this project by adding additional questions that a user might enter. You also might want to try to publish the agent and test it with your cellphone! Whatever the case, we barely scratched the surface when it comes to the [Vonage AI Studio](https://studio.docs.ai.vonage.com/#_ga=2.52857896.1004057560.1652645262-2049185403.1651612958)
 
 If you have questions or feedback, join us on the [Vonage Developer Slack](https://developer.vonage.com/community/slack) or send me a Tweet on [Twitter](https://twitter.com/mbcrump), and I will get back to you. Thanks again for reading, and I will catch you on the next one!
