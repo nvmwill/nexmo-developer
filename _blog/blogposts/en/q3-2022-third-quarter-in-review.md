@@ -68,7 +68,7 @@ You can find details on what's changed in the [Ruby v3](https://developer.vonage
 Do you know what is better than SDKs? Demo apps showing SDKs in action. Let me introduce you to the [V-app](https://github.com/nexmo-community/clientsdk-the-v-app) a multi-platform (iOS, Android, Web) demo app that demonstrates the implementation of voice and messaging funtionalities.
 
 Here is [a post](https://developer.vonage.com/blog/22/08/25/introducing-the-vonage-client-sdk-v-app-demo-projects
-) to walk you through the codebase and get you started.
+) put together by [Abdul Ajetunmobi](https://developer.vonage.com/blog/authors/abdul-ajetunmobi) our Senior Developer Advocate to walk you through the codebase and get you started.
 
 ### Let's Connect!
 In the last three months, a lot has happened. We have a lot more in the works and will share them with you in the coming months.
