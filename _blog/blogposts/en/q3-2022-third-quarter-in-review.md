@@ -42,9 +42,9 @@ Also, you no longer have to wait! With Vonage AI Studio out of Developer Preview
 
 **Firebase Video Extension**
 
-Continuing on the topic of improving customer engagement, video is one of the most effective ways to connect deeply with your customers, whether through product demos, conversations, or supporting them.
+On the topic of improving customer engagement, video is one of the most effective ways to engage customers deeply, whether through product demonstrations, conversations, or support.
 
-This is why we are happy to announce our [Firebase multiparty video extension](https://extensions.dev/extensions/vonage/firestore-vonage-video-express). The Firebase multiparty video extension created by our Javascript Developer Advocate [Dwane Hemmings](https://developer.vonage.com/blog/authors/dwanehemmings) makes it easy to build a multi participant ie: conferencing video app using the Firebase platform. To get started checkout the extension from the [Firebase store](https://extensions.dev/extensions/vonage/firestore-vonage-video-express).
+This is why we are happy to announce our [Firebase multiparty video extension](https://extensions.dev/extensions/vonage/firestore-vonage-video-express). The extension created by our Javascript Developer Advocate [Dwane Hemmings](https://developer.vonage.com/blog/authors/dwanehemmings) makes it easy to build a multi-participant ie: conferencing video app using the Firebase platform. To get started check out the extension on the [Firebase Marketplace](https://extensions.dev/extensions/vonage/firestore-vonage-video-express).
 
 ### In the world of SDKs…
 
