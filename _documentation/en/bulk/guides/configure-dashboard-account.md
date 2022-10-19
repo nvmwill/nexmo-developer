@@ -141,9 +141,9 @@ Once you have your Integration set up it will appear in the list of 'Existing in
     * Name - A name for your integration
     * Customer Secret - your Salesforce customer secret
     * Customer Key - your Salesforce customer key
-    * Salesforce domain (default login.salesforce.com) - Required for Salesforce Enhanced Domains. If you have not migrated to an enhanced domain, leave this blank. If you have migrated, you must use either the `xyz.my.salesforce.com` or `xyz.develop.my.salesforce.com` domain, where 'xyz' is your organisation name. `force.com` domains are not valid.
+    * Salesforce domain (default login.salesforce.com) - Required for Salesforce Enhanced Domains. If you have not migrated to an enhanced domain, leave this blank. If you have migrated, you must use either the `xyz.my.salesforce.com` or `xyz.develop.my.salesforce.com` domain, where `xyz` is your organization name. `force.com` domains are not valid.
 4. Click 'Connect with sf-oauth-1'.
 
-> If you get DNS errors when trying to authorise a Connected App, it is likely that `login.salesforce.com` is redirecting to an incorrect location (e.g. `xyz.my.salesforce.com` instead of `xyz.develop.my.salesforce.com`), and the correct one needs to be specified as the Salesforce domain.
+> If you get DNS errors when trying to authorize a Connected App, it is likely that `login.salesforce.com` is redirecting to an incorrect location (e.g. `xyz.my.salesforce.com` instead of `xyz.develop.my.salesforce.com`), and the correct one needs to be specified as the Salesforce domain.
 
 Once complete, your Salesforce integration will appear in the list of 'Existing integrations' on the Integrations page.
