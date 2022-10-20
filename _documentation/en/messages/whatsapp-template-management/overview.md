@@ -54,4 +54,4 @@ Once deleted, the name of the (approved) template cannot be used again for 30 da
 
 You can upload media such as images, video, and PDF files, to the WhatsApp platform for use in Media Message Templates. Media needs to be uploaded before it can be used in a Media Message template.
 
-> Note: a timeout may occur if you attempt to upload large media files (e.g. above 25MB). In such cases we recommend instead using the WhatsAPp Business Manager UI to upload the files.
+> Note: a timeout may occur if you attempt to upload large media files (e.g. above 25MB). In such cases we recommend instead using the WhatsApp Business Manager UI to upload the files.
