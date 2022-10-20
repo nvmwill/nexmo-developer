@@ -67,7 +67,7 @@ There are two room types:
 
 ## Website and App Embed
 
-A meeting created through the API can be embedded into your website. To do this, generate the meeting link and create an iFrame using that link:
+A meeting created through the API can be embedded into your website and mobile applications. To do this, generate the meeting link and create an iFrame using that link:
 
 ``` HTML
 <iframe src="Meeting link here" title="Embedded Meeting" allow="camera;microphone"></iframe>
