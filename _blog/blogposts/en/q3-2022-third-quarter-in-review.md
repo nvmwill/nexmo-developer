@@ -1,11 +1,11 @@
 ---
 title: 'Q3 2022: Third Quarter in Review'
 description: A summary of product updates and feature releases for Q3 2022.
-thumbnail: /content/blog/q3-2022-third-quarter-in-review/quaterly-releases.png
+thumbnail: /content/blog/q3-2022-third-quarter-in-review/quaterly-release.png
 author: edmond-mensah
 published: true
-published_at: 2022-10-18T09:12:20.831Z
-updated_at: 2022-10-18T09:12:20.831Z
+published_at: 2022-10-20T09:12:20.831Z
+updated_at: 2022-10-20T09:12:20.831Z
 category: announcement
 tags:
   - video-api
