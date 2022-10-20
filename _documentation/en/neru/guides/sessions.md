@@ -6,7 +6,7 @@ meta_title: NeRu Sessions
 
 # NeRu Sessions
 
-Sessions allow you to create and persist context within your instance seamlessly. Your instance can have many sessions, a one (instance) to many (sessions) relationship. Sessions are created when you want to use a provider or access state. Then sessions can be restored on subsequent calls to your instance to access previous context. 
+Sessions allow you to create and persist context within your instance seamlessly. Your instance can have many sessions, a one (instance) to many (sessions) relationship. Sessions are created when you want to use a provider or access state. Then sessions can be restored on subsequent calls to your instance to access previous context. By default, sessions have a TTL of 7 days, but this can be changed by providing a TTL in `createSession` function.
 
 
 ## Creating a Session
@@ -28,6 +28,16 @@ const state = new State(session);
 ```
 
 Calling functions on the `voice` or `state` object will now be associated with this session. This is done by NeRu setting a header on requests with the session ID.
+
+### Creating a Session with a Custom TTL
+
+To create a session with a custom TTL, you can provide a TTL in seconds to the `createSession` function:
+
+```javascript
+const session = neru.createSession(3600);
+```
+
+The above will create a session which lasts for 1 hour.
 
 ## Session Restoration
 
