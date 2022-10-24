@@ -2,6 +2,7 @@
 "/messages/external-accounts/api-reference": "/api/external-accounts"
 "/dispatch/external-accounts/api-reference": "/api/external-accounts"
 "/messages/whatsapp-provisioning/api-reference": "/api/whatsapp-provisioning"
+"/messages/whatsapp-template-management/api-reference": "/api/whatsapp-template-management"
 "/contribute": "/contribute/overview"
 "/styleguide": "/contribute/guides/markdown-guide"
 "/write-the-docs": "/contribute/guides/writing-style-guide"
