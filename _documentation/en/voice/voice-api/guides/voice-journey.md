@@ -1,13 +1,13 @@
 ---
-title: Contact Center Augmentation
+title: Voice Journey
 products: voice/voice-api
 description: "This tutorial shows you how to add programmable assistance to your contact center"
 languages:
     - Node
-navigation_weight: 4    
+navigation_weight: 14    
 ---
 
-# Contact Center Augmentation
+# Voice Journey
 
 In this tutorial, you will implement the following contact center scenario:
 
