@@ -5,6 +5,9 @@ description: "This tutorial will help you to start with an example Amazon Lex
   codes using Vonage Voice API. "
 navigation-weight: 8
 ---
+
+# Connecting Voice Calls to an Amazon Lex Bot
+
 Today’s AI platforms offer advanced capabilities with voice and text bots, transcription engines, and sentiment analysis engines.
 
 These capabilities help developers build bots that serve a multitude of functions, including supporting callers in placing orders, making a booking, getting assistance with issues, and much more.
@@ -72,13 +75,13 @@ Clicking **Publish** once more will finalize the setup of your sample bot.
 
 * Clone the [lex-reference-connection](https://github.com/nexmo-community/lex-reference-connection) repository from GitHub and follow instructions as described in the readme.
 * Select one of the deployment types as explained in the Running Lex reference connection code section.
-* make a note of the `LEX_REFERENCE_CONNECTION` argument (e.g. xxxx.ngrok.io, or myserver.mycompany.com:40000), as you will need it later.
+* make a note of the `LEX_REFERENCE_CONNECTION` argument (e.g. `xxxx.ngrok.io`, or `myserver.mycompany.com:40000`), as you will need it later.
 
 ## Set up the Lex sample Voice API Application
 
 * Clone the [lex-sample-voice-application](https://github.com/nexmo-community/lex-sample-voice-application) repository on GitHub and follow the instructions as described in this repository.	 
 * Select one of the deployment types as explained in the Running Lex sample Voice API application section.
-* Make a note of the phone number linked to your Voice API application as explained in the _Set Up Your Vonage Voice API Application Credentials and Phone Number_ section, as it will be needed for the next step.
+* Make a note of the phone number linked to your Voice API application as explained in the *Set Up Your Vonage Voice API Application Credentials and Phone Number* section, as it will be needed for the next step.
 
 ## Interact Via Voice With the Lex Bot
 
@@ -87,7 +90,8 @@ Clicking **Publish** once more will finalize the setup of your sample bot.
 
 ## Improving the Lex Bot
 
-When calling the Lex bot using the linked phone number, you may have noticed that the bot does not play a greeting, so the connected caller would be unsure when to start speaking.  
+When calling the Lex bot using the linked phone number, you may have noticed that the bot does not play a greeting, so the connected caller would be unsure when to start speaking.
+
 Additionally, the bot does not play a confirmation message after you verbally confirmed that you want the appointment.
 
 Let’s improve our example Lex bot by addressing both of those issues.
