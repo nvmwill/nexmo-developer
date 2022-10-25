@@ -477,7 +477,9 @@ No. Configurable TURN allays customers’ concerns around connecting to trusted 
 media traffic only.
 
 For HTTP traffic, customers will have to do one of the following:
+
 <!--alex ignore whitelist-->
+
 * Whitelist vonage and opentok domain names:
   * *.opentok.com
   * *.tokbox.com

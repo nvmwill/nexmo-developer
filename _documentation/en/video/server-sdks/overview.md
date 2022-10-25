@@ -10,6 +10,9 @@ The Vonage Video Server SDKs let you [create sessions](/video/guides/create-sess
 
 The Server SDKs are available for the following languages:
 
-- [PHP](/video/server-sdks/php)
-
+- [.Net](/video/server-sdks/dotnet)
+- [Java](/video/server-sdks/java)
 - [NodeJS](/video/server-sdks/node)
+- [PHP](/video/server-sdks/php)
+- [Python](/video/server-sdks/python)
+- [Ruby](/video/server-sdks/ruby)
