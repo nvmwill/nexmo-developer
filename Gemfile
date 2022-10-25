@@ -3,7 +3,7 @@ ruby '3.0.0'
 
 ruby '3.0.0'
 
-gem "station", "0.5.12"
+gem "station", "0.5.14"
 
 group :test do
   gem 'rspec'
