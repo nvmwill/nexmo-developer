@@ -22,7 +22,7 @@ The OTPublisher class is defined in the Vonage Video iOS SDK. It uses the device
 
 ```swift
 func sessionDidConnect(_ session: OTSession) {
-    print("The client connected to the OpenTok session.")
+    print("The client connected to the session.")
 
     let settings = OTPublisherSettings()
     settings.name = UIDevice.current.name

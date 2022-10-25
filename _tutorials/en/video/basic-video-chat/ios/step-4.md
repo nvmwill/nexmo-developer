@@ -61,7 +61,7 @@ Next we will implement methods of the OTSessionDelegate protocol. Add the follow
 
 - (void)sessionDidConnect:(OTSession*)session
 {
-    NSLog(@"The client connected to the OpenTok session.");
+    NSLog(@"The client connected to the session.");
 }
 
 - (void)sessionDidDisconnect:(OTSession*)session

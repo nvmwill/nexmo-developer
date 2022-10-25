@@ -52,7 +52,7 @@ The `connect()` method of the `session` object connects the client application t
 // MARK: - OTSessionDelegate callbacks
 extension ViewController: OTSessionDelegate {
     func sessionDidConnect(_ session: OTSession) {
-        print("The client connected to the OpenTok session.")
+        print("The client connected to the session.")
     }
 
     func sessionDidDisconnect(_ session: OTSession) {
