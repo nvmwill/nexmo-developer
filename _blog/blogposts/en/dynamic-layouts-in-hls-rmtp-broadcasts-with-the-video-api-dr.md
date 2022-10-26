@@ -187,6 +187,7 @@ The following table describes the currently supported CSS properties and their p
 | overflow                                                     | 'hidden'                                              |
 | clear                                                        | 'none', 'left', 'right', 'both', 'inherit', 'inherit' |
 
+
 ## Taking It Further
 
 With the [Experience Composer](https://www.tokbox.com/developer/guides/experience-composer/), not only can you capture the layout of your video call, but your full web application. This includes any banners, text chat, whiteboard, or any other UI elements displayed in your application. Experience Composer joins the video call and turns everything visible on the screen into another stream. This stream can then be broadcasted and/or archived.
