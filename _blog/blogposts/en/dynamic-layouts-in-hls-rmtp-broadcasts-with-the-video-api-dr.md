@@ -6,7 +6,7 @@ thumbnail: /content/blog/dynamic-layouts-in-hls-rmtp-broadcasts-with-the-video-a
 author: michaeljolley
 published: true
 published_at: 2020-09-22T13:00:32.000Z
-updated_at: 2021-05-10T22:21:42.299Z
+updated_at: 2021-10-27T22:21:42.299Z
 category: tutorial
 tags:
   - video-api
