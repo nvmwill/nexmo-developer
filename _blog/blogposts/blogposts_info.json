@@ -1,5 +1,42 @@
 [
   {
+    "title": "Build a Vonage Message Custom Activity with Salesforce Marketing Cloud",
+    "description": "Learn about a new starter template for creating a Vonage Messages API activity in the Salesforce Marketing Cloud Journey Builder",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/build-a-vonage-message-custom-activity-with-salesforce-marketing-cloud/heroku_salesforce_messagesapi.png",
+    "author": {
+      "team": true,
+      "alumni": false,
+      "spotlight": false,
+      "noteworthy": false,
+      "hidden": false,
+      "name": "Kitt Phi",
+      "image_url": "/content/images/kitt.png",
+      "bio": "Kitt is a Customer Solutions Engineer for Vonage. He enjoys developing NodeJS integrations into various Cloud Platform Services. In his spare time, he enjoys riding his UTV through the Organ Mountains and Kayaking through out the USA.",
+      "short_name": "kitt-phi"
+    },
+    "published": true,
+    "published_at": "2022-10-27 08:39:42 UTC",
+    "updated_at": "2022-10-27 08:39:44 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "message-api",
+      "salesforce",
+      "api"
+    ],
+    "spotlight": false,
+    "canonical": "",
+    "outdated": false,
+    "replacement_url": "",
+    "locale": "en",
+    "link": "blog/22/10/27/build-a-vonage-message-custom-activity-with-salesforce-marketing-cloud",
+    "filename": "build-a-vonage-message-custom-activity-with-salesforce-marketing-cloud"
+  },
+  {
     "title": "Q3 2022: Third Quarter in Review",
     "description": "A summary of product updates and feature releases for Q3 2022.",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/q3-2022-third-quarter-in-review/quaterly-release.png",
@@ -11645,7 +11682,7 @@
     },
     "published": true,
     "published_at": "2020-09-22 13:00:32 UTC",
-    "updated_at": "2021-05-10 22:21:42 UTC",
+    "updated_at": "2021-10-27 22:21:42 UTC",
     "category": {
       "name": "Tutorial",
       "plural": "Tutorials",
@@ -13089,6 +13126,36 @@
     "filename": "use-a-green-screen-in-javascript-with-vonage-video"
   },
   {
+    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
+    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
+    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
+    "author": {
+      "team": false,
+      "spotlight": false,
+      "name": "Lorna Mitchell",
+      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
+      "twitter": "lornajane",
+      "image_url": "/content/images/lornajane.jpg",
+      "alumni": true,
+      "short_name": "lornajane"
+    },
+    "published": true,
+    "published_at": "2020-06-23 07:53:47 UTC",
+    "category": {
+      "name": "Tutorial",
+      "plural": "Tutorials",
+      "slug": "tutorial",
+      "color": "#d6219c"
+    },
+    "tags": [
+      "security",
+      "verify-api"
+    ],
+    "locale": "it",
+    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
+    "filename": "add-strong-psd2-authentication-to-your-application"
+  },
+  {
     "title": "Add Strong PSD2 Authentication to Your Application",
     "description": "Find out how you can bring your payment authorisations up to PSD2 standards using the Vonage Verify API to confirm user identity",
     "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
@@ -13118,36 +13185,6 @@
     ],
     "locale": "en",
     "link": "blog/20/06/23/add-strong-psd2-authentication-to-your-application",
-    "filename": "add-strong-psd2-authentication-to-your-application"
-  },
-  {
-    "title": "Aggiungi l’Autenticazione Forte PSD2 alla Tua App",
-    "description": "Scopri come aggiungere alla tua app l'autenticazione dei pagamenti online \"Secure Customer Authentication\", noto anche come PSD2, con Vonage Verify API",
-    "thumbnail": "https://d226lax1qjow5r.cloudfront.net/blog/blogposts/add-strong-psd2-authentication-to-your-application/Blog_Strong-Customer-Authentication_1200x600-2.png",
-    "author": {
-      "team": false,
-      "spotlight": false,
-      "name": "Lorna Mitchell",
-      "bio": "Lorna is a software engineer with an incurable blogging habit. She tries to tame words and code in equal measure.",
-      "twitter": "lornajane",
-      "image_url": "/content/images/lornajane.jpg",
-      "alumni": true,
-      "short_name": "lornajane"
-    },
-    "published": true,
-    "published_at": "2020-06-23 07:53:47 UTC",
-    "category": {
-      "name": "Tutorial",
-      "plural": "Tutorials",
-      "slug": "tutorial",
-      "color": "#d6219c"
-    },
-    "tags": [
-      "security",
-      "verify-api"
-    ],
-    "locale": "it",
-    "link": "blog/it/20/06/23/add-strong-psd2-authentication-to-your-application",
     "filename": "add-strong-psd2-authentication-to-your-application"
   },
   {
