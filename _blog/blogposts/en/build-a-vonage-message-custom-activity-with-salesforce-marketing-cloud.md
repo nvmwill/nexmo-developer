@@ -2,7 +2,7 @@
 title: Build a Vonage Message Custom Activity with Salesforce Marketing Cloud
 description: Learn about a new starter template for creating a Vonage Messages
   API activity in the Salesforce Marketing Cloud Journey Builder
-thumbnail: /content/blog/build-a-vonage-message-custom-activity-with-salesforce-marketing-cloud/heroku_salesforce_messagesapi.png
+thumbnail: /content/blog/build-a-vonage-message-custom-activity-with-salesforce-marketing-cloud/salesforce_messagesapi.png
 author: kitt-phi
 published: true
 published_at: 2022-10-27T08:39:42.846Z
