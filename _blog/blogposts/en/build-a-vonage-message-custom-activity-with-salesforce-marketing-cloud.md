@@ -23,7 +23,7 @@ replacement_url: ""
 
 Today, I will introduce a starter template for creating a Vonage Messages API activity in the Salesforce Marketing Cloud Journey Builder using Heroku. The custom activity allows you to send marketing campaign messages using Vonage Messages API and Salesforce Marketing Cloud Contacts (Attribute Group in Contact Builder).
 
-In this post, I will walk you through the creation of the activity step by step. I have also put together a short video that you can learn how to integrate Vonage Communication APIs into Salesforce Marketing Cloud to build a contextual customer journey with different channels. 
+In this post, I will walk you through the creation of the activity step by step. I have also put together a short video to show you how to integrate Vonage Communication APIs into Salesforce Marketing Cloud to build a contextual customer journey with different channels. 
 
 <youtube id="AyD3gk1RDFk"></youtube>
 
