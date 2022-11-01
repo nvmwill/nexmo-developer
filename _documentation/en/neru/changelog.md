@@ -78,6 +78,16 @@ meta_title: NeRu Changelog
 
 ## CLI
 
+### v0.8.16 - (2022-11-01)
+
+* Added:
+    * Added instance removal with `neru instance remove` command.
+
+### v0.8.15 - (2022-10-26)
+
+* Added:
+    * Added versions to capabilities. Messages V0.1 and V1 can be used by using `messages-v0.1` or `messages-v1` respectively. `messaging`/`messages` points to v0.1.
+
 ### 0.8.14 - (2022-09-23)
 
 * Added:
