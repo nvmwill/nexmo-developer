@@ -60,7 +60,7 @@ Laravel Sail should have been added into the `vendor` folder, so providing you h
 ./vendor/bin/sail up
 ```
 
-\### Migrations, Seeders and Vite
+### Migrations, Seeders and Vite
 
 Next up, we need to run the database migrations:
 
@@ -88,11 +88,11 @@ In order to connect the application to Vonage's servers, we'll need a tunnel to 
 
 Start the Ngrok process like so:
 
-\`\``bash
+```bash
 
 ngrok http 8080
 
-\`\``
+```
 
 You should get back a new URL to tunnel into your application. The last thing to do here is to set up your keys - navigate to your Vonage dashboard, create a new application and enable SMS. Once this is done you can tell Vonage where incoming data should be routed: in this case, back to our local app. Edit your application in the dashboard, so that you can add the callback address for your local app. The form should look like this:
 
