@@ -184,10 +184,12 @@ At the other end, when the customer replies to the text, Vonage sends a webhook 
         $entry->user()->associate($user);
         $entry->ticket()->associate($ticket);
         $entry->save();
+        
+```
 
 It has a limitation for now, in that it matches the incoming phone number to pull out the user, then gets the latest ticket. But, the joy of this app is what is...
 
 ### Coming Next...
 
 We're not done yet by a country mile! Keep an eye out for more articles in the series as we add to the app, including Voice capabilities using Deepgram, real-time updates using Laravel Livewire, and building out the test suite with PEST.
-```
+
