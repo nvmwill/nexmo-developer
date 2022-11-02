@@ -1,10 +1,7 @@
 ---
 title: Nexmo Call Control Objects
 navigation_weight: 4
-description: >-
-  To tell Vonage how to handle a phone call, you must provide a Nexmo Call
-  Control Object (NCCO) when a call is placed or answered. There are various
-  actions available, such as `talk`, `input` and `record`.
+description: To tell Vonage how to handle a phone call, you must provide a Nexmo Call Control Object (NCCO) when a call is placed or answered. There are various actions available, such as `talk`, input` and `record`.
 ---
 
 # Nexmo Call Control Objects
@@ -18,8 +15,8 @@ This section describes:
 
 - [About Nexmo Call Control Objects](#about-nexmo-call-control-objects)
 - [Creating a custom Call or Conversation for each user](#creating-a-custom-call-or-conversation-for-each-user)
-- [Connecting to endpoints that don't generate a ring back tone](#ringback-tone)
-- [Executing an NCCO when a call is answered](#on-answer)
+- [Connecting to endpoints that don't generate a ring back tone](#connecting-to-endpoints-that-dont-generate-a-ring-back-tone)
+- [Executing an NCCO when a call is answered](#executing-an-ncco-when-a-call-is-answered)
 
 ## About Nexmo Call Control Objects
 
@@ -178,3 +175,4 @@ In a very straightforward case `on-answer.json` might be:
   }
 ]
 ```
+> For more information see the [NCCO Reference](/voice/voice-api/ncco-reference).

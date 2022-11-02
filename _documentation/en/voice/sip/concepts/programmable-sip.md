@@ -1,12 +1,13 @@
 ---
 title: Programmable SIP
+description: Use Vonage SIP to forward inbound and send outbound Voice calls that use the Session Initiation Protocol.
 ---
 
 # Programmable SIP
 
 ## Overview
 
-Vonage’s Programmable SIP enables you to integrate your existing SIP Infrastructure with Vonage’s powerful conversational communications platform. This integration will enable you to connect to mobile, landline, SIP and WebRTC endpoints with minimal work, including browsers and mobile applications. It will also bring Voice API functionality, such as multichannel recording, IVR, Text to Speech, WebSocket connectivity for AI integrations, and the power of contextual conversations to your platform.
+Vonage’s Programmable SIP (Session Initiation Protocol) enables you to integrate your existing SIP Infrastructure with Vonage’s powerful conversational communications platform. This integration will enable you to connect to mobile, landline, SIP and WebRTC endpoints with minimal work, including browsers and mobile applications. It will also bring Voice API functionality, such as multichannel recording, IVR, Text to Speech, WebSocket connectivity for AI integrations, and the power of contextual conversations to your platform.
 
 ![SIP Connect Workflow](/images/workflow_sip_connect.png)
 

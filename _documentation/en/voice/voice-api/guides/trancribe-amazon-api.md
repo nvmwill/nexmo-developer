@@ -1,7 +1,7 @@
 ---
 title: Call Recording Transcription
 products: voice/voice-api
-description: "This tutorial shows you how to use the Amazon Transcribe API to transcribe a phone conversation recorded with the Vonage Voice API."
+description: This tutorial shows you how to use the Amazon Transcribe API to transcribe a phone conversation recorded with the Vonage Voice API.
 languages:
     - Node
 navigation_weight: 12    
