@@ -29,9 +29,14 @@ Let's break this down.
 
 Low-Code and No-Code development platforms are visual software development environments that allow business and non-technical users to *typically* drag and drop application components to build an app without writing any code. They typically have little to no coding knowledge. In contrast, a professional software developer might use an Integrated Development Environment (IDE) (such as Visual Studio) or an Editor (such as Visual Studio Code) to build an application with code and a solid understanding of computer science programming concepts. Keep in mind that both approaches allow you to create an application of various complexities, and both should be considered equal as it all depends on your business use case.
 
+![What is Low-code?](/content/blog/low-code-and-no-code-what-option-is-best-for-you/low-code-1-.png "What is Low-code?")
+
 ## What is Low-code?
 
 Low-code refers to a software development approach that might require users to do some level of coding, which is traditionally much less than a technical software developer. While they may use drag-and-drop capabilities to build their apps, they may extend the application with short and simple code snippets. Such as formatting a date in JavaScript or splitting the first name out of a string that includes the first or last name. They could also involve writing simple database queries (such as selecting the top row in a database based on an id).
+
+![What is No-code?](/content/blog/low-code-and-no-code-what-option-is-best-for-you/no-code-1-.png "What is No-code?")
+
 
 ## What is No-Code?
 
