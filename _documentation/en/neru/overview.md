@@ -50,7 +50,7 @@ The action of [deploying](/neru/guides/deploying) the code and configuration, a 
 
 ### Assets
 
-Files that you can use multiple times in your account, across multiple projects (voice prompts, knowledgebase, images, etc.)
+[NeRu Assets](/neru/providers/assets) allows you to store and retrieve objects on the NeRu platform. You can generate links to your public files, with TTLs for secure files, or download the binary.
 
 ### NeRu Configuration File
 

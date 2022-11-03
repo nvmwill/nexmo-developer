@@ -19,3 +19,5 @@ The NeRu SDK gives you access to the following providers:
 * [State](/neru/providers/state) - Store and fetch data for your project instance.
 
 * [Scheduler](/neru/providers/scheduler) - Schedule functions to be run for your project.
+
+* [Assets](/neru/providers/assets) - File storage for your project.

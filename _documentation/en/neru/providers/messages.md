@@ -18,6 +18,12 @@ The Messages provider gives you an interface for the [Messages API](/messages/ov
 * V1: [`onMessageEvents`](/neru/code-snippets/messages-provider/listen-events#v1)
 * [`unsubscribeEvents`](/neru/code-snippets/messages-provider/unsubscribe-events)
 
+## Receive Inbound SMS Webhooks
+
+Inbound SMS to your Vonage numbers can either be handled by the SMS API or the Messages API, NeRu uses the Messages API. To receive inbound SMS messages to your NeRu applications you will need to update your API Settings on the Vonage Dashboard to send inbound SMS webhooks to the Messages API:
+
+![API Settings SMS Webhook Toggle](/images/neru/sms-webhooks.png)
+
 ## Initializing the Messages Provider
 
 To use the Messages Provider you need to create an instance of the provider using a session:
