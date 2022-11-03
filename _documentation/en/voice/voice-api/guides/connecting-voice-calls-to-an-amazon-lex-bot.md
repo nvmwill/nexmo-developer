@@ -182,4 +182,4 @@ Finally, to commit these changes, click **Build** to rebuild the bot with the ne
 
 ## Testing the Updated Lex Bot
 
-To test out these new changes, call the phone number linked to your account and interact with the Lex bot to set up an appointment. This time you will hear the confirmation message you just set up read back to you by the Lex bot.
+To test out these new changes, call the phone number linked to your account and interact with the Lex bot to set up an appointment. This time you will hear the confirmation message you set up read back to you by the Lex bot.

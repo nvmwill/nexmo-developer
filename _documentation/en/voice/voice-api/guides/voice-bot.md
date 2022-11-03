@@ -75,7 +75,7 @@ In the following steps below, we will give two options as examples. Using ngrok 
 1. Clone the [dialogflow-reference-connection repository](https://github.com/nexmo-community/dialogflow-reference-connection) from GitHub and change the directory
    `git clone https://github.com/nexmo-community/dialogflow-reference-connection && cd dialogflow-reference-connection` 
 2. Open the code in your favorite IDE or text editor
-3. Add the `.json` file just downloaded to the root of the project
+3. Add the `.json` file you downloaded to the root of the project
 4. Create a `.env` file from the `.env.example`
 5. Populate the environment variables:
    	 `GCLOUD_PROJECT_ID=<TheProjectIdFoundOnDialogflow>`
@@ -186,7 +186,7 @@ DF_CONNECTING_SERVER
 10. On your Heroku dashboard where your application page is shown, click on the `Open App` button and copy the URL
 11. Now, let's deploy the application. Get back to the Vonage Dashboard website and under capabilities:
 12. Toggle Voice to enable this capability
-13. That hostname (the URL you just copied from Heroku) will be used followed by `/answer` on the Answer URL. Make sure HTTP GET is selected
+13. That hostname (the URL you copied from Heroku) will be used followed by `/answer` on the Answer URL. Make sure HTTP GET is selected
 14. Do the same for  `/event` on the Event URL. Make sure HTTP POST is selected
 15. Click on Save Changes
 
@@ -242,7 +242,7 @@ You will hear the confirmation message: `Connecting your call, please wait.`. Th
 
 Once the WebSocket is established, the Vonage API platform plays the Text To Speech `Hello` to the Dialogflow Agent (you as the caller will not hear that).
 
-You just set up read back to you by the Dialogflow agent.
+You have now set up read back to you by the Dialogflow agent.
 
 At this point, you will interact with the intents you set up in the previous section of this guide to book a table.
 
