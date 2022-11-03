@@ -368,3 +368,4 @@
 "/voice/voice-api/guides/websockets": "/voice/voice-api/concepts/websockets"
 "/voice/voice-api/guides/customizing-tts": "/voice/voice-api/concepts/customizing-tts"
 "/voice/voice-api/guides/legs-conversations": "/voice/voice-api/guides/conference-calling"
+"/voice/sip/api-reference": "/api/psip"
