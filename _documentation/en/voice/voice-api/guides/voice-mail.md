@@ -4,7 +4,7 @@ navigation_weight: 11
 description: Learn how to record audio from inbound calls using .NET and the Vonage Voice API.
 ---
 
-# Voice Mail
+# Voice Mail using .NET
 
 ## Introduction
 
@@ -24,17 +24,29 @@ This guide provides step by step instructions showing you how to:
 
 There are a few prerequisites that you need to complete before you can work through this guide. If you've already completed any of them, feel free to skip that step.
 
-## Create Vonage Account
+### Create Vonage Account
 
 You can create a Vonage account via the [Dashboard](https://ui.idp.vonage.com/ui/auth/registration?icid=tryitfree_adpdocs_nexmodashbdfreetrialsignup_inpagelink). Within the Dashboard you can create Applications and purchase Vonage numbers. You can also perform these tasks using the [Vonage CLI](https://github.com/vonage/vonage-cli).
 
-## Install the Vonage CLI
+### Install the Vonage CLI
 
-```partial
-source: _partials/reusable/install-vonage-cli.md
+The [Vonage CLI](https://developer.nexmo.com/application/vonage-cli) allows you to carry out many operations on the command line. Examples include creating applications, purchasing numbers, and linking a number to an application.
+
+To install the CLI with NPM run:
+
+```bash
+npm install --location=global @vonage/cli
 ```
 
-## How to run Ngrok
+Set up the Vonage CLI to use your Vonage API Key and API Secret. You can get these from the [settings page](https://dashboard.nexmo.com/settings) in the Dashboard.
+
+Run the following command in a terminal, while replacing `API_KEY` and `API_SECRET` with your own:
+
+```bash
+vonage config:set --apiKey=API_KEY --apiSecret=API_SECRET
+```
+
+### How to run Ngrok
 
 <a name="how-to-run-ngrok"></a>
 
@@ -54,7 +66,7 @@ If you are a paid subscriber you could type:
 
 > **NOTE:** In this example Ngrok will divert the Vonage webhooks you specified when you created your Vonage application to `localhost:3000`. Although port 3000 is shown here, you can use any free port that is convenient.
 
-## Create a Voice Application
+### Create a Voice Application
 
 There are two methods for creating a Voice application:
 
@@ -63,7 +75,7 @@ There are two methods for creating a Voice application:
 
 Each of these methods is described in the following sections.
 
-## How to create a Voice application using the Vonage CLI
+#### How to create a Voice application using the Vonage CLI
 
 To create your application using the Vonage CLI, enter the following command into the shell replacing `NGROK_HOST_NAME` with the ngrok host that you got when you set up ngrok:
 
@@ -81,7 +93,7 @@ vonage apps:link APPLICATION_ID --number=VONAGE_NUMBER
 
 This will link that Vonage Virtual Number to your application, which will cause all voice events occurring for that number to be routed to your designated URLs.
 
-## How to create a Voice application using the Dashboard
+#### How to create a Voice application using the Dashboard
 
 You can create Voice applications in the [Dashboard](https://dashboard.nexmo.com/applications).
 
