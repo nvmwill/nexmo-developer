@@ -750,3 +750,5 @@ hostname
 readme
 ScheduleAppointment
 AppointmentType
+dialogflow
+dialogflow-reference-connection
