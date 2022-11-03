@@ -34,7 +34,6 @@ In this document you can learn about:
 * **[Call Flow](/voice/voice-api/concepts)** - The various stages of a call and how they interact.
 * **[Customizing Spoken Text](/voice/voice-api/concepts/customizing-tts)** - Use Speech Synthesis Markup Language (SSML) to control how text-to-speech is read out.
 * **[Endpoints](/voice/voice-api/concepts/endpoints)** - When connecting a call, you can connect to another phone number, a `sip` endpoint or a `websocket`. These are known as endpoints.
-* **[Nexmo Call Control Objects](/voice/voice-api/concepts/ncco)** - 
 * **[NCCOs](/voice/voice-api/concepts/ncco)** - Nexmo Call Control Objects are a set of actions that instruct Vonage how to control the call to your Vonage application. For example, you can `connect` a call, send synthesized speech using `talk`, `stream` audio, or `record` a call. They are represented in JSON form as an Array of objects. For more information see the [NCCO Reference](/voice/voice-api/ncco-reference).
 * **[Numbers](/voice/voice-api/concepts/numbers)** - The key concepts of using phone numbers in the Vonage Voice API.
 * **[Payments Over the Phone](/voice/voice-api/concepts/payments)** - Take payments during phone calls in a PCI compliant secure way.
