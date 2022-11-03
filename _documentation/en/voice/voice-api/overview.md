@@ -90,7 +90,7 @@ application:
 * **[Connecting Voice Calls to an Amazon Lex Bot](/voice/voice-api/guides/connecting-voice-calls-to-an-amazon-lex-bot)** - This guide will help you to start with an example Dialogflow bot and interact with it from phone calls using provided sample reference codes using Vonage Voice API.
 * **[Programmable SIP](/voice/voice-api/guides/programmable-sip)** - Use Vonage SIP to forward inbound and send outbound Voice calls that use the Session Initiation Protocol.
 * **[Click to Call](/voice/voice-api/guides/click-to-call)** - Learn how to enable your customers to call you directly from your website.
-
+* **[Voice Mail using .NET](/voice/voice-api/guides/voice-mail)** - Learn how to record audio from inbound calls using .NET and the Vonage Voice API.
 
 ## Code Snippets
 
