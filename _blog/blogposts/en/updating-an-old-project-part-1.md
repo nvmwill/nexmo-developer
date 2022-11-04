@@ -32,8 +32,8 @@ The examples in this post will be written in Python, but these principles apply 
 In this series, we'll talk about:
 
 1. Getting to grips with the code
-2. Starting to make changes and remove technical debt
-3. Building trust with your boss, team and customers/community
+2. Becoming confident to make changes and address technical debt
+3. Building trust with your boss, team, and customers/community
 3. Making enhancements
 4. What to do when it's time to hand the project over
 
@@ -47,7 +47,7 @@ Without further ado, let's get on with Part One...
 
 The first thing to do is to try and understand what the code you've inherited does, and how it's organised.
 
-Start by speaking to anyone with knowledge on the project and reading any documentation that's available. In my case, there was a readme in the repo which served as my starting point. It provided a good snapshot of the state of the code when it was last updated.
+Start by speaking to anyone with knowledge of the project and reading any available documentation. In my case, there was a readme in the repo which served as my starting point. It provided a good snapshot of the state of the code when it was last updated.
 
 [Image of readme](blog_images/readme.png)
 
@@ -80,7 +80,7 @@ Play with your codebase and build a "Hello, World" of your own.
 
 ### Understand how the code is structured
 
-It's important to understand how the project's code is organised so you can more easily conceptualise what's going on when your "Hello, World" runs.
+It's important to understand how the project's code is organised so you can more easily conceptualise what's going on when your "Hello, World" runs. This is also a great way to practice your architectural thinking skills as you'll need to develop a mental model of how the code operates. This way of thinking will help you split the project into distinct pieces that are easier to understand, which also helps later on when you want to reduce code coupling and other side effects.
 
 In the case of our SDK, the code was organised into six separate files (Python is a very compact language, the equivalent Java codebase is about 10x larger!), which looks like this:
 
@@ -101,31 +101,33 @@ The tests were grouped sensibly into modules, which helped me to understand the 
 
 ### Set up for development and run the tests!
 
-Now, it's time to install the project dependencies and run the tests. If they pass, using the latest version of your language and dependencies, great news! Mine didn't, so I rolled back my version of Python and used the specific versions of each dependencies that were documented.
+Now, it's time to install the project dependencies and run the tests. If they pass, using the latest version of your language and dependencies, great news! Mine didn't, so I started with the exact dependency versions that were mentioned and incrementally upgraded the dependencies to find out which weren't playing nicely with the latest version of my coding language.
 
-In this situation, go back to the latest version of your language the code claims to support. From here, upgrade incrementally and the problems should reveal themselves. (In my case, a dependency changed the way it returned data between versions, so I had to handle how the data was used in the codebase.)
+In this situation, upgrade dependencies incrementally and the problems should reveal themselves. One of your dependencies likely had a release with a breaking change since the codebase was last used. (In my case, a dependency changed the way it returned data between versions, so I had to rewrite a couple of tests to handle the data properly.)
 
 ## Tooling that can help you
 
-This section mentions a few ways to use tooling to get up to speed on a project.
+This section mentions a few ways to use tooling to get up to speed on a project. Using code analysis tools can be extremely useful because their use can be automated, meaning that you can run tooling as often as you like and track your progress as you start to improve the codebase. 
+
+Tooling is also great to use when it comes to planning work, as the insights it gives will tell you where the technical debt and code hotspots are and suggest how you might need to prioritise your time!
 
 ### Analysis tools
 
-Static analysics is a way of automatically analysing source code without actually having to run it. It can give insight into the structure of a codebase, highlight duplication and other refactoring targets as well as warn you about any potential vulnerabilities. There are free tools available online for most languages, and many providers who charge for the service have a free tier for non-commercial or open-source projects, e.g. [sonarcloud](https://www.sonarsource.com/products/sonarcloud/).
+Static analysis is a way of automatically analysing source code without actually having to run it. It can give insight into the structure of a codebase, highlight duplication and other refactoring targets as well as warn you about any potential vulnerabilities. There are free tools available online for most languages, and many providers who charge for the service have a free tier for non-commercial or open-source projects, e.g. [sonarcloud](https://www.sonarsource.com/products/sonarcloud/).
 
-Behavioural analysis refers to learning about a project based on the commit history. This can tell you who worked on the project and when, what was changed, and what components are frequently changed together, as well as a host of other insights. This is a really useful method for large projects with many committers. [CodeScene](https://codescene.com/) has a free tier for open-source projects, and works well.
+Behavioural analysis refers to learning about a project based on the commit history. This can tell you who worked on the project and when, what was changed, and what components are frequently changed together, as well as a host of other insights. This is a really useful method for large projects with many committers. [CodeScene](https://codescene.com/) has a free tier for open-source projects and works well.
 
 ### Test coverage
 
-Test coverage (the percentage of code statements actually covered by your tests) is useful to work out exactly what your unit tests are testing. It can also highlight areas of a codebase which are not tested. Tools are available in most languages; for Python I recommend [coverage](https://coverage.readthedocs.io/).
+Test coverage (the percentage of code statements covered by your tests) is useful to work out exactly what your unit tests are testing. It can also highlight areas of a codebase which are not tested. Tools are available in most languages; for Python, I recommend [coverage](https://coverage.readthedocs.io/).
 
 [Image of test coverage outputs](blog_images/coverage.png)
 
 ### Mutation score
 
-Test coverage can tell you how much of your code is covered by tests, but mutation testing provide more insight into how much you can trust these tests.
+Test coverage can tell you how much of your code is covered by tests, but this doesn't tell you how good your tests are at actually testing the behaviour of your code! Mutation testing provides more insight into how much you can trust your tests to do their job and make sure your code works as intended.
 
-It works by taking statements in your code and changing them slightly, e.g. changing a string/changing a plus to a minus, etc. to produce many "mutant" versions of your code. Your test suite is then run against each of these mutant versions of your code. Because things have changed, we expect the tests to fail - we say we caught the mutant. But if your tests pass in spite of these changes, the mutant escaped and it's possible that small changes could make it into production! Thus, the *mutation score* (ratio of mutants we caught to the total number that were created) tells us how much confidence we should have in our tests.
+It works by taking statements in your code and changing them slightly, e.g. changing a string/changing a plus to a minus, etc. to produce many "mutant" versions of your code. Your test suite is then run against each of these mutant versions of your code. Because things have changed, we expect the tests to fail - we say we caught the mutant. But if your tests pass despite these changes, the mutant escaped and these small changes could have made it it into production! Thus, the *mutation score* (ratio of mutants we caught to the total number that was created) tells us how much confidence we should have in our tests.
 
 There are versions of this in many languages, including [Stryker](https://stryker-mutator.io/) which has support for Javascript, Node.js and C#. In Python, I recommend trying [mutmut](https://mutmut.readthedocs.io/en/latest/), which is simple and effective.
 
@@ -152,24 +154,12 @@ python -m pip install snakeviz
 snakeviz send_sms.prof
 ```
 
-...it will generate an interactive icicle plot that shows you all the functions that your function calls, all the functions _they_ call, and so on. This can be really useful to help you follow the computer's path through the code, and can shine a light on how it works.
+...it will generate an interactive icicle plot that shows you all the functions that your function calls, all the functions _they_ call, and so on. This can be useful to help you follow the computer's path through the code, and can shine a light on how it works.
 
 [Image of an icicle plot of my profiled function](blog_images/icicle_plot.png)
 
 ## What's next?
 
-If you follow the suggestions in this article, you'll be in a great position to start building trust, removing technical debt and making changes to your codebase. Check back soon for Part 2, where we'll talk about all this in detail.
+If you follow the suggestions in this article, you'll be in a great position to start building trust, tackling technical debt and making changes to your codebase. Check back soon for Part 2, where we'll talk about all this in detail.
 
 In the meantime, you can reach out to us on our [Vonage Community Slack](https://developer.vonage.com/community/slack) or send us a message on [Twitter](https://twitter.com/VonageDev).
-
-
-
-
-
-
-
-The structure is briefly explained here:
-
-```
-the cat __init__.py stuff from my slides will be in here.
-```
