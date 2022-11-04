@@ -36,7 +36,7 @@ For more information on creating a catalog, see the [Meta documentation](https:/
 
 ## Connecting your Catalog
 
-In order to be able to include product items in Product Messages sent from a number asociated with your WhatsApp Business Account (WABA), the Catalog containing those items needs to be linked to that WABA.
+In order to be able to include product items in Product Messages sent from a number associated with your WhatsApp Business Account (WABA), the Catalog containing those items needs to be linked to that WABA.
 
 > Note: Only one catalog at a time can be associated with a WhatsApp Business Account. You can, however, disconnect a connected catalog and then connect different one.
 
@@ -88,7 +88,7 @@ There are two types of Product Message that you can send:
 - Single Product Messages
 - Multi-Product Messages
 
-Both single and multi product messages are a type of WhatsApp [Interactive Message](https://developers.facebook.com/docs/whatsapp/guides/interactive-messages). Within the Vonage [Messages API](https://developer.vonage.com/api/messages-olympus), WhatsApp Interactive Messsages are sent using the Custom message type. You can [read more about Custom messages](), but essentially, in the context of Interactive messages, they use a `custom` object with a `type` property set to `interactive` and an `interactive` object with a structure that maps exactly to the structure defied for `interactive` objects within the Meta API.
+Both single and multi product messages are a type of WhatsApp [Interactive Message](https://developers.facebook.com/docs/whatsapp/guides/interactive-messages). Within the Vonage [Messages API](https://developer.vonage.com/api/messages-olympus), WhatsApp Interactive Messages are sent using the Custom message type. You can [read more about Custom messages](), but essentially, in the context of Interactive messages, they use a `custom` object with a `type` property set to `interactive` and an `interactive` object with a structure that maps exactly to the structure defied for `interactive` objects within the Meta API.
 
 For single product messages, the `interactive` object has a `type` property set to `product`. For multi-product messages, it has a `type` property set to `product_list`.
 
@@ -114,11 +114,11 @@ You can also see code examples for sending via the Vonage Messages API:
 
 ## WhatsApp UI
 
-Much of the logic for the way in which customers interact with Product Messages exists within the WhatsApp UI. The data for the products shown in the UI is taken directly from the details added to the Catalog identefied by the `catalog_id` and products identified by `product_retailer_id` values in the outbound message.
+Much of the logic for the way in which customers interact with Product Messages exists within the WhatsApp UI. The data for the products shown in the UI is taken directly from the details added to the Catalog identified by the `catalog_id` and products identified by `product_retailer_id` values in the outbound message.
 
 ### Message Appearance
 
-The way the message appears in the UI will vary depending on whether it is a single product message or a multi-prodcut message, and also the way in which the outbound messages has been structured in the `interactive` object.
+The way the message appears in the UI will vary depending on whether it is a single product message or a multi-product message, and also the way in which the outbound messages has been structured in the `interactive` object.
 
 #### Single Product Message
 
@@ -138,7 +138,7 @@ Tapping anywhere on the message will display the Product Details Page.
 
 #### Multi Product Message
 
-Multi-product messages show initially show in a similar way with some slight differences. There is an image, some header text and the number of items, followed by the bosy text and then footer text (if used), and finally a 'View items' button (again, the text on the button is dependent on the WhatsApp language settings).
+Multi-product messages show initially show in a similar way with some slight differences. There is an image, some header text and the number of items, followed by the body text and then footer text (if used), and finally a 'View items' button (again, the text on the button is dependent on the WhatsApp language settings).
 
 ![Screenshot of basic multi-product message]()
 
@@ -152,7 +152,7 @@ Tapping on an individual item will display the Product Details Page.
 
 #### Product Details Page
 
-The Product Details Page displays information about an individual product, such as the image, title, currency and price, description, and url. There are also controls to add an item to the Cart and adjust the quantity, to view the Cart, and to send a Message to the business. 
+The Product Details Page displays information about an individual product, such as the image, title, currency and price, description, and URL. There are also controls to add an item to the Cart and adjust the quantity, to view the Cart, and to send a Message to the business. 
 
 ![Screenshot of the product details page]()
 
@@ -178,7 +178,7 @@ Regardless message structure, or whether it is a single or multi product message
 
 ### Live Product Updates
 
-If changes are made to product items in the Meta Commerce Manager, such as price or availablity changes, these changes will be reflected in messages that have already been sent. If the availability of a product is changed so that it is no longer available, the customer will see a message in the UI informing them of this.
+If changes are made to product items in the Meta Commerce Manager, such as price or availability changes, these changes will be reflected in messages that have already been sent. If the availability of a product is changed so that it is no longer available, the customer will see a message in the UI informing them of this.
 
 ![Screenshot of availability message]()
 
