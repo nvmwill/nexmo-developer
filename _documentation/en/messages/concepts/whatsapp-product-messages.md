@@ -195,7 +195,7 @@ In order to receive responses to Product Messages, you need to have an [Inbound 
 
 The type of inbound message received will depend on the way in which the customer messaged the business.
 
-- Standard Text Message. If the customer simply sends a text message as part of the conversation, the inbound message will be of type `text`, but the `context` object will not contain any product details.
+- Standard Text Message. If the customer sends a text message as part of the conversation, the inbound message will be of type `text`, but the `context` object will not contain any product details.
 - Quoted product message. If the customer quotes a Product Message, this will also be of type `text`, but in this case the `context` object will contain a `whatsapp_referred_product` object containing a `catalog_id` and `product_retailer_id`.
 - Sent Shopping Cart. A sent shopping cart will be of type `order`, and contain a `catalog_id` as well as an array of `product_items` objects and their associated data (`product_retailer_id`, `quantity`, `item_price`, `currency`).
 
