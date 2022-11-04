@@ -22,13 +22,13 @@ The underlying data for the products sent in product messages exists in the form
 
 Catalogs are created and managed via the Meta [Commerce Manager](https://business.facebook.com/commerce/) UI. Here you can create new catalogs, or update existing ones.
 
-![Screenshot of catalog creation box]()
+![Screenshot of catalog creation box](/images/messages/whatsapp-product-message-catalog-creation-box.png)
 
 You'll need to go through several steps, such as selecting a catalog type, choosing a name, and configuring some settings. As part of the configuration you can select a product upload method of either manually uploading your products or connecting to a supported partner platform such as Shopify, BigCommerce, or OpenCart, among others. Once your catalog is created, it will be given a unique `catalog_id`; this will be needed when working with Product Messages.
 
 The next step after your catalog is created is to add items to it. When adding an item, you need to provide various details about that item such as an image, a title, a description, a currency and price, and a website link. This information is what will be displayed in a Product Details Page when including that item in a Product Message. Once a product item has been added to your catalog, it will be given a unique `product_retailer_id`, which will be needed when working with Product Messages. This ID is listed as a 'Content ID' within the Commerce Manger UI.
 
-![Screenshot of product item Content ID]()
+![Screenshot of product item Content ID](/images/messages/whatsapp-product-message-product-item-content-id.png)
 
 Once an item has been added to Catalog, you can edit the details and change the availability. Editing these details will impact Product Messages that have been sent (this will be covered later in this document).
 
@@ -124,15 +124,16 @@ The way the message appears in the UI will vary depending on whether it is a sin
 
 A single product message containing only the required elements will show the image, title, price, and 'View' button.
 
-![Screenshot of basic single product message]()
+<img src="/images/messages/whatsapp-product-message-basic-single-product-message.png" alt="Screenshot of basic single product message" style="width: 50%">
+
 
 The wording on the 'View' button is automatically generated, and varies according to the language the user has set in the WhatsApp app settings. For example, if the language is set to French it will show 'Afficher'.
 
-![Screenshot of basic single product message with View button in French]()
+<img src="/images/messages/whatsapp-product-message-basic-single-product-message-with-view-button-in-french.png" alt="Screenshot of basic single product message with View button in French" style="width: 50%">
 
-If `body` and `footer` are included, these show 
+If `body` and `footer` are included, these show below the main product details and above the 'View' button.
 
-![Screenshot of single product message with body and footer]()
+<img src="/images/messages/whatsapp-product-message-single-product-message-with-body-and-footer.png" alt="Screenshot of single product message with body and footer" style="width: 50%">
 
 Tapping anywhere on the message will display the Product Details Page.
 
@@ -140,11 +141,11 @@ Tapping anywhere on the message will display the Product Details Page.
 
 Multi-product messages show initially show in a similar way with some slight differences. There is an image, some header text and the number of items, followed by the body text and then footer text (if used), and finally a 'View items' button (again, the text on the button is dependent on the WhatsApp language settings).
 
-![Screenshot of basic multi-product message]()
+<img src="/images/messages/whatsapp-product-message-basic-multi-product-message.png" alt="Screenshot of basic multi-product message" style="width: 50%">
 
 Tapping anywhere on a multi-product message will display the product list, divided into `sections`.
 
-![Screenshot of basic multi-product message product list]()
+<img src="/images/messages/whatsapp-product-message-multi-product-message-product-list.png" alt="Screenshot of multi-product message product list" style="width: 50%">
 
 Items can be added to the Shopping Cart directly from the product list, and there is also a button to view the Cart.
 
@@ -154,7 +155,7 @@ Tapping on an individual item will display the Product Details Page.
 
 The Product Details Page displays information about an individual product, such as the image, title, currency and price, description, and URL. There are also controls to add an item to the Cart and adjust the quantity, to view the Cart, and to send a Message to the business. 
 
-![Screenshot of the product details page]()
+<img src="/images/messages/whatsapp-product-message-product-details-page.png" alt="Screenshot of the product details page" style="width: 50%">
 
 #### Shopping Cart
 
@@ -164,7 +165,7 @@ There is a maximum quantity of `99` for any single product item.
 
 Note: no changes can be made to the cart once it has been sent, though customers can create and send a multiple carts from the same initial product message.
 
-![Screenshot of the Shopping Cart]()
+<img src="/images/messages/whatsapp-product-message-shopping-cart.png" alt="Screenshot of the Shopping Cart" style="width: 50%">
 
 ### Customer Actions
 
@@ -180,11 +181,11 @@ Regardless message structure, or whether it is a single or multi product message
 
 If changes are made to product items in the Meta Commerce Manager, such as price or availability changes, these changes will be reflected in messages that have already been sent. If the availability of a product is changed so that it is no longer available, the customer will see a message in the UI informing them of this.
 
-![Screenshot of availability message]()
+<img src="/images/messages/whatsapp-product-message-availability-message.png" alt="Screenshot of availability message" style="width: 50%">
 
 There can be a slight lag in a product updating in the WhatsApp UI following an update in the Commerce Manger, but if for example a customer tries interact with a product item that is no longer available, they will see an message indicating this and they will not be able to add the item to their cart.
 
-![Screenshot of removal message]()
+<img src="/images/messages/whatsapp-product-message-removal-message.png" alt="Screenshot of removal message" style="width: 50%">
 
 Further information on Product Updates can be seen in the [Meta documentation](https://developers.facebook.com/docs/whatsapp/guides/commerce-guides/share-products-with-customers#product-updates)
 
