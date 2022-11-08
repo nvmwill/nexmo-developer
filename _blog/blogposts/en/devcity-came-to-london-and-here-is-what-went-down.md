@@ -2,7 +2,7 @@
 title: DevCity Came To London and Here is What Went Down
 description: DevCity London was a great success. Read about our night of
   content, networking and fun!
-thumbnail: /content/blog/devcity-came-to-london-and-here’s-what-went-down/devcity-london_postevent.png
+thumbnail: /content/blog/devcity-came-to-london-and-here-is-what-went-down/devcity-london_postevent.png
 author: lucinda-bone
 published: true
 published_at: 2022-11-08T10:20:45.642Z
@@ -24,11 +24,11 @@ On 26th October 2022 an awesome group of developers and friends descended on Dab
 
 At the start of the evening we welcomed some of Team Vonage to the stage to tell guests more about what we do, with Chris Tankersley kicking us off with a warm welcome and a general overview of the Vonage APIs. Chris was then joined by special guest Laurence Bargery, CTO of Accurx, to discuss how they are using our client SDK for in-app Voice application as a pilot project. They handed the mic over to Vonage’s Zachary Powell and Ashley Arthur, who shared how Vonage moved its Client SDKs to Kotlin MultiPlatform and saved the world (kind of). 
 
-![Chris Tankersley at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/chris_talk.jpg)
+![Chris Tankersley at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/chris_talk.jpg)
 
-![Fireside at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/fireside_talk.jpg)
+![Fireside at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/fireside_talk.jpg)
 
-![Zach Powell at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/zach_talk.jpg)
+![Zach Powell at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/zach_talk.jpg)
 
 Content is a hugely important part of DevCity, and we were thrilled to be able to share just a little of what Vonage is working on with new faces and old friends too. 
 
@@ -38,19 +38,19 @@ Dabbas Social Bingo pulled out all the stops to make us feel welcome, with a ful
 
 They made sure we were well fed too, with a stream of delicious cold and hot party food that kept guests going while the fun unfolded. We ended the night with yummy Vonage branded cupcakes - all compliments to the chef behind the scenes at Dabbers!
 
-![Food at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/food1.jpg)
+![Food at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/food1.jpg)
 
-![Food at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/food2.jpg)
+![Food at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/food2.jpg)
 
 ## We Networked
 
 We were thrilled to welcome an incredible group of guests to DevCity London - a vibrant, diverse and super talented audience who made the evening as brilliant as it could be. There was plenty of time for networking, making new industry connections and sharing ideas and we are thrilled to welcome so many new friends to the Vonage Developer Community.  
 
-![Networking at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/networking.jpg)
+![Networking at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/networking.jpg)
 
-![Networking at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/networking2.jpg)
+![Networking at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/networking2.jpg)
 
-![Networking at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/networking3.jpg)
+![Networking at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/networking3.jpg)
 
 ## We Played Bingo!
 
@@ -58,11 +58,11 @@ All that was left was to get stuck into the Bingo! Three fast and furious rounds
 
 We were also kept on our toes by a roaming magician and two super sparkly dancing disco balls…because why not? 
 
-![Bingo at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/bingo_2.jpg)
+![Bingo at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/bingo_2.jpg)
 
-![Bingo at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/bingo.jpg)
+![Bingo at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/bingo.jpg)
 
-![Bingo at DevCity](/content/blog/devcity-came-to-london-and-here’s-what-went-down/dancer.jpg)
+![Bingo at DevCity](/content/blog/devcity-came-to-london-and-here-is-what-went-down/dancer.jpg)
 
 
 ## We Had So Much Fun, We Decided To Do It Again
