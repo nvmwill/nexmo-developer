@@ -1,5 +1,5 @@
 ---
-title: DevCity Came To London and Here’s What Went Down
+title: DevCity Came To London and Here is What Went Down
 description: DevCity London was a great success. Read about our night of
   content, networking and fun!
 thumbnail: /content/blog/devcity-came-to-london-and-here’s-what-went-down/devcity-london_postevent.png
