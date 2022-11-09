@@ -6,4 +6,4 @@ client:
 code:
     source: .repos/vonage/vonage-node-code-snippets/account/create-secret.js
     from_line: 14
-    to_line: 19
+    to_line: 17
