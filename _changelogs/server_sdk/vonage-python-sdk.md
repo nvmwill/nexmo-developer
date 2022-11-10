@@ -6,6 +6,20 @@ release: '27 Jul 2022'
 
 ---
 
+# 3.1.0
+### 26 Oct 2022
+- Supporting Python 3.11
+- Upgrading some old dependencies
+
+# 3.0.2
+### 25 Oct 2022
+- Bugfix in `messages.py` where authentication method was not being checked for correctly, throwing an error when using header auth.
+
+# 3.0.1
+### 4 Oct 2022
+- Fixed bug where a JWT was created globally and could expire. Now a new JWT is generated when a request is made.
+- Fixed bug where timeout was not passed to session object.
+
 ## 3.0.0
 ### 27 Jul 2022
 
