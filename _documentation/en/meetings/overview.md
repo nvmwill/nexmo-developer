@@ -49,6 +49,7 @@ Take a look at the [Video API](https://tokbox.com/developer/) documentation for 
   * **Recording**: you can start a recording manually during a meeting, or set the meeting to record automatically when sending a request. You can also choose to only record the owner of the room.
   * **Room Management**: you can delete, update or retrieve information about rooms.
   * **Callbacks**: allow you to receive information about a session.
+  * **Waiting Room**: set the level of approval needed to join the meeting. Participants will join the waiting room until either the owner has joined or until the owner has admitted them, depending on the level of approval required.
 
 ## Room Types
 
