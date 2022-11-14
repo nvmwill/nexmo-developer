@@ -1,11 +1,11 @@
 ---
-title: Improve Your Software Project - Part One: Understanding a Codebase
+title: "Improve Your Software Project - Part one: Understanding a Codebase"
 description: Want to update an old project? This will help!
 thumbnail: /content/blog/improve-your-software-project-part-one-understanding-a-codebase/making-projects-better_part-one.png
 author: max-kahan
 published: true
 published_at: 2022-11-15T20:07:20.926Z
-updated_at: 2022-11-15T20:07:20.926Z
+updated_at: 2022-11-15T20:02:32.694Z
 category: inspiration
 tags:
   - technical-debt
@@ -18,9 +18,6 @@ canonical: ""
 outdated: false
 replacement_url: ""
 ---
-
-# Make your project exponentially better! Part One: Understanding a codebase 
-
 Have you ever taken over a codebase and realised that you're not happy with how the code is written or organised? It's a common story, but one that can cause a lot of headaches. Technical debt can snowball, making it exponentially harder to understand the code and add new features.
 
 In this three-part series, I'll walk through some of the key things you'll want to do to become happier with your shiny (old) project. To give some concrete examples, I'll tie everything together by explaining how I refactored and enhanced the open-source [Vonage Python SDK](https://github.com/Vonage/vonage-python-sdk), a library that makes HTTP calls to Vonage APIs, but the principles apply to any kind of software project. 
