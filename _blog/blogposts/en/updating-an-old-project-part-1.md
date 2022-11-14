@@ -1,18 +1,18 @@
 ---
-title: Make your software project exponentially better! Part One - Understanding a codebase
+title: Improve Your Software Project - Part One: Understanding a Codebase
 description: Want to update an old project? This will help!
-thumbnail:
+thumbnail: /content/blog/improve-your-software-project-part-one-understanding-a-codebase/making-projects-better_part-one.png
 author: max-kahan
-published: false
-published_at: 
-updated_at: 
-category:
+published: true
+published_at: 2022-11-15T20:07:20.926Z
+updated_at: 2022-11-15T20:07:20.926Z
+category: inspiration
 tags:
   - technical-debt
   - enhancement
   - python
 comments: true
-spotlight: =
+spotlight: false
 redirect: ""
 canonical: ""
 outdated: false
