@@ -122,3 +122,7 @@ generic_errors:
   application-suspended:
     description: This application has been suspended
     resolution: Re-enable the application or create a new application to use
+
+  throttled:
+    description: Too many requests have been made on this endpoint
+    resolution: Wait a moment and try again
