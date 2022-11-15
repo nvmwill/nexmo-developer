@@ -126,3 +126,7 @@ generic_errors:
   throttled:
     description: Too many requests have been made on this endpoint
     resolution: Wait a moment and try again
+
+  invalid-params:
+    description: The value of one of more parameters suppied in the request is invalid
+    resolution: Review the data sent against the API specifications, or check for more information in the error response.
