@@ -1,5 +1,5 @@
 ---
-title: "Improve Your Software Project - Part one: Understanding a Codebase"
+title: "Improve Your Software Project - Part One: Understanding a Codebase"
 description: Want to update an old project? This will help!
 thumbnail: /content/blog/improve-your-software-project-part-one-understanding-a-codebase/making-projects-better_part-one.png
 author: max-kahan
@@ -46,11 +46,11 @@ The first thing to do is to try and understand what the code you've inherited do
 
 Start by speaking to anyone with knowledge of the project and reading any available documentation. In my case, there was a readme in the repo which served as my starting point. It provided a good snapshot of the state of the code when it was last updated.
 
-[Image of readme](blog_images/readme.png)
+![Image of readme](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/readme.png)
 
 There was also product documentation which helped me to understand what the code was currently expected to do, as it described the APIs I needed to call and their current behaviour.
 
-[Image of main docs page](blog_images/main_docs_page.png)
+![Image of main docs page](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/main_docs_page.png)
 
 ### Build stuff!
 
@@ -71,7 +71,7 @@ client.sms.send_message({
 
 It worked!
 
-[Screenshot of my phone with a new message](blog_images/hello_world.png)
+![Screenshot of my phone with a new message](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/hello_world.png)
 
 Play with your codebase and build a "Hello, World" of your own.
 
@@ -86,7 +86,7 @@ In the case of our SDK, the code was organised into six separate files (Python i
 * A file that held custom error classes, and
 * Three files which each had a class relating to one of Vonage's APIs
 
-[Image showing the different files with the descriptions above applied to them](blog_images/old_file_structure.png)
+![Image showing the different files with the descriptions above applied to them](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/old_file_structure.png)
 
 Alarm bells started ringing as I realised that there were 3 files named after Vonage APIs, but the README claimed that 12 different APIs were supported.
 
@@ -94,7 +94,7 @@ I realised that most of the code was in a file (`__init__.py`) typically used on
 
 The tests were grouped sensibly into modules, which helped me to understand the different components at play. I would recommend trying to understand the structure of both your code and your tests, as both can be insightful.
 
-[Screenshot of the tests folder](blog_images/test_folder.png)
+![Screenshot of the tests folder](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/test_folder.png)
 
 ### Set up for development and run the tests!
 
@@ -118,7 +118,7 @@ Behavioural analysis refers to learning about a project based on the commit hist
 
 Test coverage (the percentage of code statements covered by your tests) is useful to work out exactly what your unit tests are testing. It can also highlight areas of a codebase which are not tested. Tools are available in most languages; for Python, I recommend [coverage](https://coverage.readthedocs.io/).
 
-[Image of test coverage outputs](blog_images/coverage.png)
+![Image of test coverage outputs](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/coverage.png)
 
 ### Mutation score
 
@@ -128,7 +128,7 @@ It works by taking statements in your code and changing them slightly, e.g. chan
 
 There are versions of this in many languages, including [Stryker](https://stryker-mutator.io/) which has support for Javascript, Node.js and C#. In Python, I recommend trying [mutmut](https://mutmut.readthedocs.io/en/latest/), which is simple and effective.
 
-[Image of mutation score output](blog_images/mutation_score.png)
+![Image of mutation score output](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/mutation_score.png)
 
 ### Understand the call stack by profiling your sample!
 
@@ -153,7 +153,7 @@ snakeviz send_sms.prof
 
 ...it will generate an interactive icicle plot that shows you all the functions that your function calls, all the functions _they_ call, and so on. This can be useful to help you follow the computer's path through the code, and can shine a light on how it works.
 
-[Image of an icicle plot of my profiled function](blog_images/icicle_plot.png)
+![Image of an icicle plot of my profiled function](/content/blog/improve-your-software-project-part-one-understanding-a-codebase/icicle_plot.png)
 
 ## What's next?
 
