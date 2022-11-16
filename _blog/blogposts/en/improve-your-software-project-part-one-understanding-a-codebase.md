@@ -8,8 +8,6 @@ published_at: 2022-11-15T20:07:20.926Z
 updated_at: 2022-11-15T20:02:32.694Z
 category: inspiration
 tags:
-  - technical-debt
-  - enhancement
   - python
 comments: true
 spotlight: false
