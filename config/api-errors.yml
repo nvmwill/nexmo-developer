@@ -124,8 +124,8 @@ generic_errors:
     resolution: Re-enable the application or create a new application to use
 
   throttled:
-    description: Too many requests have been made on this endpoint
-    resolution: Wait a moment and try again
+    description: You have hit your rate limit for this endpoint
+    resolution: Wait a moment and try again, or check the product rate limit.
 
   invalid-params:
     description: The value of one of more parameters suppied in the request is invalid
