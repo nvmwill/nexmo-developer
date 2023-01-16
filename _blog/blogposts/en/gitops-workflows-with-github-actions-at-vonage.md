@@ -8,9 +8,9 @@ published_at:
 updated_at:
 category: tutorials
 tags:
-  - GitOps
-  - GitHub Actions
-  - DevSecOps
+  - gitops
+  - github-actions
+  - devsecops
 comments: true
 spotlight: false
 redirect: ""
@@ -22,7 +22,7 @@ We recently redesigned a key build and deployment pipeline supporting our Vonage
 
 ## Gitops Concepts: What is GitOps anyway?
 
-Broadly speaking, GitOps is a collaboration of the best practices from DevOps and Security. The main difference between DevOps and GitOps is the addition of IaC (Infrastructure as Code) which is stored alongside project code in SCM (usually Git).
+Broadly speaking, GitOps is a collaboration of the best practices from DevOps and Security. The main difference between DevOps and GitOps is the addition of Infrastructure as Code (or IaC) which is stored alongside project code in your SCM (source code management tool of choice - usually Github).
 
 GitOps is a framework rather than an individual software package or tool. In my view, this is one of its strengths. With GitOps you have the freedom and flexibility to tailor the implementation to best fit your organization and enhance your processes.
 
@@ -32,11 +32,11 @@ GitOps is comprised of three distinct concepts:
 
 IaC tools allow infrastructure to be designed and configured once and deployed repeatably, with state management features that prevent live resources from drifting from their original configuration. Once defined, this configuration data can be kept under source control, enabling a single source of truth for the infrastructure (as well as the associated permissions and security policies) to be maintained.
 
-Additionally, with a well-designed repository structure, the Security concepts of Least Privilege and Separation of Duties are easily achieved for this data.
+Additionally, a well-designed repository structure makes it easy to meet important Security requirements around Least Privilege access and Separation of Duties.
 
 ### 2. Pull Requests (PRs)
 
-All code changes should be controlled by PRs. This protection applies to the application code as well as to the IaC code describing the supporting infrastructure
+All code changes should be controlled by PRs. This protection applies to the application code as well as to the IaC code describing the supporting infrastructure.
 
 Developers should have permission to merge code via PRs into the application repository, but they should not have direct permissions to make updates to the GitOps pipeline or infrastructure repositories.
 
@@ -44,7 +44,7 @@ Developers should have permission to merge code via PRs into the application rep
 
 GitOps automates the CI/CD processes through continuous integration and delivery. CI is triggered by a merge to the main branch. Deployment is triggered either manually or automatically following the successful completion of quality checks.
 
-Security testing can be integrated into the SDLC much more easily with GitOps and since the iteration cycle is much faster, this means more ease and less friction in the adoption of Security (shifting left).
+Security testing can be integrated into the software development lifecycle (SDLC) much more easily with GitOps. Additionally, since the iteration cycle is much faster, this means more ease and less friction in the adoption of Security. This encourages a focus on prevention rather than detection, commonly referred to as 'shifting left'.
 
 ## How we implemented GitOps
 
@@ -54,16 +54,16 @@ Our goal was to build a GitOps CI/CD pipeline for the delivery of Micro-FrontEnd
 
 ### Research and Requirements
 
-Initially, we researched GitOps (given this was our first practical exposure to GitOps) and performed a spike to trial a few different methods. Given the nature of our requirements and the inevitable constraints at work, we chose to adopt the event-driven model of GitHub Actions with a combination of cloud-native CLI tools, to allow us to control updates into the cloud-hosted infrastructure (in this case CDNs, serverless code functions, and a NoSQL DB).
+Since this was our first practical exposure to GitOps, we carried out some initial research into the GitOps framework and performed a spike to trial a few different approaches. Given the nature of our requirements and the inevitable constraints at work, we chose to adopt the [event-driven model of GitHub Actions](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) with a combination of cloud-native CLI tools, to allow us to control updates into the cloud-hosted infrastructure (in this case Content Delivery Networks, serverless code functions, and a NoSQL Database).
 
 Once we were confident GitOps was a viable solution, we refined our requirements:
-- Improve security posture by adhering to the Least Privilege and Separation of Duties
+- Improve security posture by adhering to the principles of Least Privilege and Separation of Duties
 - Provide timely deployment feedback to developers
 - Reduce deployment friction and thereby improve deployment times and DevEx
 - Support deployment metrics
 - Use maintainable GitOps CI/CD pipelines
 - Horizontal scalability (seamless integration of new applications into the GitOps pipeline)
-- Leverage and enhance internal tooling where makes sense
+- Leverage and enhance internal tooling where it makes sense
 
 ### GitOps Architecture
 
@@ -75,11 +75,11 @@ Each of the resources required to host the MFE components was captured in Terraf
 
 **Application repositories**
 
-Developers (and the MFE application repository itself) have narrow permissions to development tools and systems. Therefore a CI workflow defined using Github Actions takes care of these responsibilities, providing classic build and quality features in a templated, automated process. Build artifacts produced by this process are pushed to a package repository (jFrog Artifactory).
+Developers (and the MFE application repository itself) have narrow permissions to development tools and systems. Therefore a CI workflow defined using Github Actions takes care of these responsibilities, providing classic build and quality features in a templated, automated process. Build artifacts produced by this process are pushed to a package repository (JFrog Artifactory).
 
-![Application CI Workflow](/content/blog/gitops-workflows-with-github-actions-at-vonage/app-ci-workflow.png)
+![Application CI Workflow](/content/blog/gitops-workflows-with-github-actions-at-vonage/app-ci-workflow.png "MFE application CI workflow")
 
-A CD workflow in the same repository provides the developer with the ability to deploy the application. In concrete terms, this is a GitHub `repository_dispatch` event sent to the target GitOps repository, followed by a wait-on-completion step.
+A CD workflow in the same repository provides the developer with the ability to deploy the application. In concrete terms, this is a GitHub [`repository_dispatch`](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#repository_dispatch) event sent to the target GitOps repository, followed by a wait-on-completion step.
 
 Example GitHub Action triggering application deploy:
 
@@ -104,7 +104,7 @@ Example GitHub Action triggering application deploy:
                     }'
 ```
 
-![Application CD Workflow](/content/blog/gitops-workflows-with-github-actions-at-vonage/app-cd-gitops-workflow.png)
+![Application CD Workflow](/content/blog/gitops-workflows-with-github-actions-at-vonage/app-cd-gitops-workflow.png "MFE application CD workflow")
 
 **GitOps IaC repository**
 
@@ -124,7 +124,7 @@ Deployment events are received from the application CD workflow and automaticall
     1. update DB Table
     1. invalidate CDN cache
 
-![GitOps IaC repository](/content/blog/gitops-workflows-with-github-actions-at-vonage/gitops-ops-workflow.png)
+![GitOps IaC repository](/content/blog/gitops-workflows-with-github-actions-at-vonage/gitops-ops-workflow.png "GitOps CI/CD workflow")
 
 **Cloud Infrastructure deployment tool**
 
@@ -156,8 +156,8 @@ This project has given us a great chance to get to grips with the GitOps concept
 
 ## Final Thoughts
 
-I hope this tutorial helped you learn more about the Vonage Messages API and how to schedule SMS messages.
+I hope this tutorial helped you learn more about GitOps workflows and the related concepts.
 
-Make sure to follow us on Twitter and join our Slack channel for more information.
+Make sure to follow us on [Twitter](https://twitter.com/VonageDev) and join our [Slack channel](https://developer.vonage.com/community/slack) for more information.
 
 Thanks for reading!
